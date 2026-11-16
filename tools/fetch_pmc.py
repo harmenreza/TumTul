@@ -17,7 +17,8 @@ OUT = ROOT / "candidates_pmc"
 REST = "https://www.ebi.ac.uk/europepmc/webservices/rest"
 UA = "TumTulCandidateBot/0.2 (https://github.com/harmenreza/TumTul; educational bone-tumour reference app)"
 XL = "{http://www.w3.org/1999/xlink}href"
-MAX_ARTICLES, MAX_FIGS = 40, 25
+MAX_ARTICLES, MAX_FIGS = 30, 25
+POSTOP = re.compile(r"post-?operativ|after (the )?(operation|surgery|curettage|resection|treatment)|follow-?up|months? after|years? after|postop|recurren|ablation|reconstruct|implant|prosthe", re.I)
 XRAY = re.compile(r"radiograph|x-?ray|plain film|roentgenogra|radiography", re.I)
 OTHER = re.compile(r"\bMRI\b|magnetic resonance|\bCT\b|computed tomograph|T1|T2|STIR|scintigra|bone scan|PET|histolog|H&E|hematoxylin|haematoxylin|microscop|immunohisto|intraoperative|gross", re.I)
 OK_LIC = re.compile(r"creativecommons\.org/(licenses/(by|by-sa)/|publicdomain/zero/)", re.I)
@@ -101,14 +102,19 @@ def run_entity(ent, terms, manifest):
         time.sleep(1)
     cands = []
     for a in arts[:MAX_ARTICLES]:
-        meta, figs = figures(a["pmcid"]); time.sleep(1)
+        meta, figs = figures(a["pmcid"]); time.sleep(0.5)
         if not meta or not OK_LIC.search(meta["licence_url"] or ""): continue
         for f in figs:
             if not f["xray"]: continue
+            cap = f["caption"]
+            f["mentions_entity"] = any(w.lower() in cap.lower() for t in terms for w in [t.split()[0]] if len(w) > 4) or any(t.lower() in cap.lower() for t in terms)
+            f["postop"] = bool(POSTOP.search(cap))
             cands.append({**f, **meta, "pmcid": a["pmcid"], "licence": licence_name(meta["licence_url"]),
                           "article_url": f"https://europepmc.org/article/PMC/{a['pmcid'][3:]}",
                           "image": image_url(a["pmcid"], f["graphic"])})
-    cands.sort(key=lambda c: c["other"])          # radiograph-only captions first
+    # pre-treatment first, then captions naming the entity, then radiograph-only captions, then figure order
+    fig_no = lambda c: int((re.findall(r"\d+", c["label"]) or [99])[0])
+    cands.sort(key=lambda c: (c["postop"], not c["mentions_entity"], c["other"], fig_no(c)))
     cands = cands[:MAX_FIGS]
     tdir = OUT / "thumbs" / ent; shutil.rmtree(tdir, ignore_errors=True); tdir.mkdir(parents=True, exist_ok=True)
     keep, paths = [], []
@@ -124,6 +130,8 @@ def run_entity(ent, terms, manifest):
     if paths:
         (OUT / "sheets").mkdir(parents=True, exist_ok=True); sheet(paths, OUT / "sheets" / f"{ent}.jpg")
     manifest[ent] = keep
+    (OUT / "manifest").mkdir(parents=True, exist_ok=True)
+    (OUT / "manifest" / f"{ent}.json").write_text(json.dumps(keep, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"{ent}: {len(keep)} figures from {len(arts)} articles")
 
 def main(only=None):
@@ -135,7 +143,6 @@ def main(only=None):
         if not only and len(manifest.get(ent, [])) >= 8: print(f"{ent}: kept existing"); continue
         try: run_entity(ent, terms, manifest)
         except Exception as e: print(f"{ent}: FAILED {e}", file=sys.stderr)
-        mp.write_text(json.dumps(manifest, ensure_ascii=False, indent=1), encoding="utf-8")
 
 if __name__ == "__main__":
     main(set(sys.argv[1:]) or None)
