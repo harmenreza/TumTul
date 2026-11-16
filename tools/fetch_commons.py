@@ -24,7 +24,9 @@ PER_QUERY, MAX_PER_ENTITY = 30, 25
 OK_LICENCE = re.compile(r"^(cc0|public domain|pd|cc by(-sa)? [0-9.]+( [a-z]+)?)$", re.I)
 NOT_XRAY = re.compile(r"histolog|micrograph|\bH&E\b|\bHE\b|stain|immunohisto|mikroskop|patholog|gross|specimen|präparat|"
                       r"\bMRI\b|\bMRT\b|\bT1\b|\bT2\b|\bSTIR\b|\bCT\b|computed tomograph|PET|scintigra|szintigra|bone scan|"
-                      r"canine|dog|\bcat\b|hund|katze|horse|pferd|photo of patient|clinical photo", re.I)
+                      r"canine|dog|\bcat\b|hund|katze|horse|pferd|photo of patient|clinical photo|airline|boeing|aircraft|building|gebäude", re.I)
+LIKELY_XRAY = re.compile(r"x-?ray|radiogra|röntgen|roentgen|\broe\b|roe[ _0-9-]|\bcr\b|\bdr\b| ap\b|a\.p\.|seitlich|lateral view|plain film", re.I)
+def likely(r): return (not r["flag_not_radiograph"]) and bool(LIKELY_XRAY.search(r["title"] + " " + r["description"]))
 
 def _open(url, parse_json):
     req = urllib.request.Request(url, headers={"User-Agent": UA, "Api-User-Agent": UA})
@@ -92,7 +94,7 @@ def main(only=None):
     for ent, terms in queries.items():
         if ent.startswith("_"): continue
         if only and ent not in only: continue
-        if not only and len(manifest.get(ent, [])) >= 10: print(f"{ent}: kept existing"); continue
+        if not only and sum(likely(r) for r in manifest.get(ent, [])) >= 6: print(f"{ent}: kept existing"); continue
         try:
             run_entity(ent, terms, manifest)
         except Exception as e:
@@ -127,7 +129,7 @@ def run_entity(ent, terms, manifest):
             if not r["licence_ok"]: stats["rejected_licence"][r["licence"] or "(none)"] = stats["rejected_licence"].get(r["licence"] or "(none)", 0) + 1
         stats["unique"] = len(recs)
         recs = [r for r in recs if r["licence_ok"] and r["mime"] in ("image/jpeg", "image/png", "image/gif")]
-        recs.sort(key=lambda r: (r["flag_not_radiograph"],))
+        recs.sort(key=lambda r: (not likely(r), r["flag_not_radiograph"]))
         recs = recs[:MAX_PER_ENTITY]
         tdir = OUT / "thumbs" / ent; shutil.rmtree(tdir, ignore_errors=True); tdir.mkdir(parents=True, exist_ok=True); paths = []
         for i, r in enumerate(recs, 1):
