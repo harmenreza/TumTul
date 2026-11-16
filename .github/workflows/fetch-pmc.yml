@@ -1,0 +1,32 @@
+name: Fetch Europe PMC candidates
+on:
+  workflow_dispatch:
+    inputs:
+      entities:
+        description: "Entity ids separated by spaces (empty = all)"
+        required: false
+        default: ""
+  push:
+    paths: ["tools/pmc_queries.json", "tools/fetch_pmc.py"]
+permissions:
+  contents: write
+concurrency: { group: fetch-pmc, cancel-in-progress: false }
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install pillow
+      - run: python tools/fetch_pmc.py ${{ github.event.inputs.entities }}
+      - name: Commit candidates
+        if: always()
+        run: |
+          git config user.name "tumtul-bot"
+          git config user.email "tumtul-bot@users.noreply.github.com"
+          git add candidates_pmc
+          git diff --cached --quiet || git commit -m "Europe PMC candidates $(date -u +%F)"
+          git pull --rebase --autostash || true
+          git push
