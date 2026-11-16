@@ -12,29 +12,36 @@ downloads a 640 px thumbnail, and writes:
 
 Nothing here is an approval: the owner chooses the final three per entity in data/images.json.
 """
-import html, io, json, pathlib, re, sys, time, urllib.parse, urllib.request
+import html, io, json, pathlib, re, sys, time, urllib.error, urllib.parse, urllib.request
 from PIL import Image, ImageDraw
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 OUT = ROOT / "candidates"
 API = "https://commons.wikimedia.org/w/api.php"
-UA = "TumTul-reference-app/0.1 (educational bone-tumour reference; candidate collection script)"
+UA = "TumTulCandidateBot/0.2 (https://github.com/harmenreza/TumTul; educational bone-tumour reference app) python-urllib"
+THUMB_W = 960  # a standard Wikimedia thumbnail bucket (non-standard widths are throttled)
 PER_QUERY, MAX_PER_ENTITY = 25, 15
 OK_LICENCE = re.compile(r"^(cc0|public domain|pd|cc by(-sa)? [0-9.]+( [a-z]+)?)$", re.I)
 NOT_XRAY = re.compile(r"histolog|micrograph|\bH&E\b|\bHE\b|stain|immunohisto|mikroskop|patholog|gross|specimen|präparat|"
                       r"\bMRI\b|\bMRT\b|\bT1\b|\bT2\b|\bSTIR\b|\bCT\b|computed tomograph|PET|scintigra|szintigra|bone scan|"
                       r"canine|dog|\bcat\b|hund|katze|horse|pferd|photo of patient|clinical photo", re.I)
 
-def get(params):
-    q = urllib.parse.urlencode({**params, "format": "json", "formatversion": "2"})
-    req = urllib.request.Request(f"{API}?{q}", headers={"User-Agent": UA})
-    for attempt in range(4):
+def _open(url, parse_json):
+    req = urllib.request.Request(url, headers={"User-Agent": UA, "Api-User-Agent": UA})
+    for attempt in range(7):
         try:
-            with urllib.request.urlopen(req, timeout=60) as r:
-                return json.load(r)
+            with urllib.request.urlopen(req, timeout=90) as r:
+                return json.load(r) if parse_json else r.read()
+        except urllib.error.HTTPError as e:
+            wait = int(e.headers.get("Retry-After") or 0) or min(120, 10 * 2 ** attempt)
+            print(f"retry {attempt} {e.code} wait {wait}s {url[:90]}", file=sys.stderr); time.sleep(wait)
         except Exception as e:
-            print("retry", attempt, e, file=sys.stderr); time.sleep(3 * (attempt + 1))
-    raise RuntimeError("Commons API failed")
+            print(f"retry {attempt} {e}", file=sys.stderr); time.sleep(10 * (attempt + 1))
+    raise RuntimeError(f"failed after retries: {url[:120]}")
+
+def get(params):
+    q = urllib.parse.urlencode({**params, "format": "json", "formatversion": "2", "maxlag": 5})
+    return _open(f"{API}?{q}", True)
 
 def plain(s, n=500):
     s = re.sub(r"<[^>]+>", " ", s or ""); s = html.unescape(re.sub(r"\s+", " ", s)).strip()
@@ -43,13 +50,11 @@ def plain(s, n=500):
 def search(term):
     d = get({"action": "query", "generator": "search", "gsrnamespace": 6, "gsrlimit": PER_QUERY,
              "gsrsearch": f"{term} filetype:bitmap", "prop": "imageinfo|categories", "cllimit": 50, "clshow": "!hidden",
-             "iiprop": "url|size|mime|extmetadata", "iiurlwidth": 640})
+             "iiprop": "url|size|mime|extmetadata", "iiurlwidth": THUMB_W})
     return (d.get("query") or {}).get("pages", [])
 
 def fetch(url):
-    req = urllib.request.Request(url, headers={"User-Agent": UA})
-    with urllib.request.urlopen(req, timeout=60) as r:
-        return r.read()
+    return _open(url, False)
 
 def sheet(paths, dest):
     W, H, cols = 320, 320, 5
@@ -67,6 +72,14 @@ def main(only=None):
     manifest = json.loads((OUT / "manifest.json").read_text()) if (OUT / "manifest.json").exists() else {}
     for ent, terms in queries.items():
         if only and ent not in only: continue
+        if not only and len(manifest.get(ent, [])) >= 6: print(f"{ent}: kept existing"); continue
+        try:
+            run_entity(ent, terms, manifest)
+        except Exception as e:
+            print(f"{ent}: FAILED {e}", file=sys.stderr)
+        (OUT / "manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=1), encoding="utf-8")
+
+def run_entity(ent, terms, manifest):
         seen, recs = set(), []
         for t in terms:
             for p in search(t):
@@ -83,7 +96,7 @@ def main(only=None):
                        "categories": [c["title"] for c in p.get("categories", [])][:15], "query": t,
                        "flag_not_radiograph": bool(NOT_XRAY.search(text)), "licence_ok": bool(OK_LICENCE.match(lic))}
                 recs.append(rec)
-            time.sleep(0.5)
+            time.sleep(1.5)
         # radiographs with a free licence first; drop anything not freely licensed
         recs = [r for r in recs if r["licence_ok"] and r["mime"] in ("image/jpeg", "image/png", "image/gif")]
         recs.sort(key=lambda r: (r["flag_not_radiograph"],))
@@ -95,13 +108,12 @@ def main(only=None):
                 p = tdir / f"{i:02d}.jpg"; im.save(p, quality=85); r["n"] = i; r["file"] = str(p.relative_to(ROOT)); paths.append(p)
             except Exception as e:
                 r["error"] = str(e)
-            time.sleep(0.3)
+            time.sleep(2.0)
         recs = [r for r in recs if "file" in r]
         if paths:
             (OUT / "sheets").mkdir(parents=True, exist_ok=True); sheet(paths, OUT / "sheets" / f"{ent}.jpg")
         manifest[ent] = recs
         print(f"{ent}: {len(recs)} candidates")
-        (OUT / "manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=1), encoding="utf-8")
 
 if __name__ == "__main__":
     main(set(sys.argv[1:]) or None)
