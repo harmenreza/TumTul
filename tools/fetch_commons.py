@@ -12,7 +12,7 @@ downloads a 640 px thumbnail, and writes:
 
 Nothing here is an approval: the owner chooses the final three per entity in data/images.json.
 """
-import html, io, json, pathlib, re, sys, time, urllib.error, urllib.parse, urllib.request
+import html, io, json, pathlib, re, shutil, sys, time, urllib.error, urllib.parse, urllib.request
 from PIL import Image, ImageDraw
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
@@ -20,7 +20,7 @@ OUT = ROOT / "candidates"
 API = "https://commons.wikimedia.org/w/api.php"
 UA = "TumTulCandidateBot/0.2 (https://github.com/harmenreza/TumTul; educational bone-tumour reference app) python-urllib"
 THUMB_W = 960  # a standard Wikimedia thumbnail bucket (non-standard widths are throttled)
-PER_QUERY, MAX_PER_ENTITY = 25, 15
+PER_QUERY, MAX_PER_ENTITY = 30, 25
 OK_LICENCE = re.compile(r"^(cc0|public domain|pd|cc by(-sa)? [0-9.]+( [a-z]+)?)$", re.I)
 NOT_XRAY = re.compile(r"histolog|micrograph|\bH&E\b|\bHE\b|stain|immunohisto|mikroskop|patholog|gross|specimen|präparat|"
                       r"\bMRI\b|\bMRT\b|\bT1\b|\bT2\b|\bSTIR\b|\bCT\b|computed tomograph|PET|scintigra|szintigra|bone scan|"
@@ -47,6 +47,25 @@ def plain(s, n=500):
     s = re.sub(r"<[^>]+>", " ", s or ""); s = html.unescape(re.sub(r"\s+", " ", s)).strip()
     return s[:n]
 
+def category_pages(term):
+    """Files in the best-matching Commons categories for a term (one subcategory level deep)."""
+    cats = get({"action": "query", "list": "search", "srnamespace": 14, "srsearch": term, "srlimit": 3})
+    titles = [c["title"] for c in (cats.get("query") or {}).get("search", [])]
+    pages = []
+    for c in titles:
+        for typ in ("file", "subcat"):
+            d = get({"action": "query", "generator": "categorymembers", "gcmtitle": c, "gcmtype": typ, "gcmlimit": 40,
+                     "prop": "imageinfo|categories", "cllimit": 50, "clshow": "!hidden", "iiprop": "url|size|mime|extmetadata", "iiurlwidth": THUMB_W})
+            got = (d.get("query") or {}).get("pages", [])
+            if typ == "file": pages += got
+            else:
+                for sc in got[:6]:
+                    d2 = get({"action": "query", "generator": "categorymembers", "gcmtitle": sc["title"], "gcmtype": "file", "gcmlimit": 40,
+                              "prop": "imageinfo|categories", "cllimit": 50, "clshow": "!hidden", "iiprop": "url|size|mime|extmetadata", "iiurlwidth": THUMB_W})
+                    pages += (d2.get("query") or {}).get("pages", []); time.sleep(1.0)
+            time.sleep(1.0)
+    return pages, titles
+
 def search(term):
     d = get({"action": "query", "generator": "search", "gsrnamespace": 6, "gsrlimit": PER_QUERY,
              "gsrsearch": f"{term} filetype:bitmap", "prop": "imageinfo|categories", "cllimit": 50, "clshow": "!hidden",
@@ -71,8 +90,9 @@ def main(only=None):
     queries = {k: v for k, v in json.loads((ROOT / "tools/commons_queries.json").read_text(encoding="utf-8")).items() if not k.startswith("_")}
     manifest = json.loads((OUT / "manifest.json").read_text()) if (OUT / "manifest.json").exists() else {}
     for ent, terms in queries.items():
+        if ent.startswith("_"): continue
         if only and ent not in only: continue
-        if not only and len(manifest.get(ent, [])) >= 6: print(f"{ent}: kept existing"); continue
+        if not only and len(manifest.get(ent, [])) >= 10: print(f"{ent}: kept existing"); continue
         try:
             run_entity(ent, terms, manifest)
         except Exception as e:
@@ -80,9 +100,15 @@ def main(only=None):
         (OUT / "manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=1), encoding="utf-8")
 
 def run_entity(ent, terms, manifest):
-        seen, recs = set(), []
+        seen, recs, stats = set(), [], {"hits": 0, "rejected_licence": {}, "categories": []}
+        pool = []
         for t in terms:
-            for p in search(t):
+            pool += [(t, p) for p in search(t)]; time.sleep(1.5)
+        for t in terms[:2]:
+            pages, cats = category_pages(t); stats["categories"] += cats
+            pool += [(f"category:{t}", p) for p in pages]
+        for t, p in pool:
+                stats["hits"] += 1
                 if p["title"] in seen or not p.get("imageinfo"): continue
                 seen.add(p["title"]); ii = p["imageinfo"][0]; md = ii.get("extmetadata", {})
                 val = lambda k: (md.get(k) or {}).get("value", "")
@@ -96,12 +122,14 @@ def run_entity(ent, terms, manifest):
                        "categories": [c["title"] for c in p.get("categories", [])][:15], "query": t,
                        "flag_not_radiograph": bool(NOT_XRAY.search(text)), "licence_ok": bool(OK_LICENCE.match(lic))}
                 recs.append(rec)
-            time.sleep(1.5)
         # radiographs with a free licence first; drop anything not freely licensed
+        for r in recs:
+            if not r["licence_ok"]: stats["rejected_licence"][r["licence"] or "(none)"] = stats["rejected_licence"].get(r["licence"] or "(none)", 0) + 1
+        stats["unique"] = len(recs)
         recs = [r for r in recs if r["licence_ok"] and r["mime"] in ("image/jpeg", "image/png", "image/gif")]
         recs.sort(key=lambda r: (r["flag_not_radiograph"],))
         recs = recs[:MAX_PER_ENTITY]
-        tdir = OUT / "thumbs" / ent; tdir.mkdir(parents=True, exist_ok=True); paths = []
+        tdir = OUT / "thumbs" / ent; shutil.rmtree(tdir, ignore_errors=True); tdir.mkdir(parents=True, exist_ok=True); paths = []
         for i, r in enumerate(recs, 1):
             try:
                 b = fetch(r["thumb"] or r["original"]); im = Image.open(io.BytesIO(b)).convert("RGB")
@@ -113,7 +141,8 @@ def run_entity(ent, terms, manifest):
         if paths:
             (OUT / "sheets").mkdir(parents=True, exist_ok=True); sheet(paths, OUT / "sheets" / f"{ent}.jpg")
         manifest[ent] = recs
-        print(f"{ent}: {len(recs)} candidates")
+        manifest.setdefault("_stats", {})[ent] = stats
+        print(f"{ent}: {len(recs)} candidates; stats {json.dumps(stats, ensure_ascii=False)[:400]}")
 
 if __name__ == "__main__":
     main(set(sys.argv[1:]) or None)
