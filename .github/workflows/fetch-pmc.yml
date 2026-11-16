@@ -6,6 +6,10 @@ on:
         description: "Entity ids separated by spaces (empty = all)"
         required: false
         default: ""
+      gap:
+        description: "1 = use tools/pmc_queries_gap.json"
+        required: false
+        default: "0"
   push:
     paths: ["tools/pmc_queries.json", "tools/fetch_pmc.py"]
 permissions:
@@ -19,7 +23,7 @@ jobs:
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
       - run: pip install pillow
-      - run: python tools/fetch_pmc.py ${{ github.event.inputs.entities }}
+      - run: GAP=${{ github.event.inputs.gap }} python tools/fetch_pmc.py ${{ github.event.inputs.entities }}
       - name: Commit candidates
         if: always()
         run: |

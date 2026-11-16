@@ -1,0 +1,77 @@
+{
+ "_note": "Second, targeted pass for entities with fewer than 3 approved examples (2026-11-17).",
+ "vertebral_haemangioma": [
+  "vertebral hemangioma",
+  "vertebral haemangioma",
+  "hemangioma of the spine",
+  "spinal hemangioma"
+ ],
+ "langerhans_cell_histiocytosis": [
+  "eosinophilic granuloma",
+  "Langerhans cell histiocytosis of bone",
+  "unifocal Langerhans cell histiocytosis",
+  "vertebra plana"
+ ],
+ "ewing_sarcoma": [
+  "Ewing sarcoma of the femur",
+  "Ewing sarcoma of the tibia",
+  "Ewing sarcoma of the humerus",
+  "Ewing sarcoma of the pelvis",
+  "Ewing's sarcoma case report"
+ ],
+ "chordoma": [
+  "sacrococcygeal chordoma",
+  "sacral chordoma case report",
+  "chordoma of the sacrum"
+ ],
+ "bone_infarct": [
+  "bone infarction",
+  "medullary bone infarct",
+  "bone infarcts"
+ ],
+ "clear_cell_chondrosarcoma": [
+  "clear cell chondrosarcoma of the femoral head",
+  "clear cell chondrosarcoma of the proximal femur",
+  "clear-cell chondrosarcoma"
+ ],
+ "osteosarcoma_periosteal": [
+  "periosteal osteosarcoma of the tibia",
+  "periosteal osteosarcoma of the femur",
+  "periosteal osteosarcoma"
+ ],
+ "periosteal_chondroma": [
+  "periosteal chondroma of the humerus",
+  "periosteal chondroma of the femur",
+  "juxtacortical chondroma"
+ ],
+ "skeletal_tuberculosis": [
+  "Pott's disease",
+  "Pott disease",
+  "tuberculosis of the spine",
+  "spinal tuberculosis case report",
+  "tuberculous dactylitis",
+  "spina ventosa"
+ ],
+ "chondromyxoid_fibroma": [
+  "chondromyxoid fibroma of the tibia",
+  "chondromyxoid fibroma of the proximal tibia",
+  "chondromyxoid fibroma case report"
+ ],
+ "enostosis": [
+  "giant bone island",
+  "enostosis",
+  "osteopoikilosis"
+ ],
+ "osteoblastoma": [
+  "osteoblastoma of the spine",
+  "osteoblastoma of the femur",
+  "osteoblastoma of the tibia",
+  "osteoblastoma case report"
+ ],
+ "paget_disease": [
+  "Paget's disease of bone case report",
+  "Paget disease of the tibia",
+  "Paget disease of the pelvis",
+  "osteitis deformans"
+ ]
+}

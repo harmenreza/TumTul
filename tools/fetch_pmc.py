@@ -6,7 +6,7 @@ CC BY, CC BY-SA or CC0, and only figures whose caption mentions a radiograph. Wr
 candidates_pmc/manifest.json, candidates_pmc/thumbs/<entity>/NN.jpg and candidates_pmc/sheets/<entity>.jpg.
 Candidates are not approvals; the owner chooses the final images.
 """
-import io, json, pathlib, re, shutil, sys, time, urllib.error, urllib.parse, urllib.request
+import io, json, os, pathlib, re, shutil, sys, time, urllib.error, urllib.parse, urllib.request
 import xml.etree.ElementTree as ET
 from PIL import Image
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
@@ -21,6 +21,9 @@ MAX_ARTICLES, MAX_FIGS = 30, 25
 POSTOP = re.compile(r"post-?operativ|after (the )?(operation|surgery|curettage|resection|treatment)|follow-?up|months? after|years? after|postop|recurren|ablation|reconstruct|implant|prosthe", re.I)
 XRAY = re.compile(r"radiograph|x-?ray|plain film|roentgenogra|radiography", re.I)
 OTHER = re.compile(r"\bMRI\b|magnetic resonance|\bCT\b|computed tomograph|T1|T2|STIR|scintigra|bone scan|PET|histolog|H&E|hematoxylin|haematoxylin|microscop|immunohisto|intraoperative|gross", re.I)
+THIRD_PARTY = re.compile(r"reprinted|reproduced (from|with)|adapted (from|with)|with permission|courtesy of|copyright ©", re.I)
+GAP = os.environ.get("GAP") == "1"
+SFX = "_gap" if GAP else ""
 OK_LIC = re.compile(r"creativecommons\.org/(licenses/(by|by-sa)/|publicdomain/zero/)", re.I)
 
 def _open(url, kind):
@@ -105,7 +108,7 @@ def run_entity(ent, terms, manifest):
         meta, figs = figures(a["pmcid"]); time.sleep(0.5)
         if not meta or not OK_LIC.search(meta["licence_url"] or ""): continue
         for f in figs:
-            if not f["xray"]: continue
+            if not f["xray"] or THIRD_PARTY.search(f["caption"]): continue
             cap = f["caption"]
             f["mentions_entity"] = any(w.lower() in cap.lower() for t in terms for w in [t.split()[0]] if len(w) > 4) or any(t.lower() in cap.lower() for t in terms)
             f["postop"] = bool(POSTOP.search(cap))
@@ -116,7 +119,7 @@ def run_entity(ent, terms, manifest):
     fig_no = lambda c: int((re.findall(r"\d+", c["label"]) or [99])[0])
     cands.sort(key=lambda c: (c["postop"], not c["mentions_entity"], c["other"], fig_no(c)))
     cands = cands[:MAX_FIGS]
-    tdir = OUT / "thumbs" / ent; shutil.rmtree(tdir, ignore_errors=True); tdir.mkdir(parents=True, exist_ok=True)
+    tdir = OUT / "thumbs" / (ent + SFX); shutil.rmtree(tdir, ignore_errors=True); tdir.mkdir(parents=True, exist_ok=True)
     keep, paths = [], []
     for c in cands:
         if not c["image"]: continue
@@ -128,14 +131,14 @@ def run_entity(ent, terms, manifest):
         n = len(keep) + 1; p = tdir / f"{n:02d}.jpg"; im.save(p, quality=85)
         c["n"] = n; c["file"] = str(p.relative_to(ROOT)); keep.append(c); paths.append(p)
     if paths:
-        (OUT / "sheets").mkdir(parents=True, exist_ok=True); sheet(paths, OUT / "sheets" / f"{ent}.jpg")
+        (OUT / "sheets").mkdir(parents=True, exist_ok=True); sheet(paths, OUT / "sheets" / f"{ent}{SFX}.jpg")
     manifest[ent] = keep
     (OUT / "manifest").mkdir(parents=True, exist_ok=True)
-    (OUT / "manifest" / f"{ent}.json").write_text(json.dumps(keep, ensure_ascii=False, indent=1), encoding="utf-8")
+    (OUT / "manifest" / f"{ent}{SFX}.json").write_text(json.dumps(keep, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"{ent}: {len(keep)} figures from {len(arts)} articles")
 
 def main(only=None):
-    q = {k: v for k, v in json.loads((ROOT / "tools/pmc_queries.json").read_text(encoding="utf-8")).items() if not k.startswith("_")}
+    q = {k: v for k, v in json.loads((ROOT / ("tools/pmc_queries_gap.json" if GAP else "tools/pmc_queries.json")).read_text(encoding="utf-8")).items() if not k.startswith("_")}
     OUT.mkdir(exist_ok=True)
     mp = OUT / "manifest.json"; manifest = json.loads(mp.read_text()) if mp.exists() else {}
     for ent, terms in q.items():
