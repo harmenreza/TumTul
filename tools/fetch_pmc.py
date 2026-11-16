@@ -30,7 +30,7 @@ def _open(url, kind):
                 b = r.read()
                 return json.loads(b) if kind == "json" else b
         except urllib.error.HTTPError as e:
-            if e.code == 404: return None
+            if e.code in (401, 403, 404, 410): return None   # not retryable
             wait = int(e.headers.get("Retry-After") or 0) or min(120, 8 * 2 ** attempt)
             print(f"retry {attempt} {e.code} {url[:90]}", file=sys.stderr); time.sleep(wait)
         except Exception as e:
@@ -75,9 +75,23 @@ def licence_name(u):
     if m: return f"CC {m.group(1).upper()} {m.group(2)}"
     return "CC0 1.0" if "publicdomain/zero" in (u or "") else ""
 
+S3 = "https://pmc-oa-opendata.s3.amazonaws.com"
+_s3_cache = {}
+def s3_files(pmcid):
+    """Keys in the public PMC Open Access bucket for an article (all versions)."""
+    if pmcid not in _s3_cache:
+        b = _open(f"{S3}/?" + urllib.parse.urlencode({"list-type": "2", "prefix": f"{pmcid}.", "max-keys": "1000"}), "bytes") or b""
+        _s3_cache[pmcid] = re.findall(r"<Key>([^<]+)</Key>", b.decode("utf-8", "ignore"))
+    return _s3_cache[pmcid]
+
 def image_url(pmcid, graphic):
-    name = graphic if "." in graphic.split("/")[-1] else graphic + ".jpg"
-    return f"https://europepmc.org/articles/{pmcid}/bin/{name}"
+    base = graphic.split("/")[-1]
+    stem = base.rsplit(".", 1)[0] if re.search(r"\.(jpe?g|png|gif|tiff?)$", base, re.I) else base
+    keys = [k for k in s3_files(pmcid) if k.split("/")[-1].rsplit(".", 1)[0] == stem and re.search(r"\.(jpe?g|png|gif)$", k, re.I)]
+    keys.sort(key=lambda k: (not k.lower().endswith((".jpg", ".jpeg")), k), reverse=False)
+    # newest article version last in lexical order -> prefer it
+    keys.sort(key=lambda k: k.split("/")[0], reverse=True)
+    return f"{S3}/{keys[0]}" if keys else None
 
 def run_entity(ent, terms, manifest):
     arts, seen = [], set()
@@ -99,7 +113,8 @@ def run_entity(ent, terms, manifest):
     tdir = OUT / "thumbs" / ent; shutil.rmtree(tdir, ignore_errors=True); tdir.mkdir(parents=True, exist_ok=True)
     keep, paths = [], []
     for c in cands:
-        b = _open(c["image"], "bytes"); time.sleep(1.5)
+        if not c["image"]: continue
+        b = _open(c["image"], "bytes"); time.sleep(0.5)
         if not b: continue
         try:
             im = Image.open(io.BytesIO(b)).convert("RGB"); im.thumbnail((1200, 1200))
