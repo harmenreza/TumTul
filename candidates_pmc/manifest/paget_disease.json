@@ -1,0 +1,60 @@
+[
+ {
+  "label": "Figure 1.",
+  "caption": "Clinical features and pedigree of family 1 and long-term effects of denosumab treatment of family 2. (A) The pedigree of family 1 is shown. The family members with Paget disease of bone (PDB) are indicated with black symbols. The black arrow indicates the proband. (B) X-ray examination of the proband showed that the deformity of femurs, pelvis, and tibias was more obvious with large and disordered trabecular bone and osteoporosis with osteolysis sites. X-ray examination of the skull, clavicles, and humeri is shown. The skull was deformed and the skull plate barrier was thickened and enlarged with sclerotic foci. (C) Whole-body bone scintigraphy of the proband showed radionuclide uptake in th",
+  "graphic": "dgaf314f1.jpg",
+  "xray": true,
+  "other": true,
+  "mentions_entity": true,
+  "postop": false,
+  "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+  "licence_text": "https://creativecommons.org/licenses/by/4.0/This is an Open Access article distributed under the terms of the Creative Commons Attribution License (https://creativecommons.org/licenses/by/4.0/), which permits unrestricted reuse, distribution, and reproduction in any medium, provided the original wor",
+  "journal": "The Journal of Clinical Endocrinology and Metabolism",
+  "year": "2026",
+  "article_title": "A Missense Mutation in Close Proximity of ALS-linked PFN1 Mutations Causes Only Early-onset Paget Disease of Bone",
+  "doi": "10.1210/clinem/dgaf314",
+  "authors": [
+   "Weng R",
+   "Li X",
+   "Yue H",
+   "Xu Y",
+   "Wei Z",
+   "Xu S"
+  ],
+  "pmcid": "PMC12712971",
+  "licence": "CC BY 4.0",
+  "article_url": "https://europepmc.org/article/PMC/12712971",
+  "image": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12712971.1/dgaf314f1.jpg",
+  "n": 1,
+  "file": "candidates_pmc/thumbs/paget_disease/01.jpg"
+ },
+ {
+  "label": "Figure 2.",
+  "caption": "Pfn1 knock-in mouse model and comparison of appearance between WT and Pfn1L112P mice. (A) Targeting strategy for Pfn1L112P knock-in mice. The knock-in resulted in a single amino acid substitution at position 112. (B) Appearance of WT and Pfn1L112P mice. The altered facial appearance of Pfn1L112P mice, compared to WT mice, was due to the wide-arched calva, shortened maxilla, and curved spine. This resulted in a steep nose-to-head curvature and arched body profile. (C) X-ray images of WT and Pfn1L112P mice. Compared to WT mice, the Pfn1L112P mice showed a thinner physique, cranial deformity, and a reduction in trabecular bone. All mice shown here were 8 weeks old and female.",
+  "graphic": "dgaf314f2.jpg",
+  "xray": true,
+  "other": false,
+  "mentions_entity": false,
+  "postop": false,
+  "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+  "licence_text": "https://creativecommons.org/licenses/by/4.0/This is an Open Access article distributed under the terms of the Creative Commons Attribution License (https://creativecommons.org/licenses/by/4.0/), which permits unrestricted reuse, distribution, and reproduction in any medium, provided the original wor",
+  "journal": "The Journal of Clinical Endocrinology and Metabolism",
+  "year": "2026",
+  "article_title": "A Missense Mutation in Close Proximity of ALS-linked PFN1 Mutations Causes Only Early-onset Paget Disease of Bone",
+  "doi": "10.1210/clinem/dgaf314",
+  "authors": [
+   "Weng R",
+   "Li X",
+   "Yue H",
+   "Xu Y",
+   "Wei Z",
+   "Xu S"
+  ],
+  "pmcid": "PMC12712971",
+  "licence": "CC BY 4.0",
+  "article_url": "https://europepmc.org/article/PMC/12712971",
+  "image": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12712971.1/dgaf314f2.jpg",
+  "n": 2,
+  "file": "candidates_pmc/thumbs/paget_disease/02.jpg"
+ }
+]

@@ -1,0 +1,60 @@
+[
+ {
+  "label": "Figure 1",
+  "caption": "Preoperative plain radiographs. (a) Anteroposterior and (b) lateral radiographs showing cortical erosion, saucerization of the underlying cortex, and a rim of sclerosis on the anterior surface of the right distal femur.",
+  "graphic": "12957_2014_1828_Fig1_HTML.jpg",
+  "xray": true,
+  "other": false,
+  "mentions_entity": false,
+  "postop": false,
+  "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+  "licence_text": "https://creativecommons.org/licenses/by/4.0/This article is published under license to BioMed Central Ltd. This is an Open Access article distributed under the terms of the Creative Commons Attribution License (http://creativecommons.org/licenses/by/4.0), which permits unrestricted use, distribution",
+  "journal": "World Journal of Surgical Oncology",
+  "year": "2014",
+  "article_title": "A giant periosteal chondroma of the distal femur successfully reconstructed with synthetic bone grafts and a bioresorbable plate: a case report",
+  "doi": "10.1186/1477-7819-12-354",
+  "authors": [
+   "Imura Y",
+   "Shigi A",
+   "Outani H",
+   "Hamada K",
+   "Tamura H",
+   "Morii E"
+  ],
+  "pmcid": "PMC4251843",
+  "licence": "CC BY 4.0",
+  "article_url": "https://europepmc.org/article/PMC/4251843",
+  "image": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4251843.1/12957_2014_1828_Fig1_HTML.jpg",
+  "n": 1,
+  "file": "candidates_pmc/thumbs/periosteal_chondroma/01.jpg"
+ },
+ {
+  "label": "Figure 6",
+  "caption": "Postoperative plain radiographs. (a) Anteroposterior and (b) lateral postoperative routine radiographs showing the bone defect filled with IP-CHA and covered with a bioresorbable plate. (c) Anteroposterior and (d) lateral radiographs at 12-month follow-up showing no local recurrence of the tumor. Particles of IP-CHA were almost consolidated.",
+  "graphic": "12957_2014_1828_Fig6_HTML.jpg",
+  "xray": true,
+  "other": false,
+  "mentions_entity": false,
+  "postop": true,
+  "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+  "licence_text": "https://creativecommons.org/licenses/by/4.0/This article is published under license to BioMed Central Ltd. This is an Open Access article distributed under the terms of the Creative Commons Attribution License (http://creativecommons.org/licenses/by/4.0), which permits unrestricted use, distribution",
+  "journal": "World Journal of Surgical Oncology",
+  "year": "2014",
+  "article_title": "A giant periosteal chondroma of the distal femur successfully reconstructed with synthetic bone grafts and a bioresorbable plate: a case report",
+  "doi": "10.1186/1477-7819-12-354",
+  "authors": [
+   "Imura Y",
+   "Shigi A",
+   "Outani H",
+   "Hamada K",
+   "Tamura H",
+   "Morii E"
+  ],
+  "pmcid": "PMC4251843",
+  "licence": "CC BY 4.0",
+  "article_url": "https://europepmc.org/article/PMC/4251843",
+  "image": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4251843.1/12957_2014_1828_Fig6_HTML.jpg",
+  "n": 2,
+  "file": "candidates_pmc/thumbs/periosteal_chondroma/02.jpg"
+ }
+]
