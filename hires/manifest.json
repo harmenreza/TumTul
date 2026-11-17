@@ -254,6 +254,13 @@
    "w": 644,
    "h": 1654,
    "file": "hires/osteomyelitis/1.png"
+  },
+  {
+   "n": 2,
+   "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC6032807.1/jbsr-101-1-1300-g11.jpg",
+   "w": 400,
+   "h": 1072,
+   "file": "hires/osteomyelitis/2.png"
   }
  ],
  "osteosarcoma_conventional": [
@@ -384,6 +391,13 @@
    "w": 750,
    "h": 750,
    "file": "hires/chordoma/1.png"
+  },
+  {
+   "n": 2,
+   "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10217758.1/diagnostics-13-01801-g006.jpg",
+   "w": 740,
+   "h": 643,
+   "file": "hires/chordoma/2.png"
   }
  ],
  "osteoid_osteoma": [
