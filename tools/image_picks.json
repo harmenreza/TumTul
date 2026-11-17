@@ -1,0 +1,600 @@
+{
+ "osteochondroma": [
+  [
+   "commons",
+   "File:Kartilaginaere Exostose 47jm - Roe 2 Ebenen - 001.jpg"
+  ],
+  [
+   "commons",
+   "File:Kartilaginäre Exostose.png"
+  ],
+  [
+   "commons",
+   "File:Roe-exostose.jpg"
+  ]
+ ],
+ "enchondroma": [
+  [
+   "commons",
+   "File:Enchondrom Tibia 83jm - Roe ap und seitlich - 001.jpg"
+  ],
+  [
+   "commons",
+   "File:Enchondrom Humerus Roe02.jpg"
+  ],
+  [
+   "commons",
+   "File:Enchondrom MHK pathologische Fraktur Roe02.jpg"
+  ]
+ ],
+ "non_ossifying_fibroma": [
+  [
+   "commons",
+   "File:NOF 1.jpg"
+  ],
+  [
+   "commons",
+   "File:NOF Femur 2.jpg"
+  ],
+  [
+   "commons",
+   "File:Nicht ossifizierendes Fibrom des distalen Femur 20W - CR ap - 001.jpg"
+  ]
+ ],
+ "paget_disease": [
+  [
+   "commons",
+   "File:Morbus Paget des Beckens rechts 77W - CR ap - 001.jpg"
+  ],
+  [
+   "commons",
+   "File:Paget's disease R coxal.jpg"
+  ]
+ ],
+ "bone_metastasis": [
+  [
+   "commons",
+   "File:Radiography pelvis with bone metastasis 01.jpg"
+  ],
+  [
+   "commons",
+   "File:Prostata-Ca ossaere Metastasen Becken.jpg"
+  ],
+  [
+   "commons",
+   "File:Knochenmetastasen bei Magenkarzinom - Roe ap li Heufte 001.jpg"
+  ]
+ ],
+ "plasmacytoma_myeloma": [
+  [
+   "commons",
+   "File:Left humerus with myeloma.jpg"
+  ],
+  [
+   "commons",
+   "File:Left femur with myeloma.jpg"
+  ],
+  [
+   "pmc",
+   "PMC11424764",
+   "Fig. 1",
+   [
+    0,
+    0,
+    0.47,
+    0.5
+   ]
+  ]
+ ],
+ "intraosseous_ganglion_geode": [
+  [
+   "commons",
+   "File:Ganglio intraosseo.png"
+  ],
+  [
+   "pmc",
+   "PMC4309300",
+   "Figure 2"
+  ],
+  [
+   "pmc",
+   "PMC11008917",
+   "Figure 1"
+  ]
+ ],
+ "brown_tumour": [
+  [
+   "commons",
+   "File:X-ray of brown tumors in the pelvis and a hip fracture in renal osteodystrophy.jpg"
+  ],
+  [
+   "commons",
+   "File:Brown tumours of the hands.jpg"
+  ],
+  [
+   "commons",
+   "File:Osteitis fibrosa cystica tibiae X-ray.jpg"
+  ]
+ ],
+ "bone_infarct": [
+  [
+   "commons",
+   "File:BoneInfarct.PNG"
+  ],
+  [
+   "pmc",
+   "PMC7905338",
+   "Fig. 1"
+  ],
+  [
+   "pmc",
+   "PMC7664144",
+   "Figure 1"
+  ]
+ ],
+ "stress_fracture": [
+  [
+   "commons",
+   "File:Stress fracture of the second metatarsal bone1.jpg"
+  ],
+  [
+   "commons",
+   "File:X-ray of stress fracture of the hip.jpg"
+  ],
+  [
+   "commons",
+   "File:X-ray of subtle periosteal raction of tibial fracture.jpg"
+  ]
+ ],
+ "intraosseous_lipoma": [
+  [
+   "commons",
+   "File:Kalkaneuslipom 36jw - Roe seitlich - 001.jpg"
+  ],
+  [
+   "commons",
+   "File:Typisches Lipom des Calcaneus 52M - CR seitlich - 001.jpg"
+  ],
+  [
+   "commons",
+   "File:Intraossaeres Lipom in der Tibia - 77jw - 001.jpg",
+   [
+    0,
+    0,
+    0.31,
+    1
+   ]
+  ]
+ ],
+ "simple_bone_cyst": [
+  [
+   "commons",
+   "File:Cisti ossea semplice -RX.jpg"
+  ],
+  [
+   "commons",
+   "File:JKZ.jpeg"
+  ],
+  [
+   "commons",
+   "File:Juvenile Knochenzyste Humerus mit pathologischer Fraktur 9W - fallen fragment CR ap - 001.jpg"
+  ]
+ ],
+ "osteomyelitis": [
+  [
+   "commons",
+   "File:BrodieAbscessRadiograph.jpg"
+  ],
+  [
+   "pmc",
+   "PMC5630055",
+   "Fig. 1:",
+   [
+    0,
+    0,
+    0.48,
+    1
+   ]
+  ]
+ ],
+ "osteosarcoma_conventional": [
+  [
+   "commons",
+   "File:Osteosarcoma of the tibia.png"
+  ],
+  [
+   "pmc",
+   "PMC11852380",
+   "Figure 17",
+   [
+    0,
+    0,
+    0.45,
+    1
+   ]
+  ],
+  [
+   "pmc",
+   "PMC11852380",
+   "Figure 5",
+   [
+    0,
+    0,
+    0.46,
+    1
+   ]
+  ]
+ ],
+ "ewing_sarcoma": [
+  [
+   "commons",
+   "File:Ewing sarcoma tibia child.jpg"
+  ]
+ ],
+ "chondroblastoma": [
+  [
+   "pmc",
+   "PMC8493501",
+   "Fig. 1"
+  ],
+  [
+   "pmc",
+   "PMC9543861",
+   "Figure 1"
+  ],
+  [
+   "pmc",
+   "PMC4866331",
+   "Fig. 1"
+  ]
+ ],
+ "giant_cell_tumour_of_bone": [
+  [
+   "pmc",
+   "PMC2989147",
+   "Figure 1",
+   [
+    0,
+    0,
+    0.57,
+    1
+   ]
+  ],
+  [
+   "pmc",
+   "PMC2989131",
+   "Figure 1",
+   [
+    0,
+    0,
+    0.5,
+    1
+   ]
+  ],
+  [
+   "pmc",
+   "PMC2989147",
+   "Figure 2"
+  ]
+ ],
+ "aneurysmal_bone_cyst": [
+  [
+   "pmc",
+   "PMC3828064",
+   "Figure 1"
+  ],
+  [
+   "pmc",
+   "PMC3828064",
+   "Figure 2"
+  ],
+  [
+   "pmc",
+   "PMC9360065",
+   "Fig. 7"
+  ]
+ ],
+ "osteosarcoma_telangiectatic": [
+  [
+   "pmc",
+   "PMC9360065",
+   "Fig. 10",
+   [
+    0,
+    0,
+    0.28,
+    1
+   ]
+  ],
+  [
+   "pmc",
+   "PMC11995106",
+   "Fig. 1A"
+  ],
+  [
+   "pmc",
+   "PMC2769378",
+   "Figure 1a and b."
+  ]
+ ],
+ "osteosarcoma_parosteal": [
+  [
+   "pmc",
+   "PMC3850780",
+   "Figure 10"
+  ],
+  [
+   "pmc",
+   "PMC2570438",
+   "Figure 1"
+  ],
+  [
+   "pmc",
+   "PMC9184185",
+   "Figure 1",
+   [
+    0,
+    0,
+    0.49,
+    1
+   ]
+  ]
+ ],
+ "osteosarcoma_periosteal": [
+  [
+   "pmc",
+   "PMC4474449",
+   "Fig. 1"
+  ]
+ ],
+ "fibrous_dysplasia": [
+  [
+   "pmc",
+   "PMC11009832",
+   "Figure 1"
+  ],
+  [
+   "pmc",
+   "PMC8319740",
+   "Fig. 2",
+   [
+    0,
+    0,
+    0.245,
+    1
+   ]
+  ],
+  [
+   "commons",
+   "File:Fibroese Dysplasie Kalkaneus 21jm- Roe seitlich - 001.jpg"
+  ]
+ ],
+ "chordoma": [
+  [
+   "pmc",
+   "PMC10233321",
+   "Figure 1"
+  ]
+ ],
+ "osteoid_osteoma": [
+  [
+   "pmc",
+   "PMC2747406",
+   "Figure 8"
+  ],
+  [
+   "pmc",
+   "PMC3522328",
+   "Figure 3",
+   [
+    0,
+    0,
+    0.5,
+    1
+   ]
+  ],
+  [
+   "pmc",
+   "PMC3522328",
+   "Figure 11",
+   [
+    0,
+    0,
+    0.72,
+    1
+   ]
+  ]
+ ],
+ "adamantinoma_ofd_spectrum": [
+  [
+   "pmc",
+   "PMC12731842",
+   "Figure 2"
+  ],
+  [
+   "pmc",
+   "PMC3474341",
+   "Figure 2"
+  ],
+  [
+   "pmc",
+   "PMC6011161",
+   "Figure 1"
+  ]
+ ],
+ "bpop_nora_lesion": [
+  [
+   "pmc",
+   "PMC3541688",
+   "Figure 1"
+  ],
+  [
+   "pmc",
+   "PMC3541688",
+   "Figure 13"
+  ],
+  [
+   "pmc",
+   "PMC10784761",
+   "Figure 2"
+  ]
+ ],
+ "chondromyxoid_fibroma": [
+  [
+   "pmc",
+   "PMC2983082",
+   "Figure 1"
+  ],
+  [
+   "pmc",
+   "PMC5491748",
+   "Figure 1",
+   [
+    0,
+    0,
+    0.48,
+    0.55
+   ]
+  ]
+ ],
+ "chondrosarcoma_central": [
+  [
+   "pmc",
+   "PMC10046282",
+   "Figure 3",
+   [
+    0,
+    0,
+    0.5,
+    0.47
+   ]
+  ],
+  [
+   "pmc",
+   "PMC10046282",
+   "Figure 2"
+  ],
+  [
+   "pmc",
+   "PMC10046282",
+   "Figure 5",
+   [
+    0,
+    0,
+    0.36,
+    1
+   ]
+  ]
+ ],
+ "clear_cell_chondrosarcoma": [
+  [
+   "pmc",
+   "PMC4131066",
+   "Figure 1"
+  ]
+ ],
+ "desmoplastic_fibroma": [
+  [
+   "pmc",
+   "PMC8502758",
+   "Figure 1"
+  ],
+  [
+   "pmc",
+   "PMC4114711",
+   "Figure 1",
+   [
+    0,
+    0,
+    0.6,
+    1
+   ]
+  ],
+  [
+   "pmc",
+   "PMC10451113",
+   "Figure 1"
+  ]
+ ],
+ "periosteal_chondroma": [
+  [
+   "pmc",
+   "PMC4251843",
+   "Figure 1"
+  ]
+ ],
+ "enostosis": [
+  [
+   "commons",
+   "File:Enostom Os metacarpale I 23M - CR - 001.jpg"
+  ],
+  [
+   "commons",
+   "File:Osteopoikilie Haende.jpg"
+  ]
+ ],
+ "primary_bone_lymphoma": [
+  [
+   "pmc",
+   "PMC3984396",
+   "Figure 1"
+  ],
+  [
+   "pmc",
+   "PMC8415166",
+   "Figure 1"
+  ],
+  [
+   "pmc",
+   "PMC7720670",
+   "Figure 2"
+  ]
+ ],
+ "skeletal_tuberculosis": [
+  [
+   "pmc",
+   "PMC5037907",
+   "Fig. 1"
+  ],
+  [
+   "pmc",
+   "PMC7501750",
+   "Figure 1"
+  ],
+  [
+   "pmc",
+   "PMC2784744",
+   "Figure 1",
+   [
+    0,
+    0,
+    0.44,
+    1
+   ]
+  ]
+ ],
+ "osteoblastoma": [
+  [
+   "pmc",
+   "PMC3776745",
+   "Figure 1"
+  ],
+  [
+   "pmc",
+   "PMC11006508",
+   "Fig. 1"
+  ]
+ ],
+ "langerhans_cell_histiocytosis": [
+  [
+   "pmc",
+   "PMC2803941",
+   "Figure 1"
+  ],
+  [
+   "pmc",
+   "PMC6702438",
+   "Fig. 2"
+  ]
+ ]
+}
