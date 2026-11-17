@@ -62,9 +62,9 @@ versions follow SemVer. Data-schema changes are only recorded after owner approv
   The full-resolution originals were fetched (`tools/fetch_hires.py`, workflow `fetch-hires.yml`: Commons
   original or 2560 px rendering, largest PMC figure file from the PMC open-access S3 bucket); most small images
   were already at their original size, so they could not be upscaled honestly and were removed.
-- 19 removed as below 500 px (brown tumour ×2, chondroblastoma ×2, central chondrosarcoma ×2, GCT ×2,
+- 20 removed as below 500 px (brown tumour ×2, chondroblastoma ×2, central chondrosarcoma ×2, GCT ×2,
   conventional OS ×2, osteoid osteoma ×2, telangiectatic OS, parosteal OS, periosteal OS, desmoplastic fibroma,
-  skeletal TB, stress fracture, fibrous dysplasia); 4 typical high-resolution replacements added (fibrous
+  skeletal TB, stress fracture, fibrous dysplasia, myeloma); 4 typical high-resolution replacements added (fibrous
   dysplasia of a rib, GCT of distal femur, conventional OS of distal femur, multiple myeloma of the shoulder).
 - `tools/assemble_images.py` now builds from the full-resolution original, output max 1600 px, JPEG q84, and
   warns below 500 px. `tools/measure_pool.py` + workflow `measure-pool.yml` record candidate pixel sizes.
