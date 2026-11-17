@@ -5,6 +5,13 @@ versions follow SemVer. Data-schema changes are only recorded after owner approv
 
 ## [Unreleased] — 2026-11-16
 
+### Released to the web prototype (2026-11-17) — example images approved
+- Owner reviewed all 64 candidates and approved all 64 (`data/images.json` v0.3.0, every record `status: "approved"`).
+  The Sumbu B gallery is now live in the published prototype for 32 entities; the other 5 show
+  "Contoh gambar untuk entitas ini belum tersedia."
+- About page text updated: sources (Wikimedia Commons and PubMed Central open-access figures), licences, pre-treatment,
+  typical-only, ≥ 500 px, own-words captions, images never analysed.
+
 ### Added (UI + tooling; no weight, entity, feature or KB-schema change)
 - Sumbu B: per-entity button **"Lihat contoh gambar (n)"** in the expanded row; opens a bottom-sheet gallery
   (up to 3 radiographs, black frame, caption in our own words, attribution line under each image: file title

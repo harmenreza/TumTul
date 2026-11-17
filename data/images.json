@@ -1,5 +1,5 @@
 {
- "version": "0.2.0",
+ "version": "0.3.0",
  "note": "Example-image registry for the Sumbu B gallery. Separate from the knowledge base (kb-schema.json unchanged). Up to 3 radiographs per entity, freely licensed (CC0, public domain, CC BY, CC BY-SA). Only records with status 'approved' (owner-reviewed) are shown. Fields: file (path under web/), caption_id (our own words), site, source_title, source_url, author, repository, licence, licence_url, changes, status (candidate | approved | rejected). Selection rule (owner, 2026-11-17): only the most typical radiograph of each entity; images from sources that call the case atypical, unusual, rare-site, aggressive, giant, multifocal, a mimic or misdiagnosed are excluded.",
  "images": {
   "adamantinoma_ofd_spectrum": [
@@ -13,7 +13,7 @@
     "licence": "CC BY 4.0",
     "licence_url": "https://creativecommons.org/licenses/by/4.0/",
     "changes": "diperkecil",
-    "status": "candidate"
+    "status": "approved"
    },
    {
     "file": "img/adamantinoma_ofd_spectrum-2.jpg",
@@ -25,7 +25,7 @@
     "licence": "CC BY 4.0",
     "licence_url": "http://creativecommons.org/licenses/by/4.0/",
     "changes": "diperkecil",
-    "status": "candidate"
+    "status": "approved"
    }
   ],
   "aneurysmal_bone_cyst": [
@@ -39,7 +39,7 @@
     "licence": "CC BY 2.0",
     "licence_url": "http://creativecommons.org/licenses/by/2.0/",
     "changes": "diperkecil",
-    "status": "candidate"
+    "status": "approved"
    },
    {
     "file": "img/aneurysmal_bone_cyst-2.jpg",
@@ -51,7 +51,7 @@
     "licence": "CC BY 2.0",
     "licence_url": "http://creativecommons.org/licenses/by/2.0/",
     "changes": "diperkecil",
-    "status": "candidate"
+    "status": "approved"
    },
    {
     "file": "img/aneurysmal_bone_cyst-3.jpg",
@@ -63,7 +63,7 @@
     "licence": "CC BY 4.0",
     "licence_url": "https://creativecommons.org/licenses/by/4.0/",
     "changes": "diperkecil",
-    "status": "candidate"
+    "status": "approved"
    }
   ],
   "bone_infarct": [
@@ -77,7 +77,7 @@
     "licence": "CC BY-SA 3.0",
     "licence_url": "https://creativecommons.org/licenses/by-sa/3.0",
     "changes": "diperkecil",
-    "status": "candidate"
+    "status": "approved"
    },
    {
     "file": "img/bone_infarct-2.jpg",
@@ -89,7 +89,7 @@
     "licence": "CC BY 4.0",
     "licence_url": "http://creativecommons.org/licenses/by/4.0/",
     "changes": "diperkecil",
-    "status": "candidate"
+    "status": "approved"
    },
    {
     "file": "img/bone_infarct-3.jpg",
@@ -101,7 +101,7 @@
     "licence": "CC BY 4.0",
     "licence_url": "https://creativecommons.org/licenses/by/4.0",
     "changes": "diperkecil",
-    "status": "candidate"
+    "status": "approved"
    }
   ],
   "bone_metastasis": [
@@ -115,7 +115,7 @@
     "licence": "CC BY-SA 2.0",
     "licence_url": "https://creativecommons.org/licenses/by-sa/2.0",
     "changes": "diperkecil",
-    "status": "candidate"
+    "status": "approved"
    },
    {
     "file": "img/bone_metastasis-2.jpg",
@@ -127,7 +127,7 @@
     "licence": "CC BY-SA 3.0",
     "licence_url": "https://creativecommons.org/licenses/by-sa/3.0",
     "changes": "diperkecil",
-    "status": "candidate"
+    "status": "approved"
    },
    {
     "file": "img/bone_metastasis-3.jpg",
@@ -139,7 +139,7 @@
     "licence": "CC BY-SA 3.0",
     "licence_url": "https://creativecommons.org/licenses/by-sa/3.0",
     "changes": "diperkecil",
-    "status": "candidate"
+    "status": "approved"
    }
   ],
   "bpop_nora_lesion": [
@@ -153,7 +153,7 @@
     "licence": "CC BY 4.0",
     "licence_url": "https://creativecommons.org/licenses/by/4.0/",
     "changes": "diperkecil",
-    "status": "candidate"
+    "status": "approved"
    }
   ],
   "brown_tumour": [
@@ -167,7 +167,7 @@
     "licence": "CC BY-SA 3.0",
     "licence_url": "https://creativecommons.org/licenses/by-sa/3.0",
     "changes": "diperkecil",
-    "status": "candidate"
+    "status": "approved"
    }
   ],
   "chondroblastoma": [
@@ -181,7 +181,7 @@
     "licence": "CC BY 3.0",
     "licence_url": "https://creativecommons.org/licenses/by/3.0/",
     "changes": "diperkecil",
-    "status": "candidate"
+    "status": "approved"
    }
   ],
   "chondromyxoid_fibroma": [
@@ -195,7 +195,7 @@
     "licence": "CC BY 2.0",
     "licence_url": "http://creativecommons.org/licenses/by/2.0/",
     "changes": "diperkecil",
-    "status": "candidate"
+    "status": "approved"
    }
   ],
   "chondrosarcoma_central": [
@@ -209,7 +209,7 @@
     "licence": "CC BY 4.0",
     "licence_url": "https://creativecommons.org/licenses/by/4.0/",
     "changes": "diperkecil",
-    "status": "candidate"
+    "status": "approved"
    }
   ],
   "chordoma": [
@@ -223,7 +223,7 @@
     "licence": "CC BY 3.0",
     "licence_url": "https://creativecommons.org/licenses/by/3.0/",
     "changes": "diperkecil",
-    "status": "candidate"
+    "status": "approved"
    }
   ],
   "enchondroma": [
@@ -237,7 +237,7 @@
     "licence": "CC BY-SA 3.0",
     "licence_url": "https://creativecommons.org/licenses/by-sa/3.0",
     "changes": "diperkecil",
-    "status": "candidate"
+    "status": "approved"
    },
    {
     "file": "img/enchondroma-2.jpg",
@@ -249,7 +249,7 @@
     "licence": "CC BY-SA 3.0",
     "licence_url": "https://creativecommons.org/licenses/by-sa/3.0",
     "changes": "diperkecil",
-    "status": "candidate"
+    "status": "approved"
    },
    {
     "file": "img/enchondroma-3.jpg",
@@ -261,7 +261,7 @@
     "licence": "CC BY-SA 3.0",
     "licence_url": "https://creativecommons.org/licenses/by-sa/3.0",
     "changes": "diperkecil",
-    "status": "candidate"
+    "status": "approved"
    }
   ],
   "enostosis": [
@@ -275,7 +275,7 @@
     "licence": "CC BY-SA 4.0",
     "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
     "changes": "diperkecil",
-    "status": "candidate"
+    "status": "approved"
    },
    {
     "file": "img/enostosis-2.jpg",
@@ -287,7 +287,7 @@
     "licence": "CC BY-SA 3.0",
     "licence_url": "https://creativecommons.org/licenses/by-sa/3.0",
     "changes": "diperkecil",
-    "status": "candidate"
+    "status": "approved"
    }
   ],
   "ewing_sarcoma": [
@@ -301,7 +301,7 @@
     "licence": "CC BY-SA 3.0",
     "licence_url": "http://creativecommons.org/licenses/by-sa/3.0/",
     "changes": "diperkecil",
-    "status": "candidate"
+    "status": "approved"
    }
   ],
   "fibrous_dysplasia": [
@@ -315,7 +315,7 @@
     "licence": "CC BY 4.0",
     "licence_url": "https://creativecommons.org/licenses/by/4.0/",
     "changes": "diperkecil",
-    "status": "candidate"
+    "status": "approved"
    },
    {
     "file": "img/fibrous_dysplasia-2.jpg",
@@ -327,7 +327,7 @@
     "licence": "CC BY-SA 3.0",
     "licence_url": "https://creativecommons.org/licenses/by-sa/3.0",
     "changes": "diperkecil",
-    "status": "candidate"
+    "status": "approved"
    },
    {
     "file": "img/fibrous_dysplasia-3.jpg",
@@ -339,7 +339,7 @@
     "licence": "CC BY 3.0",
     "licence_url": "https://creativecommons.org/licenses/by/3.0/",
     "changes": "dipotong ke panel radiograf, diperkecil",
-    "status": "candidate"
+    "status": "approved"
    }
   ],
   "giant_cell_tumour_of_bone": [
@@ -353,7 +353,7 @@
     "licence": "CC BY 2.0",
     "licence_url": "http://creativecommons.org/licenses/by/2.0/",
     "changes": "diperkecil",
-    "status": "candidate"
+    "status": "approved"
    },
    {
     "file": "img/giant_cell_tumour_of_bone-2.jpg",
@@ -365,7 +365,7 @@
     "licence": "CC BY 4.0",
     "licence_url": "https://creativecommons.org/licenses/by/4.0/",
     "changes": "dipotong ke panel radiograf, diperkecil",
-    "status": "candidate"
+    "status": "approved"
    }
   ],
   "intraosseous_ganglion_geode": [
@@ -379,7 +379,7 @@
     "licence": "CC BY 3.0",
     "licence_url": "https://creativecommons.org/licenses/by/3.0",
     "changes": "diperkecil",
-    "status": "candidate"
+    "status": "approved"
    },
    {
     "file": "img/intraosseous_ganglion_geode-2.jpg",
@@ -391,7 +391,7 @@
     "licence": "CC BY 3.0",
     "licence_url": "https://creativecommons.org/licenses/by/3.0/",
     "changes": "diperkecil",
-    "status": "candidate"
+    "status": "approved"
    },
    {
     "file": "img/intraosseous_ganglion_geode-3.jpg",
@@ -403,7 +403,7 @@
     "licence": "CC BY 4.0",
     "licence_url": "https://creativecommons.org/licenses/by/4.0/",
     "changes": "diperkecil",
-    "status": "candidate"
+    "status": "approved"
    }
   ],
   "intraosseous_lipoma": [
@@ -417,7 +417,7 @@
     "licence": "CC BY-SA 3.0",
     "licence_url": "https://creativecommons.org/licenses/by-sa/3.0",
     "changes": "diperkecil",
-    "status": "candidate"
+    "status": "approved"
    },
    {
     "file": "img/intraosseous_lipoma-2.jpg",
@@ -429,7 +429,7 @@
     "licence": "CC BY-SA 4.0",
     "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
     "changes": "diperkecil",
-    "status": "candidate"
+    "status": "approved"
    },
    {
     "file": "img/intraosseous_lipoma-3.jpg",
@@ -441,7 +441,7 @@
     "licence": "CC BY-SA 3.0",
     "licence_url": "https://creativecommons.org/licenses/by-sa/3.0",
     "changes": "dipotong ke panel radiograf, diperkecil",
-    "status": "candidate"
+    "status": "approved"
    }
   ],
   "langerhans_cell_histiocytosis": [
@@ -455,7 +455,7 @@
     "licence": "CC BY 2.0",
     "licence_url": "http://creativecommons.org/licenses/by/2.0",
     "changes": "diperkecil",
-    "status": "candidate"
+    "status": "approved"
    },
    {
     "file": "img/langerhans_cell_histiocytosis-2.jpg",
@@ -467,7 +467,7 @@
     "licence": "CC BY 4.0",
     "licence_url": "http://creativecommons.org/licenses/by/4.0/",
     "changes": "diperkecil",
-    "status": "candidate"
+    "status": "approved"
    }
   ],
   "non_ossifying_fibroma": [
@@ -481,7 +481,7 @@
     "licence": "CC BY-SA 3.0",
     "licence_url": "https://creativecommons.org/licenses/by-sa/3.0",
     "changes": "diperkecil",
-    "status": "candidate"
+    "status": "approved"
    },
    {
     "file": "img/non_ossifying_fibroma-2.jpg",
@@ -493,7 +493,7 @@
     "licence": "CC BY-SA 3.0",
     "licence_url": "https://creativecommons.org/licenses/by-sa/3.0",
     "changes": "diperkecil",
-    "status": "candidate"
+    "status": "approved"
    },
    {
     "file": "img/non_ossifying_fibroma-3.jpg",
@@ -505,7 +505,7 @@
     "licence": "CC BY-SA 4.0",
     "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
     "changes": "diperkecil",
-    "status": "candidate"
+    "status": "approved"
    }
   ],
   "osteoblastoma": [
@@ -519,7 +519,7 @@
     "licence": "CC BY 4.0",
     "licence_url": "http://creativecommons.org/licenses/by/4.0/",
     "changes": "diperkecil",
-    "status": "candidate"
+    "status": "approved"
    }
   ],
   "osteochondroma": [
@@ -533,7 +533,7 @@
     "licence": "CC BY-SA 3.0",
     "licence_url": "https://creativecommons.org/licenses/by-sa/3.0",
     "changes": "diperkecil",
-    "status": "candidate"
+    "status": "approved"
    },
    {
     "file": "img/osteochondroma-2.jpg",
@@ -545,7 +545,7 @@
     "licence": "CC BY-SA 3.0",
     "licence_url": "https://creativecommons.org/licenses/by-sa/3.0",
     "changes": "diperkecil",
-    "status": "candidate"
+    "status": "approved"
    },
    {
     "file": "img/osteochondroma-3.jpg",
@@ -557,7 +557,7 @@
     "licence": "CC BY-SA 3.0 de",
     "licence_url": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
     "changes": "diperkecil",
-    "status": "candidate"
+    "status": "approved"
    }
   ],
   "osteoid_osteoma": [
@@ -571,7 +571,7 @@
     "licence": "CC BY 2.0",
     "licence_url": "http://creativecommons.org/licenses/by/2.0/",
     "changes": "diperkecil",
-    "status": "candidate"
+    "status": "approved"
    }
   ],
   "osteomyelitis": [
@@ -585,7 +585,7 @@
     "licence": "CC BY-SA 3.0",
     "licence_url": "https://creativecommons.org/licenses/by-sa/3.0",
     "changes": "diperkecil",
-    "status": "candidate"
+    "status": "approved"
    }
   ],
   "osteosarcoma_conventional": [
@@ -599,7 +599,7 @@
     "licence": "CC BY-SA 4.0",
     "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
     "changes": "diperkecil",
-    "status": "candidate"
+    "status": "approved"
    },
    {
     "file": "img/osteosarcoma_conventional-2.jpg",
@@ -611,7 +611,7 @@
     "licence": "CC BY 4.0",
     "licence_url": "https://creativecommons.org/licenses/by/4.0",
     "changes": "diperkecil",
-    "status": "candidate"
+    "status": "approved"
    }
   ],
   "osteosarcoma_parosteal": [
@@ -625,7 +625,7 @@
     "licence": "CC BY 2.0",
     "licence_url": "http://creativecommons.org/licenses/by/2.0",
     "changes": "diperkecil",
-    "status": "candidate"
+    "status": "approved"
    },
    {
     "file": "img/osteosarcoma_parosteal-2.jpg",
@@ -637,7 +637,7 @@
     "licence": "CC BY 3.0",
     "licence_url": "https://creativecommons.org/licenses/by/3.0/",
     "changes": "diperkecil",
-    "status": "candidate"
+    "status": "approved"
    }
   ],
   "osteosarcoma_telangiectatic": [
@@ -651,7 +651,7 @@
     "licence": "CC BY 3.0",
     "licence_url": "http://creativecommons.org/licenses/by/3.0/",
     "changes": "diperkecil",
-    "status": "candidate"
+    "status": "approved"
    }
   ],
   "paget_disease": [
@@ -665,7 +665,7 @@
     "licence": "CC BY-SA 4.0",
     "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
     "changes": "diperkecil",
-    "status": "candidate"
+    "status": "approved"
    },
    {
     "file": "img/paget_disease-2.jpg",
@@ -677,7 +677,7 @@
     "licence": "CC BY-SA 3.0",
     "licence_url": "https://creativecommons.org/licenses/by-sa/3.0",
     "changes": "diperkecil",
-    "status": "candidate"
+    "status": "approved"
    }
   ],
   "plasmacytoma_myeloma": [
@@ -691,7 +691,7 @@
     "licence": "CC0",
     "licence_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
     "changes": "diperkecil",
-    "status": "candidate"
+    "status": "approved"
    },
    {
     "file": "img/plasmacytoma_myeloma-2.jpg",
@@ -703,7 +703,7 @@
     "licence": "CC0",
     "licence_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
     "changes": "diperkecil",
-    "status": "candidate"
+    "status": "approved"
    },
    {
     "file": "img/plasmacytoma_myeloma-3.jpg",
@@ -715,7 +715,7 @@
     "licence": "CC BY-SA 4.0",
     "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
     "changes": "diperkecil",
-    "status": "candidate"
+    "status": "approved"
    }
   ],
   "primary_bone_lymphoma": [
@@ -729,7 +729,7 @@
     "licence": "CC BY 2.0",
     "licence_url": "http://creativecommons.org/licenses/by/2.0",
     "changes": "diperkecil",
-    "status": "candidate"
+    "status": "approved"
    },
    {
     "file": "img/primary_bone_lymphoma-2.jpg",
@@ -741,7 +741,7 @@
     "licence": "CC BY 4.0",
     "licence_url": "https://creativecommons.org/licenses/by/4.0/",
     "changes": "diperkecil",
-    "status": "candidate"
+    "status": "approved"
    },
    {
     "file": "img/primary_bone_lymphoma-3.jpg",
@@ -753,7 +753,7 @@
     "licence": "CC BY 4.0",
     "licence_url": "http://creativecommons.org/licenses/by/4.0/",
     "changes": "diperkecil",
-    "status": "candidate"
+    "status": "approved"
    }
   ],
   "simple_bone_cyst": [
@@ -767,7 +767,7 @@
     "licence": "CC BY 2.0",
     "licence_url": "https://creativecommons.org/licenses/by/2.0",
     "changes": "diperkecil",
-    "status": "candidate"
+    "status": "approved"
    },
    {
     "file": "img/simple_bone_cyst-2.jpg",
@@ -779,7 +779,7 @@
     "licence": "CC BY-SA 4.0",
     "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
     "changes": "diperkecil",
-    "status": "candidate"
+    "status": "approved"
    },
    {
     "file": "img/simple_bone_cyst-3.jpg",
@@ -791,7 +791,7 @@
     "licence": "CC BY-SA 4.0",
     "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
     "changes": "diperkecil",
-    "status": "candidate"
+    "status": "approved"
    }
   ],
   "skeletal_tuberculosis": [
@@ -805,7 +805,7 @@
     "licence": "CC BY 4.0",
     "licence_url": "https://creativecommons.org/licenses/by/4.0",
     "changes": "diperkecil",
-    "status": "candidate"
+    "status": "approved"
    }
   ],
   "stress_fracture": [
@@ -819,7 +819,7 @@
     "licence": "CC BY-SA 3.0",
     "licence_url": "https://creativecommons.org/licenses/by-sa/3.0",
     "changes": "diperkecil",
-    "status": "candidate"
+    "status": "approved"
    },
    {
     "file": "img/stress_fracture-2.jpg",
@@ -831,7 +831,7 @@
     "licence": "CC BY 3.0",
     "licence_url": "https://creativecommons.org/licenses/by/3.0",
     "changes": "diperkecil",
-    "status": "candidate"
+    "status": "approved"
    }
   ]
  }
