@@ -1,0 +1,60 @@
+[
+ {
+  "label": "Fig. 15",
+  "caption": "Osteoid osteoma of the antero-lateral tibial shaft: Frontal (a) and lateral (b) X-rays of the left tibia: osteosclerotic thickening of the antero-medial diaphyseal cortex. c Axial CT slice of the tibial shaft identifies a small lucent nidus (arrow) within the intense sclerotic cortical proliferation",
+  "graphic": "13244_2014_356_Fig15_HTML.jpg",
+  "xray": true,
+  "other": true,
+  "mentions_entity": false,
+  "postop": false,
+  "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+  "licence_text": "https://creativecommons.org/licenses/by/4.0/ Open Access This article is distributed under the terms of the Creative Commons Attribution License which permits any use, distribution, and reproduction in any medium, provided the original author(s) and the source are credited.",
+  "journal": "Insights into Imaging",
+  "year": "2014",
+  "article_title": "Pitfalls in the diagnosis of common benign bone tumours in children",
+  "doi": "10.1007/s13244-014-0356-y",
+  "authors": [
+   "Dumitriu D",
+   "Menten R",
+   "Clapuyt P"
+  ],
+  "pmcid": "PMC4263798",
+  "rare_in_title": false,
+  "licence": "CC BY 4.0",
+  "article_url": "https://europepmc.org/article/PMC/4263798",
+  "image": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4263798.1/13244_2014_356_Fig15_HTML.jpg",
+  "orig_w": 609,
+  "orig_h": 480,
+  "n": 1,
+  "file": "candidates_pmc/thumbs/osteoid_osteoma_gap2/01.jpg"
+ },
+ {
+  "label": "Fig. 16",
+  "caption": "Osteoid osteoma of the left talar neck: Frontal (a) and lateral (b) X-rays of the left ankle: large round sclerotic fragment within an osteolytic cavity (arrows); no surrounding reactive osteosclerosis is identified. c Sagittal T1-weighted MRI: intense bone oedema surrounding the lesion. d Sagittal T2-weighted MRI: an intense inflammatory reaction is identified within the ankle joint. e CT, sagittal reconstruction: confirmation of the large nidus, entirely filled by the sclerotic fragment and with almost no surrounding osteosclerosis",
+  "graphic": "13244_2014_356_Fig16_HTML.jpg",
+  "xray": true,
+  "other": true,
+  "mentions_entity": false,
+  "postop": true,
+  "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+  "licence_text": "https://creativecommons.org/licenses/by/4.0/ Open Access This article is distributed under the terms of the Creative Commons Attribution License which permits any use, distribution, and reproduction in any medium, provided the original author(s) and the source are credited.",
+  "journal": "Insights into Imaging",
+  "year": "2014",
+  "article_title": "Pitfalls in the diagnosis of common benign bone tumours in children",
+  "doi": "10.1007/s13244-014-0356-y",
+  "authors": [
+   "Dumitriu D",
+   "Menten R",
+   "Clapuyt P"
+  ],
+  "pmcid": "PMC4263798",
+  "rare_in_title": false,
+  "licence": "CC BY 4.0",
+  "article_url": "https://europepmc.org/article/PMC/4263798",
+  "image": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4263798.1/13244_2014_356_Fig16_HTML.jpg",
+  "orig_w": 709,
+  "orig_h": 528,
+  "n": 2,
+  "file": "candidates_pmc/thumbs/osteoid_osteoma_gap2/02.jpg"
+ }
+]

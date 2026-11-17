@@ -1,0 +1,31 @@
+[
+ {
+  "label": "Figure 2",
+  "caption": "Pelvic radiograph 18 months after initial presentationComplete regression of the brown tumour and pseudofractures, with normalisation of the joint space and clearing of the pubic symphysis margins can be seen on the follow-up pelvic radiograph.",
+  "graphic": "cureus-0010-00000002722-i02.jpg",
+  "xray": true,
+  "other": false,
+  "mentions_entity": false,
+  "postop": true,
+  "licence_url": "http://creativecommons.org/licenses/by/3.0/",
+  "licence_text": "https://creativecommons.org/licenses/by/3.0/This is an open access article distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.",
+  "journal": "Cureus",
+  "year": "2018",
+  "article_title": "Brown Tumor as an Index Presentation of Severe Vitamin D Deficiency in a Teenage Girl",
+  "doi": "10.7759/cureus.2722",
+  "authors": [
+   "Goyal A",
+   "Boro H",
+   "Khadgawat R"
+  ],
+  "pmcid": "PMC6067807",
+  "rare_in_title": false,
+  "licence": "CC BY 3.0",
+  "article_url": "https://europepmc.org/article/PMC/6067807",
+  "image": "https://pmc-oa-opendata.s3.amazonaws.com/PMC6067807.1/cureus-0010-00000002722-i02.jpg",
+  "orig_w": 800,
+  "orig_h": 600,
+  "n": 1,
+  "file": "candidates_pmc/thumbs/brown_tumour_gap2/01.jpg"
+ }
+]

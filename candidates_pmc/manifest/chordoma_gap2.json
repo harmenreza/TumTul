@@ -1,0 +1,34 @@
+[
+ {
+  "label": "Figure 6",
+  "caption": "AP pelvic radiograph of a patient with sacral chordoma demonstrating the osseous destruction of the sacrum (white arrows).",
+  "graphic": "diagnostics-13-01801-g006.jpg",
+  "xray": true,
+  "other": false,
+  "mentions_entity": false,
+  "postop": false,
+  "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+  "licence_text": "https://creativecommons.org/licenses/by/4.0/Licensee MDPI, Basel, Switzerland. This article is an open access article distributed under the terms and conditions of the Creative Commons Attribution (CC BY) license (https://creativecommons.org/licenses/by/4.0/).",
+  "journal": "Diagnostics",
+  "year": "2023",
+  "article_title": "Primary Osseous Malignancies of the Spine",
+  "doi": "10.3390/diagnostics13101801",
+  "authors": [
+   "Ariyaratne S",
+   "Jenko N",
+   "Iyengar K",
+   "James S",
+   "Mehta J",
+   "Botchu R"
+  ],
+  "pmcid": "PMC10217758",
+  "rare_in_title": false,
+  "licence": "CC BY 4.0",
+  "article_url": "https://europepmc.org/article/PMC/10217758",
+  "image": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10217758.1/diagnostics-13-01801-g006.jpg",
+  "orig_w": 740,
+  "orig_h": 643,
+  "n": 1,
+  "file": "candidates_pmc/thumbs/chordoma_gap2/01.jpg"
+ }
+]

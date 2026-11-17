@@ -1,0 +1,34 @@
+[
+ {
+  "label": "Fig. 1",
+  "caption": "Coned image of a lateral thoracic spine radiograph (a) and corresponding coronal (b) and axial CT (c) images of an 80-year-old man. The images demonstrate low density interspersed by high-density vertical striations in the 10th thoracic vertebra similar to corduroy fabric (inset) consistent with a vertebral osseous hemangioma. There is a corresponding polka dot appearance on axial images, which represent the prominent trabeculae seen en face",
+  "graphic": "13244_2016_507_Fig1_HTML.jpg",
+  "xray": true,
+  "other": true,
+  "mentions_entity": false,
+  "postop": false,
+  "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+  "licence_text": "https://creativecommons.org/licenses/by/4.0/ Open Access This article is distributed under the terms of the Creative Commons Attribution 4.0 International License (http://creativecommons.org/licenses/by/4.0/), which permits unrestricted use, distribution, and reproduction in any medium, provided you",
+  "journal": "Insights into Imaging",
+  "year": "2016",
+  "article_title": "The clothes maketh the sign",
+  "doi": "10.1007/s13244-016-0507-4",
+  "authors": [
+   "Buckley B",
+   "Chan V",
+   "Mitchell D",
+   "McDermott S",
+   "Eisenberg R",
+   "Heffernan E"
+  ],
+  "pmcid": "PMC4956632",
+  "rare_in_title": false,
+  "licence": "CC BY 4.0",
+  "article_url": "https://europepmc.org/article/PMC/4956632",
+  "image": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4956632.1/13244_2016_507_Fig1_HTML.jpg",
+  "orig_w": 709,
+  "orig_h": 238,
+  "n": 1,
+  "file": "candidates_pmc/thumbs/vertebral_haemangioma_gap2/01.jpg"
+ }
+]

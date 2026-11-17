@@ -1,0 +1,60 @@
+[
+ {
+  "label": "Fig. 10",
+  "caption": "Typical chondroblastoma of the distal femoral epiphysis: a Frontal X-ray of the right knee: well-defined round osteolytic lesion of the distal femoral epiphysis (arrow). b Sagittal fat-saturated proton density MRI: the lesion is well defined, mostly hyperintense, surrounded by bone oedema and an inflammatory reaction of the adjoining soft tissues. c CT of the right knee: the cortex is interrupted on the posterior border of the lesion (arrow), but no periosteal reaction is identified",
+  "graphic": "13244_2014_356_Fig10_HTML.jpg",
+  "xray": true,
+  "other": true,
+  "mentions_entity": false,
+  "postop": false,
+  "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+  "licence_text": "https://creativecommons.org/licenses/by/4.0/ Open Access This article is distributed under the terms of the Creative Commons Attribution License which permits any use, distribution, and reproduction in any medium, provided the original author(s) and the source are credited.",
+  "journal": "Insights into Imaging",
+  "year": "2014",
+  "article_title": "Pitfalls in the diagnosis of common benign bone tumours in children",
+  "doi": "10.1007/s13244-014-0356-y",
+  "authors": [
+   "Dumitriu D",
+   "Menten R",
+   "Clapuyt P"
+  ],
+  "pmcid": "PMC4263798",
+  "rare_in_title": false,
+  "licence": "CC BY 4.0",
+  "article_url": "https://europepmc.org/article/PMC/4263798",
+  "image": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4263798.1/13244_2014_356_Fig10_HTML.jpg",
+  "orig_w": 712,
+  "orig_h": 284,
+  "n": 1,
+  "file": "candidates_pmc/thumbs/chondroblastoma_gap2/01.jpg"
+ },
+ {
+  "label": "Fig. 11",
+  "caption": "Chondroblastoma of the proximal tibial epiphysis: Frontal (a) and lateral (b) X-rays of the right knee demonstrate an osteolytic epiphyseal lesion, crossing the open physis and extending into the metaphysis. Sagittal fat-saturated proton density-weighted MRI (c) confirms the lesion and the extension across the physis (arrowhead). Note the presence of fluid-fluid levels (arrow)",
+  "graphic": "13244_2014_356_Fig11_HTML.jpg",
+  "xray": true,
+  "other": true,
+  "mentions_entity": false,
+  "postop": false,
+  "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+  "licence_text": "https://creativecommons.org/licenses/by/4.0/ Open Access This article is distributed under the terms of the Creative Commons Attribution License which permits any use, distribution, and reproduction in any medium, provided the original author(s) and the source are credited.",
+  "journal": "Insights into Imaging",
+  "year": "2014",
+  "article_title": "Pitfalls in the diagnosis of common benign bone tumours in children",
+  "doi": "10.1007/s13244-014-0356-y",
+  "authors": [
+   "Dumitriu D",
+   "Menten R",
+   "Clapuyt P"
+  ],
+  "pmcid": "PMC4263798",
+  "rare_in_title": false,
+  "licence": "CC BY 4.0",
+  "article_url": "https://europepmc.org/article/PMC/4263798",
+  "image": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4263798.1/13244_2014_356_Fig11_HTML.jpg",
+  "orig_w": 709,
+  "orig_h": 246,
+  "n": 2,
+  "file": "candidates_pmc/thumbs/chondroblastoma_gap2/02.jpg"
+ }
+]
