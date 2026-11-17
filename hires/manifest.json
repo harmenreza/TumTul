@@ -1,0 +1,630 @@
+{
+ "osteochondroma": [
+  {
+   "n": 1,
+   "url": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Kartilaginaere_Exostose_47jm_-_Roe_2_Ebenen_-_001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "w": 2373,
+   "h": 1976,
+   "file": "hires/osteochondroma/1.png"
+  },
+  {
+   "n": 2,
+   "url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Kartilagin%C3%A4re_Exostose.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "w": 1503,
+   "h": 1086,
+   "file": "hires/osteochondroma/2.png"
+  },
+  {
+   "n": 3,
+   "url": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Roe-exostose.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "w": 589,
+   "h": 835,
+   "file": "hires/osteochondroma/3.png"
+  }
+ ],
+ "enchondroma": [
+  {
+   "n": 1,
+   "url": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Enchondrom_Tibia_83jm_-_Roe_ap_und_seitlich_-_001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "w": 1090,
+   "h": 977,
+   "file": "hires/enchondroma/1.png"
+  },
+  {
+   "n": 2,
+   "url": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Enchondrom_Humerus_Roe02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "w": 572,
+   "h": 1174,
+   "file": "hires/enchondroma/2.png"
+  },
+  {
+   "n": 3,
+   "url": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Enchondrom_MHK_pathologische_Fraktur_Roe02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "w": 730,
+   "h": 1356,
+   "file": "hires/enchondroma/3.png"
+  }
+ ],
+ "non_ossifying_fibroma": [
+  {
+   "n": 1,
+   "url": "https://upload.wikimedia.org/wikipedia/commons/7/7e/NOF_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "w": 622,
+   "h": 1048,
+   "file": "hires/non_ossifying_fibroma/1.png"
+  },
+  {
+   "n": 2,
+   "url": "https://upload.wikimedia.org/wikipedia/commons/a/a6/NOF_Femur_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "w": 672,
+   "h": 1104,
+   "file": "hires/non_ossifying_fibroma/2.png"
+  },
+  {
+   "n": 3,
+   "url": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Nicht_ossifizierendes_Fibrom_des_distalen_Femur_20W_-_CR_ap_-_001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "w": 889,
+   "h": 1101,
+   "file": "hires/non_ossifying_fibroma/3.png"
+  }
+ ],
+ "paget_disease": [
+  {
+   "n": 1,
+   "url": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Morbus_Paget_des_Beckens_rechts_77W_-_CR_ap_-_001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "w": 1231,
+   "h": 892,
+   "file": "hires/paget_disease/1.png"
+  },
+  {
+   "n": 2,
+   "url": "https://upload.wikimedia.org/wikipedia/commons/9/98/Paget%27s_disease_R_coxal.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "w": 2840,
+   "h": 2034,
+   "file": "hires/paget_disease/2.png"
+  }
+ ],
+ "bone_metastasis": [
+  {
+   "n": 1,
+   "url": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Radiography_pelvis_with_bone_metastasis_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "w": 508,
+   "h": 506,
+   "file": "hires/bone_metastasis/1.png"
+  },
+  {
+   "n": 2,
+   "url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Prostata-Ca_ossaere_Metastasen_Becken.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "w": 1342,
+   "h": 974,
+   "file": "hires/bone_metastasis/2.png"
+  },
+  {
+   "n": 3,
+   "url": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Knochenmetastasen_bei_Magenkarzinom_-_Roe_ap_li_Heufte_001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "w": 1269,
+   "h": 1128,
+   "file": "hires/bone_metastasis/3.png"
+  }
+ ],
+ "plasmacytoma_myeloma": [
+  {
+   "n": 1,
+   "url": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Left_humerus_with_myeloma.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "w": 651,
+   "h": 1473,
+   "file": "hires/plasmacytoma_myeloma/1.png"
+  },
+  {
+   "n": 2,
+   "url": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Left_femur_with_myeloma.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "w": 1029,
+   "h": 2645,
+   "file": "hires/plasmacytoma_myeloma/2.png"
+  },
+  {
+   "n": 3,
+   "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11424764.1/gr1.jpg",
+   "w": 722,
+   "h": 1057,
+   "file": "hires/plasmacytoma_myeloma/3.png"
+  }
+ ],
+ "intraosseous_ganglion_geode": [
+  {
+   "n": 1,
+   "url": "https://upload.wikimedia.org/wikipedia/commons/8/86/Ganglio_intraosseo.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "w": 540,
+   "h": 822,
+   "file": "hires/intraosseous_ganglion_geode/1.png"
+  },
+  {
+   "n": 2,
+   "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4309300.1/CRIOR2015-759257.002.jpg",
+   "w": 680,
+   "h": 869,
+   "file": "hires/intraosseous_ganglion_geode/2.png"
+  },
+  {
+   "n": 3,
+   "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11008917.1/cureus-0016-00000056045-i01.jpg",
+   "w": 750,
+   "h": 562,
+   "file": "hires/intraosseous_ganglion_geode/3.png"
+  }
+ ],
+ "brown_tumour": [
+  {
+   "n": 1,
+   "url": "https://upload.wikimedia.org/wikipedia/commons/a/aa/X-ray_of_brown_tumors_in_the_pelvis_and_a_hip_fracture_in_renal_osteodystrophy.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "w": 347,
+   "h": 288,
+   "file": "hires/brown_tumour/1.png"
+  },
+  {
+   "n": 2,
+   "url": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Brown_tumours_of_the_hands.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "w": 1280,
+   "h": 1280,
+   "file": "hires/brown_tumour/2.png"
+  },
+  {
+   "n": 3,
+   "url": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Osteitis_fibrosa_cystica_tibiae_X-ray.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "w": 212,
+   "h": 313,
+   "file": "hires/brown_tumour/3.png"
+  }
+ ],
+ "bone_infarct": [
+  {
+   "n": 1,
+   "url": "https://upload.wikimedia.org/wikipedia/commons/f/fc/BoneInfarct.PNG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "w": 596,
+   "h": 832,
+   "file": "hires/bone_infarct/1.png"
+  },
+  {
+   "n": 2,
+   "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7905338.1/gr1.jpg",
+   "w": 597,
+   "h": 1249,
+   "file": "hires/bone_infarct/2.png"
+  },
+  {
+   "n": 3,
+   "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7664144.1/PAMJ-36-361-g001.jpg",
+   "w": 544,
+   "h": 761,
+   "file": "hires/bone_infarct/3.png"
+  }
+ ],
+ "stress_fracture": [
+  {
+   "n": 1,
+   "url": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Stress_fracture_of_the_second_metatarsal_bone1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "w": 368,
+   "h": 766,
+   "file": "hires/stress_fracture/1.png"
+  },
+  {
+   "n": 2,
+   "url": "https://upload.wikimedia.org/wikipedia/commons/e/e1/X-ray_of_stress_fracture_of_the_hip.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "w": 281,
+   "h": 309,
+   "file": "hires/stress_fracture/2.png"
+  },
+  {
+   "n": 3,
+   "url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/X-ray_of_subtle_periosteal_raction_of_tibial_fracture.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "w": 387,
+   "h": 867,
+   "file": "hires/stress_fracture/3.png"
+  }
+ ],
+ "intraosseous_lipoma": [
+  {
+   "n": 1,
+   "url": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Kalkaneuslipom_36jw_-_Roe_seitlich_-_001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "w": 900,
+   "h": 1066,
+   "file": "hires/intraosseous_lipoma/1.png"
+  },
+  {
+   "n": 2,
+   "url": "https://upload.wikimedia.org/wikipedia/commons/1/14/Typisches_Lipom_des_Calcaneus_52M_-_CR_seitlich_-_001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "w": 813,
+   "h": 1021,
+   "file": "hires/intraosseous_lipoma/2.png"
+  },
+  {
+   "n": 3,
+   "url": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Intraossaeres_Lipom_in_der_Tibia_-_77jw_-_001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "w": 3000,
+   "h": 1913,
+   "file": "hires/intraosseous_lipoma/3.png"
+  }
+ ],
+ "simple_bone_cyst": [
+  {
+   "n": 1,
+   "url": "https://upload.wikimedia.org/wikipedia/commons/0/00/Cisti_ossea_semplice_-RX.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "w": 586,
+   "h": 454,
+   "file": "hires/simple_bone_cyst/1.png"
+  },
+  {
+   "n": 2,
+   "url": "https://upload.wikimedia.org/wikipedia/commons/5/50/JKZ.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "w": 382,
+   "h": 580,
+   "file": "hires/simple_bone_cyst/2.png"
+  },
+  {
+   "n": 3,
+   "url": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Juvenile_Knochenzyste_Humerus_mit_pathologischer_Fraktur_9W_-_fallen_fragment_CR_ap_-_001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "w": 432,
+   "h": 906,
+   "file": "hires/simple_bone_cyst/3.png"
+  }
+ ],
+ "osteomyelitis": [
+  {
+   "n": 1,
+   "url": "https://upload.wikimedia.org/wikipedia/commons/2/21/BrodieAbscessRadiograph.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "w": 644,
+   "h": 1654,
+   "file": "hires/osteomyelitis/1.png"
+  }
+ ],
+ "osteosarcoma_conventional": [
+  {
+   "n": 1,
+   "url": "https://upload.wikimedia.org/wikipedia/commons/3/36/Osteosarcoma_of_the_tibia.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "w": 2173,
+   "h": 2665,
+   "file": "hires/osteosarcoma_conventional/1.png"
+  },
+  {
+   "n": 2,
+   "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11852380.1/cancers-17-00599-g017a.jpg",
+   "w": 756,
+   "h": 415,
+   "file": "hires/osteosarcoma_conventional/2.png"
+  },
+  {
+   "n": 3,
+   "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11852380.1/cancers-17-00599-g005.jpg",
+   "w": 721,
+   "h": 396,
+   "file": "hires/osteosarcoma_conventional/3.png"
+  }
+ ],
+ "ewing_sarcoma": [
+  {
+   "n": 1,
+   "url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Ewing_sarcoma_tibia_child.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "w": 277,
+   "h": 700,
+   "file": "hires/ewing_sarcoma/1.png"
+  }
+ ],
+ "chondroblastoma": [
+  {
+   "n": 1,
+   "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9543861.1/cureus-0014-00000028897-i01.jpg",
+   "w": 750,
+   "h": 411,
+   "file": "hires/chondroblastoma/1.png"
+  },
+  {
+   "n": 2,
+   "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC5781291.1/12957_2018_1314_Fig6_HTML.jpg",
+   "w": 472,
+   "h": 353,
+   "file": "hires/chondroblastoma/2.png"
+  },
+  {
+   "n": 3,
+   "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4435649.1/12957_2015_573_Fig2_HTML.jpg",
+   "w": 567,
+   "h": 248,
+   "file": "hires/chondroblastoma/3.png"
+  }
+ ],
+ "giant_cell_tumour_of_bone": [
+  {
+   "n": 1,
+   "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC2989147.1/IJOrtho-41-91-g001.jpg",
+   "w": 525,
+   "h": 381,
+   "file": "hires/giant_cell_tumour_of_bone/1.png"
+  },
+  {
+   "n": 2,
+   "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC2989131.1/IJOrtho-41-101-g001.jpg",
+   "w": 525,
+   "h": 379,
+   "file": "hires/giant_cell_tumour_of_bone/2.png"
+  },
+  {
+   "n": 3,
+   "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC2989147.1/IJOrtho-41-91-g002.jpg",
+   "w": 525,
+   "h": 380,
+   "file": "hires/giant_cell_tumour_of_bone/3.png"
+  }
+ ],
+ "aneurysmal_bone_cyst": [
+  {
+   "n": 1,
+   "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC3828064.1/PAMJ-15-111-g001.jpg",
+   "w": 641,
+   "h": 430,
+   "file": "hires/aneurysmal_bone_cyst/1.png"
+  },
+  {
+   "n": 2,
+   "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC3828064.1/PAMJ-15-111-g002.jpg",
+   "w": 645,
+   "h": 447,
+   "file": "hires/aneurysmal_bone_cyst/2.png"
+  },
+  {
+   "n": 3,
+   "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9360065.1/247_2022_5396_Fig7_HTML.jpg",
+   "w": 645,
+   "h": 1135,
+   "file": "hires/aneurysmal_bone_cyst/3.png"
+  }
+ ],
+ "osteosarcoma_telangiectatic": [
+  {
+   "n": 1,
+   "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9360065.1/247_2022_5396_Fig10_HTML.jpg",
+   "w": 676,
+   "h": 249,
+   "file": "hires/osteosarcoma_telangiectatic/1.png"
+  },
+  {
+   "n": 2,
+   "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC2769378.1/1757-1626-0002-0000007833-001.jpg",
+   "w": 502,
+   "h": 323,
+   "file": "hires/osteosarcoma_telangiectatic/2.png"
+  }
+ ],
+ "osteosarcoma_parosteal": [
+  {
+   "n": 1,
+   "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC3850780.1/1477-7819-11-241-10.jpg",
+   "w": 600,
+   "h": 1003,
+   "file": "hires/osteosarcoma_parosteal/1.png"
+  },
+  {
+   "n": 2,
+   "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC2570438.1/SRCM2008-763056.001.jpg",
+   "w": 648,
+   "h": 751,
+   "file": "hires/osteosarcoma_parosteal/2.png"
+  },
+  {
+   "n": 3,
+   "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9184185.1/SARCOMA2022-5153924.001.jpg",
+   "w": 661,
+   "h": 280,
+   "file": "hires/osteosarcoma_parosteal/3.png"
+  }
+ ],
+ "osteosarcoma_periosteal": [
+  {
+   "n": 1,
+   "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4474449.1/12957_2015_618_Fig1_HTML.jpg",
+   "w": 358,
+   "h": 473,
+   "file": "hires/osteosarcoma_periosteal/1.png"
+  }
+ ],
+ "fibrous_dysplasia": [
+  {
+   "n": 1,
+   "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11009832.1/cureus-0016-00000056052-i01.jpg",
+   "w": 750,
+   "h": 963,
+   "file": "hires/fibrous_dysplasia/1.png"
+  },
+  {
+   "n": 2,
+   "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC8319740.1/gr2.jpg",
+   "w": 671,
+   "h": 221,
+   "file": "hires/fibrous_dysplasia/2.png"
+  },
+  {
+   "n": 3,
+   "url": "https://upload.wikimedia.org/wikipedia/commons/2/28/Fibroese_Dysplasie_Kalkaneus_21jm-_Roe_seitlich_-_001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "w": 1464,
+   "h": 1497,
+   "file": "hires/fibrous_dysplasia/3.png"
+  }
+ ],
+ "chordoma": [
+  {
+   "n": 1,
+   "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10233321.1/cureus-0015-00000039810-i01.jpg",
+   "w": 750,
+   "h": 750,
+   "file": "hires/chordoma/1.png"
+  }
+ ],
+ "osteoid_osteoma": [
+  {
+   "n": 1,
+   "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC2747406.1/IJRI-19-36-g008.jpg",
+   "w": 422,
+   "h": 611,
+   "file": "hires/osteoid_osteoma/1.png"
+  },
+  {
+   "n": 2,
+   "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC3522328.1/iranjradiol-08-182-g003.jpg",
+   "w": 601,
+   "h": 430,
+   "file": "hires/osteoid_osteoma/2.png"
+  },
+  {
+   "n": 3,
+   "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC3522328.1/iranjradiol-08-182-g011.jpg",
+   "w": 704,
+   "h": 400,
+   "file": "hires/osteoid_osteoma/3.png"
+  }
+ ],
+ "adamantinoma_ofd_spectrum": [
+  {
+   "n": 1,
+   "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12731842.1/diagnostics-15-03124-g002.jpg",
+   "w": 794,
+   "h": 486,
+   "file": "hires/adamantinoma_ofd_spectrum/1.png"
+  },
+  {
+   "n": 2,
+   "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC6011161.1/CRIOR2018-3656913.001.jpg",
+   "w": 750,
+   "h": 1173,
+   "file": "hires/adamantinoma_ofd_spectrum/2.png"
+  }
+ ],
+ "bpop_nora_lesion": [
+  {
+   "n": 1,
+   "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10784761.1/cureus-0015-00000050439-i02.jpg",
+   "w": 750,
+   "h": 625,
+   "file": "hires/bpop_nora_lesion/1.png"
+  }
+ ],
+ "chondromyxoid_fibroma": [
+  {
+   "n": 1,
+   "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC2983082.1/JCytol-27-96-g001.jpg",
+   "w": 483,
+   "h": 610,
+   "file": "hires/chondromyxoid_fibroma/1.png"
+  }
+ ],
+ "chondrosarcoma_central": [
+  {
+   "n": 1,
+   "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10046282.1/cancers-15-01703-g003.jpg",
+   "w": 780,
+   "h": 705,
+   "file": "hires/chondrosarcoma_central/1.png"
+  },
+  {
+   "n": 2,
+   "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10046282.1/cancers-15-01703-g002.jpg",
+   "w": 646,
+   "h": 947,
+   "file": "hires/chondrosarcoma_central/2.png"
+  },
+  {
+   "n": 3,
+   "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10046282.1/cancers-15-01703-g005.jpg",
+   "w": 790,
+   "h": 422,
+   "file": "hires/chondrosarcoma_central/3.png"
+  }
+ ],
+ "desmoplastic_fibroma": [
+  {
+   "n": 1,
+   "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4114711.1/OL-08-03-1103-g00.jpg",
+   "w": 708,
+   "h": 263,
+   "file": "hires/desmoplastic_fibroma/1.png"
+  }
+ ],
+ "enostosis": [
+  {
+   "n": 1,
+   "url": "https://upload.wikimedia.org/wikipedia/commons/2/20/Enostom_Os_metacarpale_I_23M_-_CR_-_001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "w": 1091,
+   "h": 1345,
+   "file": "hires/enostosis/1.png"
+  },
+  {
+   "n": 2,
+   "url": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Osteopoikilie_Haende.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "w": 1342,
+   "h": 1103,
+   "file": "hires/enostosis/2.png"
+  }
+ ],
+ "primary_bone_lymphoma": [
+  {
+   "n": 1,
+   "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC3984396.1/2047-783X-19-19-1.jpg",
+   "w": 600,
+   "h": 1289,
+   "file": "hires/primary_bone_lymphoma/1.png"
+  },
+  {
+   "n": 2,
+   "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC8415166.1/fonc-11-690819-g001.jpg",
+   "w": 630,
+   "h": 517,
+   "file": "hires/primary_bone_lymphoma/2.png"
+  },
+  {
+   "n": 3,
+   "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7720670.1/rb-53-06-0419-g02.jpg",
+   "w": 771,
+   "h": 952,
+   "file": "hires/primary_bone_lymphoma/3.png"
+  }
+ ],
+ "skeletal_tuberculosis": [
+  {
+   "n": 1,
+   "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC5037907.1/12879_2016_1844_Fig1_HTML.jpg",
+   "w": 472,
+   "h": 443,
+   "file": "hires/skeletal_tuberculosis/1.png"
+  },
+  {
+   "n": 2,
+   "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7501750.1/PAMJ-37-7-g001.jpg",
+   "w": 413,
+   "h": 600,
+   "file": "hires/skeletal_tuberculosis/2.png"
+  }
+ ],
+ "osteoblastoma": [
+  {
+   "n": 1,
+   "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC3776745.1/pone.0074635.g001.jpg",
+   "w": 683,
+   "h": 433,
+   "file": "hires/osteoblastoma/1.png"
+  }
+ ],
+ "langerhans_cell_histiocytosis": [
+  {
+   "n": 1,
+   "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC2803941.1/1757-1626-2-9144-1.jpg",
+   "w": 600,
+   "h": 515,
+   "file": "hires/langerhans_cell_histiocytosis/1.png"
+  },
+  {
+   "n": 2,
+   "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC6702438.1/gr2.jpg",
+   "w": 789,
+   "h": 302,
+   "file": "hires/langerhans_cell_histiocytosis/2.png"
+  }
+ ]
+}
