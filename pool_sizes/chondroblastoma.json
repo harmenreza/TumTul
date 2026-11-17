@@ -1,0 +1,305 @@
+[
+ {
+  "source": "commons",
+  "key": "File:Chondroblastoma - very high mag.jpg",
+  "w": 4272,
+  "h": 2848,
+  "n": 1
+ },
+ {
+  "source": "commons",
+  "key": "File:Chondroblastoma - intermed mag.jpg",
+  "w": 4272,
+  "h": 2848,
+  "n": 2
+ },
+ {
+  "source": "commons",
+  "key": "File:Bone Chondroblastoma Medium Power.jpg",
+  "w": 2048,
+  "h": 1536,
+  "n": 3
+ },
+ {
+  "source": "commons",
+  "key": "File:Bone Chondroblastoma High Power.jpg",
+  "w": 2048,
+  "h": 1536,
+  "n": 4
+ },
+ {
+  "source": "commons",
+  "key": "File:Bone Chondroblastoma With Aneurysmal Bone Cyst - Medium Power.jpg",
+  "w": 3070,
+  "h": 2304,
+  "n": 5
+ },
+ {
+  "source": "commons",
+  "key": "File:Bone Chondroblastoma - Medium Power.jpg",
+  "w": 3070,
+  "h": 2304,
+  "n": 6
+ },
+ {
+  "source": "commons",
+  "key": "File:Bone Chondroblastoma and Aneurysmal Bone Cyst Low Power.jpg",
+  "w": 2486,
+  "h": 2175,
+  "n": 7
+ },
+ {
+  "source": "commons",
+  "key": "File:Bone Chondroblastoma and Aneurysmal Bone Cyst Medium Power.jpg",
+  "w": 3070,
+  "h": 2304,
+  "n": 8
+ },
+ {
+  "source": "commons",
+  "key": "File:Chicken wire calcification chondroblastoma.jpg",
+  "w": 1280,
+  "h": 720,
+  "n": 9
+ },
+ {
+  "source": "pmc",
+  "key": "PMC9628094",
+  "label": "Fig. 1",
+  "w": 707,
+  "h": 201,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9628094.1/12885_2022_10233_Fig1_HTML.jpg",
+  "set": "chondroblastoma",
+  "n": 1
+ },
+ {
+  "source": "pmc",
+  "key": "PMC9628094",
+  "label": "Fig. 2",
+  "w": 707,
+  "h": 236,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9628094.1/12885_2022_10233_Fig2_HTML.jpg",
+  "set": "chondroblastoma",
+  "n": 2
+ },
+ {
+  "source": "pmc",
+  "key": "PMC4866331",
+  "label": "Fig. 1",
+  "w": 567,
+  "h": 212,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4866331.1/12957_2016_839_Fig1_HTML.jpg",
+  "set": "chondroblastoma",
+  "n": 3
+ },
+ {
+  "source": "pmc",
+  "key": "PMC4866331",
+  "label": "Fig. 5",
+  "w": 472,
+  "h": 316,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4866331.1/12957_2016_839_Fig5_HTML.jpg",
+  "set": "chondroblastoma",
+  "n": 4
+ },
+ {
+  "source": "pmc",
+  "key": "PMC4866331",
+  "label": "Fig. 6",
+  "w": 472,
+  "h": 316,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4866331.1/12957_2016_839_Fig6_HTML.jpg",
+  "set": "chondroblastoma",
+  "n": 5
+ },
+ {
+  "source": "pmc",
+  "key": "PMC9543861",
+  "label": "Figure 1",
+  "w": 750,
+  "h": 411,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9543861.1/cureus-0014-00000028897-i01.jpg",
+  "set": "chondroblastoma",
+  "n": 6
+ },
+ {
+  "source": "pmc",
+  "key": "PMC9543861",
+  "label": "Figure 5",
+  "w": 750,
+  "h": 678,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9543861.1/cureus-0014-00000028897-i05.jpg",
+  "set": "chondroblastoma",
+  "n": 7
+ },
+ {
+  "source": "pmc",
+  "key": "PMC2194702",
+  "label": "Figure 1",
+  "w": 600,
+  "h": 647,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC2194702.1/1752-1947-1-135-1.jpg",
+  "set": "chondroblastoma",
+  "n": 8
+ },
+ {
+  "source": "pmc",
+  "key": "PMC8493501",
+  "label": "Fig. 1",
+  "w": 714,
+  "h": 500,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC8493501.1/gr1.jpg",
+  "set": "chondroblastoma",
+  "n": 9
+ },
+ {
+  "source": "pmc",
+  "key": "PMC4435649",
+  "label": "Figure 1",
+  "w": 778,
+  "h": 163,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4435649.1/12957_2015_573_Fig1_HTML.jpg",
+  "set": "chondroblastoma",
+  "n": 10
+ },
+ {
+  "source": "pmc",
+  "key": "PMC4435649",
+  "label": "Figure 2",
+  "w": 567,
+  "h": 248,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4435649.1/12957_2015_573_Fig2_HTML.jpg",
+  "set": "chondroblastoma",
+  "n": 11
+ },
+ {
+  "source": "pmc",
+  "key": "PMC4435649",
+  "label": "Figure 3",
+  "w": 567,
+  "h": 214,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4435649.1/12957_2015_573_Fig3_HTML.jpg",
+  "set": "chondroblastoma",
+  "n": 12
+ },
+ {
+  "source": "pmc",
+  "key": "PMC4435649",
+  "label": "Figure 4",
+  "w": 778,
+  "h": 211,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4435649.1/12957_2015_573_Fig4_HTML.jpg",
+  "set": "chondroblastoma",
+  "n": 13
+ },
+ {
+  "source": "pmc",
+  "key": "PMC4435649",
+  "label": "Figure 5",
+  "w": 778,
+  "h": 231,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4435649.1/12957_2015_573_Fig5_HTML.jpg",
+  "set": "chondroblastoma",
+  "n": 14
+ },
+ {
+  "source": "pmc",
+  "key": "PMC4435649",
+  "label": "Figure 6",
+  "w": 568,
+  "h": 278,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4435649.1/12957_2015_573_Fig6_HTML.jpg",
+  "set": "chondroblastoma",
+  "n": 15
+ },
+ {
+  "source": "pmc",
+  "key": "PMC4435649",
+  "label": "Figure 7",
+  "w": 567,
+  "h": 213,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4435649.1/12957_2015_573_Fig7_HTML.jpg",
+  "set": "chondroblastoma",
+  "n": 16
+ },
+ {
+  "source": "pmc",
+  "key": "PMC4435649",
+  "label": "Figure 8",
+  "w": 567,
+  "h": 232,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4435649.1/12957_2015_573_Fig8_HTML.jpg",
+  "set": "chondroblastoma",
+  "n": 17
+ },
+ {
+  "source": "pmc",
+  "key": "PMC5781291",
+  "label": "Fig. 5",
+  "w": 567,
+  "h": 546,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC5781291.1/12957_2018_1314_Fig5_HTML.jpg",
+  "set": "chondroblastoma",
+  "n": 18
+ },
+ {
+  "source": "pmc",
+  "key": "PMC5781291",
+  "label": "Fig. 6",
+  "w": 472,
+  "h": 353,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC5781291.1/12957_2018_1314_Fig6_HTML.jpg",
+  "set": "chondroblastoma",
+  "n": 19
+ },
+ {
+  "source": "pmc",
+  "key": "PMC5781291",
+  "label": "Fig. 7",
+  "w": 567,
+  "h": 525,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC5781291.1/12957_2018_1314_Fig7_HTML.jpg",
+  "set": "chondroblastoma",
+  "n": 20
+ },
+ {
+  "source": "pmc",
+  "key": "PMC9628094",
+  "label": "Fig. 3",
+  "w": 708,
+  "h": 243,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9628094.1/12885_2022_10233_Fig3_HTML.jpg",
+  "set": "chondroblastoma",
+  "n": 21
+ },
+ {
+  "source": "pmc",
+  "key": "PMC8066474",
+  "label": "Fig. 1",
+  "w": 681,
+  "h": 415,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC8066474.1/12891_2021_4262_Fig1_HTML.jpg",
+  "set": "chondroblastoma",
+  "n": 22
+ },
+ {
+  "source": "pmc",
+  "key": "PMC8066474",
+  "label": "Fig. 4",
+  "w": 778,
+  "h": 915,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC8066474.1/12891_2021_4262_Fig4_HTML.jpg",
+  "set": "chondroblastoma",
+  "n": 23
+ },
+ {
+  "source": "pmc",
+  "key": "PMC9543861",
+  "label": "Figure 6",
+  "w": 750,
+  "h": 613,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9543861.1/cureus-0014-00000028897-i06.jpg",
+  "set": "chondroblastoma",
+  "n": 24
+ }
+]

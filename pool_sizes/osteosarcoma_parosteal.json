@@ -1,0 +1,209 @@
+[
+ {
+  "source": "commons",
+  "key": "File:Parosteal osteosarcoma.jpg",
+  "w": 2070,
+  "h": 1548,
+  "n": 1
+ },
+ {
+  "source": "pmc",
+  "key": "PMC3850780",
+  "label": "Figure 10",
+  "w": 600,
+  "h": 1003,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC3850780.1/1477-7819-11-241-10.jpg",
+  "set": "osteosarcoma_parosteal",
+  "n": 1
+ },
+ {
+  "source": "pmc",
+  "key": "PMC9184185",
+  "label": "Figure 1",
+  "w": 661,
+  "h": 280,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9184185.1/SARCOMA2022-5153924.001.jpg",
+  "set": "osteosarcoma_parosteal",
+  "n": 2
+ },
+ {
+  "source": "pmc",
+  "key": "PMC2570438",
+  "label": "Figure 1",
+  "w": 648,
+  "h": 751,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC2570438.1/SRCM2008-763056.001.jpg",
+  "set": "osteosarcoma_parosteal",
+  "n": 3
+ },
+ {
+  "source": "pmc",
+  "key": "PMC4306397",
+  "label": "Figure 1",
+  "w": 444,
+  "h": 869,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4306397.1/CRIOR2015-404979.001.jpg",
+  "set": "osteosarcoma_parosteal",
+  "n": 4
+ },
+ {
+  "source": "pmc",
+  "key": "PMC3850780",
+  "label": "Figure 1",
+  "w": 600,
+  "h": 773,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC3850780.1/1477-7819-11-241-1.jpg",
+  "set": "osteosarcoma_parosteal",
+  "n": 5
+ },
+ {
+  "source": "pmc",
+  "key": "PMC13277795",
+  "label": "Figure 1",
+  "w": 750,
+  "h": 422,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13277795.1/cureus-0018-00000109196-i01.jpg",
+  "set": "osteosarcoma_parosteal",
+  "n": 6
+ },
+ {
+  "source": "pmc",
+  "key": "PMC12435002",
+  "label": "Fig. 1",
+  "w": 778,
+  "h": 1379,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12435002.1/gr1.jpg",
+  "set": "osteosarcoma_parosteal",
+  "n": 7
+ },
+ {
+  "source": "pmc",
+  "key": "PMC3850780",
+  "label": "Figure 2",
+  "w": 600,
+  "h": 827,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC3850780.1/1477-7819-11-241-2.jpg",
+  "set": "osteosarcoma_parosteal",
+  "n": 8
+ },
+ {
+  "source": "pmc",
+  "key": "PMC12435002",
+  "label": "Fig. 3",
+  "w": 714,
+  "h": 446,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12435002.1/gr3.jpg",
+  "set": "osteosarcoma_parosteal",
+  "n": 9
+ },
+ {
+  "source": "pmc",
+  "key": "PMC10103910",
+  "label": "Fig. 1:",
+  "w": 738,
+  "h": 705,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10103910.1/moj-17-188-f1.jpg",
+  "set": "osteosarcoma_parosteal",
+  "n": 10
+ },
+ {
+  "source": "pmc",
+  "key": "PMC9184185",
+  "label": "Figure 8",
+  "w": 650,
+  "h": 566,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9184185.1/SARCOMA2022-5153924.008.jpg",
+  "set": "osteosarcoma_parosteal",
+  "n": 11
+ },
+ {
+  "source": "pmc",
+  "key": "PMC6343249",
+  "label": "Fig. 3",
+  "w": 596,
+  "h": 607,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC6343249.1/13256_2018_1958_Fig3_HTML.jpg",
+  "set": "osteosarcoma_parosteal",
+  "n": 12
+ },
+ {
+  "source": "pmc",
+  "key": "PMC9184185",
+  "label": "Figure 4",
+  "w": 650,
+  "h": 410,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9184185.1/SARCOMA2022-5153924.004.jpg",
+  "set": "osteosarcoma_parosteal",
+  "n": 13
+ },
+ {
+  "source": "pmc",
+  "key": "PMC4306397",
+  "label": "Figure 6",
+  "w": 455,
+  "h": 869,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4306397.1/CRIOR2015-404979.006.jpg",
+  "set": "osteosarcoma_parosteal",
+  "n": 14
+ },
+ {
+  "source": "pmc",
+  "key": "PMC2570438",
+  "label": "Figure 7",
+  "w": 552,
+  "h": 745,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC2570438.1/SRCM2008-763056.007.jpg",
+  "set": "osteosarcoma_parosteal",
+  "n": 15
+ },
+ {
+  "source": "pmc",
+  "key": "PMC9184185",
+  "label": "Figure 7",
+  "w": 491,
+  "h": 556,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9184185.1/SARCOMA2022-5153924.007.jpg",
+  "set": "osteosarcoma_parosteal",
+  "n": 16
+ },
+ {
+  "source": "pmc",
+  "key": "PMC4306397",
+  "label": "Figure 7",
+  "w": 578,
+  "h": 482,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4306397.1/CRIOR2015-404979.007.jpg",
+  "set": "osteosarcoma_parosteal",
+  "n": 17
+ },
+ {
+  "source": "pmc",
+  "key": "PMC9184185",
+  "label": "Figure 10",
+  "w": 650,
+  "h": 537,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9184185.1/SARCOMA2022-5153924.010.jpg",
+  "set": "osteosarcoma_parosteal",
+  "n": 18
+ },
+ {
+  "source": "pmc",
+  "key": "PMC9184185",
+  "label": "Figure 9",
+  "w": 708,
+  "h": 715,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9184185.1/SARCOMA2022-5153924.009.jpg",
+  "set": "osteosarcoma_parosteal",
+  "n": 19
+ },
+ {
+  "source": "pmc",
+  "key": "PMC9184185",
+  "label": "Figure 11",
+  "w": 708,
+  "h": 407,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9184185.1/SARCOMA2022-5153924.011.jpg",
+  "set": "osteosarcoma_parosteal",
+  "n": 20
+ }
+]

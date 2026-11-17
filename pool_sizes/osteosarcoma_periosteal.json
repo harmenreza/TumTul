@@ -1,0 +1,123 @@
+[
+ {
+  "source": "commons",
+  "key": "File:Osteosarcoma 1.jpg",
+  "w": 1053,
+  "h": 725,
+  "n": 1
+ },
+ {
+  "source": "commons",
+  "key": "File:Osteosarcoma 3.jpg",
+  "w": 795,
+  "h": 995,
+  "n": 2
+ },
+ {
+  "source": "commons",
+  "key": "File:Osteosarcoma 2.jpg",
+  "w": 791,
+  "h": 992,
+  "n": 3
+ },
+ {
+  "source": "pmc",
+  "key": "PMC7163286",
+  "label": "Fig. 1",
+  "w": 666,
+  "h": 1635,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7163286.1/gr1.jpg",
+  "set": "osteosarcoma_periosteal",
+  "n": 1
+ },
+ {
+  "source": "pmc",
+  "key": "PMC4474449",
+  "label": "Fig. 1",
+  "w": 358,
+  "h": 473,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4474449.1/12957_2015_618_Fig1_HTML.jpg",
+  "set": "osteosarcoma_periosteal",
+  "n": 2
+ },
+ {
+  "source": "pmc",
+  "key": "PMC4474449",
+  "label": "Fig. 4",
+  "w": 358,
+  "h": 413,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4474449.1/12957_2015_618_Fig4_HTML.jpg",
+  "set": "osteosarcoma_periosteal",
+  "n": 3
+ },
+ {
+  "source": "pmc",
+  "key": "PMC4474449",
+  "label": "Fig. 5",
+  "w": 358,
+  "h": 383,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4474449.1/12957_2015_618_Fig5_HTML.jpg",
+  "set": "osteosarcoma_periosteal",
+  "n": 4
+ },
+ {
+  "source": "pmc",
+  "key": "PMC4474449",
+  "label": "Fig. 6",
+  "w": 472,
+  "h": 384,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4474449.1/12957_2015_618_Fig6_HTML.jpg",
+  "set": "osteosarcoma_periosteal",
+  "n": 5
+ },
+ {
+  "source": "pmc",
+  "key": "PMC7163286",
+  "label": "Fig. 1",
+  "w": 666,
+  "h": 1635,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7163286.1/gr1.jpg",
+  "set": "osteosarcoma_periosteal_gap",
+  "n": 1
+ },
+ {
+  "source": "pmc",
+  "key": "PMC4474449",
+  "label": "Fig. 1",
+  "w": 358,
+  "h": 473,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4474449.1/12957_2015_618_Fig1_HTML.jpg",
+  "set": "osteosarcoma_periosteal_gap",
+  "n": 2
+ },
+ {
+  "source": "pmc",
+  "key": "PMC4474449",
+  "label": "Fig. 4",
+  "w": 358,
+  "h": 413,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4474449.1/12957_2015_618_Fig4_HTML.jpg",
+  "set": "osteosarcoma_periosteal_gap",
+  "n": 3
+ },
+ {
+  "source": "pmc",
+  "key": "PMC4474449",
+  "label": "Fig. 5",
+  "w": 358,
+  "h": 383,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4474449.1/12957_2015_618_Fig5_HTML.jpg",
+  "set": "osteosarcoma_periosteal_gap",
+  "n": 4
+ },
+ {
+  "source": "pmc",
+  "key": "PMC4474449",
+  "label": "Fig. 6",
+  "w": 472,
+  "h": 384,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4474449.1/12957_2015_618_Fig6_HTML.jpg",
+  "set": "osteosarcoma_periosteal_gap",
+  "n": 5
+ }
+]

@@ -1,0 +1,249 @@
+[
+ {
+  "source": "commons",
+  "key": "File:Osteoidosteom Histo.jpg",
+  "w": 738,
+  "h": 548,
+  "n": 1
+ },
+ {
+  "source": "commons",
+  "key": "File:OsteoidOsteomCholinePETCT.jpg",
+  "w": 1024,
+  "h": 1024,
+  "n": 2
+ },
+ {
+  "source": "commons",
+  "key": "File:Osteoidosteom Kontrastmitteldynamik.png",
+  "w": 1459,
+  "h": 773,
+  "n": 3
+ },
+ {
+  "source": "commons",
+  "key": "File:Osteoidosteom Fibula CT KF.png",
+  "w": 512,
+  "h": 444,
+  "n": 4
+ },
+ {
+  "source": "commons",
+  "key": "File:Osteoidosteom Roentgen-MRT.png",
+  "w": 1387,
+  "h": 702,
+  "n": 5
+ },
+ {
+  "source": "commons",
+  "key": "File:Osteoidosteom MRT FS Oedem.jpg",
+  "w": 478,
+  "h": 366,
+  "n": 6
+ },
+ {
+  "source": "commons",
+  "key": "File:Osteoid osteoma - low mag.jpg",
+  "w": 4272,
+  "h": 2848,
+  "n": 7
+ },
+ {
+  "source": "commons",
+  "key": "File:Osteoid osteoma - intermed mag.jpg",
+  "w": 4272,
+  "h": 2848,
+  "n": 8
+ },
+ {
+  "source": "commons",
+  "key": "File:Osteoid osteoma - high mag.jpg",
+  "w": 4272,
+  "h": 2848,
+  "n": 9
+ },
+ {
+  "source": "commons",
+  "key": "File:Osteoid osteoma - very high mag.jpg",
+  "w": 4272,
+  "h": 2848,
+  "n": 10
+ },
+ {
+  "source": "commons",
+  "key": "File:Periapical radiopaque-hyperdense jaw lesions 3.jpg",
+  "w": 900,
+  "h": 1118,
+  "n": 11
+ },
+ {
+  "source": "pmc",
+  "key": "PMC2747406",
+  "label": "Figure 8",
+  "w": 422,
+  "h": 611,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC2747406.1/IJRI-19-36-g008.jpg",
+  "set": "osteoid_osteoma",
+  "n": 1
+ },
+ {
+  "source": "pmc",
+  "key": "PMC3522328",
+  "label": "Figure 9",
+  "w": 600,
+  "h": 491,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC3522328.1/iranjradiol-08-182-g009.jpg",
+  "set": "osteoid_osteoma",
+  "n": 2
+ },
+ {
+  "source": "pmc",
+  "key": "PMC5096000",
+  "label": "Fig. 1",
+  "w": 568,
+  "h": 290,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC5096000.1/12891_2016_1313_Fig1_HTML.jpg",
+  "set": "osteoid_osteoma",
+  "n": 3
+ },
+ {
+  "source": "pmc",
+  "key": "PMC10095250",
+  "label": "Figure 1",
+  "w": 734,
+  "h": 430,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10095250.1/jcm-12-02721-g001.jpg",
+  "set": "osteoid_osteoma",
+  "n": 4
+ },
+ {
+  "source": "pmc",
+  "key": "PMC3522328",
+  "label": "Figure 3",
+  "w": 601,
+  "h": 430,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC3522328.1/iranjradiol-08-182-g003.jpg",
+  "set": "osteoid_osteoma",
+  "n": 5
+ },
+ {
+  "source": "pmc",
+  "key": "PMC3530226",
+  "label": "Figure 5",
+  "w": 600,
+  "h": 460,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC3530226.1/CRIM.ORTHOPEDICS2012-820501.005.jpg",
+  "set": "osteoid_osteoma",
+  "n": 6
+ },
+ {
+  "source": "pmc",
+  "key": "PMC10095250",
+  "label": "Figure 9",
+  "w": 743,
+  "h": 412,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10095250.1/jcm-12-02721-g009.jpg",
+  "set": "osteoid_osteoma",
+  "n": 7
+ },
+ {
+  "source": "pmc",
+  "key": "PMC7324468",
+  "label": "Fig. 3",
+  "w": 709,
+  "h": 252,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7324468.1/13244_2020_883_Fig3_HTML.jpg",
+  "set": "osteoid_osteoma",
+  "n": 8
+ },
+ {
+  "source": "pmc",
+  "key": "PMC3522328",
+  "label": "Figure 4",
+  "w": 736,
+  "h": 240,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC3522328.1/iranjradiol-08-182-g004.jpg",
+  "set": "osteoid_osteoma",
+  "n": 9
+ },
+ {
+  "source": "pmc",
+  "key": "PMC7497518",
+  "label": "Fig. 4",
+  "w": 708,
+  "h": 225,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7497518.1/256_2020_3515_Fig4_HTML.jpg",
+  "set": "osteoid_osteoma",
+  "n": 10
+ },
+ {
+  "source": "pmc",
+  "key": "PMC3522328",
+  "label": "Figure 7",
+  "w": 738,
+  "h": 300,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC3522328.1/iranjradiol-08-182-g007.jpg",
+  "set": "osteoid_osteoma",
+  "n": 11
+ },
+ {
+  "source": "pmc",
+  "key": "PMC7324468",
+  "label": "Fig. 9",
+  "w": 596,
+  "h": 764,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7324468.1/13244_2020_883_Fig9_HTML.jpg",
+  "set": "osteoid_osteoma",
+  "n": 12
+ },
+ {
+  "source": "pmc",
+  "key": "PMC3522328",
+  "label": "Figure 10",
+  "w": 600,
+  "h": 613,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC3522328.1/iranjradiol-08-182-g010.jpg",
+  "set": "osteoid_osteoma",
+  "n": 13
+ },
+ {
+  "source": "pmc",
+  "key": "PMC3522328",
+  "label": "Figure 11",
+  "w": 704,
+  "h": 400,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC3522328.1/iranjradiol-08-182-g011.jpg",
+  "set": "osteoid_osteoma",
+  "n": 14
+ },
+ {
+  "source": "pmc",
+  "key": "PMC4620000",
+  "label": "Fig. 2",
+  "w": 472,
+  "h": 262,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4620000.1/12891_2015_779_Fig2_HTML.jpg",
+  "set": "osteoid_osteoma",
+  "n": 15
+ },
+ {
+  "source": "pmc",
+  "key": "PMC2766743",
+  "label": "Fig. 1",
+  "w": 654,
+  "h": 609,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC2766743.1/cios-1-132-g001.jpg",
+  "set": "osteoid_osteoma",
+  "n": 16
+ },
+ {
+  "source": "pmc",
+  "key": "PMC5096000",
+  "label": "Fig. 2",
+  "w": 358,
+  "h": 723,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC5096000.1/12891_2016_1313_Fig2_HTML.jpg",
+  "set": "osteoid_osteoma",
+  "n": 17
+ }
+]

@@ -1,0 +1,207 @@
+[
+ {
+  "source": "commons",
+  "key": "File:Tumor Myeloma Radius.JPG",
+  "w": 759,
+  "h": 849,
+  "n": 1
+ },
+ {
+  "source": "commons",
+  "key": "File:Left humerus with myeloma.jpg",
+  "w": 651,
+  "h": 1473,
+  "n": 2
+ },
+ {
+  "source": "commons",
+  "key": "File:Left femur with myeloma.jpg",
+  "w": 1029,
+  "h": 2645,
+  "n": 3
+ },
+ {
+  "source": "commons",
+  "key": "File:Osteolytic Lesions.jpg",
+  "w": 1083,
+  "h": 855,
+  "n": 4
+ },
+ {
+  "source": "commons",
+  "key": "File:Left humerus with subtle signs of myeloma.jpg",
+  "w": 735,
+  "h": 1439,
+  "n": 5
+ },
+ {
+  "source": "commons",
+  "key": "File:Monoclonal gammopathy Multiple Myeloma.png",
+  "w": 818,
+  "h": 331,
+  "n": 6
+ },
+ {
+  "source": "commons",
+  "key": "File:Blausen 0656 MultipleMyeloma.png",
+  "w": 768,
+  "h": 1024,
+  "n": 7
+ },
+ {
+  "source": "commons",
+  "key": "File:Rouleaux in myeloma patient.jpg",
+  "w": 1280,
+  "h": 1024,
+  "n": 8
+ },
+ {
+  "source": "commons",
+  "key": "File:Multiple Myeloma.jpg",
+  "w": 1920,
+  "h": 1080,
+  "n": 9
+ },
+ {
+  "source": "commons",
+  "key": "File:Multiple myelomata.jpg",
+  "w": 1797,
+  "h": 1128,
+  "n": 10
+ },
+ {
+  "source": "commons",
+  "key": "File:Monoclonal gammopathy Multiple Myeloma (hy).png",
+  "w": 818,
+  "h": 331,
+  "n": 11
+ },
+ {
+  "source": "commons",
+  "key": "File:Plasmocytome lytique tiers inf femur.JPG",
+  "w": 1350,
+  "h": 1692,
+  "n": 12
+ },
+ {
+  "source": "commons",
+  "key": "File:Hospitalisierungen aufgrund desPlasmozytoms und b\u00f6sartigen Plasmazell-Neubildungen in Deutschland im Jahr 2021.png",
+  "w": 1024,
+  "h": 512,
+  "n": 13
+ },
+ {
+  "source": "commons",
+  "key": "File:2025 Cristiano Ronaldo (cropped).jpg",
+  "w": 466,
+  "h": 616,
+  "n": 14
+ },
+ {
+  "source": "commons",
+  "key": "File:MMPlainSkull.png",
+  "w": 849,
+  "h": 696,
+  "n": 15
+ },
+ {
+  "source": "commons",
+  "key": "File:Serum-Elektophorese IgA Myelom.jpg",
+  "w": 403,
+  "h": 388,
+  "n": 16
+ },
+ {
+  "source": "commons",
+  "key": "File:Hybridoma cells grown in tissue culture.jpg",
+  "w": 1648,
+  "h": 1692,
+  "n": 17
+ },
+ {
+  "source": "commons",
+  "key": "File:Serum protein electrophoresis normal and paraprotein.png",
+  "w": 882,
+  "h": 1186,
+  "n": 18
+ },
+ {
+  "source": "commons",
+  "key": "File:Kathy Giusti MMRF.jpg",
+  "w": 1920,
+  "h": 2787,
+  "n": 19
+ },
+ {
+  "source": "commons",
+  "key": "File:Flame plasma cell.jpg",
+  "w": 763,
+  "h": 579,
+  "n": 20
+ },
+ {
+  "source": "commons",
+  "key": "File:Kahler.JPG",
+  "w": 444,
+  "h": 685,
+  "n": 21
+ },
+ {
+  "source": "commons",
+  "key": "File:Portrait of Otto Kahler. Wellcome L0003518.jpg",
+  "w": 1119,
+  "h": 1529,
+  "n": 22
+ },
+ {
+  "source": "commons",
+  "key": "File:Emmentalersign .jpg",
+  "w": 1803,
+  "h": 1890,
+  "n": 23
+ },
+ {
+  "source": "commons",
+  "key": "File:Carman in concert cropped.jpg",
+  "w": 1079,
+  "h": 1303,
+  "n": 24
+ },
+ {
+  "source": "commons",
+  "key": "File:Carman in concert cropped (headshot).jpg",
+  "w": 328,
+  "h": 300,
+  "n": 25
+ },
+ {
+  "source": "pmc",
+  "key": "PMC6693151",
+  "label": "Fig. 1",
+  "w": 709,
+  "h": 639,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC6693151.1/12885_2019_5976_Fig1_HTML.jpg",
+  "set": "plasmacytoma_myeloma",
+  "n": 1
+ },
+ {
+  "source": "pmc",
+  "key": "PMC11424764",
+  "label": "Fig. 3",
+  "w": 750,
+  "h": 373,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11424764.1/gr3.jpg",
+  "set": "plasmacytoma_myeloma",
+  "n": 2
+ },
+ {
+  "source": "pmc",
+  "key": "PMC11424764",
+  "label": "Fig. 1",
+  "w": 722,
+  "h": 1057,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11424764.1/gr1.jpg",
+  "set": "plasmacytoma_myeloma",
+  "n": 3
+ }
+]

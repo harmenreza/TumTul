@@ -1,0 +1,142 @@
+[
+ {
+  "source": "pmc",
+  "key": "PMC12858644",
+  "label": "Figure 1",
+  "w": 757,
+  "h": 389,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12858644.1/PAMJ-52-104-g001.jpg",
+  "set": "desmoplastic_fibroma",
+  "n": 1
+ },
+ {
+  "source": "pmc",
+  "key": "PMC8502758",
+  "label": "Figure 1",
+  "w": 750,
+  "h": 1000,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC8502758.1/cureus-0013-00000017857-i01.jpg",
+  "set": "desmoplastic_fibroma",
+  "n": 2
+ },
+ {
+  "source": "pmc",
+  "key": "PMC10451113",
+  "label": "Figure 1",
+  "w": 500,
+  "h": 625,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10451113.1/omad057f1.jpg",
+  "set": "desmoplastic_fibroma",
+  "n": 3
+ },
+ {
+  "source": "pmc",
+  "key": "PMC13084346",
+  "label": "Figure 1",
+  "w": 750,
+  "h": 326,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13084346.1/cureus-0018-00000105354-i01.jpg",
+  "set": "desmoplastic_fibroma",
+  "n": 4
+ },
+ {
+  "source": "pmc",
+  "key": "PMC12858644",
+  "label": "Figure 2",
+  "w": 743,
+  "h": 404,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12858644.1/PAMJ-52-104-g002.jpg",
+  "set": "desmoplastic_fibroma",
+  "n": 5
+ },
+ {
+  "source": "pmc",
+  "key": "PMC12858644",
+  "label": "Figure 3",
+  "w": 763,
+  "h": 392,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12858644.1/PAMJ-52-104-g003.jpg",
+  "set": "desmoplastic_fibroma",
+  "n": 6
+ },
+ {
+  "source": "pmc",
+  "key": "PMC12858644",
+  "label": "Figure 4",
+  "w": 699,
+  "h": 416,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12858644.1/PAMJ-52-104-g004.jpg",
+  "set": "desmoplastic_fibroma",
+  "n": 7
+ },
+ {
+  "source": "pmc",
+  "key": "PMC10451113",
+  "label": "Figure 4",
+  "w": 666,
+  "h": 279,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10451113.1/omad057f4.jpg",
+  "set": "desmoplastic_fibroma",
+  "n": 8
+ },
+ {
+  "source": "pmc",
+  "key": "PMC4114711",
+  "label": "Figure 1",
+  "w": 708,
+  "h": 263,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4114711.1/OL-08-03-1103-g00.jpg",
+  "set": "desmoplastic_fibroma",
+  "n": 9
+ },
+ {
+  "source": "pmc",
+  "key": "PMC3813691",
+  "label": "Figure 1",
+  "w": 708,
+  "h": 514,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC3813691.1/OL-06-05-1285-g00.jpg",
+  "set": "desmoplastic_fibroma",
+  "n": 10
+ },
+ {
+  "source": "pmc",
+  "key": "PMC5932521",
+  "label": "Figure 3",
+  "w": 784,
+  "h": 256,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC5932521.1/CRID2018-1370184.003.jpg",
+  "set": "desmoplastic_fibroma",
+  "n": 11
+ },
+ {
+  "source": "pmc",
+  "key": "PMC8502758",
+  "label": "Figure 2",
+  "w": 750,
+  "h": 937,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC8502758.1/cureus-0013-00000017857-i02.jpg",
+  "set": "desmoplastic_fibroma",
+  "n": 12
+ },
+ {
+  "source": "pmc",
+  "key": "PMC4114711",
+  "label": "Figure 3",
+  "w": 708,
+  "h": 235,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4114711.1/OL-08-03-1103-g02.jpg",
+  "set": "desmoplastic_fibroma",
+  "n": 13
+ },
+ {
+  "source": "pmc",
+  "key": "PMC7081768",
+  "label": "Fig. 4",
+  "w": 748,
+  "h": 264,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7081768.1/ijp-15-134-g004.jpg",
+  "set": "desmoplastic_fibroma",
+  "n": 14
+ }
+]

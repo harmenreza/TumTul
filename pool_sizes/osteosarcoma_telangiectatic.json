@@ -1,0 +1,239 @@
+[
+ {
+  "source": "commons",
+  "key": "File:TelOSS03.jpg",
+  "w": 1920,
+  "h": 1536,
+  "n": 1
+ },
+ {
+  "source": "pmc",
+  "key": "PMC9360065",
+  "label": "Fig. 10",
+  "w": 676,
+  "h": 249,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9360065.1/247_2022_5396_Fig10_HTML.jpg",
+  "set": "osteosarcoma_telangiectatic",
+  "n": 1
+ },
+ {
+  "source": "pmc",
+  "key": "PMC11852380",
+  "label": "Figure 1",
+  "w": 724,
+  "h": 748,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11852380.1/cancers-17-00599-g001.jpg",
+  "set": "osteosarcoma_telangiectatic",
+  "n": 2
+ },
+ {
+  "source": "pmc",
+  "key": "PMC13397838",
+  "label": "Figure 1",
+  "w": 754,
+  "h": 517,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13397838.1/reports-09-00217-g001.jpg",
+  "set": "osteosarcoma_telangiectatic",
+  "n": 3
+ },
+ {
+  "source": "pmc",
+  "key": "PMC11995106",
+  "label": "Fig. 1A",
+  "w": 711,
+  "h": 431,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11995106.1/gr1.jpg",
+  "set": "osteosarcoma_telangiectatic",
+  "n": 4
+ },
+ {
+  "source": "pmc",
+  "key": "PMC2769378",
+  "label": "Figure 1a and b.",
+  "w": 502,
+  "h": 323,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC2769378.1/1757-1626-0002-0000007833-001.jpg",
+  "set": "osteosarcoma_telangiectatic",
+  "n": 5
+ },
+ {
+  "source": "pmc",
+  "key": "PMC13397838",
+  "label": "Figure 3",
+  "w": 722,
+  "h": 662,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13397838.1/reports-09-00217-g003.jpg",
+  "set": "osteosarcoma_telangiectatic",
+  "n": 6
+ },
+ {
+  "source": "pmc",
+  "key": "PMC13397838",
+  "label": "Figure 4",
+  "w": 759,
+  "h": 505,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13397838.1/reports-09-00217-g004.jpg",
+  "set": "osteosarcoma_telangiectatic",
+  "n": 7
+ },
+ {
+  "source": "pmc",
+  "key": "PMC11852380",
+  "label": "Figure 5",
+  "w": 721,
+  "h": 396,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11852380.1/cancers-17-00599-g005.jpg",
+  "set": "osteosarcoma_telangiectatic",
+  "n": 8
+ },
+ {
+  "source": "pmc",
+  "key": "PMC9360065",
+  "label": "Fig. 7",
+  "w": 645,
+  "h": 1135,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9360065.1/247_2022_5396_Fig7_HTML.jpg",
+  "set": "osteosarcoma_telangiectatic",
+  "n": 9
+ },
+ {
+  "source": "pmc",
+  "key": "PMC9360065",
+  "label": "Fig. 11",
+  "w": 644,
+  "h": 759,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9360065.1/247_2022_5396_Fig11_HTML.jpg",
+  "set": "osteosarcoma_telangiectatic",
+  "n": 10
+ },
+ {
+  "source": "pmc",
+  "key": "PMC9360065",
+  "label": "Fig. 12",
+  "w": 676,
+  "h": 220,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9360065.1/247_2022_5396_Fig12_HTML.jpg",
+  "set": "osteosarcoma_telangiectatic",
+  "n": 11
+ },
+ {
+  "source": "pmc",
+  "key": "PMC11852380",
+  "label": "Figure 18",
+  "w": 797,
+  "h": 493,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11852380.1/cancers-17-00599-g018.jpg",
+  "set": "osteosarcoma_telangiectatic",
+  "n": 12
+ },
+ {
+  "source": "pmc",
+  "key": "PMC9360065",
+  "label": "Fig. 2",
+  "w": 676,
+  "h": 171,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9360065.1/247_2022_5396_Fig2_HTML.jpg",
+  "set": "osteosarcoma_telangiectatic",
+  "n": 13
+ },
+ {
+  "source": "pmc",
+  "key": "PMC9360065",
+  "label": "Fig. 3",
+  "w": 676,
+  "h": 243,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9360065.1/247_2022_5396_Fig3_HTML.jpg",
+  "set": "osteosarcoma_telangiectatic",
+  "n": 14
+ },
+ {
+  "source": "pmc",
+  "key": "PMC9360065",
+  "label": "Fig. 4",
+  "w": 676,
+  "h": 242,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9360065.1/247_2022_5396_Fig4_HTML.jpg",
+  "set": "osteosarcoma_telangiectatic",
+  "n": 15
+ },
+ {
+  "source": "pmc",
+  "key": "PMC11852380",
+  "label": "Figure 6",
+  "w": 755,
+  "h": 331,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11852380.1/cancers-17-00599-g006.jpg",
+  "set": "osteosarcoma_telangiectatic",
+  "n": 16
+ },
+ {
+  "source": "pmc",
+  "key": "PMC9360065",
+  "label": "Fig. 9",
+  "w": 676,
+  "h": 252,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9360065.1/247_2022_5396_Fig9_HTML.jpg",
+  "set": "osteosarcoma_telangiectatic",
+  "n": 17
+ },
+ {
+  "source": "pmc",
+  "key": "PMC11852380",
+  "label": "Figure 10",
+  "w": 762,
+  "h": 523,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11852380.1/cancers-17-00599-g010.jpg",
+  "set": "osteosarcoma_telangiectatic",
+  "n": 18
+ },
+ {
+  "source": "pmc",
+  "key": "PMC11852380",
+  "label": "Figure 17",
+  "w": 756,
+  "h": 415,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11852380.1/cancers-17-00599-g017a.jpg",
+  "set": "osteosarcoma_telangiectatic",
+  "n": 19
+ },
+ {
+  "source": "pmc",
+  "key": "PMC11852380",
+  "label": "Figure 20",
+  "w": 795,
+  "h": 402,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11852380.1/cancers-17-00599-g020.jpg",
+  "set": "osteosarcoma_telangiectatic",
+  "n": 20
+ },
+ {
+  "source": "pmc",
+  "key": "PMC11852380",
+  "label": "Figure 21",
+  "w": 686,
+  "h": 703,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11852380.1/cancers-17-00599-g021.jpg",
+  "set": "osteosarcoma_telangiectatic",
+  "n": 21
+ },
+ {
+  "source": "pmc",
+  "key": "PMC11995106",
+  "label": "Fig. 1C",
+  "w": 770,
+  "h": 439,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11995106.1/gr3.jpg",
+  "set": "osteosarcoma_telangiectatic",
+  "n": 22
+ },
+ {
+  "source": "pmc",
+  "key": "PMC11995106",
+  "label": "Fig. 1G",
+  "w": 688,
+  "h": 644,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11995106.1/gr7.jpg",
+  "set": "osteosarcoma_telangiectatic",
+  "n": 23
+ }
+]

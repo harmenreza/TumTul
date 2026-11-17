@@ -1,0 +1,277 @@
+[
+ {
+  "source": "commons",
+  "key": "File:Knee arthroplasty due to a chondrosarcoma.jpg",
+  "w": 965,
+  "h": 935,
+  "n": 1
+ },
+ {
+  "source": "commons",
+  "key": "File:Knee arthroplasty due to a chondrosarcoma 2.jpg",
+  "w": 1209,
+  "h": 1066,
+  "n": 2
+ },
+ {
+  "source": "commons",
+  "key": "File:Metastatic chondrosarcoma at the lower lip.jpg",
+  "w": 640,
+  "h": 478,
+  "n": 3
+ },
+ {
+  "source": "commons",
+  "key": "File:Chondrosarcoma femoris sin.jpg",
+  "w": 805,
+  "h": 629,
+  "n": 4
+ },
+ {
+  "source": "commons",
+  "key": "File:Chondro-sarcoma of the femur Wellcome L0061413.jpg",
+  "w": 4256,
+  "h": 5064,
+  "n": 5
+ },
+ {
+  "source": "commons",
+  "key": "File:Chondrosarkom (Gro\u00dfzeh).jpg",
+  "w": 526,
+  "h": 993,
+  "n": 6
+ },
+ {
+  "source": "commons",
+  "key": "File:Osteochondromyxosarcoma 3.jpg",
+  "w": 1019,
+  "h": 1209,
+  "n": 7
+ },
+ {
+  "source": "commons",
+  "key": "File:Osteochondromyxosarcoma 1.jpg",
+  "w": 906,
+  "h": 1016,
+  "n": 8
+ },
+ {
+  "source": "commons",
+  "key": "File:Osteochondromyxosarcoma 2.jpg",
+  "w": 1009,
+  "h": 997,
+  "n": 9
+ },
+ {
+  "source": "commons",
+  "key": "File:Osteochondromyxosarcoma 5.jpg",
+  "w": 1228,
+  "h": 1416,
+  "n": 10
+ },
+ {
+  "source": "commons",
+  "key": "File:Osteochondromyxosarcoma 4.jpg",
+  "w": 1003,
+  "h": 975,
+  "n": 11
+ },
+ {
+  "source": "commons",
+  "key": "File:Osteochondromyxosarcoma 6.jpg",
+  "w": 1213,
+  "h": 1024,
+  "n": 12
+ },
+ {
+  "source": "commons",
+  "key": "File:Chondrosarcoma (1).jpg",
+  "w": 700,
+  "h": 527,
+  "n": 13
+ },
+ {
+  "source": "commons",
+  "key": "File:Chondrosarcoma (2).jpg",
+  "w": 700,
+  "h": 527,
+  "n": 14
+ },
+ {
+  "source": "commons",
+  "key": "File:Chondrosarcoma (3).jpg",
+  "w": 700,
+  "h": 527,
+  "n": 15
+ },
+ {
+  "source": "commons",
+  "key": "File:Chondrosarcoma (4).jpg",
+  "w": 700,
+  "h": 527,
+  "n": 16
+ },
+ {
+  "source": "commons",
+  "key": "File:Bone Chondrosarcoma Mesenchymal MP5 PA.JPG",
+  "w": 2792,
+  "h": 2082,
+  "n": 17
+ },
+ {
+  "source": "commons",
+  "key": "File:Bone Chondrosarcoma Mesenchymal LP2 PA.JPG",
+  "w": 2839,
+  "h": 2124,
+  "n": 18
+ },
+ {
+  "source": "commons",
+  "key": "File:Bone Chondrosarcoma Mesenchymal MP PA.JPG",
+  "w": 2626,
+  "h": 2301,
+  "n": 19
+ },
+ {
+  "source": "commons",
+  "key": "File:Bone Chondrosarcoma Mesenchymal HP5 PA.JPG",
+  "w": 3070,
+  "h": 2384,
+  "n": 20
+ },
+ {
+  "source": "commons",
+  "key": "File:Bone Chondrosarcoma Mesenchymal MP7.JPG",
+  "w": 3070,
+  "h": 2301,
+  "n": 21
+ },
+ {
+  "source": "commons",
+  "key": "File:Bone Chondrosarcoma Mesenchymal MP2 PA.JPG",
+  "w": 3070,
+  "h": 2301,
+  "n": 22
+ },
+ {
+  "source": "commons",
+  "key": "File:Bone Chondrosarcoma Dedifferentiated PA copy.jpg",
+  "w": 2715,
+  "h": 2301,
+  "n": 23
+ },
+ {
+  "source": "commons",
+  "key": "File:Bone Chondrosarcoma Grade2 HP.JPG",
+  "w": 3230,
+  "h": 2473,
+  "n": 24
+ },
+ {
+  "source": "commons",
+  "key": "File:Bone Chondrosarcoma ClearCell HP PA.jpg",
+  "w": 2048,
+  "h": 1536,
+  "n": 25
+ },
+ {
+  "source": "pmc",
+  "key": "PMC3484068",
+  "label": "Figure 1",
+  "w": 600,
+  "h": 484,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC3484068.1/1471-2407-12-375-1.jpg",
+  "set": "chondrosarcoma_central",
+  "n": 1
+ },
+ {
+  "source": "pmc",
+  "key": "PMC12276759",
+  "label": "Figure 1",
+  "w": 750,
+  "h": 610,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12276759.1/cureus-0017-00000086433-i01.jpg",
+  "set": "chondrosarcoma_central",
+  "n": 2
+ },
+ {
+  "source": "pmc",
+  "key": "PMC9744418",
+  "label": "Figure 1",
+  "w": 750,
+  "h": 887,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9744418.1/cureus-0014-00000031358-i01.jpg",
+  "set": "chondrosarcoma_central",
+  "n": 3
+ },
+ {
+  "source": "pmc",
+  "key": "PMC7885579",
+  "label": "Fig. 1",
+  "w": 787,
+  "h": 1046,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7885579.1/12891_2021_4053_Fig1_HTML.jpg",
+  "set": "chondrosarcoma_central",
+  "n": 4
+ },
+ {
+  "source": "pmc",
+  "key": "PMC7885579",
+  "label": "Fig. 4",
+  "w": 709,
+  "h": 454,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7885579.1/12891_2021_4053_Fig4_HTML.jpg",
+  "set": "chondrosarcoma_central",
+  "n": 5
+ },
+ {
+  "source": "pmc",
+  "key": "PMC12276759",
+  "label": "Figure 5",
+  "w": 750,
+  "h": 593,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12276759.1/cureus-0017-00000086433-i05.jpg",
+  "set": "chondrosarcoma_central",
+  "n": 6
+ },
+ {
+  "source": "pmc",
+  "key": "PMC12276759",
+  "label": "Figure 6",
+  "w": 750,
+  "h": 364,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12276759.1/cureus-0017-00000086433-i06.jpg",
+  "set": "chondrosarcoma_central",
+  "n": 7
+ },
+ {
+  "source": "pmc",
+  "key": "PMC9744418",
+  "label": "Figure 6",
+  "w": 750,
+  "h": 1094,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9744418.1/cureus-0014-00000031358-i06.jpg",
+  "set": "chondrosarcoma_central",
+  "n": 8
+ },
+ {
+  "source": "pmc",
+  "key": "PMC7885579",
+  "label": "Fig. 2",
+  "w": 778,
+  "h": 393,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7885579.1/12891_2021_4053_Fig2_HTML.jpg",
+  "set": "chondrosarcoma_central",
+  "n": 9
+ },
+ {
+  "source": "pmc",
+  "key": "PMC7885579",
+  "label": "Fig. 3",
+  "w": 778,
+  "h": 693,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7885579.1/12891_2021_4053_Fig3_HTML.jpg",
+  "set": "chondrosarcoma_central",
+  "n": 10
+ }
+]

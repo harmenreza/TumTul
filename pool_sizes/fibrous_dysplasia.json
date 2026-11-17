@@ -1,0 +1,347 @@
+[
+ {
+  "source": "commons",
+  "key": "File:R\u00f6ntgenfoto Fibreuze Dysplasie.png",
+  "w": 690,
+  "h": 317,
+  "n": 1
+ },
+ {
+  "source": "commons",
+  "key": "File:Fibroese Dysplasie Kalkaneus 21jm- Roe seitlich - 001.jpg",
+  "w": 1464,
+  "h": 1497,
+  "n": 2
+ },
+ {
+  "source": "commons",
+  "key": "File:Osteolytic Lesions.jpg",
+  "w": 1083,
+  "h": 855,
+  "n": 3
+ },
+ {
+  "source": "commons",
+  "key": "File:12887 2020 2288 Fig2 HTML.jpg",
+  "w": 315,
+  "h": 215,
+  "n": 4
+ },
+ {
+  "source": "commons",
+  "key": "File:Evidence of Bone Repair, Fibrous Dysplasia.jpg",
+  "w": 3000,
+  "h": 2421,
+  "n": 5
+ },
+ {
+  "source": "commons",
+  "key": "File:Mccune-albrightsyndrome1.jpg",
+  "w": 784,
+  "h": 1013,
+  "n": 6
+ },
+ {
+  "source": "commons",
+  "key": "File:Leontiasis ossea.jpg",
+  "w": 599,
+  "h": 569,
+  "n": 7
+ },
+ {
+  "source": "commons",
+  "key": "File:Image Data Resource - idr0098 - 12539666.jpg",
+  "w": 10000,
+  "h": 4909,
+  "n": 8
+ },
+ {
+  "source": "commons",
+  "key": "File:Mauricio Saravia at Cinema City Film Festival 1.jpg",
+  "w": 387,
+  "h": 723,
+  "n": 9
+ },
+ {
+  "source": "commons",
+  "key": "File:Mauricio Saravia at Cinema City Film Festival 2.jpg",
+  "w": 527,
+  "h": 735,
+  "n": 10
+ },
+ {
+  "source": "commons",
+  "key": "File:Mauricio Saravia at Cinema City Film Festival 3.jpg",
+  "w": 542,
+  "h": 679,
+  "n": 11
+ },
+ {
+  "source": "commons",
+  "key": "File:Mauricio Saravia at Cinema City Film Festival 4.jpg",
+  "w": 485,
+  "h": 688,
+  "n": 12
+ },
+ {
+  "source": "commons",
+  "key": "File:Mauricio Saravia at Cinema City Film Festival 5.jpg",
+  "w": 596,
+  "h": 680,
+  "n": 13
+ },
+ {
+  "source": "commons",
+  "key": "File:Mauricio Saravia at Cinema City Film Festival 6.jpg",
+  "w": 490,
+  "h": 675,
+  "n": 14
+ },
+ {
+  "source": "commons",
+  "key": "File:Mauricio Saravia at Cinema City Film Festival 7.jpg",
+  "w": 321,
+  "h": 661,
+  "n": 15
+ },
+ {
+  "source": "commons",
+  "key": "File:Mauricio Saravia at Cinema City Film Festival 8.jpg",
+  "w": 664,
+  "h": 679,
+  "n": 16
+ },
+ {
+  "source": "commons",
+  "key": "File:Mauricio Saravia at Cinema City Film Festival 9.jpg",
+  "w": 693,
+  "h": 640,
+  "n": 17
+ },
+ {
+  "source": "commons",
+  "key": "File:Mauricio Saravia at Cinema City Film Festival 10.jpg",
+  "w": 546,
+  "h": 676,
+  "n": 18
+ },
+ {
+  "source": "commons",
+  "key": "File:Mauricio Saravia at Cinema City Film Festival 11.jpg",
+  "w": 679,
+  "h": 690,
+  "n": 19
+ },
+ {
+  "source": "commons",
+  "key": "File:Mauricio Saravia at Cinema City Film Festival 12.jpg",
+  "w": 668,
+  "h": 636,
+  "n": 20
+ },
+ {
+  "source": "commons",
+  "key": "File:Mauricio Saravia at Cinema City Film Festival 13.jpg",
+  "w": 555,
+  "h": 643,
+  "n": 21
+ },
+ {
+  "source": "commons",
+  "key": "File:Dysplasia fibrosa.jpg",
+  "w": 750,
+  "h": 459,
+  "n": 22
+ },
+ {
+  "source": "commons",
+  "key": "File:Fibrous dysplasia - very low mag.jpg",
+  "w": 4272,
+  "h": 2848,
+  "n": 23
+ },
+ {
+  "source": "commons",
+  "key": "File:Fibrous dysplasia - low mag.jpg",
+  "w": 4272,
+  "h": 2848,
+  "n": 24
+ },
+ {
+  "source": "commons",
+  "key": "File:Fibrous dysplasia - add - low mag.jpg",
+  "w": 4272,
+  "h": 2848,
+  "n": 25
+ },
+ {
+  "source": "pmc",
+  "key": "PMC6281586",
+  "label": "Fig. 2",
+  "w": 709,
+  "h": 502,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC6281586.1/40902_2018_177_Fig2_HTML.jpg",
+  "set": "fibrous_dysplasia",
+  "n": 1
+ },
+ {
+  "source": "pmc",
+  "key": "PMC4906182",
+  "label": "Figure 1",
+  "w": 750,
+  "h": 423,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4906182.1/CRID2016-3920850.001.jpg",
+  "set": "fibrous_dysplasia",
+  "n": 2
+ },
+ {
+  "source": "pmc",
+  "key": "PMC2726553",
+  "label": "Figure 1",
+  "w": 600,
+  "h": 1872,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC2726553.1/1752-1947-0003-0000007227-1.jpg",
+  "set": "fibrous_dysplasia",
+  "n": 3
+ },
+ {
+  "source": "pmc",
+  "key": "PMC8860356",
+  "label": "Figure 1",
+  "w": 750,
+  "h": 724,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC8860356.1/cureus-0014-00000021496-i01.jpg",
+  "set": "fibrous_dysplasia",
+  "n": 4
+ },
+ {
+  "source": "pmc",
+  "key": "PMC11009832",
+  "label": "Figure 1",
+  "w": 750,
+  "h": 963,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11009832.1/cureus-0016-00000056052-i01.jpg",
+  "set": "fibrous_dysplasia",
+  "n": 5
+ },
+ {
+  "source": "pmc",
+  "key": "PMC4906182",
+  "label": "Figure 2",
+  "w": 748,
+  "h": 459,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4906182.1/CRID2016-3920850.002.jpg",
+  "set": "fibrous_dysplasia",
+  "n": 6
+ },
+ {
+  "source": "pmc",
+  "key": "PMC3529877",
+  "label": "Figure 3",
+  "w": 600,
+  "h": 1706,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC3529877.1/CRIM.ORTHOPEDICS2012-690914.003.jpg",
+  "set": "fibrous_dysplasia",
+  "n": 7
+ },
+ {
+  "source": "pmc",
+  "key": "PMC3529877",
+  "label": "Figure 1",
+  "w": 600,
+  "h": 1547,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC3529877.1/CRIM.ORTHOPEDICS2012-690914.001.jpg",
+  "set": "fibrous_dysplasia",
+  "n": 8
+ },
+ {
+  "source": "pmc",
+  "key": "PMC4307750",
+  "label": "Figure 1",
+  "w": 600,
+  "h": 186,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4307750.1/13256_2014_3066_Fig1_HTML.jpg",
+  "set": "fibrous_dysplasia",
+  "n": 9
+ },
+ {
+  "source": "pmc",
+  "key": "PMC4307750",
+  "label": "Figure 3",
+  "w": 600,
+  "h": 490,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4307750.1/13256_2014_3066_Fig3_HTML.jpg",
+  "set": "fibrous_dysplasia",
+  "n": 10
+ },
+ {
+  "source": "pmc",
+  "key": "PMC8860356",
+  "label": "Figure 2",
+  "w": 750,
+  "h": 858,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC8860356.1/cureus-0014-00000021496-i02.jpg",
+  "set": "fibrous_dysplasia",
+  "n": 11
+ },
+ {
+  "source": "pmc",
+  "key": "PMC8319740",
+  "label": "Fig. 2",
+  "w": 671,
+  "h": 221,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC8319740.1/gr2.jpg",
+  "set": "fibrous_dysplasia",
+  "n": 12
+ },
+ {
+  "source": "pmc",
+  "key": "PMC8860356",
+  "label": "Figure 3",
+  "w": 750,
+  "h": 564,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC8860356.1/cureus-0014-00000021496-i03.jpg",
+  "set": "fibrous_dysplasia",
+  "n": 13
+ },
+ {
+  "source": "pmc",
+  "key": "PMC4906182",
+  "label": "Figure 5",
+  "w": 748,
+  "h": 419,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4906182.1/CRID2016-3920850.005.jpg",
+  "set": "fibrous_dysplasia",
+  "n": 14
+ },
+ {
+  "source": "pmc",
+  "key": "PMC11009832",
+  "label": "Figure 5",
+  "w": 750,
+  "h": 777,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11009832.1/cureus-0016-00000056052-i05.jpg",
+  "set": "fibrous_dysplasia",
+  "n": 15
+ },
+ {
+  "source": "pmc",
+  "key": "PMC2726553",
+  "label": "Figure 6",
+  "w": 600,
+  "h": 596,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC2726553.1/1752-1947-0003-0000007227-6.jpg",
+  "set": "fibrous_dysplasia",
+  "n": 16
+ },
+ {
+  "source": "pmc",
+  "key": "PMC6281586",
+  "label": "Fig. 6",
+  "w": 709,
+  "h": 618,
+  "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC6281586.1/40902_2018_177_Fig6_HTML.jpg",
+  "set": "fibrous_dysplasia",
+  "n": 17
+ }
+]
