@@ -184,17 +184,6 @@
   [
    "commons",
    "File:BrodieAbscessRadiograph.jpg"
-  ],
-  [
-   "pmc",
-   "PMC5630055",
-   "Fig. 1:",
-   [
-    0,
-    0,
-    0.48,
-    1
-   ]
   ]
  ],
  "osteosarcoma_conventional": [
@@ -234,18 +223,30 @@
  "chondroblastoma": [
   [
    "pmc",
-   "PMC8493501",
-   "Fig. 1"
-  ],
-  [
-   "pmc",
    "PMC9543861",
    "Figure 1"
   ],
   [
    "pmc",
-   "PMC4866331",
-   "Fig. 1"
+   "PMC5781291",
+   "Fig. 6",
+   [
+    0,
+    0,
+    0.31,
+    1
+   ]
+  ],
+  [
+   "pmc",
+   "PMC4435649",
+   "Figure 2",
+   [
+    0,
+    0,
+    0.43,
+    1
+   ]
   ]
  ],
  "giant_cell_tumour_of_bone": [
@@ -305,11 +306,6 @@
     0.28,
     1
    ]
-  ],
-  [
-   "pmc",
-   "PMC11995106",
-   "Fig. 1A"
   ],
   [
    "pmc",
@@ -413,26 +409,11 @@
   ],
   [
    "pmc",
-   "PMC3474341",
-   "Figure 2"
-  ],
-  [
-   "pmc",
    "PMC6011161",
    "Figure 1"
   ]
  ],
  "bpop_nora_lesion": [
-  [
-   "pmc",
-   "PMC3541688",
-   "Figure 1"
-  ],
-  [
-   "pmc",
-   "PMC3541688",
-   "Figure 13"
-  ],
   [
    "pmc",
    "PMC10784761",
@@ -444,17 +425,6 @@
    "pmc",
    "PMC2983082",
    "Figure 1"
-  ],
-  [
-   "pmc",
-   "PMC5491748",
-   "Figure 1",
-   [
-    0,
-    0,
-    0.48,
-    0.55
-   ]
   ]
  ],
  "chondrosarcoma_central": [
@@ -486,19 +456,7 @@
    ]
   ]
  ],
- "clear_cell_chondrosarcoma": [
-  [
-   "pmc",
-   "PMC4131066",
-   "Figure 1"
-  ]
- ],
  "desmoplastic_fibroma": [
-  [
-   "pmc",
-   "PMC8502758",
-   "Figure 1"
-  ],
   [
    "pmc",
    "PMC4114711",
@@ -509,18 +467,6 @@
     0.6,
     1
    ]
-  ],
-  [
-   "pmc",
-   "PMC10451113",
-   "Figure 1"
-  ]
- ],
- "periosteal_chondroma": [
-  [
-   "pmc",
-   "PMC4251843",
-   "Figure 1"
   ]
  ],
  "enostosis": [
@@ -560,17 +506,6 @@
    "pmc",
    "PMC7501750",
    "Figure 1"
-  ],
-  [
-   "pmc",
-   "PMC2784744",
-   "Figure 1",
-   [
-    0,
-    0,
-    0.44,
-    1
-   ]
   ]
  ],
  "osteoblastoma": [
@@ -578,11 +513,6 @@
    "pmc",
    "PMC3776745",
    "Figure 1"
-  ],
-  [
-   "pmc",
-   "PMC11006508",
-   "Fig. 1"
   ]
  ],
  "langerhans_cell_histiocytosis": [

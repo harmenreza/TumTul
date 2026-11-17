@@ -21,6 +21,9 @@ MAX_ARTICLES, MAX_FIGS = 30, 25
 POSTOP = re.compile(r"post-?operativ|after (the )?(operation|surgery|curettage|resection|treatment)|follow-?up|months? after|years? after|postop|recurren|ablation|reconstruct|implant|prosthe", re.I)
 XRAY = re.compile(r"radiograph|x-?ray|plain film|roentgenogra|radiography", re.I)
 OTHER = re.compile(r"\bMRI\b|magnetic resonance|\bCT\b|computed tomograph|T1|T2|STIR|scintigra|bone scan|PET|histolog|H&E|hematoxylin|haematoxylin|microscop|immunohisto|intraoperative|gross", re.I)
+# Owner rule 2026-11-17: the gallery is an atlas of the most typical radiographs, so sources that describe
+# the case as atypical / unusual / rare-site / aggressive / giant / multifocal / a mimic / misdiagnosed are skipped.
+ATYPICAL = re.compile(r"atypi(?!cal cartilaginous)|unusual|uncommon|unique|\brare\b|giant(?! cell)|mimic|mistaken|misdiagnos|masquerad|aggressive|multifocal|unexpected|peculiar|exceptional|bizarre(?! parosteal)|late recurrence|initially diagnosed", re.I)
 THIRD_PARTY = re.compile(r"reprinted|reproduced (from|with)|adapted (from|with)|with permission|courtesy of|copyright ©", re.I)
 GAP = os.environ.get("GAP") == "1"
 SFX = "_gap" if GAP else ""
@@ -107,8 +110,9 @@ def run_entity(ent, terms, manifest):
     for a in arts[:MAX_ARTICLES]:
         meta, figs = figures(a["pmcid"]); time.sleep(0.5)
         if not meta or not OK_LIC.search(meta["licence_url"] or ""): continue
+        if ATYPICAL.search(meta["article_title"]): continue
         for f in figs:
-            if not f["xray"] or THIRD_PARTY.search(f["caption"]): continue
+            if not f["xray"] or THIRD_PARTY.search(f["caption"]) or ATYPICAL.search(f["caption"]): continue
             cap = f["caption"]
             f["mentions_entity"] = any(w.lower() in cap.lower() for t in terms for w in [t.split()[0]] if len(w) > 4) or any(t.lower() in cap.lower() for t in terms)
             f["postop"] = bool(POSTOP.search(cap))

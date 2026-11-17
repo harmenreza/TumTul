@@ -1,6 +1,6 @@
 {
  "version": "0.2.0",
- "note": "Example-image registry for the Sumbu B gallery. Separate from the knowledge base (kb-schema.json unchanged). Up to 3 radiographs per entity, freely licensed (CC0, public domain, CC BY, CC BY-SA). Only records with status 'approved' (owner-reviewed) are shown. Fields: file (path under web/), caption_id (our own words), site, source_title, source_url, author, repository, licence, licence_url, changes, status (candidate | approved | rejected).",
+ "note": "Example-image registry for the Sumbu B gallery. Separate from the knowledge base (kb-schema.json unchanged). Up to 3 radiographs per entity, freely licensed (CC0, public domain, CC BY, CC BY-SA). Only records with status 'approved' (owner-reviewed) are shown. Fields: file (path under web/), caption_id (our own words), site, source_title, source_url, author, repository, licence, licence_url, changes, status (candidate | approved | rejected). Selection rule (owner, 2026-11-17): only the most typical radiograph of each entity; images from sources that call the case atypical, unusual, rare-site, aggressive, giant, multifocal, a mimic or misdiagnosed are excluded.",
  "images": {
   "adamantinoma_ofd_spectrum": [
    {
@@ -17,18 +17,6 @@
    },
    {
     "file": "img/adamantinoma_ofd_spectrum-2.jpg",
-    "caption_id": "Tungkai bawah AP (perempuan 23 tahun): adamantinoma multifokal pada diafisis tibia dan fibula, litik-sklerotik campuran berbasis korteks.",
-    "source_title": "Clonality Assessment in a Case of Multifocal Adamantinoma and a Review of the Literature (Case Reports in Medicine, 2012), Figure 2",
-    "source_url": "https://doi.org/10.1155/2012/605685",
-    "author": "Borbas P, Leithner A, Sadoghi P et al.",
-    "repository": "Case Reports in Medicine via PubMed Central (PMC3474341)",
-    "licence": "CC BY 3.0",
-    "licence_url": "https://creativecommons.org/licenses/by/3.0/",
-    "changes": "diperkecil",
-    "status": "candidate"
-   },
-   {
-    "file": "img/adamantinoma_ofd_spectrum-3.jpg",
     "caption_id": "Tibia AP: lesi litik memanjang dengan gelembung multilokuler dan ekspansi korteks sepanjang diafisis tibia.",
     "source_title": "Tibia Adamantinoma Resection and Reconstruction with a Custom-Made Total Tibia Endoprosthesis: A Case Report with 8-Year Follow-Up (Case Reports in Orthopedics, 2018), Figure 1",
     "source_url": "https://doi.org/10.1155/2018/3656913",
@@ -157,30 +145,6 @@
   "bpop_nora_lesion": [
    {
     "file": "img/bpop_nora_lesion-1.jpg",
-    "caption_id": "Tangan PA dan oblik: massa padat termineralisasi menempel pada permukaan metakarpal III, korteks induk utuh.",
-    "source_title": "Bizarre Parosteal Osteochondromatous Proliferation (Nora's Lesion) of the Hand: A Report of Two Atypical Cases (Case Reports in Medicine, 2012), Figure 1",
-    "source_url": "https://doi.org/10.1155/2012/453560",
-    "author": "Barrera-Ochoa S, Lluch A, Gargallo-Margarit A et al.",
-    "repository": "Case Reports in Medicine via PubMed Central (PMC3541688)",
-    "licence": "CC BY 3.0",
-    "licence_url": "https://creativecommons.org/licenses/by/3.0/",
-    "changes": "diperkecil",
-    "status": "candidate"
-   },
-   {
-    "file": "img/bpop_nora_lesion-2.jpg",
-    "caption_id": "Tangan PA dan oblik (kasus kedua): massa termineralisasi bertangkai di permukaan falang, tanpa kontinuitas meduler.",
-    "source_title": "Bizarre Parosteal Osteochondromatous Proliferation (Nora's Lesion) of the Hand: A Report of Two Atypical Cases (Case Reports in Medicine, 2012), Figure 13",
-    "source_url": "https://doi.org/10.1155/2012/453560",
-    "author": "Barrera-Ochoa S, Lluch A, Gargallo-Margarit A et al.",
-    "repository": "Case Reports in Medicine via PubMed Central (PMC3541688)",
-    "licence": "CC BY 3.0",
-    "licence_url": "https://creativecommons.org/licenses/by/3.0/",
-    "changes": "diperkecil",
-    "status": "candidate"
-   },
-   {
-    "file": "img/bpop_nora_lesion-3.jpg",
     "caption_id": "Tangan AP dan oblik: lesi terkalsifikasi di permukaan diafisis tulang tangan (panah).",
     "source_title": "Bizarre Parosteal Osteochondromatous Proliferation (Nora’s Lesion) in the Hand: A Case Report and a Review of the Literature (Cureus, 2023), Figure 2",
     "source_url": "https://doi.org/10.7759/cureus.50439",
@@ -233,18 +197,6 @@
   "chondroblastoma": [
    {
     "file": "img/chondroblastoma-1.jpg",
-    "caption_id": "Lutut AP dan lateral: lesi lusen kecil di epifisis femur distal (panah), fisis masih terbuka.",
-    "source_title": "Chondroblastoma of the knee in a teenager (Radiology Case Reports, 2021), Fig. 1",
-    "source_url": "https://doi.org/10.1016/j.radcr.2021.08.065",
-    "author": "Alkadumi M, Duggal N, Kaur S et al.",
-    "repository": "Radiology Case Reports via PubMed Central (PMC8493501)",
-    "licence": "CC BY 4.0",
-    "licence_url": "https://creativecommons.org/licenses/by/4.0/",
-    "changes": "diperkecil",
-    "status": "candidate"
-   },
-   {
-    "file": "img/chondroblastoma-2.jpg",
     "caption_id": "Lutut AP dan lateral: lusensi fokal di epifisis tibia proksimal (panah) pada pasien dengan fisis terbuka.",
     "source_title": "Pulmonary Metastases of Chondroblastoma in a Pediatric Patient: A Case Report and Review of Literature (Cureus, 2022), Figure 1",
     "source_url": "https://doi.org/10.7759/cureus.28897",
@@ -256,15 +208,27 @@
     "status": "candidate"
    },
    {
-    "file": "img/chondroblastoma-3.jpg",
-    "caption_id": "Pergelangan kaki AP dan lateral: lesi litik ekspansil berbatas sklerotik di epifisis tibia distal.",
-    "source_title": "Reconstruction with double pedicel fibular graft and ankle arthrodesis for aggressive chondroblastoma in the distal tibia (World Journal of Surgical Oncology, 2016), Fig. 1",
-    "source_url": "https://doi.org/10.1186/s12957-016-0839-z",
-    "author": "Fan J, Li S, Mei J et al.",
-    "repository": "World Journal of Surgical Oncology via PubMed Central (PMC4866331)",
+    "file": "img/chondroblastoma-2.jpg",
+    "caption_id": "Lutut AP (laki-laki 13 tahun): lesi lusen berbatas tegas di epifisis tibia proksimal, fisis masih terbuka.",
+    "source_title": "The effects of surgical treatment with chondroblastoma in children and adolescents in open epiphyseal plate of long bones (World Journal of Surgical Oncology, 2018), Fig. 6",
+    "source_url": "https://doi.org/10.1186/s12957-018-1314-9",
+    "author": "Xiong Y, Lang Y, Yu Z et al.",
+    "repository": "World Journal of Surgical Oncology via PubMed Central (PMC5781291)",
     "licence": "CC BY 4.0",
     "licence_url": "https://creativecommons.org/licenses/by/4.0/",
-    "changes": "diperkecil",
+    "changes": "dipotong ke panel radiograf, diperkecil",
+    "status": "candidate"
+   },
+   {
+    "file": "img/chondroblastoma-3.jpg",
+    "caption_id": "Patela lateral: lesi geografik berlobulasi dengan tepi sklerotik dan korteks menipis (patela setara apofisis).",
+    "source_title": "Primary tumors of the patella (World Journal of Surgical Oncology, 2015), Figure 2",
+    "source_url": "https://doi.org/10.1186/s12957-015-0573-y",
+    "author": "Song M, Zhang Z, Wu Y et al.",
+    "repository": "World Journal of Surgical Oncology via PubMed Central (PMC4435649)",
+    "licence": "CC BY 4.0",
+    "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+    "changes": "dipotong ke panel radiograf, diperkecil",
     "status": "candidate"
    }
   ],
@@ -279,18 +243,6 @@
     "licence": "CC BY 2.0",
     "licence_url": "http://creativecommons.org/licenses/by/2.0/",
     "changes": "diperkecil",
-    "status": "candidate"
-   },
-   {
-    "file": "img/chondromyxoid_fibroma-2.jpg",
-    "caption_id": "Kaki dan pergelangan kaki, lateral dan AP: lisis geografik berseptasi di kalkaneus dengan sklerosis perifer.",
-    "source_title": "Une localisation rare du fibrome chondromyxoide: à propos d’un cas (The Pan African Medical Journal, 2017), Figure 1",
-    "source_url": "https://doi.org/10.11604/pamj.2017.26.219.12289",
-    "author": "Nkaoui M, Mahfoud M",
-    "repository": "The Pan African Medical Journal via PubMed Central (PMC5491748)",
-    "licence": "CC BY 2.0",
-    "licence_url": "http://creativecommons.org/licenses/by/2.0/",
-    "changes": "dipotong ke panel radiograf, diperkecil",
     "status": "candidate"
    }
   ],
@@ -346,35 +298,9 @@
     "status": "candidate"
    }
   ],
-  "clear_cell_chondrosarcoma": [
-   {
-    "file": "img/clear_cell_chondrosarcoma-1.jpg",
-    "caption_id": "Panggul AP: lesi litik di kepala-leher femur proksimal dengan kalsifikasi, pada kondrosarkoma sel jernih (tumor asal).",
-    "source_title": "An Unusual Case of Clear Cell Chondrosarcoma with Very Late Recurrence and Lung Metastases, 29 Years after Primary Surgery (Case Reports in Orthopedics, 2014), Figure 1",
-    "source_url": "https://doi.org/10.1155/2014/109569",
-    "author": "Laitinen M, Nieminen J, Pakarinen T",
-    "repository": "Case Reports in Orthopedics via PubMed Central (PMC4131066)",
-    "licence": "CC BY 3.0",
-    "licence_url": "https://creativecommons.org/licenses/by/3.0/",
-    "changes": "diperkecil",
-    "status": "candidate"
-   }
-  ],
   "desmoplastic_fibroma": [
    {
     "file": "img/desmoplastic_fibroma-1.jpg",
-    "caption_id": "Lutut AP: lesi campuran litik-sklerotik di metafisis-epifisis tibia proksimal dengan zona transisi sempit.",
-    "source_title": "Successful Treatment of a Case of Desmoplastic Fibroma: A Case of Unusual Lesion (Cureus, 2021), Figure 1",
-    "source_url": "https://doi.org/10.7759/cureus.17857",
-    "author": "Abu Alnasr A, Sulaiman S, Abu Alnasr A et al.",
-    "repository": "Cureus via PubMed Central (PMC8502758)",
-    "licence": "CC BY 3.0",
-    "licence_url": "https://creativecommons.org/licenses/by/3.0/",
-    "changes": "diperkecil",
-    "status": "candidate"
-   },
-   {
-    "file": "img/desmoplastic_fibroma-2.jpg",
     "caption_id": "Lutut AP dan lateral: lesi osteolitik eksentrik di kondilus medial femur distal.",
     "source_title": "Extended curettage and heat ablation for desmoplastic fibroma of the distal femur with a 12-year follow-up period: A case report (Oncology Letters, 2014), Figure 1",
     "source_url": "https://doi.org/10.3892/ol.2014.2249",
@@ -383,18 +309,6 @@
     "licence": "CC BY 3.0",
     "licence_url": "http://creativecommons.org/licenses/by/3.0",
     "changes": "dipotong ke panel radiograf, diperkecil",
-    "status": "candidate"
-   },
-   {
-    "file": "img/desmoplastic_fibroma-3.jpg",
-    "caption_id": "Bahu AP: lesi lusen eksentrik dengan batas tidak tegas di skapula (garis merah dari penulis artikel).",
-    "source_title": "Overcoming diagnostic challenges in desmoplastic fibroma of the scapula: a rare case report (Oxford Medical Case Reports, 2023), Figure 1",
-    "source_url": "https://doi.org/10.1093/omcr/omad057",
-    "author": "Razavipour M, Akhlaghi H, Abdollahi A",
-    "repository": "Oxford Medical Case Reports via PubMed Central (PMC10451113)",
-    "licence": "CC BY 4.0",
-    "licence_url": "https://creativecommons.org/licenses/by/4.0/",
-    "changes": "diperkecil",
     "status": "candidate"
    }
   ],
@@ -704,18 +618,6 @@
     "licence_url": "http://creativecommons.org/licenses/by/4.0/",
     "changes": "diperkecil",
     "status": "candidate"
-   },
-   {
-    "file": "img/osteoblastoma-2.jpg",
-    "caption_id": "Pergelangan tangan dan tangan: lesi di tulang kapitatum.",
-    "source_title": "Osteoblastoma of the Capitate Bone: Case Report (Revista Brasileira de Ortopedia, 2021), Fig. 1",
-    "source_url": "https://doi.org/10.1055/s-0041-1724084",
-    "author": "Lima L, Castro U, Martins G",
-    "repository": "Revista Brasileira de Ortopedia via PubMed Central (PMC11006508)",
-    "licence": "CC BY 4.0",
-    "licence_url": "https://creativecommons.org/licenses/by/4.0/",
-    "changes": "diperkecil",
-    "status": "candidate"
    }
   ],
   "osteochondroma": [
@@ -805,18 +707,6 @@
     "licence": "CC BY-SA 3.0",
     "licence_url": "https://creativecommons.org/licenses/by-sa/3.0",
     "changes": "diperkecil",
-    "status": "candidate"
-   },
-   {
-    "file": "img/osteomyelitis-2.jpg",
-    "caption_id": "Pelvis AP (anak): lesi litik dengan sklerosis sekitar di ilium posterior kanan (abses Brodie, panah).",
-    "source_title": "Brodie’s Abscess of Posterior Ilium with Gluteal Syndrome, an Unusual Cause of Paediatric Low Back Pain: A Case Report (Malaysian Orthopaedic Journal, 2017), Fig. 1",
-    "source_url": "https://doi.org/10.5704/MOJ.1707.009",
-    "author": "Behera G, Poduval M, Patro D et al.",
-    "repository": "Malaysian Orthopaedic Journal via PubMed Central (PMC5630055)",
-    "licence": "CC BY 3.0",
-    "licence_url": "http://creativecommons.org/licenses/by/3.0/",
-    "changes": "dipotong ke panel radiograf, diperkecil",
     "status": "candidate"
    }
   ],
@@ -925,18 +815,6 @@
    },
    {
     "file": "img/osteosarcoma_telangiectatic-2.jpg",
-    "caption_id": "Pelvis dan panggul kiri (anak perempuan 12 tahun): lesi kistik litik di femur proksimal yang awalnya diduga kista tulang aneurismal.",
-    "source_title": "Capillary telangiectatic osteosarcoma misdiagnosed as aneurysmal bone cyst in a 12-year-old girl: A case report (International Journal of Surgery Case Reports, 2025), Fig. 1A",
-    "source_url": "https://doi.org/10.1016/j.ijscr.2025.111174",
-    "author": "Luo X, Chen X",
-    "repository": "International Journal of Surgery Case Reports via PubMed Central (PMC11995106)",
-    "licence": "CC BY 4.0",
-    "licence_url": "https://creativecommons.org/licenses/by/4.0/",
-    "changes": "diperkecil",
-    "status": "candidate"
-   },
-   {
-    "file": "img/osteosarcoma_telangiectatic-3.jpg",
     "caption_id": "Lutut AP dan lateral: lesi litik di sekitar lutut pada osteosarkoma telangiektatik.",
     "source_title": "Plain X-ray, computed tomography and magnetic resonance imaging findings of telangiectatic osteosarcoma: a case report (Cases Journal, 2009), Figure 1a and b",
     "source_url": "https://doi.org/10.4076/1757-1626-2-7833",
@@ -970,20 +848,6 @@
     "repository": "Wikimedia Commons",
     "licence": "CC BY-SA 3.0",
     "licence_url": "https://creativecommons.org/licenses/by-sa/3.0",
-    "changes": "diperkecil",
-    "status": "candidate"
-   }
-  ],
-  "periosteal_chondroma": [
-   {
-    "file": "img/periosteal_chondroma-1.jpg",
-    "caption_id": "Femur distal AP dan lateral: erosi korteks berbentuk cekungan (saucerization) dengan tepi penyangga, tanpa invasi meduler.",
-    "source_title": "A giant periosteal chondroma of the distal femur successfully reconstructed with synthetic bone grafts and a bioresorbable plate: a case report (World Journal of Surgical Oncology, 2014), Figure 1",
-    "source_url": "https://doi.org/10.1186/1477-7819-12-354",
-    "author": "Imura Y, Shigi A, Outani H et al.",
-    "repository": "World Journal of Surgical Oncology via PubMed Central (PMC4251843)",
-    "licence": "CC BY 4.0",
-    "licence_url": "https://creativecommons.org/licenses/by/4.0/",
     "changes": "diperkecil",
     "status": "candidate"
    }
@@ -1125,18 +989,6 @@
     "licence": "CC BY 4.0",
     "licence_url": "https://creativecommons.org/licenses/by/4.0",
     "changes": "diperkecil",
-    "status": "candidate"
-   },
-   {
-    "file": "img/skeletal_tuberculosis-3.jpg",
-    "caption_id": "Torakal AP dan lateral: kolaps korpus vertebra torakal 3 (panah) pada spondilitis tuberkulosis (penyakit Pott).",
-    "source_title": "A fatal case of spinal tuberculosis mistaken for metastatic lung cancer: recalling ancient Pott's disease (Annals of Clinical Microbiology and Antimicrobials, 2009), Figure 1",
-    "source_url": "https://doi.org/10.1186/1476-0711-8-32",
-    "author": "Ringshausen F, Tannapfel A, Nicolas V et al.",
-    "repository": "Annals of Clinical Microbiology and Antimicrobials via PubMed Central (PMC2784744)",
-    "licence": "CC BY 2.0",
-    "licence_url": "http://creativecommons.org/licenses/by/2.0",
-    "changes": "dipotong ke panel radiograf, diperkecil",
     "status": "candidate"
    }
   ],

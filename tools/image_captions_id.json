@@ -1,7 +1,6 @@
 {
  "adamantinoma_ofd_spectrum": [
   "Tibia, AP dan lateral (perempuan 38 tahun): lesi litik multilokuler berbasis korteks di diafisis tibia (panah).",
-  "Tungkai bawah AP (perempuan 23 tahun): adamantinoma multifokal pada diafisis tibia dan fibula, litik-sklerotik campuran berbasis korteks.",
   "Tibia AP: lesi litik memanjang dengan gelembung multilokuler dan ekspansi korteks sepanjang diafisis tibia."
  ],
  "aneurysmal_bone_cyst": [
@@ -20,8 +19,6 @@
   "Panggul kiri AP (karsinoma lambung): metastasis multipel campuran litik-sklerotik di pelvis dan femur proksimal."
  ],
  "bpop_nora_lesion": [
-  "Tangan PA dan oblik: massa padat termineralisasi menempel pada permukaan metakarpal III, korteks induk utuh.",
-  "Tangan PA dan oblik (kasus kedua): massa termineralisasi bertangkai di permukaan falang, tanpa kontinuitas meduler.",
   "Tangan AP dan oblik: lesi terkalsifikasi di permukaan diafisis tulang tangan (panah)."
  ],
  "brown_tumour": [
@@ -30,13 +27,12 @@
   "Kedua tibia AP: lesi litik multipel di diafisis (panah) pada osteitis fibrosa kistika."
  ],
  "chondroblastoma": [
-  "Lutut AP dan lateral: lesi lusen kecil di epifisis femur distal (panah), fisis masih terbuka.",
   "Lutut AP dan lateral: lusensi fokal di epifisis tibia proksimal (panah) pada pasien dengan fisis terbuka.",
-  "Pergelangan kaki AP dan lateral: lesi litik ekspansil berbatas sklerotik di epifisis tibia distal."
+  "Lutut AP (laki-laki 13 tahun): lesi lusen berbatas tegas di epifisis tibia proksimal, fisis masih terbuka.",
+  "Patela lateral: lesi geografik berlobulasi dengan tepi sklerotik dan korteks menipis (patela setara apofisis)."
  ],
  "chondromyxoid_fibroma": [
-  "Lutut lateral: lesi litik eksentrik ekspansil dengan tepi sklerotik di epimetafisis femur distal.",
-  "Kaki dan pergelangan kaki, lateral dan AP: lisis geografik berseptasi di kalkaneus dengan sklerosis perifer."
+  "Lutut lateral: lesi litik eksentrik ekspansil dengan tepi sklerotik di epimetafisis femur distal."
  ],
  "chondrosarcoma_central": [
   "Femur distal AP (perempuan 50 tahun, tumor kartilaginosa atipik): lesi campuran litik-sklerotik dengan kalsifikasi kondroid (panah).",
@@ -46,13 +42,8 @@
  "chordoma": [
   "Lumbosakral AP dan lateral: lesi litik ekspansil di sakrum (panah putih)."
  ],
- "clear_cell_chondrosarcoma": [
-  "Panggul AP: lesi litik di kepala-leher femur proksimal dengan kalsifikasi, pada kondrosarkoma sel jernih (tumor asal)."
- ],
  "desmoplastic_fibroma": [
-  "Lutut AP: lesi campuran litik-sklerotik di metafisis-epifisis tibia proksimal dengan zona transisi sempit.",
-  "Lutut AP dan lateral: lesi osteolitik eksentrik di kondilus medial femur distal.",
-  "Bahu AP: lesi lusen eksentrik dengan batas tidak tegas di skapula (garis merah dari penulis artikel)."
+  "Lutut AP dan lateral: lesi osteolitik eksentrik di kondilus medial femur distal."
  ],
  "enchondroma": [
   "Tibia proksimal AP dan lateral (83 tahun): kalsifikasi ring-and-arc intrameduler tanpa ekspansi atau destruksi korteks.",
@@ -96,8 +87,7 @@
   "Femur distal AP (perempuan 20 tahun): lesi eksentrik berbatas sklerotik di metafisis medial."
  ],
  "osteoblastoma": [
-  "Vertebra servikal AP dan lateral (perempuan 33 tahun): osteoblastoma spinal.",
-  "Pergelangan tangan dan tangan: lesi di tulang kapitatum."
+  "Vertebra servikal AP dan lateral (perempuan 33 tahun): osteoblastoma spinal."
  ],
  "osteochondroma": [
   "Lutut AP dan lateral (47 tahun): osteokondroma bertangkai di femur distal lateral, mengarah menjauhi sendi, korteks dan meduler menyambung dengan tulang induk.",
@@ -110,8 +100,7 @@
   "Tibia AP dan lateral (anak 9 tahun): reaksi periosteal solid dan penebalan korteks diafisis."
  ],
  "osteomyelitis": [
-  "Tibia distal AP: lesi litik metafisis berbatas sklerotik (abses Brodie, osteomielitis subakut stafilokokus).",
-  "Pelvis AP (anak): lesi litik dengan sklerosis sekitar di ilium posterior kanan (abses Brodie, panah)."
+  "Tibia distal AP: lesi litik metafisis berbatas sklerotik (abses Brodie, osteomielitis subakut stafilokokus)."
  ],
  "osteosarcoma_conventional": [
   "Tungkai lateral (anak): lesi campuran di metafisis tibia proksimal dengan matriks osteoid dan massa jaringan lunak.",
@@ -128,15 +117,11 @@
  ],
  "osteosarcoma_telangiectatic": [
   "Femur distal AP (laki-laki 17 tahun): lesi litik geografik eksentrik di metadiafisis tanpa tepi sklerotik, dengan destruksi korteks fokal.",
-  "Pelvis dan panggul kiri (anak perempuan 12 tahun): lesi kistik litik di femur proksimal yang awalnya diduga kista tulang aneurismal.",
   "Lutut AP dan lateral: lesi litik di sekitar lutut pada osteosarkoma telangiektatik."
  ],
  "paget_disease": [
   "Pelvis AP (77 tahun): hemipelvis kanan membesar dengan korteks menebal, trabekula kasar, dan sklerosis.",
   "Pelvis AP (80 tahun): penyakit Paget os koksa kanan dengan penebalan garis iliopektineal dan pola trabekula kasar."
- ],
- "periosteal_chondroma": [
-  "Femur distal AP dan lateral: erosi korteks berbentuk cekungan (saucerization) dengan tepi penyangga, tanpa invasi meduler."
  ],
  "plasmacytoma_myeloma": [
   "Humerus kiri (laki-laki 62 tahun, mieloma): lesi litik punched-out multipel tanpa sklerosis reaktif.",
@@ -155,8 +140,7 @@
  ],
  "skeletal_tuberculosis": [
   "Lumbal lateral dan AP: spondilitis tuberkulosis yang didiagnosis dengan uji Xpert MTB/RIF.",
-  "Servikal lateral: osteolisis dengan kolaps korpus vertebra C4 (tuberkulosis spinal).",
-  "Torakal AP dan lateral: kolaps korpus vertebra torakal 3 (panah) pada spondilitis tuberkulosis (penyakit Pott)."
+  "Servikal lateral: osteolisis dengan kolaps korpus vertebra C4 (tuberkulosis spinal)."
  ],
  "stress_fracture": [
   "Kaki AP: fraktur stres lama metatarsal II dengan kalus (panah).",
