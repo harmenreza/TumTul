@@ -1,0 +1,160 @@
+{
+ "_note": "Third pass (2026-11-17): full-text search in CC BY radiology journals (Insights Imaging, JBSR, BJR Case Reports, Cancer Imaging, Diagnostics), case-report titles (Cureus, JBSR, BJR CR) and pictorial/imaging-feature reviews. Only figures whose caption names the entity are kept; originals below 500 px are skipped.",
+ "clear_cell_chondrosarcoma": {
+  "queries": [
+   "Q:\"clear cell chondrosarcoma\" AND (ISSN:\"1869-4101\" OR ISSN:\"2514-8281\" OR ISSN:\"2055-7159\" OR ISSN:\"1470-7330\" OR ISSN:\"2075-4418\")",
+   "Q:TITLE:\"clear cell chondrosarcoma\" AND (ISSN:\"2168-8184\" OR ISSN:\"2514-8281\" OR ISSN:\"2055-7159\")",
+   "Q:\"clear cell chondrosarcoma\" AND TITLE:(pictorial OR \"imaging features\" OR \"radiological features\" OR \"radiologic features\" OR \"imaging review\" OR \"imaging spectrum\" OR \"radiographic features\")"
+  ],
+  "caption": "clear[- ]cell chondrosarcoma"
+ },
+ "periosteal_chondroma": {
+  "queries": [
+   "Q:\"periosteal chondroma\" AND (ISSN:\"1869-4101\" OR ISSN:\"2514-8281\" OR ISSN:\"2055-7159\" OR ISSN:\"1470-7330\" OR ISSN:\"2075-4418\")",
+   "Q:\"juxtacortical chondroma\" AND (ISSN:\"1869-4101\" OR ISSN:\"2514-8281\" OR ISSN:\"2055-7159\" OR ISSN:\"1470-7330\" OR ISSN:\"2075-4418\")",
+   "Q:TITLE:\"periosteal chondroma\" AND (ISSN:\"2168-8184\" OR ISSN:\"2514-8281\" OR ISSN:\"2055-7159\")",
+   "Q:TITLE:\"juxtacortical chondroma\" AND (ISSN:\"2168-8184\" OR ISSN:\"2514-8281\" OR ISSN:\"2055-7159\")",
+   "Q:\"periosteal chondroma\" AND TITLE:(pictorial OR \"imaging features\" OR \"radiological features\" OR \"radiologic features\" OR \"imaging review\" OR \"imaging spectrum\" OR \"radiographic features\")",
+   "Q:\"juxtacortical chondroma\" AND TITLE:(pictorial OR \"imaging features\" OR \"radiological features\" OR \"radiologic features\" OR \"imaging review\" OR \"imaging spectrum\" OR \"radiographic features\")"
+  ],
+  "caption": "periosteal chondroma|juxtacortical chondroma"
+ },
+ "vertebral_haemangioma": {
+  "queries": [
+   "Q:\"vertebral hemangioma\" AND (ISSN:\"1869-4101\" OR ISSN:\"2514-8281\" OR ISSN:\"2055-7159\" OR ISSN:\"1470-7330\" OR ISSN:\"2075-4418\")",
+   "Q:\"vertebral haemangioma\" AND (ISSN:\"1869-4101\" OR ISSN:\"2514-8281\" OR ISSN:\"2055-7159\" OR ISSN:\"1470-7330\" OR ISSN:\"2075-4418\")",
+   "Q:TITLE:\"vertebral hemangioma\" AND (ISSN:\"2168-8184\" OR ISSN:\"2514-8281\" OR ISSN:\"2055-7159\")",
+   "Q:TITLE:\"vertebral haemangioma\" AND (ISSN:\"2168-8184\" OR ISSN:\"2514-8281\" OR ISSN:\"2055-7159\")",
+   "Q:\"vertebral hemangioma\" AND TITLE:(pictorial OR \"imaging features\" OR \"radiological features\" OR \"radiologic features\" OR \"imaging review\" OR \"imaging spectrum\" OR \"radiographic features\")",
+   "Q:\"vertebral haemangioma\" AND TITLE:(pictorial OR \"imaging features\" OR \"radiological features\" OR \"radiologic features\" OR \"imaging review\" OR \"imaging spectrum\" OR \"radiographic features\")"
+  ],
+  "caption": "ha?emangioma"
+ },
+ "desmoplastic_fibroma": {
+  "queries": [
+   "Q:\"desmoplastic fibroma\" AND (ISSN:\"1869-4101\" OR ISSN:\"2514-8281\" OR ISSN:\"2055-7159\" OR ISSN:\"1470-7330\" OR ISSN:\"2075-4418\")",
+   "Q:TITLE:\"desmoplastic fibroma\" AND (ISSN:\"2168-8184\" OR ISSN:\"2514-8281\" OR ISSN:\"2055-7159\")",
+   "Q:\"desmoplastic fibroma\" AND TITLE:(pictorial OR \"imaging features\" OR \"radiological features\" OR \"radiologic features\" OR \"imaging review\" OR \"imaging spectrum\" OR \"radiographic features\")"
+  ],
+  "caption": "desmoplastic fibroma"
+ },
+ "osteosarcoma_periosteal": {
+  "queries": [
+   "Q:\"periosteal osteosarcoma\" AND (ISSN:\"1869-4101\" OR ISSN:\"2514-8281\" OR ISSN:\"2055-7159\" OR ISSN:\"1470-7330\" OR ISSN:\"2075-4418\")",
+   "Q:TITLE:\"periosteal osteosarcoma\" AND (ISSN:\"2168-8184\" OR ISSN:\"2514-8281\" OR ISSN:\"2055-7159\")",
+   "Q:\"periosteal osteosarcoma\" AND TITLE:(pictorial OR \"imaging features\" OR \"radiological features\" OR \"radiologic features\" OR \"imaging review\" OR \"imaging spectrum\" OR \"radiographic features\")"
+  ],
+  "caption": "periosteal osteosarcoma"
+ },
+ "bpop_nora_lesion": {
+  "queries": [
+   "Q:\"bizarre parosteal osteochondromatous proliferation\" AND (ISSN:\"1869-4101\" OR ISSN:\"2514-8281\" OR ISSN:\"2055-7159\" OR ISSN:\"1470-7330\" OR ISSN:\"2075-4418\")",
+   "Q:\"Nora lesion\" AND (ISSN:\"1869-4101\" OR ISSN:\"2514-8281\" OR ISSN:\"2055-7159\" OR ISSN:\"1470-7330\" OR ISSN:\"2075-4418\")",
+   "Q:TITLE:\"bizarre parosteal osteochondromatous proliferation\" AND (ISSN:\"2168-8184\" OR ISSN:\"2514-8281\" OR ISSN:\"2055-7159\")",
+   "Q:TITLE:\"Nora lesion\" AND (ISSN:\"2168-8184\" OR ISSN:\"2514-8281\" OR ISSN:\"2055-7159\")",
+   "Q:\"bizarre parosteal osteochondromatous proliferation\" AND TITLE:(pictorial OR \"imaging features\" OR \"radiological features\" OR \"radiologic features\" OR \"imaging review\" OR \"imaging spectrum\" OR \"radiographic features\")",
+   "Q:\"Nora lesion\" AND TITLE:(pictorial OR \"imaging features\" OR \"radiological features\" OR \"radiologic features\" OR \"imaging review\" OR \"imaging spectrum\" OR \"radiographic features\")"
+  ],
+  "caption": "BPOP|Nora|bizarre parosteal"
+ },
+ "brown_tumour": {
+  "queries": [
+   "Q:\"brown tumor\" AND (ISSN:\"1869-4101\" OR ISSN:\"2514-8281\" OR ISSN:\"2055-7159\" OR ISSN:\"1470-7330\" OR ISSN:\"2075-4418\")",
+   "Q:\"brown tumour\" AND (ISSN:\"1869-4101\" OR ISSN:\"2514-8281\" OR ISSN:\"2055-7159\" OR ISSN:\"1470-7330\" OR ISSN:\"2075-4418\")",
+   "Q:TITLE:\"brown tumor\" AND (ISSN:\"2168-8184\" OR ISSN:\"2514-8281\" OR ISSN:\"2055-7159\")",
+   "Q:TITLE:\"brown tumour\" AND (ISSN:\"2168-8184\" OR ISSN:\"2514-8281\" OR ISSN:\"2055-7159\")",
+   "Q:\"brown tumor\" AND TITLE:(pictorial OR \"imaging features\" OR \"radiological features\" OR \"radiologic features\" OR \"imaging review\" OR \"imaging spectrum\" OR \"radiographic features\")",
+   "Q:\"brown tumour\" AND TITLE:(pictorial OR \"imaging features\" OR \"radiological features\" OR \"radiologic features\" OR \"imaging review\" OR \"imaging spectrum\" OR \"radiographic features\")"
+  ],
+  "caption": "brown tumou?r"
+ },
+ "chondroblastoma": {
+  "queries": [
+   "Q:\"chondroblastoma\" AND (ISSN:\"1869-4101\" OR ISSN:\"2514-8281\" OR ISSN:\"2055-7159\" OR ISSN:\"1470-7330\" OR ISSN:\"2075-4418\")",
+   "Q:TITLE:\"chondroblastoma\" AND (ISSN:\"2168-8184\" OR ISSN:\"2514-8281\" OR ISSN:\"2055-7159\")",
+   "Q:\"chondroblastoma\" AND TITLE:(pictorial OR \"imaging features\" OR \"radiological features\" OR \"radiologic features\" OR \"imaging review\" OR \"imaging spectrum\" OR \"radiographic features\")"
+  ],
+  "caption": "chondroblastoma"
+ },
+ "chondromyxoid_fibroma": {
+  "queries": [
+   "Q:\"chondromyxoid fibroma\" AND (ISSN:\"1869-4101\" OR ISSN:\"2514-8281\" OR ISSN:\"2055-7159\" OR ISSN:\"1470-7330\" OR ISSN:\"2075-4418\")",
+   "Q:TITLE:\"chondromyxoid fibroma\" AND (ISSN:\"2168-8184\" OR ISSN:\"2514-8281\" OR ISSN:\"2055-7159\")",
+   "Q:\"chondromyxoid fibroma\" AND TITLE:(pictorial OR \"imaging features\" OR \"radiological features\" OR \"radiologic features\" OR \"imaging review\" OR \"imaging spectrum\" OR \"radiographic features\")"
+  ],
+  "caption": "chondromyxoid fibroma"
+ },
+ "chondrosarcoma_central": {
+  "queries": [
+   "Q:\"chondrosarcoma\" AND (ISSN:\"1869-4101\" OR ISSN:\"2514-8281\" OR ISSN:\"2055-7159\" OR ISSN:\"1470-7330\" OR ISSN:\"2075-4418\")",
+   "Q:TITLE:\"chondrosarcoma\" AND (ISSN:\"2168-8184\" OR ISSN:\"2514-8281\" OR ISSN:\"2055-7159\")",
+   "Q:\"chondrosarcoma\" AND TITLE:(pictorial OR \"imaging features\" OR \"radiological features\" OR \"radiologic features\" OR \"imaging review\" OR \"imaging spectrum\" OR \"radiographic features\")"
+  ],
+  "caption": "(?<!clear cell )(?<!clear-cell )chondrosarcoma"
+ },
+ "chordoma": {
+  "queries": [
+   "Q:\"chordoma\" AND (ISSN:\"1869-4101\" OR ISSN:\"2514-8281\" OR ISSN:\"2055-7159\" OR ISSN:\"1470-7330\" OR ISSN:\"2075-4418\")",
+   "Q:TITLE:\"chordoma\" AND (ISSN:\"2168-8184\" OR ISSN:\"2514-8281\" OR ISSN:\"2055-7159\")",
+   "Q:\"chordoma\" AND TITLE:(pictorial OR \"imaging features\" OR \"radiological features\" OR \"radiologic features\" OR \"imaging review\" OR \"imaging spectrum\" OR \"radiographic features\")"
+  ],
+  "caption": "chordoma"
+ },
+ "ewing_sarcoma": {
+  "queries": [
+   "Q:\"Ewing sarcoma\" AND (ISSN:\"1869-4101\" OR ISSN:\"2514-8281\" OR ISSN:\"2055-7159\" OR ISSN:\"1470-7330\" OR ISSN:\"2075-4418\")",
+   "Q:TITLE:\"Ewing sarcoma\" AND (ISSN:\"2168-8184\" OR ISSN:\"2514-8281\" OR ISSN:\"2055-7159\")",
+   "Q:\"Ewing sarcoma\" AND TITLE:(pictorial OR \"imaging features\" OR \"radiological features\" OR \"radiologic features\" OR \"imaging review\" OR \"imaging spectrum\" OR \"radiographic features\")"
+  ],
+  "caption": "Ewing"
+ },
+ "osteoblastoma": {
+  "queries": [
+   "Q:\"osteoblastoma\" AND (ISSN:\"1869-4101\" OR ISSN:\"2514-8281\" OR ISSN:\"2055-7159\" OR ISSN:\"1470-7330\" OR ISSN:\"2075-4418\")",
+   "Q:TITLE:\"osteoblastoma\" AND (ISSN:\"2168-8184\" OR ISSN:\"2514-8281\" OR ISSN:\"2055-7159\")",
+   "Q:\"osteoblastoma\" AND TITLE:(pictorial OR \"imaging features\" OR \"radiological features\" OR \"radiologic features\" OR \"imaging review\" OR \"imaging spectrum\" OR \"radiographic features\")"
+  ],
+  "caption": "osteoblastoma"
+ },
+ "osteoid_osteoma": {
+  "queries": [
+   "Q:\"osteoid osteoma\" AND (ISSN:\"1869-4101\" OR ISSN:\"2514-8281\" OR ISSN:\"2055-7159\" OR ISSN:\"1470-7330\" OR ISSN:\"2075-4418\")",
+   "Q:TITLE:\"osteoid osteoma\" AND (ISSN:\"2168-8184\" OR ISSN:\"2514-8281\" OR ISSN:\"2055-7159\")",
+   "Q:\"osteoid osteoma\" AND TITLE:(pictorial OR \"imaging features\" OR \"radiological features\" OR \"radiologic features\" OR \"imaging review\" OR \"imaging spectrum\" OR \"radiographic features\")"
+  ],
+  "caption": "osteoid osteoma"
+ },
+ "osteomyelitis": {
+  "queries": [
+   "Q:\"osteomyelitis\" AND (ISSN:\"1869-4101\" OR ISSN:\"2514-8281\" OR ISSN:\"2055-7159\" OR ISSN:\"1470-7330\" OR ISSN:\"2075-4418\")",
+   "Q:\"Brodie abscess\" AND (ISSN:\"1869-4101\" OR ISSN:\"2514-8281\" OR ISSN:\"2055-7159\" OR ISSN:\"1470-7330\" OR ISSN:\"2075-4418\")",
+   "Q:TITLE:\"osteomyelitis\" AND (ISSN:\"2168-8184\" OR ISSN:\"2514-8281\" OR ISSN:\"2055-7159\")",
+   "Q:TITLE:\"Brodie abscess\" AND (ISSN:\"2168-8184\" OR ISSN:\"2514-8281\" OR ISSN:\"2055-7159\")",
+   "Q:\"osteomyelitis\" AND TITLE:(pictorial OR \"imaging features\" OR \"radiological features\" OR \"radiologic features\" OR \"imaging review\" OR \"imaging spectrum\" OR \"radiographic features\")",
+   "Q:\"Brodie abscess\" AND TITLE:(pictorial OR \"imaging features\" OR \"radiological features\" OR \"radiologic features\" OR \"imaging review\" OR \"imaging spectrum\" OR \"radiographic features\")"
+  ],
+  "caption": "osteomyelitis|Brodie"
+ },
+ "osteosarcoma_telangiectatic": {
+  "queries": [
+   "Q:\"telangiectatic osteosarcoma\" AND (ISSN:\"1869-4101\" OR ISSN:\"2514-8281\" OR ISSN:\"2055-7159\" OR ISSN:\"1470-7330\" OR ISSN:\"2075-4418\")",
+   "Q:TITLE:\"telangiectatic osteosarcoma\" AND (ISSN:\"2168-8184\" OR ISSN:\"2514-8281\" OR ISSN:\"2055-7159\")",
+   "Q:\"telangiectatic osteosarcoma\" AND TITLE:(pictorial OR \"imaging features\" OR \"radiological features\" OR \"radiologic features\" OR \"imaging review\" OR \"imaging spectrum\" OR \"radiographic features\")"
+  ],
+  "caption": "telangiectatic osteosarcoma"
+ },
+ "skeletal_tuberculosis": {
+  "queries": [
+   "Q:\"tuberculous spondylitis\" AND (ISSN:\"1869-4101\" OR ISSN:\"2514-8281\" OR ISSN:\"2055-7159\" OR ISSN:\"1470-7330\" OR ISSN:\"2075-4418\")",
+   "Q:\"Pott disease\" AND (ISSN:\"1869-4101\" OR ISSN:\"2514-8281\" OR ISSN:\"2055-7159\" OR ISSN:\"1470-7330\" OR ISSN:\"2075-4418\")",
+   "Q:\"skeletal tuberculosis\" AND (ISSN:\"1869-4101\" OR ISSN:\"2514-8281\" OR ISSN:\"2055-7159\" OR ISSN:\"1470-7330\" OR ISSN:\"2075-4418\")",
+   "Q:TITLE:\"tuberculous spondylitis\" AND (ISSN:\"2168-8184\" OR ISSN:\"2514-8281\" OR ISSN:\"2055-7159\")",
+   "Q:TITLE:\"Pott disease\" AND (ISSN:\"2168-8184\" OR ISSN:\"2514-8281\" OR ISSN:\"2055-7159\")",
+   "Q:TITLE:\"skeletal tuberculosis\" AND (ISSN:\"2168-8184\" OR ISSN:\"2514-8281\" OR ISSN:\"2055-7159\")",
+   "Q:\"tuberculous spondylitis\" AND TITLE:(pictorial OR \"imaging features\" OR \"radiological features\" OR \"radiologic features\" OR \"imaging review\" OR \"imaging spectrum\" OR \"radiographic features\")",
+   "Q:\"Pott disease\" AND TITLE:(pictorial OR \"imaging features\" OR \"radiological features\" OR \"radiologic features\" OR \"imaging review\" OR \"imaging spectrum\" OR \"radiographic features\")",
+   "Q:\"skeletal tuberculosis\" AND TITLE:(pictorial OR \"imaging features\" OR \"radiological features\" OR \"radiologic features\" OR \"imaging review\" OR \"imaging spectrum\" OR \"radiographic features\")"
+  ],
+  "caption": "tubercul|Pott"
+ }
+}

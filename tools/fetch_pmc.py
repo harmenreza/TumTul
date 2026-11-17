@@ -17,7 +17,7 @@ OUT = ROOT / "candidates_pmc"
 REST = "https://www.ebi.ac.uk/europepmc/webservices/rest"
 UA = "TumTulCandidateBot/0.2 (https://github.com/harmenreza/TumTul; educational bone-tumour reference app)"
 XL = "{http://www.w3.org/1999/xlink}href"
-MAX_ARTICLES, MAX_FIGS = 30, 25
+MAX_ARTICLES, MAX_FIGS = 40, 30
 POSTOP = re.compile(r"post-?operativ|after (the )?(operation|surgery|curettage|resection|treatment)|follow-?up|months? after|years? after|postop|recurren|ablation|reconstruct|implant|prosthe", re.I)
 XRAY = re.compile(r"radiograph|x-?ray|plain film|roentgenogra|radiography", re.I)
 OTHER = re.compile(r"\bMRI\b|magnetic resonance|\bCT\b|computed tomograph|T1|T2|STIR|scintigra|bone scan|PET|histolog|H&E|hematoxylin|haematoxylin|microscop|immunohisto|intraoperative|gross", re.I)
@@ -25,8 +25,17 @@ OTHER = re.compile(r"\bMRI\b|magnetic resonance|\bCT\b|computed tomograph|T1|T2|
 # the case as atypical / unusual / rare-site / aggressive / giant / multifocal / a mimic / misdiagnosed are skipped.
 ATYPICAL = re.compile(r"atypi(?!cal cartilaginous)|unusual|uncommon|unique|\brare\b|giant(?! cell)|mimic|mistaken|misdiagnos|masquerad|aggressive|multifocal|unexpected|peculiar|exceptional|bizarre(?! parosteal)|late recurrence|initially diagnosed", re.I)
 THIRD_PARTY = re.compile(r"reprinted|reproduced (from|with)|adapted (from|with)|with permission|courtesy of|copyright ©", re.I)
-GAP = os.environ.get("GAP") == "1"
-SFX = "_gap" if GAP else ""
+# GAP: "" = first pass (tools/pmc_queries.json); "1" = tools/pmc_queries_gap.json (suffix _gap);
+# any other value N = tools/pmc_queries_gapN.json (suffix _gapN). A gapN file may give per entity
+# {"queries": [...], "caption": "regex"}: queries starting with "Q:" are raw Europe PMC syntax (full text),
+# and only figures whose caption matches the regex are kept (needed for review articles covering many entities).
+GAPV = os.environ.get("GAP", "0").strip()
+GAP = GAPV not in ("", "0")
+SFX = "" if not GAP else ("_gap" if GAPV == "1" else f"_gap{GAPV}")
+QFILE = "tools/pmc_queries.json" if not GAP else ("tools/pmc_queries_gap.json" if GAPV == "1" else f"tools/pmc_queries_gap{GAPV}.json")
+MIN_SIDE = 500  # owner rule 2026-11-17
+# "rare" alone usually describes the entity, not the case; in later passes it is flagged for manual check, not dropped.
+ATYP_NO_RARE = re.compile(ATYPICAL.pattern.replace(r"|\brare\b", ""), re.I)
 OK_LIC = re.compile(r"creativecommons\.org/(licenses/(by|by-sa)/|publicdomain/zero/)", re.I)
 
 def _open(url, kind):
@@ -48,7 +57,8 @@ def text(el):
     return re.sub(r"\s+", " ", "".join(el.itertext())).strip() if el is not None else ""
 
 def search(term):
-    q = f'(TITLE_ABS:"{term}") AND OPEN_ACCESS:y AND HAS_FT:y AND (LICENSE:"cc by" OR LICENSE:"cc-by" OR LICENSE:"cc by-sa" OR LICENSE:"cc0")'
+    base = term[2:] if term.startswith("Q:") else f'(TITLE_ABS:"{term}")'
+    q = f'({base}) AND OPEN_ACCESS:y AND HAS_FT:y AND (LICENSE:"cc by" OR LICENSE:"cc-by" OR LICENSE:"cc by-sa" OR LICENSE:"cc0")'
     url = f"{REST}/search?" + urllib.parse.urlencode({"query": q, "format": "json", "pageSize": 40, "resultType": "lite", "sort": "CITED desc"})
     d = _open(url, "json") or {}
     return [r for r in (d.get("resultList") or {}).get("result", []) if r.get("pmcid")]
@@ -100,7 +110,10 @@ def image_url(pmcid, graphic):
     keys.sort(key=lambda k: k.split("/")[0], reverse=True)
     return f"{S3}/{keys[0]}" if keys else None
 
-def run_entity(ent, terms, manifest):
+def run_entity(ent, spec, manifest):
+    terms = spec["queries"] if isinstance(spec, dict) else spec
+    capre = re.compile(spec["caption"], re.I) if isinstance(spec, dict) and spec.get("caption") else None
+    title_atyp = ATYP_NO_RARE if GAP and GAPV != "1" else ATYPICAL
     arts, seen = [], set()
     for t in terms:
         for r in search(t):
@@ -110,13 +123,15 @@ def run_entity(ent, terms, manifest):
     for a in arts[:MAX_ARTICLES]:
         meta, figs = figures(a["pmcid"]); time.sleep(0.5)
         if not meta or not OK_LIC.search(meta["licence_url"] or ""): continue
-        if ATYPICAL.search(meta["article_title"]): continue
+        if title_atyp.search(meta["article_title"]): continue
+        rare = bool(re.search(r"\brare\b", meta["article_title"], re.I))
         for f in figs:
             if not f["xray"] or THIRD_PARTY.search(f["caption"]) or ATYPICAL.search(f["caption"]): continue
+            if capre and not capre.search(f["caption"]): continue
             cap = f["caption"]
             f["mentions_entity"] = any(w.lower() in cap.lower() for t in terms for w in [t.split()[0]] if len(w) > 4) or any(t.lower() in cap.lower() for t in terms)
             f["postop"] = bool(POSTOP.search(cap))
-            cands.append({**f, **meta, "pmcid": a["pmcid"], "licence": licence_name(meta["licence_url"]),
+            cands.append({**f, **meta, "pmcid": a["pmcid"], "rare_in_title": rare, "licence": licence_name(meta["licence_url"]),
                           "article_url": f"https://europepmc.org/article/PMC/{a['pmcid'][3:]}",
                           "image": image_url(a["pmcid"], f["graphic"])})
     # pre-treatment first, then captions naming the entity, then radiograph-only captions, then figure order
@@ -130,8 +145,11 @@ def run_entity(ent, terms, manifest):
         b = _open(c["image"], "bytes"); time.sleep(0.5)
         if not b: continue
         try:
-            im = Image.open(io.BytesIO(b)).convert("RGB"); im.thumbnail((1200, 1200))
+            im = Image.open(io.BytesIO(b)).convert("RGB")
         except Exception: continue
+        c["orig_w"], c["orig_h"] = im.size
+        if GAP and GAPV != "1" and max(im.size) < MIN_SIDE: continue
+        im.thumbnail((1200, 1200))
         n = len(keep) + 1; p = tdir / f"{n:02d}.jpg"; im.save(p, quality=85)
         c["n"] = n; c["file"] = str(p.relative_to(ROOT)); keep.append(c); paths.append(p)
     if paths:
@@ -142,7 +160,7 @@ def run_entity(ent, terms, manifest):
     print(f"{ent}: {len(keep)} figures from {len(arts)} articles")
 
 def main(only=None):
-    q = {k: v for k, v in json.loads((ROOT / ("tools/pmc_queries_gap.json" if GAP else "tools/pmc_queries.json")).read_text(encoding="utf-8")).items() if not k.startswith("_")}
+    q = {k: v for k, v in json.loads((ROOT / QFILE).read_text(encoding="utf-8")).items() if not k.startswith("_")}
     OUT.mkdir(exist_ok=True)
     mp = OUT / "manifest.json"; manifest = json.loads(mp.read_text()) if mp.exists() else {}
     for ent, terms in q.items():
