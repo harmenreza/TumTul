@@ -124,9 +124,9 @@
   },
   {
    "n": 3,
-   "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11424764.1/gr1.jpg",
-   "w": 722,
-   "h": 1057,
+   "url": "https://upload.wikimedia.org/wikipedia/commons/a/af/Emmentalersign_.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "w": 1803,
+   "h": 1890,
    "file": "hires/plasmacytoma_myeloma/3.png"
   }
  ],
@@ -156,24 +156,10 @@
  "brown_tumour": [
   {
    "n": 1,
-   "url": "https://upload.wikimedia.org/wikipedia/commons/a/aa/X-ray_of_brown_tumors_in_the_pelvis_and_a_hip_fracture_in_renal_osteodystrophy.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-   "w": 347,
-   "h": 288,
-   "file": "hires/brown_tumour/1.png"
-  },
-  {
-   "n": 2,
    "url": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Brown_tumours_of_the_hands.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
    "w": 1280,
    "h": 1280,
-   "file": "hires/brown_tumour/2.png"
-  },
-  {
-   "n": 3,
-   "url": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Osteitis_fibrosa_cystica_tibiae_X-ray.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-   "w": 212,
-   "h": 313,
-   "file": "hires/brown_tumour/3.png"
+   "file": "hires/brown_tumour/1.png"
   }
  ],
  "bone_infarct": [
@@ -209,17 +195,10 @@
   },
   {
    "n": 2,
-   "url": "https://upload.wikimedia.org/wikipedia/commons/e/e1/X-ray_of_stress_fracture_of_the_hip.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-   "w": 281,
-   "h": 309,
-   "file": "hires/stress_fracture/2.png"
-  },
-  {
-   "n": 3,
    "url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/X-ray_of_subtle_periosteal_raction_of_tibial_fracture.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
    "w": 387,
    "h": 867,
-   "file": "hires/stress_fracture/3.png"
+   "file": "hires/stress_fracture/2.png"
   }
  ],
  "intraosseous_lipoma": [
@@ -287,17 +266,10 @@
   },
   {
    "n": 2,
-   "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11852380.1/cancers-17-00599-g017a.jpg",
-   "w": 756,
-   "h": 415,
+   "url": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Osteosarcoma1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "w": 800,
+   "h": 918,
    "file": "hires/osteosarcoma_conventional/2.png"
-  },
-  {
-   "n": 3,
-   "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11852380.1/cancers-17-00599-g005.jpg",
-   "w": 721,
-   "h": 396,
-   "file": "hires/osteosarcoma_conventional/3.png"
   }
  ],
  "ewing_sarcoma": [
@@ -316,43 +288,22 @@
    "w": 750,
    "h": 411,
    "file": "hires/chondroblastoma/1.png"
-  },
-  {
-   "n": 2,
-   "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC5781291.1/12957_2018_1314_Fig6_HTML.jpg",
-   "w": 472,
-   "h": 353,
-   "file": "hires/chondroblastoma/2.png"
-  },
-  {
-   "n": 3,
-   "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4435649.1/12957_2015_573_Fig2_HTML.jpg",
-   "w": 567,
-   "h": 248,
-   "file": "hires/chondroblastoma/3.png"
   }
  ],
  "giant_cell_tumour_of_bone": [
   {
    "n": 1,
-   "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC2989147.1/IJOrtho-41-91-g001.jpg",
+   "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC2989147.1/IJOrtho-41-91-g002.jpg",
    "w": 525,
-   "h": 381,
+   "h": 380,
    "file": "hires/giant_cell_tumour_of_bone/1.png"
   },
   {
    "n": 2,
-   "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC2989131.1/IJOrtho-41-101-g001.jpg",
-   "w": 525,
-   "h": 379,
+   "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4531146.1/10434_2015_4634_Fig2_HTML.jpg",
+   "w": 767,
+   "h": 1014,
    "file": "hires/giant_cell_tumour_of_bone/2.png"
-  },
-  {
-   "n": 3,
-   "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC2989147.1/IJOrtho-41-91-g002.jpg",
-   "w": 525,
-   "h": 380,
-   "file": "hires/giant_cell_tumour_of_bone/3.png"
   }
  ],
  "aneurysmal_bone_cyst": [
@@ -381,17 +332,10 @@
  "osteosarcoma_telangiectatic": [
   {
    "n": 1,
-   "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9360065.1/247_2022_5396_Fig10_HTML.jpg",
-   "w": 676,
-   "h": 249,
-   "file": "hires/osteosarcoma_telangiectatic/1.png"
-  },
-  {
-   "n": 2,
    "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC2769378.1/1757-1626-0002-0000007833-001.jpg",
    "w": 502,
    "h": 323,
-   "file": "hires/osteosarcoma_telangiectatic/2.png"
+   "file": "hires/osteosarcoma_telangiectatic/1.png"
   }
  ],
  "osteosarcoma_parosteal": [
@@ -408,22 +352,6 @@
    "w": 648,
    "h": 751,
    "file": "hires/osteosarcoma_parosteal/2.png"
-  },
-  {
-   "n": 3,
-   "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9184185.1/SARCOMA2022-5153924.001.jpg",
-   "w": 661,
-   "h": 280,
-   "file": "hires/osteosarcoma_parosteal/3.png"
-  }
- ],
- "osteosarcoma_periosteal": [
-  {
-   "n": 1,
-   "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4474449.1/12957_2015_618_Fig1_HTML.jpg",
-   "w": 358,
-   "h": 473,
-   "file": "hires/osteosarcoma_periosteal/1.png"
   }
  ],
  "fibrous_dysplasia": [
@@ -436,16 +364,16 @@
   },
   {
    "n": 2,
-   "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC8319740.1/gr2.jpg",
-   "w": 671,
-   "h": 221,
+   "url": "https://upload.wikimedia.org/wikipedia/commons/2/28/Fibroese_Dysplasie_Kalkaneus_21jm-_Roe_seitlich_-_001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "w": 1464,
+   "h": 1497,
    "file": "hires/fibrous_dysplasia/2.png"
   },
   {
    "n": 3,
-   "url": "https://upload.wikimedia.org/wikipedia/commons/2/28/Fibroese_Dysplasie_Kalkaneus_21jm-_Roe_seitlich_-_001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-   "w": 1464,
-   "h": 1497,
+   "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC3529877.1/CRIM.ORTHOPEDICS2012-690914.001.jpg",
+   "w": 600,
+   "h": 1547,
    "file": "hires/fibrous_dysplasia/3.png"
   }
  ],
@@ -468,17 +396,10 @@
   },
   {
    "n": 2,
-   "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC3522328.1/iranjradiol-08-182-g003.jpg",
-   "w": 601,
-   "h": 430,
-   "file": "hires/osteoid_osteoma/2.png"
-  },
-  {
-   "n": 3,
    "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC3522328.1/iranjradiol-08-182-g011.jpg",
    "w": 704,
    "h": 400,
-   "file": "hires/osteoid_osteoma/3.png"
+   "file": "hires/osteoid_osteoma/2.png"
   }
  ],
  "adamantinoma_ofd_spectrum": [
@@ -518,33 +439,10 @@
  "chondrosarcoma_central": [
   {
    "n": 1,
-   "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10046282.1/cancers-15-01703-g003.jpg",
-   "w": 780,
-   "h": 705,
-   "file": "hires/chondrosarcoma_central/1.png"
-  },
-  {
-   "n": 2,
    "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10046282.1/cancers-15-01703-g002.jpg",
    "w": 646,
    "h": 947,
-   "file": "hires/chondrosarcoma_central/2.png"
-  },
-  {
-   "n": 3,
-   "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10046282.1/cancers-15-01703-g005.jpg",
-   "w": 790,
-   "h": 422,
-   "file": "hires/chondrosarcoma_central/3.png"
-  }
- ],
- "desmoplastic_fibroma": [
-  {
-   "n": 1,
-   "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4114711.1/OL-08-03-1103-g00.jpg",
-   "w": 708,
-   "h": 263,
-   "file": "hires/desmoplastic_fibroma/1.png"
+   "file": "hires/chondrosarcoma_central/1.png"
   }
  ],
  "enostosis": [
@@ -589,17 +487,10 @@
  "skeletal_tuberculosis": [
   {
    "n": 1,
-   "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC5037907.1/12879_2016_1844_Fig1_HTML.jpg",
-   "w": 472,
-   "h": 443,
-   "file": "hires/skeletal_tuberculosis/1.png"
-  },
-  {
-   "n": 2,
    "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7501750.1/PAMJ-37-7-g001.jpg",
    "w": 413,
    "h": 600,
-   "file": "hires/skeletal_tuberculosis/2.png"
+   "file": "hires/skeletal_tuberculosis/1.png"
   }
  ],
  "osteoblastoma": [
