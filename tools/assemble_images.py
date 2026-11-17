@@ -4,10 +4,12 @@
 Input:  picks JSON  {entity: [["commons", file_title, crop?] | ["pmc", pmcid, fig_label, crop?], ...]}
         captions JSON {entity: [caption_id, ...]}  (our own words, same order as picks)
         candidate manifests from the TumTul GitHub repo (candidates/, candidates_pmc/)
-Output: web/img/<entity>-<n>.jpg (max 900 px, JPEG q80) and data/images.json (status from --status).
+Output: web/img/<entity>-<n>.jpg (max 1600 px from the full-resolution original, JPEG q84; min 500 px) and data/images.json (status from --status).
 """
 import json, pathlib, re, sys
 from PIL import Image
+
+MIN_SIDE = 500  # owner rule 2026-11-17: longest side after cropping must be >= 500 px
 
 def lic_url(name):
     m = re.match(r"CC (BY(?:-SA)?) ([0-9.]+)(?: ([a-z]{2}))?$", name or "", re.I)
@@ -42,11 +44,14 @@ def main(repo, root, picks_p, caps_p, status):
                 rec = {"source_title": f'{r["article_title"]} ({r["journal"]}, {r["year"]}), {r["label"].rstrip(":.")}',
                        "source_url": f'https://doi.org/{r["doi"]}' if r["doi"] else r["article_url"], "author": au_s,
                        "repository": f'{r["journal"]} via PubMed Central ({r["pmcid"]})', "licence": r["licence"], "licence_url": r["licence_url"]}
+            hi = repo / "hires" / ent / f"{i}.png"
+            if hi.exists(): src = hi          # full-resolution original fetched by tools/fetch_hires.py
             im = Image.open(src).convert("RGB")
             if crop:
                 W, H = im.size; im = im.crop((int(crop[0] * W), int(crop[1] * H), int(crop[2] * W), int(crop[3] * H)))
-            im.thumbnail((900, 900))
-            fn = f"img/{ent}-{i}.jpg"; im.save(root / "web" / fn, quality=80, optimize=True, progressive=True)
+            im.thumbnail((1600, 1600))
+            if max(im.size) < MIN_SIDE: print(f"WARNING {ent} #{i}: {im.size} below {MIN_SIDE}px", file=sys.stderr)
+            fn = f"img/{ent}-{i}.jpg"; im.save(root / "web" / fn, quality=84, optimize=True, progressive=True)
             changes = "dipotong ke panel radiograf, diperkecil" if crop else "diperkecil"
             recs.append({"file": fn, "caption_id": caps[ent][i - 1], **rec, "changes": changes, "status": status})
         out["images"][ent] = recs
