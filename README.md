@@ -61,6 +61,12 @@ cross-section) instead of two list pickers, and the options for margin, perioste
 schematic pictograms drawn for this project (radiograph convention: light = dense, dark = lucent). Defined in
 `web/template.html` (`PICTO`, `mapHTML`); to be redrawn as Flutter `CustomPainter`/SVG assets from the same paths.
 
+Findings summary (since 2026-11-19): above the results of Sumbu A and Sumbu B a collapsible strip "Deskripsi temuan"
+assembles the filled features into one expertise-style description sentence, with a copy button. It only restates the
+user's entries (unfilled features are not mentioned), never names an entity or a behaviour, and reads no weights or
+scores. Phrase dictionary and assembler live in `web/template.html` (`EK*`, `ekspertise()`, `paintEksp()`) as display
+text outside the data schema; port them to Dart unchanged.
+
 ## Repository layout
 
 ```

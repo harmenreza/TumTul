@@ -5,6 +5,21 @@ versions follow SemVer. Data-schema changes are only recorded after owner approv
 
 ## [Unreleased] — 2026-11-16
 
+### Added (UI only, 2026-11-19, later) — expertise-style findings summary (owner-approved mockup, variant B)
+- **"Deskripsi temuan"** strip above the results on both Sumbu A and Sumbu B: the filled features are assembled into one
+  radiological description sentence. Collapsed it shows two lines; tapped, it opens to the full sentence, a context
+  line (age group, clinical flags), the list of features not yet filled, and a **Salin** (copy) button that copies the
+  sentence only. Each phrase can be tapped to reopen that feature's picker.
+- Assembly order: density, multiplicity, location, transverse position, size, then positive findings ("dengan …") and
+  negative findings ("tanpa … maupun …"). Unfilled features are never mentioned in the sentence.
+- The sentence only restates the user's entries. It does not read weights, scores or entities and never names an
+  entity or a behaviour (aggressive/benign/malignant). The phrase dictionary (`EK`, `EK_NEG`, `EK_AGE`, `EK_CLIN` in
+  `web/template.html`) is display text, like the pictograms; the data schema is unchanged (v1.1.0).
+- Owner wording decision: cortex "Ekspansi dengan cangkang tipis" is phrased "ekspansi korteks dengan penipisan".
+- Nothing is stored; copying happens only on the user's tap.
+- Verified headlessly at 400 px, light and dark: no horizontal scroll, no script errors, ranking for the built-in
+  example unchanged.
+
 ### Changed (UI only, 2026-11-19 — no weight, entity, feature or schema change; KB content still 0.6.0)
 - **Location map** (owner-approved mockup): the tiles "Posisi longitudinal" and "Posisi transversal" now open one sheet
   "Lokasi lesi" with two original diagrams — a long bone in longitudinal section (tap epiphysis / metaphysis /

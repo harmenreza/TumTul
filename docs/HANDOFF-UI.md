@@ -9,6 +9,7 @@ Dokumen ini untuk memulai sesi baru tanpa kehilangan konteks. Baca bersama `clau
 - Galeri contoh gambar di Sumbu B: 66 gambar disetujui untuk 32 entitas (`data/images.json` v0.3.1).
   Belum ada gambar: kondrosarkoma sel jernih, kondroma periosteal, hemangioma vertebra, fibroma desmoplastik,
   osteosarkoma periosteal.
+- Ringkasan "Deskripsi temuan" bergaya ekspertise sudah diterapkan (2026-11-19).
 - Elemen visual orisinal yang sudah diterapkan (2026-11-19): lembar "Lokasi lesi" (diagram tulang potongan memanjang
   dan melintang) dan piktogram pada pilihan margin Lodwick, reaksi periosteal, matriks.
 - Mockup desain: https://claude.ai/artifact/TtqriTDXt8ourmMVCYXgFN.
@@ -16,8 +17,9 @@ Dokumen ini untuk memulai sesi baru tanpa kehilangan konteks. Baca bersama `clau
 
 ## Langkah berikutnya (urutan yang disepakati)
 
-1. **Ringkasan bergaya ekspertise** (ide no. 5): fitur yang diisi dirangkai menjadi satu kalimat deskripsi radiologis
-   di atas hasil Sumbu A/B. Hanya merangkai label fitur; tidak boleh menyebut satu diagnosis.
+1. ~~Ringkasan bergaya ekspertise (ide no. 5)~~ — **selesai 2026-11-19**: strip "Deskripsi temuan" (varian B, terlipat
+   dua baris, dibuka dengan ketukan) di atas hasil Sumbu A dan B, dengan tombol Salin. Kamus frasa: `EK`, `EK_NEG`,
+   `EK_AGE`, `EK_CLIN`; perangkai: `ekspertise()`; tampilan: `paintEksp()` di `web/template.html`.
 2. **Sumbu B sebagai lembar film** (ide no. 3): skor sebagai strip densitas (step-wedge), entitas seri diikat satu kurung.
 3. Sumbu A sebagai skala bertanda 0–9 (ide no. 4).
 4. Polesan: detail negatoskop, logo/ikon aplikasi, suara teks ruang baca (ide no. 6–8).
@@ -62,5 +64,5 @@ Semua langkah di atas hanya tampilan; skema data, bobot dan kode fitur tidak ber
 
 ## Kalimat pembuka yang disarankan untuk sesi baru
 
-> Lanjutkan TumTul dari `docs/HANDOFF-UI.md`. Kerjakan langkah berikutnya no. 1 (ringkasan bergaya ekspertise),
+> Lanjutkan TumTul dari `docs/HANDOFF-UI.md`. Kerjakan langkah berikutnya no. 2 (Sumbu B sebagai lembar film),
 > buat mockup dulu untuk saya setujui.

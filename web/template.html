@@ -95,6 +95,29 @@ h1 .sub { display: block; font-family: var(--font-body); font-size: .74rem; font
 .tile .check { display: none; } .tile.filled .check { display: grid; } .tile.filled .opt-tag { display: none; }
 .tile .check svg { width: 12px; height: 12px; }
 
+/* ringkasan bergaya ekspertise: fitur yang diisi dirangkai menjadi satu kalimat deskripsi (teal = isian pengguna) */
+.eksp { margin-bottom: 12px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; }
+.eksp[hidden] { display: none; }
+.eksp-head { width: 100%; min-height: 44px; text-align: left; background: none; border: 0; border-radius: 12px; padding: 10px 12px 10px 14px; cursor: pointer; display: flex; align-items: center; gap: 10px; }
+.eksp-head .tx { flex: 1; min-width: 0; display: grid; gap: 4px; }
+.eksp-head .chev { flex: none; width: 20px; height: 20px; color: var(--muted); transition: transform .15s; }
+.eksp-head[aria-expanded="true"] .chev { transform: rotate(180deg); }
+@media (prefers-reduced-motion: reduce) { .eksp-head .chev { transition: none; } }
+.eksp-clamp { font-family: var(--font-display); font-weight: 500; font-size: .98rem; line-height: 1.45; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.eksp-body { padding: 0 14px 14px; display: grid; gap: 10px; }
+.eksp-body[hidden] { display: none; }
+.eksp-ctx { font-family: var(--font-mono); font-size: .78rem; line-height: 1.5; display: flex; flex-wrap: wrap; gap: 2px 14px; }
+.eksp-ctx .k { color: var(--muted); }
+.eksp-sent { font-family: var(--font-display); font-weight: 500; font-size: 1.04rem; line-height: 1.6; overflow-wrap: anywhere; }
+.eksp-sent .ph { text-decoration: underline dotted var(--sel); text-decoration-thickness: 1.5px; text-underline-offset: 4px; cursor: pointer; border-radius: 3px; }
+.eksp-sent .ph:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.eksp-miss { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; padding-top: 10px; border-top: 1px dashed var(--line); font-size: .8rem; color: var(--muted); }
+.eksp-miss button { min-height: 30px; padding: 0 10px; border: 1px dashed var(--muted); border-radius: 999px; background: none; color: var(--muted); font-size: .8rem; cursor: pointer; }
+.eksp-foot { display: flex; align-items: center; gap: 10px; }
+.eksp-foot .note { flex: 1; min-width: 0; font-size: .8rem; line-height: 1.4; color: var(--muted); }
+.eksp-copy { flex: none; min-height: 44px; display: inline-flex; align-items: center; gap: 6px; }
+.eksp-copy svg { width: 16px; height: 16px; }
+
 /* bottom sheet */
 .sheet-scrim { position: fixed; inset: 0; background: var(--scrim); z-index: 20; }
 .sheet { position: fixed; left: 0; right: 0; bottom: 0; z-index: 21; background: var(--surface); border-radius: 18px 18px 0 0; max-height: 85vh; display: flex; flex-direction: column;
@@ -232,6 +255,7 @@ nav.bottom button[aria-selected="true"] { color: var(--accent); font-weight: 600
     </div>
 
     <div id="pane-a" role="tabpanel" hidden>
+      <div class="eksp" data-eksp hidden></div>
       <div class="panel">
         <div class="panel-head"><h2>Sumbu A · Pola agresivitas radiografik</h2><span class="eyebrow">bukan histologi</span></div>
         <div class="axis-a" id="axis-a"></div>
@@ -239,6 +263,7 @@ nav.bottom button[aria-selected="true"] { color: var(--accent); font-weight: 600
     </div>
 
     <div id="pane-b" role="tabpanel" hidden>
+      <div class="eksp" data-eksp hidden></div>
       <p class="notice sparse" id="sparse" role="status" hidden></p>
       <div class="stack">
         <div class="panel">
@@ -268,6 +293,7 @@ nav.bottom button[aria-selected="true"] { color: var(--accent); font-weight: 600
       <p>Setiap entitas memiliki bobot per fitur: <b class="mono">+3</b> ciri khas, <b class="mono">+2</b> tipikal, <b class="mono">+1</b> kompatibel, <b class="mono">0</b> netral, <b class="mono">−2</b> tidak lazim, <b class="mono">−5</b> hampir eksklusi. Skor = prior prevalensi entitas (0 umum, −1 jarang, −2 sangat jarang) + jumlah bobot untuk fitur yang diisi + bobot aturan konjungtif yang terpenuhi. Fitur yang tidak diisi tidak mengubah skor.</p>
       <p>Entitas dengan skor sama diberi peringkat yang sama (ditandai <b>seri</b>); urutan di dalam kelompok seri tidak bermakna klinis.</p>
       <p>Lokasi diisi pada diagram tulang (potongan memanjang dan melintang), dan pilihan margin, reaksi periosteal, serta matriks disertai piktogram skematis buatan sendiri (terang = tulang padat, gelap = lusen) untuk menyamakan persepsi istilah; piktogram bukan gambar pasien.</p>
+      <p>Di atas hasil Sumbu A dan Sumbu B, fitur yang diisi dirangkai menjadi satu kalimat <b>deskripsi temuan</b> bergaya ekspertise (ketuk untuk membuka; ketuk frasa untuk mengubah isiannya; tombol Salin menyalin kalimat). Kalimat ini hanya menyusun ulang isian Anda: fitur yang kosong tidak disebut, dan tidak ada kesan atau diagnosis di dalamnya.</p>
       <p>Beberapa isian saling bergantung: posisi longitudinal hanya untuk tulang panjang; Lodwick hanya untuk lesi litik/campuran yang tidak terletak di permukaan; pasangan nilai yang mustahil menurut definisinya tidak dapat dipilih bersamaan (pilihan terakhir yang berlaku).</p>
       <p>Entitas dengan bobot −5 dipindahkan ke daftar "disingkirkan" beserta alasannya; yang skor hipotetisnya tinggi tetap ditampilkan abu-abu di daftar utama agar tidak luput.</p>
       <p>Sumbu A menilai pola pertumbuhan dari margin (Lodwick–Madewell), korteks, reaksi periosteal, dan massa jaringan lunak. Pola agresif tidak sama dengan ganas.</p>
@@ -575,6 +601,99 @@ nav.bottom button[aria-selected="true"] { color: var(--accent); font-weight: 600
     if (!n) return { cls: 'none', title: 'Belum dapat dinilai', parts: ['Isi margin, korteks, reaksi periosteal, atau massa jaringan lunak.'] };
     return { cls: pts <= 1 ? 'good' : pts <= 3 ? 'warn' : 'crit', title: pts <= 1 ? 'Pola tampak non-agresif' : pts <= 3 ? 'Pola indeterminate' : 'Pola tampak agresif', pts, parts };
   }
+  // ---------- ringkasan bergaya ekspertise (tampilan saja)
+  // Merangkai label fitur yang diisi menjadi satu kalimat deskripsi. Tidak membaca bobot, skor, atau entitas, dan tidak
+  // pernah menyebut diagnosis. Kamus frasa di bawah adalah teks tampilan (seperti PICTO), bukan bagian dari skema data.
+  const EK = {
+    density: { lytic: 'litik', mixed: 'campuran litik–sklerotik', sclerotic: 'sklerotik' },
+    multiplicity: { solitary: 'soliter', multiple: 'multipel/poliostotik' },
+    bone_class: { long_bone: 'tulang panjang', small_tubular_hand_foot: 'tulang tubular kecil tangan/kaki', flat_bone: 'tulang pipih', spine_body: 'korpus vertebra',
+      spine_posterior: 'elemen posterior vertebra', sacrum: 'sakrum', clavicle: 'klavikula', calcaneus: 'kalkaneus', patella: 'patela', craniofacial: 'kalvaria/kraniofasial' },
+    longitudinal: { epiphysis_apophysis: 'epifisis/apofisis', metaphysis: 'metafisis', metadiaphysis: 'metadiafisis', diaphysis: 'diafisis' },
+    transverse: { central: 'letak sentral intrameduler', eccentric: 'letak eksentrik intrameduler', cortical: 'letak intrakortikal', juxtacortical_surface: 'letak jukstakortikal (permukaan)',
+      juxtacortical_continuous: 'letak permukaan (korteks dan meduler menyambung ke tulang induk)' },
+    size_cm: { '<2': 'ukuran terpanjang < 2 cm', '2-5': 'ukuran terpanjang 2–5 cm', '>5': 'ukuran terpanjang > 5 cm' },
+    margin_lodwick: { IA: 'margin geografik bertepi sklerotik (Lodwick IA)', IB: 'margin geografik tegas tanpa tepi sklerotik (Lodwick IB)',
+      IC: 'margin geografik tidak tegas (zona transisi lebar; Lodwick IC)', II: 'margin moth-eaten (Lodwick II)', III: 'margin permeatif (Lodwick III)' },
+    cortex: { intact: 'korteks utuh', endosteal_scalloping: 'endosteal scalloping', expansion_shell: 'ekspansi korteks dengan penipisan', focal_breach: 'korteks terputus fokal',
+      destruction: 'destruksi korteks luas', saucerization: 'saucerization korteks' },
+    periosteal: { solid_thin: 'reaksi periosteal solid/tipis', shell: 'reaksi periosteal berupa cangkang', lamellated: 'reaksi periosteal lamelar (onion-skin)',
+      spiculated: 'reaksi periosteal spikulasi (hair-on-end/sunburst)', codman: 'segitiga Codman', present_unspecified: 'reaksi periosteal berpola tidak dapat ditentukan' },
+    matrix: { osteoid: 'matriks osteoid', chondroid: 'matriks kondroid', ground_glass: 'matriks ground-glass', coarse_trabeculae: 'trabekula kasar vertikal' },
+    soft_tissue_mass: { present: 'massa jaringan lunak' },
+  };
+  const EK_NEG = { periosteal: ['none', 'reaksi periosteal'], matrix: ['none', 'matriks termineralisasi'], soft_tissue_mass: ['absent', 'massa jaringan lunak'] };
+  const EK_AGE = { '0-9': '0–9 tahun, fisis terbuka', '10-19_open': '10–19 tahun, fisis terbuka', '10-19_closed': '10–19 tahun, fisis tertutup', '10-19_unknown': '10–19 tahun, fisis tidak dapat dinilai',
+    '20-39': '20–39 tahun', '40-59': '40–59 tahun', '60+': '60 tahun ke atas' };
+  const EK_CLIN = { night_pain_nsaid_relief: 'nyeri malam membaik dengan NSAID', known_primary_malignancy: 'riwayat keganasan primer diketahui', fever_or_infection_signs: 'demam/tanda infeksi' };
+  const EK_SHORT = { age_group: 'Usia', multiplicity: 'Jumlah lesi', bone_class: 'Tulang', longitudinal: 'Posisi longitudinal', transverse: 'Posisi transversal', density: 'Densitas', margin_lodwick: 'Margin',
+    cortex: 'Korteks', soft_tissue_mass: 'Massa jaringan lunak', periosteal: 'Reaksi periosteal', matrix: 'Matriks' };
+  // Returns segments [{t, f}] (f = feature code when the phrase comes from an entry), context lines and unfilled features.
+  function ekspertise(s) {
+    const seg = []; const add = (t, f) => seg.push({ t, f });
+    const any = ['multiplicity', 'bone_class', 'longitudinal', 'transverse', 'density', 'margin_lodwick', 'cortex', 'soft_tissue_mass', 'periosteal', 'matrix', 'size_cm']
+      .some(f => s[f] !== undefined && s[f] !== 'not_applicable');
+    if (any) {
+      add('Tampak lesi');
+      if (EK.density[s.density]) { add(' '); add(EK.density[s.density], 'density'); }
+      if (EK.multiplicity[s.multiplicity]) { add(' '); add(EK.multiplicity[s.multiplicity], 'multiplicity'); }
+      if (EK.bone_class[s.bone_class]) {
+        add(' pada ');
+        if (EK.longitudinal[s.longitudinal]) { add(EK.longitudinal[s.longitudinal], 'longitudinal'); add(' '); }
+        add(EK.bone_class[s.bone_class], 'bone_class');
+      }
+      if (EK.transverse[s.transverse]) { add(', '); add(EK.transverse[s.transverse], 'transverse'); }
+      if (EK.size_cm[s.size_cm]) { add(', '); add(EK.size_cm[s.size_cm], 'size_cm'); }
+      const pos = ['margin_lodwick', 'cortex', 'periosteal', 'matrix', 'soft_tissue_mass'].filter(f => EK[f][s[f]]).map(f => [EK[f][s[f]], f]);
+      const neg = Object.entries(EK_NEG).filter(([f, [v]]) => s[f] === v).map(([f, [, t]]) => [t, f]);
+      const list = (items, last) => items.forEach(([t, f], i) => { if (i) add(i === items.length - 1 ? (items.length > 2 ? ', ' + last + ' ' : ' ' + last + ' ') : ', '); add(t, f); });
+      if (pos.length) { add(', dengan '); list(pos, 'dan'); }
+      if (neg.length) { add(', tanpa '); list(neg, 'maupun'); }
+      add('.');
+    }
+    const ctx = [];
+    if (EK_AGE[s.age_group]) ctx.push(['Usia', EK_AGE[s.age_group]]);
+    const cl = (s.clinical_flags || []).map(c => EK_CLIN[c]).filter(Boolean);
+    if (cl.length) ctx.push(['Klinis', cl.join('; ')]);
+    const missing = Object.keys(EK_SHORT).filter(f => enabled(f) && s[f] === undefined);
+    return { seg, text: seg.map(x => x.t).join(''), ctx, missing };
+  }
+  const escH = t => t.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  let ekspOpen = false, ekspCopied = false;
+  const COPY_ICO = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg>';
+  function copyText(text) {
+    const fallback = () => { const ta = document.createElement('textarea'); ta.value = text; ta.setAttribute('readonly', ''); ta.style.cssText = 'position:fixed;opacity:0';
+      document.body.appendChild(ta); ta.select(); let ok = false; try { ok = document.execCommand('copy'); } catch (e) {} ta.remove(); return ok; };
+    try { return navigator.clipboard.writeText(text).then(() => true, fallback); } catch (e) { return Promise.resolve(fallback()); }
+  }
+  function paintEksp() {
+    const filled = Object.keys(state).length, r = ekspertise(state);
+    const none = 'Belum ada fitur lesi yang diisi, jadi kalimat belum dirangkai.';
+    document.querySelectorAll('[data-eksp]').forEach((el, i) => {
+      el.hidden = !filled; if (!filled) { el.innerHTML = ''; return; }
+      const bid = 'eksp-body-' + i;
+      el.innerHTML = `<button type="button" class="eksp-head" aria-expanded="${ekspOpen}" aria-controls="${bid}">
+          <span class="tx"><span class="eyebrow">Deskripsi temuan · ${filled} fitur</span>${ekspOpen ? '' : `<span class="eksp-clamp">${escH(r.text || none)}</span>`}</span>
+          <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="eksp-body" id="${bid}" ${ekspOpen ? '' : 'hidden'}>
+          ${r.ctx.length ? `<div class="eksp-ctx">${r.ctx.map(([k, v]) => `<span><span class="k">${k}</span> ${escH(v)}</span>`).join('')}</div>` : ''}
+          ${r.text ? `<p class="eksp-sent">${r.seg.map(x => x.f ? `<span class="ph" role="button" tabindex="0" data-code="${x.f}">${escH(x.t)}</span>` : escH(x.t)).join('')}</p>` : `<p class="empty">${none}</p>`}
+          ${r.missing.length ? `<div class="eksp-miss"><span>Belum diisi:</span>${r.missing.map(f => `<button type="button" data-code="${f}">${EK_SHORT[f]}</button>`).join('')}</div>` : ''}
+          <div class="eksp-foot"><span class="note">Dirangkai dari fitur yang Anda isi. Bukan kesan, bukan diagnosis.</span>
+            ${r.text ? `<button type="button" class="btn eksp-copy">${COPY_ICO}<span role="status">${ekspCopied ? 'Tersalin' : 'Salin'}</span></button>` : ''}</div>
+        </div>`;
+      el.querySelector('.eksp-head').addEventListener('click', () => { ekspOpen = !ekspOpen; paintEksp(); const h = el.querySelector('.eksp-head'); if (h) h.focus(); });
+      const go = code => { showStep('st-feat'); openSheet(code); };
+      el.querySelectorAll('[data-code]').forEach(b => {
+        b.addEventListener('click', () => go(b.dataset.code));
+        if (b.classList.contains('ph')) b.addEventListener('keydown', ev => { if (ev.key === 'Enter' || ev.key === ' ') { ev.preventDefault(); go(b.dataset.code); } });
+      });
+      const cp = el.querySelector('.eksp-copy');
+      if (cp) cp.addEventListener('click', () => copyText(r.text).then(ok => { if (!ok) return; ekspCopied = true; paintEksp();
+        const again = el.querySelector('.eksp-copy'); if (again) again.focus(); setTimeout(() => { ekspCopied = false; paintEksp(); }, 1600); }));
+    });
+  }
   function behaviourPill(b) {
     if (b === 'benign' || b === 'non_neoplastic') return `<span class="pill benign">${b === 'benign' ? 'jinak' : 'non-neoplastik'}</span>`;
     if (b.startsWith('intermediate')) return `<span class="pill inter">intermediate</span>`;
@@ -602,6 +721,7 @@ nav.bottom button[aria-selected="true"] { color: var(--accent); font-weight: 600
   function update() {
     for (const code of Object.keys(DEPENDS)) if (!enabled(code) && code in state) delete state[code];
     paintTiles();
+    paintEksp();
     const fn = document.getElementById('feat-notice'); fn.textContent = featNotice; fn.hidden = !featNotice;
     const inp = state;
     const a = axisA(inp);
