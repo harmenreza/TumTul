@@ -1,0 +1,249 @@
+{
+ "id": "chordoma",
+ "name_en": "Chordoma",
+ "name_id": "Kordoma",
+ "who_group": "notochordal",
+ "behaviour": "malignant",
+ "definition_id": "Tumor ganas tumbuh lambat dari sisa notokord, pada garis tengah aksial: sakrokoksigeal dan klivus tersering; lesi litik destruktif dengan massa jaringan lunak besar.",
+ "source_ids": [
+  "S-01",
+  "S-05"
+ ],
+ "feature_weights": {
+  "age_group": {
+   "0-9": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "20-39": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "40-59": {
+    "weight": 3,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "60+": {
+    "weight": 3,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "10-19_unknown": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "10-19_open": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "10-19_closed": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "bone_class": {
+   "sacrum": {
+    "weight": 3,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Sakrokoksigeal adalah lokasi tersering"
+   },
+   "spine_body": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "craniofacial": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Klivus"
+   },
+   "long_bone": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "flat_bone": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "spine_posterior": {
+    "weight": -2,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "longitudinal": {
+   "not_applicable": {
+    "weight": 0,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "transverse": {
+   "central": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "density": {
+   "lytic": {
+    "weight": 3,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "mixed": {
+    "weight": 0,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "sclerotic": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "margin_lodwick": {
+   "IB": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "IC": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "II": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "III": {
+    "weight": 0,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "IA": {
+    "weight": -2,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "cortex": {
+   "destruction": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "focal_breach": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "intact": {
+    "weight": -2,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "soft_tissue_mass": {
+   "present": {
+    "weight": 3,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Massa presakral besar, sering tidak proporsional dengan destruksi tulang"
+   },
+   "absent": {
+    "weight": -2,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "periosteal": {
+   "none": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "matrix": {
+   "none": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "chondroid": {
+    "weight": 0,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Kalsifikasi amorf dapat ada; bedakan dari kondrosarkoma"
+   },
+   "osteoid": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "ground_glass": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  }
+ },
+ "pitfalls_id": [
+  "Kondrosarkoma sakral dan GCTB sakral adalah banding utama.",
+  "Insiden kordoma meningkat dalam data registri (S-05), kemungkinan karena deteksi."
+ ],
+ "rules": [],
+ "aliases": [],
+ "base_prior": -1,
+ "base_prior_source_ids": [
+  "S-01",
+  "S-05",
+  "S-06"
+ ],
+ "base_prior_note_id": "Entitas jarang: prior prevalensi −1"
+}

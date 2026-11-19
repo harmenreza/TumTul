@@ -68,9 +68,9 @@ Registry: `data/images.json`; files: `web/img/`. Every image carries, directly u
 source title with link, author(s), repository, licence with link, and changes made ("diperkecil", or
 "dipotong ke panel radiograf, diperkecil"). Captions are our own words, not the source captions.
 
-| Licence class | Images (candidates, 2026-11-17, typical-only, ≥500 px) | Obligation |
+| Licence class | Images (approved, 2026-11-17, typical-only, ≥500 px; 66 total) | Obligation |
 |---|---|---|
-| CC BY 2.0 / 3.0 / 4.0 | 33 | Attribution, link to licence, indicate changes |
+| CC BY 2.0 / 3.0 / 4.0 | 35 | Attribution, link to licence, indicate changes |
 | CC BY-SA 2.0 / 3.0 (incl. 3.0 DE) / 4.0 | 29 | As CC BY; a modified image (cropped/resized) is shared under the same licence — the app's image files are therefore offered under the image's own CC BY-SA licence, separate from the app's code/content licence |
 | CC0 / public domain | 2 | None (attribution kept as good practice) |
 

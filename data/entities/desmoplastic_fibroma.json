@@ -1,0 +1,309 @@
+{
+ "id": "desmoplastic_fibroma",
+ "name_en": "Desmoplastic fibroma of bone",
+ "name_id": "Fibroma desmoplastik tulang",
+ "who_group": "fibrogenic",
+ "behaviour": "intermediate_locally_aggressive",
+ "definition_id": "Padanan intraoseus fibromatosis desmoid; tumor fibrosa agresif lokal yang langka pada dewasa muda, tampak litik ekspansil dengan pseudotrabekulasi kasar.",
+ "source_ids": [
+  "S-01",
+  "S-13"
+ ],
+ "feature_weights": {
+  "age_group": {
+   "0-9": {
+    "weight": 0,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "20-39": {
+    "weight": 3,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "40-59": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "60+": {
+    "weight": -2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "10-19_unknown": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "10-19_open": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "10-19_closed": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "bone_class": {
+   "long_bone": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Femur, tibia, humerus"
+   },
+   "flat_bone": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Pelvis"
+   },
+   "craniofacial": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Mandibula"
+   },
+   "spine_body": {
+    "weight": 0,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "longitudinal": {
+   "metaphysis": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "metadiaphysis": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "diaphysis": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "epiphysis_apophysis": {
+    "weight": -2,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "transverse": {
+   "central": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "eccentric": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "cortical": {
+    "weight": -2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "juxtacortical_surface": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "juxtacortical_continuous": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "density": {
+   "lytic": {
+    "weight": 3,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "mixed": {
+    "weight": 0,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "sclerotic": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "margin_lodwick": {
+   "IB": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "IC": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "IA": {
+    "weight": 0,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "II": {
+    "weight": -2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "III": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "cortex": {
+   "expansion_shell": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "focal_breach": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "endosteal_scalloping": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "destruction": {
+    "weight": 0,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "intact": {
+    "weight": 0,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "soft_tissue_mass": {
+   "present": {
+    "weight": 0,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "periosteal": {
+   "none": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "shell": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "spiculated": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "codman": {
+    "weight": -2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "present_unspecified": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Reaksi periosteal menandai proses aktif; pola tidak diketahui"
+   }
+  },
+  "matrix": {
+   "none": {
+    "weight": 3,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "osteoid": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "chondroid": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "ground_glass": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  }
+ },
+ "pitfalls_id": [
+  "Sinyal rendah pada T2 (kolagen) membantu di MRI.",
+  "Banding: GCTB, ABC, fibrosarkoma, fibrous dysplasia."
+ ],
+ "rules": [],
+ "aliases": [],
+ "base_prior": -2,
+ "base_prior_source_ids": [
+  "S-01",
+  "S-05",
+  "S-06"
+ ],
+ "base_prior_note_id": "Entitas sangat jarang: prior prevalensi −2"
+}

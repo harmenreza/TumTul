@@ -1,0 +1,353 @@
+{
+ "id": "periosteal_chondroma",
+ "name_en": "Periosteal (juxtacortical) chondroma",
+ "name_id": "Kondroma periosteal (jukstakortikal)",
+ "who_group": "chondrogenic",
+ "behaviour": "benign",
+ "definition_id": "Tumor tulang rawan jinak di permukaan tulang di bawah periosteum; mengerosi korteks membentuk cekungan dangkal dengan tepi sklerotik dan penyangga tulang di ujungnya.",
+ "source_ids": [
+  "S-01",
+  "S-25",
+  "S-18"
+ ],
+ "feature_weights": {
+  "age_group": {
+   "0-9": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ]
+   },
+   "20-39": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ]
+   },
+   "40-59": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ]
+   },
+   "60+": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ]
+   },
+   "10-19_unknown": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ]
+   },
+   "10-19_open": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ]
+   },
+   "10-19_closed": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ]
+   }
+  },
+  "bone_class": {
+   "long_bone": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ],
+    "note_id": "Humerus proksimal dan femur"
+   },
+   "small_tubular_hand_foot": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ]
+   },
+   "flat_bone": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ]
+   },
+   "spine_body": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ]
+   }
+  },
+  "longitudinal": {
+   "metaphysis": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ]
+   },
+   "metadiaphysis": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ]
+   },
+   "diaphysis": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ]
+   },
+   "epiphysis_apophysis": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ]
+   }
+  },
+  "transverse": {
+   "juxtacortical_surface": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ]
+   },
+   "central": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ]
+   },
+   "eccentric": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ]
+   },
+   "cortical": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ]
+   },
+   "juxtacortical_continuous": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ]
+   }
+  },
+  "density": {
+   "lytic": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ]
+   },
+   "mixed": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ]
+   },
+   "sclerotic": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ]
+   }
+  },
+  "cortex": {
+   "intact": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ],
+    "note_id": "Cekungan dangkal (saucerization) berbatas sklerotik dengan penyangga periosteal di tepi"
+   },
+   "focal_breach": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ]
+   },
+   "destruction": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ]
+   },
+   "endosteal_scalloping": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ]
+   },
+   "saucerization": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ],
+    "note_id": "Cekungan korteks dengan tepi sklerotik/penyangga adalah ciri khas"
+   }
+  },
+  "soft_tissue_mass": {
+   "present": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ]
+   },
+   "absent": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ]
+   }
+  },
+  "periosteal": {
+   "solid_thin": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ],
+    "note_id": "Penyangga (buttress) tulang matur di tepi lesi"
+   },
+   "none": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ]
+   },
+   "spiculated": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ]
+   },
+   "codman": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ]
+   },
+   "lamellated": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ]
+   },
+   "present_unspecified": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Reaksi periosteal menandai proses aktif; pola tidak diketahui"
+   }
+  },
+  "matrix": {
+   "chondroid": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ]
+   },
+   "none": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ]
+   },
+   "osteoid": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ]
+   },
+   "ground_glass": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ]
+   }
+  },
+  "size_cm": {
+   "<2": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ]
+   },
+   "2-5": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ]
+   },
+   ">5": {
+    "weight": -2,
+    "source_ids": [
+     "S-18"
+    ],
+    "note_id": "Lesi permukaan kondroid >5 cm lebih mengarah ke kondrosarkoma periosteal"
+   }
+  }
+ },
+ "pitfalls_id": [
+  "Osteosarkoma periosteal dan kondrosarkoma periosteal adalah banding utama lesi kondroid permukaan.",
+  "Tidak ada kontinuitas meduler (beda dengan osteokondroma)."
+ ],
+ "rules": [],
+ "aliases": [],
+ "base_prior": -2,
+ "base_prior_source_ids": [
+  "S-01",
+  "S-05",
+  "S-06"
+ ],
+ "base_prior_note_id": "Entitas sangat jarang: prior prevalensi −2"
+}

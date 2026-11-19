@@ -1,0 +1,383 @@
+{
+ "id": "osteosarcoma_conventional",
+ "name_en": "Conventional (high-grade central) osteosarcoma",
+ "name_id": "Osteosarkoma konvensional",
+ "aliases": [
+  "osteosarcoma",
+  "OS"
+ ],
+ "who_group": "osteogenic",
+ "behaviour": "malignant",
+ "definition_id": "Sarkoma primer tulang tersering, didefinisikan oleh produksi osteoid oleh sel tumor; puncak pada remaja, metafisis tulang panjang sekitar lutut dan humerus proksimal.",
+ "source_ids": [
+  "S-01",
+  "S-15",
+  "S-04",
+  "S-05"
+ ],
+ "feature_weights": {
+  "age_group": {
+   "0-9": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "20-39": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "40-59": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "60+": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Puncak kedua: osteosarkoma sekunder pada Paget / pasca-radiasi"
+   },
+   "10-19_unknown": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-05"
+    ],
+    "note_id": "Puncak insiden remaja 15–19 tahun"
+   },
+   "10-19_open": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-05"
+    ],
+    "note_id": "Puncak insiden remaja 15–19 tahun"
+   },
+   "10-19_closed": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-05"
+    ],
+    "note_id": "Puncak insiden remaja 15–19 tahun"
+   }
+  },
+  "bone_class": {
+   "long_bone": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "flat_bone": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "spine_body": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "small_tubular_hand_foot": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   }
+  },
+  "longitudinal": {
+   "metaphysis": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ],
+    "note_id": "Lesi metafisis klasik, dekat fisis yang tumbuh cepat"
+   },
+   "metadiaphysis": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "diaphysis": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "epiphysis_apophysis": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   }
+  },
+  "transverse": {
+   "eccentric": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "central": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "cortical": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "juxtacortical_surface": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ],
+    "note_id": "Bentuk permukaan dinilai sebagai entitas terpisah (parosteal/periosteal)"
+   },
+   "juxtacortical_continuous": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ],
+    "note_id": "Bentuk permukaan dinilai sebagai entitas terpisah (parosteal/periosteal)"
+   }
+  },
+  "density": {
+   "lytic": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "mixed": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "sclerotic": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   }
+  },
+  "margin_lodwick": {
+   "IA": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "IB": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "IC": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "II": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "III": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   }
+  },
+  "cortex": {
+   "intact": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "endosteal_scalloping": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "expansion_shell": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "focal_breach": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "destruction": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   }
+  },
+  "soft_tissue_mass": {
+   "present": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "absent": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   }
+  },
+  "periosteal": {
+   "none": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "solid_thin": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "shell": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "lamellated": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "spiculated": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ],
+    "note_id": "Sunburst dengan densitas bertambah oleh matriks osteoid"
+   },
+   "codman": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ],
+    "note_id": "Segitiga Codman klasik untuk osteosarkoma"
+   },
+   "present_unspecified": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Reaksi periosteal menandai proses aktif; pola tidak diketahui"
+   }
+  },
+  "matrix": {
+   "osteoid": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ],
+    "note_id": "Matriks osteoid fluffy/cloud-like adalah ciri khas"
+   },
+   "none": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "chondroid": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "ground_glass": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   }
+  }
+ },
+ "pitfalls_id": [
+  "Osteomielitis agresif dapat meniru pola periosteal dan destruksi.",
+  "Varian telangiektatik tampak litik ekspansil dan dapat meniru ABC.",
+  "Ketiadaan matriks tidak menyingkirkan osteosarkoma."
+ ],
+ "rules": [],
+ "base_prior": 0,
+ "base_prior_source_ids": [
+  "S-01",
+  "S-05",
+  "S-06"
+ ]
+}

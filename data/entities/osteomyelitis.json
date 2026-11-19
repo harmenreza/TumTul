@@ -1,0 +1,336 @@
+{
+ "id": "osteomyelitis",
+ "name_en": "Osteomyelitis (incl. Brodie abscess)",
+ "name_id": "Osteomielitis (termasuk abses Brodie)",
+ "who_group": "non_neoplastic_or_secondary",
+ "behaviour": "non_neoplastic",
+ "definition_id": "Infeksi tulang, umumnya hematogen pada anak di metafisis; spektrum radiografik dari lesi litik agresif dengan periosteal lamelar hingga abses Brodie berbatas sklerotik yang dapat melintasi fisis.",
+ "source_ids": [
+  "S-01",
+  "S-10",
+  "S-04"
+ ],
+ "feature_weights": {
+  "age_group": {
+   "0-9": {
+    "weight": 3,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "20-39": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Abses Brodie sering pada dewasa muda"
+   },
+   "40-59": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "60+": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "10-19_unknown": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "10-19_open": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Osteomielitis hematogen metafisis khas pada skeletal imatur"
+   },
+   "10-19_closed": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Osteomielitis hematogen metafisis khas pada skeletal imatur"
+   }
+  },
+  "bone_class": {
+   "long_bone": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "spine_body": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Spondilodiskitis melibatkan diskus dan dua korpus"
+   },
+   "flat_bone": {
+    "weight": 0,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "small_tubular_hand_foot": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "longitudinal": {
+   "metaphysis": {
+    "weight": 3,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "epiphysis_apophysis": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Abses Brodie dapat melintasi fisis"
+   },
+   "diaphysis": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "metadiaphysis": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "transverse": {
+   "central": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "eccentric": {
+    "weight": 0,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "cortical": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "density": {
+   "lytic": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "mixed": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "sclerotic": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Osteomielitis kronik / sklerosing"
+   }
+  },
+  "margin_lodwick": {
+   "IA": {
+    "weight": 3,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Abses Brodie: lusen dengan tepi sklerotik tebal"
+   },
+   "IB": {
+    "weight": 0,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "IC": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "II": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "III": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "cortex": {
+   "intact": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "focal_breach": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Kloaka"
+   },
+   "destruction": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "endosteal_scalloping": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Erosi dan penipisan korteks di sekitar abses"
+   }
+  },
+  "soft_tissue_mass": {
+   "present": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Pembengkakan jaringan lunak difus lebih khas daripada massa diskret"
+   }
+  },
+  "periosteal": {
+   "lamellated": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "solid_thin": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "codman": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "spiculated": {
+    "weight": 0,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "none": {
+    "weight": 0,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "present_unspecified": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Reaksi periosteal menandai proses aktif; pola tidak diketahui"
+   }
+  },
+  "matrix": {
+   "none": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "osteoid": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "chondroid": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "ground_glass": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "clinical_flags": {
+   "fever_or_infection_signs": {
+    "weight": 3,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  }
+ },
+ "rules": [
+  {
+   "id": "om_all_four_aggressive_signs",
+   "when": {
+    "margin_lodwick": [
+     "IC",
+     "II",
+     "III"
+    ],
+    "cortex": [
+     "destruction"
+    ],
+    "periosteal": [
+     "lamellated",
+     "spiculated",
+     "codman"
+    ]
+   },
+   "weight": 1,
+   "note_id": "Kombinasi tanda agresif memberi yield tinggi untuk keganasan ATAU infeksi — infeksi tetap dalam banding",
+   "source_ids": [
+    "S-10"
+   ]
+  }
+ ],
+ "pitfalls_id": [
+  "Mimic terpenting Ewing sarcoma dan LCH pada anak, dan limfoma/metastasis pada dewasa.",
+  "Tuberkulosis tulang: destruksi dengan sedikit sklerosis reaktif dan periosteal minimal; penting di Indonesia."
+ ],
+ "aliases": [],
+ "base_prior": 0,
+ "base_prior_source_ids": [
+  "S-01",
+  "S-05",
+  "S-06"
+ ]
+}

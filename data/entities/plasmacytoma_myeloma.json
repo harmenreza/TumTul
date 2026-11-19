@@ -1,0 +1,349 @@
+{
+ "id": "plasmacytoma_myeloma",
+ "name_en": "Plasma cell myeloma / solitary plasmacytoma of bone",
+ "name_id": "Mieloma sel plasma / plasmasitoma soliter tulang",
+ "aliases": [
+  "myeloma",
+  "MM"
+ ],
+ "who_group": "haematopoietic",
+ "behaviour": "malignant",
+ "definition_id": "Neoplasma sel plasma pada usia lanjut yang mengenai sumsum merah; lesi litik 'punched-out' multipel tanpa sklerosis reaktif, atau lesi ekspansil soliter (plasmasitoma).",
+ "source_ids": [
+  "S-01",
+  "S-24"
+ ],
+ "feature_weights": {
+  "age_group": {
+   "0-9": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-24"
+    ]
+   },
+   "20-39": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-24"
+    ]
+   },
+   "40-59": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-24"
+    ]
+   },
+   "60+": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-24"
+    ]
+   },
+   "10-19_unknown": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-24"
+    ]
+   },
+   "10-19_open": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-24"
+    ]
+   },
+   "10-19_closed": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-24"
+    ]
+   }
+  },
+  "bone_class": {
+   "spine_body": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-24"
+    ]
+   },
+   "flat_bone": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-24"
+    ]
+   },
+   "craniofacial": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-24"
+    ]
+   },
+   "long_bone": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-24"
+    ],
+    "note_id": "Tulang panjang proksimal (sumsum merah)"
+   },
+   "small_tubular_hand_foot": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-24"
+    ]
+   }
+  },
+  "longitudinal": {
+   "diaphysis": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-24"
+    ]
+   },
+   "metaphysis": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-24"
+    ]
+   },
+   "epiphysis_apophysis": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-24"
+    ]
+   }
+  },
+  "transverse": {
+   "central": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-24"
+    ]
+   },
+   "eccentric": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-24"
+    ]
+   }
+  },
+  "density": {
+   "lytic": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-24"
+    ]
+   },
+   "mixed": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-24"
+    ]
+   },
+   "sclerotic": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-24"
+    ],
+    "note_id": "Sklerotik hanya pada varian jarang (POEMS)"
+   }
+  },
+  "margin_lodwick": {
+   "IB": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-24"
+    ],
+    "note_id": "Punched-out: tegas tanpa tepi sklerotik"
+   },
+   "IC": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-24"
+    ]
+   },
+   "II": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-24"
+    ]
+   },
+   "III": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-24"
+    ]
+   },
+   "IA": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-24"
+    ]
+   }
+  },
+  "cortex": {
+   "endosteal_scalloping": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-24"
+    ]
+   },
+   "destruction": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-24"
+    ]
+   },
+   "expansion_shell": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-24"
+    ],
+    "note_id": "Plasmasitoma dapat ekspansil 'mini-brain'"
+   },
+   "intact": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-24"
+    ]
+   }
+  },
+  "soft_tissue_mass": {
+   "present": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-24"
+    ]
+   }
+  },
+  "periosteal": {
+   "none": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-24"
+    ]
+   },
+   "solid_thin": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-24"
+    ]
+   },
+   "lamellated": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-24"
+    ]
+   },
+   "spiculated": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-24"
+    ]
+   },
+   "codman": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-24"
+    ]
+   },
+   "present_unspecified": {
+    "weight": -2,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Reaksi periosteal tidak lazim untuk entitas ini"
+   }
+  },
+  "matrix": {
+   "none": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-24"
+    ]
+   },
+   "osteoid": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-24"
+    ]
+   },
+   "chondroid": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-24"
+    ]
+   },
+   "ground_glass": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-24"
+    ]
+   },
+   "coarse_trabeculae": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-24"
+    ]
+   }
+  },
+  "multiplicity": {
+   "multiple": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-24"
+    ]
+   }
+  }
+ },
+ "pitfalls_id": [
+  "30–50% tulang harus hilang sebelum lesi tampak pada radiograf; skeletal survey negatif tidak menyingkirkan (S-01, S-24).",
+  "Osteoporosis difus dapat menjadi satu-satunya tanda radiografik."
+ ],
+ "rules": [],
+ "base_prior": 0,
+ "base_prior_source_ids": [
+  "S-01",
+  "S-05",
+  "S-06"
+ ]
+}

@@ -1,0 +1,359 @@
+{
+ "id": "aneurysmal_bone_cyst",
+ "name_en": "Aneurysmal bone cyst",
+ "name_id": "Kista tulang aneurismal",
+ "aliases": [
+  "ABC"
+ ],
+ "who_group": "osteoclastic_giant_cell_rich",
+ "behaviour": "benign",
+ "definition_id": "Lesi kistik multilokuler berisi darah yang ekspansil dan eksentrik, umumnya pada dua dekade pertama; dapat primer atau sekunder terhadap lesi lain.",
+ "source_ids": [
+  "S-01",
+  "S-06",
+  "S-20"
+ ],
+ "feature_weights": {
+  "age_group": {
+   "0-9": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "20-39": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "40-59": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "60+": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "10-19_unknown": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "10-19_open": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "10-19_closed": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   }
+  },
+  "bone_class": {
+   "long_bone": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "spine_posterior": {
+    "weight": 3,
+    "source_ids": [
+     "S-20"
+    ],
+    "note_id": "Predileksi elemen posterior vertebra"
+   },
+   "flat_bone": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "sacrum": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   }
+  },
+  "longitudinal": {
+   "metaphysis": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "metadiaphysis": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "diaphysis": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "epiphysis_apophysis": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   }
+  },
+  "transverse": {
+   "eccentric": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "central": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "cortical": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "juxtacortical_surface": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "juxtacortical_continuous": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   }
+  },
+  "density": {
+   "lytic": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "mixed": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "sclerotic": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   }
+  },
+  "margin_lodwick": {
+   "IA": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "IB": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "IC": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ],
+    "note_id": "Dapat tampak agresif karena ekspansi cepat"
+   },
+   "II": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "III": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   }
+  },
+  "cortex": {
+   "intact": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "expansion_shell": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ],
+    "note_id": "Ekspansi 'balon' dengan cangkang tipis"
+   },
+   "focal_breach": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "destruction": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   }
+  },
+  "soft_tissue_mass": {
+   "present": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   }
+  },
+  "periosteal": {
+   "shell": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "none": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "solid_thin": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "lamellated": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "spiculated": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "codman": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "present_unspecified": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Reaksi periosteal menandai proses aktif; pola tidak diketahui"
+   }
+  },
+  "matrix": {
+   "none": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "osteoid": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "chondroid": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "ground_glass": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   }
+  }
+ },
+ "pitfalls_id": [
+  "Osteosarkoma telangiektatik adalah mimic terpenting: cari matriks dan komponen padat.",
+  "ABC sekunder dapat menumpangi GCTB, osteoblastoma, kondroblastoma."
+ ],
+ "rules": [],
+ "base_prior": 0,
+ "base_prior_source_ids": [
+  "S-01",
+  "S-05",
+  "S-06"
+ ]
+}

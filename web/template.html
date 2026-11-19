@@ -108,6 +108,21 @@ h1 .sub { display: block; font-family: var(--font-body); font-size: .74rem; font
 .opt .l { font-weight: 500; } .opt .h { font-size: .8rem; color: var(--muted); }
 .opt[aria-checked="true"] { border-color: var(--sel); background: var(--sel-bg); }
 .opt.clear { background: none; border: 1px dashed var(--line); color: var(--muted); }
+.opt.has-pic { display: flex; gap: 12px; align-items: center; }
+.opt .txt { display: grid; gap: 3px; min-width: 0; }
+.opt .pic { flex: none; width: 56px; height: 56px; border-radius: 8px; overflow: hidden; display: block; }
+.opt .pic svg { width: 100%; height: 100%; display: block; }
+/* location map (potongan memanjang + melintang) */
+.mapsec { display: grid; gap: 8px; padding: 12px; border: 1px solid var(--line); border-radius: 12px; background: var(--bg); }
+.maprow { display: flex; gap: 12px; align-items: center; }
+.maprow svg { flex: none; }
+.maprow svg .zone { cursor: pointer; }
+.mapopts { flex: 1; min-width: 0; display: grid; gap: 6px; }
+.mapopts button { min-height: 40px; text-align: left; padding: 6px 10px; border: 1px solid var(--line); background: var(--surface); border-radius: 8px; cursor: pointer; font-size: .86rem; line-height: 1.25; }
+.mapopts button[aria-checked="true"] { border: 2px solid var(--sel); background: var(--sel-bg); font-weight: 600; }
+.mapopts button.clear { border-style: dashed; color: var(--muted); background: none; }
+.mapnote { font-size: .8rem; color: var(--muted); }
+.maphead { display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; }
 .sheet .multi-done { margin-top: 4px; align-self: flex-end; background: var(--accent); color: var(--accent-fg); border: 0; border-radius: 8px; padding: 9px 16px; font-weight: 500; cursor: pointer; }
 
 /* results */
@@ -252,6 +267,7 @@ nav.bottom button[aria-selected="true"] { color: var(--accent); font-weight: 600
       <p><b>TumTul</b> (Tumor Tulang) adalah alat referensi dan edukasi untuk diagnosis banding lesi tulang dari gambaran radiografik, termasuk lesi bukan tumor yang menyerupai tumor.</p>
       <p>Setiap entitas memiliki bobot per fitur: <b class="mono">+3</b> ciri khas, <b class="mono">+2</b> tipikal, <b class="mono">+1</b> kompatibel, <b class="mono">0</b> netral, <b class="mono">−2</b> tidak lazim, <b class="mono">−5</b> hampir eksklusi. Skor = prior prevalensi entitas (0 umum, −1 jarang, −2 sangat jarang) + jumlah bobot untuk fitur yang diisi + bobot aturan konjungtif yang terpenuhi. Fitur yang tidak diisi tidak mengubah skor.</p>
       <p>Entitas dengan skor sama diberi peringkat yang sama (ditandai <b>seri</b>); urutan di dalam kelompok seri tidak bermakna klinis.</p>
+      <p>Lokasi diisi pada diagram tulang (potongan memanjang dan melintang), dan pilihan margin, reaksi periosteal, serta matriks disertai piktogram skematis buatan sendiri (terang = tulang padat, gelap = lusen) untuk menyamakan persepsi istilah; piktogram bukan gambar pasien.</p>
       <p>Beberapa isian saling bergantung: posisi longitudinal hanya untuk tulang panjang; Lodwick hanya untuk lesi litik/campuran yang tidak terletak di permukaan; pasangan nilai yang mustahil menurut definisinya tidak dapat dipilih bersamaan (pilihan terakhir yang berlaku).</p>
       <p>Entitas dengan bobot −5 dipindahkan ke daftar "disingkirkan" beserta alasannya; yang skor hipotetisnya tinggi tetap ditampilkan abu-abu di daftar utama agar tidak luput.</p>
       <p>Sumbu A menilai pola pertumbuhan dari margin (Lodwick–Madewell), korteks, reaksi periosteal, dan massa jaringan lunak. Pola agresif tidak sama dengan ganas.</p>
@@ -363,11 +379,109 @@ nav.bottom button[aria-selected="true"] { color: var(--accent); font-weight: 600
     document.getElementById('cnt-feat').textContent = n;
   }
 
+  // ---------- pictograms (own schematic drawings, radiograph-like: light = dense bone, dark = lucent)
+  const PB = '<rect width="64" height="64" fill="#59636a"/>';                       // bone background
+  const PC = '<rect width="64" height="64" fill="#1b2126"/><rect width="18" height="64" fill="#59636a"/><rect x="18" width="8" height="64" fill="#d9d5cc"/>'; // soft tissue | medulla | cortex
+  const PL = '<circle cx="32" cy="32" r="22" fill="#1b2126"/>';                      // lucent lesion
+  const PICTO = {
+    margin_lodwick: {
+      IA: PB + '<circle cx="32" cy="32" r="16" fill="#1b2126" stroke="#e7e3da" stroke-width="5"/>',
+      IB: PB + '<circle cx="32" cy="32" r="18" fill="#1b2126"/>',
+      IC: '<defs><radialGradient id="pic-ic"><stop offset="0" stop-color="#1b2126"/><stop offset=".45" stop-color="#1b2126"/><stop offset="1" stop-color="#59636a"/></radialGradient></defs>' + PB + '<circle cx="32" cy="32" r="27" fill="url(#pic-ic)"/>',
+      II: PB + '<g fill="#1b2126"><ellipse cx="22" cy="20" rx="7" ry="5"/><ellipse cx="40" cy="17" rx="5" ry="6"/><ellipse cx="31" cy="32" rx="8" ry="6"/><ellipse cx="47" cy="33" rx="5" ry="4"/><ellipse cx="17" cy="38" rx="5" ry="6"/><ellipse cx="27" cy="47" rx="6" ry="4"/><ellipse cx="42" cy="46" rx="6" ry="5"/><ellipse cx="52" cy="21" rx="3" ry="4"/></g>',
+      III: PB + '<g stroke="#1b2126" stroke-width="2" stroke-linecap="round"><path d="M12 12v5M19 20v6M27 10v6M35 16v7M44 11v5M52 18v6M14 30v6M23 34v5M31 28v7M40 32v5M49 30v7M11 44v6M19 48v5M28 43v7M37 46v6M45 42v6M53 47v5M57 34v4M8 22v4"/></g>',
+    },
+    periosteal: {
+      none: PC,
+      solid_thin: PC + '<path d="M26 10C36 20 36 44 26 54Z" fill="#d9d5cc"/>',
+      shell: PC + '<ellipse cx="24" cy="32" rx="20" ry="19" fill="#262d32"/><path d="M26 13C50 16 50 48 26 51" fill="none" stroke="#d9d5cc" stroke-width="1.6"/>',
+      lamellated: PC + '<g fill="none" stroke="#d9d5cc" stroke-width="1.5"><path d="M28 12C34 22 34 42 28 52"/><path d="M28 8C40 20 40 44 28 56"/><path d="M28 4C46 18 46 46 28 60"/></g>',
+      spiculated: PC + '<path d="M26 12h9M26 17h13M26 22h16M26 27h19M26 32h20M26 37h19M26 42h16M26 47h13M26 52h9" stroke="#d9d5cc" stroke-width="1.5" stroke-linecap="round"/>',
+      codman: PC + '<rect x="18" y="24" width="8" height="40" fill="#6b757b"/><ellipse cx="34" cy="44" rx="17" ry="20" fill="#343c42"/><path d="M26 6L38 24L26 24Z" fill="#d9d5cc"/>',
+      present_unspecified: PC + '<path d="M26 12C40 20 40 44 26 52Z" fill="#d9d5cc" opacity=".35"/><text x="41" y="39" font-size="20" font-family="sans-serif" fill="#d9d5cc" text-anchor="middle">?</text>',
+    },
+    matrix: {
+      none: PB + PL,
+      osteoid: PB + PL + '<g fill="#e7e3da" opacity=".6"><circle cx="26" cy="27" r="8"/><circle cx="36" cy="24" r="7"/><circle cx="38" cy="36" r="9"/><circle cx="27" cy="39" r="7"/><circle cx="32" cy="31" r="7"/></g>',
+      chondroid: PB + PL + '<g fill="none" stroke="#e7e3da" stroke-width="1.6" stroke-linecap="round"><circle cx="25" cy="25" r="4"/><circle cx="38" cy="29" r="4.5"/><circle cx="29" cy="40" r="3.5"/><path d="M33 19a5 5 0 0 1 8 2M19 34a5 5 0 0 0 5 5M36 41a5 5 0 0 0 7-4M42 21a4 4 0 0 1 3 5"/></g>',
+      ground_glass: PB + '<circle cx="32" cy="32" r="22" fill="#8f979b" stroke="#d9d5cc" stroke-width="2"/>',
+      coarse_trabeculae: '<rect width="64" height="64" fill="#1b2126"/><rect x="12" y="14" width="40" height="36" rx="3" fill="#343c42" stroke="#d9d5cc" stroke-width="2"/><path d="M19 16v32M26 16v32M33 16v32M40 16v32M47 16v32" stroke="#d9d5cc" stroke-width="2.2"/>',
+    },
+  };
+  const pic = (feat, v) => PICTO[feat] && PICTO[feat][v] ? `<span class="pic"><svg viewBox="0 0 64 64" aria-hidden="true">${PICTO[feat][v]}</svg></span>` : '';
+
+  // Apply a single-value choice with the same conflict rules as the picker (c === null clears).
+  function choose(code, c) {
+    if (c === null) { delete state[code]; featNotice = ''; update(); return; }
+    const cf = conflictsFor(code, c);
+    featNotice = cf.map(x => `${F[x.feat].label_id}: ${labelOf(x.feat, x.val)} dikosongkan — tidak sesuai dengan ${F[code].label_id}: ${labelOf(code, c)} (${x.why}).`).join(' ');
+    for (const x of cf) { if (Array.isArray(state[x.feat])) { state[x.feat] = state[x.feat].filter(y => y !== x.val); if (!state[x.feat].length) delete state[x.feat]; } else delete state[x.feat]; }
+    state[code] = c; update();
+  }
+
+  // ---------- location map: longitudinal + transverse position chosen on a bone diagram
+  const BONE = 'M40 30C40 12 60 8 80 8C100 8 120 12 120 30C122 50 116 62 108 80C100 100 96 120 96 150L96 290C96 320 100 340 108 360C116 378 122 390 120 410C120 428 100 432 80 432C60 432 40 428 40 410C38 390 44 378 52 360C60 340 64 320 64 290L64 150C64 120 60 100 52 80C44 62 38 50 40 30Z';
+  const LBANDS = { epiphysis_apophysis: [[0, 52], [388, 52]], metaphysis: [[52, 58], [330, 58]], metadiaphysis: [[110, 40], [290, 40]], diaphysis: [[150, 140]] };
+  const TSHAPES = {
+    central: '<circle cx="80" cy="80" r="14"/>', eccentric: '<circle cx="102" cy="62" r="15"/>', cortical: '<ellipse cx="26" cy="80" rx="6" ry="11"/>',
+    juxtacortical_surface: '<path d="M116 131C122 156 148 150 141 127C138 119 131 116 125 121Z"/>',
+    juxtacortical_continuous: '<path d="M30 44L14 27C7 17 18 6 28 13L44 30Z"/>',
+  };
+  function mapHTML() {
+    const lon = enabled('longitudinal'), L = state.longitudinal, T = state.transverse;
+    const opts = (code, cur) => F[code].values.filter(v => !HIDDEN_VALUES.has(v.code)).map(v => `<button type="button" role="radio" data-feat="${code}" data-code="${v.code}" aria-checked="${cur === v.code}">${v.label_id}</button>`).join('') +
+      `<button type="button" class="clear" data-feat="${code}" data-code="__clear">Tidak diketahui / ragu</button>`;
+    const bands = Object.entries(LBANDS).map(([v, rs]) => rs.map(([y, h]) => `<rect class="zone" data-feat="longitudinal" data-code="${v}" x="0" y="${y}" width="160" height="${h}" fill="${L === v ? 'var(--sel)' : 'transparent'}" opacity="${L === v ? .45 : 1}"/>`).join('')).join('');
+    const shapes = Object.entries(TSHAPES).map(([v, d]) => `<g class="zone" data-feat="transverse" data-code="${v}" ${T === v ? 'fill="var(--sel)" stroke="var(--sel)" stroke-width="1.5"' : 'fill="transparent" stroke="var(--muted)" stroke-width="1.5" stroke-dasharray="4 3"'}>${d}</g>`).join('');
+    return `<div class="mapsec"><div class="maphead"><span class="eyebrow">Tulang</span><button type="button" class="btn" id="map-bone">${has('bone_class') ? labelOf('bone_class', state.bone_class) : 'Belum diisi'} · ubah</button></div></div>
+      <div class="mapsec"><span class="eyebrow">Potongan memanjang</span>
+        ${lon ? `<div class="maprow"><svg viewBox="0 0 160 440" width="96" height="264" aria-hidden="true"><defs><clipPath id="map-bone-clip"><path d="${BONE}"/></clipPath></defs>
+          <g clip-path="url(#map-bone-clip)"><rect width="160" height="440" fill="var(--surface-2)"/>${bands}
+            <path d="M30 110H130M30 150H130M30 290H130M30 330H130" stroke="var(--line)" stroke-width="1.5" pointer-events="none"/>
+            <path d="M30 52H130M30 388H130" stroke="var(--muted)" stroke-width="2" stroke-dasharray="5 4" pointer-events="none"/></g>
+          <path d="${BONE}" fill="none" stroke="var(--fg)" stroke-width="3" stroke-linejoin="round" pointer-events="none"/></svg>
+          <div class="mapopts" role="radiogroup" aria-label="Posisi longitudinal">${opts('longitudinal', L)}</div></div>
+          <p class="mapnote">Ketuk zona pada tulang atau tombol di sampingnya. Garis putus-putus = lempeng pertumbuhan; kedua ujung tulang dinilai sama.</p>`
+          : `<p class="mapnote">${blockMsg('longitudinal')}.</p>`}</div>
+      <div class="mapsec"><span class="eyebrow">Potongan melintang</span>
+        <div class="maprow"><svg viewBox="-6 -6 172 172" width="120" height="120" aria-hidden="true">
+          <circle cx="80" cy="80" r="62" fill="var(--surface-2)" stroke="var(--fg)" stroke-width="3"/><circle cx="80" cy="80" r="46" fill="var(--surface)" stroke="var(--muted)" stroke-width="1.5"/>${shapes}</svg>
+          <div class="mapopts" role="radiogroup" aria-label="Posisi transversal">${opts('transverse', T)}</div></div></div>
+      ${featNotice ? `<p class="notice info" role="status">${featNotice}</p>` : ''}`;
+  }
+  function openMap() {
+    lastFocus = document.activeElement;
+    sheetRoot.innerHTML = `<div class="sheet-scrim" id="scrim"></div>
+      <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="sh-title">
+        <div class="grab"></div>
+        <div class="sh-head"><h2 id="sh-title">Lokasi lesi</h2><button type="button" class="close" id="sh-close" aria-label="Tutup">✕</button></div>
+        <div class="opts" id="map-body"></div>
+        <button type="button" class="multi-done" id="sh-done">Selesai</button>
+      </div>`;
+    const body = document.getElementById('map-body');
+    const close = () => { sheetRoot.innerHTML = ''; document.removeEventListener('keydown', onKey); if (lastFocus) lastFocus.focus(); };
+    const onKey = e => { if (e.key === 'Escape') close(); };
+    const paint = (focusSel) => { body.innerHTML = mapHTML(); if (focusSel) { const el = body.querySelector(focusSel); if (el) el.focus(); } };
+    body.addEventListener('click', e => {
+      if (e.target.closest('#map-bone')) { const back = lastFocus; close(); lastFocus = back; openSheet('bone_class'); return; }
+      const z = e.target.closest('[data-feat]'); if (!z) return;
+      const feat = z.dataset.feat, c = z.dataset.code;
+      choose(feat, c === '__clear' ? null : c);
+      paint(`button[data-feat="${feat}"][data-code="${c}"]`);
+    });
+    document.addEventListener('keydown', onKey);
+    document.getElementById('scrim').addEventListener('click', close);
+    document.getElementById('sh-close').addEventListener('click', close);
+    document.getElementById('sh-done').addEventListener('click', close);
+    paint(); document.getElementById('sh-close').focus();
+  }
+
   // ---------- bottom sheet picker
   const sheetRoot = document.getElementById('sheet-root');
   let lastFocus = null;
   function openSheet(code) {
     if (!enabled(code)) return;
+    if (code === 'longitudinal' || code === 'transverse') return openMap();
     const spec = F[code]; lastFocus = document.activeElement;
     const multi = !!spec.multi;
     const cur = state[code];
@@ -376,8 +490,7 @@ nav.bottom button[aria-selected="true"] { color: var(--accent); font-weight: 600
         <div class="grab"></div>
         <div class="sh-head"><h2 id="sh-title">${spec.label_id}</h2><button type="button" class="close" id="sh-close" aria-label="Tutup">✕</button></div>
         <div class="opts" role="${multi ? 'group' : 'radiogroup'}">
-          ${spec.values.filter(v => !HIDDEN_VALUES.has(v.code)).map(v => { const cf = conflictsFor(code, v.code); return `<button type="button" class="opt" role="${multi ? 'checkbox' : 'radio'}" data-code="${v.code}" aria-checked="${multi ? (cur || []).includes(v.code) : cur === v.code}">
-              <span class="l">${v.label_id}</span>${v.help_id ? `<span class="h">${v.help_id}</span>` : ''}${cf.map(x => `<span class="h conf">Akan mengosongkan ${F[x.feat].label_id}: ${labelOf(x.feat, x.val)} (${x.why})</span>`).join('')}</button>`; }).join('')}
+          ${spec.values.filter(v => !HIDDEN_VALUES.has(v.code)).map(v => { const cf = conflictsFor(code, v.code); return `<button type="button" class="opt${pic(code, v.code) ? ' has-pic' : ''}" role="${multi ? 'checkbox' : 'radio'}" data-code="${v.code}" aria-checked="${multi ? (cur || []).includes(v.code) : cur === v.code}">${pic(code, v.code)}<span class="txt"><span class="l">${v.label_id}</span>${v.help_id ? `<span class="h">${v.help_id}</span>` : ''}${cf.map(x => `<span class="h conf">Akan mengosongkan ${F[x.feat].label_id}: ${labelOf(x.feat, x.val)} (${x.why})</span>`).join('')}</span></button>`; }).join('')}
           <button type="button" class="opt clear" data-code="__clear"><span class="l">Tidak diketahui / ragu</span><span class="h">Kosongkan fitur ini; tidak mengubah skor.</span></button>
         </div>
         ${multi ? '<button type="button" class="multi-done" id="sh-done">Selesai</button>' : ''}

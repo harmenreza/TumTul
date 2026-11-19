@@ -1,0 +1,355 @@
+{
+ "id": "osteoid_osteoma",
+ "name_en": "Osteoid osteoma",
+ "name_id": "Osteoid osteoma",
+ "aliases": [
+  "OO"
+ ],
+ "who_group": "osteogenic",
+ "behaviour": "benign",
+ "definition_id": "Tumor pembentuk tulang jinak berukuran kecil (<2 cm) dengan nidus lusen dikelilingi sklerosis reaktif; khas nyeri malam yang membaik dengan NSAID.",
+ "source_ids": [
+  "S-01",
+  "S-06"
+ ],
+ "feature_weights": {
+  "age_group": {
+   "0-9": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "20-39": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "40-59": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "60+": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "10-19_unknown": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "10-19_open": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "10-19_closed": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   }
+  },
+  "bone_class": {
+   "long_bone": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "spine_posterior": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "flat_bone": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "small_tubular_hand_foot": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   }
+  },
+  "longitudinal": {
+   "diaphysis": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "metaphysis": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "epiphysis_apophysis": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   }
+  },
+  "transverse": {
+   "cortical": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ],
+    "note_id": "Lesi berbasis korteks dengan penebalan fusiform"
+   },
+   "juxtacortical_surface": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "central": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "eccentric": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "juxtacortical_continuous": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   }
+  },
+  "density": {
+   "sclerotic": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "mixed": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "lytic": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   }
+  },
+  "margin_lodwick": {
+   "IA": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "IC": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "II": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "III": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   }
+  },
+  "cortex": {
+   "intact": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "destruction": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   }
+  },
+  "soft_tissue_mass": {
+   "present": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   }
+  },
+  "periosteal": {
+   "solid_thin": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ],
+    "note_id": "Periosteal solid regular / penebalan korteks fokal"
+   },
+   "none": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "lamellated": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "spiculated": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "codman": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "present_unspecified": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Reaksi periosteal menandai proses aktif; pola tidak diketahui"
+   }
+  },
+  "matrix": {
+   "osteoid": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "none": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "chondroid": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "ground_glass": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   }
+  },
+  "size_cm": {
+   "<2": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "2-5": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   ">5": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   }
+  },
+  "clinical_flags": {
+   "night_pain_nsaid_relief": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   }
+  }
+ },
+ "pitfalls_id": [
+  "Sklerosis padat dapat menyembunyikan nidus pada radiograf; CT tipis menampilkan nidus.",
+  "Stress fracture dan abses Brodie dapat menyerupai."
+ ],
+ "rules": [],
+ "base_prior": 0,
+ "base_prior_source_ids": [
+  "S-01",
+  "S-05",
+  "S-06"
+ ]
+}

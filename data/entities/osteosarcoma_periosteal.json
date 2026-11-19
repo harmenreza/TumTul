@@ -1,0 +1,315 @@
+{
+ "id": "osteosarcoma_periosteal",
+ "name_en": "Periosteal osteosarcoma",
+ "name_id": "Osteosarkoma periosteal",
+ "who_group": "osteogenic",
+ "behaviour": "malignant",
+ "definition_id": "Osteosarkoma permukaan derajat menengah, dominan kondroblastik, pada diafisis tulang panjang remaja dan dewasa muda; erosi permukaan korteks (saucerization) dengan spikula tegak lurus.",
+ "source_ids": [
+  "S-01",
+  "S-15"
+ ],
+ "feature_weights": {
+  "age_group": {
+   "0-9": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "20-39": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "40-59": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "60+": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "10-19_unknown": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "10-19_open": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "10-19_closed": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   }
+  },
+  "bone_class": {
+   "long_bone": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ],
+    "note_id": "Femur dan tibia"
+   },
+   "flat_bone": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   }
+  },
+  "longitudinal": {
+   "diaphysis": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "metadiaphysis": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "metaphysis": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "epiphysis_apophysis": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   }
+  },
+  "transverse": {
+   "juxtacortical_surface": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "central": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "eccentric": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "cortical": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "juxtacortical_continuous": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   }
+  },
+  "density": {
+   "lytic": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "mixed": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "sclerotic": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   }
+  },
+  "cortex": {
+   "intact": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ],
+    "note_id": "Korteks menebal dengan erosi permukaan dangkal (saucerization), tanpa invasi meduler"
+   },
+   "focal_breach": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "destruction": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "endosteal_scalloping": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "saucerization": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ],
+    "note_id": "Erosi permukaan korteks dengan penebalan di bawah massa"
+   }
+  },
+  "soft_tissue_mass": {
+   "present": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "absent": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   }
+  },
+  "periosteal": {
+   "spiculated": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ],
+    "note_id": "Spikula tegak lurus dari korteks ke dalam massa"
+   },
+   "codman": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "lamellated": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "none": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "solid_thin": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "present_unspecified": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Reaksi periosteal menandai proses aktif; pola tidak diketahui"
+   }
+  },
+  "matrix": {
+   "chondroid": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "osteoid": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "none": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "ground_glass": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   }
+  }
+ },
+ "pitfalls_id": [
+  "Kondroma periosteal: lebih kecil, berbatas tegas dengan penyangga sklerotik, tanpa spikula agresif.",
+  "High-grade surface osteosarcoma: tampak lebih agresif dan dapat menginvasi meduler."
+ ],
+ "rules": [],
+ "aliases": [],
+ "base_prior": -2,
+ "base_prior_source_ids": [
+  "S-01",
+  "S-05",
+  "S-06"
+ ],
+ "base_prior_note_id": "Entitas sangat jarang: prior prevalensi −2"
+}

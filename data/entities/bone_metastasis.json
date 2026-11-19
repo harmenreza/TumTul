@@ -1,0 +1,330 @@
+{
+ "id": "bone_metastasis",
+ "name_en": "Bone metastasis (carcinoma)",
+ "name_id": "Metastasis tulang (karsinoma)",
+ "who_group": "non_neoplastic_or_secondary",
+ "behaviour": "secondary_malignant",
+ "definition_id": "Keganasan tulang tersering pada dewasa >40 tahun; mengikuti distribusi sumsum merah (aksial, pelvis, tulang panjang proksimal), poliostotik pada >90% kasus, litik, sklerotik, atau campuran.",
+ "source_ids": [
+  "S-01"
+ ],
+ "feature_weights": {
+  "age_group": {
+   "0-9": {
+    "weight": -2,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Pada anak: neuroblastoma — di luar cakupan v1"
+   },
+   "20-39": {
+    "weight": -2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "40-59": {
+    "weight": 3,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "60+": {
+    "weight": 3,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "10-19_unknown": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "10-19_open": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "10-19_closed": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "bone_class": {
+   "spine_body": {
+    "weight": 3,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "flat_bone": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "long_bone": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Terutama proksimal; lesi distal siku/lutut jarang"
+   },
+   "sacrum": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "craniofacial": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "small_tubular_hand_foot": {
+    "weight": -2,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "longitudinal": {
+   "metaphysis": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "diaphysis": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "metadiaphysis": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "epiphysis_apophysis": {
+    "weight": 0,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "transverse": {
+   "central": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "eccentric": {
+    "weight": 0,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "cortical": {
+    "weight": 0,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Metastasis kortikal: khas paru"
+   }
+  },
+  "density": {
+   "lytic": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "mixed": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "sclerotic": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Prostat, payudara, karsinoid, uroepitelial"
+   }
+  },
+  "margin_lodwick": {
+   "IA": {
+    "weight": -2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "IB": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "IC": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "II": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "III": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "cortex": {
+   "destruction": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "focal_breach": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "expansion_shell": {
+    "weight": 0,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Ekspansil 'blow-out': ginjal, tiroid"
+   },
+   "intact": {
+    "weight": 0,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "soft_tissue_mass": {
+   "present": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "periosteal": {
+   "none": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "lamellated": {
+    "weight": 0,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "codman": {
+    "weight": 0,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "spiculated": {
+    "weight": 0,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "solid_thin": {
+    "weight": 0,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "matrix": {
+   "none": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "osteoid": {
+    "weight": -2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "chondroid": {
+    "weight": -2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "ground_glass": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "coarse_trabeculae": {
+    "weight": -2,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "multiplicity": {
+   "multiple": {
+    "weight": 3,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "solitary": {
+    "weight": 0,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "clinical_flags": {
+   "known_primary_malignancy": {
+    "weight": 3,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  }
+ },
+ "pitfalls_id": [
+  "Lesi soliter pada pasien dengan riwayat kanker tetap perlu biopsi — hingga sepertiga dapat merupakan tumor primer lain.",
+  "Metastasis sklerotik vs enostosis: ambang atenuasi CT dapat membantu (S-01)."
+ ],
+ "rules": [],
+ "aliases": [],
+ "base_prior": 0,
+ "base_prior_source_ids": [
+  "S-01",
+  "S-05",
+  "S-06"
+ ]
+}

@@ -1,0 +1,300 @@
+{
+ "id": "osteosarcoma_parosteal",
+ "name_en": "Parosteal osteosarcoma",
+ "name_id": "Osteosarkoma parosteal",
+ "who_group": "osteogenic",
+ "behaviour": "malignant",
+ "definition_id": "Osteosarkoma permukaan derajat rendah pada dewasa muda; massa padat terosifikasi menempel lebar di permukaan metafisis (klasik femur distal posterior) dengan celah tipis antara massa dan korteks.",
+ "source_ids": [
+  "S-01",
+  "S-15"
+ ],
+ "feature_weights": {
+  "age_group": {
+   "0-9": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "20-39": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "40-59": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "60+": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "10-19_unknown": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "10-19_open": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "10-19_closed": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   }
+  },
+  "bone_class": {
+   "long_bone": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ],
+    "note_id": "Femur distal posterior tersering"
+   },
+   "flat_bone": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "spine_body": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   }
+  },
+  "longitudinal": {
+   "metaphysis": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "metadiaphysis": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "diaphysis": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "epiphysis_apophysis": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   }
+  },
+  "transverse": {
+   "juxtacortical_surface": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "central": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "eccentric": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "cortical": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "juxtacortical_continuous": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ],
+    "note_id": "Massa menempel pada korteks tanpa kontinuitas meduler"
+   }
+  },
+  "density": {
+   "sclerotic": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ],
+    "note_id": "Massa padat terosifikasi, lebih padat di pusat daripada tepi (kebalikan miositis osifikans)"
+   },
+   "mixed": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "lytic": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   }
+  },
+  "cortex": {
+   "intact": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ],
+    "note_id": "Celah radiolusen tipis antara massa dan korteks (string sign) pada tahap awal"
+   },
+   "focal_breach": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "destruction": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "saucerization": {
+    "weight": 0,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "soft_tissue_mass": {
+   "present": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "absent": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   }
+  },
+  "periosteal": {
+   "none": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "codman": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "lamellated": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "spiculated": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   }
+  },
+  "matrix": {
+   "osteoid": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "none": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "chondroid": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "ground_glass": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   }
+  }
+ },
+ "pitfalls_id": [
+  "Miositis osifikans: zona osifikasi matur di tepi, bukan di pusat, dan terpisah dari korteks.",
+  "Osteokondroma sesil: ada kontinuitas meduler; parosteal osteosarkoma tidak."
+ ],
+ "rules": [],
+ "aliases": [],
+ "base_prior": -2,
+ "base_prior_source_ids": [
+  "S-01",
+  "S-05",
+  "S-06"
+ ],
+ "base_prior_note_id": "Entitas sangat jarang: prior prevalensi −2"
+}

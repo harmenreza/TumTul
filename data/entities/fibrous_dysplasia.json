@@ -1,0 +1,369 @@
+{
+ "id": "fibrous_dysplasia",
+ "name_en": "Fibrous dysplasia",
+ "name_id": "Displasia fibrosa",
+ "aliases": [
+  "FD"
+ ],
+ "who_group": "other_mesenchymal",
+ "behaviour": "benign",
+ "definition_id": "Lesi fibro-oseus jinak akibat mutasi GNAS di mana tulang normal diganti jaringan fibrosa dengan trabekula imatur; matriks ground-glass klasik, dapat mono- atau poliostotik.",
+ "source_ids": [
+  "S-01",
+  "S-22"
+ ],
+ "feature_weights": {
+  "age_group": {
+   "0-9": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-22"
+    ]
+   },
+   "20-39": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-22"
+    ]
+   },
+   "40-59": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-22"
+    ]
+   },
+   "60+": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-22"
+    ]
+   },
+   "10-19_unknown": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-22"
+    ]
+   },
+   "10-19_open": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-22"
+    ]
+   },
+   "10-19_closed": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-22"
+    ]
+   }
+  },
+  "bone_class": {
+   "long_bone": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-22"
+    ],
+    "note_id": "Femur proksimal (deformitas shepherd's crook)"
+   },
+   "craniofacial": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-22"
+    ]
+   },
+   "flat_bone": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-22"
+    ]
+   },
+   "spine_body": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-22"
+    ]
+   }
+  },
+  "longitudinal": {
+   "diaphysis": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-22"
+    ]
+   },
+   "metadiaphysis": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-22"
+    ]
+   },
+   "metaphysis": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-22"
+    ]
+   },
+   "epiphysis_apophysis": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-22"
+    ]
+   }
+  },
+  "transverse": {
+   "central": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-22"
+    ]
+   },
+   "eccentric": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-22"
+    ]
+   },
+   "cortical": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-22"
+    ]
+   },
+   "juxtacortical_surface": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-22"
+    ]
+   },
+   "juxtacortical_continuous": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-22"
+    ]
+   }
+  },
+  "density": {
+   "mixed": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-22"
+    ]
+   },
+   "lytic": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-22"
+    ]
+   },
+   "sclerotic": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-22"
+    ]
+   }
+  },
+  "margin_lodwick": {
+   "IA": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-22"
+    ]
+   },
+   "IB": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-22"
+    ]
+   },
+   "IC": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-22"
+    ]
+   },
+   "II": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-22"
+    ]
+   },
+   "III": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-22"
+    ]
+   }
+  },
+  "cortex": {
+   "intact": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-22"
+    ]
+   },
+   "endosteal_scalloping": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-22"
+    ]
+   },
+   "expansion_shell": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-22"
+    ]
+   },
+   "focal_breach": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-22"
+    ]
+   },
+   "destruction": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-22"
+    ]
+   }
+  },
+  "soft_tissue_mass": {
+   "present": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-22"
+    ]
+   }
+  },
+  "periosteal": {
+   "none": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-22"
+    ]
+   },
+   "solid_thin": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-22"
+    ]
+   },
+   "lamellated": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-22"
+    ]
+   },
+   "spiculated": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-22"
+    ]
+   },
+   "codman": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-22"
+    ]
+   },
+   "present_unspecified": {
+    "weight": -2,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Reaksi periosteal tidak lazim untuk entitas ini"
+   }
+  },
+  "matrix": {
+   "ground_glass": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-22"
+    ],
+    "note_id": "Matriks ground-glass adalah ciri khas, meski tidak selalu ada"
+   },
+   "none": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-22"
+    ]
+   },
+   "chondroid": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-22"
+    ],
+    "note_id": "Fokus fibrokartilago dapat memberi kalsifikasi kondroid"
+   },
+   "osteoid": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-22"
+    ]
+   }
+  },
+  "multiplicity": {
+   "multiple": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-22"
+    ],
+    "note_id": "Poliostotik: pertimbangkan McCune-Albright / Mazabraud"
+   }
+  }
+ },
+ "pitfalls_id": [
+  "Lesi tanpa ground-glass dapat meniru kista atau NOF.",
+  "Transformasi ganas sangat jarang; nyeri baru atau destruksi korteks perlu evaluasi."
+ ],
+ "rules": [],
+ "base_prior": 0,
+ "base_prior_source_ids": [
+  "S-01",
+  "S-05",
+  "S-06"
+ ]
+}

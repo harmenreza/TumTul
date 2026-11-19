@@ -1,0 +1,331 @@
+{
+ "id": "clear_cell_chondrosarcoma",
+ "name_en": "Clear cell chondrosarcoma",
+ "name_id": "Kondrosarkoma sel jernih",
+ "who_group": "chondrogenic",
+ "behaviour": "malignant",
+ "definition_id": "Kondrosarkoma derajat rendah langka pada dewasa yang khas mengenai epifisis tulang panjang proksimal (femur, humerus); tampak litik berbatas relatif tegas sehingga meniru kondroblastoma pada pasien yang lebih tua.",
+ "source_ids": [
+  "S-01",
+  "S-18"
+ ],
+ "feature_weights": {
+  "age_group": {
+   "0-9": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   },
+   "20-39": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   },
+   "40-59": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   },
+   "60+": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   },
+   "10-19_unknown": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   },
+   "10-19_open": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ],
+    "note_id": "Lesi epifisis dewasa; tidak dijumpai pada fisis terbuka"
+   },
+   "10-19_closed": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ],
+    "note_id": "Lesi epifisis dewasa; tidak dijumpai pada fisis terbuka"
+   }
+  },
+  "bone_class": {
+   "long_bone": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ],
+    "note_id": "Femur proksimal dan humerus proksimal"
+   },
+   "flat_bone": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   },
+   "spine_body": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   }
+  },
+  "longitudinal": {
+   "epiphysis_apophysis": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ],
+    "note_id": "Lesi epifisis pada dewasa — pertimbangkan bersama GCTB"
+   },
+   "metaphysis": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   },
+   "diaphysis": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   }
+  },
+  "transverse": {
+   "central": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   },
+   "eccentric": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   },
+   "cortical": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   },
+   "juxtacortical_surface": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   },
+   "juxtacortical_continuous": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   }
+  },
+  "density": {
+   "lytic": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   },
+   "mixed": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   },
+   "sclerotic": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   }
+  },
+  "margin_lodwick": {
+   "IA": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   },
+   "IB": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   },
+   "IC": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   },
+   "II": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   },
+   "III": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   }
+  },
+  "cortex": {
+   "intact": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   },
+   "expansion_shell": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   },
+   "endosteal_scalloping": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   },
+   "destruction": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   }
+  },
+  "soft_tissue_mass": {
+   "present": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   },
+   "absent": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   }
+  },
+  "periosteal": {
+   "none": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   },
+   "spiculated": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   },
+   "codman": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   },
+   "present_unspecified": {
+    "weight": -2,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Reaksi periosteal tidak lazim untuk entitas ini"
+   }
+  },
+  "matrix": {
+   "chondroid": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   },
+   "none": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   },
+   "osteoid": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   },
+   "ground_glass": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   }
+  }
+ },
+ "pitfalls_id": [
+  "Kondroblastoma pada dewasa dengan fisis tertutup: pertimbangkan clear cell chondrosarcoma.",
+  "GCTB epifisis adalah banding utama lain."
+ ],
+ "rules": [],
+ "aliases": [],
+ "base_prior": -2,
+ "base_prior_source_ids": [
+  "S-01",
+  "S-05",
+  "S-06"
+ ],
+ "base_prior_note_id": "Entitas sangat jarang: prior prevalensi −2"
+}

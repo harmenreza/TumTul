@@ -56,6 +56,11 @@ all text pairs ≥ 4.5:1. Fonts: Source Serif 4 (headings, entity names), IBM Pl
 IBM Plex Mono (scores) — all SIL OFL 1.1; bundled in the Flutter app (see `LICENSES.md` §5).
 The same tokens are to be mapped to a Flutter `ThemeData` light/dark pair.
 
+Original visual elements (since 2026-11-19): location is entered on a bone diagram (longitudinal section +
+cross-section) instead of two list pickers, and the options for margin, periosteal reaction and matrix carry
+schematic pictograms drawn for this project (radiograph convention: light = dense, dark = lucent). Defined in
+`web/template.html` (`PICTO`, `mapHTML`); to be redrawn as Flutter `CustomPainter`/SVG assets from the same paths.
+
 ## Repository layout
 
 ```
@@ -160,5 +165,5 @@ Button "Lihat contoh gambar" on each ranked entity opens up to three typical rad
 and full attribution. Selection rules (owner): pre-treatment radiographs only; most typical case only (no source
 that calls the case atypical, unusual, rare-site, aggressive, mimic or misdiagnosed); longest side ≥ 500 px after
 cropping; licence CC0 / public domain / CC BY / CC BY-SA only. Every image is approved by the owner before it is
-shown. Status 2026-11-17: 64 approved images for 32 of 37 entities; none yet for clear cell chondrosarcoma,
+shown. Status 2026-11-17: 66 approved images for 32 of 37 entities; none yet for clear cell chondrosarcoma,
 periosteal chondroma, vertebral haemangioma, desmoplastic fibroma and periosteal osteosarcoma.

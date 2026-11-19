@@ -1,0 +1,392 @@
+{
+ "id": "enchondroma",
+ "name_en": "Enchondroma",
+ "name_id": "Enkondroma",
+ "who_group": "chondrogenic",
+ "behaviour": "benign",
+ "definition_id": "Tumor tulang rawan hialin jinak intrameduler; sangat sering di tulang tubular tangan, dan di tulang panjang biasanya temuan insidental dengan matriks kondroid.",
+ "source_ids": [
+  "S-01",
+  "S-06",
+  "S-18"
+ ],
+ "feature_weights": {
+  "age_group": {
+   "0-9": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "20-39": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "40-59": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "60+": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "10-19_unknown": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "10-19_open": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "10-19_closed": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   }
+  },
+  "bone_class": {
+   "small_tubular_hand_foot": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ],
+    "note_id": "Lokasi tersering; kondrosarkoma jarang di tangan/kaki"
+   },
+   "long_bone": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "flat_bone": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ],
+    "note_id": "Di pelvis, lesi kondroid lebih sering kondrosarkoma"
+   },
+   "spine_body": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   }
+  },
+  "longitudinal": {
+   "metaphysis": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "metadiaphysis": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "diaphysis": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "epiphysis_apophysis": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   }
+  },
+  "transverse": {
+   "central": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "eccentric": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "cortical": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "juxtacortical_surface": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ],
+    "note_id": "Kondroma permukaan dinilai sebagai kondroma periosteal"
+   },
+   "juxtacortical_continuous": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ],
+    "note_id": "Kondroma permukaan dinilai sebagai kondroma periosteal"
+   }
+  },
+  "density": {
+   "lytic": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "mixed": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "sclerotic": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   }
+  },
+  "margin_lodwick": {
+   "IA": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "IB": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "IC": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "II": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "III": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   }
+  },
+  "cortex": {
+   "intact": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "endosteal_scalloping": {
+    "weight": 1,
+    "source_ids": [
+     "S-18"
+    ],
+    "note_id": "Scalloping dangkal lazim; scalloping dalam >2/3 korteks mengarah ke kondrosarkoma"
+   },
+   "expansion_shell": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ],
+    "note_id": "Ekspansi lazim hanya di tulang tubular kecil"
+   },
+   "focal_breach": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "destruction": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   }
+  },
+  "soft_tissue_mass": {
+   "present": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   }
+  },
+  "periosteal": {
+   "none": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "solid_thin": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "lamellated": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "spiculated": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "codman": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "present_unspecified": {
+    "weight": -2,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Reaksi periosteal tidak lazim untuk entitas ini"
+   }
+  },
+  "matrix": {
+   "chondroid": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "none": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "osteoid": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "ground_glass": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   }
+  },
+  "size_cm": {
+   "<2": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "2-5": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   ">5": {
+    "weight": -2,
+    "source_ids": [
+     "S-18"
+    ],
+    "note_id": "Ukuran >5 cm meningkatkan kekhawatiran kondrosarkoma"
+   }
+  },
+  "multiplicity": {
+   "multiple": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Multipel: enkondromatosis (Ollier / Maffucci)"
+   }
+  }
+ },
+ "pitfalls_id": [
+  "Pembedaan enkondroma vs atypical cartilaginous tumour pada tulang panjang sering tidak mungkin dari radiograf saja; nyeri, ukuran, scalloping dalam, dan pertumbuhan adalah penentu (S-18).",
+  "Infark tulang dapat meniru matriks kondroid."
+ ],
+ "rules": [],
+ "aliases": [],
+ "base_prior": 0,
+ "base_prior_source_ids": [
+  "S-01",
+  "S-05",
+  "S-06"
+ ]
+}

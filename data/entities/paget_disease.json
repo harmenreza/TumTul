@@ -1,0 +1,325 @@
+{
+ "id": "paget_disease",
+ "name_en": "Paget disease of bone",
+ "name_id": "Penyakit Paget tulang",
+ "who_group": "non_neoplastic_or_secondary",
+ "behaviour": "non_neoplastic",
+ "definition_id": "Gangguan remodeling tulang pada usia lanjut dengan fase litik, campuran, dan sklerotik; tulang membesar dengan korteks menebal dan trabekula kasar; pada tulang panjang dimulai subartikular dan maju sebagai front berbentuk api.",
+ "source_ids": [
+  "S-01"
+ ],
+ "feature_weights": {
+  "age_group": {
+   "0-9": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "20-39": {
+    "weight": -2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "40-59": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "60+": {
+    "weight": 3,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "10-19_unknown": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "10-19_open": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "10-19_closed": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "bone_class": {
+   "flat_bone": {
+    "weight": 3,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Pelvis: penebalan garis iliopektineal"
+   },
+   "spine_body": {
+    "weight": 3,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Vertebra 'picture frame'"
+   },
+   "long_bone": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Femur dan tibia; bowing"
+   },
+   "craniofacial": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Osteoporosis circumscripta → cotton wool"
+   },
+   "sacrum": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "longitudinal": {
+   "epiphysis_apophysis": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Dimulai di ujung subartikular tulang panjang"
+   },
+   "metaphysis": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "diaphysis": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Front litik berbentuk api (flame-shaped) maju ke diafisis"
+   },
+   "metadiaphysis": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "transverse": {
+   "central": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "cortical": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "eccentric": {
+    "weight": -2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "juxtacortical_surface": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "juxtacortical_continuous": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "density": {
+   "mixed": {
+    "weight": 3,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "sclerotic": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "lytic": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "margin_lodwick": {
+   "IB": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Front litik tegas berbentuk baji/api pada fase litik"
+   },
+   "IA": {
+    "weight": 0,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "IC": {
+    "weight": -2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "II": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "III": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "cortex": {
+   "intact": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Korteks menebal dengan tulang membesar — fitur kunci"
+   },
+   "expansion_shell": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Pembesaran tulang, bukan ekspansi kistik"
+   },
+   "destruction": {
+    "weight": -2,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Destruksi baru atau massa: curigai sarkoma Paget"
+   }
+  },
+  "soft_tissue_mass": {
+   "present": {
+    "weight": -2,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "periosteal": {
+   "none": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "spiculated": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "codman": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "lamellated": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "present_unspecified": {
+    "weight": -2,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Reaksi periosteal tidak lazim untuk entitas ini"
+   }
+  },
+  "matrix": {
+   "none": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "osteoid": {
+    "weight": -2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "chondroid": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "ground_glass": {
+    "weight": -2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "coarse_trabeculae": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Trabekula kasar dan menebal pada fase campuran/sklerotik"
+   }
+  },
+  "multiplicity": {
+   "multiple": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Poliostotik pada sebagian besar kasus"
+   }
+  }
+ },
+ "pitfalls_id": [
+  "Fase litik murni (osteoporosis circumscripta, front api) dapat meniru keganasan; pembesaran tulang dan penebalan korteks membedakannya.",
+  "Metastasis blastik dan limfoma adalah banding fase sklerotik."
+ ],
+ "rules": [],
+ "aliases": [],
+ "base_prior": -1,
+ "base_prior_source_ids": [
+  "S-01",
+  "S-05",
+  "S-06"
+ ],
+ "base_prior_note_id": "Entitas jarang: prior prevalensi −1"
+}

@@ -1,0 +1,365 @@
+{
+ "id": "simple_bone_cyst",
+ "name_en": "Simple (unicameral) bone cyst",
+ "name_id": "Kista tulang simpel (unikameral)",
+ "aliases": [
+  "UBC",
+  "SBC"
+ ],
+ "who_group": "other_mesenchymal",
+ "behaviour": "benign",
+ "definition_id": "Rongga berisi cairan serosa di metafisis sentral tulang panjang anak, terutama humerus dan femur proksimal; sering ditemukan setelah fraktur patologis.",
+ "source_ids": [
+  "S-01",
+  "S-06",
+  "S-04"
+ ],
+ "feature_weights": {
+  "age_group": {
+   "0-9": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "20-39": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "40-59": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "60+": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "10-19_unknown": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "10-19_open": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ],
+    "note_id": "Lesi skeletal imatur; menjadi laten setelah maturitas"
+   },
+   "10-19_closed": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ],
+    "note_id": "Lesi skeletal imatur; menjadi laten setelah maturitas"
+   }
+  },
+  "bone_class": {
+   "long_bone": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ],
+    "note_id": "Humerus proksimal dan femur proksimal"
+   },
+   "calcaneus": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "flat_bone": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "spine_body": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "spine_posterior": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   }
+  },
+  "longitudinal": {
+   "metaphysis": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "metadiaphysis": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "diaphysis": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ],
+    "note_id": "Bermigrasi ke diafisis seiring pertumbuhan"
+   },
+   "epiphysis_apophysis": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   }
+  },
+  "transverse": {
+   "central": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "eccentric": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "cortical": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "juxtacortical_surface": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "juxtacortical_continuous": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   }
+  },
+  "density": {
+   "lytic": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "mixed": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "sclerotic": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   }
+  },
+  "margin_lodwick": {
+   "IA": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "IB": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "IC": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "II": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "III": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   }
+  },
+  "cortex": {
+   "intact": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "expansion_shell": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ],
+    "note_id": "Penipisan korteks simetris tanpa ekspansi melebihi lebar fisis"
+   },
+   "focal_breach": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ],
+    "note_id": "Fraktur patologis dengan 'fallen fragment' mendukung kista"
+   },
+   "destruction": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   }
+  },
+  "soft_tissue_mass": {
+   "present": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   }
+  },
+  "periosteal": {
+   "none": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "solid_thin": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ],
+    "note_id": "Hanya bila ada fraktur patologis"
+   },
+   "lamellated": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "spiculated": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "codman": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "present_unspecified": {
+    "weight": -2,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Reaksi periosteal tidak lazim untuk entitas ini"
+   }
+  },
+  "matrix": {
+   "none": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "osteoid": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "chondroid": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "ground_glass": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   }
+  }
+ },
+ "pitfalls_id": [
+  "ABC lebih eksentrik dan ekspansil; kista simpel sentral dan tidak melebihi lebar fisis.",
+  "Lipoma intraoseus kalkaneus dengan kalsifikasi sentral adalah banding di kalkaneus."
+ ],
+ "rules": [],
+ "base_prior": 0,
+ "base_prior_source_ids": [
+  "S-01",
+  "S-05",
+  "S-06"
+ ]
+}

@@ -1,0 +1,330 @@
+{
+ "id": "skeletal_tuberculosis",
+ "name_en": "Skeletal tuberculosis",
+ "name_id": "Tuberkulosis tulang",
+ "who_group": "non_neoplastic_or_secondary",
+ "behaviour": "non_neoplastic",
+ "definition_id": "Infeksi granulomatosa kronik tulang, tersering spondilitis (Pott) dengan keterlibatan paradiskal dan abses dingin; di tulang panjang destruksi litik yang melintasi fisis dengan sklerosis reaktif dan reaksi periosteal yang mencolok sedikit. Penting di wilayah endemik.",
+ "source_ids": [
+  "S-01",
+  "S-10"
+ ],
+ "feature_weights": {
+  "age_group": {
+   "0-9": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "20-39": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "40-59": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "60+": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "10-19_unknown": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "10-19_open": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "10-19_closed": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "bone_class": {
+   "spine_body": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Spondilitis TB: korpus berdekatan dengan destruksi diskus dan abses paravertebral"
+   },
+   "long_bone": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "small_tubular_hand_foot": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Dactylitis TB (spina ventosa) pada anak"
+   },
+   "flat_bone": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "sacrum": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "longitudinal": {
+   "epiphysis_apophysis": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Dapat melintasi fisis seperti abses Brodie"
+   },
+   "metaphysis": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "diaphysis": {
+    "weight": 0,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "transverse": {
+   "central": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "eccentric": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "cortical": {
+    "weight": -2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "juxtacortical_surface": {
+    "weight": -2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "juxtacortical_continuous": {
+    "weight": -2,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "density": {
+   "lytic": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Destruksi dengan sedikit sklerosis reaktif"
+   },
+   "mixed": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Bentuk kronik dapat campuran dengan sklerosis"
+   },
+   "sclerotic": {
+    "weight": -2,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "margin_lodwick": {
+   "IB": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "IC": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "II": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "III": {
+    "weight": 0,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "IA": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "TB kronik dapat berbatas sklerotik dan meniru abses Brodie"
+   }
+  },
+  "cortex": {
+   "destruction": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "focal_breach": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "intact": {
+    "weight": 0,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "expansion_shell": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Spina ventosa: ekspansi diafisis tulang tubular kecil"
+   }
+  },
+  "soft_tissue_mass": {
+   "present": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Abses dingin, kadang berkalsifikasi, tidak proporsional dengan nyeri/tanda radang"
+   }
+  },
+  "periosteal": {
+   "none": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Reaksi periosteal yang minimal adalah ciri pembeda dari osteomielitis piogenik"
+   },
+   "present_unspecified": {
+    "weight": 0,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Reaksi periosteal ringan dapat dijumpai pada TB tulang panjang"
+   },
+   "solid_thin": {
+    "weight": 0,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "lamellated": {
+    "weight": -2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "spiculated": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "codman": {
+    "weight": -2,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "matrix": {
+   "none": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "osteoid": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "chondroid": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "ground_glass": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "multiplicity": {
+   "multiple": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "clinical_flags": {
+   "fever_or_infection_signs": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  }
+ },
+ "pitfalls_id": [
+  "Spondilitis TB vs metastasis: TB melibatkan diskus dan dua korpus berdekatan dengan abses paravertebral; metastasis biasanya menyisakan diskus.",
+  "Di tulang panjang, dapat meniru Ewing, LCH, dan osteomielitis piogenik."
+ ],
+ "rules": [],
+ "aliases": [],
+ "base_prior": 0,
+ "base_prior_source_ids": [
+  "S-01",
+  "S-05",
+  "S-06"
+ ]
+}

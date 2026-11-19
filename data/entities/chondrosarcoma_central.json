@@ -1,0 +1,400 @@
+{
+ "id": "chondrosarcoma_central",
+ "name_en": "Central chondrosarcoma (incl. atypical cartilaginous tumour / grade 1)",
+ "name_id": "Kondrosarkoma sentral (termasuk atypical cartilaginous tumour / derajat 1)",
+ "aliases": [
+  "ACT",
+  "chondrosarcoma",
+  "CS"
+ ],
+ "who_group": "chondrogenic",
+ "behaviour": "malignant",
+ "definition_id": "Tumor tulang rawan ganas intrameduler pada dewasa paruh baya; WHO 2020 menamai lesi derajat 1 apendikular sebagai atypical cartilaginous tumour dan yang aksial sebagai kondrosarkoma derajat 1.",
+ "source_ids": [
+  "S-01",
+  "S-18",
+  "S-05",
+  "S-13"
+ ],
+ "feature_weights": {
+  "age_group": {
+   "0-9": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   },
+   "20-39": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   },
+   "40-59": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-05"
+    ],
+    "note_id": "Puncak insiden 30–60 tahun"
+   },
+   "60+": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   },
+   "10-19_unknown": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   },
+   "10-19_open": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   },
+   "10-19_closed": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   }
+  },
+  "bone_class": {
+   "flat_bone": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ],
+    "note_id": "Pelvis: lesi kondroid di sini jauh lebih sering ganas"
+   },
+   "long_bone": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   },
+   "spine_body": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   },
+   "sacrum": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   },
+   "small_tubular_hand_foot": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   }
+  },
+  "longitudinal": {
+   "metaphysis": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   },
+   "metadiaphysis": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   },
+   "diaphysis": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   },
+   "epiphysis_apophysis": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   }
+  },
+  "transverse": {
+   "central": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   },
+   "eccentric": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   },
+   "cortical": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   },
+   "juxtacortical_surface": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   },
+   "juxtacortical_continuous": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   }
+  },
+  "density": {
+   "lytic": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   },
+   "mixed": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   },
+   "sclerotic": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   }
+  },
+  "margin_lodwick": {
+   "IA": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   },
+   "IB": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   },
+   "IC": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   },
+   "II": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   },
+   "III": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   }
+  },
+  "cortex": {
+   "intact": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   },
+   "endosteal_scalloping": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ],
+    "note_id": "Scalloping dalam adalah tanda penting kondrosarkoma low-grade"
+   },
+   "expansion_shell": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   },
+   "focal_breach": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   },
+   "destruction": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   }
+  },
+  "soft_tissue_mass": {
+   "present": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   },
+   "absent": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   }
+  },
+  "periosteal": {
+   "none": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   },
+   "solid_thin": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   },
+   "lamellated": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   },
+   "spiculated": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   },
+   "codman": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   },
+   "present_unspecified": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Reaksi periosteal menandai proses aktif; pola tidak diketahui"
+   }
+  },
+  "matrix": {
+   "chondroid": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   },
+   "none": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   },
+   "osteoid": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   },
+   "ground_glass": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   }
+  },
+  "size_cm": {
+   "<2": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   },
+   "2-5": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   },
+   ">5": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-18"
+    ]
+   }
+  }
+ },
+ "pitfalls_id": [
+  "Kondrosarkoma low-grade dapat tampak geografik dengan korteks utuh (margin IB) — pengecualian penting dari aturan 'margin tegas = jinak'.",
+  "Dediferensiasi: komponen litik agresif bersebelahan dengan matriks kondroid."
+ ],
+ "rules": [],
+ "base_prior": 0,
+ "base_prior_source_ids": [
+  "S-01",
+  "S-05",
+  "S-06"
+ ]
+}

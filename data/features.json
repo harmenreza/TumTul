@@ -1,0 +1,525 @@
+{
+ "features": {
+  "age_group": {
+   "label_id": "Kelompok usia & lempeng pertumbuhan",
+   "label_en": "Age group & physis",
+   "values": [
+    {
+     "code": "0-9",
+     "label_id": "0–9 tahun (fisis terbuka)",
+     "label_en": "0–9 years (open physis)"
+    },
+    {
+     "code": "10-19_open",
+     "label_id": "10–19 tahun, fisis terbuka",
+     "label_en": "10–19 years, open physis",
+     "help_id": "Lempeng pertumbuhan di dekat lesi masih terbuka. Mengunci banding epifisis ke arah kondroblastoma dan menjauh dari GCTB.",
+     "source_ids": [
+      "S-01",
+      "S-16"
+     ]
+    },
+    {
+     "code": "10-19_closed",
+     "label_id": "10–19 tahun, fisis tertutup",
+     "label_en": "10–19 years, closed physis",
+     "help_id": "Lempeng pertumbuhan sudah menutup. GCTB menjadi mungkin; kondroblastoma masih dapat dijumpai segera setelah penutupan.",
+     "source_ids": [
+      "S-01",
+      "S-16"
+     ]
+    },
+    {
+     "code": "10-19_unknown",
+     "label_id": "10–19 tahun, fisis tidak dapat dinilai",
+     "label_en": "10–19 years, physis not assessable",
+     "help_id": "Pilih bila fisis tidak tercakup dalam foto atau tidak dapat dinilai; bobot netral terhadap status fisis.",
+     "source_ids": [
+      "S-01"
+     ]
+    },
+    {
+     "code": "20-39",
+     "label_id": "20–39 tahun",
+     "label_en": "20–39 years"
+    },
+    {
+     "code": "40-59",
+     "label_id": "40–59 tahun",
+     "label_en": "40–59 years"
+    },
+    {
+     "code": "60+",
+     "label_id": "60 tahun ke atas",
+     "label_en": "60 years and over"
+    }
+   ]
+  },
+  "multiplicity": {
+   "label_id": "Jumlah lesi",
+   "label_en": "Multiplicity",
+   "values": [
+    {
+     "code": "solitary",
+     "label_id": "Soliter",
+     "label_en": "Solitary"
+    },
+    {
+     "code": "multiple",
+     "label_id": "Multipel / poliostotik",
+     "label_en": "Multiple / polyostotic",
+     "help_id": "Lebih dari satu lesi tulang pada pemeriksaan yang tersedia. Mempersempit banding secara drastis (§3.10).",
+     "source_ids": [
+      "S-01"
+     ]
+    }
+   ]
+  },
+  "bone_class": {
+   "label_id": "Tulang yang terlibat",
+   "label_en": "Bone involved",
+   "values": [
+    {
+     "code": "long_bone",
+     "label_id": "Tulang panjang (femur, tibia, humerus, dll.)",
+     "label_en": "Long bone"
+    },
+    {
+     "code": "small_tubular_hand_foot",
+     "label_id": "Tulang tubular kecil tangan/kaki",
+     "label_en": "Small tubular bones of hand/foot"
+    },
+    {
+     "code": "flat_bone",
+     "label_id": "Tulang pipih (pelvis, skapula, iga)",
+     "label_en": "Flat bone (pelvis, scapula, rib)"
+    },
+    {
+     "code": "spine_body",
+     "label_id": "Korpus vertebra",
+     "label_en": "Vertebral body"
+    },
+    {
+     "code": "spine_posterior",
+     "label_id": "Elemen posterior vertebra",
+     "label_en": "Posterior vertebral elements"
+    },
+    {
+     "code": "sacrum",
+     "label_id": "Sakrum",
+     "label_en": "Sacrum"
+    },
+    {
+     "code": "clavicle",
+     "label_id": "Klavikula",
+     "label_en": "Clavicle"
+    },
+    {
+     "code": "calcaneus",
+     "label_id": "Kalkaneus",
+     "label_en": "Calcaneus"
+    },
+    {
+     "code": "patella",
+     "label_id": "Patela",
+     "label_en": "Patella"
+    },
+    {
+     "code": "craniofacial",
+     "label_id": "Kalvaria / kraniofasial",
+     "label_en": "Calvaria / craniofacial"
+    }
+   ]
+  },
+  "longitudinal": {
+   "label_id": "Posisi longitudinal (tulang panjang)",
+   "label_en": "Longitudinal position (long bone)",
+   "values": [
+    {
+     "code": "epiphysis_apophysis",
+     "label_id": "Epifisis / apofisis",
+     "label_en": "Epiphysis / apophysis",
+     "help_id": "Apofisis (trokanter mayor, tuberositas tibia) dianggap setara epifisis.",
+     "source_ids": [
+      "S-01"
+     ]
+    },
+    {
+     "code": "metaphysis",
+     "label_id": "Metafisis",
+     "label_en": "Metaphysis"
+    },
+    {
+     "code": "metadiaphysis",
+     "label_id": "Metadiafisis",
+     "label_en": "Metadiaphysis"
+    },
+    {
+     "code": "diaphysis",
+     "label_id": "Diafisis",
+     "label_en": "Diaphysis"
+    },
+    {
+     "code": "not_applicable",
+     "label_id": "Tidak relevan (bukan tulang panjang)",
+     "label_en": "Not applicable"
+    }
+   ]
+  },
+  "transverse": {
+   "label_id": "Posisi transversal",
+   "label_en": "Transverse position",
+   "values": [
+    {
+     "code": "central",
+     "label_id": "Sentral intrameduler",
+     "label_en": "Central intramedullary"
+    },
+    {
+     "code": "eccentric",
+     "label_id": "Eksentrik intrameduler",
+     "label_en": "Eccentric intramedullary"
+    },
+    {
+     "code": "cortical",
+     "label_id": "Intrakortikal",
+     "label_en": "Intracortical"
+    },
+    {
+     "code": "juxtacortical_surface",
+     "label_id": "Jukstakortikal / permukaan",
+     "label_en": "Juxtacortical / surface",
+     "help_id": "Lesi di permukaan tulang. Catat apakah korteks dan ruang meduler lesi menyambung dengan tulang induk (ciri osteokondroma).",
+     "source_ids": [
+      "S-01",
+      "S-25"
+     ]
+    },
+    {
+     "code": "juxtacortical_continuous",
+     "label_id": "Permukaan, korteks & meduler menyambung ke tulang induk",
+     "label_en": "Surface, corticomedullary continuity with host bone",
+     "help_id": "Korteks dan ruang sumsum lesi menyatu dengan tulang induk — ciri khas osteokondroma. Lesi permukaan tanpa kontinuitas: pilih 'Jukstakortikal / permukaan'.",
+     "source_ids": [
+      "S-01",
+      "S-26"
+     ]
+    }
+   ]
+  },
+  "density": {
+   "label_id": "Densitas lesi",
+   "label_en": "Lesion density",
+   "values": [
+    {
+     "code": "lytic",
+     "label_id": "Litik (lusen)",
+     "label_en": "Lytic (lucent)"
+    },
+    {
+     "code": "mixed",
+     "label_id": "Campuran litik–sklerotik",
+     "label_en": "Mixed lytic–sclerotic"
+    },
+    {
+     "code": "sclerotic",
+     "label_id": "Sklerotik (blastik)",
+     "label_en": "Sclerotic (blastic)",
+     "help_id": "Untuk lesi sklerotik murni, grading Lodwick tidak dipakai; banding mengikuti cabang sklerotik.",
+     "source_ids": [
+      "S-01"
+     ]
+    }
+   ]
+  },
+  "margin_lodwick": {
+   "label_id": "Margin / zona transisi (Lodwick–Madewell)",
+   "label_en": "Margin / zone of transition (Lodwick–Madewell)",
+   "values": [
+    {
+     "code": "IA",
+     "label_id": "IA — geografik, tepi sklerotik",
+     "label_en": "IA — geographic, sclerotic rim",
+     "source_ids": [
+      "S-02",
+      "S-03"
+     ]
+    },
+    {
+     "code": "IB",
+     "label_id": "IB — geografik, tegas tanpa tepi sklerotik",
+     "label_en": "IB — geographic, well-defined, no sclerotic rim",
+     "source_ids": [
+      "S-02",
+      "S-03"
+     ]
+    },
+    {
+     "code": "IC",
+     "label_id": "IC — geografik, tepi tidak tegas / zona transisi lebar",
+     "label_en": "IC — geographic, ill-defined / wide zone of transition",
+     "source_ids": [
+      "S-02",
+      "S-03"
+     ]
+    },
+    {
+     "code": "II",
+     "label_id": "II — moth-eaten",
+     "label_en": "II — moth-eaten",
+     "source_ids": [
+      "S-02",
+      "S-03"
+     ]
+    },
+    {
+     "code": "III",
+     "label_id": "III — permeatif",
+     "label_en": "III — permeative",
+     "source_ids": [
+      "S-02",
+      "S-03"
+     ]
+    },
+    {
+     "code": "not_applicable",
+     "label_id": "Tidak dinilai (lesi sklerotik / permukaan)",
+     "label_en": "Not assessed"
+    }
+   ]
+  },
+  "cortex": {
+   "label_id": "Korteks",
+   "label_en": "Cortex",
+   "values": [
+    {
+     "code": "intact",
+     "label_id": "Utuh",
+     "label_en": "Intact"
+    },
+    {
+     "code": "endosteal_scalloping",
+     "label_id": "Endosteal scalloping",
+     "label_en": "Endosteal scalloping",
+     "help_id": "Erosi permukaan dalam korteks oleh proses intrameduler yang lambat. Kedalaman >2/3 tebal korteks pada lesi kondroid lebih mengarah ke kondrosarkoma daripada enkondroma.",
+     "source_ids": [
+      "S-01",
+      "S-18"
+     ]
+    },
+    {
+     "code": "expansion_shell",
+     "label_id": "Ekspansi dengan cangkang tipis",
+     "label_en": "Expansion with thin shell",
+     "help_id": "Korteks menipis dan menggembung tetapi periosteum sempat membentuk tulang baru di sekelilingnya.",
+     "source_ids": [
+      "S-01"
+     ]
+    },
+    {
+     "code": "focal_breach",
+     "label_id": "Terputus fokal",
+     "label_en": "Focal breach"
+    },
+    {
+     "code": "destruction",
+     "label_id": "Destruksi luas",
+     "label_en": "Extensive destruction"
+    },
+    {
+     "code": "saucerization",
+     "label_id": "Saucerization (erosi cekung permukaan luar korteks)",
+     "label_en": "Saucerization (concave erosion of outer cortex)",
+     "help_id": "Lesi permukaan mengerosi korteks dari luar membentuk cekungan, sering dengan tepi sklerotik/penyangga; berbeda dari scalloping endosteal yang dari dalam.",
+     "source_ids": [
+      "S-01",
+      "S-25"
+     ]
+    }
+   ]
+  },
+  "soft_tissue_mass": {
+   "label_id": "Massa jaringan lunak",
+   "label_en": "Soft-tissue mass",
+   "values": [
+    {
+     "code": "absent",
+     "label_id": "Tidak ada",
+     "label_en": "Absent"
+    },
+    {
+     "code": "present",
+     "label_id": "Ada",
+     "label_en": "Present",
+     "help_id": "Radiograf kurang sensitif untuk komponen ekstraoseus; isi 'ada' hanya bila terlihat jelas (bayangan jaringan lunak, pergeseran bidang lemak). Massa besar tanpa destruksi korteks nyata mengarah ke tumor sel bulat kecil.",
+     "source_ids": [
+      "S-01",
+      "S-27"
+     ]
+    }
+   ]
+  },
+  "periosteal": {
+   "label_id": "Reaksi periosteal",
+   "label_en": "Periosteal reaction",
+   "values": [
+    {
+     "code": "none",
+     "label_id": "Tidak ada",
+     "label_en": "None"
+    },
+    {
+     "code": "solid_thin",
+     "label_id": "Solid / tipis (non-agresif)",
+     "label_en": "Solid / thin (non-aggressive)",
+     "help_id": "Lapisan tulang baru kontinu menempel pada korteks; proses lambat.",
+     "source_ids": [
+      "S-01"
+     ]
+    },
+    {
+     "code": "shell",
+     "label_id": "Cangkang di sekitar lesi ekspansil",
+     "label_en": "Shell around expansile lesion",
+     "source_ids": [
+      "S-01"
+     ]
+    },
+    {
+     "code": "lamellated",
+     "label_id": "Lamelar (onion-skin)",
+     "label_en": "Lamellated (onion-skin)",
+     "help_id": "Lapisan konsentris; pertumbuhan intermiten. Agresif.",
+     "source_ids": [
+      "S-01"
+     ]
+    },
+    {
+     "code": "spiculated",
+     "label_id": "Spikulasi (hair-on-end / sunburst)",
+     "label_en": "Spiculated (hair-on-end / sunburst)",
+     "help_id": "Spikula tegak lurus korteks (hair-on-end) atau memancar (sunburst). Agresif.",
+     "source_ids": [
+      "S-01",
+      "S-15"
+     ]
+    },
+    {
+     "code": "codman",
+     "label_id": "Segitiga Codman",
+     "label_en": "Codman triangle",
+     "help_id": "Periosteum terangkat hanya di tepi lesi; proses cepat. Jika beberapa pola hadir, nilai dari yang paling agresif.",
+     "source_ids": [
+      "S-01"
+     ]
+    },
+    {
+     "code": "present_unspecified",
+     "label_id": "Ada, pola tidak dapat ditentukan",
+     "label_en": "Present, pattern not assessable",
+     "help_id": "Reaksi periosteal terlihat tetapi polanya tidak dapat ditentukan. Bobot kecil: menandai proses aktif tanpa membedakan jinak/ganas.",
+     "source_ids": [
+      "S-01"
+     ]
+    }
+   ]
+  },
+  "matrix": {
+   "label_id": "Matriks termineralisasi",
+   "label_en": "Mineralised matrix",
+   "values": [
+    {
+     "code": "none",
+     "label_id": "Tidak tampak",
+     "label_en": "None visible",
+     "help_id": "Ketiadaan matriks tidak menyingkirkan tumor pembentuk matriks.",
+     "source_ids": [
+      "S-01"
+     ]
+    },
+    {
+     "code": "osteoid",
+     "label_id": "Osteoid (fluffy, cloud-like, padat)",
+     "label_en": "Osteoid (fluffy, cloud-like, dense)",
+     "source_ids": [
+      "S-01",
+      "S-15"
+     ]
+    },
+    {
+     "code": "chondroid",
+     "label_id": "Kondroid (ring-and-arc, popcorn)",
+     "label_en": "Chondroid (ring-and-arc, popcorn)",
+     "source_ids": [
+      "S-01",
+      "S-18"
+     ]
+    },
+    {
+     "code": "ground_glass",
+     "label_id": "Ground-glass",
+     "label_en": "Ground-glass",
+     "source_ids": [
+      "S-01",
+      "S-22"
+     ]
+    },
+    {
+     "code": "coarse_trabeculae",
+     "label_id": "Trabekula kasar vertikal (corduroy / honeycomb)",
+     "label_en": "Coarse vertical trabeculae (corduroy / honeycomb)",
+     "help_id": "Trabekula yang tersisa menebal dan tersusun vertikal di antara area lusen — ciri hemangioma vertebra; pada tulang panjang pertimbangkan Paget.",
+     "source_ids": [
+      "S-01",
+      "S-19"
+     ]
+    }
+   ]
+  },
+  "size_cm": {
+   "label_id": "Ukuran terpanjang",
+   "label_en": "Longest dimension",
+   "optional": true,
+   "values": [
+    {
+     "code": "<2",
+     "label_id": "< 2 cm",
+     "label_en": "< 2 cm"
+    },
+    {
+     "code": "2-5",
+     "label_id": "2–5 cm",
+     "label_en": "2–5 cm"
+    },
+    {
+     "code": ">5",
+     "label_id": "> 5 cm",
+     "label_en": "> 5 cm"
+    }
+   ]
+  },
+  "clinical_flags": {
+   "label_id": "Petunjuk klinis",
+   "label_en": "Clinical flags",
+   "optional": true,
+   "multi": true,
+   "values": [
+    {
+     "code": "night_pain_nsaid_relief",
+     "label_id": "Nyeri malam membaik dengan NSAID",
+     "label_en": "Night pain relieved by NSAIDs"
+    },
+    {
+     "code": "known_primary_malignancy",
+     "label_id": "Riwayat keganasan primer diketahui",
+     "label_en": "Known primary malignancy"
+    },
+    {
+     "code": "fever_or_infection_signs",
+     "label_id": "Demam / tanda infeksi",
+     "label_en": "Fever / signs of infection"
+    }
+   ]
+  }
+ }
+}

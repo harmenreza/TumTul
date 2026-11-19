@@ -1,0 +1,373 @@
+{
+ "id": "non_ossifying_fibroma",
+ "name_en": "Non-ossifying fibroma / fibrous cortical defect",
+ "name_id": "Fibroma non-osifikasi / defek kortikal fibrosa",
+ "aliases": [
+  "NOF",
+  "fibroxanthoma",
+  "FCD"
+ ],
+ "who_group": "osteoclastic_giant_cell_rich",
+ "behaviour": "benign",
+ "definition_id": "Lesi fibrosa jinak berbasis korteks di metafisis tulang panjang anak dan remaja; berbatas sklerotik, mengalami osifikasi dan menghilang setelah pubertas. Disebut fibrous cortical defect bila <2 cm.",
+ "source_ids": [
+  "S-01",
+  "S-06",
+  "S-04"
+ ],
+ "feature_weights": {
+  "age_group": {
+   "0-9": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "20-39": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ],
+    "note_id": "Pada dewasa muda biasanya sudah sklerotik/menyembuh"
+   },
+   "40-59": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "60+": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "10-19_unknown": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "10-19_open": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ],
+    "note_id": "Mulai mengalami osifikasi setelah pubertas"
+   },
+   "10-19_closed": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ],
+    "note_id": "Mulai mengalami osifikasi setelah pubertas"
+   }
+  },
+  "bone_class": {
+   "long_bone": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ],
+    "note_id": "Femur distal dan tibia tersering"
+   },
+   "flat_bone": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "spine_body": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "spine_posterior": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "small_tubular_hand_foot": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   }
+  },
+  "longitudinal": {
+   "metaphysis": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "metadiaphysis": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "diaphysis": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "epiphysis_apophysis": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   }
+  },
+  "transverse": {
+   "eccentric": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "cortical": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "central": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "juxtacortical_surface": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "juxtacortical_continuous": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   }
+  },
+  "density": {
+   "lytic": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "mixed": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "sclerotic": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ],
+    "note_id": "Fase penyembuhan: homogen sklerotik"
+   }
+  },
+  "margin_lodwick": {
+   "IA": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ],
+    "note_id": "Tepi sklerotik bergelombang adalah ciri khas"
+   },
+   "IB": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ],
+    "note_id": "Tepi sklerotik kadang tidak dideskripsikan pada lesi besar"
+   },
+   "IC": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "II": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "III": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   }
+  },
+  "cortex": {
+   "intact": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "endosteal_scalloping": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "expansion_shell": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "focal_breach": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "destruction": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   }
+  },
+  "soft_tissue_mass": {
+   "present": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   }
+  },
+  "periosteal": {
+   "none": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "solid_thin": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "lamellated": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "spiculated": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "codman": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "present_unspecified": {
+    "weight": -2,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Reaksi periosteal tidak lazim untuk entitas ini"
+   }
+  },
+  "matrix": {
+   "none": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "ground_glass": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "osteoid": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   },
+   "chondroid": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-06"
+    ]
+   }
+  }
+ },
+ "pitfalls_id": [
+  "Lesi 'jangan disentuh' klasik — biopsi tidak diperlukan bila tipikal.",
+  "Fraktur patologis dapat terjadi pada lesi besar."
+ ],
+ "rules": [],
+ "base_prior": 0,
+ "base_prior_source_ids": [
+  "S-01",
+  "S-05",
+  "S-06"
+ ]
+}

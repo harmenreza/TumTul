@@ -1,5 +1,5 @@
 {
- "version": "0.3.0",
+ "version": "0.3.1",
  "note": "Example-image registry for the Sumbu B gallery. Separate from the knowledge base (kb-schema.json unchanged). Up to 3 radiographs per entity, freely licensed (CC0, public domain, CC BY, CC BY-SA). Only records with status 'approved' (owner-reviewed) are shown. Fields: file (path under web/), caption_id (our own words), site, source_title, source_url, author, repository, licence, licence_url, changes, status (candidate | approved | rejected). Selection rule (owner, 2026-11-17): only the most typical radiograph of each entity; images from sources that call the case atypical, unusual, rare-site, aggressive, giant, multifocal, a mimic or misdiagnosed are excluded.",
  "images": {
   "adamantinoma_ofd_spectrum": [
@@ -222,6 +222,18 @@
     "repository": "Cureus via PubMed Central (PMC10233321)",
     "licence": "CC BY 3.0",
     "licence_url": "https://creativecommons.org/licenses/by/3.0/",
+    "changes": "diperkecil",
+    "status": "approved"
+   },
+   {
+    "file": "img/chordoma-2.jpg",
+    "caption_id": "Pelvis AP: destruksi litik sakrum di garis tengah dengan massa jaringan lunak presakral (panah).",
+    "source_title": "Primary Osseous Malignancies of the Spine (Diagnostics, 2023), Figure 6",
+    "source_url": "https://doi.org/10.3390/diagnostics13101801",
+    "author": "Ariyaratne S, Jenko N, Iyengar K et al.",
+    "repository": "Diagnostics via PubMed Central (PMC10217758)",
+    "licence": "CC BY 4.0",
+    "licence_url": "https://creativecommons.org/licenses/by/4.0/",
     "changes": "diperkecil",
     "status": "approved"
    }
@@ -584,6 +596,18 @@
     "repository": "Wikimedia Commons",
     "licence": "CC BY-SA 3.0",
     "licence_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "changes": "diperkecil",
+    "status": "approved"
+   },
+   {
+    "file": "img/osteomyelitis-2.jpg",
+    "caption_id": "Femur (osteomielitis kronik): sklerosis inhomogen difus dengan penebalan korteks dan fokus opasitas lebih tinggi yang mewakili sekuestrum (panah).",
+    "source_title": "The Many Faces of Osteomyelitis: A Pictorial Review (Journal of the Belgian Society of Radiology, 2017), Figure 11",
+    "source_url": "https://doi.org/10.5334/jbr-btr.1300",
+    "author": "Desimpel J, Posadzy M, Vanhoenacker F",
+    "repository": "Journal of the Belgian Society of Radiology via PubMed Central (PMC6032807)",
+    "licence": "CC BY 4.0",
+    "licence_url": "http://creativecommons.org/licenses/by/4.0/",
     "changes": "diperkecil",
     "status": "approved"
    }

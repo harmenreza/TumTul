@@ -1,0 +1,381 @@
+{
+ "id": "giant_cell_tumour_of_bone",
+ "name_en": "Giant cell tumour of bone",
+ "name_id": "Tumor sel raksasa tulang",
+ "aliases": [
+  "GCTB",
+  "GCT"
+ ],
+ "who_group": "osteoclastic_giant_cell_rich",
+ "behaviour": "intermediate_locally_aggressive",
+ "definition_id": "Tumor agresif lokal pada dewasa muda setelah penutupan fisis; lesi litik eksentrik meta-epifisis yang mencapai tulang subkondral, tanpa matriks; diklasifikasikan intermediate oleh WHO 2020.",
+ "source_ids": [
+  "S-01",
+  "S-16",
+  "S-13"
+ ],
+ "feature_weights": {
+  "age_group": {
+   "0-9": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-16"
+    ]
+   },
+   "20-39": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-16"
+    ],
+    "note_id": "Puncak 20–40 tahun"
+   },
+   "40-59": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-16"
+    ]
+   },
+   "60+": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-16"
+    ]
+   },
+   "10-19_unknown": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-16"
+    ]
+   },
+   "10-19_open": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-16"
+    ],
+    "note_id": "Hampir selalu setelah penutupan lempeng pertumbuhan"
+   },
+   "10-19_closed": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-16"
+    ],
+    "note_id": "Hampir selalu setelah penutupan lempeng pertumbuhan"
+   }
+  },
+  "bone_class": {
+   "long_bone": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-16"
+    ],
+    "note_id": "Femur distal, tibia proksimal, radius distal: >80% kasus"
+   },
+   "sacrum": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-16"
+    ]
+   },
+   "spine_body": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-16"
+    ]
+   },
+   "flat_bone": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-16"
+    ]
+   },
+   "small_tubular_hand_foot": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-16"
+    ]
+   }
+  },
+  "longitudinal": {
+   "epiphysis_apophysis": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-16"
+    ],
+    "note_id": "Meluas sampai tulang subkondral"
+   },
+   "metaphysis": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-16"
+    ]
+   },
+   "metadiaphysis": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-16"
+    ]
+   },
+   "diaphysis": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-16"
+    ]
+   }
+  },
+  "transverse": {
+   "eccentric": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-16"
+    ]
+   },
+   "central": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-16"
+    ]
+   },
+   "cortical": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-16"
+    ]
+   },
+   "juxtacortical_surface": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-16"
+    ]
+   },
+   "juxtacortical_continuous": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-16"
+    ]
+   }
+  },
+  "density": {
+   "lytic": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-16"
+    ]
+   },
+   "mixed": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-16"
+    ],
+    "note_id": "Komponen sklerotik tidak khas; dapat dijumpai pada tulang reaktif, pasca-fraktur, atau pasca-denosumab"
+   },
+   "sclerotic": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-16"
+    ]
+   }
+  },
+  "margin_lodwick": {
+   "IA": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-16"
+    ],
+    "note_id": "Tepi sklerotik tidak khas untuk GCTB, tetapi tepi tipis dapat dijumpai pada lesi laten"
+   },
+   "IB": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-16"
+    ]
+   },
+   "IC": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-16"
+    ],
+    "note_id": "GCTB agresif dapat menunjukkan zona transisi lebar"
+   },
+   "II": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-16"
+    ]
+   },
+   "III": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-16"
+    ]
+   }
+  },
+  "cortex": {
+   "intact": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-16"
+    ]
+   },
+   "endosteal_scalloping": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-16"
+    ]
+   },
+   "expansion_shell": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-16"
+    ]
+   },
+   "focal_breach": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-16"
+    ]
+   },
+   "destruction": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-16"
+    ]
+   }
+  },
+  "soft_tissue_mass": {
+   "present": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-16"
+    ]
+   }
+  },
+  "periosteal": {
+   "none": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-16"
+    ]
+   },
+   "shell": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-16"
+    ]
+   },
+   "solid_thin": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-16"
+    ]
+   },
+   "lamellated": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-16"
+    ]
+   },
+   "spiculated": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-16"
+    ]
+   },
+   "codman": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-16"
+    ]
+   },
+   "present_unspecified": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Reaksi periosteal menandai proses aktif; pola tidak diketahui"
+   }
+  },
+  "matrix": {
+   "none": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-16"
+    ]
+   },
+   "osteoid": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-16"
+    ]
+   },
+   "chondroid": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-16"
+    ]
+   },
+   "ground_glass": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-16"
+    ]
+   }
+  }
+ },
+ "pitfalls_id": [
+  "Komponen ABC sekunder sering.",
+  "Pada skeletal imatur, kondroblastoma adalah banding utama lesi epifisis.",
+  "Transformasi ganas jarang; metastasis paru jinak dapat terjadi."
+ ],
+ "rules": [],
+ "base_prior": 0,
+ "base_prior_source_ids": [
+  "S-01",
+  "S-05",
+  "S-06"
+ ]
+}

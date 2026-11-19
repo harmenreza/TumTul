@@ -1,0 +1,365 @@
+{
+ "id": "langerhans_cell_histiocytosis",
+ "name_en": "Langerhans cell histiocytosis (eosinophilic granuloma)",
+ "name_id": "Histiositosis sel Langerhans (granuloma eosinofilik)",
+ "aliases": [
+  "LCH",
+  "EG"
+ ],
+ "who_group": "haematopoietic",
+ "behaviour": "intermediate_locally_aggressive",
+ "definition_id": "Proliferasi klonal histiosit Langerhans pada anak; lesi litik yang tampilannya bervariasi dari berbatas tegas hingga agresif, dengan predileksi kalvaria, tulang panjang diafisis, dan korpus vertebra (vertebra plana).",
+ "source_ids": [
+  "S-01",
+  "S-23",
+  "S-21"
+ ],
+ "feature_weights": {
+  "age_group": {
+   "0-9": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-23"
+    ]
+   },
+   "20-39": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-23"
+    ]
+   },
+   "40-59": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-23"
+    ]
+   },
+   "60+": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-23"
+    ]
+   },
+   "10-19_unknown": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-23"
+    ]
+   },
+   "10-19_open": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-23"
+    ]
+   },
+   "10-19_closed": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-23"
+    ]
+   }
+  },
+  "bone_class": {
+   "craniofacial": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-23"
+    ],
+    "note_id": "Lesi litik soliter kalvaria dengan tepi bevel"
+   },
+   "long_bone": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-23"
+    ]
+   },
+   "spine_body": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-23"
+    ],
+    "note_id": "Vertebra plana"
+   },
+   "flat_bone": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-23"
+    ]
+   },
+   "clavicle": {
+    "weight": 1,
+    "source_ids": [
+     "S-21"
+    ],
+    "note_id": "Entitas tersering di klavikula pada seri 113 kasus"
+   }
+  },
+  "longitudinal": {
+   "diaphysis": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-23"
+    ]
+   },
+   "metadiaphysis": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-23"
+    ]
+   },
+   "metaphysis": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-23"
+    ]
+   },
+   "epiphysis_apophysis": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-23"
+    ]
+   }
+  },
+  "transverse": {
+   "central": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-23"
+    ]
+   },
+   "eccentric": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-23"
+    ]
+   },
+   "cortical": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-23"
+    ]
+   }
+  },
+  "density": {
+   "lytic": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-23"
+    ]
+   },
+   "mixed": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-23"
+    ]
+   },
+   "sclerotic": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-23"
+    ],
+    "note_id": "Sklerosis hanya pada fase penyembuhan"
+   }
+  },
+  "margin_lodwick": {
+   "IB": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-23"
+    ]
+   },
+   "IA": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-23"
+    ],
+    "note_id": "Tepi sklerotik muncul saat penyembuhan"
+   },
+   "IC": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-23"
+    ]
+   },
+   "II": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-23"
+    ],
+    "note_id": "Dapat tampak agresif dan meniru Ewing atau osteomielitis"
+   },
+   "III": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-23"
+    ]
+   }
+  },
+  "cortex": {
+   "endosteal_scalloping": {
+    "weight": 1,
+    "source_ids": [
+     "S-23"
+    ],
+    "note_id": "Scalloping endosteal memberi 'budding appearance' di tulang panjang"
+   },
+   "focal_breach": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-23"
+    ]
+   },
+   "destruction": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-23"
+    ]
+   },
+   "expansion_shell": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-23"
+    ]
+   },
+   "intact": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-23"
+    ]
+   }
+  },
+  "soft_tissue_mass": {
+   "present": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-23"
+    ]
+   }
+  },
+  "periosteal": {
+   "lamellated": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-23"
+    ]
+   },
+   "solid_thin": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-23"
+    ]
+   },
+   "none": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-23"
+    ]
+   },
+   "spiculated": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-23"
+    ]
+   },
+   "codman": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-23"
+    ]
+   },
+   "present_unspecified": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Reaksi periosteal menandai proses aktif; pola tidak diketahui"
+   }
+  },
+  "matrix": {
+   "none": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-23"
+    ]
+   },
+   "osteoid": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-23"
+    ]
+   },
+   "chondroid": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-23"
+    ]
+   },
+   "ground_glass": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-23"
+    ]
+   }
+  },
+  "multiplicity": {
+   "multiple": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Multifokal pada sekitar 20% kasus"
+   }
+  }
+ },
+ "pitfalls_id": [
+  "'Great mimicker': banding meliputi Ewing, osteomielitis, dan limfoma pada anak.",
+  "Pola skeletal pada anak menyerupai mieloma pada dewasa (S-23)."
+ ],
+ "rules": [],
+ "base_prior": 0,
+ "base_prior_source_ids": [
+  "S-01",
+  "S-05",
+  "S-06"
+ ]
+}

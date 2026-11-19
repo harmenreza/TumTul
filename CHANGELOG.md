@@ -5,6 +5,29 @@ versions follow SemVer. Data-schema changes are only recorded after owner approv
 
 ## [Unreleased] — 2026-11-16
 
+### Changed (UI only, 2026-11-19 — no weight, entity, feature or schema change; KB content still 0.6.0)
+- **Location map** (owner-approved mockup): the tiles "Posisi longitudinal" and "Posisi transversal" now open one sheet
+  "Lokasi lesi" with two original diagrams — a long bone in longitudinal section (tap epiphysis / metaphysis /
+  metadiaphysis / diaphysis; both ends highlight together because the KB does not distinguish proximal from distal)
+  and a cross-section (central, eccentric, intracortical, surface, surface with continuity). Buttons beside each diagram
+  give the same choices for keyboard and screen-reader use. Feature codes, dependency rule (long bone only) and
+  conflict rules are unchanged; the conflict notice is shown inside the sheet.
+- **Pictograms** in the pickers for margin (Lodwick IA–III), periosteal reaction (7 values) and matrix (5 values):
+  own schematic drawings in radiograph convention (light = dense bone, dark = lucent). Not patient images; no licence
+  obligation. About page explains both.
+- Verified headlessly at 400 px, light and dark: no horizontal scroll, no script errors, conflict rule and ranking unchanged.
+- Design mockup kept at https://claude.ai/artifact/TtqriTDXt8ourmMVCYXgFN.
+
+### Released to the web prototype (2026-11-17, later) — 2 more example images approved
+- Owner approved both third-pass candidates (chordoma #2, osteomyelitis #2). `data/images.json` v0.3.1: 66 approved
+  images for 32 entities. Prototype rebuilt and republished; LICENSES §6 count CC BY 33 → 35.
+
+### Added (2026-11-17) — third image search pass, 2 candidates (approved, see above)
+- New Europe PMC pass (`GAP=2`, `tools/pmc_queries_gap2.json`) over CC BY radiology review journals and pictorial reviews for the 17 under-covered entities; figures kept only when the caption names the entity, mentions a radiograph, has no atypical wording and the original is >= 500 px. "Rare" in an article title is now flagged for manual check instead of dropped.
+- 23 figures returned; 21 rejected on screening (radiograph panel under 500 px after cropping, post-treatment, chest radiographs, or not typical).
+- 2 candidates added to `data/images.json` (v0.3.1) with status `candidate`: chordoma #2 (sacral chordoma, AP pelvis; Ariyaratne et al., Diagnostics 2023, CC BY 4.0) and osteomyelitis #2 (chronic osteomyelitis of the femur; Desimpel et al., J Belg Soc Radiol 2017, CC BY 4.0). They are not shown in the app until approved.
+- Still without images: clear cell chondrosarcoma, periosteal chondroma, vertebral haemangioma, desmoplastic fibroma, periosteal osteosarcoma.
+
 ### Released to the web prototype (2026-11-17) — example images approved
 - Owner reviewed all 64 candidates and approved all 64 (`data/images.json` v0.3.0, every record `status: "approved"`).
   The Sumbu B gallery is now live in the published prototype for 32 entities; the other 5 show

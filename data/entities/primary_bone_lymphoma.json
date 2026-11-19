@@ -1,0 +1,346 @@
+{
+ "id": "primary_bone_lymphoma",
+ "name_en": "Primary lymphoma of bone",
+ "name_id": "Limfoma tulang primer",
+ "who_group": "haematopoietic",
+ "behaviour": "malignant",
+ "definition_id": "Limfoma non-Hodgkin (umumnya sel B besar difus) yang berasal dari tulang; lesi permeatif pada dewasa paruh baya dengan massa jaringan lunak besar yang tidak proporsional terhadap destruksi korteks.",
+ "source_ids": [
+  "S-01"
+ ],
+ "feature_weights": {
+  "age_group": {
+   "0-9": {
+    "weight": -2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "20-39": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "40-59": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "60+": {
+    "weight": 3,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "10-19_unknown": {
+    "weight": 0,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "10-19_open": {
+    "weight": 0,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "10-19_closed": {
+    "weight": 0,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "bone_class": {
+   "long_bone": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Femur tersering"
+   },
+   "flat_bone": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "spine_body": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "sacrum": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "longitudinal": {
+   "diaphysis": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "metadiaphysis": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "metaphysis": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "epiphysis_apophysis": {
+    "weight": 0,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "transverse": {
+   "central": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "eccentric": {
+    "weight": 0,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "cortical": {
+    "weight": -2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "juxtacortical_surface": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "juxtacortical_continuous": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "density": {
+   "lytic": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "mixed": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "sclerotic": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Pola sklerotik/campuran dapat dijumpai"
+   }
+  },
+  "margin_lodwick": {
+   "IA": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "IB": {
+    "weight": -2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "IC": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "II": {
+    "weight": 3,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "III": {
+    "weight": 3,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "cortex": {
+   "intact": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Korteks relatif utuh meski massa besar: pertumbuhan melalui kanal Havers"
+   },
+   "focal_breach": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "destruction": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "expansion_shell": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "soft_tissue_mass": {
+   "present": {
+    "weight": 3,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "absent": {
+    "weight": -2,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "periosteal": {
+   "none": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "lamellated": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "solid_thin": {
+    "weight": 0,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "spiculated": {
+    "weight": 0,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "codman": {
+    "weight": 0,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "shell": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "present_unspecified": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Reaksi periosteal menandai proses aktif; pola tidak diketahui"
+   }
+  },
+  "matrix": {
+   "none": {
+    "weight": 3,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "osteoid": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "chondroid": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "ground_glass": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "multiplicity": {
+   "multiple": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  }
+ },
+ "rules": [
+  {
+   "id": "lymphoma_soft_tissue_without_destruction",
+   "when": {
+    "soft_tissue_mass": [
+     "present"
+    ],
+    "cortex": [
+     "intact",
+     "focal_breach"
+    ]
+   },
+   "weight": 2,
+   "note_id": "Massa jaringan lunak besar tanpa destruksi korteks nyata: pola tumor sel bulat kecil",
+   "source_ids": [
+    "S-01"
+   ]
+  }
+ ],
+ "pitfalls_id": [
+  "Radiograf dapat hampir normal meski MRI menunjukkan penggantian sumsum luas.",
+  "Banding pada dewasa: metastasis, mieloma, Ewing dewasa."
+ ],
+ "aliases": [],
+ "base_prior": -1,
+ "base_prior_source_ids": [
+  "S-01",
+  "S-05",
+  "S-06"
+ ],
+ "base_prior_note_id": "Entitas jarang: prior prevalensi −1"
+}

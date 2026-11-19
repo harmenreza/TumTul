@@ -1,0 +1,554 @@
+{
+ "sources": [
+  {
+   "id": "S-01",
+   "type": "journal_article",
+   "title": "Conventional radiography for the assessment of focal bone lesions of the appendicular skeleton: fundamental concepts in the modern imaging era",
+   "authors": "Matcuk GR Jr, Waldman LE, Fields BKK, Colangeli M, Palmas M, Righi A, Filonzi G, Crombé A, Spinnato P",
+   "journal": "Skeletal Radiology 54(7):1391-1406",
+   "year": 2025,
+   "doi": "10.1007/s00256-024-04854-6",
+   "pmid": "39718620",
+   "pmcid": "PMC12078366",
+   "url": "https://doi.org/10.1007/s00256-024-04854-6",
+   "license": "CC BY 4.0",
+   "license_status": "verified",
+   "license_note": "Konfirmasi dari PDF penerbit (Springer): 'Creative Commons Attribution 4.0 International License'.",
+   "evidence_level": "narrative review (expert), 2024",
+   "used_for": [
+    "stepwise approach",
+    "age",
+    "location longitudinal/transverse",
+    "density",
+    "Lodwick-Madewell margins",
+    "cortex",
+    "periosteal reaction",
+    "matrix",
+    "multiplicity",
+    "sclerotic lesions"
+   ]
+  },
+  {
+   "id": "S-02",
+   "type": "journal_article",
+   "title": "Determining growth rates of focal lesions of bone from radiographs",
+   "authors": "Lodwick GS, Wilson AJ, Farrell C, Virtama P, Dittrich F",
+   "journal": "Radiology 134(3):577-583",
+   "year": 1980,
+   "doi": "10.1148/radiology.134.3.6928321",
+   "license": "cite-only",
+   "license_status": "cite_only",
+   "evidence_level": "original classification study",
+   "used_for": [
+    "Lodwick grading (original)"
+   ]
+  },
+  {
+   "id": "S-03",
+   "type": "journal_article",
+   "title": "The Lodwick classification for grading growth rate of lytic bone tumors: a decision tree approach",
+   "authors": "Benndorf M, Bamberg F, Jungmann PM",
+   "journal": "Skeletal Radiology 51(4):737-745",
+   "year": 2022,
+   "doi": "10.1007/s00256-021-03868-8",
+   "pmid": "34302499",
+   "pmcid": "PMC8854272",
+   "url": "https://doi.org/10.1007/s00256-021-03868-8",
+   "license": "CC BY 4.0",
+   "license_status": "verified",
+   "license_note": "Konfirmasi dari PDF PMC: CC BY 4.0.",
+   "evidence_level": "educational review with decision tree",
+   "used_for": [
+    "Lodwick decision tree: destruction type, margin, cortical penetration, sclerotic rim, expanded shell"
+   ]
+  },
+  {
+   "id": "S-04",
+   "type": "journal_article",
+   "title": "Pediatric Bone Tumors: Location and Age Distribution of 420 Cases",
+   "authors": "Breden S, Stephan M, Hinterwimmer F, et al.",
+   "journal": "Diagnostics 14(22):2513",
+   "year": 2024,
+   "doi": "10.3390/diagnostics14222513",
+   "pmid": "39594179",
+   "pmcid": "PMC11593068",
+   "url": "https://doi.org/10.3390/diagnostics14222513",
+   "license": "CC BY 4.0",
+   "license_status": "verified",
+   "evidence_level": "retrospective single tertiary-centre series, 420 histologically verified paediatric tumours (335 benign, 85 malignant)",
+   "used_for": [
+    "age and location priors for patients under 18"
+   ]
+  },
+  {
+   "id": "S-05",
+   "type": "journal_article",
+   "title": "Trends in primary malignant bone cancer incidence and mortality in the United States, 2000-2017: A population-based study",
+   "authors": "Yang J, Lou S, Yao T",
+   "journal": "Journal of Bone Oncology 46:100607",
+   "year": 2024,
+   "doi": "10.1016/j.jbo.2024.100607",
+   "pmid": "38778835",
+   "pmcid": "PMC11109025",
+   "url": "https://doi.org/10.1016/j.jbo.2024.100607",
+   "license": "CC BY-NC-ND 4.0",
+   "license_status": "verified",
+   "license_note": "PDF: '© 2024 Published by Elsevier GmbH. This is an open access article under the CC BY-NC-ND license'. Non-komersial, tanpa adaptasi: fakta dinyatakan ulang saja, tidak ada gambar/tabel diadaptasi.",
+   "evidence_level": "population-based registry (SEER)",
+   "used_for": [
+    "age priors for malignant primary tumours"
+   ]
+  },
+  {
+   "id": "S-06",
+   "type": "journal_article",
+   "title": "Benign Bone Tumors: An Overview of What We Know Today",
+   "authors": "De Salvo S, Pavone V, Coco S, Dell'Agli E, Blatti C, Testa G",
+   "journal": "Journal of Clinical Medicine 11(3):699",
+   "year": 2022,
+   "doi": "10.3390/jcm11030699",
+   "pmid": "35160146",
+   "pmcid": "PMC8836463",
+   "url": "https://doi.org/10.3390/jcm11030699",
+   "license": "CC BY 4.0",
+   "license_status": "verified",
+   "evidence_level": "narrative review",
+   "used_for": [
+    "benign entity descriptions",
+    "age/location of benign tumours"
+   ]
+  },
+  {
+   "id": "S-07",
+   "type": "journal_article",
+   "title": "Bone Tumor Risk Stratification and Management System: A Consensus Guideline from the ACR Bone Reporting and Data System Committee",
+   "authors": "Caracciolo JT, Ali S, Chang CY, et al.",
+   "journal": "Journal of the American College of Radiology 20(11):1044-1058",
+   "year": 2023,
+   "doi": "10.1016/j.jacr.2023.07.017",
+   "url": "https://doi.org/10.1016/j.jacr.2023.07.017",
+   "license": "cite-only",
+   "license_status": "cite_only",
+   "license_note": "PDF: '© 2023 Published by Elsevier Inc. on behalf of American College of Radiology' — tidak ada lisensi CC. Rujukan bibliografis saja.",
+   "evidence_level": "expert consensus guideline (ACR)",
+   "used_for": [
+    "aggressiveness axis",
+    "risk stratification concepts"
+   ]
+  },
+  {
+   "id": "S-08",
+   "type": "journal_article",
+   "title": "A Modified Lodwick-Madewell Grading System for the Evaluation of Lytic Bone Lesions",
+   "authors": "Caracciolo JT, Temple HT, Letson GD, Kransdorf MJ",
+   "journal": "AJR American Journal of Roentgenology 207(1):150-156",
+   "year": 2016,
+   "doi": "10.2214/AJR.15.14368",
+   "pmid": "27070373",
+   "license": "cite-only",
+   "license_status": "cite_only",
+   "evidence_level": "retrospective, 183 lesions; grade I 94% benign, grade II ~50/50, grade III 81% malignant",
+   "used_for": [
+    "malignancy risk by modified Lodwick grade"
+   ]
+  },
+  {
+   "id": "S-09",
+   "type": "journal_article",
+   "title": "Using Machine Learning to Unravel the Value of Radiographic Features for the Classification of Bone Tumors",
+   "authors": "Pan D, Liu R, Zheng B, et al.",
+   "journal": "BioMed Research International 2021:8811056",
+   "year": 2021,
+   "doi": "10.1155/2021/8811056",
+   "pmid": "33791381",
+   "pmcid": "PMC7984886",
+   "url": "https://doi.org/10.1155/2021/8811056",
+   "license": "CC BY 4.0",
+   "license_status": "verified",
+   "license_note": "PMC: 'open access article distributed under the Creative Commons Attribution License' (Hindawi; versi tidak dicantumkan di PMC, Hindawi memakai CC BY 4.0).",
+   "evidence_level": "retrospective multicentre, 796 patients; feature importance (margin, cortex involvement, destruction pattern)",
+   "used_for": [
+    "relative weighting of margin, cortex and destruction pattern"
+   ]
+  },
+  {
+   "id": "S-10",
+   "type": "journal_article",
+   "title": "Accuracy of plain radiographs in diagnosing biopsy-proven malignant bone lesions",
+   "authors": "Erhardt G, Said-Hartley Q, Gamieldien R, et al.",
+   "journal": "South African Journal of Radiology 23(1):1768",
+   "year": 2019,
+   "doi": "10.4102/sajr.v23i1.1768",
+   "pmid": "31850149",
+   "pmcid": "PMC6909405",
+   "url": "https://doi.org/10.4102/sajr.v23i1.1768",
+   "license": "CC BY 4.0",
+   "license_status": "verified",
+   "license_note": "PDF PMC: '© 2019 The Authors. Licensee: AOSIS. This work is licensed under the Creative Commons Attribution License' (AOSIS memakai CC BY 4.0).",
+   "evidence_level": "retrospective, 88 suspected aggressive lesions, 3 readers; sensitivity 93-98%, specificity 53-73%",
+   "used_for": [
+    "expected performance of systematic radiographic reading",
+    "four high-PPV aggressive signs"
+   ]
+  },
+  {
+   "id": "S-11",
+   "type": "journal_article",
+   "title": "The appropriate and sequential value of standard radiograph, computed tomography and magnetic resonance imaging to characterize a bone tumor",
+   "authors": "Gaumé M, Chevret S, Campagna R, Larousserie F, Biau D",
+   "journal": "Scientific Reports 12:6196",
+   "year": 2022,
+   "doi": "10.1038/s41598-022-10218-8",
+   "pmid": "35418602",
+   "pmcid": "PMC9008011",
+   "url": "https://doi.org/10.1038/s41598-022-10218-8",
+   "license": "CC BY 4.0",
+   "license_status": "verified",
+   "license_note": "PDF Nature: 'Creative Commons Attribution 4.0 International License'.",
+   "evidence_level": "prospective online reader study, 64 physicians",
+   "used_for": [
+    "radiograph as first-line modality; limits of sequential imaging"
+   ]
+  },
+  {
+   "id": "S-12",
+   "type": "journal_article",
+   "title": "Modified X-Ray Scoring System for Bone Tumors at Dr. Soetomo General Hospital: A Diagnostic Tool for Differentiating Benign and Malignant Lesions",
+   "authors": "Tanadi MR, Setiawati R, Rahardjo P, et al.",
+   "journal": "Journal of Carcinogenesis 24(4S):1-9",
+   "year": 2025,
+   "doi": "10.64149/j.carcinog.24.4s.1-9",
+   "url": "https://doi.org/10.64149/j.carcinog.24.4s.1-9",
+   "license": "unknown",
+   "license_status": "cite_only",
+   "license_note": "Halaman artikel di carcinogenesis.com tidak menampilkan lisensi CC; hanya '© Journal of Carcinogenesis'. Diperlakukan sebagai cite-only (fakta dinyatakan ulang) sampai penerbit atau penulis mengonfirmasi.",
+   "evidence_level": "retrospective cross-sectional, 142 histologically confirmed cases, AUC 0.936",
+   "used_for": [
+    "Indonesian context",
+    "parameter set for aggressiveness"
+   ]
+  },
+  {
+   "id": "S-13",
+   "type": "journal_article",
+   "title": "What's new in soft tissue and bone pathology 2022 - updates from the WHO classification 5th edition",
+   "authors": "Kao EY, Mantilla JG",
+   "journal": "Journal of Pathology and Translational Medicine 56(6):385-386",
+   "year": 2022,
+   "doi": "10.4132/jptm.2022.10.18",
+   "pmid": "36413981",
+   "pmcid": "PMC9682218",
+   "url": "https://doi.org/10.4132/jptm.2022.10.18",
+   "license": "CC BY-NC 4.0",
+   "license_status": "verified",
+   "license_note": "Non-commercial licence: usable only if the app is distributed free of charge and without ads. Flag for governance decision.",
+   "evidence_level": "editorial summary of WHO 5th edition",
+   "used_for": [
+    "WHO 2020 reclassifications (GCTB intermediate, ACT/CS1 terminology, small round cell sarcoma chapter)"
+   ]
+  },
+  {
+   "id": "S-14",
+   "type": "journal_article",
+   "title": "Revisiting the WHO classification system of bone tumours: emphasis on advanced magnetic resonance imaging sequences. Part 1 and Part 2",
+   "authors": "Ahlawat S, Fayad LM",
+   "journal": "Polish Journal of Radiology 85:e396-e408 (Part 1), e409-e419 (Part 2)",
+   "year": 2020,
+   "doi": "10.5114/pjr.2020.98685",
+   "pmid": "32999693; 32999694",
+   "pmcid": "PMC7509695; PMC7509892",
+   "url": "https://doi.org/10.5114/pjr.2020.98685",
+   "license": "CC BY-NC-ND 4.0",
+   "license_status": "verified",
+   "license_note": "Halaman 'About the Journal' Pol J Radiol: 'Creative Commons Attribution-Noncommercial-No Derivatives 4.0 International (CC BY-NC-ND 4.0)'; dikonfirmasi pada PDF artikel jurnal yang sama. Fakta dinyatakan ulang saja.",
+   "evidence_level": "narrative review",
+   "used_for": [
+    "WHO classification mapped to imaging"
+   ]
+  },
+  {
+   "id": "S-15",
+   "type": "journal_article",
+   "title": "Multimodal Imaging of Osteosarcoma: From First Diagnosis to Radiomics",
+   "authors": "Cè M, Cellina M, Ueanukul T, et al.",
+   "journal": "Cancers 17(4):599",
+   "year": 2025,
+   "doi": "10.3390/cancers17040599",
+   "pmid": "40002194",
+   "pmcid": "PMC11852380",
+   "url": "https://doi.org/10.3390/cancers17040599",
+   "license": "CC BY 4.0",
+   "license_status": "verified",
+   "evidence_level": "narrative review with case series",
+   "used_for": [
+    "osteosarcoma subtypes incl. surface forms",
+    "osteoid matrix",
+    "aggressive periosteal patterns"
+   ]
+  },
+  {
+   "id": "S-16",
+   "type": "journal_article",
+   "title": "State of the Art and New Concepts in Giant Cell Tumor of Bone: Imaging Features and Tumor Characteristics",
+   "authors": "Parmeggiani A, Miceli M, Errani C, Facchini G",
+   "journal": "Cancers 13(24):6298",
+   "year": 2021,
+   "doi": "10.3390/cancers13246298",
+   "pmid": "34944917",
+   "pmcid": "PMC8699510",
+   "url": "https://doi.org/10.3390/cancers13246298",
+   "license": "CC BY 4.0",
+   "license_status": "verified",
+   "evidence_level": "narrative review",
+   "used_for": [
+    "GCTB: meta-epiphyseal eccentric location, age 20-40, after physeal closure"
+   ]
+  },
+  {
+   "id": "S-17",
+   "type": "journal_article",
+   "title": "The role of magnetic resonance imaging in the evaluation of bone tumours and tumour-like lesions",
+   "authors": "Nascimento D, Suchard G, Hatem M, de Abreu A",
+   "journal": "Insights into Imaging 5(4):419-440",
+   "year": 2014,
+   "doi": "10.1007/s13244-014-0339-z",
+   "pmid": "25005774",
+   "pmcid": "PMC4141345",
+   "url": "https://doi.org/10.1007/s13244-014-0339-z",
+   "license": "CC BY 4.0",
+   "license_status": "verified",
+   "evidence_level": "narrative review",
+   "used_for": [
+    "when MRI adds value; indeterminate lesions"
+   ]
+  },
+  {
+   "id": "S-18",
+   "type": "journal_article",
+   "title": "Chondroid Tumors: Review of Salient Imaging Features and Update on the WHO Classification",
+   "authors": "Gómez León N, Galán González I, Moreno-Casado MJ, et al.",
+   "journal": "Current Problems in Diagnostic Radiology 52(3):197-211",
+   "year": 2023,
+   "doi": "10.1067/j.cpradiol.2023.01.005",
+   "url": "https://doi.org/10.1067/j.cpradiol.2023.01.005",
+   "license": "CC BY-NC-ND 4.0",
+   "license_status": "verified",
+   "license_note": "Metadata repositori UAM untuk versi terbit: '© 2023 The Authors', dc.rights.cc = Reconocimiento–NoComercial–SinObraDerivada (CC BY-NC-ND). Fakta dinyatakan ulang saja.",
+   "evidence_level": "narrative review",
+   "used_for": [
+    "chondroid matrix",
+    "enchondroma vs ACT/chondrosarcoma features"
+   ]
+  },
+  {
+   "id": "S-19",
+   "type": "journal_article",
+   "title": "Imaging of skull vault tumors in adults",
+   "authors": "Pons Escoda A, Naval Baudin P, Mora P, et al.",
+   "journal": "Insights into Imaging 11:23",
+   "year": 2020,
+   "doi": "10.1186/s13244-019-0820-9",
+   "pmid": "32056014",
+   "pmcid": "PMC7018895",
+   "url": "https://doi.org/10.1186/s13244-019-0820-9",
+   "license": "CC BY 4.0",
+   "license_status": "verified",
+   "evidence_level": "narrative review",
+   "used_for": [
+    "calvarial lesions: lytic / sclerotic / transdiploic differentials"
+   ]
+  },
+  {
+   "id": "S-20",
+   "type": "journal_article",
+   "title": "Spinal osteoblastoma: a retrospective study of 35 patients' imaging findings with an emphasis on MRI",
+   "authors": "Liu J, Han S, Li J, Yuan Y, Guo W, Yuan H",
+   "journal": "Insights into Imaging 11:122",
+   "year": 2020,
+   "doi": "10.1186/s13244-020-00934-y",
+   "pmid": "33226535",
+   "pmcid": "PMC7683662",
+   "url": "https://doi.org/10.1186/s13244-020-00934-y",
+   "license": "CC BY 4.0",
+   "license_status": "verified",
+   "license_note": "Halaman artikel Insights into Imaging: CC BY 4.0.",
+   "evidence_level": "retrospective series, 35 patients",
+   "used_for": [
+    "posterior-element spinal lesions"
+   ]
+  },
+  {
+   "id": "S-21",
+   "type": "journal_article",
+   "title": "Bone tumours of the clavicle: Histopathological, anatomical and epidemiological analysis of 113 cases",
+   "authors": "Priemel M, Stiel N, Zustin J, et al.",
+   "journal": "Journal of Bone Oncology 16:100229",
+   "year": 2019,
+   "doi": "10.1016/j.jbo.2019.100229",
+   "url": "https://doi.org/10.1016/j.jbo.2019.100229",
+   "license": "CC BY-NC-ND 4.0",
+   "license_status": "verified",
+   "license_note": "PDF: '© 2019 The Authors. Published by Elsevier GmbH. This is an open access article under the CC BY-NC-ND license'.",
+   "evidence_level": "retrospective registry series, 113 clavicular tumours",
+   "used_for": [
+    "clavicle priors"
+   ]
+  },
+  {
+   "id": "S-22",
+   "type": "journal_article",
+   "title": "Fibrous dysplasia for radiologists: beyond ground glass bone matrix",
+   "authors": "Kushchayeva YS, Kushchayev SV, Glushko TY, et al.",
+   "journal": "Insights into Imaging 9(6):1035-1056",
+   "year": 2018,
+   "doi": "10.1007/s13244-018-0666-6",
+   "pmid": "30484079",
+   "pmcid": "PMC6269335",
+   "url": "https://doi.org/10.1007/s13244-018-0666-6",
+   "license": "CC BY 4.0",
+   "license_status": "verified",
+   "evidence_level": "narrative review",
+   "used_for": [
+    "fibrous dysplasia: ground-glass matrix, polyostotic forms, age-related evolution"
+   ]
+  },
+  {
+   "id": "S-23",
+   "type": "journal_article",
+   "title": "Skeletal involvement in Langerhans cell histiocytosis",
+   "authors": "Khung S, Budzik JF, Amzallag-Bellenger E, et al.",
+   "journal": "Insights into Imaging 4(5):569-579",
+   "year": 2013,
+   "doi": "10.1007/s13244-013-0271-7",
+   "pmid": "23907805",
+   "pmcid": "PMC3781243",
+   "url": "https://doi.org/10.1007/s13244-013-0271-7",
+   "license": "CC BY-NC 2.0",
+   "license_status": "verified",
+   "license_note": "Non-commercial licence — same governance flag as S-13.",
+   "evidence_level": "pictorial review",
+   "used_for": [
+    "LCH: skull lytic lesion, vertebra plana, long-bone budding appearance"
+   ]
+  },
+  {
+   "id": "S-24",
+   "type": "journal_article",
+   "title": "MRI in multiple myeloma: a pictorial review of diagnostic and post-treatment findings",
+   "authors": "Dutoit JC, Verstraete KL",
+   "journal": "Insights into Imaging 7(4):553-569",
+   "year": 2016,
+   "doi": "10.1007/s13244-016-0492-7",
+   "pmid": "27164915",
+   "pmcid": "PMC4956620",
+   "url": "https://doi.org/10.1007/s13244-016-0492-7",
+   "license": "CC BY 4.0",
+   "license_status": "verified",
+   "evidence_level": "pictorial review",
+   "used_for": [
+    "myeloma: multifocal lytic pattern, radiographic occultness"
+   ]
+  },
+  {
+   "id": "S-25",
+   "type": "journal_article",
+   "title": "Lesions involving the outer surface of the bone in children: a pictorial review",
+   "authors": "Chaturvedi A, Ranasinghe RACD, Chaturvedi A, Meyers SP",
+   "journal": "Insights into Imaging 7(6):763-778",
+   "year": 2016,
+   "doi": "10.1007/s13244-016-0527-0",
+   "pmid": "27761882",
+   "pmcid": "PMC5110481",
+   "url": "https://doi.org/10.1007/s13244-016-0527-0",
+   "license": "CC BY 4.0",
+   "license_status": "verified",
+   "evidence_level": "pictorial review",
+   "used_for": [
+    "surface / juxtacortical lesions in children"
+   ]
+  },
+  {
+   "id": "S-26",
+   "type": "journal_article",
+   "title": "Hereditary multiple exostoses: an educational review",
+   "authors": "Rueda-de-Eusebio A, Gomez-Pena S, Moreno-Casado MJ, et al.",
+   "journal": "Insights into Imaging 16:46",
+   "year": 2025,
+   "doi": "10.1186/s13244-025-01899-6",
+   "pmid": "39982564",
+   "pmcid": "PMC11845651",
+   "url": "https://doi.org/10.1186/s13244-025-01899-6",
+   "license": "CC BY 4.0",
+   "license_status": "verified",
+   "license_note": "PDF penerbit: 'Creative Commons Attribution 4.0 International License'.",
+   "evidence_level": "educational review",
+   "used_for": [
+    "osteochondroma / HME; malignant transformation risk ~1% solitary vs ~10% HME"
+   ]
+  },
+  {
+   "id": "S-27",
+   "type": "journal_article",
+   "title": "Diagnostic performance and reliability of ACR Bone-RADS versus REST for reporting bone tumors on conventional radiographs",
+   "authors": "Ramadan ZA, Denewar FA, Taman SE, et al.",
+   "journal": "Egyptian Journal of Radiology and Nuclear Medicine 56",
+   "year": 2025,
+   "doi": "10.1186/s43055-025-01530-0",
+   "url": "https://doi.org/10.1186/s43055-025-01530-0",
+   "license": "CC BY 4.0",
+   "license_status": "verified",
+   "license_note": "Halaman artikel EJRNM (SpringerOpen): CC BY 4.0.",
+   "evidence_level": "retrospective, 177 lesions, 3 readers; inter-rater agreement and validity of REST / Bone-RADS",
+   "used_for": [
+    "inter-observer reliability of periosteal reaction, scalloping, soft-tissue features"
+   ]
+  },
+  {
+   "id": "S-28",
+   "type": "journal_article",
+   "title": "The 2020 WHO Classification of Tumors of Bone: An Updated Review",
+   "authors": "Choi JH, Ro JY",
+   "journal": "Advances in Anatomic Pathology 28(3):119-138",
+   "year": 2021,
+   "doi": "10.1097/PAP.0000000000000293",
+   "pmid": "33480599",
+   "license": "cite-only",
+   "license_status": "cite_only",
+   "evidence_level": "narrative review of WHO 5th edition",
+   "used_for": [
+    "WHO 2020 entity list and categories (restated)"
+   ]
+  },
+  {
+   "id": "S-29",
+   "type": "book",
+   "title": "WHO Classification of Tumours: Soft Tissue and Bone Tumours, 5th edition",
+   "authors": "WHO Classification of Tumours Editorial Board",
+   "journal": "IARC, Lyon",
+   "year": 2020,
+   "license": "cite-only",
+   "license_status": "cite_only",
+   "license_note": "Diagnostic criteria are restated in our own words only; no text, tables or figures reproduced.",
+   "evidence_level": "international consensus classification",
+   "used_for": [
+    "entity taxonomy",
+    "behaviour categories (benign / intermediate / malignant)"
+   ]
+  },
+  {
+   "id": "S-30",
+   "type": "website",
+   "title": "Radiopaedia.org (individual articles to be listed per entity)",
+   "authors": "Radiopaedia contributors",
+   "year": 2026,
+   "url": "https://radiopaedia.org",
+   "license": "CC BY-NC-SA 3.0",
+   "license_status": "verified",
+   "license_note": "Use only with full attribution (article title, author, URL, licence). Share-alike applies to any adapted content; non-commercial applies.",
+   "evidence_level": "peer-reviewed encyclopaedia (tertiary)",
+   "used_for": [
+    "entity pages, to be added one by one with per-article attribution"
+   ]
+  }
+ ]
+}

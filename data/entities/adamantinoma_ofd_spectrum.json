@@ -1,0 +1,309 @@
+{
+ "id": "adamantinoma_ofd_spectrum",
+ "name_en": "Osteofibrous dysplasia – adamantinoma spectrum",
+ "name_id": "Spektrum displasia osteofibrosa – adamantinoma",
+ "aliases": [
+  "OFD",
+  "adamantinoma"
+ ],
+ "who_group": "other_mesenchymal",
+ "behaviour": "intermediate_locally_aggressive",
+ "definition_id": "Spektrum lesi fibro-oseus berbasis korteks anterior diafisis tibia: displasia osteofibrosa (jinak, anak), adamantinoma mirip-OFD, dan adamantinoma klasik (ganas derajat rendah, dewasa muda). Radiograf menunjukkan lesi multilokuler campuran dengan ekspansi dan bowing anterior.",
+ "source_ids": [
+  "S-01",
+  "S-13"
+ ],
+ "feature_weights": {
+  "age_group": {
+   "0-9": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "OFD mendominasi pada dekade pertama"
+   },
+   "20-39": {
+    "weight": 3,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Adamantinoma klasik: dekade ke-2–3"
+   },
+   "40-59": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "60+": {
+    "weight": -2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "10-19_unknown": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "10-19_open": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "10-19_closed": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "bone_class": {
+   "long_bone": {
+    "weight": 3,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Tibia pada 80–85% kasus; kadang fibula ipsilateral"
+   },
+   "flat_bone": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "spine_body": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "small_tubular_hand_foot": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "longitudinal": {
+   "diaphysis": {
+    "weight": 3,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "metadiaphysis": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "metaphysis": {
+    "weight": -2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "epiphysis_apophysis": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "transverse": {
+   "cortical": {
+    "weight": 3,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Korteks anterior tibia"
+   },
+   "eccentric": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "central": {
+    "weight": -2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "juxtacortical_surface": {
+    "weight": -2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "juxtacortical_continuous": {
+    "weight": -2,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "density": {
+   "mixed": {
+    "weight": 3,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "lytic": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "sclerotic": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "margin_lodwick": {
+   "IA": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "IB": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "IC": {
+    "weight": 0,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "II": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "III": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "cortex": {
+   "expansion_shell": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Ekspansi dan bowing anterior tibia"
+   },
+   "intact": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "focal_breach": {
+    "weight": 0,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "destruction": {
+    "weight": -2,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "soft_tissue_mass": {
+   "present": {
+    "weight": 0,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Komponen jaringan lunak mengarah ke adamantinoma, bukan OFD"
+   }
+  },
+  "periosteal": {
+   "none": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "solid_thin": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "spiculated": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "codman": {
+    "weight": -2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "present_unspecified": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Reaksi periosteal menandai proses aktif; pola tidak diketahui"
+   }
+  },
+  "matrix": {
+   "none": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "ground_glass": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "osteoid": {
+    "weight": -2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "chondroid": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  }
+ },
+ "pitfalls_id": [
+  "Radiograf tidak dapat membedakan OFD dari adamantinoma secara andal; usia >20 tahun, nyeri, destruksi korteks, dan komponen jaringan lunak mendukung adamantinoma.",
+  "Fibrous dysplasia tibia biasanya intrameduler sentral, bukan kortikal anterior."
+ ],
+ "rules": [],
+ "base_prior": -2,
+ "base_prior_source_ids": [
+  "S-01",
+  "S-05",
+  "S-06"
+ ],
+ "base_prior_note_id": "Entitas sangat jarang: prior prevalensi −2"
+}

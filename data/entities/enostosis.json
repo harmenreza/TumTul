@@ -1,0 +1,315 @@
+{
+ "id": "enostosis",
+ "name_en": "Enostosis (bone island)",
+ "name_id": "Enostosis (bone island)",
+ "who_group": "non_neoplastic_or_secondary",
+ "behaviour": "non_neoplastic",
+ "definition_id": "Fokus tulang kompak matur di dalam tulang spongiosa; lesi sklerotik homogen kecil dengan tepi berserabut (thorny radiation) yang menyatu dengan trabekula sekitar; temuan insidental tersering di antara lesi sklerotik.",
+ "source_ids": [
+  "S-01"
+ ],
+ "feature_weights": {
+  "age_group": {
+   "0-9": {
+    "weight": 0,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "20-39": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "40-59": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "60+": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "10-19_unknown": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "10-19_open": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "10-19_closed": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "bone_class": {
+   "flat_bone": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Pelvis"
+   },
+   "long_bone": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Femur proksimal"
+   },
+   "spine_body": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "sacrum": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "small_tubular_hand_foot": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "longitudinal": {
+   "epiphysis_apophysis": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "metaphysis": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "metadiaphysis": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "diaphysis": {
+    "weight": 0,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "transverse": {
+   "central": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "eccentric": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "cortical": {
+    "weight": -2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "juxtacortical_surface": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "juxtacortical_continuous": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "density": {
+   "sclerotic": {
+    "weight": 3,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Sklerotik homogen, setara densitas korteks"
+   },
+   "mixed": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "lytic": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "cortex": {
+   "intact": {
+    "weight": 3,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "destruction": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "expansion_shell": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "soft_tissue_mass": {
+   "present": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "periosteal": {
+   "none": {
+    "weight": 3,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "solid_thin": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "lamellated": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "spiculated": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "codman": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "present_unspecified": {
+    "weight": -2,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Reaksi periosteal tidak lazim untuk entitas ini"
+   }
+  },
+  "matrix": {
+   "none": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Bukan matriks tumor: tulang kompak homogen dengan tepi berserabut"
+   },
+   "osteoid": {
+    "weight": -2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "chondroid": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "ground_glass": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "size_cm": {
+   "<2": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "2-5": {
+    "weight": 0,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Giant bone island >2 cm dilaporkan; pertumbuhan >25% dalam 6 bulan perlu evaluasi"
+   },
+   ">5": {
+    "weight": -2,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "multiplicity": {
+   "multiple": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Multipel periartikular: osteopoikilosis"
+   }
+  },
+  "clinical_flags": {
+   "known_primary_malignancy": {
+    "weight": -2,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Dengan riwayat keganasan, metastasis sklerotik harus disingkirkan (ambang atenuasi CT, sidik tulang)"
+   }
+  }
+ },
+ "pitfalls_id": [
+  "Metastasis sklerotik (prostat, payudara) adalah banding utama; rerata atenuasi CT >885 HU mendukung enostosis (S-01).",
+  "Osteoid osteoma dan osteoma terletak di korteks/permukaan, bukan spongiosa."
+ ],
+ "rules": [],
+ "aliases": [],
+ "base_prior": 0,
+ "base_prior_source_ids": [
+  "S-01",
+  "S-05",
+  "S-06"
+ ]
+}

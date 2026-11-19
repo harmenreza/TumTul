@@ -1,0 +1,309 @@
+{
+ "id": "bpop_nora_lesion",
+ "name_en": "Bizarre parosteal osteochondromatous proliferation (Nora lesion)",
+ "name_id": "Proliferasi osteokondromatosa parosteal bizar (lesi Nora)",
+ "aliases": [
+  "BPOP"
+ ],
+ "who_group": "other_mesenchymal",
+ "behaviour": "benign",
+ "definition_id": "Proliferasi osteokartilaginosa reaktif di permukaan tulang, klasik di tulang tubular tangan dan kaki pada dewasa muda; massa termineralisasi menempel pada korteks tanpa kontinuitas korteks–meduler dan dengan korteks induk yang utuh.",
+ "source_ids": [
+  "S-01",
+  "S-25"
+ ],
+ "feature_weights": {
+  "age_group": {
+   "0-9": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ]
+   },
+   "20-39": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ]
+   },
+   "40-59": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ]
+   },
+   "60+": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ]
+   },
+   "10-19_unknown": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ]
+   },
+   "10-19_open": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ]
+   },
+   "10-19_closed": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ]
+   }
+  },
+  "bone_class": {
+   "small_tubular_hand_foot": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ]
+   },
+   "long_bone": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ]
+   },
+   "flat_bone": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ]
+   },
+   "spine_body": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ]
+   }
+  },
+  "longitudinal": {
+   "diaphysis": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ]
+   },
+   "metaphysis": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ]
+   },
+   "not_applicable": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ]
+   }
+  },
+  "transverse": {
+   "juxtacortical_surface": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ]
+   },
+   "central": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ]
+   },
+   "eccentric": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ]
+   },
+   "cortical": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ]
+   },
+   "juxtacortical_continuous": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ],
+    "note_id": "Tidak ada kontinuitas korteks–meduler (beda dengan osteokondroma)"
+   }
+  },
+  "density": {
+   "sclerotic": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ]
+   },
+   "mixed": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ]
+   },
+   "lytic": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ]
+   }
+  },
+  "cortex": {
+   "intact": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ],
+    "note_id": "Korteks induk utuh; tidak ada kontinuitas meduler (beda dengan osteokondroma)"
+   },
+   "destruction": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ]
+   },
+   "saucerization": {
+    "weight": 0,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "soft_tissue_mass": {
+   "present": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ]
+   },
+   "absent": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ]
+   }
+  },
+  "periosteal": {
+   "none": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ]
+   },
+   "spiculated": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ]
+   },
+   "codman": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ]
+   }
+  },
+  "matrix": {
+   "osteoid": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ]
+   },
+   "chondroid": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ]
+   },
+   "none": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ]
+   },
+   "ground_glass": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ]
+   }
+  },
+  "size_cm": {
+   "<2": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ]
+   },
+   "2-5": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ]
+   },
+   ">5": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-25"
+    ]
+   }
+  }
+ },
+ "pitfalls_id": [
+  "Parosteal osteosarkoma: lebih besar, di tulang panjang, dengan string sign.",
+  "Osteokondroma: kontinuitas korteks dan meduler dengan tulang induk."
+ ],
+ "rules": [],
+ "base_prior": -2,
+ "base_prior_source_ids": [
+  "S-01",
+  "S-05",
+  "S-06"
+ ],
+ "base_prior_note_id": "Entitas sangat jarang: prior prevalensi −2"
+}

@@ -1,0 +1,314 @@
+{
+ "id": "bone_infarct",
+ "name_en": "Medullary bone infarct",
+ "name_id": "Infark tulang meduler",
+ "who_group": "non_neoplastic_or_secondary",
+ "behaviour": "non_neoplastic",
+ "definition_id": "Nekrosis iskemik sumsum metafisis/diafisis; pada fase matur tampak sebagai area campuran dengan tepi sklerotik serpiginosa, tanpa ekspansi atau scalloping; sering multipel pada steroid, sickle cell, atau penyakit Caisson.",
+ "source_ids": [
+  "S-01"
+ ],
+ "feature_weights": {
+  "age_group": {
+   "0-9": {
+    "weight": -2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "20-39": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "40-59": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "60+": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "10-19_unknown": {
+    "weight": 0,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "10-19_open": {
+    "weight": 0,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "10-19_closed": {
+    "weight": 0,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "bone_class": {
+   "long_bone": {
+    "weight": 3,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Femur distal, tibia proksimal, humerus proksimal"
+   },
+   "flat_bone": {
+    "weight": -2,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Infark meduler jarang di tulang pipih"
+   },
+   "spine_body": {
+    "weight": -2,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "longitudinal": {
+   "metaphysis": {
+    "weight": 3,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "metadiaphysis": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "diaphysis": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "epiphysis_apophysis": {
+    "weight": -2,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Nekrosis epifisis adalah osteonekrosis/AVN, bukan infark meduler"
+   }
+  },
+  "transverse": {
+   "central": {
+    "weight": 3,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "eccentric": {
+    "weight": -2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "cortical": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "juxtacortical_surface": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "juxtacortical_continuous": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "density": {
+   "mixed": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "sclerotic": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Fase lanjut: sklerosis serpiginosa heterogen"
+   },
+   "lytic": {
+    "weight": 0,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "margin_lodwick": {
+   "IA": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Tepi sklerotik serpiginosa, bukan lobulated"
+   },
+   "IB": {
+    "weight": 0,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "IC": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "II": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "III": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "cortex": {
+   "intact": {
+    "weight": 3,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "endosteal_scalloping": {
+    "weight": -2,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Infark tidak men-scallop korteks; ini membedakannya dari enkondroma"
+   },
+   "expansion_shell": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "destruction": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "soft_tissue_mass": {
+   "present": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "periosteal": {
+   "none": {
+    "weight": 3,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "solid_thin": {
+    "weight": -2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "lamellated": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "spiculated": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "codman": {
+    "weight": -5,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "present_unspecified": {
+    "weight": -2,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Reaksi periosteal tidak lazim untuk entitas ini"
+   }
+  },
+  "matrix": {
+   "none": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "chondroid": {
+    "weight": 0,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Kalsifikasi infark dapat meniru matriks kondroid; pola serpiginosa perifer adalah kuncinya"
+   },
+   "osteoid": {
+    "weight": -2,
+    "source_ids": [
+     "S-01"
+    ]
+   },
+   "ground_glass": {
+    "weight": -2,
+    "source_ids": [
+     "S-01"
+    ]
+   }
+  },
+  "multiplicity": {
+   "multiple": {
+    "weight": 2,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Multipel: steroid, sickle cell, penyakit Caisson, pankreatitis"
+   }
+  }
+ },
+ "pitfalls_id": [
+  "Enkondroma adalah mimic terpenting; infark tidak menimbulkan scalloping endosteal dan memiliki tepi serpiginosa.",
+  "Transformasi sarkoma pada infark sangat jarang tetapi dilaporkan."
+ ],
+ "rules": [],
+ "aliases": [],
+ "base_prior": 0,
+ "base_prior_source_ids": [
+  "S-01",
+  "S-05",
+  "S-06"
+ ]
+}

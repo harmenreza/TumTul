@@ -1,0 +1,366 @@
+{
+ "id": "osteosarcoma_telangiectatic",
+ "name_en": "Telangiectatic osteosarcoma",
+ "name_id": "Osteosarkoma telangiektatik",
+ "who_group": "osteogenic",
+ "behaviour": "malignant",
+ "definition_id": "Varian osteosarkoma derajat tinggi yang didominasi rongga berisi darah; tampak sebagai lesi litik ekspansil metafisis pada remaja sehingga meniru kista tulang aneurismal.",
+ "source_ids": [
+  "S-01",
+  "S-15"
+ ],
+ "feature_weights": {
+  "age_group": {
+   "0-9": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "20-39": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "40-59": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "60+": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "10-19_unknown": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "10-19_open": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "10-19_closed": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   }
+  },
+  "bone_class": {
+   "long_bone": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "flat_bone": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   }
+  },
+  "longitudinal": {
+   "metaphysis": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "metadiaphysis": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "diaphysis": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "epiphysis_apophysis": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   }
+  },
+  "transverse": {
+   "eccentric": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "central": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "cortical": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "juxtacortical_surface": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "juxtacortical_continuous": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   }
+  },
+  "density": {
+   "lytic": {
+    "weight": 3,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ],
+    "note_id": "Hampir seluruhnya litik; matriks minimal"
+   },
+   "mixed": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "sclerotic": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   }
+  },
+  "margin_lodwick": {
+   "IA": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "IB": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "IC": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "II": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "III": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   }
+  },
+  "cortex": {
+   "expansion_shell": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ],
+    "note_id": "Ekspansi 'balon' dapat meniru ABC"
+   },
+   "focal_breach": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "destruction": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "intact": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   }
+  },
+  "soft_tissue_mass": {
+   "present": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "absent": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   }
+  },
+  "periosteal": {
+   "codman": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "lamellated": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "spiculated": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "shell": {
+    "weight": 0,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "none": {
+    "weight": -2,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "present_unspecified": {
+    "weight": 1,
+    "source_ids": [
+     "S-01"
+    ],
+    "note_id": "Reaksi periosteal menandai proses aktif; pola tidak diketahui"
+   }
+  },
+  "matrix": {
+   "none": {
+    "weight": 2,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "osteoid": {
+    "weight": 1,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ],
+    "note_id": "Fokus osteoid kecil di septa atau komponen padat perifer"
+   },
+   "chondroid": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   },
+   "ground_glass": {
+    "weight": -5,
+    "source_ids": [
+     "S-01",
+     "S-15"
+    ]
+   }
+  }
+ },
+ "rules": [
+  {
+   "id": "tos_abc_mimic_aggressive",
+   "when": {
+    "cortex": [
+     "expansion_shell",
+     "focal_breach",
+     "destruction"
+    ],
+    "margin_lodwick": [
+     "IC",
+     "II",
+     "III"
+    ]
+   },
+   "weight": 1,
+   "note_id": "Lesi ekspansil dengan margin agresif: osteosarkoma telangiektatik harus dipertimbangkan sebelum menyebut ABC",
+   "source_ids": [
+    "S-01",
+    "S-15"
+   ]
+  }
+ ],
+ "pitfalls_id": [
+  "Mimic utama ABC; komponen jaringan padat menyangat pada MRI dan nodularitas septa membedakan.",
+  "Fluid-fluid level tidak spesifik."
+ ],
+ "aliases": [],
+ "base_prior": -1,
+ "base_prior_source_ids": [
+  "S-01",
+  "S-05",
+  "S-06"
+ ],
+ "base_prior_note_id": "Entitas jarang: prior prevalensi −1"
+}
