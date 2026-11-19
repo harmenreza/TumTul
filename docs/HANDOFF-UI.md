@@ -4,7 +4,7 @@ Dokumen ini untuk memulai sesi baru tanpa kehilangan konteks. Baca bersama `clau
 
 ## Keadaan sekarang
 
-- Prototipe TumTul: https://claude.ai/artifact/DsM6XAJos65GTAABAw79AX (versi 15). KB 0.6.0, skema data v1.1.0, 37 entitas.
+- Prototipe TumTul: https://claude.ai/artifact/DsM6XAJos65GTAABAw79AX (versi 16). KB 0.6.0, skema data v1.1.0, 37 entitas.
 - Tema "Negatoskop" (terang/gelap/sistem).
 - Galeri contoh gambar di Sumbu B: 66 gambar disetujui untuk 32 entitas (`data/images.json` v0.3.1).
   Belum ada gambar: kondrosarkoma sel jernih, kondroma periosteal, hemangioma vertebra, fibroma desmoplastik,
