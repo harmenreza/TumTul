@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TumTul scoring matrix</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
+<style>
+/* Layout idea: project "Negatoskop" theme. One reference sheet: formula strip, legend, then a single
+   scrollable matrix (entities down, feature values across) with a detail panel that follows the tap. */
+:root{
+  --bg:#F3EFE6; --surface:#FBF8F1; --ink:#1C2024; --muted:#5B5F62; --line:#D8D1C2;
+  --rust:#A3471F; --teal:#2E5C63;
+  --w3:#2E5C63; --w3t:#FFFFFF; --w2:#7FAAAE; --w2t:#0F2A2E; --w1:#CFE0E0; --w1t:#17383D;
+  --w0:#ECE7DB; --w0t:#5B5F62; --wm2:#E6C77F; --wm2t:#3F2C05; --wm5:#8E2F22; --wm5t:#FFFFFF;
+  --serif:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  --cell:30px; --namew:168px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#0E1215; --surface:#161B1F; --ink:#E7E3DA; --muted:#A3A49E; --line:#2C3338;
+    --rust:#E8935F; --teal:#7FB6BC;
+    --w3:#8CC4CA; --w3t:#06191C; --w2:#3F7880; --w2t:#F1F7F7; --w1:#1F3B41; --w1t:#CFE4E6;
+    --w0:#1C2226; --w0t:#A3A49E; --wm2:#6E551C; --wm2t:#FBEBC4; --wm5:#D9694F; --wm5t:#1C0703;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#0E1215; --surface:#161B1F; --ink:#E7E3DA; --muted:#A3A49E; --line:#2C3338;
+  --rust:#E8935F; --teal:#7FB6BC;
+  --w3:#8CC4CA; --w3t:#06191C; --w2:#3F7880; --w2t:#F1F7F7; --w1:#1F3B41; --w1t:#CFE4E6;
+  --w0:#1C2226; --w0t:#A3A49E; --wm2:#6E551C; --wm2t:#FBEBC4; --wm5:#D9694F; --wm5t:#1C0703;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.5;-webkit-text-size-adjust:100%}
+.wrap{max-width:1500px;margin:0 auto;padding:20px 16px 32px;display:flex;flex-direction:column;gap:18px}
+h1{font-family:var(--serif);font-weight:600;font-size:26px;line-height:1.2;margin:0;text-wrap:balance}
+h2{font-family:var(--serif);font-weight:600;font-size:19px;margin:0;text-wrap:balance}
+p{margin:0}
+.lede{color:var(--muted);max-width:65ch}
+.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.eyebrow{font-size:12px;color:var(--muted);letter-spacing:.02em}
+.formula{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:12px 14px;display:flex;flex-direction:column;gap:6px}
+.formula code{font-family:var(--mono);font-size:14px;color:var(--rust);overflow-wrap:anywhere}
+.facts{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:13px;color:var(--muted)}
+.facts b{color:var(--ink);font-family:var(--mono);font-weight:500}
+.legend{display:flex;flex-wrap:wrap;gap:8px 14px;font-size:13px}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.sw{display:inline-grid;place-items:center;width:30px;height:22px;border-radius:3px;font-family:var(--mono);font-size:12px}
+.controls{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font:inherit;font-size:13px;padding:6px 11px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--teal);border-color:var(--teal);color:var(--bg)}
+.chip:focus-visible,td.c:focus-visible,th.name button:focus-visible,select:focus-visible{outline:2px solid var(--rust);outline-offset:1px}
+label.sel{font-size:13px;color:var(--muted);display:inline-flex;gap:6px;align-items:center}
+select{font:inherit;font-size:13px;padding:6px 8px;border-radius:6px;border:1px solid var(--line);background:var(--surface);color:var(--ink)}
+.scroller{overflow:auto;max-height:640px;max-height:min(78svh,900px);border:1px solid var(--line);border-radius:8px;background:var(--surface)}
+table{border-collapse:separate;border-spacing:0;font-size:12px}
+th,td{padding:0;border-right:1px solid var(--bg);border-bottom:1px solid var(--bg)}
+thead th{position:sticky;background:var(--surface);z-index:3;font-weight:500}
+thead tr.fg th{top:0;height:28px;font-size:12px;text-align:left;padding:0 6px;white-space:nowrap;border-bottom:1px solid var(--line);border-left:2px solid var(--line);color:var(--teal)}
+thead tr.fv th{top:28px;height:128px;vertical-align:bottom;border-bottom:2px solid var(--line)}
+thead tr.fv th.first{border-left:2px solid var(--line)}
+.vl{writing-mode:vertical-rl;transform:rotate(180deg);white-space:nowrap;padding:6px 0;margin:0 auto;font-size:12px;color:var(--ink);font-weight:400}
+th.corner{left:0;z-index:5!important;min-width:var(--namew);max-width:var(--namew);text-align:left;padding:0 8px!important;vertical-align:bottom;color:var(--muted)!important;border-left:0!important}
+th.name{position:sticky;left:0;z-index:2;background:var(--surface);min-width:var(--namew);max-width:var(--namew);text-align:left;font-weight:400;border-right:2px solid var(--line)}
+th.name button{font:inherit;font-family:var(--serif);font-weight:500;font-size:13px;line-height:1.25;color:var(--ink);background:none;border:0;padding:5px 8px;text-align:left;width:100%;cursor:pointer}
+tr.grp th{position:sticky;left:0;background:var(--bg);text-align:left;padding:8px 8px 4px;font-size:12px;color:var(--rust);font-weight:600;border:0;z-index:2}
+tr.grp td{background:var(--bg);border:0}
+td.c{min-width:var(--cell);width:var(--cell);height:30px;text-align:center;font-family:var(--mono);font-variant-numeric:tabular-nums;cursor:pointer}
+td.first{border-left:2px solid var(--line)}
+td.p3{background:var(--w3);color:var(--w3t);font-weight:500}
+td.p2{background:var(--w2);color:var(--w2t)}
+td.p1{background:var(--w1);color:var(--w1t)}
+td.z{background:var(--w0);color:var(--w0t)}
+td.m2{background:var(--wm2);color:var(--wm2t)}
+td.m5{background:var(--wm5);color:var(--wm5t);font-weight:500}
+td.e{color:var(--line);cursor:default}
+td.sel{box-shadow:inset 0 0 0 2px var(--rust)}
+td.prior{border-right:2px solid var(--line)}
+.sw.p3{background:var(--w3);color:var(--w3t)}.sw.p2{background:var(--w2);color:var(--w2t)}.sw.p1{background:var(--w1);color:var(--w1t)}
+.sw.z{background:var(--w0);color:var(--w0t)}.sw.m2{background:var(--wm2);color:var(--wm2t)}.sw.m5{background:var(--wm5);color:var(--wm5t)}
+.sw.e{border:1px solid var(--line);color:var(--muted)}
+.detail{position:sticky;bottom:0;z-index:6;background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--rust);border-radius:0;padding:10px 14px;display:flex;flex-direction:column;gap:4px;box-shadow:0 -6px 16px rgba(0,0,0,.08)}
+.detail .t{font-family:var(--serif);font-weight:600;font-size:16px}
+.detail .s{font-size:13px;color:var(--muted)}
+.detail .big{font-family:var(--mono);font-size:15px;color:var(--rust);font-weight:500}
+.rules{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px}
+.rule{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:12px 14px;display:flex;flex-direction:column;gap:6px}
+.rule .w{font-family:var(--mono);color:var(--rust);font-weight:500}
+.rule ul{margin:0;padding-left:18px;font-size:13px}
+.rule .n{font-size:13px;color:var(--muted)}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:12px 14px;display:flex;flex-direction:column;gap:6px;font-size:14px}
+.card ul{margin:0;padding-left:18px}
+footer{font-size:12px;color:var(--muted);max-width:75ch}
+@media (max-width:520px){:root{--namew:124px} h1{font-size:22px} th.name button{font-size:12px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header style="display:flex;flex-direction:column;gap:6px">
+    <span class="eyebrow">TumTul · Tumor Tulang · knowledge base v0.6.0 · schema v1.1.0</span>
+    <h1>Scoring matrix for all {{entities}} entities</h1>
+    <p class="lede">Every weight the app can add to an entity, in one sheet. Rows are entities, columns are the values a reader can pick. Tap a cell for its note and sources, or an entity name for its prior and rules.</p>
+  </header>
+
+  <section class="formula" aria-label="Score formula">
+    <code>score(entity) = prevalence prior + sum of weights for the filled features + matching rules</code>
+    <div class="facts">
+      <span><b>{{entities}}</b> entities</span><span><b>{{cols}}</b> feature values</span><span><b>{{claims}}</b> weighted claims</span>
+      <span><b>{{hard}}</b> hard constraints</span><span><b>{{rules}}</b> special rules</span>
+    </div>
+    <p style="font-size:13px;color:var(--muted)">One weight of −5 among the filled features moves the entity to the excluded list. A feature left unknown adds nothing.</p>
+  </section>
+
+  <section class="legend" aria-label="Legend">
+    <span><i class="sw p3">+3</i>hallmark</span>
+    <span><i class="sw p2">+2</i>typical</span>
+    <span><i class="sw p1">+1</i>compatible</span>
+    <span><i class="sw z">0</i>neutral, stated</span>
+    <span><i class="sw e">·</i>no claim, counts as 0</span>
+    <span><i class="sw m2">−2</i>unusual</span>
+    <span><i class="sw m5">−5</i>hard constraint</span>
+  </section>
+
+  <section class="controls" aria-label="Filters">
+    <div class="chips" id="chips" role="group" aria-label="Filter by behaviour"></div>
+    <label class="sel" for="sort">Order
+      <select id="sort"><option value="group">WHO group</option><option value="name">Name</option><option value="hard">Most hard constraints</option></select>
+    </label>
+  </section>
+
+  <div class="scroller" id="scroller" tabindex="0" aria-label="Weight matrix, scrolls in both directions"><table id="m"></table></div>
+
+  <div class="detail" id="detail" aria-live="polite">
+    <div class="t" id="d-t">Tap a cell</div>
+    <div class="s" id="d-s">The note and source codes for that weight appear here.</div>
+  </div>
+
+  <section style="display:flex;flex-direction:column;gap:10px">
+    <h2>Special rules</h2>
+    <p class="lede">A rule adds its weight only when every listed feature has one of the listed values.</p>
+    <div class="rules" id="rules"></div>
+  </section>
+
+  <section style="display:flex;flex-direction:column;gap:10px">
+    <h2>Prevalence prior</h2>
+    <div class="two" id="priors"></div>
+  </section>
+
+  <section style="display:flex;flex-direction:column;gap:10px">
+    <h2>Axis A, scored separately</h2>
+    <div class="two">
+      <div class="card"><b>Points, 0 to 9</b>
+        <ul>
+          <li>Margin: IA 0, IB 1, IC 2, II 3, III 3</li>
+          <li>Cortex: focal breach 1, destruction 2, others 0</li>
+          <li>Periosteal reaction: lamellated, spiculated or Codman 2, others 0</li>
+          <li>Soft-tissue mass: present 2</li>
+        </ul></div>
+      <div class="card"><b>Classes</b>
+        <ul><li>0 to 1: appears non-aggressive</li><li>2 to 3: indeterminate</li><li>4 or more: appears aggressive</li></ul>
+        <span style="color:var(--muted);font-size:13px">Axis A describes behaviour on the image. It does not feed the entity scores above.</span></div>
+    </div>
+  </section>
+
+  <footer>Reference and educational tool, not a diagnostic device. Weights are expert rules restated from the sources cited by code (S-xx) in the project registry; they are unchanged since v0.6.0 and have not met the pre-registered accuracy criteria. Values marked not applicable are hidden in the app and omitted here; all four carry weight 0. Notes are shown in Indonesian as stored in the knowledge base.</footer>
+</div>
+
+<script>
+const D = /*DATA*/;
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const fmt = w => w > 0 ? '+' + w : w < 0 ? '−' + Math.abs(w) : '0';
+const cls = w => w >= 3 ? 'p3' : w === 2 ? 'p2' : w === 1 ? 'p1' : w === 0 ? 'z' : w > -5 ? 'm2' : 'm5';
+const meaning = w => w >= 3 ? 'hallmark' : w === 2 ? 'typical' : w === 1 ? 'compatible' : w === 0 ? 'neutral' : w > -5 ? 'unusual' : 'hard constraint, entity is excluded';
+const firstCol = new Set(); { let i = 0; for (const f of D.feats) { firstCol.add(i); i += f.n; } }
+const hardCount = e => e.w.filter(w => w !== null && w <= -5).length;
+const groupName = Object.fromEntries(D.groups);
+let active = new Set(Object.keys(D.beh)), sortBy = 'group', selected = null;
+
+function chips() {
+  const counts = {}; for (const e of D.ents) counts[e.b] = (counts[e.b] || 0) + 1;
+  $('chips').innerHTML = Object.entries(D.beh).filter(([k]) => counts[k]).map(([k, l]) =>
+    `<button type="button" class="chip" data-b="${k}" aria-pressed="true">${esc(l)} <span class="mono">${counts[k]}</span></button>`).join('');
+  $('chips').addEventListener('click', ev => {
+    const b = ev.target.closest('.chip'); if (!b) return;
+    const k = b.dataset.b; active.has(k) ? active.delete(k) : active.add(k);
+    b.setAttribute('aria-pressed', active.has(k)); body();
+  });
+}
+function head() {
+  const fg = `<th class="corner" rowspan="2">Entity</th><th rowspan="2" style="top:0;height:156px;vertical-align:bottom;border-bottom:2px solid var(--line);border-right:2px solid var(--line)"><div class="vl" style="color:var(--rust)">Prevalence prior</div></th>` +
+    D.feats.map(f => `<th colspan="${f.n}">${esc(f.l)}</th>`).join('');
+  const fv = D.cols.map((c, i) => `<th class="${firstCol.has(i) ? 'first' : ''}" scope="col"><div class="vl">${esc(c[2])}</div></th>`).join('');
+  return `<thead><tr class="fg">${fg}</tr><tr class="fv">${fv}</tr></thead>`;
+}
+function rowHTML(e, idx) {
+  const cells = e.w.map((w, i) => {
+    const f = firstCol.has(i) ? ' first' : '';
+    return w === null ? `<td class="c e${f}">·</td>`
+      : `<td class="c ${cls(w)}${f}" tabindex="0" data-e="${idx}" data-i="${i}">${fmt(w)}</td>`;
+  }).join('');
+  const p = `<td class="c prior ${e.p ? 'm2' : 'z'}" tabindex="0" data-e="${idx}" data-i="p">${fmt(e.p)}</td>`;
+  return `<tr><th class="name" scope="row"><button type="button" data-e="${idx}">${esc(e.n)}</button></th>${p}${cells}</tr>`;
+}
+function body() {
+  const list = D.ents.map((e, idx) => ({ e, idx })).filter(x => active.has(x.e.b));
+  let html = '';
+  if (sortBy === 'group') {
+    for (const [g, label] of D.groups) {
+      const rows = list.filter(x => x.e.g === g); if (!rows.length) continue;
+      html += `<tr class="grp"><th>${esc(label)}</th><td colspan="${D.cols.length + 1}"></td></tr>` + rows.map(x => rowHTML(x.e, x.idx)).join('');
+    }
+  } else {
+    if (sortBy === 'name') list.sort((a, b) => a.e.n.localeCompare(b.e.n));
+    else list.sort((a, b) => hardCount(b.e) - hardCount(a.e));
+    html = list.map(x => rowHTML(x.e, x.idx)).join('');
+  }
+  if (!list.length) html = `<tr><th class="name" style="padding:10px 8px">No entities match the filter.</th><td colspan="${D.cols.length + 1}"></td></tr>`;
+  $('m').innerHTML = head() + '<tbody>' + html + '</tbody>';
+}
+function show(t, s) { $('d-t').innerHTML = t; $('d-s').innerHTML = s; }
+function pickCell(td) {
+  if (selected) selected.classList.remove('sel'); selected = td; td.classList.add('sel');
+  const e = D.ents[+td.dataset.e];
+  if (td.dataset.i === 'p') {
+    show(`${esc(e.n)} <span class="big">${fmt(e.p)}</span>`, `Prevalence prior: ${e.p === 0 ? 'common' : e.p === -1 ? 'rare' : 'very rare'}. Added to every score for this entity. Sources S-01, S-05, S-06.`);
+    return;
+  }
+  const i = +td.dataset.i, c = D.cols[i], w = e.w[i], x = e.x[i] || ['', []];
+  show(`${esc(e.n)} <span class="big">${fmt(w)}</span>`,
+    `${esc(D.short[c[0]])}: ${esc(c[2])}. ${esc(meaning(w))}.` + (x[0] ? ` ${esc(x[0])}.` : '') + (x[1].length ? ` Sources ${esc(x[1].join(', '))}.` : ''));
+}
+function pickEntity(idx) {
+  if (selected) { selected.classList.remove('sel'); selected = null; }
+  const e = D.ents[idx];
+  const tops = e.w.map((w, i) => [w, i]).filter(x => x[0] === 3).map(x => `${D.short[D.cols[x[1]][0]]}: ${D.cols[x[1]][2]}`);
+  show(`${esc(e.n)}`,
+    `${esc(e.ni)}. ${esc(D.beh[e.b])}, ${esc(groupName[e.g])}. Prior ${fmt(e.p)}. ${hardCount(e)} hard constraints, ${e.r.length} special rule${e.r.length === 1 ? '' : 's'}.` +
+    (tops.length ? ` Hallmarks (+3): ${esc(tops.join('; '))}.` : ''));
+}
+function rules() {
+  const out = [];
+  for (const e of D.ents) for (const r of e.r) out.push(`<div class="rule"><div><span class="w">${fmt(r.w)}</span> for <b>${esc(e.n)}</b></div>
+    <ul>${Object.entries(r.when).map(([f, vs]) => `<li>${esc(D.short[f])}: ${esc(vs.map(v => D.vs[v] || v).join(' or '))}</li>`).join('')}</ul>
+    <div class="n">${esc(r.note)}. Sources ${esc(r.s.join(', '))}.</div></div>`);
+  $('rules').innerHTML = out.join('');
+  const by = p => D.ents.filter(e => e.p === p).map(e => esc(e.n)).join('; ');
+  $('priors').innerHTML = [[-2, 'Very rare'], [-1, 'Rare']].map(([p, l]) => `<div class="card"><b>${l} <span class="mono" style="color:var(--rust)">${fmt(p)}</span></b><span>${by(p)}</span></div>`).join('') +
+    `<div class="card"><b>Common <span class="mono" style="color:var(--rust)">0</span></b><span>The other ${D.ents.filter(e => e.p === 0).length} entities. Skeletal tuberculosis is kept at 0 for the Indonesian context.</span></div>`;
+}
+$('m').addEventListener('click', ev => {
+  const td = ev.target.closest('td.c[data-e]'); if (td) return pickCell(td);
+  const b = ev.target.closest('th.name button'); if (b) pickEntity(+b.dataset.e);
+});
+$('m').addEventListener('keydown', ev => {
+  if ((ev.key === 'Enter' || ev.key === ' ') && ev.target.matches('td.c[data-e]')) { ev.preventDefault(); pickCell(ev.target); }
+});
+$('sort').addEventListener('change', ev => { sortBy = ev.target.value; body(); });
+chips(); body(); rules();
+</script>
+</body>
+</html>

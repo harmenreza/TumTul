@@ -7,50 +7,58 @@
  "definition_id": "Tumor ganas tumbuh lambat dari sisa notokord, pada garis tengah aksial: sakrokoksigeal dan klivus tersering; lesi litik destruktif dengan massa jaringan lunak besar.",
  "source_ids": [
   "S-01",
-  "S-05"
+  "S-05",
+  "S-31"
  ],
  "feature_weights": {
   "age_group": {
    "0-9": {
     "weight": -5,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-31"
     ]
    },
    "20-39": {
     "weight": 1,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-31"
     ]
    },
    "40-59": {
     "weight": 3,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-31"
     ]
    },
    "60+": {
     "weight": 3,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-31"
     ]
    },
    "10-19_unknown": {
     "weight": -5,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-31"
     ]
    },
    "10-19_open": {
     "weight": -5,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-31"
     ]
    },
    "10-19_closed": {
     "weight": -5,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-31"
     ]
    }
   },
@@ -58,14 +66,16 @@
    "sacrum": {
     "weight": 3,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-31"
     ],
     "note_id": "Sakrokoksigeal adalah lokasi tersering"
    },
    "spine_body": {
     "weight": 2,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-31"
     ]
    },
    "craniofacial": {
@@ -78,19 +88,22 @@
    "long_bone": {
     "weight": -5,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-31"
     ]
    },
    "flat_bone": {
     "weight": -5,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-31"
     ]
    },
    "spine_posterior": {
     "weight": -2,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-31"
     ]
    }
   },
@@ -106,7 +119,8 @@
    "central": {
     "weight": 2,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-31"
     ]
    }
   },
@@ -114,7 +128,8 @@
    "lytic": {
     "weight": 3,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-31"
     ]
    },
    "mixed": {
@@ -126,7 +141,8 @@
    "sclerotic": {
     "weight": -5,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-31"
     ]
    }
   },
@@ -166,7 +182,8 @@
    "destruction": {
     "weight": 2,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-31"
     ]
    },
    "focal_breach": {
@@ -178,7 +195,8 @@
    "intact": {
     "weight": -2,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-31"
     ]
    }
   },
@@ -186,14 +204,16 @@
    "present": {
     "weight": 3,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-31"
     ],
     "note_id": "Massa presakral besar, sering tidak proporsional dengan destruksi tulang"
    },
    "absent": {
     "weight": -2,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-31"
     ]
    }
   },
@@ -215,7 +235,8 @@
    "chondroid": {
     "weight": 0,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-31"
     ],
     "note_id": "Kalsifikasi amorf dapat ada; bedakan dari kondrosarkoma"
    },

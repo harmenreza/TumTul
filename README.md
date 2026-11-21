@@ -99,6 +99,21 @@ tools/fetch_hires.py          fetches full-resolution originals of the picked im
 tools/assemble_images.py      picks + Indonesian captions -> web/img/ + data/images.json (crop, resize, attribution)
 tools/image_picks.json, tools/image_captions_id.json   selected images per entity and our own captions
 web/index.html                built, self-contained prototype (published as a Claude artifact)
+tools/build_matrix.py         builds the scoring-matrix reference page web/matrix.html from web/matrix_template.html (reads the KB, changes nothing)
+web/matrix_template.html      scoring-matrix page (English labels, Negatoskop tokens); published as the artifact "TumTul scoring matrix"
+docs/HANDOFF-UI.md            session handoff: UI work (2026-11-19)
+docs/HANDOFF-SKORING.md       session handoff: scoring diagrams, matrix and scoring review (2026-11-21)
+docs/TINJAUAN-SKOR-v0.6.md    scoring review of KB 0.6.0: findings and 34 hypotheses for v0.7 (review only, nothing applied) — ID
+docs/tinjauan-skor-v0.6-hard-constraints.csv   all 322 hard constraints classed a/b/c by the review
+tools/apply_source_overrides.py  owner-approved source corrections applied after the generators; proves only source_ids change
+docs/USULAN-SUMBER-v0.7.md    source proposals: A applied (KB 0.6.1), B journal candidates, C EPOS poster candidates — ID
+tools/review_scoring.py       read-only analysis behind the review; prints every figure in the report
+tools/review_cases_v1_v4.txt  compact transcription of the 193 coded validation cases, used by review_scoring.py
+docs/TINJAUAN-SUMBER-v0.6.md  full-text source check of KB 0.6.0: does the cited source support the claim? (review only) — ID
+docs/tinjauan-sumber-v0.6.csv verdict per checked claim (312 claims in sets A–D, plus the 5 rules)
+tools/review_sources.py       combines the evidence file into verdicts and prints every figure in the source check
+tools/review_source_evidence.tsv   hand-recorded finding per claim per source (526 rows: locator + note in own words)
+tools/review_source_coverage.tsv   which source covers which entity (radiographic description / age-location / mention / nothing)
 flutter/                      Android app (after the web prototype is validated)
 ```
 
@@ -106,18 +121,37 @@ flutter/                      Android app (after the web prototype is validated)
 
 ```
 python3 tools/build_entities_batch2.py   # regenerates batch 1 and 2
+python3 tools/apply_source_overrides.py  # re-applies owner-approved source corrections (source_ids only; KB 0.6.1: CMF re-cited to S-18)
 python3 tools/validate_kb.py             # must print OK
 python3 tools/score_smoke.py             # expect 19/20 PASS (the 20th is a deliberate tie)
 python3 tools/build_web.py               # writes web/index.html (inlines KB + data/images.json; checks approved images exist)
+python3 tools/build_matrix.py            # writes web/matrix.html; for KB 0.6.0 prints 37 entities, 62 values, 1584 claims, 322 hard, 5 rules
 ```
 
 ## Scoring logic (reference)
 
 `tools/score_smoke.py` is the normative implementation: per entity,
-`score = Σ feature weights (given inputs) + Σ matching rule weights`; any weight of −5 is a
+`score = base_prior + Σ feature weights (given inputs) + Σ matching rule weights`; any weight of −5 is a
 hard constraint that moves the entity to an "excluded because…" list instead of deleting
 it. `unknown` inputs contribute nothing. The web and Flutter implementations must
 reproduce its output on the vignettes in that file.
+
+### Scoring reference views (since 2026-11-21)
+
+Two read-only views of the scoring, for teaching and for reviewing weights. Neither changes the KB or the app.
+
+- **Scoring matrix** — https://claude.ai/artifact/Do4A9wGh2uZFZzU9UxN8yv. All 37 entities (rows) against the 62
+  feature values offered in the app (columns), each weight colour-coded +3 … −5, with the prevalence prior, the 5
+  special rules and the Axis A point table. Tap a cell for its note and source codes. Built by
+  `tools/build_matrix.py`; rebuild and republish to the same artifact whenever weights, entities or feature values
+  change, and check the printed counts against the KB.
+- **Scoring flow** (Whiteboard) — https://claude.ai/artifact/DajnwWgBN7vsYrBBA2SKqF. Reader's features → UI input
+  rules → Axis A (0–9 points, three classes) and Axis B (prior + weights + rules → −5 check → excluded list or
+  ranked compatible list) → screen. Drawn by hand, not generated: update it when the scoring logic or the
+  ranking display changes.
+
+KB 0.6.0 in numbers: 1584 weighted claims (192 at +3, 248 at +2, 382 at +1, 179 explicit 0, 257 at −2,
+322 at −5; plus 4 `not_applicable` claims at 0 that the app hides), 16 entities with a non-zero prior, 5 rules.
 
 ## Stack
 
@@ -154,12 +188,22 @@ reproduce its output on the vignettes in that file.
       (Top-3 69% vs ≥80%; Top-5 83%); typical but sparse input (mean 4.5 features) — `docs/VALIDASI-INTERNAL-v4.md`
 - [x] v0.6.3 UI: ties shown explicitly; sparse-input warning (< 6 features); impossible value pairs blocked
 - [x] v0.6.7 UI: "Negatoskop" colour theme, serif/sans/mono type system, light/dark/system switch
+- [x] Scoring reference views: flow diagram (Whiteboard) and full entity × feature-value matrix (2026-11-21)
 - [ ] Share prototype with colleagues as an educational tool, without accuracy claims; collect feedback
 - [x] Practice-case reading form (digital, same codes as the app, reader blinding, export) — `docs/FORMULIR-KASUS-PRAKTIK.md`
 - [x] Research proposal for the practice-case validation drafted (two stages: diagnostic accuracy on 200 cases,
       reader study 12 readers × 80 cases) — `docs/PROPOSAL-VALIDASI-PRAKTIK.md`; owner decisions pending
 - [ ] Practice-case validation: consecutive biopsy-proven cases, features read from images, pre-registered
       protocol, ethics approval (v1–v3 remain regression tests: `validate_cases.py v1|v2|v3`)
+- [x] Scoring review of KB 0.6.0 (`docs/TINJAUAN-SKOR-v0.6.md`, 2026-11-21): 34 hypotheses and 7 schema options; nothing applied
+- [x] Full-text source check (`docs/TINJAUAN-SUMBER-v0.6.md`, 2026-11-22): in the unbiased sample 9 of 40 claims are
+      supported by their cited source, 20 not found; three entities have no radiographic source; nothing applied
+- [x] KB 0.6.1 (2026-11-22, sources only, scores identical to 0.6.0): CMF claims re-cited from S-06 to S-18;
+      S-31 and S-32 (two CC BY spine reviews) registered and cited for chordoma and vertebral haemangioma (32 sources);
+      prototype republished
+- [ ] Sources: find open-access radiographic sources for chordoma, desmoplastic fibroma,
+      skeletal tuberculosis, vertebral haemangioma, periosteal osteosarcoma and the S-01-only entities (H-26)
+- [ ] Owner to assess the review's hypotheses (which to keep, drop or reword) before any is taken into v0.7
 - [ ] Prepare v0.7 hypotheses (CMF/GCTB weights, explicit ties, sparse-input warning) for evaluation on practice cases
 - [ ] Batch 3 (v2): hands/feet, calvaria, clavicle entities; dedifferentiated and
       mesenchymal chondrosarcoma; CRMO; leukaemia; Erdheim-Chester

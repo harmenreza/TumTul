@@ -1,0 +1,1060 @@
+====================================================================================================
+0. KLAIM DAN SET
+====================================================================================================
+entitas: 37; klaim bobot fitur: 1584; bobot: +3: 192, +2: 248, +1: 382, 0: 183, -2: 257, -5: 322; aturan: 5
+klaim (termasuk aturan) per sumber: S-01 1577, S-04 79, S-05 4, S-06 340, S-10 1, S-15 155, S-16 45, S-18 90, S-19 2, S-20 2, S-21 1, S-22 44, S-23 41, S-24 41, S-25 77, S-26 3
+sumber tidak dapat diakses: S-21 (1 klaim di seluruh KB; 0 di set A-D/R)
+set A: 73 klaim
+set B: 192 klaim
+set C: 18 klaim
+set D: 40 klaim
+set R: 5 klaim
+set C di dalam A: 9; di dalam B: 2; di luar A dan B: 7
+gabungan A-D: 312 klaim unik (19.7% dari 1584 klaim bobot fitur)
+set D: benih 20261121, 40 dari 1308 klaim di luar A, B, C (tanpa nilai not_applicable, tanpa aturan)
+set D menurut bobot: +2: 4, +1: 12, 0: 4, -2: 9, -5: 11
+set D yang hanya mengutip S-01: 15 dari 40 (38%); seluruh KB: 661 dari 1584 (41.7%)
+
+baris bukti: 526 (klaim: 317); semuanya cocok dengan klaim, bobot, dan sumber yang dikutip
+temuan per baris: supports: 145, partly: 156, silent: 218, conflicts: 7
+baris bukti per sumber: S-01 314, S-04 19, S-05 4, S-06 88, S-10 1, S-15 30, S-16 7, S-18 12, S-19 1, S-20 2, S-22 12, S-23 12, S-24 7, S-25 16, S-26 1
+baris bukti untuk set A-D: 520 (312 klaim); untuk aturan (set R): 6
+baris bukti di luar set A-D/R: 0
+
+====================================================================================================
+1. KLAIM YANG BELUM LENGKAP
+====================================================================================================
+tidak ada: semua klaim set A, B, C, D dan R punya temuan untuk setiap sumber terjangkau yang dikutipnya
+
+ditulis: docs/tinjauan-sumber-v0.6.csv (328 baris; klaim di dua set muncul dua kali)
+
+====================================================================================================
+2. VONIS PER SET
+====================================================================================================
+| Set | n | didukung | sebagian | tidak ditemukan | bertentangan | sumber tidak dapat diakses |
+|---|---|---|---|---|---|---|
+| Set A | 73 | 3 | 28 | 39 | 3 | 0 |
+| Set B | 192 | 107 | 51 | 34 | 0 | 0 |
+| Set C | 18 | 0 | 6 | 9 | 3 | 0 |
+| Set D | 40 | 9 | 11 | 20 | 0 | 0 |
+| Gabungan A-D (klaim unik) | 312 | 119 | 91 | 99 | 3 | 0 |
+
+Set A dalam persen (n = 73): didukung 4%; sebagian 38%; tidak ditemukan 53%; bertentangan 4%
+Set B dalam persen (n = 192): didukung 56%; sebagian 27%; tidak ditemukan 18%; bertentangan 0%
+Set C dalam persen (n = 18): didukung 0%; sebagian 33%; tidak ditemukan 50%; bertentangan 17%
+Set D dalam persen (n = 40): didukung 22%; sebagian 28%; tidak ditemukan 50%; bertentangan 0%
+
+Set A menurut kelas tinjauan pertama:
+| Kelas | n | didukung | sebagian | tidak ditemukan | bertentangan | sumber tidak dapat diakses |
+|---|---|---|---|---|---|---|
+| b | 65 | 2 | 22 | 38 | 3 | 0 |
+| c | 8 | 1 | 6 | 1 | 0 | 0 |
+
+Set D menurut bobot:
+| Bobot | n | didukung | sebagian | tidak ditemukan | bertentangan | sumber tidak dapat diakses |
+|---|---|---|---|---|---|---|
+| +2 | 4 | 0 | 1 | 3 | 0 | 0 |
+| +1 | 12 | 4 | 1 | 7 | 0 | 0 |
+| 0 | 4 | 1 | 0 | 3 | 0 | 0 |
+| -2 | 9 | 3 | 4 | 2 | 0 | 0 |
+| -5 | 11 | 1 | 5 | 5 | 0 | 0 |
+
+Set D: didukung 9/40 = 22% (selang Wilson 95%: 12%-38%)
+Set D: didukung atau sebagian 20/40 = 50% (selang Wilson 95%: 35%-65%)
+Set D: tidak ditemukan 20/40 = 50% (selang Wilson 95%: 35%-65%)
+
+Klaim yang hanya mengutip S-01 dibanding klaim dengan sumber kedua:
+| Kelompok | n | didukung | sebagian | tidak ditemukan | bertentangan | sumber tidak dapat diakses |
+|---|---|---|---|---|---|---|
+| Set A - hanya S-01 | 26 | 0 | 3 | 23 | 0 | 0 |
+| Set A - ada sumber lain | 47 | 3 | 25 | 16 | 3 | 0 |
+| Set B - hanya S-01 | 56 | 11 | 18 | 27 | 0 | 0 |
+| Set B - ada sumber lain | 136 | 96 | 33 | 7 | 0 | 0 |
+| Set C - hanya S-01 | 8 | 0 | 0 | 8 | 0 | 0 |
+| Set C - ada sumber lain | 10 | 0 | 6 | 1 | 3 | 0 |
+| Set D - hanya S-01 | 15 | 0 | 1 | 14 | 0 | 0 |
+| Set D - ada sumber lain | 25 | 9 | 10 | 6 | 0 | 0 |
+
+====================================================================================================
+2b. ANALISIS KEPEKAAN TERHADAP ATURAN KETAT
+====================================================================================================
+Jika keanggotaan daftar pada nilai yang diklaim ([daftar]) dianggap cukup untuk +3/+2:
+   set A: 0 klaim 'sebagian' naik menjadi 'didukung' (3 -> 3 dari 73)
+   set B: 24 klaim 'sebagian' naik menjadi 'didukung' (107 -> 131 dari 192)
+   set C: 0 klaim 'sebagian' naik menjadi 'didukung' (0 -> 0 dari 18)
+   set D: 1 klaim 'sebagian' naik menjadi 'didukung' (9 -> 10 dari 40)
+Jika tercantum pada nilai lain ([daftar-lain]) dianggap memberi arah untuk bobot negatif:
+   set A: 7 klaim 'tidak ditemukan' naik menjadi 'sebagian' (28 -> 35 dari 73)
+   set B: 0 klaim 'tidak ditemukan' naik menjadi 'sebagian' (51 -> 51 dari 192)
+   set C: 0 klaim 'tidak ditemukan' naik menjadi 'sebagian' (6 -> 6 dari 18)
+   set D: 1 klaim 'tidak ditemukan' naik menjadi 'sebagian' (11 -> 12 dari 40)
+Jika pernyataan tingkat kelompok ([umum]) dianggap memberi arah:
+   set A: 0 klaim 'tidak ditemukan' naik menjadi 'sebagian'
+   set B: 2 klaim 'tidak ditemukan' naik menjadi 'sebagian'
+   set C: 0 klaim 'tidak ditemukan' naik menjadi 'sebagian'
+   set D: 1 klaim 'tidak ditemukan' naik menjadi 'sebagian'
+
+Batas atas pengaruh gambar S-01 yang isinya tidak terbaca (Fig. 1 dan Fig. 3: ilustrasi predileksi tulang, lokasi, usia):
+   set A: klaim usia/lokasi yang mengutip S-01 dan bervonis 'tidak ditemukan': 5; 'sebagian': 14
+   set B: klaim usia/lokasi yang mengutip S-01 dan bervonis 'tidak ditemukan': 14; 'sebagian': 25
+   set C: klaim usia/lokasi yang mengutip S-01 dan bervonis 'tidak ditemukan': 4; 'sebagian': 5
+   set D: klaim usia/lokasi yang mengutip S-01 dan bervonis 'tidak ditemukan': 6; 'sebagian': 6
+
+====================================================================================================
+3. VONIS PER FITUR (per set)
+====================================================================================================
+Set A:
+| Fitur | n | didukung | sebagian | tidak ditemukan | bertentangan | sumber tidak dapat diakses |
+|---|---|---|---|---|---|---|
+| `age_group` | 18 | 0 | 13 | 5 | 0 | 0 |
+| `longitudinal` | 2 | 1 | 1 | 0 | 0 | 0 |
+| `transverse` | 1 | 1 | 0 | 0 | 0 | 0 |
+| `density` | 4 | 0 | 3 | 1 | 0 | 0 |
+| `margin_lodwick` | 11 | 0 | 2 | 7 | 2 | 0 |
+| `cortex` | 6 | 0 | 1 | 5 | 0 | 0 |
+| `soft_tissue_mass` | 6 | 0 | 0 | 5 | 1 | 0 |
+| `periosteal` | 9 | 0 | 3 | 6 | 0 | 0 |
+| `matrix` | 14 | 0 | 5 | 9 | 0 | 0 |
+| `size_cm` | 2 | 1 | 0 | 1 | 0 | 0 |
+
+Set B:
+| Fitur | n | didukung | sebagian | tidak ditemukan | bertentangan | sumber tidak dapat diakses |
+|---|---|---|---|---|---|---|
+| `age_group` | 53 | 34 | 11 | 8 | 0 | 0 |
+| `multiplicity` | 3 | 2 | 1 | 0 | 0 | 0 |
+| `bone_class` | 30 | 17 | 8 | 5 | 0 | 0 |
+| `longitudinal` | 20 | 18 | 1 | 1 | 0 | 0 |
+| `transverse` | 17 | 10 | 6 | 1 | 0 | 0 |
+| `density` | 17 | 10 | 5 | 2 | 0 | 0 |
+| `margin_lodwick` | 14 | 3 | 11 | 0 | 0 | 0 |
+| `cortex` | 4 | 2 | 0 | 2 | 0 | 0 |
+| `soft_tissue_mass` | 3 | 0 | 2 | 1 | 0 | 0 |
+| `periosteal` | 13 | 4 | 2 | 7 | 0 | 0 |
+| `matrix` | 14 | 5 | 3 | 6 | 0 | 0 |
+| `size_cm` | 1 | 1 | 0 | 0 | 0 | 0 |
+| `clinical_flags` | 3 | 1 | 1 | 1 | 0 | 0 |
+
+Set C:
+| Fitur | n | didukung | sebagian | tidak ditemukan | bertentangan | sumber tidak dapat diakses |
+|---|---|---|---|---|---|---|
+| `age_group` | 5 | 0 | 4 | 1 | 0 | 0 |
+| `bone_class` | 3 | 0 | 0 | 3 | 0 | 0 |
+| `transverse` | 1 | 0 | 1 | 0 | 0 | 0 |
+| `margin_lodwick` | 3 | 0 | 0 | 1 | 2 | 0 |
+| `cortex` | 1 | 0 | 0 | 1 | 0 | 0 |
+| `soft_tissue_mass` | 1 | 0 | 0 | 0 | 1 | 0 |
+| `periosteal` | 2 | 0 | 1 | 1 | 0 | 0 |
+| `matrix` | 1 | 0 | 0 | 1 | 0 | 0 |
+| `size_cm` | 1 | 0 | 0 | 1 | 0 | 0 |
+
+Set D:
+| Fitur | n | didukung | sebagian | tidak ditemukan | bertentangan | sumber tidak dapat diakses |
+|---|---|---|---|---|---|---|
+| `age_group` | 6 | 1 | 2 | 3 | 0 | 0 |
+| `bone_class` | 4 | 2 | 1 | 1 | 0 | 0 |
+| `longitudinal` | 4 | 1 | 1 | 2 | 0 | 0 |
+| `transverse` | 3 | 1 | 2 | 0 | 0 | 0 |
+| `density` | 4 | 1 | 0 | 3 | 0 | 0 |
+| `margin_lodwick` | 7 | 0 | 4 | 3 | 0 | 0 |
+| `cortex` | 2 | 0 | 0 | 2 | 0 | 0 |
+| `soft_tissue_mass` | 1 | 0 | 0 | 1 | 0 | 0 |
+| `periosteal` | 6 | 2 | 0 | 4 | 0 | 0 |
+| `matrix` | 3 | 1 | 1 | 1 | 0 | 0 |
+
+Gabungan A-D (klaim unik):
+| Fitur | n | didukung | sebagian | tidak ditemukan | bertentangan | sumber tidak dapat diakses |
+|---|---|---|---|---|---|---|
+| `age_group` | 78 | 35 | 26 | 17 | 0 | 0 |
+| `multiplicity` | 3 | 2 | 1 | 0 | 0 | 0 |
+| `bone_class` | 36 | 19 | 9 | 8 | 0 | 0 |
+| `longitudinal` | 26 | 20 | 3 | 3 | 0 | 0 |
+| `transverse` | 21 | 12 | 8 | 1 | 0 | 0 |
+| `density` | 25 | 11 | 8 | 6 | 0 | 0 |
+| `margin_lodwick` | 33 | 3 | 17 | 11 | 2 | 0 |
+| `cortex` | 13 | 2 | 1 | 10 | 0 | 0 |
+| `soft_tissue_mass` | 10 | 0 | 2 | 7 | 1 | 0 |
+| `periosteal` | 30 | 6 | 6 | 18 | 0 | 0 |
+| `matrix` | 31 | 6 | 9 | 16 | 0 | 0 |
+| `size_cm` | 3 | 2 | 0 | 1 | 0 | 0 |
+| `clinical_flags` | 3 | 1 | 1 | 1 | 0 | 0 |
+
+====================================================================================================
+4. TEMUAN PER SUMBER (baris bukti: satu klaim x satu sumber)
+====================================================================================================
+Set A:
+| Sumber | klaim yang mengutip | supports | partly | silent | conflicts |
+|---|---|---|---|---|---|
+| S-01 | 73 | 0 | 10 | 63 | 0 |
+| S-04 | 5 | 1 | 0 | 4 | 0 |
+| S-06 | 27 | 1 | 13 | 12 | 1 |
+| S-15 | 4 | 0 | 3 | 0 | 1 |
+| S-16 | 1 | 0 | 1 | 0 | 0 |
+| S-18 | 2 | 0 | 2 | 0 | 0 |
+| S-22 | 2 | 0 | 1 | 0 | 1 |
+| S-23 | 2 | 0 | 1 | 1 | 0 |
+| S-25 | 4 | 1 | 3 | 0 | 0 |
+
+Set B:
+| Sumber | klaim yang mengutip | supports | partly | silent | conflicts |
+|---|---|---|---|---|---|
+| S-01 | 190 | 49 | 73 | 67 | 1 |
+| S-04 | 13 | 2 | 2 | 8 | 1 |
+| S-05 | 4 | 3 | 1 | 0 | 0 |
+| S-06 | 53 | 31 | 10 | 12 | 0 |
+| S-15 | 22 | 21 | 0 | 1 | 0 |
+| S-16 | 6 | 4 | 1 | 1 | 0 |
+| S-18 | 6 | 4 | 2 | 0 | 0 |
+| S-19 | 1 | 0 | 1 | 0 | 0 |
+| S-20 | 2 | 0 | 1 | 1 | 0 |
+| S-22 | 9 | 4 | 4 | 0 | 1 |
+| S-23 | 5 | 3 | 2 | 0 | 0 |
+| S-24 | 7 | 3 | 2 | 2 | 0 |
+| S-25 | 7 | 5 | 2 | 0 | 0 |
+| S-26 | 1 | 1 | 0 | 0 | 0 |
+
+Set C:
+| Sumber | klaim yang mengutip | supports | partly | silent | conflicts |
+|---|---|---|---|---|---|
+| S-01 | 18 | 0 | 2 | 14 | 2 |
+| S-04 | 1 | 0 | 0 | 1 | 0 |
+| S-06 | 4 | 0 | 3 | 0 | 1 |
+| S-15 | 3 | 0 | 1 | 1 | 1 |
+| S-22 | 1 | 0 | 0 | 0 | 1 |
+| S-23 | 1 | 0 | 1 | 0 | 0 |
+
+Set D:
+| Sumber | klaim yang mengutip | supports | partly | silent | conflicts |
+|---|---|---|---|---|---|
+| S-01 | 40 | 2 | 8 | 30 | 0 |
+| S-04 | 1 | 0 | 0 | 1 | 0 |
+| S-06 | 8 | 0 | 4 | 4 | 0 |
+| S-15 | 1 | 1 | 0 | 0 | 0 |
+| S-18 | 4 | 0 | 3 | 1 | 0 |
+| S-22 | 1 | 0 | 1 | 0 | 0 |
+| S-23 | 5 | 4 | 0 | 1 | 0 |
+| S-25 | 5 | 2 | 2 | 1 | 0 |
+
+Gabungan A-D (klaim unik):
+| Sumber | klaim yang mengutip | supports | partly | silent | conflicts | % diam |
+|---|---|---|---|---|---|---|
+| S-01 | 310 | 51 | 91 | 166 | 2 | 54% |
+| S-04 | 19 | 3 | 2 | 13 | 1 | 68% |
+| S-05 | 4 | 3 | 1 | 0 | 0 | 0% |
+| S-06 | 88 | 32 | 27 | 28 | 1 | 32% |
+| S-15 | 29 | 22 | 4 | 2 | 1 | 7% |
+| S-16 | 7 | 4 | 2 | 1 | 0 | 14% |
+| S-18 | 12 | 4 | 7 | 1 | 0 | 8% |
+| S-19 | 1 | 0 | 1 | 0 | 0 | 0% |
+| S-20 | 2 | 0 | 1 | 1 | 0 | 50% |
+| S-22 | 12 | 4 | 6 | 0 | 2 | 0% |
+| S-23 | 12 | 7 | 3 | 2 | 0 | 17% |
+| S-24 | 7 | 3 | 2 | 2 | 0 | 29% |
+| S-25 | 16 | 8 | 7 | 1 | 0 | 6% |
+| S-26 | 1 | 1 | 0 | 0 | 0 | 0% |
+
+Sumber penentu vonis didukung/sebagian (gabungan A-D; pada temuan setara dipilih sumber selain S-01):
+| Sumber | didukung | sebagian |
+|---|---|---|
+| S-01 | 28 | 35 |
+| S-04 | 3 | 2 |
+| S-05 | 3 | 0 |
+| S-06 | 32 | 24 |
+| S-15 | 22 | 4 |
+| S-16 | 4 | 2 |
+| S-18 | 4 | 7 |
+| S-19 | 0 | 1 |
+| S-20 | 0 | 1 |
+| S-22 | 4 | 6 |
+| S-23 | 7 | 2 |
+| S-24 | 3 | 0 |
+| S-25 | 8 | 7 |
+| S-26 | 1 | 0 |
+
+Klaim dua sumber: apakah sumber selain S-01 menambah dukungan? (gabungan A-D)
+| Sumber kedua | klaim | lebih kuat dari S-01 | setara | lebih lemah dari S-01 |
+|---|---|---|---|---|
+| S-04 | 19 | 4 | 6 | 9 |
+| S-05 | 4 | 0 | 3 | 1 |
+| S-06 | 88 | 38 | 35 | 15 |
+| S-15 | 29 | 23 | 5 | 1 |
+| S-16 | 7 | 2 | 4 | 1 |
+| S-18 | 12 | 8 | 4 | 0 |
+| S-19 | 1 | 1 | 0 | 0 |
+| S-22 | 12 | 7 | 3 | 2 |
+| S-23 | 12 | 9 | 2 | 1 |
+| S-24 | 7 | 2 | 2 | 3 |
+| S-25 | 16 | 15 | 1 | 0 |
+| S-26 | 1 | 0 | 1 | 0 |
+
+====================================================================================================
+5. VONIS PER ENTITAS
+====================================================================================================
+Gabungan A-D (klaim unik):
+| Entitas | n | didukung | sebagian | tidak ditemukan | bertentangan | sumber tidak dapat diakses |
+|---|---|---|---|---|---|---|
+| Osteofibrous dysplasia – adamantinoma spectrum | 8 | 4 | 1 | 3 | 0 | 0 |
+| Aneurysmal bone cyst | 14 | 5 | 5 | 4 | 0 | 0 |
+| Medullary bone infarct | 6 | 2 | 0 | 4 | 0 | 0 |
+| Bone metastasis (carcinoma) | 9 | 3 | 5 | 1 | 0 | 0 |
+| Bizarre parosteal osteochondromatous proliferation (Nora lesion) | 10 | 5 | 3 | 2 | 0 | 0 |
+| Brown tumour of hyperparathyroidism | 7 | 0 | 2 | 5 | 0 | 0 |
+| Chondroblastoma | 10 | 5 | 2 | 2 | 1 | 0 |
+| Chondromyxoid fibroma | 10 | 1 | 4 | 5 | 0 | 0 |
+| Central chondrosarcoma (incl. atypical cartilaginous tumour / grade 1) | 6 | 2 | 4 | 0 | 0 | 0 |
+| Chordoma | 13 | 0 | 0 | 13 | 0 | 0 |
+| Clear cell chondrosarcoma | 7 | 3 | 3 | 1 | 0 | 0 |
+| Desmoplastic fibroma of bone | 4 | 0 | 0 | 4 | 0 | 0 |
+| Enchondroma | 6 | 3 | 2 | 1 | 0 | 0 |
+| Enostosis (bone island) | 5 | 1 | 0 | 4 | 0 | 0 |
+| Ewing sarcoma | 12 | 4 | 4 | 4 | 0 | 0 |
+| Fibrous dysplasia | 12 | 4 | 7 | 0 | 1 | 0 |
+| Giant cell tumour of bone | 7 | 5 | 2 | 0 | 0 | 0 |
+| Intraosseous ganglion / subchondral cyst (geode) | 9 | 0 | 3 | 6 | 0 | 0 |
+| Intraosseous lipoma | 5 | 0 | 2 | 3 | 0 | 0 |
+| Langerhans cell histiocytosis (eosinophilic granuloma) | 12 | 8 | 2 | 2 | 0 | 0 |
+| Non-ossifying fibroma / fibrous cortical defect | 14 | 10 | 3 | 1 | 0 | 0 |
+| Osteoblastoma | 6 | 0 | 6 | 0 | 0 | 0 |
+| Osteochondroma | 8 | 4 | 3 | 1 | 0 | 0 |
+| Osteoid osteoma | 14 | 11 | 1 | 2 | 0 | 0 |
+| Osteomyelitis (incl. Brodie abscess) | 6 | 0 | 1 | 5 | 0 | 0 |
+| Conventional (high-grade central) osteosarcoma | 11 | 7 | 3 | 1 | 0 | 0 |
+| Parosteal osteosarcoma | 5 | 5 | 0 | 0 | 0 | 0 |
+| Periosteal osteosarcoma | 10 | 7 | 1 | 2 | 0 | 0 |
+| Telangiectatic osteosarcoma | 7 | 6 | 0 | 0 | 1 | 0 |
+| Paget disease of bone | 4 | 0 | 3 | 1 | 0 | 0 |
+| Periosteal (juxtacortical) chondroma | 7 | 3 | 4 | 0 | 0 | 0 |
+| Plasma cell myeloma / solitary plasmacytoma of bone | 7 | 5 | 1 | 1 | 0 | 0 |
+| Primary lymphoma of bone | 7 | 1 | 3 | 3 | 0 | 0 |
+| Simple (unicameral) bone cyst | 16 | 5 | 8 | 3 | 0 | 0 |
+| Skeletal tuberculosis | 6 | 0 | 0 | 6 | 0 | 0 |
+| Stress / insufficiency fracture | 7 | 0 | 2 | 5 | 0 | 0 |
+| Vertebral haemangioma | 5 | 0 | 1 | 4 | 0 | 0 |
+
+Set B (+3) per entitas:
+| Entitas | n (+3) | didukung | sebagian | tidak ditemukan | bertentangan | sumber tidak dapat diakses |
+|---|---|---|---|---|---|---|
+| Osteofibrous dysplasia – adamantinoma spectrum | 5 | 4 | 0 | 1 | 0 | 0 |
+| Aneurysmal bone cyst | 9 | 5 | 2 | 2 | 0 | 0 |
+| Medullary bone infarct | 5 | 2 | 0 | 3 | 0 | 0 |
+| Bone metastasis (carcinoma) | 5 | 3 | 2 | 0 | 0 | 0 |
+| Bizarre parosteal osteochondromatous proliferation (Nora lesion) | 3 | 2 | 1 | 0 | 0 | 0 |
+| Brown tumour of hyperparathyroidism | 3 | 0 | 2 | 1 | 0 | 0 |
+| Chondroblastoma | 5 | 5 | 0 | 0 | 0 | 0 |
+| Chondromyxoid fibroma | 7 | 1 | 4 | 2 | 0 | 0 |
+| Central chondrosarcoma (incl. atypical cartilaginous tumour / grade 1) | 4 | 2 | 2 | 0 | 0 | 0 |
+| Chordoma | 5 | 0 | 0 | 5 | 0 | 0 |
+| Clear cell chondrosarcoma | 3 | 3 | 0 | 0 | 0 | 0 |
+| Desmoplastic fibroma of bone | 3 | 0 | 0 | 3 | 0 | 0 |
+| Enchondroma | 2 | 2 | 0 | 0 | 0 | 0 |
+| Enostosis (bone island) | 3 | 1 | 0 | 2 | 0 | 0 |
+| Ewing sarcoma | 8 | 4 | 3 | 1 | 0 | 0 |
+| Fibrous dysplasia | 9 | 4 | 5 | 0 | 0 | 0 |
+| Giant cell tumour of bone | 6 | 5 | 1 | 0 | 0 | 0 |
+| Intraosseous ganglion / subchondral cyst (geode) | 5 | 0 | 3 | 2 | 0 | 0 |
+| Intraosseous lipoma | 4 | 0 | 2 | 2 | 0 | 0 |
+| Langerhans cell histiocytosis (eosinophilic granuloma) | 5 | 4 | 1 | 0 | 0 | 0 |
+| Non-ossifying fibroma / fibrous cortical defect | 9 | 9 | 0 | 0 | 0 | 0 |
+| Osteoblastoma | 4 | 0 | 4 | 0 | 0 | 0 |
+| Osteochondroma | 6 | 3 | 3 | 0 | 0 | 0 |
+| Osteoid osteoma | 10 | 10 | 0 | 0 | 0 | 0 |
+| Osteomyelitis (incl. Brodie abscess) | 4 | 0 | 1 | 3 | 0 | 0 |
+| Conventional (high-grade central) osteosarcoma | 7 | 7 | 0 | 0 | 0 | 0 |
+| Parosteal osteosarcoma | 5 | 5 | 0 | 0 | 0 | 0 |
+| Periosteal osteosarcoma | 7 | 6 | 0 | 1 | 0 | 0 |
+| Telangiectatic osteosarcoma | 6 | 6 | 0 | 0 | 0 | 0 |
+| Paget disease of bone | 4 | 0 | 3 | 1 | 0 | 0 |
+| Periosteal (juxtacortical) chondroma | 4 | 3 | 1 | 0 | 0 | 0 |
+| Plasma cell myeloma / solitary plasmacytoma of bone | 7 | 5 | 1 | 1 | 0 | 0 |
+| Primary lymphoma of bone | 5 | 1 | 3 | 1 | 0 | 0 |
+| Simple (unicameral) bone cyst | 9 | 5 | 4 | 0 | 0 | 0 |
+| Skeletal tuberculosis | 0 | 0 | 0 | 0 | 0 | 0 |
+| Stress / insufficiency fracture | 3 | 0 | 2 | 1 | 0 | 0 |
+| Vertebral haemangioma | 3 | 0 | 1 | 2 | 0 | 0 |
+
+Klaim tanpa dukungan (tidak ditemukan/bertentangan) per entitas, gabungan A-D:
+- Osteofibrous dysplasia – adamantinoma spectrum [3]
+     +3: age_group:20-39
+     -5: margin_lodwick:II
+     lain: age_group:60+ (-2)
+- Aneurysmal bone cyst [4]
+     +3: bone_class:spine_posterior, matrix:none
+     -5: matrix:chondroid, matrix:osteoid
+- Medullary bone infarct [4]
+     +3: cortex:intact, periosteal:none, transverse:central
+     -5: margin_lodwick:IC
+- Bone metastasis (carcinoma) [1]
+     -5: matrix:ground_glass
+- Bizarre parosteal osteochondromatous proliferation (Nora lesion) [2]
+     lain: cortex:saucerization (0), periosteal:none (+1)
+- Brown tumour of hyperparathyroidism [5]
+     +3: matrix:none
+     -5: margin_lodwick:II, matrix:ground_glass, periosteal:lamellated
+     lain: density:mixed (0)
+- Chondroblastoma [3]
+     -5: cortex:destruction, soft_tissue_mass:present
+     lain: periosteal:solid_thin (+1)
+- Chondromyxoid fibroma [5]
+     +3: age_group:10-19_open, age_group:10-19_unknown
+     -5: cortex:destruction, margin_lodwick:IC, soft_tissue_mass:present
+- Chordoma [13]
+     +3: age_group:40-59, age_group:60+, bone_class:sacrum, density:lytic, soft_tissue_mass:present
+     -5: age_group:0-9, age_group:10-19_closed, age_group:10-19_open, age_group:10-19_unknown, bone_class:flat_bone, bone_class:long_bone, density:sclerotic
+     lain: margin_lodwick:IB (+1)
+- Clear cell chondrosarcoma [1]
+     lain: cortex:expansion_shell (+1)
+- Desmoplastic fibroma of bone [4]
+     +3: age_group:20-39, density:lytic, matrix:none
+     lain: longitudinal:diaphysis (+1)
+- Enchondroma [1]
+     -5: periosteal:lamellated
+- Enostosis (bone island) [4]
+     +3: cortex:intact, periosteal:none
+     -5: soft_tissue_mass:present
+     lain: age_group:40-59 (+2)
+- Ewing sarcoma [4]
+     +3: periosteal:lamellated
+     -5: cortex:expansion_shell, margin_lodwick:IA, periosteal:shell
+- Fibrous dysplasia [1]
+     -5: margin_lodwick:IC
+- Intraosseous ganglion / subchondral cyst (geode) [6]
+     +3: matrix:none, periosteal:none
+     -5: age_group:0-9, margin_lodwick:IC, size_cm:>5, soft_tissue_mass:present
+- Intraosseous lipoma [3]
+     +3: age_group:40-59, periosteal:none
+     -5: margin_lodwick:IC
+- Langerhans cell histiocytosis (eosinophilic granuloma) [2]
+     -5: matrix:ground_glass, matrix:osteoid
+- Non-ossifying fibroma / fibrous cortical defect [1]
+     -5: soft_tissue_mass:present
+- Osteochondroma [1]
+     lain: density:sclerotic (+2)
+- Osteoid osteoma [2]
+     -5: margin_lodwick:IC, periosteal:lamellated
+- Osteomyelitis (incl. Brodie abscess) [5]
+     +3: age_group:0-9, clinical_flags:fever_or_infection_signs, longitudinal:metaphysis
+     -5: matrix:osteoid
+     lain: periosteal:none (0)
+- Conventional (high-grade central) osteosarcoma [1]
+     lain: age_group:60+ (+1)
+- Periosteal osteosarcoma [2]
+     +3: periosteal:spiculated
+     lain: cortex:saucerization (+2)
+- Telangiectatic osteosarcoma [1]
+     -5: margin_lodwick:IA
+- Paget disease of bone [1]
+     +3: bone_class:spine_body
+- Plasma cell myeloma / solitary plasmacytoma of bone [1]
+     +3: matrix:none
+- Primary lymphoma of bone [3]
+     +3: matrix:none
+     -5: cortex:expansion_shell, matrix:osteoid
+- Simple (unicameral) bone cyst [3]
+     -5: margin_lodwick:IC, periosteal:lamellated, soft_tissue_mass:present
+- Skeletal tuberculosis [6]
+     -5: matrix:chondroid, matrix:osteoid, periosteal:spiculated
+     lain: bone_class:spine_body (+2), density:mixed (+1), periosteal:lamellated (-2)
+- Stress / insufficiency fracture [5]
+     +3: bone_class:long_bone
+     -5: periosteal:spiculated, soft_tissue_mass:present
+     lain: age_group:40-59 (+1), longitudinal:metadiaphysis (+2)
+- Vertebral haemangioma [4]
+     +3: bone_class:spine_body, periosteal:none
+     -5: cortex:destruction, margin_lodwick:IC
+
+====================================================================================================
+6. KLAIM BERTENTANGAN DAN KONFLIK YANG DICATAT
+====================================================================================================
+vonis bertentangan: 3
+| Set | Entitas | Klaim | Bobot | Sumber dikutip | Sumber | Lokasi | Catatan |
+|---|---|---|---|---|---|---|---|
+| AC | Chondroblastoma | `soft_tissue_mass:present` | -5 | S-01,S-06 | S-06 | 3.3.5 Imaging; 3.3.7 Treatment and Prognosis | CT disebut dipakai menilai perluasan ke jaringan lunak; terapi bertujuan mencegah penyebaran ke jaringan lunak. |
+| AC | Fibrous dysplasia | `margin_lodwick:IC` | -5 | S-01,S-22 | S-22 | Craniofacial FD; Radiographs | Lesi kraniofasial disebut khas tidak berbatas tegas; tepi sklerotik dapat terputus atau tidak lengkap. |
+| AC | Telangiectatic osteosarcoma | `margin_lodwick:IA` | -5 | S-01,S-15 | S-15 | 3.1.3 Teleangectatic Osteosarcoma | Disebut kadang berbatas tegas dengan tepi sklerotik ireguler; pola permeatif klasik justru jarang. |
+
+konflik pada klaim yang tetap didukung/sebagian oleh sumber lain: 4
+| Set | Entitas | Klaim | Bobot | Vonis | Catatan |
+|---|---|---|---|---|---|
+| BC | Aneurysmal bone cyst | `transverse:eccentric` | +3 | sebagian | Klasifikasi memuat tipe sentral dan tipe eksentrik metafisis tanpa frekuensi; eksentrik tidak disebut tersering. · KONFLIK S-01 (Transverse location): ABC dikelompokkan sebagai lesi intrameduler sentral; tidak ada di daftar lesi eksentrik. |
+| B | Ewing sarcoma | `longitudinal:diaphysis` | +3 | didukung | Disebut khas mengenai diafisis tulang panjang pada pasien imatur. · KONFLIK S-04 (3.2 Malignant Bone Tumors; Table 5; 4.2): Pada 28 kasus, metafisis (36%) lebih sering daripada diafisis (21%); penulis menyebutnya berlawanan dengan aturan umum. |
+| B | Fibrous dysplasia | `transverse:central` | +3 | sebagian | [daftar] FD tercantum di antara lesi intrameduler sentral. · KONFLIK S-22 (Radiographs): Kalimat sumber menyebut lesi khas tidak terletak sentral dalam medula (kemungkinan salah ketik; perlu dibaca pemilik). |
+| C | Conventional (high-grade central) osteosarcoma | `periosteal:solid_thin` | -2 | sebagian | Reaksi periosteal digambarkan nyata dan agresif; pola solid/tipis tidak dibahas. · KONFLIK S-01 (Periosteal reaction - non-aggressive): Ringan: reaksi tipis disebut dapat dijumpai pada osteosarkoma; namun pola solid disebut jarang berpenyebab ganas. |
+
+====================================================================================================
+7. PERUBAHAN TERHADAP UJI PETIK LAMA (50 butir)
+====================================================================================================
+| Set | Entitas | Klaim | Bobot | Lama | Cara baca lama | Baru |  | Sumber | Catatan |
+|---|---|---|---|---|---|---|---|---|---|
+| B | Aneurysmal bone cyst | `periosteal:shell` | +3 | didukung | S-01 FT | sebagian | BERUBAH | S-06 | Reaksi periosteal disebut dapat terjadi dan ada tipe subperiosteal; pola shell tidak dinamai. |
+| BC | Aneurysmal bone cyst | `transverse:eccentric` | +3 | bertentangan | S-01 FT; S-06 WF | sebagian | BERUBAH | S-06 | Klasifikasi memuat tipe sentral dan tipe eksentrik metafisis tanpa frekuensi; eksentrik tidak disebut tersering. · KONFLIK S-01 (Transverse location): ABC dikelompokkan sebagai lesi intrameduler sentral; tidak ada di daftar lesi eksentrik. |
+| C | Medullary bone infarct | `margin_lodwick:IC` | -5 | tidak ditemukan | S-01 FT | tidak ditemukan | sama | S-01 | Tepi infark tidak dibahas; hanya fase dini campuran dan fase lanjut sklerotik serpiginosa. |
+| B | Bone metastasis (carcinoma) | `multiplicity:multiple` | +3 | didukung | S-01 FT | didukung | sama | S-01 | Metastasis tulang poliostotik pada lebih dari 90% kasus. |
+| A | Bizarre parosteal osteochondromatous proliferation (Nora lesion) | `density:lytic` | -5 | sebagian | S-25 WF | sebagian | sama | S-25 | Lesi digambarkan terkalsifikasi atau terosifikasi dengan derajat bervariasi; lesi lusen tidak dibahas. |
+| A | Bizarre parosteal osteochondromatous proliferation (Nora lesion) | `transverse:juxtacortical_continuous` | -5 | didukung | S-25 WF | didukung | sama | S-25 | Ketiadaan kontinuitas medula disebut pembeda utama dari osteokondroma. |
+| AC | Chondroblastoma | `age_group:40-59` | -5 | tidak ditemukan | S-01 FT; S-06 WF | sebagian | BERUBAH | S-06 | Khas usia belasan memberi arah; usia dewasa tidak dibahas, kemustahilan tidak dinyatakan. |
+| AC | Chondroblastoma | `soft_tissue_mass:present` | -5 | bertentangan | S-06 WF | bertentangan | sama | S-06 | CT disebut dipakai menilai perluasan ke jaringan lunak; terapi bertujuan mencegah penyebaran ke jaringan lunak. |
+| B | Chondromyxoid fibroma | `longitudinal:metadiaphysis` | +3 | didukung | S-01 FT | didukung | sama | S-01 | CMF dan NOF disebut cenderung terletak dekat perbatasan metadiafisis. |
+| B | Chondromyxoid fibroma | `margin_lodwick:IA` | +3 | sebagian | S-01 FT; S-06 WF | sebagian | sama | S-01 | [daftar] Tercantum di antara lesi yang dapat bertepi IA; bukan contoh klasiknya. |
+| C | Chordoma | `bone_class:long_bone` | -5 | tidak ditemukan | S-01 FT | tidak ditemukan | sama | S-01 | Kordoma tidak dibahas: tanpa usia, lokasi, atau gambaran radiografik. |
+| BC | Chordoma | `bone_class:sacrum` | +3 | tidak ditemukan | S-01 FT | tidak ditemukan | sama | S-01 | Kordoma tidak dibahas: tanpa usia, lokasi, atau gambaran radiografik. |
+| AC | Ewing sarcoma | `age_group:60+` | -5 | tidak ditemukan | S-01 FT; S-04 WF | sebagian | BERUBAH | S-01 | Puncak di bawah 15 tahun memberi arah; usia lanjut tidak dibahas, kemustahilan tidak dinyatakan. |
+| B | Ewing sarcoma | `longitudinal:diaphysis` | +3 | sebagian | S-01 FT; S-04 WF | didukung | BERUBAH | S-01 | Disebut khas mengenai diafisis tulang panjang pada pasien imatur. · KONFLIK S-04 (3.2 Malignant Bone Tumors; Table 5; 4.2): Pada 28 kasus, metafisis (36%) lebih sering daripada diafisis (21%); penulis menyebutnya berlawanan dengan aturan umum. |
+| A | Ewing sarcoma | `margin_lodwick:IA` | -5 | sebagian | S-01 FT | tidak ditemukan | BERUBAH | S-01,S-04 | S-01: [daftar-lain] Ewing hanya tercantum pada tipe II/III dan lesi litik berbatas tidak tegas; IA tidak dibahas. · S-04: Tidak ada uraian tepi lesi; hanya data usia dan lokasi. |
+| AC | Fibrous dysplasia | `margin_lodwick:IC` | -5 | bertentangan | S-22 WF | bertentangan | sama | S-22 | Lesi kraniofasial disebut khas tidak berbatas tegas; tepi sklerotik dapat terputus atau tidak lengkap. |
+| B | Fibrous dysplasia | `matrix:ground_glass` | +3 | didukung | S-01 FT; S-22 WF | didukung | sama | S-22 | Matriks ground-glass disebut gambaran khas, kecuali pada usia sangat muda dan lesi tua yang menjadi sklerotik. |
+| A | Fibrous dysplasia | `periosteal:lamellated` | -5 | sebagian | S-22 WF | sebagian | sama | S-22 | Reaksi periosteal biasanya tidak ada kecuali pada fraktur patologis, dan fraktur disebut sering; pola tidak dirinci. |
+| A | Giant cell tumour of bone | `age_group:10-19_open` | -5 | sebagian | S-01 FT; S-16 WF | sebagian | sama | S-16 | Usia khas 20-40 tahun memberi arah; status fisis dan pasien imatur tidak dibahas. |
+| B | Giant cell tumour of bone | `margin_lodwick:IB` | +3 | didukung | S-01 FT | sebagian | BERUBAH | S-16 | Derajat Campanacci 2 setara tepi tegas tanpa sklerosis, tetapi frekuensi tiap derajat tidak disebut. |
+| B | Giant cell tumour of bone | `transverse:eccentric` | +3 | didukung | S-01 FT | didukung | sama | S-01 | Kecenderungan ke regio eksentrik dinyatakan; juga tercantum di daftar lesi eksentrik. |
+| AC | Intraosseous ganglion / subchondral cyst (geode) | `size_cm:>5` | -5 | tidak ditemukan | S-01 FT | tidak ditemukan | sama | S-01 | Ukuran geode tidak disebut. |
+| B | Intraosseous lipoma | `margin_lodwick:IA` | +3 | didukung | S-01 FT | sebagian | BERUBAH | S-01 | [daftar] Tercantum di antara lesi yang dapat bertepi IA; bukan contoh klasiknya. |
+| AC | Langerhans cell histiocytosis (eosinophilic granuloma) | `age_group:60+` | -5 | tidak ditemukan | S-23 WF | sebagian | BERUBAH | S-23 | Dominan pada anak memberi arah; usia lanjut tidak dibahas, kemustahilan tidak dinyatakan. |
+| A | Langerhans cell histiocytosis (eosinophilic granuloma) | `matrix:osteoid` | -5 | sebagian | S-23 WF | tidak ditemukan | BERUBAH | S-01,S-23 | S-01: Osteoid hanya dikaitkan dengan tumor pembentuk tulang; LCH tidak disebut. · S-23: Matriks osteoid tidak dibahas; yang disebut hanya sekuestrum kancing dan fragmen tulang sisa di dalam lesi. |
+| B | Non-ossifying fibroma / fibrous cortical defect | `margin_lodwick:IA` | +3 | didukung | S-01 FT | didukung | sama | S-01 | Fibroxanthoma (FCD/NOF) disebut contoh klasik tipe IA. |
+| B | Osteochondroma | `transverse:juxtacortical_continuous` | +3 | didukung | S-01 FT; S-06 WF | didukung | sama | S-26 | Kontinuitas korteks dan medula dengan tulang asal disebut ciri kunci dan patognomonik osteokondroma. |
+| A | Osteoid osteoma | `age_group:60+` | -5 | sebagian | S-06 WF | sebagian | sama | S-06 | Khas dekade kedua memberi arah, tetapi disebut dapat timbul pada usia berapa pun. |
+| B | Osteoid osteoma | `periosteal:solid_thin` | +3 | didukung | S-01 FT | didukung | sama | S-01 | Reaksi periosteal solid teratur digambarkan sebagai presentasi osteoid osteoma dan jadi contoh gambar. |
+| B | Osteomyelitis (incl. Brodie abscess) | `margin_lodwick:IA` | +3 | didukung | S-01 FT | sebagian | BERUBAH | S-01 | [daftar] Abses Brodie tercantum di antara lesi yang dapat bertepi IA. |
+| AC | Osteomyelitis (incl. Brodie abscess) | `matrix:osteoid` | -5 | tidak ditemukan | S-01 FT | tidak ditemukan | sama | S-01 | Mineralisasi pada osteomielitis tidak dibahas. |
+| C | Conventional (high-grade central) osteosarcoma | `age_group:60+` | +1 | bertentangan | S-15 WF | tidak ditemukan | BERUBAH | S-01 | Hanya puncak remaja yang disebut; usia lanjut atau puncak kedua tidak dibahas. |
+| A | Conventional (high-grade central) osteosarcoma | `margin_lodwick:IA` | -5 | sebagian | S-01 FT; S-15 WF | sebagian | sama | S-15 | Tepi digambarkan khas tidak tegas dan tidak sklerotik; ada contoh tepi campuran, kemustahilan tidak dinyatakan. |
+| B | Conventional (high-grade central) osteosarcoma | `periosteal:codman` | +3 | didukung | S-01 FT | didukung | sama | S-15 | Segitiga Codman disebut sering dijumpai. |
+| C | Conventional (high-grade central) osteosarcoma | `periosteal:solid_thin` | -2 | bertentangan | S-01 FT | sebagian | BERUBAH | S-15 | Reaksi periosteal digambarkan nyata dan agresif; pola solid/tipis tidak dibahas. · KONFLIK S-01 (Periosteal reaction - non-aggressive): Ringan: reaksi tipis disebut dapat dijumpai pada osteosarkoma; namun pola solid disebut jarang berpenyebab ganas. |
+| B | Parosteal osteosarcoma | `density:sclerotic` | +3 | didukung | S-15 WF | didukung | sama | S-15 | Ciri paling khas disebut massa eksofitik berlobus dengan osifikasi padat di bagian tengah. |
+| C | Periosteal osteosarcoma | `cortex:saucerization` | +2 | tidak ditemukan | S-01 FT; S-15 WF | tidak ditemukan | sama | S-01,S-15 | S-01: Saucerization tidak disebut. · S-15: Hanya disebut melekat pada korteks di bawahnya; saucerization atau erosi korteks tidak diuraikan. |
+| B | Periosteal osteosarcoma | `longitudinal:diaphysis` | +3 | didukung | S-15 WF; S-25 WF | didukung | sama | S-15 | Disebut paling sering di diafisis atau metadiafisis tulang panjang. |
+| B | Telangiectatic osteosarcoma | `density:lytic` | +3 | didukung | S-15 WF | didukung | sama | S-15 | Osteolisis luas multilokuler disebut tanda radiografik utamanya. |
+| AC | Telangiectatic osteosarcoma | `margin_lodwick:IA` | -5 | bertentangan | S-15 WF | bertentangan | sama | S-15 | Disebut kadang berbatas tegas dengan tepi sklerotik ireguler; pola permeatif klasik justru jarang. |
+| B | Periosteal (juxtacortical) chondroma | `cortex:saucerization` | +3 | didukung | S-25 WF | didukung | sama | S-25 | Permukaan korteks yang ter-scalloping, dengan atau tanpa sklerosis, disebut ciri radiologisnya. |
+| AC | Simple (unicameral) bone cyst | `age_group:60+` | -5 | tidak ditemukan | S-01 FT; S-06 WF | sebagian | BERUBAH | S-06 | Sebanyak 80% pada remaja atau usia 20-an memberi arah; usia lanjut tidak dibahas. |
+| B | Simple (unicameral) bone cyst | `bone_class:calcaneus` | +3 | didukung | S-01 FT; S-04 WF | sebagian | BERUBAH | S-01 | [daftar] Satu dari empat banding klasik lesi lusen kalkaneus; predileksi kista sendiri tidak dinyatakan. |
+| C | Skeletal tuberculosis | `bone_class:spine_body` | +2 | tidak ditemukan | S-01 FT | tidak ditemukan | sama | S-01 | Tuberkulosis hanya disebut sebagai kategori infeksi; tanpa lokasi atau gambaran radiografik. |
+| C | Skeletal tuberculosis | `periosteal:spiculated` | -5 | tidak ditemukan | S-01 FT | tidak ditemukan | sama | S-01 | Tuberkulosis hanya disebut sebagai kategori infeksi; tanpa lokasi atau gambaran radiografik. |
+| B | Vertebral haemangioma | `matrix:coarse_trabeculae` | +3 | sebagian | S-01 FT; S-19 WF | sebagian | sama | S-19 | Trabekula menebal disebut gambaran klasik hemangioma kalvaria; vertebra hanya disebut lokasi tersering, tanpa uraian gambarannya. |
+
+butir uji petik lama yang dinilai ulang: 46 dari 50; berubah: 15; sama: 31
+butir lama yang tidak dinilai ulang (didukung/sebagian dan di luar set A, B, D): 4: Chondroblastoma periosteal:lamellated, Enostosis (bone island) size_cm:<2, Parosteal osteosarcoma transverse:juxtacortical_continuous, Paget disease of bone longitudinal:epiphysis_apophysis
+Set C (lama -> baru): bertentangan -> bertentangan: 3; bertentangan -> sebagian: 2; bertentangan -> tidak ditemukan: 1; tidak ditemukan -> sebagian: 4; tidak ditemukan -> tidak ditemukan: 8
+Semua butir lama yang dinilai ulang (lama -> baru): bertentangan -> bertentangan: 3; bertentangan -> sebagian: 2; bertentangan -> tidak ditemukan: 1; didukung -> didukung: 13; didukung -> sebagian: 5; sebagian -> didukung: 1; sebagian -> sebagian: 7; sebagian -> tidak ditemukan: 2; tidak ditemukan -> sebagian: 4; tidak ditemukan -> tidak ditemukan: 8
+arah perubahan: lebih mendukung 8; kurang mendukung 7
+
+====================================================================================================
+8. CAKUPAN ENTITAS x SUMBER
+====================================================================================================
+Tingkat: 1 = memuat gambaran radiografik entitas (uraian = pernyataan tersendiri; daftar = hanya keanggotaan daftar per fitur);
+2 = hanya data usia/lokasi; 3 = hanya disebut sekilas; 4 = tidak ada. Angka dalam kurung = jumlah klaim entitas yang mengutip sumber itu.
+Kolom 'temuan A-D' = baris bukti set A-D untuk pasangan itu: mendukung/sebagian/diam/konflik.
+| Entitas | klaim | Sumber (klaim) | Tingkat | Kedalaman | temuan A-D | Catatan |
+|---|---|---|---|---|---|---|
+| Osteofibrous dysplasia – adamantinoma spectrum | 42 | S-01 (42) | 1 | uraian | 4/1/3/0 | Tibia 80-85%, tibia tengah, berbasis korteks, lisis dan sklerosis campuran; tanpa usia, tepi, periosteal. |
+| Aneurysmal bone cyst | 44 | S-01 (43) | 1 | daftar | 0/4/8/1 | Hanya lewat daftar: lusen, IB, shell, ekspansi, sentral; tanpa usia dan lokasi tulang. |
+| Aneurysmal bone cyst | 44 | S-06 (42) | 1 | uraian | 5/5/3/0 | Bagian tersendiri: usia, lokasi, litik bertepi sklerotik, soap bubble, klasifikasi Capanna. |
+| Aneurysmal bone cyst | 44 | S-20 (1) | 3 | - | 0/0/1/0 | Seri osteoblastoma spinal; ABC hanya sebagai komponen sekunder. |
+| Medullary bone infarct | 43 | S-01 (43) | 1 | uraian | 2/0/4/0 | Singkat: fase dini campuran, fase lanjut sklerotik serpiginosa dekat metafisis. |
+| Bone metastasis (carcinoma) | 46 | S-01 (46) | 1 | uraian | 3/5/1/0 | Poliostotik, pola densitas, tepi, ekspansi (ginjal/tiroid), usia dewasa-lansia; tanpa vertebra. |
+| Bizarre parosteal osteochondromatous proliferation (Nora lesion) | 37 | S-01 (37) | 2 | - | 0/2/8/0 | Satu penyebutan di daftar lesi jukstakortikal (lokasi saja). |
+| Bizarre parosteal osteochondromatous proliferation (Nora lesion) | 37 | S-25 (36) | 1 | uraian | 5/3/1/0 | Bagian tersendiri: tangan/kaki 70%, terkalsifikasi/terosifikasi, korteks utuh, tanpa kontinuitas medula. |
+| Brown tumour of hyperparathyroidism | 46 | S-01 (46) | 1 | daftar | 0/2/5/0 | Hanya lewat daftar: lusen berbatas tegas, litik multifokal; tanpa uraian. |
+| Chondroblastoma | 44 | S-01 (44) | 1 | daftar | 2/5/3/0 | Epifisis khas sebelum fisis menutup; selebihnya daftar (IA, periostitis berlapis, matriks kondroid). |
+| Chondroblastoma | 44 | S-06 (43) | 1 | uraian | 5/2/2/1 | Bagian tersendiri: usia belasan, epifisis/apofisis, tepi sklerotik, ukuran, erosi korteks, perluasan jaringan lunak. |
+| Chondromyxoid fibroma | 46 | S-01 (45) | 1 | daftar | 1/4/5/0 | Hanya lewat daftar: metadiafisis, eksentrik, IA, lusen, scalloping/ekspansi; tanpa usia. |
+| Chondromyxoid fibroma | 46 | S-06 (44) | 3 | - | 0/0/10/0 | Tidak ada bagian CMF; satu penyebutan sebagai banding chondroblastoma. |
+| Chondromyxoid fibroma | 46 | S-18 (1) | 1 | uraian | 0/0/0/0 | Bagian tersendiri: dewasa muda, metafisis tulang panjang, litik eksentrik bertepi sklerotik, ekspansil, tanpa periosteal, kalsifikasi biasanya tak ada. |
+| Central chondrosarcoma (incl. atypical cartilaginous tumour / grade 1) | 49 | S-01 (49) | 1 | daftar | 1/3/2/0 | Usia 30-60, pelvis sering, metafisis; tampilan lewat daftar (IB derajat rendah, IC, matriks kondroid, scalloping). |
+| Central chondrosarcoma (incl. atypical cartilaginous tumour / grade 1) | 49 | S-05 (1) | 2 | - | 0/1/0/0 | Registri: usia saja. |
+| Central chondrosarcoma (incl. atypical cartilaginous tumour / grade 1) | 49 | S-18 (47) | 1 | uraian | 1/4/0/0 | Bagian tersendiri: litik dengan rings-and-arcs, scalloping dalam, korteks ditembus, pola Lodwick II/III, massa jaringan lunak. |
+| Chordoma | 33 | S-01 (33) | 3 | - | 0/0/13/0 | Satu penyebutan (tidak diberi derajat histologis); tanpa usia, lokasi, gambaran. |
+| Clear cell chondrosarcoma | 40 | S-01 (40) | 2 | - | 0/4/3/0 | Satu penyebutan: banding lesi epifisis usia di atas 40. |
+| Clear cell chondrosarcoma | 40 | S-18 (39) | 1 | uraian | 3/3/1/0 | Bagian tersendiri: dekade kelima, epifisis femur proksimal, litik berbatas tegas bertepi sklerotik dengan matriks kondroid. |
+| Desmoplastic fibroma of bone | 43 | S-01 (43) | 3 | - | 0/0/4/0 | Satu penyebutan sebagai contoh tumor intermediat. |
+| Enchondroma | 48 | S-01 (46) | 1 | daftar | 2/1/3/0 | Tangan khas, pelvis tidak lazim; tampilan lewat daftar (IB, lusen, sentral, matriks kondroid). |
+| Enchondroma | 48 | S-06 (44) | 1 | uraian | 2/3/1/0 | Bagian tersendiri: usia, falang, lusen sentral berbatas tegas, arcs-and-rings. |
+| Enchondroma | 48 | S-18 (2) | 1 | uraian | 0/0/0/0 | Bagian tersendiri: tangan 40-65%, sentral, scalloping, rings-and-arcs, litik berbatas tegas di falang. |
+| Enostosis (bone island) | 43 | S-01 (43) | 1 | uraian | 1/0/4/0 | Sklerosis merata, tepi berduri, ukuran 1 mm-2 cm, pertumbuhan; tanpa usia. |
+| Ewing sarcoma | 47 | S-01 (47) | 1 | uraian | 4/4/4/0 | Usia <15, diafisis, tulang pipih >20 th, hair-on-end, massa jaringan lunak tanpa destruksi; tepi lewat daftar. |
+| Ewing sarcoma | 47 | S-04 (46) | 2 | - | 0/0/11/1 | Seri pediatrik: usia dan lokasi saja (28 kasus). |
+| Fibrous dysplasia | 45 | S-01 (45) | 1 | uraian | 1/4/7/0 | Ground-glass klasik; selebihnya daftar (campuran, IA, sentral, scalloping); tanpa usia dan kraniofasial. |
+| Fibrous dysplasia | 45 | S-22 (44) | 1 | uraian | 4/6/0/2 | Ulasan khusus FD: lokasi, pola densitas, rind sign, periosteal, perubahan menurut usia, kraniofasial. |
+| Giant cell tumour of bone | 46 | S-01 (46) | 1 | daftar | 3/4/0/0 | Meta-epifisis eksentrik tulang panjang setelah fisis menutup; tampilan lewat daftar (lusen, IB/IC, shell). |
+| Giant cell tumour of bone | 46 | S-16 (45) | 1 | uraian | 4/2/1/0 | Ulasan khusus GCTB: usia 20-40, lokasi, litik murni, scalloping, periosteal jarang, Campanacci. |
+| Intraosseous ganglion / subchondral cyst (geode) | 45 | S-01 (45) | 1 | daftar | 0/3/6/0 | Hanya lewat daftar: epifisis, lusen berbatas tegas, kalkaneus; tanpa uraian. |
+| Intraosseous lipoma | 42 | S-01 (42) | 1 | daftar | 0/2/3/0 | Hanya lewat daftar: IA dan banding lesi lusen kalkaneus. |
+| Langerhans cell histiocytosis (eosinophilic granuloma) | 44 | S-01 (42) | 1 | daftar | 1/2/9/0 | Predileksi diafisis, multifokal 20%; tampilan lewat daftar (lusen, sentral, periosteal multifokal); tanpa usia. |
+| Langerhans cell histiocytosis (eosinophilic granuloma) | 44 | S-21 (1) | tidak dapat diakses | - | - |  |
+| Langerhans cell histiocytosis (eosinophilic granuloma) | 44 | S-23 (41) | 1 | uraian | 7/3/2/0 | Ulasan khusus LCH: usia anak, tengkorak, vertebra plana, tulang panjang, periosteal, epifisis jarang. |
+| Non-ossifying fibroma / fibrous cortical defect | 45 | S-01 (45) | 1 | uraian | 8/4/2/0 | Contoh klasik IA, metafisis eksentrik subkortikal, lusen lalu sklerotik setelah pubertas. |
+| Non-ossifying fibroma / fibrous cortical defect | 45 | S-06 (44) | 1 | uraian | 7/4/3/0 | Bagian tersendiri: anak/remaja, tulang panjang, litik eksentrik, tepi sklerotik atau tak tegas, tanpa periosteal. |
+| Osteoblastoma | 40 | S-01 (39) | 1 | daftar | 0/0/5/0 | Hanya lewat daftar: IA, lusen, matriks osteoid; tanpa usia dan lokasi. |
+| Osteoblastoma | 40 | S-06 (38) | 1 | uraian | 0/5/0/0 | Bagian tersendiri: dewasa muda, elemen posterior dan sakrum, >2 cm, periosteal jinak, bentuk agresif. |
+| Osteoblastoma | 40 | S-20 (1) | 1 | uraian | 0/1/0/0 | Seri 35 osteoblastoma spinal: lokasi elemen posterior, pola radiograf dan CT. |
+| Osteochondroma | 38 | S-01 (36) | 2 | - | 2/3/3/0 | Metafisis khas dan kontinuitas korteks-medula (lokasi); tanpa densitas, usia. |
+| Osteochondroma | 38 | S-04 (33) | 2 | - | 3/2/2/0 | Seri pediatrik: usia dan lokasi saja (137 kasus). |
+| Osteochondroma | 38 | S-26 (3) | 1 | uraian | 1/0/0/0 | Ulasan HME: tonjolan sesil/bertangkai di metafisis, kontinuitas korteks-medula, cap kartilago. |
+| Osteoid osteoma | 43 | S-01 (43) | 1 | uraian | 4/3/7/0 | Sklerotik berbasis korteks, nidus lusen, reaksi periosteal solid, predileksi diafisis; tanpa usia dan angka ukuran. |
+| Osteoid osteoma | 43 | S-06 (42) | 1 | uraian | 8/1/5/0 | Bagian tersendiri: dekade kedua, nidus <1,5 cm, tulang panjang ekstremitas bawah, nyeri malam reda dengan OAINS. |
+| Osteomyelitis (incl. Brodie abscess) | 42 | S-01 (42) | 1 | uraian | 0/1/5/0 | Singkat dan tersebar: abses Brodie IA, pola moth-eaten, beberapa pola periosteal, sklerosis kronik; tanpa usia. |
+| Conventional (high-grade central) osteosarcoma | 46 | S-01 (46) | 1 | uraian | 6/1/3/1 | Usia 15-19, metafisis klasik, osteoid khas, Codman klasik; tepi lewat daftar. |
+| Conventional (high-grade central) osteosarcoma | 46 | S-05 (3) | 2 | - | 3/0/0/0 | Registri: usia saja. |
+| Conventional (high-grade central) osteosarcoma | 46 | S-15 (41) | 1 | uraian | 4/3/0/0 | Ulasan khusus osteosarkoma: lokasi, tepi, matriks, korteks, periosteal, massa jaringan lunak. |
+| Parosteal osteosarcoma | 36 | S-01 (36) | 2 | - | 0/3/2/0 | Satu penyebutan di daftar lesi jukstakortikal (lokasi saja). |
+| Parosteal osteosarcoma | 36 | S-15 (35) | 1 | uraian | 5/0/0/0 | Bagian tersendiri: usia 30-40-an, metafisis femur distal posterior, massa eksofitik terosifikasi padat. |
+| Periosteal osteosarcoma | 38 | S-01 (38) | 2 | - | 0/5/5/0 | Satu penyebutan di daftar lesi jukstakortikal (lokasi saja). |
+| Periosteal osteosarcoma | 38 | S-15 (37) | 2 | - | 7/1/2/0 | Bagian tersendiri hanya memuat usia, lokasi, ukuran, asal periosteal; tanpa gambaran radiografik. |
+| Telangiectatic osteosarcoma | 42 | S-01 (42) | 3 | - | 0/5/2/0 | Hanya disebut sebagai varian berderajat tinggi. |
+| Telangiectatic osteosarcoma | 42 | S-15 (41) | 1 | uraian | 6/0/0/1 | Bagian tersendiri: dekade kedua, metafisis, osteolisis multilokuler ekspansil, tepi, periosteal, kemiripan dengan ABC. |
+| Paget disease of bone | 44 | S-01 (44) | 1 | uraian | 0/3/1/0 | Fase campuran dan blastik, trabekula kasar, penebalan korteks, pelvis dan tulang panjang; tanpa vertebra/tengkorak. |
+| Periosteal (juxtacortical) chondroma | 43 | S-01 (42) | 2 | - | 0/1/6/0 | Satu penyebutan di daftar lesi jukstakortikal (lokasi saja). |
+| Periosteal (juxtacortical) chondroma | 43 | S-18 (1) | 1 | uraian | 0/0/0/0 | Bagian singkat: periosteum tulang panjang dan falang, scalloping korteks dengan sklerosis, matriks kondroid, ukuran. |
+| Periosteal (juxtacortical) chondroma | 43 | S-25 (41) | 1 | uraian | 3/4/0/0 | Bagian tersendiri: dewasa muda, metafisis tulang panjang dan tangan/kaki, scalloping korteks, matriks kondroid. |
+| Plasma cell myeloma / solitary plasmacytoma of bone | 42 | S-01 (42) | 1 | uraian | 3/3/1/0 | Singkat: multifokal >90%, lesi litik, okult sampai 30-50% destruksi; tepi lewat daftar. |
+| Plasma cell myeloma / solitary plasmacytoma of bone | 42 | S-24 (41) | 2 | - | 3/2/2/0 | Ulasan MRI: lokasi predileksi dan usia rerata; tanpa gambaran radiografik. |
+| Primary lymphoma of bone | 46 | S-01 (46) | 1 | uraian | 1/3/3/0 | Singkat: usia dewasa-lansia, pola permeatif dengan massa jaringan lunak tanpa destruksi; tepi lewat daftar. |
+| Simple (unicameral) bone cyst | 44 | S-01 (44) | 1 | daftar | 2/4/10/0 | Metafisis tulang panjang khas; tampilan lewat daftar (IA, lusen, sentral, scalloping/ekspansi); tanpa usia. |
+| Simple (unicameral) bone cyst | 44 | S-06 (43) | 1 | uraian | 5/7/4/0 | Bagian singkat: usia, metafisis tulang panjang, berkembang ke diafisis; tepi dan periosteal tidak diuraikan. |
+| Skeletal tuberculosis | 45 | S-01 (45) | 3 | - | 0/0/6/0 | Satu penyebutan sebagai kategori infeksi. |
+| Stress / insufficiency fracture | 44 | S-01 (44) | 1 | uraian | 0/2/5/0 | Satu kalimat: sklerosis dengan reaksi periosteal dan penebalan korteks; tanpa usia dan lokasi. |
+| Vertebral haemangioma | 33 | S-01 (32) | 3 | - | 0/0/5/0 | Hemangioma hanya di daftar lesi lusen dan satu gambar femur; tidak ada yang vertebral. |
+| Vertebral haemangioma | 33 | S-19 (2) | 2 | - | 0/1/0/0 | Ulasan kalvaria: vertebra disebut lokasi tersering; trabekula menebal diuraikan untuk hemangioma kalvaria. |
+
+Tabel ringkas (satu baris per entitas; kolom terakhir = klaim set A-D yang tidak ditemukan atau bertentangan / yang diperiksa):
+| Entitas | S-01: tingkat (klaim) | Sumber lain: tingkat (klaim) | tanpa dukungan / diperiksa |
+|---|---|---|---|
+| Osteofibrous dysplasia – adamantinoma spectrum | 1-uraian (42) | - | 3/8 |
+| Aneurysmal bone cyst | 1-daftar (43) | S-06 1-uraian (42); S-20 3 (1) | 4/14 |
+| Medullary bone infarct | 1-uraian (43) | - | 4/6 |
+| Bone metastasis (carcinoma) | 1-uraian (46) | - | 1/9 |
+| Bizarre parosteal osteochondromatous proliferation (Nora lesion) | 2 (37) | S-25 1-uraian (36) | 2/10 |
+| Brown tumour of hyperparathyroidism | 1-daftar (46) | - | 5/7 |
+| Chondroblastoma | 1-daftar (44) | S-06 1-uraian (43) | 3/10 |
+| Chondromyxoid fibroma | 1-daftar (45) | S-06 3 (44); S-18 1-uraian (1) | 5/10 |
+| Central chondrosarcoma (incl. atypical cartilaginous tumour / grade 1) | 1-daftar (49) | S-05 2 (1); S-18 1-uraian (47) | 0/6 |
+| Chordoma | 3 (33) | - | 13/13 |
+| Clear cell chondrosarcoma | 2 (40) | S-18 1-uraian (39) | 1/7 |
+| Desmoplastic fibroma of bone | 3 (43) | - | 4/4 |
+| Enchondroma | 1-daftar (46) | S-06 1-uraian (44); S-18 1-uraian (2) | 1/6 |
+| Enostosis (bone island) | 1-uraian (43) | - | 4/5 |
+| Ewing sarcoma | 1-uraian (47) | S-04 2 (46) | 4/12 |
+| Fibrous dysplasia | 1-uraian (45) | S-22 1-uraian (44) | 1/12 |
+| Giant cell tumour of bone | 1-daftar (46) | S-16 1-uraian (45) | 0/7 |
+| Intraosseous ganglion / subchondral cyst (geode) | 1-daftar (45) | - | 6/9 |
+| Intraosseous lipoma | 1-daftar (42) | - | 3/5 |
+| Langerhans cell histiocytosis (eosinophilic granuloma) | 1-daftar (42) | S-21 belum dibaca (1); S-23 1-uraian (41) | 2/12 |
+| Non-ossifying fibroma / fibrous cortical defect | 1-uraian (45) | S-06 1-uraian (44) | 1/14 |
+| Osteoblastoma | 1-daftar (39) | S-06 1-uraian (38); S-20 1-uraian (1) | 0/6 |
+| Osteochondroma | 2 (36) | S-04 2 (33); S-26 1-uraian (3) | 1/8 |
+| Osteoid osteoma | 1-uraian (43) | S-06 1-uraian (42) | 2/14 |
+| Osteomyelitis (incl. Brodie abscess) | 1-uraian (42) | - | 5/6 |
+| Conventional (high-grade central) osteosarcoma | 1-uraian (46) | S-05 2 (3); S-15 1-uraian (41) | 1/11 |
+| Parosteal osteosarcoma | 2 (36) | S-15 1-uraian (35) | 0/5 |
+| Periosteal osteosarcoma | 2 (38) | S-15 2 (37) | 2/10 |
+| Telangiectatic osteosarcoma | 3 (42) | S-15 1-uraian (41) | 1/7 |
+| Paget disease of bone | 1-uraian (44) | - | 1/4 |
+| Periosteal (juxtacortical) chondroma | 2 (42) | S-18 1-uraian (1); S-25 1-uraian (41) | 0/7 |
+| Plasma cell myeloma / solitary plasmacytoma of bone | 1-uraian (42) | S-24 2 (41) | 1/7 |
+| Primary lymphoma of bone | 1-uraian (46) | - | 3/7 |
+| Simple (unicameral) bone cyst | 1-daftar (44) | S-06 1-uraian (43) | 3/16 |
+| Skeletal tuberculosis | 3 (45) | - | 6/6 |
+| Stress / insufficiency fracture | 1-uraian (44) | - | 5/7 |
+| Vertebral haemangioma | 3 (32) | S-19 2 (2) | 4/5 |
+
+baris cakupan untuk pasangan yang tidak dikutip klaim mana pun: 0
+Entitas menurut cakupan terbaik di antara sumber terjangkau yang dikutipnya:
+   1-uraian: 29: Osteofibrous dysplasia – adamantinoma spectrum; Aneurysmal bone cyst; Medullary bone infarct; Bone metastasis (carcinoma); Bizarre parosteal osteochondromatous proliferation (Nora lesion); Chondroblastoma; Chondromyxoid fibroma; Central chondrosarcoma (incl. atypical cartilaginous tumour / grade 1); Clear cell chondrosarcoma; Enchondroma; Enostosis (bone island); Ewing sarcoma; Fibrous dysplasia; Giant cell tumour of bone; Langerhans cell histiocytosis (eosinophilic granuloma); Non-ossifying fibroma / fibrous cortical defect; Osteoblastoma; Osteochondroma; Osteoid osteoma; Osteomyelitis (incl. Brodie abscess); Conventional (high-grade central) osteosarcoma; Parosteal osteosarcoma; Telangiectatic osteosarcoma; Paget disease of bone; Periosteal (juxtacortical) chondroma; Plasma cell myeloma / solitary plasmacytoma of bone; Primary lymphoma of bone; Simple (unicameral) bone cyst; Stress / insufficiency fracture
+   1-daftar: 3: Brown tumour of hyperparathyroidism; Intraosseous ganglion / subchondral cyst (geode); Intraosseous lipoma
+   2: 2: Periosteal osteosarcoma; Vertebral haemangioma
+   3: 3: Chordoma; Desmoplastic fibroma of bone; Skeletal tuberculosis
+   4: 0
+
+entitas yang satu-satunya uraian radiografiknya berasal dari S-01: 10: Osteofibrous dysplasia – adamantinoma spectrum; Medullary bone infarct; Bone metastasis (carcinoma); Enostosis (bone island); Ewing sarcoma; Osteomyelitis (incl. Brodie abscess); Paget disease of bone; Plasma cell myeloma / solitary plasmacytoma of bone; Primary lymphoma of bone; Stress / insufficiency fracture
+
+Per sumber: jumlah entitas yang mengutipnya menurut tingkat
+| Sumber | 1-uraian | 1-daftar | 2 | 3 | 4 |
+|---|---|---|---|---|---|
+| S-01 | 14 | 12 | 6 | 5 | 0 |
+| S-04 | 0 | 0 | 2 | 0 | 0 |
+| S-05 | 0 | 0 | 2 | 0 | 0 |
+| S-06 | 7 | 0 | 0 | 1 | 0 |
+| S-15 | 3 | 0 | 1 | 0 | 0 |
+| S-16 | 1 | 0 | 0 | 0 | 0 |
+| S-18 | 5 | 0 | 0 | 0 | 0 |
+| S-19 | 0 | 0 | 1 | 0 | 0 |
+| S-20 | 1 | 0 | 0 | 1 | 0 |
+| S-22 | 1 | 0 | 0 | 0 | 0 |
+| S-23 | 1 | 0 | 0 | 0 | 0 |
+| S-24 | 0 | 0 | 1 | 0 | 0 |
+| S-25 | 2 | 0 | 0 | 0 | 0 |
+| S-26 | 1 | 0 | 0 | 0 | 0 |
+
+Sumber kedua (selain S-01) yang untuk entitas itu tidak memuat gambaran radiografik:
+| Entitas | Sumber | Tingkat | klaim yang mengutip | Catatan |
+|---|---|---|---|---|
+| Aneurysmal bone cyst | S-20 | 3 | 1 | Seri osteoblastoma spinal; ABC hanya sebagai komponen sekunder. |
+| Chondromyxoid fibroma | S-06 | 3 | 44 | Tidak ada bagian CMF; satu penyebutan sebagai banding chondroblastoma. |
+| Central chondrosarcoma (incl. atypical cartilaginous tumour / grade 1) | S-05 | 2 | 1 | Registri: usia saja. |
+| Ewing sarcoma | S-04 | 2 | 46 | Seri pediatrik: usia dan lokasi saja (28 kasus). |
+| Osteochondroma | S-04 | 2 | 33 | Seri pediatrik: usia dan lokasi saja (137 kasus). |
+| Conventional (high-grade central) osteosarcoma | S-05 | 2 | 3 | Registri: usia saja. |
+| Periosteal osteosarcoma | S-15 | 2 | 37 | Bagian tersendiri hanya memuat usia, lokasi, ukuran, asal periosteal; tanpa gambaran radiografik. |
+| Plasma cell myeloma / solitary plasmacytoma of bone | S-24 | 2 | 41 | Ulasan MRI: lokasi predileksi dan usia rerata; tanpa gambaran radiografik. |
+| Vertebral haemangioma | S-19 | 2 | 2 | Ulasan kalvaria: vertebra disebut lokasi tersering; trabekula menebal diuraikan untuk hemangioma kalvaria. |
+
+jumlah kutipan klaim ke sumber kedua bertingkat 2-4: 208
+klaim fitur tampilan (densitas, tepi, korteks, jaringan lunak, periosteal, matriks, ukuran) yang tidak satu pun sumber terjangkaunya bertingkat 1 untuk entitasnya: 124 dari 848 di seluruh KB
+   per entitas: Desmoplastic fibroma of bone 23; Skeletal tuberculosis 23; Periosteal osteosarcoma 20; Vertebral haemangioma 19; Chordoma 18; Osteochondroma 16; Bizarre parosteal osteochondromatous proliferation (Nora lesion) 1; Clear cell chondrosarcoma 1; Parosteal osteosarcoma 1; Telangiectatic osteosarcoma 1; Periosteal (juxtacortical) chondroma 1
+klaim fitur tampilan yang tidak satu pun sumber terjangkaunya memuat uraian tersendiri (tingkat 1-uraian): 227 dari 848
+   per entitas: Chondromyxoid fibroma 25; Intraosseous ganglion / subchondral cyst (geode) 25; Brown tumour of hyperparathyroidism 24; Desmoplastic fibroma of bone 23; Skeletal tuberculosis 23; Intraosseous lipoma 21; Periosteal osteosarcoma 20; Vertebral haemangioma 19; Chordoma 18; Osteochondroma 16; Aneurysmal bone cyst 1; Bizarre parosteal osteochondromatous proliferation (Nora lesion) 1; Chondroblastoma 1; Central chondrosarcoma (incl. atypical cartilaginous tumour / grade 1) 1; Clear cell chondrosarcoma 1; Enchondroma 1; Giant cell tumour of bone 1; Langerhans cell histiocytosis (eosinophilic granuloma) 1; Osteoblastoma 1; Parosteal osteosarcoma 1; Telangiectatic osteosarcoma 1; Periosteal (juxtacortical) chondroma 1; Simple (unicameral) bone cyst 1
+
+====================================================================================================
+9. ATURAN (set R, di luar set A-D)
+====================================================================================================
+| Entitas | Aturan | Bobot | Dikutip | Vonis | Sumber | Lokasi | Catatan |
+|---|---|---|---|---|---|---|---|
+| Ewing sarcoma | `ewing_adult_flat_bone` | +1 | S-01 | didukung | S-01 | Flat versus long bones | Ewing disebut bergeser ke tulang pipih pada pasien di atas 20 tahun. |
+| Ewing sarcoma | `ewing_soft_tissue_without_destruction` | +2 | S-01 | sebagian | S-01 | Cortical involvement and extra-osseous component | Pola massa jaringan lunak besar tanpa destruksi korteks nyata disebut dapat terjadi; focal breach tidak dibahas tersendiri. |
+| Osteomyelitis (incl. Brodie abscess) | `om_all_four_aggressive_signs` | +1 | S-10 | didukung | S-10 | Results; Conclusion | Keempat tanda mayor bersama-sama memberi nilai prediksi 100% untuk keganasan atau infeksi (88 lesi, 7 infektif). |
+| Telangiectatic osteosarcoma | `tos_abc_mimic_aggressive` | +1 | S-01,S-15 | didukung | S-15 | 3.1.3 Teleangectatic Osteosarcoma; Fig. 19; Fig. 20 | Lesi ekspansil multilokuler dengan area zona transisi lebar dan korteks terputus disebut dapat menyerupai ABC. |
+| Primary lymphoma of bone | `lymphoma_soft_tissue_without_destruction` | +2 | S-01 | sebagian | S-01 | Cortical involvement and extra-osseous component | Pola massa jaringan lunak besar tanpa destruksi korteks nyata disebut dapat terjadi; focal breach tidak dibahas tersendiri. |
+
+vonis aturan: didukung: 3; sebagian: 2
+
+====================================================================================================
+10. DAFTAR LENGKAP VONIS (set A, B, C, D)
+====================================================================================================
+Set A:
+| Entitas | Klaim | Bobot | Dikutip | Vonis | Sumber | Lokasi | Catatan |
+|---|---|---|---|---|---|---|---|
+| Osteofibrous dysplasia – adamantinoma spectrum | `margin_lodwick:II` | -5 | S-01 | tidak ditemukan | S-01 | tidak ada; ditelusuri: Lodwick-Madewell grading | Tepi lesi adamantinoma/OFD tidak dibahas. |
+| Aneurysmal bone cyst | `age_group:60+` | -5 | S-01,S-06 | sebagian | S-06 | 5.2.1 Introduction | Usia lazim anak dan dewasa muda memberi arah; usia lanjut tidak dibahas, kemustahilan tidak dinyatakan. |
+| Aneurysmal bone cyst | `density:sclerotic` | -5 | S-01,S-06 | sebagian | S-06 | 5.2.5 Imaging | Digambarkan litik; arah didukung, tampilan sklerotik tidak dibahas dan tidak dinyatakan mustahil. |
+| Aneurysmal bone cyst | `matrix:chondroid` | -5 | S-01,S-06 | tidak ditemukan | S-01,S-06 | S-01: tidak ada; ditelusuri: Tumor matrix and mineralization · S-06: tidak ada; ditelusuri: 5.2.5 Imaging | S-01: Matriks pada ABC tidak dibahas. · S-06: Mineralisasi matriks pada ABC tidak dibahas. |
+| Aneurysmal bone cyst | `matrix:osteoid` | -5 | S-01,S-06 | tidak ditemukan | S-01,S-06 | S-01: tidak ada; ditelusuri: Tumor matrix and mineralization · S-06: tidak ada; ditelusuri: 5.2.5 Imaging | S-01: Matriks pada ABC tidak dibahas. · S-06: Mineralisasi matriks pada ABC tidak dibahas. |
+| Bone metastasis (carcinoma) | `age_group:10-19_closed` | -5 | S-01 | sebagian | S-01 | Epidemiology | Metastasis disebut terutama pada dewasa dan lansia; remaja tidak dibahas, kemustahilan tidak dinyatakan. |
+| Bone metastasis (carcinoma) | `age_group:10-19_open` | -5 | S-01 | sebagian | S-01 | Epidemiology | Metastasis disebut terutama pada dewasa dan lansia; remaja tidak dibahas, kemustahilan tidak dinyatakan. |
+| Bone metastasis (carcinoma) | `age_group:10-19_unknown` | -5 | S-01 | sebagian | S-01 | Epidemiology | Metastasis disebut terutama pada dewasa dan lansia; remaja tidak dibahas, kemustahilan tidak dinyatakan. |
+| Bone metastasis (carcinoma) | `matrix:ground_glass` | -5 | S-01 | tidak ditemukan | S-01 | Tumor matrix and mineralization | Ground-glass hanya dikaitkan dengan fibrous dysplasia dan tumor fibrosa lain; metastasis tidak disebut. |
+| Bizarre parosteal osteochondromatous proliferation (Nora lesion) | `cortex:destruction` | -5 | S-01,S-25 | sebagian | S-25 | Bizarre parosteal osteochondromatous proliferation (BPOP); Fig. 7 | Korteks di bawahnya digambarkan utuh, dengan remodeling yang mungkin; destruksi tidak dinyatakan mustahil. |
+| Bizarre parosteal osteochondromatous proliferation (Nora lesion) | `density:lytic` | -5 | S-01,S-25 | sebagian | S-25 | Bizarre parosteal osteochondromatous proliferation (BPOP) | Lesi digambarkan terkalsifikasi atau terosifikasi dengan derajat bervariasi; lesi lusen tidak dibahas. |
+| Bizarre parosteal osteochondromatous proliferation (Nora lesion) | `transverse:juxtacortical_continuous` | -5 | S-01,S-25 | didukung | S-25 | Bizarre parosteal osteochondromatous proliferation (BPOP); Fig. 7 | Ketiadaan kontinuitas medula disebut pembeda utama dari osteokondroma. |
+| Brown tumour of hyperparathyroidism | `margin_lodwick:II` | -5 | S-01 | tidak ditemukan | S-01 | Density - Lucent/lytic | [daftar-lain] Hanya tercantum sebagai lesi lusen berbatas tegas; pola moth-eaten tidak dibahas. |
+| Brown tumour of hyperparathyroidism | `matrix:ground_glass` | -5 | S-01 | tidak ditemukan | S-01 | Tumor matrix and mineralization | Ground-glass hanya dikaitkan dengan fibrous dysplasia dan tumor fibrosa lain. |
+| Brown tumour of hyperparathyroidism | `periosteal:lamellated` | -5 | S-01 | tidak ditemukan | S-01 | tidak ada; ditelusuri: Periosteal reaction | Reaksi periosteal pada brown tumour tidak dibahas. |
+| Chondroblastoma | `age_group:40-59` | -5 | S-01,S-06 | sebagian | S-06 | 3.3.1 Introduction | Khas usia belasan memberi arah; usia dewasa tidak dibahas, kemustahilan tidak dinyatakan. |
+| Chondroblastoma | `age_group:60+` | -5 | S-01,S-06 | sebagian | S-06 | 3.3.1 Introduction | Khas usia belasan memberi arah; usia lanjut tidak dibahas, kemustahilan tidak dinyatakan. |
+| Chondroblastoma | `cortex:destruction` | -5 | S-01,S-06 | tidak ditemukan | S-01,S-06 | S-01: tidak ada; ditelusuri: Cortical involvement · S-06: 3.3.5 Imaging | S-01: Korteks pada kondroblastoma tidak dibahas. · S-06: Hanya erosi korteks yang disebut mungkin tampak pada CT; destruksi tidak dibahas (mendekati konflik). |
+| Chondroblastoma | `soft_tissue_mass:present` | -5 | S-01,S-06 | bertentangan | S-06 | 3.3.5 Imaging; 3.3.7 Treatment and Prognosis | CT disebut dipakai menilai perluasan ke jaringan lunak; terapi bertujuan mencegah penyebaran ke jaringan lunak. |
+| Chondromyxoid fibroma | `cortex:destruction` | -5 | S-01,S-06 | tidak ditemukan | S-01,S-06 | S-01: Cortical involvement and extra-osseous component · S-06: 3.3.6 Differential Diagnosis (satu-satunya penyebutan CMF) | S-01: [daftar-lain] CMF hanya dicontohkan pada scalloping/ekspansi lesi jinak; destruksi tidak dibahas. · S-06: S-06 tidak punya bagian CMF; hanya disebut sebagai banding chondroblastoma. |
+| Chondromyxoid fibroma | `margin_lodwick:IC` | -5 | S-01,S-06 | tidak ditemukan | S-01,S-06 | S-01: Lodwick-Madewell grading · S-06: 3.3.6 Differential Diagnosis (satu-satunya penyebutan CMF) | S-01: [daftar-lain] CMF hanya ada di daftar IA; tepi IC tidak dibahas. · S-06: S-06 tidak punya bagian CMF; hanya disebut sebagai banding chondroblastoma. |
+| Chondromyxoid fibroma | `soft_tissue_mass:present` | -5 | S-01,S-06 | tidak ditemukan | S-01,S-06 | S-01: tidak ada; ditelusuri: Cortical involvement and extra-osseous component · S-06: 3.3.6 Differential Diagnosis (satu-satunya penyebutan CMF) | S-01: Komponen jaringan lunak CMF tidak dibahas. · S-06: S-06 tidak punya bagian CMF; hanya disebut sebagai banding chondroblastoma. |
+| Central chondrosarcoma (incl. atypical cartilaginous tumour / grade 1) | `matrix:osteoid` | -5 | S-01,S-18 | sebagian | S-18 | Chondrosarcoma (Grade 1, Grade 2, Grade 3) | Mineralisasi yang diuraikan adalah kondroid; osteoid tidak dibahas dan tidak dinyatakan mustahil. |
+| Chordoma | `age_group:0-9` | -5 | S-01 | tidak ditemukan | S-01 | General considerations (satu penyebutan, soal derajat histologis) | Kordoma tidak dibahas: tanpa usia, lokasi, atau gambaran radiografik. |
+| Chordoma | `age_group:10-19_closed` | -5 | S-01 | tidak ditemukan | S-01 | General considerations (satu penyebutan, soal derajat histologis) | Kordoma tidak dibahas: tanpa usia, lokasi, atau gambaran radiografik. |
+| Chordoma | `age_group:10-19_open` | -5 | S-01 | tidak ditemukan | S-01 | General considerations (satu penyebutan, soal derajat histologis) | Kordoma tidak dibahas: tanpa usia, lokasi, atau gambaran radiografik. |
+| Chordoma | `age_group:10-19_unknown` | -5 | S-01 | tidak ditemukan | S-01 | General considerations (satu penyebutan, soal derajat histologis) | Kordoma tidak dibahas: tanpa usia, lokasi, atau gambaran radiografik. |
+| Chordoma | `density:sclerotic` | -5 | S-01 | tidak ditemukan | S-01 | General considerations (satu penyebutan, soal derajat histologis) | Kordoma tidak dibahas: tanpa usia, lokasi, atau gambaran radiografik. |
+| Clear cell chondrosarcoma | `matrix:osteoid` | -5 | S-01,S-18 | sebagian | S-18 | Clear Cell Chondrosarcoma | Mineralisasi yang diuraikan khas adalah kondroid; osteoid tidak dibahas dan tidak dinyatakan mustahil. |
+| Enchondroma | `matrix:osteoid` | -5 | S-01,S-06 | sebagian | S-06 | 3.2.5 Imaging; 3.2.6 Differential Diagnosis | Matriks khasnya kondroid; arah didukung, osteoid tidak dibahas dan tidak dinyatakan mustahil. |
+| Enchondroma | `periosteal:lamellated` | -5 | S-01,S-06 | tidak ditemukan | S-01,S-06 | S-01: tidak ada; ditelusuri: Periosteal reaction · S-06: tidak ada; ditelusuri: 3.2.5 Imaging | S-01: Reaksi periosteal pada enkondroma tidak dibahas. · S-06: Reaksi periosteal pada enkondroma tidak dibahas. |
+| Ewing sarcoma | `age_group:60+` | -5 | S-01,S-04 | sebagian | S-01 | Epidemiology | Puncak di bawah 15 tahun memberi arah; usia lanjut tidak dibahas, kemustahilan tidak dinyatakan. |
+| Ewing sarcoma | `cortex:expansion_shell` | -5 | S-01,S-04 | tidak ditemukan | S-01,S-04 | S-01: Cortical involvement and extra-osseous component · S-04: tidak ada (seri usia dan lokasi, tanpa gambaran radiografik) | S-01: Hanya pertumbuhan permeatif tanpa destruksi korteks nyata yang disebut; ekspansi tidak dibahas. · S-04: Tidak ada uraian korteks; hanya data usia dan lokasi. |
+| Ewing sarcoma | `margin_lodwick:IA` | -5 | S-01,S-04 | tidak ditemukan | S-01,S-04 | S-01: Lodwick-Madewell grading - Type II/III · S-04: tidak ada (seri usia dan lokasi, tanpa gambaran radiografik) | S-01: [daftar-lain] Ewing hanya tercantum pada tipe II/III dan lesi litik berbatas tidak tegas; IA tidak dibahas. · S-04: Tidak ada uraian tepi lesi; hanya data usia dan lokasi. |
+| Ewing sarcoma | `periosteal:shell` | -5 | S-01,S-04 | tidak ditemukan | S-01,S-04 | S-01: tidak ada; ditelusuri: Periosteal reaction · S-04: tidak ada (seri usia dan lokasi, tanpa gambaran radiografik) | S-01: Pola shell hanya dicontohkan pada GCT dan ABC; Ewing tidak dibahas. · S-04: Tidak ada uraian reaksi periosteal; hanya data usia dan lokasi. |
+| Fibrous dysplasia | `margin_lodwick:IC` | -5 | S-01,S-22 | bertentangan | S-22 | Craniofacial FD; Radiographs | Lesi kraniofasial disebut khas tidak berbatas tegas; tepi sklerotik dapat terputus atau tidak lengkap. |
+| Fibrous dysplasia | `periosteal:lamellated` | -5 | S-01,S-22 | sebagian | S-22 | Radiographs; Fractures | Reaksi periosteal biasanya tidak ada kecuali pada fraktur patologis, dan fraktur disebut sering; pola tidak dirinci. |
+| Giant cell tumour of bone | `age_group:10-19_open` | -5 | S-01,S-16 | sebagian | S-16 | 1 Introduction | Usia khas 20-40 tahun memberi arah; status fisis dan pasien imatur tidak dibahas. |
+| Intraosseous ganglion / subchondral cyst (geode) | `age_group:0-9` | -5 | S-01 | tidak ditemukan | S-01 | tidak ada; ditelusuri: Epidemiology | Usia geode/ganglion intraoseus tidak disebut. |
+| Intraosseous ganglion / subchondral cyst (geode) | `margin_lodwick:IC` | -5 | S-01 | tidak ditemukan | S-01 | Density - Lucent/lytic | [daftar-lain] Hanya disebut berbatas tegas; tepi IC tidak dibahas. |
+| Intraosseous ganglion / subchondral cyst (geode) | `size_cm:>5` | -5 | S-01 | tidak ditemukan | S-01 | tidak ada | Ukuran geode tidak disebut. |
+| Intraosseous ganglion / subchondral cyst (geode) | `soft_tissue_mass:present` | -5 | S-01 | tidak ditemukan | S-01 | tidak ada; ditelusuri: Cortical involvement and extra-osseous component | Komponen jaringan lunak pada geode tidak dibahas. |
+| Langerhans cell histiocytosis (eosinophilic granuloma) | `age_group:60+` | -5 | S-01,S-23 | sebagian | S-23 | Introduction; Conclusion | Dominan pada anak memberi arah; usia lanjut tidak dibahas, kemustahilan tidak dinyatakan. |
+| Langerhans cell histiocytosis (eosinophilic granuloma) | `matrix:osteoid` | -5 | S-01,S-23 | tidak ditemukan | S-01,S-23 | S-01: Tumor matrix and mineralization · S-23: Skull - Calvarium; Fig. 18; Fig. 22 | S-01: Osteoid hanya dikaitkan dengan tumor pembentuk tulang; LCH tidak disebut. · S-23: Matriks osteoid tidak dibahas; yang disebut hanya sekuestrum kancing dan fragmen tulang sisa di dalam lesi. |
+| Non-ossifying fibroma / fibrous cortical defect | `periosteal:lamellated` | -5 | S-01,S-06 | sebagian | S-06 | 4.2.6 Differential Diagnosis | Biasanya tanpa reaksi periosteal; arah didukung, kemustahilan tidak dinyatakan. |
+| Non-ossifying fibroma / fibrous cortical defect | `soft_tissue_mass:present` | -5 | S-01,S-06 | tidak ditemukan | S-01,S-06 | S-01: tidak ada; ditelusuri: Cortical involvement and extra-osseous component · S-06: 4.2.6 Differential Diagnosis | S-01: Komponen jaringan lunak pada NOF tidak dibahas. · S-06: Hanya disebut korteks biasanya tidak ditembus; massa jaringan lunak tidak dibahas. |
+| Osteoblastoma | `age_group:60+` | -5 | S-01,S-06 | sebagian | S-06 | 2.2.1 Introduction | Terutama dewasa muda memberi arah; usia lanjut tidak dibahas, kemustahilan tidak dinyatakan. |
+| Osteoblastoma | `margin_lodwick:II` | -5 | S-01,S-06 | sebagian | S-06 | 2.2.3 Micro-Macroscopic Features; 2.2.5 Imaging | Biasanya berbatas jelas, tetapi bentuk agresif disebut berbatas makin permeatif dan dapat menyerupai keganasan. |
+| Osteochondroma | `longitudinal:epiphysis_apophysis` | -5 | S-01,S-04 | didukung | S-04 | Table 3 | Tidak ada satu pun dari 137 osteokondroma yang berlokasi di epifisis. |
+| Osteoid osteoma | `age_group:60+` | -5 | S-01,S-06 | sebagian | S-06 | 2.1.1 Introduction | Khas dekade kedua memberi arah, tetapi disebut dapat timbul pada usia berapa pun. |
+| Osteoid osteoma | `periosteal:lamellated` | -5 | S-01,S-06 | tidak ditemukan | S-01,S-06 | S-01: Periosteal reaction · S-06: tidak ada; ditelusuri: 2.1.5 Imaging | S-01: [daftar-lain] Hanya pola solid yang dikaitkan dengan osteoid osteoma; pola berlapis tidak dibahas. · S-06: Reaksi periosteal pada osteoid osteoma tidak dibahas. |
+| Osteoid osteoma | `size_cm:>5` | -5 | S-01,S-06 | didukung | S-06 | 2.1.1 Introduction | Lesi yang lebih besar dari sekitar 1,5 cm digolongkan osteoblastoma; angka merujuk pada nidus. |
+| Osteomyelitis (incl. Brodie abscess) | `matrix:osteoid` | -5 | S-01 | tidak ditemukan | S-01 | Tumor matrix and mineralization | Mineralisasi pada osteomielitis tidak dibahas. |
+| Conventional (high-grade central) osteosarcoma | `margin_lodwick:IA` | -5 | S-01,S-15 | sebagian | S-15 | 3.1.1 Conventional Osteosarcoma; 2 Imaging Assessment; Fig. 2 | Tepi digambarkan khas tidak tegas dan tidak sklerotik; ada contoh tepi campuran, kemustahilan tidak dinyatakan. |
+| Conventional (high-grade central) osteosarcoma | `periosteal:shell` | -5 | S-01,S-15 | sebagian | S-15 | 3.1.1 Conventional Osteosarcoma; Fig. 4 | Pertumbuhan cepat disebut mencegah ekspansi korteks; pola shell tidak dinamai dan satu gambar menunjukkan tonjolan ringan. |
+| Periosteal osteosarcoma | `age_group:60+` | -5 | S-01,S-15 | sebagian | S-15 | 3.2.2 Periosteal Osteosarcoma | Usia khas dekade kedua-ketiga memberi arah; usia lanjut tidak dibahas. |
+| Telangiectatic osteosarcoma | `margin_lodwick:IA` | -5 | S-01,S-15 | bertentangan | S-15 | 3.1.3 Teleangectatic Osteosarcoma | Disebut kadang berbatas tegas dengan tepi sklerotik ireguler; pola permeatif klasik justru jarang. |
+| Periosteal (juxtacortical) chondroma | `matrix:osteoid` | -5 | S-01,S-25 | sebagian | S-25 | Juxtacortical/Periosteal chondroma | Mineralisasi matriks yang diuraikan adalah kondroid; osteoid tidak dibahas dan tidak dinyatakan mustahil. |
+| Primary lymphoma of bone | `cortex:expansion_shell` | -5 | S-01 | tidak ditemukan | S-01 | Cortical involvement and extra-osseous component | Hanya pertumbuhan permeatif tanpa destruksi korteks nyata yang disebut; ekspansi tidak dibahas. |
+| Primary lymphoma of bone | `matrix:osteoid` | -5 | S-01 | tidak ditemukan | S-01 | Tumor matrix and mineralization | Osteoid hanya dikaitkan dengan tumor pembentuk tulang; limfoma tidak disebut. |
+| Simple (unicameral) bone cyst | `age_group:60+` | -5 | S-01,S-06 | sebagian | S-06 | 5.1.1 Introduction | Sebanyak 80% pada remaja atau usia 20-an memberi arah; usia lanjut tidak dibahas. |
+| Simple (unicameral) bone cyst | `density:sclerotic` | -5 | S-01,S-06 | sebagian | S-06 | 4.1.6 Differential Diagnosis | Digambarkan radiolusen berisi cairan; arah didukung, tampilan sklerotik tidak dibahas. |
+| Simple (unicameral) bone cyst | `longitudinal:epiphysis_apophysis` | -5 | S-01,S-06 | sebagian | S-06 | 5.1.2 Sites of Development; 5.1.5 Imaging | Terutama metafisis dan berkembang ke arah diafisis; epifisis tidak dibahas. |
+| Simple (unicameral) bone cyst | `margin_lodwick:IC` | -5 | S-01,S-06 | tidak ditemukan | S-01,S-06 | S-01: Lodwick-Madewell grading · S-06: tidak ada; ditelusuri: 5.1.5 Imaging | S-01: [daftar-lain] Hanya ada di daftar IA; tepi IC tidak dibahas. · S-06: Tepi lesi tidak dibahas. |
+| Simple (unicameral) bone cyst | `matrix:ground_glass` | -5 | S-01,S-06 | sebagian | S-06 | 4.1.6 Differential Diagnosis | Dibedakan dari fibrous dysplasia karena lebih radiolusen; arah didukung, tidak dinyatakan mustahil. |
+| Simple (unicameral) bone cyst | `periosteal:lamellated` | -5 | S-01,S-06 | tidak ditemukan | S-01,S-06 | S-01: tidak ada; ditelusuri: Periosteal reaction · S-06: tidak ada; ditelusuri: 5.1.5 Imaging | S-01: Reaksi periosteal pada kista tulang simpel tidak dibahas. · S-06: Reaksi periosteal tidak dibahas, walau fraktur patologis disebut. |
+| Simple (unicameral) bone cyst | `soft_tissue_mass:present` | -5 | S-01,S-06 | tidak ditemukan | S-01,S-06 | S-01: tidak ada; ditelusuri: Cortical involvement and extra-osseous component · S-06: tidak ada; ditelusuri: 5.1.5 Imaging | S-01: Komponen jaringan lunak tidak dibahas untuk entitas ini. · S-06: Komponen jaringan lunak tidak dibahas. |
+| Skeletal tuberculosis | `matrix:chondroid` | -5 | S-01 | tidak ditemukan | S-01 | General considerations (satu penyebutan, kategori infeksi) | Tuberkulosis hanya disebut sebagai kategori infeksi; tanpa lokasi atau gambaran radiografik. |
+| Skeletal tuberculosis | `matrix:osteoid` | -5 | S-01 | tidak ditemukan | S-01 | General considerations (satu penyebutan, kategori infeksi) | Tuberkulosis hanya disebut sebagai kategori infeksi; tanpa lokasi atau gambaran radiografik. |
+| Stress / insufficiency fracture | `periosteal:spiculated` | -5 | S-01 | tidak ditemukan | S-01 | tidak ada; ditelusuri: Periosteal reaction | Pola spikula tidak dibahas untuk fraktur stres. |
+| Stress / insufficiency fracture | `soft_tissue_mass:present` | -5 | S-01 | tidak ditemukan | S-01 | tidak ada; ditelusuri: Sclerotic bone lesions | Massa jaringan lunak tidak dibahas untuk fraktur stres. |
+| Vertebral haemangioma | `cortex:destruction` | -5 | S-01 | tidak ditemukan | S-01 | tidak ada (ulasan skeleton apendikular; Fig. 11 hemangioma femur) | Hemangioma vertebra tidak dibahas. |
+| Vertebral haemangioma | `margin_lodwick:IC` | -5 | S-01 | tidak ditemukan | S-01 | tidak ada (ulasan skeleton apendikular; Fig. 11 hemangioma femur) | Hemangioma vertebra tidak dibahas. |
+
+Set B:
+| Entitas | Klaim | Bobot | Dikutip | Vonis | Sumber | Lokasi | Catatan |
+|---|---|---|---|---|---|---|---|
+| Osteofibrous dysplasia – adamantinoma spectrum | `age_group:20-39` | +3 | S-01 | tidak ditemukan | S-01 | tidak ada; ditelusuri: Epidemiology | Usia adamantinoma/OFD tidak disebut. |
+| Osteofibrous dysplasia – adamantinoma spectrum | `bone_class:long_bone` | +3 | S-01 | didukung | S-01 | Part of the appendicular skeleton; Density - Mixed | Tibia pada 80-85% kasus; spektrum OFD-adamantinoma digambarkan khas di tibia tengah. |
+| Osteofibrous dysplasia – adamantinoma spectrum | `density:mixed` | +3 | S-01 | didukung | S-01 | Density - Mixed | Masuk daftar lesi campuran dan digambarkan khas dengan lisis serta sklerosis bervariasi. |
+| Osteofibrous dysplasia – adamantinoma spectrum | `longitudinal:diaphysis` | +3 | S-01 | didukung | S-01 | Longitudinal location; Density - Mixed | Disebut berpredileksi diafisis; lokasi khas tibia tengah. |
+| Osteofibrous dysplasia – adamantinoma spectrum | `transverse:cortical` | +3 | S-01 | didukung | S-01 | Transverse location; Density - Mixed | Tercantum sebagai lesi kortikal dan digambarkan khas berbasis korteks. |
+| Aneurysmal bone cyst | `age_group:10-19_open` | +3 | S-01,S-06 | didukung | S-06 | 5.2.1 Introduction | ABC disebut biasanya timbul pada anak dan dewasa muda; remaja berada di tengah rentang itu. |
+| Aneurysmal bone cyst | `age_group:10-19_unknown` | +3 | S-01,S-06 | didukung | S-06 | 5.2.1 Introduction | ABC disebut biasanya timbul pada anak dan dewasa muda; remaja berada di tengah rentang itu. |
+| Aneurysmal bone cyst | `bone_class:spine_posterior` | +3 | S-20 | tidak ditemukan | S-20 | Results; Discussion | ABC hanya disebut sebagai komponen sekunder pada osteoblastoma spinal; lokasi ABC primer tidak dibahas. |
+| Aneurysmal bone cyst | `cortex:expansion_shell` | +3 | S-01,S-06 | didukung | S-06 | 5.2.1 Introduction; 5.2.5 Imaging; Table 2 | Lesi digambarkan cenderung mengembang dan biasanya tetap terbungkus tulang kortikal. |
+| Aneurysmal bone cyst | `density:lytic` | +3 | S-01,S-06 | didukung | S-06 | 5.2.5 Imaging | Gambaran foto polos ABC diuraikan sebagai lesi litik. |
+| Aneurysmal bone cyst | `longitudinal:metaphysis` | +3 | S-01,S-06 | didukung | S-06 | 5.2.2 Sites of Development | Pada tulang panjang ABC disebut lebih suka timbul di metafisis. |
+| Aneurysmal bone cyst | `matrix:none` | +3 | S-01,S-06 | tidak ditemukan | S-01,S-06 | S-01: tidak ada; ditelusuri: Tumor matrix and mineralization · S-06: tidak ada; ditelusuri: 5.2.5 Imaging | S-01: Matriks pada ABC tidak dibahas. · S-06: Ketiadaan matriks tidak dinyatakan; hanya trabekula sisa (soap bubble) dan rongga berisi darah. |
+| Aneurysmal bone cyst | `periosteal:shell` | +3 | S-01,S-06 | sebagian | S-06 | 5.2.5 Imaging; Table 2 | Reaksi periosteal disebut dapat terjadi dan ada tipe subperiosteal; pola shell tidak dinamai. |
+| Aneurysmal bone cyst | `transverse:eccentric` | +3 | S-01,S-06 | sebagian | S-06 | Table 2 (Capanna) | Klasifikasi memuat tipe sentral dan tipe eksentrik metafisis tanpa frekuensi; eksentrik tidak disebut tersering. · KONFLIK S-01 (Transverse location): ABC dikelompokkan sebagai lesi intrameduler sentral; tidak ada di daftar lesi eksentrik. |
+| Medullary bone infarct | `bone_class:long_bone` | +3 | S-01 | didukung | S-01 | Sclerotic bone lesions | Infark fase lanjut digambarkan khas di dekat metafisis tulang panjang. |
+| Medullary bone infarct | `cortex:intact` | +3 | S-01 | tidak ditemukan | S-01 | tidak ada; ditelusuri: Sclerotic bone lesions | Keadaan korteks pada infark tidak dibahas. |
+| Medullary bone infarct | `longitudinal:metaphysis` | +3 | S-01 | didukung | S-01 | Sclerotic bone lesions | Infark fase lanjut digambarkan khas di dekat metafisis tulang panjang. |
+| Medullary bone infarct | `periosteal:none` | +3 | S-01 | tidak ditemukan | S-01 | tidak ada; ditelusuri: Periosteal reaction; Sclerotic bone lesions | Reaksi periosteal pada infark tidak dibahas. |
+| Medullary bone infarct | `transverse:central` | +3 | S-01 | tidak ditemukan | S-01 | tidak ada; ditelusuri: Transverse location | Posisi transversal infark tidak disebut. |
+| Bone metastasis (carcinoma) | `age_group:40-59` | +3 | S-01 | didukung | S-01 | Epidemiology; Longitudinal location | Metastasis terutama pada dewasa dan lansia; masuk banding lesi usia di atas 40. |
+| Bone metastasis (carcinoma) | `age_group:60+` | +3 | S-01 | didukung | S-01 | Epidemiology; Longitudinal location | Metastasis terutama pada dewasa dan lansia; masuk banding lesi usia di atas 40. |
+| Bone metastasis (carcinoma) | `bone_class:spine_body` | +3 | S-01 | sebagian | S-01 | Flat versus long bones | Metastasis mengikuti sumsum merah (skeleton aksial, pelvis); korpus vertebra tidak disebut tersendiri. |
+| Bone metastasis (carcinoma) | `clinical_flags:known_primary_malignancy` | +3 | S-01 | sebagian | S-01 | Sclerotic bone lesions | Riwayat kanker disebut menaikkan kecurigaan pada lesi sklerotik; bukan pernyataan umum sebagai penanda utama. |
+| Bone metastasis (carcinoma) | `multiplicity:multiple` | +3 | S-01 | didukung | S-01 | Solitary versus multiple lesions | Metastasis tulang poliostotik pada lebih dari 90% kasus. |
+| Bizarre parosteal osteochondromatous proliferation (Nora lesion) | `age_group:20-39` | +3 | S-01,S-25 | sebagian | S-25 | Bizarre parosteal osteochondromatous proliferation (BPOP) | Disebut kebanyakan pada dewasa; kelompok umur 20-39 tidak dinyatakan. |
+| Bizarre parosteal osteochondromatous proliferation (Nora lesion) | `bone_class:small_tubular_hand_foot` | +3 | S-01,S-25 | didukung | S-25 | Bizarre parosteal osteochondromatous proliferation (BPOP) | Sekitar 70% terjadi di tangan dan kaki, lebih jarang di tulang panjang. |
+| Bizarre parosteal osteochondromatous proliferation (Nora lesion) | `transverse:juxtacortical_surface` | +3 | S-01,S-25 | didukung | S-25 | Bizarre parosteal osteochondromatous proliferation (BPOP) | Didefinisikan sebagai proliferasi yang menempel pada permukaan periosteal luar tulang. |
+| Brown tumour of hyperparathyroidism | `density:lytic` | +3 | S-01 | sebagian | S-01 | Density - Lucent/lytic; Solitary versus multiple lesions | [daftar] Tercantum dalam mnemonik lesi lusen dan daftar lesi litik multifokal. |
+| Brown tumour of hyperparathyroidism | `matrix:none` | +3 | S-01 | tidak ditemukan | S-01 | tidak ada; ditelusuri: Tumor matrix and mineralization | Matriks brown tumour tidak dibahas. |
+| Brown tumour of hyperparathyroidism | `multiplicity:multiple` | +3 | S-01 | sebagian | S-01 | Solitary versus multiple lesions | [daftar] Tercantum di antara kondisi jinak yang dapat tampil sebagai lesi litik multifokal. |
+| Chondroblastoma | `age_group:10-19_open` | +3 | S-01,S-06 | didukung | S-06 | 3.3.1 Introduction; 3.3.2 Site of Development | Disebut khas pada usia belasan tahun dengan skeletal belum matur. |
+| Chondroblastoma | `age_group:10-19_unknown` | +3 | S-01,S-06 | didukung | S-06 | 3.3.1 Introduction; 3.3.2 Site of Development | Disebut khas pada usia belasan tahun. |
+| Chondroblastoma | `bone_class:long_bone` | +3 | S-01,S-06 | didukung | S-06 | 3.3.2 Site of Development | Lokasi khas epifisis atau apofisis tulang panjang; humerus proksimal tersering. |
+| Chondroblastoma | `longitudinal:epiphysis_apophysis` | +3 | S-01,S-06 | didukung | S-06 | 3.3.2 Site of Development; 3.3.5 Imaging | Lokasi khas epifisis atau apofisis tulang panjang. |
+| Chondroblastoma | `margin_lodwick:IA` | +3 | S-01,S-06 | didukung | S-06 | 3.3.5 Imaging | Gambaran radiografik diuraikan berbatas tegas dengan tepi sklerotik. |
+| Chondromyxoid fibroma | `age_group:10-19_open` | +3 | S-01,S-06 | tidak ditemukan | S-01,S-06 | S-01: tidak ada; ditelusuri: Epidemiology · S-06: 3.3.6 Differential Diagnosis (satu-satunya penyebutan CMF) | S-01: Usia CMF tidak disebut. · S-06: S-06 tidak punya bagian CMF; hanya disebut sebagai banding chondroblastoma. |
+| Chondromyxoid fibroma | `age_group:10-19_unknown` | +3 | S-01,S-06 | tidak ditemukan | S-01,S-06 | S-01: tidak ada; ditelusuri: Epidemiology · S-06: 3.3.6 Differential Diagnosis (satu-satunya penyebutan CMF) | S-01: Usia CMF tidak disebut. · S-06: S-06 tidak punya bagian CMF; hanya disebut sebagai banding chondroblastoma. |
+| Chondromyxoid fibroma | `bone_class:long_bone` | +3 | S-01,S-06 | sebagian | S-01 | Longitudinal location | Hanya tersirat dari pembahasan lokasi dalam tulang panjang; distribusi tulang CMF tidak disebut. |
+| Chondromyxoid fibroma | `density:lytic` | +3 | S-01,S-06 | sebagian | S-01 | Density - Lucent/lytic | [daftar] CMF tercantum dalam mnemonik lesi lusen berbatas tegas. |
+| Chondromyxoid fibroma | `longitudinal:metadiaphysis` | +3 | S-01,S-06 | didukung | S-01 | Longitudinal location | CMF dan NOF disebut cenderung terletak dekat perbatasan metadiafisis. |
+| Chondromyxoid fibroma | `margin_lodwick:IA` | +3 | S-01,S-06 | sebagian | S-01 | Lodwick-Madewell grading - Type IA | [daftar] Tercantum di antara lesi yang dapat bertepi IA; bukan contoh klasiknya. |
+| Chondromyxoid fibroma | `transverse:eccentric` | +3 | S-01,S-06 | sebagian | S-01 | Transverse location | [daftar] CMF tercantum di antara empat lesi eksentrik, tanpa uraian. |
+| Central chondrosarcoma (incl. atypical cartilaginous tumour / grade 1) | `age_group:40-59` | +3 | S-01,S-05 | didukung | S-01 | Epidemiology | Insidens kondrosarkoma disebut lebih tinggi pada usia 30-60 tahun. |
+| Central chondrosarcoma (incl. atypical cartilaginous tumour / grade 1) | `bone_class:flat_bone` | +3 | S-01,S-18 | sebagian | S-18 | Atypical Cartilaginous Tumor; Chondrosarcoma (Grade 1, Grade 2, Grade 3); Conclusion | Pelvis dan skapula disebut lokasi aksial yang lebih mungkin ganas, tetapi semua bagian skeleton dapat terkena; lokasi tersering tidak dinyatakan. |
+| Central chondrosarcoma (incl. atypical cartilaginous tumour / grade 1) | `margin_lodwick:IC` | +3 | S-01,S-18 | sebagian | S-18 | Chondrosarcoma (Grade 1, Grade 2, Grade 3) | Tepi agresif didukung, tetapi yang dinamai Lodwick II dan III, bukan IC. |
+| Central chondrosarcoma (incl. atypical cartilaginous tumour / grade 1) | `matrix:chondroid` | +3 | S-01,S-18 | didukung | S-18 | Chondrosarcoma (Grade 1, Grade 2, Grade 3); Introduction | Digambarkan sebagai lesi litik berkalsifikasi rings-and-arcs; catatan: tampak pada radiograf hanya pada sekitar 65% kasus. |
+| Chordoma | `age_group:40-59` | +3 | S-01 | tidak ditemukan | S-01 | General considerations (satu penyebutan, soal derajat histologis) | Kordoma tidak dibahas: tanpa usia, lokasi, atau gambaran radiografik. |
+| Chordoma | `age_group:60+` | +3 | S-01 | tidak ditemukan | S-01 | General considerations (satu penyebutan, soal derajat histologis) | Kordoma tidak dibahas: tanpa usia, lokasi, atau gambaran radiografik. |
+| Chordoma | `bone_class:sacrum` | +3 | S-01 | tidak ditemukan | S-01 | General considerations (satu penyebutan, soal derajat histologis) | Kordoma tidak dibahas: tanpa usia, lokasi, atau gambaran radiografik. |
+| Chordoma | `density:lytic` | +3 | S-01 | tidak ditemukan | S-01 | General considerations (satu penyebutan, soal derajat histologis) | Kordoma tidak dibahas: tanpa usia, lokasi, atau gambaran radiografik. |
+| Chordoma | `soft_tissue_mass:present` | +3 | S-01 | tidak ditemukan | S-01 | General considerations (satu penyebutan, soal derajat histologis) | Kordoma tidak dibahas: tanpa usia, lokasi, atau gambaran radiografik. |
+| Clear cell chondrosarcoma | `age_group:40-59` | +3 | S-01,S-18 | didukung | S-18 | Clear Cell Chondrosarcoma | Disebut terutama muncul pada dekade kelima. |
+| Clear cell chondrosarcoma | `bone_class:long_bone` | +3 | S-01,S-18 | didukung | S-18 | Clear Cell Chondrosarcoma; Fig. 20; Fig. 21 | Manifestasi khas di femur proksimal; contoh lain di humerus. |
+| Clear cell chondrosarcoma | `longitudinal:epiphysis_apophysis` | +3 | S-01,S-18 | didukung | S-18 | Clear Cell Chondrosarcoma | Manifestasi radiografik khas disebut lesi osteolitik epifisis yang tumbuh lambat. |
+| Desmoplastic fibroma of bone | `age_group:20-39` | +3 | S-01 | tidak ditemukan | S-01 | General considerations (satu penyebutan, contoh tumor intermediat) | Desmoplastic fibroma tidak dibahas: tanpa usia, lokasi, atau gambaran radiografik. |
+| Desmoplastic fibroma of bone | `density:lytic` | +3 | S-01 | tidak ditemukan | S-01 | General considerations (satu penyebutan, contoh tumor intermediat) | Desmoplastic fibroma tidak dibahas: tanpa usia, lokasi, atau gambaran radiografik. |
+| Desmoplastic fibroma of bone | `matrix:none` | +3 | S-01 | tidak ditemukan | S-01 | General considerations (satu penyebutan, contoh tumor intermediat) | Desmoplastic fibroma tidak dibahas: tanpa usia, lokasi, atau gambaran radiografik. |
+| Enchondroma | `bone_class:small_tubular_hand_foot` | +3 | S-01,S-06 | didukung | S-06 | 3.2.2 Sites of Development | Lokasi khas falang proksimal; falang dan metakarpal disebut paling sering terkena. |
+| Enchondroma | `matrix:chondroid` | +3 | S-01,S-06 | didukung | S-06 | 3.2.5 Imaging; 3.2.6 Differential Diagnosis | Kalsifikasi arcs-and-rings disebut pola klasik dan khas enkondroma. |
+| Enostosis (bone island) | `cortex:intact` | +3 | S-01 | tidak ditemukan | S-01 | tidak ada; ditelusuri: Sclerotic bone lesions | Keadaan korteks pada enostosis tidak dibahas. |
+| Enostosis (bone island) | `density:sclerotic` | +3 | S-01 | didukung | S-01 | Sclerotic bone lesions; Density - Sclerotic/blastic | Digambarkan sebagai lesi sklerotik insidental tersering dengan sklerosis merata. |
+| Enostosis (bone island) | `periosteal:none` | +3 | S-01 | tidak ditemukan | S-01 | tidak ada; ditelusuri: Sclerotic bone lesions | Reaksi periosteal pada enostosis tidak dibahas. |
+| Ewing sarcoma | `age_group:0-9` | +3 | S-01,S-04 | didukung | S-01 | Epidemiology | Ewing disebut lebih sering pada anak di bawah 15 tahun. |
+| Ewing sarcoma | `age_group:10-19_open` | +3 | S-01,S-04 | didukung | S-01 | Epidemiology; Flat versus long bones | Lebih sering di bawah 15 tahun dan digambarkan pada pasien imatur skeletal. |
+| Ewing sarcoma | `age_group:10-19_unknown` | +3 | S-01,S-04 | didukung | S-01 | Epidemiology; Flat versus long bones | Lebih sering di bawah 15 tahun dan digambarkan pada pasien imatur skeletal. |
+| Ewing sarcoma | `longitudinal:diaphysis` | +3 | S-01,S-04 | didukung | S-01 | Flat versus long bones; Longitudinal location | Disebut khas mengenai diafisis tulang panjang pada pasien imatur. · KONFLIK S-04 (3.2 Malignant Bone Tumors; Table 5; 4.2): Pada 28 kasus, metafisis (36%) lebih sering daripada diafisis (21%); penulis menyebutnya berlawanan dengan aturan umum. |
+| Ewing sarcoma | `margin_lodwick:II` | +3 | S-01,S-04 | sebagian | S-01 | Lodwick-Madewell grading - Type II | [daftar] Ewing salah satu contoh lesi ganas bertipe II; tidak disebut pola khasnya. |
+| Ewing sarcoma | `margin_lodwick:III` | +3 | S-01,S-04 | sebagian | S-01 | Lodwick-Madewell grading - Type III; Cortical involvement | [daftar] Banding tipe III sama dengan tipe II; pertumbuhan permeatif disebut dapat terjadi. |
+| Ewing sarcoma | `periosteal:lamellated` | +3 | S-01,S-04 | tidak ditemukan | S-01,S-04 | S-01: Periosteal reaction - aggressive; Fig. 9 · S-04: tidak ada (seri usia dan lokasi, tanpa gambaran radiografik) | S-01: [umum] Pola berlapis dikaitkan dengan sarkoma secara umum; Ewing hanya disebut khas untuk spikula hair-on-end. · S-04: Tidak ada uraian reaksi periosteal; hanya data usia dan lokasi. |
+| Ewing sarcoma | `soft_tissue_mass:present` | +3 | S-01,S-04 | sebagian | S-01 | Cortical involvement and extra-osseous component | Massa jaringan lunak besar disebut dapat terjadi tanpa destruksi korteks; tidak disebut ciri khas. |
+| Fibrous dysplasia | `age_group:10-19_closed` | +3 | S-01,S-22 | sebagian | S-22 | Monostotic and polyostotic fibrous dysplasia - Imaging characteristics; Fractures | Penyakit masa kanak-kanak: lesi umumnya nyata sebelum 10 tahun, hampir tak ada lesi baru setelah 15; puncak 10-19 tidak dinyatakan. |
+| Fibrous dysplasia | `age_group:10-19_open` | +3 | S-01,S-22 | sebagian | S-22 | Monostotic and polyostotic fibrous dysplasia - Imaging characteristics; Fractures | Penyakit masa kanak-kanak: lesi umumnya nyata sebelum 10 tahun, hampir tak ada lesi baru setelah 15; puncak 10-19 tidak dinyatakan. |
+| Fibrous dysplasia | `age_group:10-19_unknown` | +3 | S-01,S-22 | sebagian | S-22 | Monostotic and polyostotic fibrous dysplasia - Imaging characteristics; Fractures | Penyakit masa kanak-kanak: lesi umumnya nyata sebelum 10 tahun, hampir tak ada lesi baru setelah 15; puncak 10-19 tidak dinyatakan. |
+| Fibrous dysplasia | `bone_class:craniofacial` | +3 | S-01,S-22 | didukung | S-22 | Craniofacial FD; Conclusions | Tulang kraniofasial disebut lokasi FD yang paling sering. |
+| Fibrous dysplasia | `density:mixed` | +3 | S-01,S-22 | sebagian | S-22 | Radiographs; Fig. 4 | Campuran adalah satu dari tiga pola (kistik, sklerotik, campuran); lesi tulang panjang disebut khas lusen, kraniofasial padat. |
+| Fibrous dysplasia | `margin_lodwick:IA` | +3 | S-01,S-22 | didukung | S-22 | Radiographs; Fig. 5 | Lesi klasik skeleton apendikular: lusen berselubung tulang reaktif sklerotik (rind sign), walau tepi dapat tidak utuh. |
+| Fibrous dysplasia | `matrix:ground_glass` | +3 | S-01,S-22 | didukung | S-22 | Radiographs; Fig. 4; Age-related changes | Matriks ground-glass disebut gambaran khas, kecuali pada usia sangat muda dan lesi tua yang menjadi sklerotik. |
+| Fibrous dysplasia | `periosteal:none` | +3 | S-01,S-22 | didukung | S-22 | Radiographs | Reaksi periosteal disebut biasanya tidak ada kecuali bila ada fraktur patologis. |
+| Fibrous dysplasia | `transverse:central` | +3 | S-01,S-22 | sebagian | S-01 | Transverse location | [daftar] FD tercantum di antara lesi intrameduler sentral. · KONFLIK S-22 (Radiographs): Kalimat sumber menyebut lesi khas tidak terletak sentral dalam medula (kemungkinan salah ketik; perlu dibaca pemilik). |
+| Giant cell tumour of bone | `age_group:20-39` | +3 | S-01,S-16 | didukung | S-16 | 1 Introduction | GCTB disebut khas timbul pada usia 20 sampai 40 tahun. |
+| Giant cell tumour of bone | `bone_class:long_bone` | +3 | S-01,S-16 | didukung | S-16 | 1 Introduction | Lokasi utama meta-epifisis tulang tubular panjang: femur distal, tibia proksimal, radius distal. |
+| Giant cell tumour of bone | `density:lytic` | +3 | S-01,S-16 | didukung | S-16 | 3.1 Imaging Features; Fig. 1 | Gambaran radiografik khas disebut lesi osteolitik murni dengan penipisan korteks. |
+| Giant cell tumour of bone | `longitudinal:epiphysis_apophysis` | +3 | S-01,S-16 | didukung | S-16 | 1 Introduction | Metafisis dan epifisis tulang panjang disebut lokasi awal utama. |
+| Giant cell tumour of bone | `margin_lodwick:IB` | +3 | S-01,S-16 | sebagian | S-16 | 3.2 Preoperative Imaging Correlation with Staging and Prognosis | Derajat Campanacci 2 setara tepi tegas tanpa sklerosis, tetapi frekuensi tiap derajat tidak disebut. |
+| Giant cell tumour of bone | `transverse:eccentric` | +3 | S-01,S-16 | didukung | S-01 | Epidemiology; Transverse location | Kecenderungan ke regio eksentrik dinyatakan; juga tercantum di daftar lesi eksentrik. |
+| Intraosseous ganglion / subchondral cyst (geode) | `density:lytic` | +3 | S-01 | sebagian | S-01 | Density - Lucent/lytic | [daftar] Geode tercantum dalam mnemonik lesi lusen berbatas tegas. |
+| Intraosseous ganglion / subchondral cyst (geode) | `longitudinal:epiphysis_apophysis` | +3 | S-01 | sebagian | S-01 | Longitudinal location | [daftar] Geode tercantum di daftar lesi epifisis, tanpa uraian. |
+| Intraosseous ganglion / subchondral cyst (geode) | `margin_lodwick:IA` | +3 | S-01 | sebagian | S-01 | Density - Lucent/lytic; Part of the appendicular skeleton | [daftar] Hanya disebut lesi lusen berbatas tegas; tepi sklerotik (IA) tidak dinyatakan. |
+| Intraosseous ganglion / subchondral cyst (geode) | `matrix:none` | +3 | S-01 | tidak ditemukan | S-01 | tidak ada; ditelusuri: Tumor matrix and mineralization | Matriks geode tidak dibahas. |
+| Intraosseous ganglion / subchondral cyst (geode) | `periosteal:none` | +3 | S-01 | tidak ditemukan | S-01 | tidak ada; ditelusuri: Periosteal reaction | Reaksi periosteal pada geode tidak dibahas. |
+| Intraosseous lipoma | `age_group:40-59` | +3 | S-01 | tidak ditemukan | S-01 | tidak ada; ditelusuri: Epidemiology | Usia lipoma intraoseus tidak disebut. |
+| Intraosseous lipoma | `bone_class:calcaneus` | +3 | S-01 | sebagian | S-01 | Part of the appendicular skeleton | [daftar] Lipoma satu dari empat banding klasik lesi lusen kalkaneus; predileksi lipoma sendiri tidak dinyatakan. |
+| Intraosseous lipoma | `margin_lodwick:IA` | +3 | S-01 | sebagian | S-01 | Lodwick-Madewell grading - Type IA | [daftar] Tercantum di antara lesi yang dapat bertepi IA; bukan contoh klasiknya. |
+| Intraosseous lipoma | `periosteal:none` | +3 | S-01 | tidak ditemukan | S-01 | tidak ada; ditelusuri: Periosteal reaction | Reaksi periosteal pada lipoma intraoseus tidak dibahas. |
+| Langerhans cell histiocytosis (eosinophilic granuloma) | `age_group:0-9` | +3 | S-01,S-23 | didukung | S-23 | Introduction; Conclusion | LCH disebut terutama mengenai anak; insidens dilaporkan untuk usia di bawah 14 tahun. |
+| Langerhans cell histiocytosis (eosinophilic granuloma) | `bone_class:craniofacial` | +3 | S-01,S-23 | didukung | S-23 | Imaging techniques in assessment of skeletal involvement; Skull - Calvarium | Lebih dari separuh lesi di tulang pipih termasuk tengkorak; lesi litik soliter kalvaria disebut temuan khas. |
+| Langerhans cell histiocytosis (eosinophilic granuloma) | `density:lytic` | +3 | S-01,S-23 | didukung | S-23 | Imaging features of skeletal involvement | Keterlibatan tulang biasanya berupa satu atau beberapa lesi osteolitik bulat atau lonjong. |
+| Langerhans cell histiocytosis (eosinophilic granuloma) | `longitudinal:diaphysis` | +3 | S-01,S-23 | didukung | S-01 | Longitudinal location | Eosinophilic granuloma disebut berpredileksi diafisis tulang panjang. |
+| Langerhans cell histiocytosis (eosinophilic granuloma) | `matrix:none` | +3 | S-01,S-23 | sebagian | S-23 | Skull - Calvarium; Imaging features of skeletal involvement | Lesi digambarkan litik punched-out; ketiadaan matriks hanya tersirat, dan fragmen tulang intralesi disebut. |
+| Non-ossifying fibroma / fibrous cortical defect | `age_group:0-9` | +3 | S-01,S-06 | didukung | S-06 | 4.2.2 Clinical Features | Mengenai anak dan remaja dengan prevalensi sangat tinggi pada anak. |
+| Non-ossifying fibroma / fibrous cortical defect | `age_group:10-19_open` | +3 | S-01,S-06 | didukung | S-06 | 4.2.2 Clinical Features; 4.1.6 Differential Diagnosis | Mengenai anak dan remaja; mengecil setelah skeletal matur. |
+| Non-ossifying fibroma / fibrous cortical defect | `age_group:10-19_unknown` | +3 | S-01,S-06 | didukung | S-06 | 4.2.2 Clinical Features | Mengenai anak dan remaja dengan prevalensi sangat tinggi. |
+| Non-ossifying fibroma / fibrous cortical defect | `bone_class:long_bone` | +3 | S-01,S-06 | didukung | S-06 | 4.2.2 Clinical Features; 4.2.5 Imaging | Disebut paling sering di tulang panjang, terutama femur distal dan tibia distal. |
+| Non-ossifying fibroma / fibrous cortical defect | `longitudinal:metadiaphysis` | +3 | S-01,S-06 | didukung | S-01 | Longitudinal location | CMF dan NOF disebut cenderung terletak dekat perbatasan metadiafisis. |
+| Non-ossifying fibroma / fibrous cortical defect | `longitudinal:metaphysis` | +3 | S-01,S-06 | didukung | S-06 | 4.2.2 Clinical Features; 4.2.5 Imaging | Lokasi diuraikan di metafisis tulang panjang. |
+| Non-ossifying fibroma / fibrous cortical defect | `margin_lodwick:IA` | +3 | S-01,S-06 | didukung | S-01 | Lodwick-Madewell grading - Type IA | Fibroxanthoma (FCD/NOF) disebut contoh klasik tipe IA. |
+| Non-ossifying fibroma / fibrous cortical defect | `transverse:cortical` | +3 | S-01,S-06 | didukung | S-06 | 4.1.6 Differential Diagnosis; 4.2.6 Differential Diagnosis | Disebut biasanya intrakortikal; defek korteks yang meluas ke medula. |
+| Non-ossifying fibroma / fibrous cortical defect | `transverse:eccentric` | +3 | S-01,S-06 | didukung | S-06 | 4.2.5 Imaging; 4.2.6 Differential Diagnosis | Diuraikan sebagai lesi eksentrik, bahkan disebut selalu eksentrik. |
+| Osteoblastoma | `age_group:10-19_closed` | +3 | S-01,S-06 | sebagian | S-06 | 2.2.1 Introduction | Disebut terutama pada dewasa muda dengan rerata usia 20 tahun, di batas kelompok 10-19. |
+| Osteoblastoma | `age_group:10-19_open` | +3 | S-01,S-06 | sebagian | S-06 | 2.2.1 Introduction | Disebut terutama pada dewasa muda dengan rerata usia 20 tahun, di batas kelompok 10-19. |
+| Osteoblastoma | `age_group:10-19_unknown` | +3 | S-01,S-06 | sebagian | S-06 | 2.2.1 Introduction | Disebut terutama pada dewasa muda dengan rerata usia 20 tahun, di batas kelompok 10-19. |
+| Osteoblastoma | `bone_class:spine_posterior` | +3 | S-20 | sebagian | S-20 | Results; Table 1; Discussion | Dalam seri khusus tulang belakang, 86% di elemen posterior; porsi tulang belakang di antara semua lokasi tidak ada. |
+| Osteochondroma | `age_group:10-19_open` | +3 | S-01,S-04 | sebagian | S-04 | 3.1 Benign Bone Tumors; Fig. 5 | Puncak pada 14 dan 17 tahun, tetapi dalam kohort di bawah 18 tahun; dewasa tidak tersampel. |
+| Osteochondroma | `age_group:10-19_unknown` | +3 | S-01,S-04 | sebagian | S-04 | 3.1 Benign Bone Tumors; Fig. 5 | Puncak pada 14 dan 17 tahun, tetapi dalam kohort di bawah 18 tahun; dewasa tidak tersampel. |
+| Osteochondroma | `bone_class:long_bone` | +3 | S-01,S-04 | didukung | S-04 | 3.1 Benign Bone Tumors; Table 2; Table 3 | Sekitar 90% dari 137 kasus berada di tulang panjang; femur hampir separuhnya. |
+| Osteochondroma | `longitudinal:metaphysis` | +3 | S-01,S-04 | didukung | S-04 | 3.1 Benign Bone Tumors; Table 3 | Sekitar 90% osteokondroma berada di metafisis tulang panjang. |
+| Osteochondroma | `transverse:juxtacortical_continuous` | +3 | S-01,S-26 | didukung | S-26 | Introduction; Imaging features | Kontinuitas korteks dan medula dengan tulang asal disebut ciri kunci dan patognomonik osteokondroma. |
+| Osteochondroma | `transverse:juxtacortical_surface` | +3 | S-01,S-04 | sebagian | S-01 | Transverse location | [daftar] Tercantum di antara lesi jukstakortikal (permukaan). |
+| Osteoid osteoma | `age_group:10-19_closed` | +3 | S-01,S-06 | didukung | S-06 | 2.1.1 Introduction | Presentasi khas pada dekade kedua. |
+| Osteoid osteoma | `age_group:10-19_open` | +3 | S-01,S-06 | didukung | S-06 | 2.1.1 Introduction | Presentasi khas pada dekade kedua. |
+| Osteoid osteoma | `age_group:10-19_unknown` | +3 | S-01,S-06 | didukung | S-06 | 2.1.1 Introduction | Presentasi khas pada dekade kedua. |
+| Osteoid osteoma | `bone_class:long_bone` | +3 | S-01,S-06 | didukung | S-06 | 2.1.2 Sites of Development | Disebut terutama mengenai tulang panjang ekstremitas bawah; tulang belakang juga sering. |
+| Osteoid osteoma | `clinical_flags:night_pain_nsaid_relief` | +3 | S-01,S-06 | didukung | S-06 | 2.1.4 Clinical Features | Nyeri yang memburuk malam hari dan cepat reda dengan OAINS disebut ciri utama. |
+| Osteoid osteoma | `density:sclerotic` | +3 | S-01,S-06 | didukung | S-06 | 2.1.5 Imaging | Gambaran foto polos diuraikan sebagai nidus yang dikelilingi jaringan sklerotik. |
+| Osteoid osteoma | `longitudinal:diaphysis` | +3 | S-01,S-06 | didukung | S-01 | Longitudinal location | Osteoid osteoma disebut berpredileksi diafisis tulang panjang. |
+| Osteoid osteoma | `periosteal:solid_thin` | +3 | S-01,S-06 | didukung | S-01 | Periosteal reaction; Sclerotic bone lesions; Fig. 9 | Reaksi periosteal solid teratur digambarkan sebagai presentasi osteoid osteoma dan jadi contoh gambar. |
+| Osteoid osteoma | `size_cm:<2` | +3 | S-01,S-06 | didukung | S-06 | 2.1.1 Introduction | Ukuran umumnya di bawah 1,5 cm. |
+| Osteoid osteoma | `transverse:cortical` | +3 | S-01,S-06 | didukung | S-01 | Sclerotic bone lesions; Transverse location | Disebut sering berbasis korteks dan tercantum sebagai lesi kortikal. |
+| Osteomyelitis (incl. Brodie abscess) | `age_group:0-9` | +3 | S-01 | tidak ditemukan | S-01 | tidak ada; ditelusuri: General considerations; Solitary versus multiple lesions | Usia osteomielitis tidak disebut; hanya multifokalitas pada anak. |
+| Osteomyelitis (incl. Brodie abscess) | `clinical_flags:fever_or_infection_signs` | +3 | S-01 | tidak ditemukan | S-01 | General considerations | Hanya definisi sebagai radang piogenik dan jalur hematogen; tanda klinis infeksi tidak disebut. |
+| Osteomyelitis (incl. Brodie abscess) | `longitudinal:metaphysis` | +3 | S-01 | tidak ditemukan | S-01 | Longitudinal location | Infeksi (abses Brodie) hanya tercantum di daftar lesi epifisis; metafisis tidak disebut untuk infeksi. |
+| Osteomyelitis (incl. Brodie abscess) | `margin_lodwick:IA` | +3 | S-01 | sebagian | S-01 | Lodwick-Madewell grading - Type IA | [daftar] Abses Brodie tercantum di antara lesi yang dapat bertepi IA. |
+| Conventional (high-grade central) osteosarcoma | `age_group:10-19_closed` | +3 | S-01,S-05 | didukung | S-05 | 3.1 Incidence of malignant bone cancer; 4 Discussion | Insidens memuncak di bawah 20 tahun; puncak awal disebut pada usia 10-19. Status fisis tidak dibahas. |
+| Conventional (high-grade central) osteosarcoma | `age_group:10-19_open` | +3 | S-01,S-05 | didukung | S-05 | 3.1 Incidence of malignant bone cancer; 4 Discussion | Insidens memuncak di bawah 20 tahun; puncak awal disebut pada usia 10-19. Status fisis tidak dibahas. |
+| Conventional (high-grade central) osteosarcoma | `age_group:10-19_unknown` | +3 | S-01,S-05 | didukung | S-05 | 3.1 Incidence of malignant bone cancer; 4 Discussion | Insidens memuncak di bawah 20 tahun; puncak awal disebut pada usia 10-19. |
+| Conventional (high-grade central) osteosarcoma | `longitudinal:metaphysis` | +3 | S-01,S-15 | didukung | S-15 | 3.1.1 Conventional Osteosarcoma; 1 Introduction | Sekitar 90% kasus berasal dari metafisis tulang panjang. |
+| Conventional (high-grade central) osteosarcoma | `matrix:osteoid` | +3 | S-01,S-15 | didukung | S-15 | 3.1.1 Conventional Osteosarcoma | Pembentukan tulang imatur seperti awan dan matriks osteoid padat disebut ciri penentu. |
+| Conventional (high-grade central) osteosarcoma | `periosteal:codman` | +3 | S-01,S-15 | didukung | S-15 | 3.1.1 Conventional Osteosarcoma; 2 Imaging Assessment | Segitiga Codman disebut sering dijumpai. |
+| Conventional (high-grade central) osteosarcoma | `periosteal:spiculated` | +3 | S-01,S-15 | didukung | S-15 | 2 Imaging Assessment; 3.1.1 Conventional Osteosarcoma | Pola sunburst/hair-on-end disebut khas dan sering menyertai osteosarkoma, terutama bentuk osteoblastik. |
+| Parosteal osteosarcoma | `age_group:20-39` | +3 | S-01,S-15 | didukung | S-15 | 3.2.1 Parosteal Osteosarcoma | Usia khas disebut 30-an dan 40-an; kelompok 20-39 mencakup separuh awal rentang itu. |
+| Parosteal osteosarcoma | `density:sclerotic` | +3 | S-01,S-15 | didukung | S-15 | 3.2.1 Parosteal Osteosarcoma; Fig. 22 | Ciri paling khas disebut massa eksofitik berlobus dengan osifikasi padat di bagian tengah. |
+| Parosteal osteosarcoma | `longitudinal:metaphysis` | +3 | S-01,S-15 | didukung | S-15 | 3.2.1 Parosteal Osteosarcoma | Sekitar 90% kasus di regio metafisis, terutama femur distal posterior. |
+| Parosteal osteosarcoma | `matrix:osteoid` | +3 | S-01,S-15 | didukung | S-15 | 3.2.1 Parosteal Osteosarcoma; Fig. 22; Table 4 | Osifikasi padat digambarkan khas; catatan: Table 4 justru menulis matriks terutama kartilago. |
+| Parosteal osteosarcoma | `transverse:juxtacortical_surface` | +3 | S-01,S-15 | didukung | S-15 | 3.2 Juxtacortical (Surface) Osteosarcomas; 3.2.1 | Didefinisikan tumbuh di permukaan tulang, tanpa kontinuitas dengan kanal medula. |
+| Periosteal osteosarcoma | `age_group:10-19_closed` | +3 | S-01,S-15 | didukung | S-15 | 3.2.2 Periosteal Osteosarcoma | Usia khas disebut dekade kedua atau ketiga; status fisis tidak dibahas. |
+| Periosteal osteosarcoma | `age_group:10-19_open` | +3 | S-01,S-15 | didukung | S-15 | 3.2.2 Periosteal Osteosarcoma | Usia khas disebut dekade kedua atau ketiga; status fisis tidak dibahas. |
+| Periosteal osteosarcoma | `age_group:10-19_unknown` | +3 | S-01,S-15 | didukung | S-15 | 3.2.2 Periosteal Osteosarcoma | Usia khas disebut dekade kedua atau ketiga. |
+| Periosteal osteosarcoma | `bone_class:long_bone` | +3 | S-01,S-15 | didukung | S-15 | 3.2.2 Periosteal Osteosarcoma | Tibia dan femur mencakup 85-95% kasus. |
+| Periosteal osteosarcoma | `longitudinal:diaphysis` | +3 | S-01,S-15 | didukung | S-15 | 3.2.2 Periosteal Osteosarcoma | Disebut paling sering di diafisis atau metadiafisis tulang panjang. |
+| Periosteal osteosarcoma | `periosteal:spiculated` | +3 | S-01,S-15 | tidak ditemukan | S-01,S-15 | S-01: Periosteal reaction - aggressive · S-15: tidak ada; ditelusuri: 3.2.2 Periosteal Osteosarcoma | S-01: [umum] Spikula hanya disinggung untuk osteosarkoma umum; subtipe periosteal tidak dibahas. · S-15: Bagian subtipe ini tidak memuat gambaran radiografik reaksi periosteal. |
+| Periosteal osteosarcoma | `transverse:juxtacortical_surface` | +3 | S-01,S-15 | didukung | S-15 | 3.2 Juxtacortical (Surface) Osteosarcomas; 3.2.2 | Digolongkan osteosarkoma permukaan; berasal dari periosteum dan tumbuh sepanjang permukaan korteks. |
+| Telangiectatic osteosarcoma | `age_group:10-19_closed` | +3 | S-01,S-15 | didukung | S-15 | 3.1.3 Teleangectatic Osteosarcoma | Disebut terutama mengenai dekade kedua; status fisis tidak dibahas. |
+| Telangiectatic osteosarcoma | `age_group:10-19_open` | +3 | S-01,S-15 | didukung | S-15 | 3.1.3 Teleangectatic Osteosarcoma | Disebut terutama mengenai dekade kedua; status fisis tidak dibahas. |
+| Telangiectatic osteosarcoma | `age_group:10-19_unknown` | +3 | S-01,S-15 | didukung | S-15 | 3.1.3 Teleangectatic Osteosarcoma | Disebut terutama mengenai dekade kedua. |
+| Telangiectatic osteosarcoma | `bone_class:long_bone` | +3 | S-01,S-15 | didukung | S-15 | 3.1.3 Teleangectatic Osteosarcoma | Lokasi khas metafisis tulang panjang, terutama femur distal dan tibia proksimal. |
+| Telangiectatic osteosarcoma | `density:lytic` | +3 | S-01,S-15 | didukung | S-15 | 3.1.3 Teleangectatic Osteosarcoma | Osteolisis luas multilokuler disebut tanda radiografik utamanya. |
+| Telangiectatic osteosarcoma | `longitudinal:metaphysis` | +3 | S-01,S-15 | didukung | S-15 | 3.1.3 Teleangectatic Osteosarcoma | Lokasi khas metafisis tulang panjang, sering meluas ke epifisis. |
+| Paget disease of bone | `age_group:60+` | +3 | S-01 | sebagian | S-01 | Longitudinal location | Paget dimasukkan ke banding usia di atas 40; puncak pada usia 60+ tidak dinyatakan. |
+| Paget disease of bone | `bone_class:flat_bone` | +3 | S-01 | sebagian | S-01 | Density - Mixed | Temuan pelvis diuraikan; frekuensi keterlibatan tulang pipih tidak disebut. |
+| Paget disease of bone | `bone_class:spine_body` | +3 | S-01 | tidak ditemukan | S-01 | tidak ada (ulasan skeleton apendikular) | Keterlibatan vertebra tidak dibahas. |
+| Paget disease of bone | `density:mixed` | +3 | S-01 | sebagian | S-01 | Density - Mixed | Fase campuran diuraikan rinci, tetapi satu dari tiga fase; tidak disebut presentasi tersering. |
+| Periosteal (juxtacortical) chondroma | `age_group:20-39` | +3 | S-01,S-25 | didukung | S-25 | Juxtacortical/Periosteal chondroma | Disebut lebih sering pada dewasa muda. |
+| Periosteal (juxtacortical) chondroma | `bone_class:long_bone` | +3 | S-01,S-25 | sebagian | S-25 | Juxtacortical/Periosteal chondroma | Ujung metafisis tulang panjang disebut sering terkena, setara dengan tulang kecil tangan dan kaki. |
+| Periosteal (juxtacortical) chondroma | `cortex:saucerization` | +3 | S-01,S-25 | didukung | S-25 | Juxtacortical/Periosteal chondroma; Fig. 6 | Permukaan korteks yang ter-scalloping, dengan atau tanpa sklerosis, disebut ciri radiologisnya. |
+| Periosteal (juxtacortical) chondroma | `transverse:juxtacortical_surface` | +3 | S-01,S-25 | didukung | S-25 | Juxtacortical/Periosteal chondroma | Didefinisikan berasal dari periosteum dan terletak superfisial terhadap korteks. |
+| Plasma cell myeloma / solitary plasmacytoma of bone | `age_group:60+` | +3 | S-01,S-24 | didukung | S-01 | Epidemiology; Longitudinal location | Mieloma disebut terutama pada dewasa dan lansia; masuk banding usia di atas 40. |
+| Plasma cell myeloma / solitary plasmacytoma of bone | `bone_class:flat_bone` | +3 | S-01,S-24 | didukung | S-24 | Multiple myeloma | Pelvis dan iga termasuk lokasi predileksi yang disebut, bersama skeleton aksial lain. |
+| Plasma cell myeloma / solitary plasmacytoma of bone | `bone_class:spine_body` | +3 | S-01,S-24 | didukung | S-24 | Multiple myeloma; Fig. 8 | Tulang belakang disebut lokasi predileksi; lesi fokal ditunjukkan pada korpus vertebra. |
+| Plasma cell myeloma / solitary plasmacytoma of bone | `density:lytic` | +3 | S-01,S-24 | didukung | S-24 | Introduction | Kelainan tulang mieloma disebut sebagai lesi litik, yang menjadi bagian kriteria diagnosis. |
+| Plasma cell myeloma / solitary plasmacytoma of bone | `margin_lodwick:IB` | +3 | S-01,S-24 | sebagian | S-01 | Lodwick-Madewell grading - Type IB/IC | [daftar] Mieloma dicontohkan dapat bertepi IB, dan juga tercantum pada IC. |
+| Plasma cell myeloma / solitary plasmacytoma of bone | `matrix:none` | +3 | S-01,S-24 | tidak ditemukan | S-01,S-24 | S-01: tidak ada; ditelusuri: Tumor matrix and mineralization · S-24: tidak ada (ulasan MRI, tanpa gambaran matriks) | S-01: Matriks pada mieloma tidak dibahas. · S-24: Matriks lesi tidak dibahas. |
+| Plasma cell myeloma / solitary plasmacytoma of bone | `multiplicity:multiple` | +3 | S-01,S-24 | didukung | S-01 | Solitary versus multiple lesions | Keterlibatan multifokal pada lebih dari 90%; lesi soliter disebut plasmasitoma. |
+| Primary lymphoma of bone | `age_group:60+` | +3 | S-01 | didukung | S-01 | Epidemiology; Longitudinal location | Limfoma disebut terutama pada dewasa dan lansia; masuk banding usia di atas 40. |
+| Primary lymphoma of bone | `margin_lodwick:II` | +3 | S-01 | sebagian | S-01 | Lodwick-Madewell grading - Type II | [daftar] Limfoma salah satu contoh lesi ganas bertipe II. |
+| Primary lymphoma of bone | `margin_lodwick:III` | +3 | S-01 | sebagian | S-01 | Lodwick-Madewell grading - Type III; Cortical involvement | [daftar] Banding tipe III sama dengan tipe II; pertumbuhan permeatif disebut dapat terjadi. |
+| Primary lymphoma of bone | `matrix:none` | +3 | S-01 | tidak ditemukan | S-01 | tidak ada; ditelusuri: Tumor matrix and mineralization | Matriks pada limfoma tidak dibahas. |
+| Primary lymphoma of bone | `soft_tissue_mass:present` | +3 | S-01 | sebagian | S-01 | Cortical involvement and extra-osseous component | Massa jaringan lunak besar disebut dapat terjadi tanpa destruksi korteks; tidak disebut ciri khas. |
+| Simple (unicameral) bone cyst | `age_group:0-9` | +3 | S-01,S-06 | sebagian | S-06 | 5.1.1 Introduction; 5.1.3 Clinical Features | Dekade pertama disinggung (perilaku lebih agresif), tetapi 80% kasus disebut pada remaja atau usia 20-an. |
+| Simple (unicameral) bone cyst | `age_group:10-19_open` | +3 | S-01,S-06 | didukung | S-06 | 5.1.1 Introduction | Sebanyak 80% kasus disebut pada remaja atau usia 20-an. |
+| Simple (unicameral) bone cyst | `age_group:10-19_unknown` | +3 | S-01,S-06 | didukung | S-06 | 5.1.1 Introduction | Sebanyak 80% kasus disebut pada remaja atau usia 20-an. |
+| Simple (unicameral) bone cyst | `bone_class:calcaneus` | +3 | S-01,S-06 | sebagian | S-01 | Part of the appendicular skeleton | [daftar] Satu dari empat banding klasik lesi lusen kalkaneus; predileksi kista sendiri tidak dinyatakan. |
+| Simple (unicameral) bone cyst | `bone_class:long_bone` | +3 | S-01,S-06 | didukung | S-06 | 5.1.2 Sites of Development; 5.1.5 Imaging | Disebut terutama mengenai metafisis tulang panjang. |
+| Simple (unicameral) bone cyst | `density:lytic` | +3 | S-01,S-06 | didukung | S-06 | 4.1.6 Differential Diagnosis; 5.1.1 Introduction | Digambarkan sebagai kista berisi cairan yang lebih radiolusen daripada fibrous dysplasia. |
+| Simple (unicameral) bone cyst | `longitudinal:metaphysis` | +3 | S-01,S-06 | didukung | S-06 | 5.1.2 Sites of Development; 5.1.5 Imaging | Disebut terutama mengenai metafisis tulang panjang. |
+| Simple (unicameral) bone cyst | `matrix:none` | +3 | S-01,S-06 | sebagian | S-06 | 4.1.6 Differential Diagnosis; 5.1.1 Introduction | Kista berisi cairan yang lebih radiolusen; ketiadaan matriks hanya tersirat. |
+| Simple (unicameral) bone cyst | `transverse:central` | +3 | S-01,S-06 | sebagian | S-06 | 5.1.5 Imaging | Disebut berasal dari rongga medula dengan sumbu sejajar tulang; kata sentral tidak dipakai. |
+| Stress / insufficiency fracture | `bone_class:long_bone` | +3 | S-01 | tidak ditemukan | S-01 | tidak ada; ditelusuri: Sclerotic bone lesions | Lokasi tulang fraktur stres tidak disebut. |
+| Stress / insufficiency fracture | `periosteal:solid_thin` | +3 | S-01 | sebagian | S-01 | Sclerotic bone lesions; Periosteal reaction | Reaksi periosteal disebut sering menyertai; pola solid/tipis tidak dirinci untuk fraktur stres. |
+| Stress / insufficiency fracture | `transverse:cortical` | +3 | S-01 | sebagian | S-01 | Sclerotic bone lesions | Penebalan korteks disebut sering menyertai; lokasi transversal tidak dinyatakan. |
+| Vertebral haemangioma | `bone_class:spine_body` | +3 | S-01 | tidak ditemukan | S-01 | tidak ada (ulasan skeleton apendikular; Fig. 11 hemangioma femur) | Hemangioma vertebra tidak dibahas; hanya hemangioma litik femur sebagai contoh gambar. |
+| Vertebral haemangioma | `matrix:coarse_trabeculae` | +3 | S-01,S-19 | sebagian | S-19 | Intraosseous hemangioma; Fig. 5 | Trabekula menebal disebut gambaran klasik hemangioma kalvaria; vertebra hanya disebut lokasi tersering, tanpa uraian gambarannya. |
+| Vertebral haemangioma | `periosteal:none` | +3 | S-01 | tidak ditemukan | S-01 | tidak ada (ulasan skeleton apendikular; Fig. 11 hemangioma femur) | Hemangioma vertebra tidak dibahas. |
+
+Set C:
+| Entitas | Klaim | Bobot | Dikutip | Vonis | Sumber | Lokasi | Catatan |
+|---|---|---|---|---|---|---|---|
+| Aneurysmal bone cyst | `transverse:eccentric` | +3 | S-01,S-06 | sebagian | S-06 | Table 2 (Capanna) | Klasifikasi memuat tipe sentral dan tipe eksentrik metafisis tanpa frekuensi; eksentrik tidak disebut tersering. · KONFLIK S-01 (Transverse location): ABC dikelompokkan sebagai lesi intrameduler sentral; tidak ada di daftar lesi eksentrik. |
+| Medullary bone infarct | `margin_lodwick:IC` | -5 | S-01 | tidak ditemukan | S-01 | tidak ada; ditelusuri: Density - Mixed; Sclerotic bone lesions | Tepi infark tidak dibahas; hanya fase dini campuran dan fase lanjut sklerotik serpiginosa. |
+| Chondroblastoma | `age_group:40-59` | -5 | S-01,S-06 | sebagian | S-06 | 3.3.1 Introduction | Khas usia belasan memberi arah; usia dewasa tidak dibahas, kemustahilan tidak dinyatakan. |
+| Chondroblastoma | `soft_tissue_mass:present` | -5 | S-01,S-06 | bertentangan | S-06 | 3.3.5 Imaging; 3.3.7 Treatment and Prognosis | CT disebut dipakai menilai perluasan ke jaringan lunak; terapi bertujuan mencegah penyebaran ke jaringan lunak. |
+| Chordoma | `bone_class:long_bone` | -5 | S-01 | tidak ditemukan | S-01 | General considerations (satu penyebutan, soal derajat histologis) | Kordoma tidak dibahas: tanpa usia, lokasi, atau gambaran radiografik. |
+| Chordoma | `bone_class:sacrum` | +3 | S-01 | tidak ditemukan | S-01 | General considerations (satu penyebutan, soal derajat histologis) | Kordoma tidak dibahas: tanpa usia, lokasi, atau gambaran radiografik. |
+| Ewing sarcoma | `age_group:60+` | -5 | S-01,S-04 | sebagian | S-01 | Epidemiology | Puncak di bawah 15 tahun memberi arah; usia lanjut tidak dibahas, kemustahilan tidak dinyatakan. |
+| Fibrous dysplasia | `margin_lodwick:IC` | -5 | S-01,S-22 | bertentangan | S-22 | Craniofacial FD; Radiographs | Lesi kraniofasial disebut khas tidak berbatas tegas; tepi sklerotik dapat terputus atau tidak lengkap. |
+| Intraosseous ganglion / subchondral cyst (geode) | `size_cm:>5` | -5 | S-01 | tidak ditemukan | S-01 | tidak ada | Ukuran geode tidak disebut. |
+| Langerhans cell histiocytosis (eosinophilic granuloma) | `age_group:60+` | -5 | S-01,S-23 | sebagian | S-23 | Introduction; Conclusion | Dominan pada anak memberi arah; usia lanjut tidak dibahas, kemustahilan tidak dinyatakan. |
+| Osteomyelitis (incl. Brodie abscess) | `matrix:osteoid` | -5 | S-01 | tidak ditemukan | S-01 | Tumor matrix and mineralization | Mineralisasi pada osteomielitis tidak dibahas. |
+| Conventional (high-grade central) osteosarcoma | `age_group:60+` | +1 | S-01 | tidak ditemukan | S-01 | Epidemiology | Hanya puncak remaja yang disebut; usia lanjut atau puncak kedua tidak dibahas. |
+| Conventional (high-grade central) osteosarcoma | `periosteal:solid_thin` | -2 | S-01,S-15 | sebagian | S-15 | 3.1.1 Conventional Osteosarcoma; 2 Imaging Assessment | Reaksi periosteal digambarkan nyata dan agresif; pola solid/tipis tidak dibahas. · KONFLIK S-01 (Periosteal reaction - non-aggressive): Ringan: reaksi tipis disebut dapat dijumpai pada osteosarkoma; namun pola solid disebut jarang berpenyebab ganas. |
+| Periosteal osteosarcoma | `cortex:saucerization` | +2 | S-01,S-15 | tidak ditemukan | S-01,S-15 | S-01: tidak ada; ditelusuri: Cortical involvement · S-15: tidak ada; ditelusuri: 3.2.2 Periosteal Osteosarcoma | S-01: Saucerization tidak disebut. · S-15: Hanya disebut melekat pada korteks di bawahnya; saucerization atau erosi korteks tidak diuraikan. |
+| Telangiectatic osteosarcoma | `margin_lodwick:IA` | -5 | S-01,S-15 | bertentangan | S-15 | 3.1.3 Teleangectatic Osteosarcoma | Disebut kadang berbatas tegas dengan tepi sklerotik ireguler; pola permeatif klasik justru jarang. |
+| Simple (unicameral) bone cyst | `age_group:60+` | -5 | S-01,S-06 | sebagian | S-06 | 5.1.1 Introduction | Sebanyak 80% pada remaja atau usia 20-an memberi arah; usia lanjut tidak dibahas. |
+| Skeletal tuberculosis | `bone_class:spine_body` | +2 | S-01 | tidak ditemukan | S-01 | General considerations (satu penyebutan, kategori infeksi) | Tuberkulosis hanya disebut sebagai kategori infeksi; tanpa lokasi atau gambaran radiografik. |
+| Skeletal tuberculosis | `periosteal:spiculated` | -5 | S-01 | tidak ditemukan | S-01 | General considerations (satu penyebutan, kategori infeksi) | Tuberkulosis hanya disebut sebagai kategori infeksi; tanpa lokasi atau gambaran radiografik. |
+
+Set D:
+| Entitas | Klaim | Bobot | Dikutip | Vonis | Sumber | Lokasi | Catatan |
+|---|---|---|---|---|---|---|---|
+| Osteofibrous dysplasia – adamantinoma spectrum | `age_group:60+` | -2 | S-01 | tidak ditemukan | S-01 | tidak ada; ditelusuri: Epidemiology | Usia adamantinoma/OFD tidak disebut. |
+| Osteofibrous dysplasia – adamantinoma spectrum | `bone_class:spine_body` | -5 | S-01 | sebagian | S-01 | Part of the appendicular skeleton | Predileksi tibia memberi arah; vertebra tidak dibahas dan kemustahilan tidak dinyatakan. |
+| Aneurysmal bone cyst | `margin_lodwick:IB` | +2 | S-01,S-06 | sebagian | S-06 | 5.2.5 Imaging | Batas tegas didukung, tetapi yang diuraikan adalah tepi sklerotik (setara IA), bukan tanpa tepi sklerotik. |
+| Bizarre parosteal osteochondromatous proliferation (Nora lesion) | `cortex:saucerization` | 0 | S-01 | tidak ditemukan | S-01 | tidak ada; ditelusuri: Cortical involvement | Korteks pada BPOP tidak dibahas. |
+| Bizarre parosteal osteochondromatous proliferation (Nora lesion) | `matrix:osteoid` | +1 | S-01,S-25 | didukung | S-25 | Bizarre parosteal osteochondromatous proliferation (BPOP); Fig. 7 | Kalsifikasi/osifikasi bervariasi di dalam lesi diuraikan; sesuai bobot kompatibel. |
+| Bizarre parosteal osteochondromatous proliferation (Nora lesion) | `periosteal:none` | +1 | S-01,S-25 | tidak ditemukan | S-01,S-25 | S-01: tidak ada; ditelusuri: Periosteal reaction · S-25: tidak ada; ditelusuri: bagian BPOP | S-01: Reaksi periosteal pada BPOP tidak dibahas. · S-25: Reaksi periosteal pada BPOP tidak dibahas. |
+| Bizarre parosteal osteochondromatous proliferation (Nora lesion) | `transverse:central` | -5 | S-01,S-25 | didukung | S-25 | Bizarre parosteal osteochondromatous proliferation (BPOP) | Didefinisikan sebagai proliferasi yang menempel di permukaan luar tulang, tanpa hubungan dengan medula. |
+| Brown tumour of hyperparathyroidism | `density:mixed` | 0 | S-01 | tidak ditemukan | S-01 | tidak ada; ditelusuri: Density - Mixed | Brown tumour tidak ada di daftar lesi campuran; tampilan campuran tidak dibahas. |
+| Chondroblastoma | `periosteal:solid_thin` | +1 | S-01,S-06 | tidak ditemukan | S-01,S-06 | S-01: Periosteal reaction · S-06: tidak ada; ditelusuri: 3.3.5 Imaging | S-01: Kondroblastoma hanya disebut pada pola berlapis; pola solid/tipis tidak dikaitkan dengannya. · S-06: Reaksi periosteal pada chondroblastoma tidak dibahas. |
+| Central chondrosarcoma (incl. atypical cartilaginous tumour / grade 1) | `margin_lodwick:IA` | -2 | S-01,S-18 | sebagian | S-18 | Chondrosarcoma (Grade 1, Grade 2, Grade 3) | Pola moth-eaten dan permeatif disebut kriteria khas keganasan; tepi sklerotik tidak dibahas. |
+| Chordoma | `bone_class:flat_bone` | -5 | S-01 | tidak ditemukan | S-01 | General considerations (satu penyebutan, soal derajat histologis) | Kordoma tidak dibahas: tanpa usia, lokasi, atau gambaran radiografik. |
+| Chordoma | `margin_lodwick:IB` | +1 | S-01 | tidak ditemukan | S-01 | General considerations (satu penyebutan, soal derajat histologis) | Kordoma tidak dibahas: tanpa usia, lokasi, atau gambaran radiografik. |
+| Clear cell chondrosarcoma | `age_group:10-19_open` | -5 | S-01,S-18 | sebagian | S-18 | Clear Cell Chondrosarcoma | Predominan pada dekade kelima memberi arah; remaja tidak dibahas, kemustahilan tidak dinyatakan. |
+| Clear cell chondrosarcoma | `cortex:expansion_shell` | +1 | S-01,S-18 | tidak ditemukan | S-01,S-18 | S-01: tidak ada; ditelusuri: Cortical involvement · S-18: tidak ada; ditelusuri: Clear Cell Chondrosarcoma | S-01: Korteks pada clear cell chondrosarcoma tidak dibahas. · S-18: Ekspansi korteks tidak dibahas. |
+| Clear cell chondrosarcoma | `matrix:ground_glass` | -5 | S-01,S-18 | sebagian | S-18 | Clear Cell Chondrosarcoma | Mineralisasi yang diuraikan khas adalah kondroid; ground-glass tidak dibahas dan tidak dinyatakan mustahil. |
+| Desmoplastic fibroma of bone | `longitudinal:diaphysis` | +1 | S-01 | tidak ditemukan | S-01 | General considerations (satu penyebutan, contoh tumor intermediat) | Desmoplastic fibroma tidak dibahas: tanpa usia, lokasi, atau gambaran radiografik. |
+| Enchondroma | `bone_class:flat_bone` | -2 | S-01,S-06 | didukung | S-01 | Part of the appendicular skeleton | Enkondroma disebut tidak lazim di pelvis, berkebalikan dengan kondrosarkoma. |
+| Enchondroma | `margin_lodwick:IA` | +1 | S-01,S-06 | sebagian | S-06 | 3.2.5 Imaging; 3.2.6 Differential Diagnosis | Disebut berbatas tegas; ada tidaknya tepi sklerotik tidak dinyatakan. |
+| Enostosis (bone island) | `age_group:40-59` | +2 | S-01 | tidak ditemukan | S-01 | tidak ada; ditelusuri: Sclerotic bone lesions | Usia enostosis tidak disebut. |
+| Enostosis (bone island) | `soft_tissue_mass:present` | -5 | S-01 | tidak ditemukan | S-01 | Sclerotic bone lesions | [umum] Perluasan jaringan lunak disebut tanda mencurigakan lesi sklerotik secara umum; enostosis tidak disebut. |
+| Fibrous dysplasia | `transverse:juxtacortical_surface` | -5 | S-01,S-22 | sebagian | S-22 | Radiographs | Digambarkan sebagai massa di dalam tulang dengan penipisan korteks dan kontur luar tetap halus; lokasi permukaan tidak dibahas. |
+| Intraosseous lipoma | `margin_lodwick:IC` | -5 | S-01 | tidak ditemukan | S-01 | Lodwick-Madewell grading | [daftar-lain] Lipoma hanya ada di daftar IA; tepi IC tidak dibahas. |
+| Langerhans cell histiocytosis (eosinophilic granuloma) | `age_group:20-39` | 0 | S-01,S-23 | didukung | S-23 | Chest wall; Fig. 14; Fig. 17 | Kasus pada dewasa muda disebut ada, sementara penyakit terutama pada anak; sesuai bobot netral. |
+| Langerhans cell histiocytosis (eosinophilic granuloma) | `longitudinal:epiphysis_apophysis` | -2 | S-01,S-23 | didukung | S-23 | Long bones | Keterlibatan epifisis disebut jarang; lesi epifisis soliter mengarahkan ke diagnosis lain. |
+| Langerhans cell histiocytosis (eosinophilic granuloma) | `matrix:ground_glass` | -5 | S-01,S-23 | tidak ditemukan | S-01,S-23 | S-01: Tumor matrix and mineralization · S-23: tidak ada; ditelusuri: Imaging features of skeletal involvement | S-01: Ground-glass hanya dikaitkan dengan fibrous dysplasia dan tumor fibrosa lain. · S-23: Matriks ground-glass tidak dibahas. |
+| Langerhans cell histiocytosis (eosinophilic granuloma) | `periosteal:none` | +1 | S-01,S-23 | didukung | S-23 | Imaging features of skeletal involvement | Reaksi periosteal disebut dapat menyertai, artinya tidak selalu ada. |
+| Langerhans cell histiocytosis (eosinophilic granuloma) | `periosteal:solid_thin` | +1 | S-01,S-23 | didukung | S-23 | Imaging features of skeletal involvement; Fig. 6 | Bila ada, periostitis berupa satu lapis tulang periosteal atau pola buttress. |
+| Non-ossifying fibroma / fibrous cortical defect | `density:sclerotic` | +1 | S-01,S-06 | didukung | S-01 | Density - Sclerotic/blastic; Sclerotic bone lesions | NOF yang menyembuh disebut menjadi sklerotik setelah pubertas. |
+| Non-ossifying fibroma / fibrous cortical defect | `margin_lodwick:II` | -5 | S-01,S-06 | sebagian | S-01 | Lodwick-Madewell grading - Type IA | Contoh klasik tipe IA memberi arah; pola moth-eaten pada NOF tidak dibahas. |
+| Non-ossifying fibroma / fibrous cortical defect | `transverse:juxtacortical_surface` | -2 | S-01,S-06 | sebagian | S-06 | 4.1.6 Differential Diagnosis; 4.2.6 Differential Diagnosis | Lokasi lazim intrakortikal eksentrik memberi arah; lokasi permukaan tidak dibahas. |
+| Osteochondroma | `density:sclerotic` | +2 | S-01,S-04 | tidak ditemukan | S-01,S-04 | S-01: tidak ada; ditelusuri: Density · S-04: tidak ada (seri usia dan lokasi, tanpa gambaran radiografik) | S-01: Densitas osteokondroma tidak dibahas. · S-04: Densitas tidak diuraikan. |
+| Osteoid osteoma | `margin_lodwick:IC` | -5 | S-01,S-06 | tidak ditemukan | S-01,S-06 | S-01: tidak ada; ditelusuri: Lodwick-Madewell grading · S-06: tidak ada; ditelusuri: 2.1.5 Imaging | S-01: Tepi osteoid osteoma tidak dibahas. · S-06: Tepi lesi tidak dibahas selain nidus kecil berbatas jelas pada CT. |
+| Osteomyelitis (incl. Brodie abscess) | `periosteal:none` | 0 | S-01 | tidak ditemukan | S-01 | Periosteal reaction | Osteomielitis dikaitkan dengan beberapa pola reaksi periosteal; ketiadaan reaksi tidak dibahas. |
+| Periosteal osteosarcoma | `bone_class:flat_bone` | -2 | S-01,S-15 | didukung | S-15 | 3.2.2 Periosteal Osteosarcoma | Pelvis, iga, klavikula, rahang, dan tengkorak disebut jarang terkena. |
+| Periosteal (juxtacortical) chondroma | `age_group:60+` | -2 | S-01,S-25 | sebagian | S-25 | Juxtacortical/Periosteal chondroma | Lebih sering pada dewasa muda memberi arah; usia lanjut tidak dibahas. |
+| Periosteal (juxtacortical) chondroma | `longitudinal:epiphysis_apophysis` | -2 | S-01,S-25 | sebagian | S-25 | Juxtacortical/Periosteal chondroma | Lokasi yang disebut sering adalah ujung metafisis; epifisis tidak dibahas. |
+| Skeletal tuberculosis | `density:mixed` | +1 | S-01 | tidak ditemukan | S-01 | General considerations (satu penyebutan, kategori infeksi) | Tuberkulosis hanya disebut sebagai kategori infeksi; tanpa lokasi atau gambaran radiografik. |
+| Skeletal tuberculosis | `periosteal:lamellated` | -2 | S-01 | tidak ditemukan | S-01 | General considerations (satu penyebutan, kategori infeksi) | Tuberkulosis hanya disebut sebagai kategori infeksi; tanpa lokasi atau gambaran radiografik. |
+| Stress / insufficiency fracture | `age_group:40-59` | +1 | S-01 | tidak ditemukan | S-01 | tidak ada; ditelusuri: Sclerotic bone lesions | Usia fraktur stres tidak disebut. |
+| Stress / insufficiency fracture | `longitudinal:metadiaphysis` | +2 | S-01 | tidak ditemukan | S-01 | tidak ada; ditelusuri: Sclerotic bone lesions | Lokasi longitudinal fraktur stres tidak disebut. |
+

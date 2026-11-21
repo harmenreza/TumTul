@@ -1,0 +1,323 @@
+entity,feature,value,class,reason,proposed,confidence,cited_sources
+adamantinoma_ofd_spectrum,bone_class,small_tubular_hand_foot,a,Lokasi bertentangan dengan definisi atau predileksi tetap entitas,tetap -5,sedang,S-01
+adamantinoma_ofd_spectrum,bone_class,flat_bone,a,Lokasi bertentangan dengan definisi atau predileksi tetap entitas,tetap -5,sedang,S-01
+adamantinoma_ofd_spectrum,bone_class,spine_body,a,Lokasi bertentangan dengan definisi atau predileksi tetap entitas,tetap -5,sedang,S-01
+adamantinoma_ofd_spectrum,longitudinal,epiphysis_apophysis,a,Segmen bertentangan dengan definisi lokasi entitas,tetap -5,sedang,S-01
+adamantinoma_ofd_spectrum,margin_lodwick,II,b,Adamantinoma klasik adalah keganasan dan dapat berarea destruktif; lompatan IC 0 -> II -5,-2,rendah,S-01
+adamantinoma_ofd_spectrum,margin_lodwick,III,a,Tepi agresif/tepi sklerotik ini pada dasarnya tidak dilaporkan untuk entitas tanpa komplikasi,tetap -5,sedang,S-01
+adamantinoma_ofd_spectrum,periosteal,spiculated,a,Pola periosteal ini pada dasarnya tidak dilaporkan pada entitas ini,tetap -5,sedang,S-01
+adamantinoma_ofd_spectrum,matrix,chondroid,a,Jenis matriks ini bertentangan dengan garis diferensiasi entitas,tetap -5,sedang,S-01
+aneurysmal_bone_cyst,age_group,60+,b,ABC primer usia lanjut sangat jarang tetapi dilaporkan,-2,rendah,"S-01,S-06"
+aneurysmal_bone_cyst,density,sclerotic,b,ABC fase penyembuhan/involusi mengalami osifikasi,-2,rendah,"S-01,S-06"
+aneurysmal_bone_cyst,matrix,osteoid,b,ABC sekunder pada osteoblastoma; mineralisasi septa pada CT,-2,rendah,"S-01,S-06"
+aneurysmal_bone_cyst,matrix,chondroid,b,ABC sekunder pada kondroblastoma (disebut di pitfalls entitas),-2,rendah,"S-01,S-06"
+aneurysmal_bone_cyst,matrix,ground_glass,a,Jenis matriks ini bertentangan dengan garis diferensiasi entitas,tetap -5,sedang,"S-01,S-06"
+bone_infarct,transverse,cortical,a,Posisi transversal bertentangan dengan definisi (lesi permukaan vs intrameduler; kontinuitas korteks-meduler khas osteokondroma),tetap -5,sedang,S-01
+bone_infarct,transverse,juxtacortical_surface,a,Posisi transversal bertentangan dengan definisi (lesi permukaan vs intrameduler; kontinuitas korteks-meduler khas osteokondroma),tetap -5,sedang,S-01
+bone_infarct,transverse,juxtacortical_continuous,a,Posisi transversal bertentangan dengan definisi (lesi permukaan vs intrameduler; kontinuitas korteks-meduler khas osteokondroma),tetap -5,sedang,S-01
+bone_infarct,margin_lodwick,IC,a,Tepi agresif/tepi sklerotik ini pada dasarnya tidak dilaporkan untuk entitas tanpa komplikasi,tetap -5,sedang,S-01
+bone_infarct,margin_lodwick,II,a,Tepi agresif/tepi sklerotik ini pada dasarnya tidak dilaporkan untuk entitas tanpa komplikasi,tetap -5,sedang,S-01
+bone_infarct,margin_lodwick,III,a,Tepi agresif/tepi sklerotik ini pada dasarnya tidak dilaporkan untuk entitas tanpa komplikasi,tetap -5,sedang,S-01
+bone_infarct,cortex,expansion_shell,a,Perubahan korteks ini bertentangan dengan perilaku biologis entitas,tetap -5,sedang,S-01
+bone_infarct,cortex,destruction,a,Perubahan korteks ini bertentangan dengan perilaku biologis entitas,tetap -5,sedang,S-01
+bone_infarct,soft_tissue_mass,present,a,Massa jaringan lunak sejati tidak diharapkan pada entitas ini,tetap -5,sedang,S-01
+bone_infarct,periosteal,lamellated,a,Pola periosteal ini pada dasarnya tidak dilaporkan pada entitas ini,tetap -5,sedang,S-01
+bone_infarct,periosteal,spiculated,a,Pola periosteal ini pada dasarnya tidak dilaporkan pada entitas ini,tetap -5,sedang,S-01
+bone_infarct,periosteal,codman,a,Pola periosteal ini pada dasarnya tidak dilaporkan pada entitas ini,tetap -5,sedang,S-01
+bone_metastasis,age_group,10-19_open,c,"0-9 berbobot -2 tetapi seluruh dekade 10-19 berbobot -5; metastasis pada remaja (neuroblastoma, rabdomiosarkoma, karsinoma nasofaring) jarang tetapi nyata, dan flag riwayat keganasan tidak dapat menolongnya",-2,sedang,S-01
+bone_metastasis,age_group,10-19_closed,c,sama dengan 10-19_open: tidak konsisten dengan 0-9 (-2),-2,sedang,S-01
+bone_metastasis,age_group,10-19_unknown,c,sama dengan 10-19_open: tidak konsisten dengan 0-9 (-2),-2,sedang,S-01
+bone_metastasis,matrix,ground_glass,b,Metastasis blastik berdensitas kabur dapat disebut ground-glass oleh sebagian pembaca,-2,rendah,S-01
+bpop_nora_lesion,bone_class,flat_bone,a,Lokasi bertentangan dengan definisi atau predileksi tetap entitas,tetap -5,sedang,"S-01,S-25"
+bpop_nora_lesion,bone_class,spine_body,a,Lokasi bertentangan dengan definisi atau predileksi tetap entitas,tetap -5,sedang,"S-01,S-25"
+bpop_nora_lesion,transverse,central,a,Posisi transversal bertentangan dengan definisi (lesi permukaan vs intrameduler; kontinuitas korteks-meduler khas osteokondroma),tetap -5,sedang,"S-01,S-25"
+bpop_nora_lesion,transverse,eccentric,a,Posisi transversal bertentangan dengan definisi (lesi permukaan vs intrameduler; kontinuitas korteks-meduler khas osteokondroma),tetap -5,sedang,"S-01,S-25"
+bpop_nora_lesion,transverse,cortical,a,Posisi transversal bertentangan dengan definisi (lesi permukaan vs intrameduler; kontinuitas korteks-meduler khas osteokondroma),tetap -5,sedang,"S-01,S-25"
+bpop_nora_lesion,transverse,juxtacortical_continuous,b,BPOP dengan kesan kontinuitas korteks-meduler dilaporkan; rujukan tersingkir di V2-15,-2,sedang,"S-01,S-25"
+bpop_nora_lesion,density,lytic,b,BPOP dini/belum terosifikasi tampak radiolusen; rujukan tersingkir di V3-46,-2,sedang,"S-01,S-25"
+bpop_nora_lesion,cortex,destruction,b,Destruksi korteks disebut pada temuan operasi V3-46; klasiknya korteks utuh,-2,rendah,"S-01,S-25"
+bpop_nora_lesion,periosteal,codman,a,Pola periosteal ini pada dasarnya tidak dilaporkan pada entitas ini,tetap -5,sedang,"S-01,S-25"
+bpop_nora_lesion,matrix,ground_glass,a,Jenis matriks ini bertentangan dengan garis diferensiasi entitas,tetap -5,sedang,"S-01,S-25"
+brown_tumour,transverse,juxtacortical_surface,a,Posisi transversal bertentangan dengan definisi (lesi permukaan vs intrameduler; kontinuitas korteks-meduler khas osteokondroma),tetap -5,sedang,S-01
+brown_tumour,transverse,juxtacortical_continuous,a,Posisi transversal bertentangan dengan definisi (lesi permukaan vs intrameduler; kontinuitas korteks-meduler khas osteokondroma),tetap -5,sedang,S-01
+brown_tumour,margin_lodwick,II,b,Tulang hiperparatiroid dapat tampak agresif/berbintik; v0.6 sudah melonggarkan destruksi korteks untuk entitas ini,-2,rendah,S-01
+brown_tumour,margin_lodwick,III,a,Tepi agresif/tepi sklerotik ini pada dasarnya tidak dilaporkan untuk entitas tanpa komplikasi,tetap -5,sedang,S-01
+brown_tumour,periosteal,lamellated,b,Fraktur patologis pada tulang hiperparatiroid,-2,rendah,S-01
+brown_tumour,periosteal,spiculated,a,Pola periosteal ini pada dasarnya tidak dilaporkan pada entitas ini,tetap -5,sedang,S-01
+brown_tumour,periosteal,codman,a,Pola periosteal ini pada dasarnya tidak dilaporkan pada entitas ini,tetap -5,sedang,S-01
+brown_tumour,matrix,osteoid,a,Jenis matriks ini bertentangan dengan garis diferensiasi entitas,tetap -5,sedang,S-01
+brown_tumour,matrix,chondroid,a,Jenis matriks ini bertentangan dengan garis diferensiasi entitas,tetap -5,sedang,S-01
+brown_tumour,matrix,ground_glass,b,'Ground-glass' adalah deskriptor klasik tulang hiperparatiroid/osteodistrofi renal,-2,sedang,S-01
+chondroblastoma,age_group,40-59,b,"Kondroblastoma dewasa paruh baya dilaporkan, terutama di tulang pendek/pipih (kalkaneus, patela, temporal) yang oleh KB sendiri diberi +1",-2,sedang,"S-01,S-06"
+chondroblastoma,age_group,60+,b,Sama dengan 40-59; lebih jarang,-2,rendah,"S-01,S-06"
+chondroblastoma,longitudinal,diaphysis,a,Segmen bertentangan dengan definisi lokasi entitas,tetap -5,sedang,"S-01,S-06"
+chondroblastoma,transverse,cortical,a,Posisi transversal bertentangan dengan definisi (lesi permukaan vs intrameduler; kontinuitas korteks-meduler khas osteokondroma),tetap -5,sedang,"S-01,S-06"
+chondroblastoma,transverse,juxtacortical_surface,a,Posisi transversal bertentangan dengan definisi (lesi permukaan vs intrameduler; kontinuitas korteks-meduler khas osteokondroma),tetap -5,sedang,"S-01,S-06"
+chondroblastoma,transverse,juxtacortical_continuous,a,Posisi transversal bertentangan dengan definisi (lesi permukaan vs intrameduler; kontinuitas korteks-meduler khas osteokondroma),tetap -5,sedang,"S-01,S-06"
+chondroblastoma,density,sclerotic,a,Densitas bertentangan dengan definisi entitas,tetap -5,sedang,"S-01,S-06"
+chondroblastoma,margin_lodwick,II,a,Tepi agresif/tepi sklerotik ini pada dasarnya tidak dilaporkan untuk entitas tanpa komplikasi,tetap -5,sedang,"S-01,S-06"
+chondroblastoma,margin_lodwick,III,a,Tepi agresif/tepi sklerotik ini pada dasarnya tidak dilaporkan untuk entitas tanpa komplikasi,tetap -5,sedang,"S-01,S-06"
+chondroblastoma,cortex,destruction,b,Kondroblastoma agresif dengan destruksi korteks dilaporkan; rujukan tersingkir di V3-06,-2,sedang,"S-01,S-06"
+chondroblastoma,soft_tissue_mass,present,b,Kondroblastoma agresif/dengan ABC sekunder dapat meluas ke jaringan lunak; rujukan tersingkir di V3-06,-2,sedang,"S-01,S-06"
+chondroblastoma,periosteal,spiculated,a,Pola periosteal ini pada dasarnya tidak dilaporkan pada entitas ini,tetap -5,sedang,"S-01,S-06"
+chondroblastoma,periosteal,codman,a,Pola periosteal ini pada dasarnya tidak dilaporkan pada entitas ini,tetap -5,sedang,"S-01,S-06"
+chondroblastoma,matrix,ground_glass,a,Jenis matriks ini bertentangan dengan garis diferensiasi entitas,tetap -5,sedang,"S-01,S-06"
+chondromyxoid_fibroma,density,sclerotic,a,Densitas bertentangan dengan definisi entitas,tetap -5,sedang,"S-01,S-18"
+chondromyxoid_fibroma,margin_lodwick,IC,b,"Sebagian kecil CMF tanpa tepi tegas; lompatan IB 0 -> IC -5. Catatan: CMF sudah over-called, uji bersama H penurunan bobot CMF",-2,rendah,"S-01,S-18"
+chondromyxoid_fibroma,margin_lodwick,II,a,Tepi agresif/tepi sklerotik ini pada dasarnya tidak dilaporkan untuk entitas tanpa komplikasi,tetap -5,sedang,"S-01,S-18"
+chondromyxoid_fibroma,margin_lodwick,III,a,Tepi agresif/tepi sklerotik ini pada dasarnya tidak dilaporkan untuk entitas tanpa komplikasi,tetap -5,sedang,"S-01,S-18"
+chondromyxoid_fibroma,cortex,destruction,b,Korteks CMF dapat tampak hilang sebagian pada radiograf. Catatan: CMF sudah over-called,-2,rendah,S-01
+chondromyxoid_fibroma,soft_tissue_mass,present,b,Perluasan jaringan lunak jarang tetapi dilaporkan. Catatan: CMF sudah over-called,-2,rendah,S-01
+chondromyxoid_fibroma,periosteal,spiculated,a,Pola periosteal ini pada dasarnya tidak dilaporkan pada entitas ini,tetap -5,sedang,"S-01,S-18"
+chondromyxoid_fibroma,periosteal,codman,a,Pola periosteal ini pada dasarnya tidak dilaporkan pada entitas ini,tetap -5,sedang,"S-01,S-18"
+chondromyxoid_fibroma,matrix,osteoid,a,Jenis matriks ini bertentangan dengan garis diferensiasi entitas,tetap -5,sedang,S-01
+chondrosarcoma_central,age_group,0-9,a,Di luar rentang usia entitas menurut definisi/epidemiologi; tidak ditemukan alasan kuat untuk melonggarkan,tetap -5,sedang,"S-01,S-18"
+chondrosarcoma_central,matrix,osteoid,b,Kalsifikasi kondroid padat dapat terbaca 'padat/cloud-like'; komponen dediferensiasi osteosarkomatosa disebut di pitfalls entitas,-2,sedang,"S-01,S-18"
+chondrosarcoma_central,matrix,ground_glass,a,Jenis matriks ini bertentangan dengan garis diferensiasi entitas,tetap -5,sedang,"S-01,S-18"
+chordoma,age_group,0-9,b,"Kordoma anak terdokumentasi (terutama basis kranii, tipe poorly differentiated); sangat jarang di sakrum/spine",-2,rendah,S-01
+chordoma,age_group,10-19_open,b,Kordoma remaja jarang tetapi dilaporkan (basis kranii > spine mobil),-2,rendah,S-01
+chordoma,age_group,10-19_closed,b,Kordoma remaja jarang tetapi dilaporkan,-2,rendah,S-01
+chordoma,age_group,10-19_unknown,b,Kordoma remaja jarang tetapi dilaporkan,-2,rendah,S-01
+chordoma,bone_class,long_bone,a,Lokasi bertentangan dengan definisi atau predileksi tetap entitas,tetap -5,sedang,S-01
+chordoma,bone_class,flat_bone,a,Lokasi bertentangan dengan definisi atau predileksi tetap entitas,tetap -5,sedang,S-01
+chordoma,density,sclerotic,b,Kordoma korpus vertebra mobil dapat sklerotik (ivory vertebra) pada sebagian kasus; KB memberi spine_body +2,-2,sedang,S-01
+chordoma,matrix,osteoid,a,Jenis matriks ini bertentangan dengan garis diferensiasi entitas,tetap -5,sedang,S-01
+chordoma,matrix,ground_glass,a,Jenis matriks ini bertentangan dengan garis diferensiasi entitas,tetap -5,sedang,S-01
+clear_cell_chondrosarcoma,age_group,0-9,a,Di luar rentang usia entitas menurut definisi/epidemiologi; tidak ditemukan alasan kuat untuk melonggarkan,tetap -5,sedang,"S-01,S-18"
+clear_cell_chondrosarcoma,age_group,10-19_open,a,Di luar rentang usia entitas menurut definisi/epidemiologi; tidak ditemukan alasan kuat untuk melonggarkan,tetap -5,sedang,"S-01,S-18"
+clear_cell_chondrosarcoma,longitudinal,diaphysis,a,Segmen bertentangan dengan definisi lokasi entitas,tetap -5,sedang,"S-01,S-18"
+clear_cell_chondrosarcoma,transverse,cortical,a,Posisi transversal bertentangan dengan definisi (lesi permukaan vs intrameduler; kontinuitas korteks-meduler khas osteokondroma),tetap -5,sedang,"S-01,S-18"
+clear_cell_chondrosarcoma,transverse,juxtacortical_surface,a,Posisi transversal bertentangan dengan definisi (lesi permukaan vs intrameduler; kontinuitas korteks-meduler khas osteokondroma),tetap -5,sedang,"S-01,S-18"
+clear_cell_chondrosarcoma,transverse,juxtacortical_continuous,a,Posisi transversal bertentangan dengan definisi (lesi permukaan vs intrameduler; kontinuitas korteks-meduler khas osteokondroma),tetap -5,sedang,"S-01,S-18"
+clear_cell_chondrosarcoma,margin_lodwick,III,a,Tepi agresif/tepi sklerotik ini pada dasarnya tidak dilaporkan untuk entitas tanpa komplikasi,tetap -5,sedang,"S-01,S-18"
+clear_cell_chondrosarcoma,periosteal,spiculated,a,Pola periosteal ini pada dasarnya tidak dilaporkan pada entitas ini,tetap -5,sedang,"S-01,S-18"
+clear_cell_chondrosarcoma,periosteal,codman,a,Pola periosteal ini pada dasarnya tidak dilaporkan pada entitas ini,tetap -5,sedang,"S-01,S-18"
+clear_cell_chondrosarcoma,matrix,osteoid,b,Secara histologis mengandung tulang woven; mineralisasi amorf mungkin,-2,rendah,"S-01,S-18"
+clear_cell_chondrosarcoma,matrix,ground_glass,a,Jenis matriks ini bertentangan dengan garis diferensiasi entitas,tetap -5,sedang,"S-01,S-18"
+desmoplastic_fibroma,transverse,juxtacortical_surface,a,Posisi transversal bertentangan dengan definisi (lesi permukaan vs intrameduler; kontinuitas korteks-meduler khas osteokondroma),tetap -5,sedang,S-01
+desmoplastic_fibroma,transverse,juxtacortical_continuous,a,Posisi transversal bertentangan dengan definisi (lesi permukaan vs intrameduler; kontinuitas korteks-meduler khas osteokondroma),tetap -5,sedang,S-01
+desmoplastic_fibroma,density,sclerotic,a,Densitas bertentangan dengan definisi entitas,tetap -5,sedang,S-01
+desmoplastic_fibroma,margin_lodwick,III,a,Tepi agresif/tepi sklerotik ini pada dasarnya tidak dilaporkan untuk entitas tanpa komplikasi,tetap -5,sedang,S-01
+desmoplastic_fibroma,periosteal,spiculated,a,Pola periosteal ini pada dasarnya tidak dilaporkan pada entitas ini,tetap -5,sedang,S-01
+desmoplastic_fibroma,matrix,osteoid,a,Jenis matriks ini bertentangan dengan garis diferensiasi entitas,tetap -5,sedang,S-01
+desmoplastic_fibroma,matrix,chondroid,a,Jenis matriks ini bertentangan dengan garis diferensiasi entitas,tetap -5,sedang,S-01
+desmoplastic_fibroma,matrix,ground_glass,a,Jenis matriks ini bertentangan dengan garis diferensiasi entitas,tetap -5,sedang,S-01
+enchondroma,margin_lodwick,II,a,Tepi agresif/tepi sklerotik ini pada dasarnya tidak dilaporkan untuk entitas tanpa komplikasi,tetap -5,sedang,"S-01,S-06"
+enchondroma,margin_lodwick,III,a,Tepi agresif/tepi sklerotik ini pada dasarnya tidak dilaporkan untuk entitas tanpa komplikasi,tetap -5,sedang,"S-01,S-06"
+enchondroma,cortex,destruction,a,Perubahan korteks ini bertentangan dengan perilaku biologis entitas,tetap -5,sedang,"S-01,S-06"
+enchondroma,soft_tissue_mass,present,a,Massa jaringan lunak sejati tidak diharapkan pada entitas ini,tetap -5,sedang,"S-01,S-06"
+enchondroma,periosteal,lamellated,b,Fraktur patologis enkondroma tangan,-2,rendah,"S-01,S-06"
+enchondroma,periosteal,spiculated,a,Pola periosteal ini pada dasarnya tidak dilaporkan pada entitas ini,tetap -5,sedang,"S-01,S-06"
+enchondroma,periosteal,codman,a,Pola periosteal ini pada dasarnya tidak dilaporkan pada entitas ini,tetap -5,sedang,"S-01,S-06"
+enchondroma,matrix,osteoid,b,Enkondroma terkalsifikasi padat dapat terbaca sebagai matriks padat,-2,rendah,"S-01,S-06"
+enostosis,transverse,juxtacortical_surface,a,Posisi transversal bertentangan dengan definisi (lesi permukaan vs intrameduler; kontinuitas korteks-meduler khas osteokondroma),tetap -5,sedang,S-01
+enostosis,transverse,juxtacortical_continuous,a,Posisi transversal bertentangan dengan definisi (lesi permukaan vs intrameduler; kontinuitas korteks-meduler khas osteokondroma),tetap -5,sedang,S-01
+enostosis,density,lytic,a,Densitas bertentangan dengan definisi entitas,tetap -5,sedang,S-01
+enostosis,density,mixed,a,Densitas bertentangan dengan definisi entitas,tetap -5,sedang,S-01
+enostosis,cortex,expansion_shell,a,Perubahan korteks ini bertentangan dengan perilaku biologis entitas,tetap -5,sedang,S-01
+enostosis,cortex,destruction,a,Perubahan korteks ini bertentangan dengan perilaku biologis entitas,tetap -5,sedang,S-01
+enostosis,soft_tissue_mass,present,a,Massa jaringan lunak sejati tidak diharapkan pada entitas ini,tetap -5,sedang,S-01
+enostosis,periosteal,solid_thin,a,Pola periosteal ini pada dasarnya tidak dilaporkan pada entitas ini,tetap -5,sedang,S-01
+enostosis,periosteal,lamellated,a,Pola periosteal ini pada dasarnya tidak dilaporkan pada entitas ini,tetap -5,sedang,S-01
+enostosis,periosteal,spiculated,a,Pola periosteal ini pada dasarnya tidak dilaporkan pada entitas ini,tetap -5,sedang,S-01
+enostosis,periosteal,codman,a,Pola periosteal ini pada dasarnya tidak dilaporkan pada entitas ini,tetap -5,sedang,S-01
+enostosis,matrix,chondroid,a,Jenis matriks ini bertentangan dengan garis diferensiasi entitas,tetap -5,sedang,S-01
+enostosis,matrix,ground_glass,a,Jenis matriks ini bertentangan dengan garis diferensiasi entitas,tetap -5,sedang,S-01
+ewing_sarcoma,age_group,60+,b,Ewing usia >60 sangat jarang tetapi ada di registri; limfoma tetap banding utama,-2,rendah,"S-01,S-04"
+ewing_sarcoma,margin_lodwick,IA,b,Tepi sklerotik pada Ewing sangat tidak lazim tetapi dilaporkan,-2,rendah,"S-01,S-04"
+ewing_sarcoma,cortex,expansion_shell,b,"Ewing pada iga, fibula, dan tulang tubular kecil sering digambarkan ekspansil",-2,sedang,"S-01,S-04"
+ewing_sarcoma,periosteal,shell,b,Sejalan dengan cortex=expansion_shell: Ewing iga/tulang kecil ekspansil,-2,rendah,"S-01,S-04"
+ewing_sarcoma,matrix,chondroid,a,Jenis matriks ini bertentangan dengan garis diferensiasi entitas,tetap -5,sedang,"S-01,S-04"
+ewing_sarcoma,matrix,ground_glass,a,Jenis matriks ini bertentangan dengan garis diferensiasi entitas,tetap -5,sedang,"S-01,S-04"
+fibrous_dysplasia,transverse,juxtacortical_surface,a,Posisi transversal bertentangan dengan definisi (lesi permukaan vs intrameduler; kontinuitas korteks-meduler khas osteokondroma),tetap -5,sedang,"S-01,S-22"
+fibrous_dysplasia,transverse,juxtacortical_continuous,a,Posisi transversal bertentangan dengan definisi (lesi permukaan vs intrameduler; kontinuitas korteks-meduler khas osteokondroma),tetap -5,sedang,"S-01,S-22"
+fibrous_dysplasia,margin_lodwick,IC,b,"Lesi ground-glass sering berbaur bertahap dengan tulang normal (terutama kraniofasial, lesi panjang); tepi tidak selalu tegas",-2,sedang,"S-01,S-22"
+fibrous_dysplasia,margin_lodwick,II,a,Tepi agresif/tepi sklerotik ini pada dasarnya tidak dilaporkan untuk entitas tanpa komplikasi,tetap -5,sedang,"S-01,S-22"
+fibrous_dysplasia,margin_lodwick,III,a,Tepi agresif/tepi sklerotik ini pada dasarnya tidak dilaporkan untuk entitas tanpa komplikasi,tetap -5,sedang,"S-01,S-22"
+fibrous_dysplasia,cortex,destruction,a,Perubahan korteks ini bertentangan dengan perilaku biologis entitas,tetap -5,sedang,"S-01,S-22"
+fibrous_dysplasia,soft_tissue_mass,present,a,Massa jaringan lunak sejati tidak diharapkan pada entitas ini,tetap -5,sedang,"S-01,S-22"
+fibrous_dysplasia,periosteal,lamellated,c,Sama: fraktur/shepherd's crook; CMF sudah -2,-2,sedang,"S-01,S-22"
+fibrous_dysplasia,periosteal,spiculated,a,Pola periosteal ini pada dasarnya tidak dilaporkan pada entitas ini,tetap -5,sedang,"S-01,S-22"
+fibrous_dysplasia,periosteal,codman,a,Pola periosteal ini pada dasarnya tidak dilaporkan pada entitas ini,tetap -5,sedang,"S-01,S-22"
+giant_cell_tumour_of_bone,age_group,0-9,a,Di luar rentang usia entitas menurut definisi/epidemiologi; tidak ditemukan alasan kuat untuk melonggarkan,tetap -5,sedang,"S-01,S-16"
+giant_cell_tumour_of_bone,age_group,10-19_open,b,GCTB pada skeletal imatur dilaporkan pada sebagian kecil kasus (lesi metafisis menempel fisis); aturan desain 'fisis terbuka = bukan GCTB' menyingkirkan kasus nyata ini,-2,sedang,"S-01,S-16"
+giant_cell_tumour_of_bone,transverse,cortical,a,Posisi transversal bertentangan dengan definisi (lesi permukaan vs intrameduler; kontinuitas korteks-meduler khas osteokondroma),tetap -5,sedang,"S-01,S-16"
+giant_cell_tumour_of_bone,transverse,juxtacortical_surface,a,Posisi transversal bertentangan dengan definisi (lesi permukaan vs intrameduler; kontinuitas korteks-meduler khas osteokondroma),tetap -5,sedang,"S-01,S-16"
+giant_cell_tumour_of_bone,transverse,juxtacortical_continuous,a,Posisi transversal bertentangan dengan definisi (lesi permukaan vs intrameduler; kontinuitas korteks-meduler khas osteokondroma),tetap -5,sedang,"S-01,S-16"
+giant_cell_tumour_of_bone,density,sclerotic,a,Densitas bertentangan dengan definisi entitas,tetap -5,sedang,"S-01,S-16"
+giant_cell_tumour_of_bone,matrix,osteoid,a,Jenis matriks ini bertentangan dengan garis diferensiasi entitas,tetap -5,sedang,"S-01,S-16"
+giant_cell_tumour_of_bone,matrix,chondroid,a,Jenis matriks ini bertentangan dengan garis diferensiasi entitas,tetap -5,sedang,"S-01,S-16"
+giant_cell_tumour_of_bone,matrix,ground_glass,a,Jenis matriks ini bertentangan dengan garis diferensiasi entitas,tetap -5,sedang,"S-01,S-16"
+intraosseous_ganglion_geode,age_group,0-9,b,"Kista subkondral pada anak dengan artropati (hemofilia, JIA) dilaporkan; ganglion intraoseus usia 11 th ada di V2-73",-2,rendah,S-01
+intraosseous_ganglion_geode,bone_class,spine_body,a,Lokasi bertentangan dengan definisi atau predileksi tetap entitas,tetap -5,sedang,S-01
+intraosseous_ganglion_geode,longitudinal,metadiaphysis,a,Segmen bertentangan dengan definisi lokasi entitas,tetap -5,sedang,S-01
+intraosseous_ganglion_geode,longitudinal,diaphysis,a,Segmen bertentangan dengan definisi lokasi entitas,tetap -5,sedang,S-01
+intraosseous_ganglion_geode,transverse,juxtacortical_surface,a,Posisi transversal bertentangan dengan definisi (lesi permukaan vs intrameduler; kontinuitas korteks-meduler khas osteokondroma),tetap -5,sedang,S-01
+intraosseous_ganglion_geode,transverse,juxtacortical_continuous,a,Posisi transversal bertentangan dengan definisi (lesi permukaan vs intrameduler; kontinuitas korteks-meduler khas osteokondroma),tetap -5,sedang,S-01
+intraosseous_ganglion_geode,density,sclerotic,a,Densitas bertentangan dengan definisi entitas,tetap -5,sedang,S-01
+intraosseous_ganglion_geode,margin_lodwick,IC,b,Tepi sebagian tidak tegas pada ganglion intraoseus; rujukan tersingkir di V2-74,-2,sedang,S-01
+intraosseous_ganglion_geode,margin_lodwick,II,a,Tepi agresif/tepi sklerotik ini pada dasarnya tidak dilaporkan untuk entitas tanpa komplikasi,tetap -5,sedang,S-01
+intraosseous_ganglion_geode,margin_lodwick,III,a,Tepi agresif/tepi sklerotik ini pada dasarnya tidak dilaporkan untuk entitas tanpa komplikasi,tetap -5,sedang,S-01
+intraosseous_ganglion_geode,cortex,destruction,a,Perubahan korteks ini bertentangan dengan perilaku biologis entitas,tetap -5,sedang,S-01
+intraosseous_ganglion_geode,soft_tissue_mass,present,b,Ganglion intraoseus dapat berhubungan dengan ganglion jaringan lunak; rujukan tersingkir di V2-74,-2,sedang,S-01
+intraosseous_ganglion_geode,periosteal,solid_thin,a,Pola periosteal ini pada dasarnya tidak dilaporkan pada entitas ini,tetap -5,sedang,S-01
+intraosseous_ganglion_geode,periosteal,lamellated,a,Pola periosteal ini pada dasarnya tidak dilaporkan pada entitas ini,tetap -5,sedang,S-01
+intraosseous_ganglion_geode,periosteal,spiculated,a,Pola periosteal ini pada dasarnya tidak dilaporkan pada entitas ini,tetap -5,sedang,S-01
+intraosseous_ganglion_geode,periosteal,codman,a,Pola periosteal ini pada dasarnya tidak dilaporkan pada entitas ini,tetap -5,sedang,S-01
+intraosseous_ganglion_geode,matrix,osteoid,a,Jenis matriks ini bertentangan dengan garis diferensiasi entitas,tetap -5,sedang,S-01
+intraosseous_ganglion_geode,matrix,chondroid,a,Jenis matriks ini bertentangan dengan garis diferensiasi entitas,tetap -5,sedang,S-01
+intraosseous_ganglion_geode,matrix,ground_glass,a,Jenis matriks ini bertentangan dengan garis diferensiasi entitas,tetap -5,sedang,S-01
+intraosseous_ganglion_geode,size_cm,>5,b,"Geode raksasa (RA, CPPD, OA lanjut) dilaporkan melebihi 5 cm",-2,sedang,S-01
+intraosseous_lipoma,transverse,juxtacortical_surface,a,Posisi transversal bertentangan dengan definisi (lesi permukaan vs intrameduler; kontinuitas korteks-meduler khas osteokondroma),tetap -5,sedang,S-01
+intraosseous_lipoma,transverse,juxtacortical_continuous,a,Posisi transversal bertentangan dengan definisi (lesi permukaan vs intrameduler; kontinuitas korteks-meduler khas osteokondroma),tetap -5,sedang,S-01
+intraosseous_lipoma,margin_lodwick,IC,a,Tepi agresif/tepi sklerotik ini pada dasarnya tidak dilaporkan untuk entitas tanpa komplikasi,tetap -5,sedang,S-01
+intraosseous_lipoma,margin_lodwick,II,a,Tepi agresif/tepi sklerotik ini pada dasarnya tidak dilaporkan untuk entitas tanpa komplikasi,tetap -5,sedang,S-01
+intraosseous_lipoma,margin_lodwick,III,a,Tepi agresif/tepi sklerotik ini pada dasarnya tidak dilaporkan untuk entitas tanpa komplikasi,tetap -5,sedang,S-01
+intraosseous_lipoma,cortex,destruction,a,Perubahan korteks ini bertentangan dengan perilaku biologis entitas,tetap -5,sedang,S-01
+intraosseous_lipoma,soft_tissue_mass,present,a,Massa jaringan lunak sejati tidak diharapkan pada entitas ini,tetap -5,sedang,S-01
+intraosseous_lipoma,periosteal,lamellated,a,Pola periosteal ini pada dasarnya tidak dilaporkan pada entitas ini,tetap -5,sedang,S-01
+intraosseous_lipoma,periosteal,spiculated,a,Pola periosteal ini pada dasarnya tidak dilaporkan pada entitas ini,tetap -5,sedang,S-01
+intraosseous_lipoma,periosteal,codman,a,Pola periosteal ini pada dasarnya tidak dilaporkan pada entitas ini,tetap -5,sedang,S-01
+langerhans_cell_histiocytosis,age_group,60+,b,LCH dewasa dapat muncul pada usia berapa pun,-2,rendah,"S-01,S-23"
+langerhans_cell_histiocytosis,matrix,osteoid,b,Button sequestrum dapat terbaca sebagai fokus padat,-2,rendah,"S-01,S-23"
+langerhans_cell_histiocytosis,matrix,chondroid,a,Jenis matriks ini bertentangan dengan garis diferensiasi entitas,tetap -5,sedang,"S-01,S-23"
+langerhans_cell_histiocytosis,matrix,ground_glass,a,Jenis matriks ini bertentangan dengan garis diferensiasi entitas,tetap -5,sedang,"S-01,S-23"
+non_ossifying_fibroma,age_group,60+,a,Di luar rentang usia entitas menurut definisi/epidemiologi; tidak ditemukan alasan kuat untuk melonggarkan,tetap -5,sedang,"S-01,S-06"
+non_ossifying_fibroma,bone_class,small_tubular_hand_foot,a,Lokasi bertentangan dengan definisi atau predileksi tetap entitas,tetap -5,sedang,"S-01,S-06"
+non_ossifying_fibroma,bone_class,flat_bone,a,Lokasi bertentangan dengan definisi atau predileksi tetap entitas,tetap -5,sedang,"S-01,S-06"
+non_ossifying_fibroma,bone_class,spine_body,a,Lokasi bertentangan dengan definisi atau predileksi tetap entitas,tetap -5,sedang,"S-01,S-06"
+non_ossifying_fibroma,bone_class,spine_posterior,a,Lokasi bertentangan dengan definisi atau predileksi tetap entitas,tetap -5,sedang,"S-01,S-06"
+non_ossifying_fibroma,longitudinal,epiphysis_apophysis,a,Segmen bertentangan dengan definisi lokasi entitas,tetap -5,sedang,"S-01,S-06"
+non_ossifying_fibroma,margin_lodwick,IC,a,Tepi agresif/tepi sklerotik ini pada dasarnya tidak dilaporkan untuk entitas tanpa komplikasi,tetap -5,sedang,"S-01,S-06"
+non_ossifying_fibroma,margin_lodwick,II,a,Tepi agresif/tepi sklerotik ini pada dasarnya tidak dilaporkan untuk entitas tanpa komplikasi,tetap -5,sedang,"S-01,S-06"
+non_ossifying_fibroma,margin_lodwick,III,a,Tepi agresif/tepi sklerotik ini pada dasarnya tidak dilaporkan untuk entitas tanpa komplikasi,tetap -5,sedang,"S-01,S-06"
+non_ossifying_fibroma,cortex,destruction,a,Perubahan korteks ini bertentangan dengan perilaku biologis entitas,tetap -5,sedang,"S-01,S-06"
+non_ossifying_fibroma,soft_tissue_mass,present,b,Hematoma fraktur patologis pada lesi besar,-2,rendah,"S-01,S-06"
+non_ossifying_fibroma,periosteal,lamellated,c,Sama: fraktur patologis pada NOF besar; CMF sudah -2,-2,sedang,"S-01,S-06"
+non_ossifying_fibroma,periosteal,spiculated,a,Pola periosteal ini pada dasarnya tidak dilaporkan pada entitas ini,tetap -5,sedang,"S-01,S-06"
+non_ossifying_fibroma,periosteal,codman,a,Pola periosteal ini pada dasarnya tidak dilaporkan pada entitas ini,tetap -5,sedang,"S-01,S-06"
+osteoblastoma,age_group,60+,b,Osteoblastoma usia lanjut jarang tetapi dilaporkan,-2,rendah,"S-01,S-06"
+osteoblastoma,margin_lodwick,II,b,Osteoblastoma agresif dapat bertepi tidak tegas; lompatan IC 0 -> II -5,-2,rendah,"S-01,S-06"
+osteoblastoma,margin_lodwick,III,a,Tepi agresif/tepi sklerotik ini pada dasarnya tidak dilaporkan untuk entitas tanpa komplikasi,tetap -5,sedang,"S-01,S-06"
+osteoblastoma,matrix,chondroid,a,Jenis matriks ini bertentangan dengan garis diferensiasi entitas,tetap -5,sedang,"S-01,S-06"
+osteochondroma,longitudinal,epiphysis_apophysis,b,"Nilai ini mencakup apofisis; osteokondroma di dekat apofisis (trokanter minor, tuberositas) dapat dikodekan demikian",-2,rendah,"S-01,S-04"
+osteochondroma,transverse,central,a,Posisi transversal bertentangan dengan definisi (lesi permukaan vs intrameduler; kontinuitas korteks-meduler khas osteokondroma),tetap -5,sedang,"S-01,S-04"
+osteochondroma,transverse,eccentric,a,Posisi transversal bertentangan dengan definisi (lesi permukaan vs intrameduler; kontinuitas korteks-meduler khas osteokondroma),tetap -5,sedang,"S-01,S-04"
+osteochondroma,transverse,cortical,a,Posisi transversal bertentangan dengan definisi (lesi permukaan vs intrameduler; kontinuitas korteks-meduler khas osteokondroma),tetap -5,sedang,"S-01,S-04"
+osteochondroma,density,lytic,a,Densitas bertentangan dengan definisi entitas,tetap -5,sedang,"S-01,S-04"
+osteochondroma,cortex,destruction,a,Perubahan korteks ini bertentangan dengan perilaku biologis entitas,tetap -5,sedang,"S-01,S-04"
+osteochondroma,periosteal,lamellated,a,Pola periosteal ini pada dasarnya tidak dilaporkan pada entitas ini,tetap -5,sedang,"S-01,S-04"
+osteochondroma,periosteal,spiculated,a,Pola periosteal ini pada dasarnya tidak dilaporkan pada entitas ini,tetap -5,sedang,"S-01,S-04"
+osteochondroma,periosteal,codman,a,Pola periosteal ini pada dasarnya tidak dilaporkan pada entitas ini,tetap -5,sedang,"S-01,S-04"
+osteochondroma,matrix,ground_glass,a,Jenis matriks ini bertentangan dengan garis diferensiasi entitas,tetap -5,sedang,"S-01,S-04"
+osteoid_osteoma,age_group,60+,b,Osteoid osteoma usia lanjut jarang tetapi dilaporkan,-2,rendah,"S-01,S-06"
+osteoid_osteoma,margin_lodwick,IC,a,Tepi agresif/tepi sklerotik ini pada dasarnya tidak dilaporkan untuk entitas tanpa komplikasi,tetap -5,sedang,"S-01,S-06"
+osteoid_osteoma,margin_lodwick,II,a,Tepi agresif/tepi sklerotik ini pada dasarnya tidak dilaporkan untuk entitas tanpa komplikasi,tetap -5,sedang,"S-01,S-06"
+osteoid_osteoma,margin_lodwick,III,a,Tepi agresif/tepi sklerotik ini pada dasarnya tidak dilaporkan untuk entitas tanpa komplikasi,tetap -5,sedang,"S-01,S-06"
+osteoid_osteoma,cortex,destruction,a,Perubahan korteks ini bertentangan dengan perilaku biologis entitas,tetap -5,sedang,"S-01,S-06"
+osteoid_osteoma,soft_tissue_mass,present,a,Massa jaringan lunak sejati tidak diharapkan pada entitas ini,tetap -5,sedang,"S-01,S-06"
+osteoid_osteoma,periosteal,lamellated,b,Reaksi solid terbentuk dari lamela yang menyatu; pada anak dapat tampak berlapis,-2,rendah,"S-01,S-06"
+osteoid_osteoma,periosteal,spiculated,a,Pola periosteal ini pada dasarnya tidak dilaporkan pada entitas ini,tetap -5,sedang,"S-01,S-06"
+osteoid_osteoma,periosteal,codman,a,Pola periosteal ini pada dasarnya tidak dilaporkan pada entitas ini,tetap -5,sedang,"S-01,S-06"
+osteoid_osteoma,matrix,chondroid,a,Jenis matriks ini bertentangan dengan garis diferensiasi entitas,tetap -5,sedang,"S-01,S-06"
+osteoid_osteoma,matrix,ground_glass,a,Jenis matriks ini bertentangan dengan garis diferensiasi entitas,tetap -5,sedang,"S-01,S-06"
+osteoid_osteoma,size_cm,>5,c,KB menilai densitas lesi dari sklerosis reaktif (sclerotic +3) tetapi ukuran dari nidus; pembaca yang mengukur zona sklerosis (>5 cm) menyingkirkan diagnosis yang benar,-2,sedang,"S-01,S-06"
+osteomyelitis,matrix,osteoid,b,Sekuestrum/involukrum dan sklerosis reaktif padat dapat dipilih pembaca sebagai 'osteoid (padat)'; menyingkirkan infeksi dari banding osteosarkoma berisiko di daerah endemik,-2,sedang,S-01
+osteomyelitis,matrix,chondroid,a,Jenis matriks ini bertentangan dengan garis diferensiasi entitas,tetap -5,sedang,S-01
+osteomyelitis,matrix,ground_glass,a,Jenis matriks ini bertentangan dengan garis diferensiasi entitas,tetap -5,sedang,S-01
+osteosarcoma_conventional,margin_lodwick,IA,b,Osteosarkoma bertepi tegas/sklerotik yang meniru lesi jinak dilaporkan; rujukan tersingkir di V3-09,-2,sedang,"S-01,S-15"
+osteosarcoma_conventional,periosteal,shell,c,Temuan yang sama diberi -2 pada cortex=expansion_shell tetapi -5 pada periosteal=shell,-2,sedang,"S-01,S-15"
+osteosarcoma_conventional,matrix,ground_glass,a,Jenis matriks ini bertentangan dengan garis diferensiasi entitas,tetap -5,sedang,"S-01,S-15"
+osteosarcoma_parosteal,age_group,0-9,a,Di luar rentang usia entitas menurut definisi/epidemiologi; tidak ditemukan alasan kuat untuk melonggarkan,tetap -5,sedang,"S-01,S-15"
+osteosarcoma_parosteal,bone_class,spine_body,a,Lokasi bertentangan dengan definisi atau predileksi tetap entitas,tetap -5,sedang,"S-01,S-15"
+osteosarcoma_parosteal,transverse,central,a,Posisi transversal bertentangan dengan definisi (lesi permukaan vs intrameduler; kontinuitas korteks-meduler khas osteokondroma),tetap -5,sedang,"S-01,S-15"
+osteosarcoma_parosteal,transverse,eccentric,a,Posisi transversal bertentangan dengan definisi (lesi permukaan vs intrameduler; kontinuitas korteks-meduler khas osteokondroma),tetap -5,sedang,"S-01,S-15"
+osteosarcoma_parosteal,transverse,cortical,a,Posisi transversal bertentangan dengan definisi (lesi permukaan vs intrameduler; kontinuitas korteks-meduler khas osteokondroma),tetap -5,sedang,"S-01,S-15"
+osteosarcoma_parosteal,transverse,juxtacortical_continuous,a,Posisi transversal bertentangan dengan definisi (lesi permukaan vs intrameduler; kontinuitas korteks-meduler khas osteokondroma),tetap -5,sedang,"S-01,S-15"
+osteosarcoma_parosteal,density,lytic,a,Densitas bertentangan dengan definisi entitas,tetap -5,sedang,"S-01,S-15"
+osteosarcoma_parosteal,matrix,ground_glass,a,Jenis matriks ini bertentangan dengan garis diferensiasi entitas,tetap -5,sedang,"S-01,S-15"
+osteosarcoma_periosteal,age_group,60+,b,Rentang usia yang dilaporkan mencapai dekade ke-7,-2,rendah,"S-01,S-15"
+osteosarcoma_periosteal,longitudinal,epiphysis_apophysis,a,Segmen bertentangan dengan definisi lokasi entitas,tetap -5,sedang,"S-01,S-15"
+osteosarcoma_periosteal,transverse,central,a,Posisi transversal bertentangan dengan definisi (lesi permukaan vs intrameduler; kontinuitas korteks-meduler khas osteokondroma),tetap -5,sedang,"S-01,S-15"
+osteosarcoma_periosteal,transverse,eccentric,a,Posisi transversal bertentangan dengan definisi (lesi permukaan vs intrameduler; kontinuitas korteks-meduler khas osteokondroma),tetap -5,sedang,"S-01,S-15"
+osteosarcoma_periosteal,transverse,juxtacortical_continuous,a,Posisi transversal bertentangan dengan definisi (lesi permukaan vs intrameduler; kontinuitas korteks-meduler khas osteokondroma),tetap -5,sedang,"S-01,S-15"
+osteosarcoma_periosteal,matrix,ground_glass,a,Jenis matriks ini bertentangan dengan garis diferensiasi entitas,tetap -5,sedang,"S-01,S-15"
+osteosarcoma_telangiectatic,transverse,cortical,a,Posisi transversal bertentangan dengan definisi (lesi permukaan vs intrameduler; kontinuitas korteks-meduler khas osteokondroma),tetap -5,sedang,"S-01,S-15"
+osteosarcoma_telangiectatic,transverse,juxtacortical_surface,a,Posisi transversal bertentangan dengan definisi (lesi permukaan vs intrameduler; kontinuitas korteks-meduler khas osteokondroma),tetap -5,sedang,"S-01,S-15"
+osteosarcoma_telangiectatic,transverse,juxtacortical_continuous,a,Posisi transversal bertentangan dengan definisi (lesi permukaan vs intrameduler; kontinuitas korteks-meduler khas osteokondroma),tetap -5,sedang,"S-01,S-15"
+osteosarcoma_telangiectatic,density,sclerotic,a,Densitas bertentangan dengan definisi entitas,tetap -5,sedang,"S-01,S-15"
+osteosarcoma_telangiectatic,margin_lodwick,IA,b,Entitas ini didefinisikan sebagai peniru ABC (ABC: IA +1); tepi sklerotik jarang tetapi mungkin,-2,rendah,"S-01,S-15"
+osteosarcoma_telangiectatic,matrix,chondroid,a,Jenis matriks ini bertentangan dengan garis diferensiasi entitas,tetap -5,sedang,"S-01,S-15"
+osteosarcoma_telangiectatic,matrix,ground_glass,a,Jenis matriks ini bertentangan dengan garis diferensiasi entitas,tetap -5,sedang,"S-01,S-15"
+paget_disease,age_group,0-9,a,Di luar rentang usia entitas menurut definisi/epidemiologi; tidak ditemukan alasan kuat untuk melonggarkan,tetap -5,sedang,S-01
+paget_disease,age_group,10-19_open,a,Di luar rentang usia entitas menurut definisi/epidemiologi; tidak ditemukan alasan kuat untuk melonggarkan,tetap -5,sedang,S-01
+paget_disease,age_group,10-19_closed,a,Di luar rentang usia entitas menurut definisi/epidemiologi; tidak ditemukan alasan kuat untuk melonggarkan,tetap -5,sedang,S-01
+paget_disease,age_group,10-19_unknown,a,Di luar rentang usia entitas menurut definisi/epidemiologi; tidak ditemukan alasan kuat untuk melonggarkan,tetap -5,sedang,S-01
+paget_disease,transverse,juxtacortical_surface,a,Posisi transversal bertentangan dengan definisi (lesi permukaan vs intrameduler; kontinuitas korteks-meduler khas osteokondroma),tetap -5,sedang,S-01
+paget_disease,transverse,juxtacortical_continuous,a,Posisi transversal bertentangan dengan definisi (lesi permukaan vs intrameduler; kontinuitas korteks-meduler khas osteokondroma),tetap -5,sedang,S-01
+paget_disease,margin_lodwick,II,a,Tepi agresif/tepi sklerotik ini pada dasarnya tidak dilaporkan untuk entitas tanpa komplikasi,tetap -5,sedang,S-01
+paget_disease,margin_lodwick,III,a,Tepi agresif/tepi sklerotik ini pada dasarnya tidak dilaporkan untuk entitas tanpa komplikasi,tetap -5,sedang,S-01
+paget_disease,periosteal,lamellated,a,Pola periosteal ini pada dasarnya tidak dilaporkan pada entitas ini,tetap -5,sedang,S-01
+paget_disease,periosteal,spiculated,a,Pola periosteal ini pada dasarnya tidak dilaporkan pada entitas ini,tetap -5,sedang,S-01
+paget_disease,periosteal,codman,a,Pola periosteal ini pada dasarnya tidak dilaporkan pada entitas ini,tetap -5,sedang,S-01
+paget_disease,matrix,chondroid,a,Jenis matriks ini bertentangan dengan garis diferensiasi entitas,tetap -5,sedang,S-01
+periosteal_chondroma,bone_class,spine_body,a,Lokasi bertentangan dengan definisi atau predileksi tetap entitas,tetap -5,sedang,"S-01,S-25"
+periosteal_chondroma,transverse,central,a,Posisi transversal bertentangan dengan definisi (lesi permukaan vs intrameduler; kontinuitas korteks-meduler khas osteokondroma),tetap -5,sedang,"S-01,S-25"
+periosteal_chondroma,transverse,eccentric,a,Posisi transversal bertentangan dengan definisi (lesi permukaan vs intrameduler; kontinuitas korteks-meduler khas osteokondroma),tetap -5,sedang,"S-01,S-25"
+periosteal_chondroma,transverse,juxtacortical_continuous,a,Posisi transversal bertentangan dengan definisi (lesi permukaan vs intrameduler; kontinuitas korteks-meduler khas osteokondroma),tetap -5,sedang,"S-01,S-25"
+periosteal_chondroma,cortex,destruction,a,Perubahan korteks ini bertentangan dengan perilaku biologis entitas,tetap -5,sedang,"S-01,S-25"
+periosteal_chondroma,periosteal,spiculated,a,Pola periosteal ini pada dasarnya tidak dilaporkan pada entitas ini,tetap -5,sedang,"S-01,S-25"
+periosteal_chondroma,periosteal,codman,a,Pola periosteal ini pada dasarnya tidak dilaporkan pada entitas ini,tetap -5,sedang,"S-01,S-25"
+periosteal_chondroma,matrix,osteoid,b,Kondroma periosteal dapat mengalami osifikasi,-2,rendah,"S-01,S-25"
+periosteal_chondroma,matrix,ground_glass,a,Jenis matriks ini bertentangan dengan garis diferensiasi entitas,tetap -5,sedang,"S-01,S-25"
+plasmacytoma_myeloma,age_group,0-9,a,Di luar rentang usia entitas menurut definisi/epidemiologi; tidak ditemukan alasan kuat untuk melonggarkan,tetap -5,sedang,"S-01,S-24"
+plasmacytoma_myeloma,age_group,10-19_open,a,Di luar rentang usia entitas menurut definisi/epidemiologi; tidak ditemukan alasan kuat untuk melonggarkan,tetap -5,sedang,"S-01,S-24"
+plasmacytoma_myeloma,age_group,10-19_closed,a,Di luar rentang usia entitas menurut definisi/epidemiologi; tidak ditemukan alasan kuat untuk melonggarkan,tetap -5,sedang,"S-01,S-24"
+plasmacytoma_myeloma,age_group,10-19_unknown,a,Di luar rentang usia entitas menurut definisi/epidemiologi; tidak ditemukan alasan kuat untuk melonggarkan,tetap -5,sedang,"S-01,S-24"
+plasmacytoma_myeloma,matrix,osteoid,a,Jenis matriks ini bertentangan dengan garis diferensiasi entitas,tetap -5,sedang,"S-01,S-24"
+plasmacytoma_myeloma,matrix,chondroid,a,Jenis matriks ini bertentangan dengan garis diferensiasi entitas,tetap -5,sedang,"S-01,S-24"
+plasmacytoma_myeloma,matrix,ground_glass,a,Jenis matriks ini bertentangan dengan garis diferensiasi entitas,tetap -5,sedang,"S-01,S-24"
+primary_bone_lymphoma,transverse,juxtacortical_surface,a,Posisi transversal bertentangan dengan definisi (lesi permukaan vs intrameduler; kontinuitas korteks-meduler khas osteokondroma),tetap -5,sedang,S-01
+primary_bone_lymphoma,transverse,juxtacortical_continuous,a,Posisi transversal bertentangan dengan definisi (lesi permukaan vs intrameduler; kontinuitas korteks-meduler khas osteokondroma),tetap -5,sedang,S-01
+primary_bone_lymphoma,margin_lodwick,IA,a,Tepi agresif/tepi sklerotik ini pada dasarnya tidak dilaporkan untuk entitas tanpa komplikasi,tetap -5,sedang,S-01
+primary_bone_lymphoma,cortex,expansion_shell,b,Ekspansi jarang tetapi dilaporkan,-2,rendah,S-01
+primary_bone_lymphoma,periosteal,shell,a,Pola periosteal ini pada dasarnya tidak dilaporkan pada entitas ini,tetap -5,sedang,S-01
+primary_bone_lymphoma,matrix,osteoid,b,Sekuestrum dan sklerosis reaktif dilaporkan pada limfoma tulang,-2,rendah,S-01
+primary_bone_lymphoma,matrix,chondroid,a,Jenis matriks ini bertentangan dengan garis diferensiasi entitas,tetap -5,sedang,S-01
+primary_bone_lymphoma,matrix,ground_glass,a,Jenis matriks ini bertentangan dengan garis diferensiasi entitas,tetap -5,sedang,S-01
+simple_bone_cyst,age_group,60+,b,"Kista simpel dewasa/lansia (femur proksimal, kalkaneus, ilium) dilaporkan; rujukan tersingkir di V3-34",-2,sedang,"S-01,S-06"
+simple_bone_cyst,bone_class,spine_body,a,Lokasi bertentangan dengan definisi atau predileksi tetap entitas,tetap -5,sedang,"S-01,S-06"
+simple_bone_cyst,bone_class,spine_posterior,a,Lokasi bertentangan dengan definisi atau predileksi tetap entitas,tetap -5,sedang,"S-01,S-06"
+simple_bone_cyst,longitudinal,epiphysis_apophysis,b,Nilai ini mencakup apofisis: kista simpel trokanter mayor adalah lokasi yang dikenal; perluasan ke epifisis setelah fisis menutup juga dilaporkan,-2,sedang,"S-01,S-06"
+simple_bone_cyst,transverse,cortical,a,Posisi transversal bertentangan dengan definisi (lesi permukaan vs intrameduler; kontinuitas korteks-meduler khas osteokondroma),tetap -5,sedang,"S-01,S-06"
+simple_bone_cyst,transverse,juxtacortical_surface,a,Posisi transversal bertentangan dengan definisi (lesi permukaan vs intrameduler; kontinuitas korteks-meduler khas osteokondroma),tetap -5,sedang,"S-01,S-06"
+simple_bone_cyst,transverse,juxtacortical_continuous,a,Posisi transversal bertentangan dengan definisi (lesi permukaan vs intrameduler; kontinuitas korteks-meduler khas osteokondroma),tetap -5,sedang,"S-01,S-06"
+simple_bone_cyst,density,sclerotic,b,Kista yang menyembuh (pascafraktur) terisi tulang; riwayat sklerotik disebut pada V3-35,-2,rendah,"S-01,S-06"
+simple_bone_cyst,margin_lodwick,IC,b,Tepi kabur setelah fraktur patologis,-2,rendah,"S-01,S-06"
+simple_bone_cyst,margin_lodwick,II,a,Tepi agresif/tepi sklerotik ini pada dasarnya tidak dilaporkan untuk entitas tanpa komplikasi,tetap -5,sedang,"S-01,S-06"
+simple_bone_cyst,margin_lodwick,III,a,Tepi agresif/tepi sklerotik ini pada dasarnya tidak dilaporkan untuk entitas tanpa komplikasi,tetap -5,sedang,"S-01,S-06"
+simple_bone_cyst,cortex,destruction,a,Perubahan korteks ini bertentangan dengan perilaku biologis entitas,tetap -5,sedang,"S-01,S-06"
+simple_bone_cyst,soft_tissue_mass,present,b,Hematoma fraktur patologis; definisi entitas menyebut fraktur sebagai presentasi tersering,-2,rendah,"S-01,S-06"
+simple_bone_cyst,periosteal,lamellated,c,Reaksi periosteal pascafraktur; v0.6 melonggarkan nilai yang sama untuk CMF (-2) tetapi tidak untuk lesi yang jauh lebih sering fraktur,-2,sedang,"S-01,S-06"
+simple_bone_cyst,periosteal,spiculated,a,Pola periosteal ini pada dasarnya tidak dilaporkan pada entitas ini,tetap -5,sedang,"S-01,S-06"
+simple_bone_cyst,periosteal,codman,a,Pola periosteal ini pada dasarnya tidak dilaporkan pada entitas ini,tetap -5,sedang,"S-01,S-06"
+simple_bone_cyst,matrix,osteoid,a,Jenis matriks ini bertentangan dengan garis diferensiasi entitas,tetap -5,sedang,"S-01,S-06"
+simple_bone_cyst,matrix,chondroid,a,Jenis matriks ini bertentangan dengan garis diferensiasi entitas,tetap -5,sedang,"S-01,S-06"
+simple_bone_cyst,matrix,ground_glass,b,Kista yang menyembuh terisi tulang berdensitas kabur,-2,rendah,"S-01,S-06"
+skeletal_tuberculosis,periosteal,spiculated,a,Pola periosteal ini pada dasarnya tidak dilaporkan pada entitas ini,tetap -5,sedang,S-01
+skeletal_tuberculosis,matrix,osteoid,b,Sekuestrum pada TB (lebih jarang daripada piogenik),-2,rendah,S-01
+skeletal_tuberculosis,matrix,chondroid,b,Kalsifikasi abses/kaseosa dapat terbaca sebagai kalsifikasi intralesi,-2,rendah,S-01
+skeletal_tuberculosis,matrix,ground_glass,a,Jenis matriks ini bertentangan dengan garis diferensiasi entitas,tetap -5,sedang,S-01
+stress_fracture,margin_lodwick,II,a,Tepi agresif/tepi sklerotik ini pada dasarnya tidak dilaporkan untuk entitas tanpa komplikasi,tetap -5,sedang,S-01
+stress_fracture,margin_lodwick,III,a,Tepi agresif/tepi sklerotik ini pada dasarnya tidak dilaporkan untuk entitas tanpa komplikasi,tetap -5,sedang,S-01
+stress_fracture,cortex,expansion_shell,a,Perubahan korteks ini bertentangan dengan perilaku biologis entitas,tetap -5,sedang,S-01
+stress_fracture,cortex,destruction,a,Perubahan korteks ini bertentangan dengan perilaku biologis entitas,tetap -5,sedang,S-01
+stress_fracture,soft_tissue_mass,present,b,Kalus/hematoma/edema periosteal dapat terbaca sebagai massa; pitfalls entitas sendiri menyebut kalus agresif,-2,rendah,S-01
+stress_fracture,periosteal,spiculated,b,Pitfalls entitas sendiri: kalus agresif dapat meniru osteosarkoma,-2,rendah,S-01
+stress_fracture,matrix,chondroid,a,Jenis matriks ini bertentangan dengan garis diferensiasi entitas,tetap -5,sedang,S-01
+stress_fracture,matrix,ground_glass,a,Jenis matriks ini bertentangan dengan garis diferensiasi entitas,tetap -5,sedang,S-01
+vertebral_haemangioma,margin_lodwick,IC,b,Hemangioma agresif; penerapan Lodwick pada korpus vertebra sendiri meragukan,-2,rendah,S-01
+vertebral_haemangioma,margin_lodwick,II,a,Tepi agresif/tepi sklerotik ini pada dasarnya tidak dilaporkan untuk entitas tanpa komplikasi,tetap -5,sedang,S-01
+vertebral_haemangioma,margin_lodwick,III,a,Tepi agresif/tepi sklerotik ini pada dasarnya tidak dilaporkan untuk entitas tanpa komplikasi,tetap -5,sedang,S-01
+vertebral_haemangioma,cortex,destruction,b,Hemangioma vertebra agresif dengan penembusan korteks dan perluasan epidural,-2,rendah,S-01
+vertebral_haemangioma,matrix,chondroid,a,Jenis matriks ini bertentangan dengan garis diferensiasi entitas,tetap -5,sedang,S-01

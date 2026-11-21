@@ -1,0 +1,69 @@
+entity	source	level	depth	note
+adamantinoma_ofd_spectrum	S-01	1	uraian	Tibia 80-85%, tibia tengah, berbasis korteks, lisis dan sklerosis campuran; tanpa usia, tepi, periosteal.
+aneurysmal_bone_cyst	S-01	1	daftar	Hanya lewat daftar: lusen, IB, shell, ekspansi, sentral; tanpa usia dan lokasi tulang.
+aneurysmal_bone_cyst	S-06	1	uraian	Bagian tersendiri: usia, lokasi, litik bertepi sklerotik, soap bubble, klasifikasi Capanna.
+aneurysmal_bone_cyst	S-20	3	-	Seri osteoblastoma spinal; ABC hanya sebagai komponen sekunder.
+bone_infarct	S-01	1	uraian	Singkat: fase dini campuran, fase lanjut sklerotik serpiginosa dekat metafisis.
+bone_metastasis	S-01	1	uraian	Poliostotik, pola densitas, tepi, ekspansi (ginjal/tiroid), usia dewasa-lansia; tanpa vertebra.
+bpop_nora_lesion	S-01	2	-	Satu penyebutan di daftar lesi jukstakortikal (lokasi saja).
+bpop_nora_lesion	S-25	1	uraian	Bagian tersendiri: tangan/kaki 70%, terkalsifikasi/terosifikasi, korteks utuh, tanpa kontinuitas medula.
+brown_tumour	S-01	1	daftar	Hanya lewat daftar: lusen berbatas tegas, litik multifokal; tanpa uraian.
+chondroblastoma	S-01	1	daftar	Epifisis khas sebelum fisis menutup; selebihnya daftar (IA, periostitis berlapis, matriks kondroid).
+chondroblastoma	S-06	1	uraian	Bagian tersendiri: usia belasan, epifisis/apofisis, tepi sklerotik, ukuran, erosi korteks, perluasan jaringan lunak.
+chondromyxoid_fibroma	S-01	1	daftar	Hanya lewat daftar: metadiafisis, eksentrik, IA, lusen, scalloping/ekspansi; tanpa usia.
+chondromyxoid_fibroma	S-06	3	-	Tidak ada bagian CMF; satu penyebutan sebagai banding chondroblastoma.
+chondromyxoid_fibroma	S-18	1	uraian	Bagian tersendiri: dewasa muda, metafisis tulang panjang, litik eksentrik bertepi sklerotik, ekspansil, tanpa periosteal, kalsifikasi biasanya tak ada.
+chondrosarcoma_central	S-01	1	daftar	Usia 30-60, pelvis sering, metafisis; tampilan lewat daftar (IB derajat rendah, IC, matriks kondroid, scalloping).
+chondrosarcoma_central	S-05	2	-	Registri: usia saja.
+chondrosarcoma_central	S-18	1	uraian	Bagian tersendiri: litik dengan rings-and-arcs, scalloping dalam, korteks ditembus, pola Lodwick II/III, massa jaringan lunak.
+chordoma	S-01	3	-	Satu penyebutan (tidak diberi derajat histologis); tanpa usia, lokasi, gambaran.
+clear_cell_chondrosarcoma	S-01	2	-	Satu penyebutan: banding lesi epifisis usia di atas 40.
+clear_cell_chondrosarcoma	S-18	1	uraian	Bagian tersendiri: dekade kelima, epifisis femur proksimal, litik berbatas tegas bertepi sklerotik dengan matriks kondroid.
+desmoplastic_fibroma	S-01	3	-	Satu penyebutan sebagai contoh tumor intermediat.
+enchondroma	S-01	1	daftar	Tangan khas, pelvis tidak lazim; tampilan lewat daftar (IB, lusen, sentral, matriks kondroid).
+enchondroma	S-06	1	uraian	Bagian tersendiri: usia, falang, lusen sentral berbatas tegas, arcs-and-rings.
+enchondroma	S-18	1	uraian	Bagian tersendiri: tangan 40-65%, sentral, scalloping, rings-and-arcs, litik berbatas tegas di falang.
+enostosis	S-01	1	uraian	Sklerosis merata, tepi berduri, ukuran 1 mm-2 cm, pertumbuhan; tanpa usia.
+ewing_sarcoma	S-01	1	uraian	Usia <15, diafisis, tulang pipih >20 th, hair-on-end, massa jaringan lunak tanpa destruksi; tepi lewat daftar.
+ewing_sarcoma	S-04	2	-	Seri pediatrik: usia dan lokasi saja (28 kasus).
+fibrous_dysplasia	S-01	1	uraian	Ground-glass klasik; selebihnya daftar (campuran, IA, sentral, scalloping); tanpa usia dan kraniofasial.
+fibrous_dysplasia	S-22	1	uraian	Ulasan khusus FD: lokasi, pola densitas, rind sign, periosteal, perubahan menurut usia, kraniofasial.
+giant_cell_tumour_of_bone	S-01	1	daftar	Meta-epifisis eksentrik tulang panjang setelah fisis menutup; tampilan lewat daftar (lusen, IB/IC, shell).
+giant_cell_tumour_of_bone	S-16	1	uraian	Ulasan khusus GCTB: usia 20-40, lokasi, litik murni, scalloping, periosteal jarang, Campanacci.
+intraosseous_ganglion_geode	S-01	1	daftar	Hanya lewat daftar: epifisis, lusen berbatas tegas, kalkaneus; tanpa uraian.
+intraosseous_lipoma	S-01	1	daftar	Hanya lewat daftar: IA dan banding lesi lusen kalkaneus.
+langerhans_cell_histiocytosis	S-01	1	daftar	Predileksi diafisis, multifokal 20%; tampilan lewat daftar (lusen, sentral, periosteal multifokal); tanpa usia.
+langerhans_cell_histiocytosis	S-23	1	uraian	Ulasan khusus LCH: usia anak, tengkorak, vertebra plana, tulang panjang, periosteal, epifisis jarang.
+non_ossifying_fibroma	S-01	1	uraian	Contoh klasik IA, metafisis eksentrik subkortikal, lusen lalu sklerotik setelah pubertas.
+non_ossifying_fibroma	S-06	1	uraian	Bagian tersendiri: anak/remaja, tulang panjang, litik eksentrik, tepi sklerotik atau tak tegas, tanpa periosteal.
+osteoblastoma	S-01	1	daftar	Hanya lewat daftar: IA, lusen, matriks osteoid; tanpa usia dan lokasi.
+osteoblastoma	S-06	1	uraian	Bagian tersendiri: dewasa muda, elemen posterior dan sakrum, >2 cm, periosteal jinak, bentuk agresif.
+osteoblastoma	S-20	1	uraian	Seri 35 osteoblastoma spinal: lokasi elemen posterior, pola radiograf dan CT.
+osteochondroma	S-01	2	-	Metafisis khas dan kontinuitas korteks-medula (lokasi); tanpa densitas, usia.
+osteochondroma	S-04	2	-	Seri pediatrik: usia dan lokasi saja (137 kasus).
+osteochondroma	S-26	1	uraian	Ulasan HME: tonjolan sesil/bertangkai di metafisis, kontinuitas korteks-medula, cap kartilago.
+osteoid_osteoma	S-01	1	uraian	Sklerotik berbasis korteks, nidus lusen, reaksi periosteal solid, predileksi diafisis; tanpa usia dan angka ukuran.
+osteoid_osteoma	S-06	1	uraian	Bagian tersendiri: dekade kedua, nidus <1,5 cm, tulang panjang ekstremitas bawah, nyeri malam reda dengan OAINS.
+osteomyelitis	S-01	1	uraian	Singkat dan tersebar: abses Brodie IA, pola moth-eaten, beberapa pola periosteal, sklerosis kronik; tanpa usia.
+osteosarcoma_conventional	S-01	1	uraian	Usia 15-19, metafisis klasik, osteoid khas, Codman klasik; tepi lewat daftar.
+osteosarcoma_conventional	S-05	2	-	Registri: usia saja.
+osteosarcoma_conventional	S-15	1	uraian	Ulasan khusus osteosarkoma: lokasi, tepi, matriks, korteks, periosteal, massa jaringan lunak.
+osteosarcoma_parosteal	S-01	2	-	Satu penyebutan di daftar lesi jukstakortikal (lokasi saja).
+osteosarcoma_parosteal	S-15	1	uraian	Bagian tersendiri: usia 30-40-an, metafisis femur distal posterior, massa eksofitik terosifikasi padat.
+osteosarcoma_periosteal	S-01	2	-	Satu penyebutan di daftar lesi jukstakortikal (lokasi saja).
+osteosarcoma_periosteal	S-15	2	-	Bagian tersendiri hanya memuat usia, lokasi, ukuran, asal periosteal; tanpa gambaran radiografik.
+osteosarcoma_telangiectatic	S-01	3	-	Hanya disebut sebagai varian berderajat tinggi.
+osteosarcoma_telangiectatic	S-15	1	uraian	Bagian tersendiri: dekade kedua, metafisis, osteolisis multilokuler ekspansil, tepi, periosteal, kemiripan dengan ABC.
+paget_disease	S-01	1	uraian	Fase campuran dan blastik, trabekula kasar, penebalan korteks, pelvis dan tulang panjang; tanpa vertebra/tengkorak.
+periosteal_chondroma	S-01	2	-	Satu penyebutan di daftar lesi jukstakortikal (lokasi saja).
+periosteal_chondroma	S-18	1	uraian	Bagian singkat: periosteum tulang panjang dan falang, scalloping korteks dengan sklerosis, matriks kondroid, ukuran.
+periosteal_chondroma	S-25	1	uraian	Bagian tersendiri: dewasa muda, metafisis tulang panjang dan tangan/kaki, scalloping korteks, matriks kondroid.
+plasmacytoma_myeloma	S-01	1	uraian	Singkat: multifokal >90%, lesi litik, okult sampai 30-50% destruksi; tepi lewat daftar.
+plasmacytoma_myeloma	S-24	2	-	Ulasan MRI: lokasi predileksi dan usia rerata; tanpa gambaran radiografik.
+primary_bone_lymphoma	S-01	1	uraian	Singkat: usia dewasa-lansia, pola permeatif dengan massa jaringan lunak tanpa destruksi; tepi lewat daftar.
+simple_bone_cyst	S-01	1	daftar	Metafisis tulang panjang khas; tampilan lewat daftar (IA, lusen, sentral, scalloping/ekspansi); tanpa usia.
+simple_bone_cyst	S-06	1	uraian	Bagian singkat: usia, metafisis tulang panjang, berkembang ke diafisis; tepi dan periosteal tidak diuraikan.
+skeletal_tuberculosis	S-01	3	-	Satu penyebutan sebagai kategori infeksi.
+stress_fracture	S-01	1	uraian	Satu kalimat: sklerosis dengan reaksi periosteal dan penebalan korteks; tanpa usia dan lokasi.
+vertebral_haemangioma	S-01	3	-	Hemangioma hanya di daftar lesi lusen dan satu gambar femur; tidak ada yang vertebral.
+vertebral_haemangioma	S-19	2	-	Ulasan kalvaria: vertebra disebut lokasi tersering; trabekula menebal diuraikan untuk hemangioma kalvaria.

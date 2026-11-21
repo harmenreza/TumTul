@@ -1,0 +1,211 @@
+# Compact transcription of the coded validation cases v1-v4 (features + reference entity only).
+# Source: claude.ai Project docs data/validation/cases_v1.json ... cases_v4.json (not in the repo).
+# Transcribed by hand for tools/review_scoring.py on 2026-11-21; no evidence text, no patient data beyond what
+# the original coding already holds. The stored rank/score of the reference entity are kept so the script can
+# verify the transcription by re-scoring (rank 0 = reference entity excluded by a hard constraint).
+# If data/validation/cases_v{1..4}.json exist locally, the script uses those instead of this file.
+#
+# Format: case_id | truth_entity_id | T(ypical)/A(typical) | stored_rank | stored_truth_score | features
+# Feature keys: a=age_group m=multiplicity b=bone_class l=longitudinal t=transverse d=density g=margin_lodwick
+#               c=cortex s=soft_tissue_mass p=periosteal x=matrix z=size_cm k=clinical_flags (comma-separated)
+# Value aliases: lb=long_bone hf=small_tubular_hand_foot flat=flat_bone sb=spine_body sp=spine_posterior
+#   cranio=craniofacial epi=epiphysis_apophysis meta=metaphysis md=metadiaphysis dia=diaphysis na=not_applicable
+#   ecc=eccentric jsurf=juxtacortical_surface jcont=juxtacortical_continuous scl=sclerotic
+#   scal=endosteal_scalloping exp=expansion_shell fb=focal_breach destr=destruction sauc=saucerization
+#   solid=solid_thin lam=lamellated spic=spiculated unspec=present_unspecified gg=ground_glass
+#   sol=solitary mult=multiple abs=absent pres=present
+#   night=night_pain_nsaid_relief primary=known_primary_malignancy fever=fever_or_infection_signs
+#   10o=10-19_open 10c=10-19_closed 10u=10-19_unknown
+V1-01|osteosarcoma_conventional|T|1|15|a=10u m=sol b=lb l=meta d=mixed s=pres x=osteoid z=>5
+V1-02|osteosarcoma_telangiectatic|T|4|10|a=0-9 m=sol b=lb l=md d=lytic g=IB c=fb s=pres z=>5
+V1-03|osteosarcoma_parosteal|A|1|9|a=40-59 b=lb l=epi t=jsurf d=scl g=na c=fb s=pres x=osteoid z=>5
+V1-04|osteosarcoma_periosteal|T|1|17|a=10u b=lb l=dia t=jsurf d=mixed g=na s=pres p=spic z=>5
+V1-05|ewing_sarcoma|T|1|12|a=10u m=sol b=lb l=dia g=IC s=pres z=>5
+V1-06|primary_bone_lymphoma|T|2|15|a=60+ m=sol b=lb l=dia d=lytic g=II c=destr s=pres k=primary
+V1-07|giant_cell_tumour_of_bone|T|1|17|a=20-39 m=sol b=lb l=epi d=lytic g=IB c=destr s=pres x=none
+V1-08|aneurysmal_bone_cyst|T|2|12|a=10o m=sol b=lb l=md d=lytic c=exp
+V1-09|chondroblastoma|T|1|15|a=10u m=sol b=lb l=epi d=lytic g=IA c=fb x=none z=<2
+V1-10|chondromyxoid_fibroma|T|1|13|a=20-39 m=sol b=lb l=meta d=lytic g=IA c=scal s=abs z=>5
+V1-11|non_ossifying_fibroma|T|2|16|a=10o m=sol b=lb l=md d=lytic g=IB s=abs p=none x=none z=>5
+V1-12|simple_bone_cyst|T|1|21|a=10u m=sol b=lb l=meta t=central d=lytic g=IB c=exp s=abs p=none
+V1-13|enchondroma|A|2|13|a=40-59 m=sol b=lb l=dia t=ecc d=lytic g=IA c=exp s=abs p=none x=chondroid z=<2
+V1-14|chondrosarcoma_central|T|1|13|a=60+ m=sol b=lb l=dia t=central d=lytic c=scal s=abs p=none x=chondroid
+V1-15|clear_cell_chondrosarcoma|T|2|12|a=40-59 m=sol b=lb l=epi t=ecc d=lytic g=IB c=fb z=>5
+V1-16|osteochondroma|T|1|13|a=20-39 m=sol b=lb l=meta t=jcont d=scl g=na z=2-5
+V1-17|periosteal_chondroma|A|3|7|a=10u m=sol b=lb t=jsurf g=IA s=pres z=>5 c=sauc
+V1-18|bpop_nora_lesion|T|1|12|a=20-39 m=sol b=hf l=na t=jsurf d=scl g=na c=intact z=2-5
+V1-19|osteoid_osteoma|T|1|20|a=20-39 b=lb l=md t=cortical d=mixed g=IA p=solid x=osteoid z=<2 k=night
+V1-20|osteoblastoma|T|1|10|a=10c m=sol b=sp l=na d=lytic g=IA c=fb x=osteoid
+V1-21|fibrous_dysplasia|T|1|17|a=10u m=sol b=lb l=dia d=lytic g=IB c=exp s=abs p=none x=gg z=>5
+V1-22|adamantinoma_ofd_spectrum|T|1|17|a=10u m=sol b=lb l=dia t=cortical d=mixed g=IA c=exp s=abs p=none
+V1-23|desmoplastic_fibroma|T|10|9|a=10u m=sol b=lb l=meta d=lytic c=fb s=abs p=none z=>5
+V1-24|langerhans_cell_histiocytosis|T|1|15|a=0-9 m=sol b=lb l=dia d=lytic g=IB c=fb k=fever p=unspec
+V1-25|bone_metastasis|T|2|12|a=60+ m=sol b=lb d=lytic g=II c=destr s=pres p=unspec
+V1-26|plasmacytoma_myeloma|A|21|7|a=20-39 m=sol b=lb d=lytic g=IB c=intact s=abs p=none
+V1-27|chordoma|T|1|16|a=60+ m=sol b=sacrum l=na t=central d=lytic c=destr s=pres p=none z=>5
+V1-28|osteomyelitis|T|3|13|a=10u m=sol b=lb l=meta d=lytic g=IA c=fb
+V1-29|skeletal_tuberculosis|A|7|8|a=60+ m=sol b=lb l=md t=central d=mixed g=IA k=fever p=unspec
+V1-31|brown_tumour|T|15|5|a=20-39 m=mult b=lb d=lytic c=fb s=pres
+V1-32|intraosseous_lipoma|T|1|13|a=40-59 m=sol b=calcaneus l=na d=lytic g=IB c=intact p=none
+V2-01|osteosarcoma_conventional|T|1|20|a=10o m=sol b=lb l=meta d=mixed c=destr s=pres p=spic x=osteoid
+V2-02|osteosarcoma_conventional|A|7|9|a=10u b=lb l=dia d=lytic c=fb s=pres
+V2-03|osteosarcoma_telangiectatic|T|3|12|a=10c b=lb t=ecc d=lytic g=IC c=exp s=abs p=unspec
+V2-04|osteosarcoma_telangiectatic|A|11|5|a=20-39 b=flat d=lytic c=exp z=>5
+V2-05|ewing_sarcoma|A|1|14|a=20-39 b=lb l=md d=lytic c=fb s=pres z=2-5
+V2-06|ewing_sarcoma|T|1|11|a=0-9 m=sol b=lb l=dia g=III z=>5
+V2-07|primary_bone_lymphoma|T|2|12|a=40-59 m=sol b=lb d=lytic g=II c=destr s=pres
+V2-08|primary_bone_lymphoma|A|5|11|a=20-39 m=sol b=lb d=lytic g=IC c=fb s=pres
+V2-09|osteosarcoma_parosteal|T|1|12|a=20-39 m=sol b=lb t=jsurf d=scl g=na x=osteoid
+V2-10|osteosarcoma_parosteal|T|1|13|a=20-39 m=sol b=lb t=jsurf d=scl g=na c=intact x=osteoid
+V2-11|osteosarcoma_periosteal|A|1|10|a=40-59 m=sol b=lb l=md t=jsurf d=mixed g=na c=intact p=spic z=>5
+V2-12|osteosarcoma_periosteal|T|1|14|a=10o m=sol b=lb t=jsurf d=mixed g=na c=sauc s=pres p=unspec z=>5
+V2-13|periosteal_chondroma|T|1|13|a=10c m=sol b=lb l=meta t=jsurf g=na c=sauc s=abs z=<2
+V2-14|periosteal_chondroma|T|1|10|a=10o m=sol b=hf l=na t=jsurf g=na c=sauc s=pres x=none z=<2
+V2-15|bpop_nora_lesion|A|0|3|a=20-39 m=sol b=hf l=na t=jcont d=scl g=na c=fb x=osteoid z=2-5
+V2-16|bpop_nora_lesion|T|1|11|a=20-39 m=sol b=hf l=na t=jsurf d=scl g=na c=sauc x=osteoid z=2-5
+V2-17|giant_cell_tumour_of_bone|T|1|18|a=40-59 m=sol b=lb l=epi t=ecc d=lytic c=exp s=abs p=none x=none
+V2-18|giant_cell_tumour_of_bone|A|1|17|a=20-39 m=sol b=lb l=epi t=ecc d=lytic g=IC c=destr s=pres p=none
+V2-19|aneurysmal_bone_cyst|T|1|19|a=10o m=sol b=lb l=meta d=lytic g=IB c=exp s=abs x=none
+V2-20|aneurysmal_bone_cyst|A|3|9|a=20-39 m=sol b=calcaneus l=na d=lytic g=IB c=exp
+V2-21|chondroblastoma|T|1|17|a=10u m=sol b=lb l=epi t=ecc d=lytic g=IA x=chondroid
+V2-22|chondroblastoma|T|1|13|a=10o m=sol b=lb l=epi d=lytic g=IA c=exp
+V2-23|clear_cell_chondrosarcoma|T|2|11|a=40-59 m=sol b=lb l=epi d=mixed g=IC c=intact x=chondroid z=2-5
+V2-24|clear_cell_chondrosarcoma|A|3|6|a=60+ m=mult b=lb l=epi s=pres x=chondroid
+V2-25|chondromyxoid_fibroma|A|3|14|a=10o m=sol b=lb l=md d=lytic g=IB c=exp p=lam x=none z=2-5
+V2-26|chondromyxoid_fibroma|T|1|13|a=10u m=sol b=lb d=lytic g=IA c=exp
+V2-27|non_ossifying_fibroma|A|1|14|a=0-9 m=sol b=lb l=dia t=cortical d=lytic g=IA z=<2
+V2-28|non_ossifying_fibroma|T|3|15|a=10u m=sol b=lb l=meta t=ecc d=lytic g=IA c=fb
+V2-29|simple_bone_cyst|T|1|19|a=10o m=sol b=lb l=md t=central d=lytic g=IB c=exp s=abs p=none z=>5
+V2-30|simple_bone_cyst|T|1|15|a=0-9 m=sol b=lb l=md t=central d=lytic c=exp
+V2-31|desmoplastic_fibroma|T|9|10|a=10u m=sol b=lb d=lytic g=IB c=exp p=none z=2-5
+V2-32|desmoplastic_fibroma|A|6|8|a=20-39 m=sol b=flat d=lytic g=IB c=destr s=pres z=>5
+V2-33|enchondroma|T|1|13|a=10u b=hf d=lytic g=IB c=exp p=none x=chondroid z=2-5
+V2-34|enchondroma|A|3|11|a=20-39 b=lb l=epi d=lytic g=IB c=intact s=abs p=none x=chondroid z=2-5
+V2-35|chondrosarcoma_central|A|13|7|a=20-39 b=flat d=lytic g=IB p=none x=none
+V2-36|chondrosarcoma_central|T|1|11|a=60+ b=lb d=lytic c=scal p=unspec x=chondroid
+V2-37|osteochondroma|A|1|8|a=20-39 b=lb t=jcont g=na
+V2-38|osteochondroma|A|1|6|a=0-9 m=sol b=flat t=jcont g=na z=2-5
+V2-39|intraosseous_lipoma|A|7|-1|a=20-39 b=lb t=cortical d=scl g=IA x=gg z=2-5
+V2-40|intraosseous_lipoma|A|23|4|a=20-39 b=lb l=dia d=lytic
+V2-41|osteoid_osteoma|T|1|14|a=10o m=sol b=lb l=dia d=mixed g=IA z=<2
+V2-42|osteoid_osteoma|T|3|12|a=10u m=sol b=lb l=meta d=mixed g=IA k=night
+V2-43|osteoblastoma|A|2|8|a=10u m=sol b=sp d=lytic c=exp s=pres
+V2-44|osteoblastoma|A|1|9|a=20-39 m=sol b=flat d=scl g=na c=exp s=abs p=none x=osteoid z=2-5
+V2-45|fibrous_dysplasia|T|1|15|a=20-39 m=sol b=lb l=meta d=lytic g=IA c=exp x=gg
+V2-46|fibrous_dysplasia|A|1|7|a=60+ m=sol b=flat t=central c=exp s=abs x=gg z=>5
+V2-47|adamantinoma_ofd_spectrum|T|1|10|a=40-59 m=sol b=lb l=dia d=lytic g=IB c=exp p=solid
+V2-48|adamantinoma_ofd_spectrum|T|11|8|a=10u m=sol b=lb l=md t=ecc d=lytic c=exp
+V2-49|langerhans_cell_histiocytosis|A|2|16|a=0-9 m=sol b=lb l=md t=central d=lytic g=IB c=fb s=pres p=unspec z=2-5
+V2-50|langerhans_cell_histiocytosis|T|3|7|a=20-39 m=sol b=clavicle d=lytic g=IB c=scal
+V2-51|vertebral_haemangioma|T|13|0|a=10c m=sol b=sb d=lytic c=exp s=pres
+V2-52|vertebral_haemangioma|T|8|3|a=40-59 m=sol b=sb s=pres
+V2-53|chordoma|T|1|13|a=40-59 m=sol b=sacrum d=lytic c=destr s=pres z=>5
+V2-54|chordoma|T|1|12|a=20-39 m=sol b=sb d=lytic c=destr s=pres x=none
+V2-55|plasmacytoma_myeloma|T|7|9|a=60+ m=sol b=lb l=meta d=lytic c=fb s=pres
+V2-56|plasmacytoma_myeloma|T|3|9|a=40-59 m=sol b=sb d=lytic s=pres
+V2-57|bone_metastasis|A|1|15|a=40-59 m=mult b=lb l=epi d=lytic c=destr z=2-5 k=primary
+V2-58|bone_metastasis|T|10|7|a=20-39 m=mult b=lb l=md d=lytic s=pres
+V2-59|osteomyelitis|A|14|8|a=20-39 m=sol b=lb l=md t=ecc d=lytic g=IB c=scal s=abs z=2-5
+V2-60|osteomyelitis|A|8|9|a=10u m=sol b=lb l=dia d=lytic g=IB c=fb s=pres z=>5
+V2-61|skeletal_tuberculosis|A|2|12|a=20-39 m=sol b=lb l=epi t=ecc d=lytic c=fb s=pres p=none
+V2-62|skeletal_tuberculosis|T|5|11|a=60+ m=sol b=lb l=meta d=lytic g=IB c=fb s=pres p=unspec z=2-5 k=fever
+V2-63|brown_tumour|A|13|6|a=40-59 m=mult b=lb l=md t=central d=lytic c=destr s=pres z=>5
+V2-64|brown_tumour|T|3|8|a=40-59 m=mult b=lb d=lytic
+V2-65|bone_infarct|A|1|6|a=40-59 m=sol b=lb l=dia
+V2-66|bone_infarct|T|2|13|a=20-39 m=mult b=lb t=central d=mixed g=IA
+V2-67|paget_disease|A|5|7|a=60+ m=sol b=lb l=epi d=lytic
+V2-68|paget_disease|T|2|10|a=60+ m=mult b=sb l=na d=scl g=na c=exp
+V2-69|enostosis|A|4|7|a=60+ m=sol b=sb l=na t=central d=scl g=na z=2-5 k=primary
+V2-70|enostosis|A|1|7|a=20-39 m=mult b=hf l=na d=scl g=na
+V2-71|stress_fracture|T|6|4|a=40-59 m=sol b=flat l=na d=scl g=na
+V2-72|stress_fracture|T|2|11|a=0-9 m=sol b=lb l=dia t=cortical s=abs p=unspec
+V2-73|intraosseous_ganglion_geode|T|2|11|a=10o m=sol b=lb l=epi d=lytic g=IA z=<2
+V2-74|intraosseous_ganglion_geode|A|0|3|a=40-59 m=sol b=lb l=epi d=lytic g=IC c=fb s=pres x=none z=2-5
+V3-01|giant_cell_tumour_of_bone|A|4|8|a=60+ b=lb l=epi d=lytic g=IC s=abs
+V3-02|giant_cell_tumour_of_bone|A|9|5|a=40-59 b=flat l=na d=lytic c=fb
+V3-03|giant_cell_tumour_of_bone|T|1|18|a=40-59 b=lb l=epi t=ecc d=lytic g=IB s=pres x=none
+V3-04|giant_cell_tumour_of_bone|A|3|7|a=20-39 b=sb l=na d=lytic s=pres
+V3-05|chondroblastoma|T|4|10|a=10u b=lb d=lytic g=IA
+V3-06|chondroblastoma|A|0|-6|a=10u b=lb c=destr s=pres p=unspec z=>5
+V3-07|clear_cell_chondrosarcoma|A|1|12|a=40-59 m=mult b=lb l=epi d=lytic c=exp s=abs x=chondroid z=2-5
+V3-08|osteosarcoma_conventional|A|7|8|a=40-59 m=sol b=lb d=lytic c=destr s=pres p=unspec z=>5 k=fever
+V3-09|osteosarcoma_conventional|A|0|1|a=0-9 m=sol b=lb l=meta d=lytic g=IA c=fb p=none z=2-5
+V3-10|osteosarcoma_conventional|A|20|4|a=10u b=lb l=dia d=lytic p=solid
+V3-11|osteosarcoma_conventional|A|11|6|a=20-39 b=lb d=lytic g=IC
+V3-12|ewing_sarcoma|A|2|8|a=10c m=sol b=calcaneus l=na d=lytic g=IC s=pres k=fever
+V3-13|ewing_sarcoma|A|1|17|a=10o b=cranio l=na d=lytic g=II c=fb s=pres p=spic
+V3-14|osteosarcoma_parosteal|A|2|12|a=40-59 b=lb l=meta t=jsurf g=na c=intact p=none x=osteoid z=>5
+V3-15|bone_metastasis|A|3|5|a=20-39 m=mult b=sb l=na s=pres
+V3-16|bone_metastasis|A|10|5|a=20-39 m=mult b=flat l=na d=lytic k=fever
+V3-17|bone_metastasis|A|1|8|a=60+ m=sol b=lb l=dia d=lytic
+V3-18|bone_metastasis|T|1|10|a=60+ m=mult b=lb d=lytic
+V3-19|plasmacytoma_myeloma|A|3|11|a=60+ m=mult b=lb l=md d=lytic c=exp z=>5
+V3-20|plasmacytoma_myeloma|T|2|8|a=40-59 m=mult d=lytic
+V3-21|plasmacytoma_myeloma|T|2|8|a=40-59 m=mult d=lytic
+V3-22|chordoma|A|0|-2|a=20-39 b=lb l=meta d=lytic g=IA c=sauc x=none z=>5
+V3-23|chordoma|T|1|13|a=40-59 b=sacrum l=na d=lytic c=destr s=pres z=>5
+V3-24|chondrosarcoma_central|A|2|13|a=60+ b=lb l=epi d=mixed g=IC c=fb s=pres k=primary
+V3-25|chondrosarcoma_central|A|2|5|a=20-39 l=na d=scl c=destr s=pres z=>5
+V3-26|chondrosarcoma_central|T|2|9|a=40-59 m=sol b=flat l=na d=lytic c=destr
+V3-27|enchondroma|T|7|9|a=40-59 b=lb l=meta d=lytic g=IB c=scal
+V3-28|enchondroma|T|1|12|a=20-39 b=hf l=na d=lytic g=IB c=exp x=chondroid
+V3-29|osteochondroma|T|1|8|a=20-39 b=flat l=na t=jcont c=intact s=abs
+V3-30|osteochondroma|T|1|6|a=0-9 b=flat l=na t=jcont
+V3-31|periosteal_chondroma|T|2|10|a=10u b=lb t=jsurf d=lytic x=chondroid z=2-5
+V3-32|non_ossifying_fibroma|A|9|11|a=20-39 b=lb l=meta d=lytic g=IA c=fb p=none z=>5
+V3-33|non_ossifying_fibroma|A|13|7|a=20-39 b=lb t=ecc d=lytic g=IA c=fb p=unspec z=>5
+V3-34|simple_bone_cyst|A|0|1|a=60+ b=lb d=lytic
+V3-35|simple_bone_cyst|A|5|10|a=20-39 m=sol b=lb d=lytic g=IB c=scal p=none
+V3-36|aneurysmal_bone_cyst|A|2|8|a=10u b=lb d=lytic
+V3-37|aneurysmal_bone_cyst|A|9|5|a=20-39 b=clavicle d=lytic g=IA c=scal z=2-5
+V3-38|chondromyxoid_fibroma|A|3|9|a=20-39 m=sol b=clavicle t=ecc d=lytic g=IB p=none z=>5
+V3-39|desmoplastic_fibroma|T|3|8|a=10o b=cranio d=lytic g=IB c=fb z=2-5
+V3-40|fibrous_dysplasia|T|1|10|a=20-39 b=lb g=IB c=exp x=gg
+V3-41|fibrous_dysplasia|A|6|13|a=20-39 b=lb l=md t=central d=lytic g=IB c=exp z=2-5
+V3-42|osteoid_osteoma|A|7|7|a=10u b=hf l=na t=cortical d=lytic g=IB p=none
+V3-43|osteoblastoma|A|8|5|a=10u b=lb l=dia t=jsurf p=unspec s=pres
+V3-44|adamantinoma_ofd_spectrum|A|6|10|a=0-9 b=lb l=dia d=lytic c=exp p=none s=abs
+V3-45|langerhans_cell_histiocytosis|T|5|7|a=0-9 m=mult b=lb c=exp s=abs k=fever
+V3-46|bpop_nora_lesion|A|0|-3|a=60+ b=hf l=na t=jsurf d=lytic s=pres
+V3-47|osteomyelitis|A|6|7|a=60+ b=lb l=dia d=lytic p=unspec
+V3-48|osteomyelitis|A|7|6|a=10u b=lb t=cortical p=unspec z=>5
+V3-49|skeletal_tuberculosis|T|1|7|a=20-39 m=mult b=sb k=fever
+V3-50|skeletal_tuberculosis|T|7|5|a=60+ b=sb d=lytic
+V3-51|primary_bone_lymphoma|T|5|8|a=40-59 b=lb d=mixed g=II c=destr
+V3-52|primary_bone_lymphoma|T|10|5|a=20-39 m=sol b=lb d=lytic c=destr
+V4-01|osteosarcoma_conventional|T|1|10|a=10o b=lb d=mixed p=codman
+V4-02|osteosarcoma_conventional|T|1|11|a=10u b=lb d=scl g=IC p=spic
+V4-03|osteosarcoma_telangiectatic|T|3|13|a=10u b=lb l=meta t=central d=lytic p=lam
+V4-04|osteosarcoma_telangiectatic|T|3|15|a=10u b=lb l=md t=ecc d=lytic c=fb s=pres p=codman
+V4-05|ewing_sarcoma|T|2|7|a=10u m=sol b=flat l=na d=lytic
+V4-06|ewing_sarcoma|T|1|11|a=10o b=lb l=dia p=lam
+V4-07|primary_bone_lymphoma|A|31|2|a=20-39 b=lb
+V4-09|osteosarcoma_parosteal|T|4|7|a=20-39 b=lb l=dia t=jsurf x=osteoid
+V4-10|osteosarcoma_parosteal|T|2|12|a=10u b=lb l=meta t=jsurf c=intact d=mixed x=osteoid
+V4-11|osteosarcoma_periosteal|T|1|10|a=10u b=lb l=md t=jsurf p=unspec
+V4-13|periosteal_chondroma|A|1|9|a=40-59 b=hf t=jsurf c=sauc x=chondroid
+V4-17|giant_cell_tumour_of_bone|T|1|12|a=20-39 b=lb l=epi d=lytic c=destr s=pres
+V4-19|aneurysmal_bone_cyst|T|5|11|a=0-9 b=lb l=md d=lytic c=scal x=none
+V4-27|non_ossifying_fibroma|T|1|14|a=0-9 b=lb t=ecc d=lytic g=IA
+V4-28|non_ossifying_fibroma|T|1|16|a=10c b=lb l=meta t=cortical d=lytic g=IA k=fever
+V4-29|simple_bone_cyst|T|4|7|a=0-9 b=lb l=dia
+V4-30|simple_bone_cyst|T|2|6|a=0-9 b=lb
+V4-33|enchondroma|T|3|8|a=40-59 b=lb l=meta x=chondroid
+V4-35|chondrosarcoma_central|T|1|6|a=60+ b=lb c=scal
+V4-36|chondrosarcoma_central|T|1|10|a=40-59 b=lb l=meta x=chondroid
+V4-37|osteochondroma|T|1|7|a=10u b=flat l=na t=jcont
+V4-39|intraosseous_lipoma|T|3|10|a=60+ b=lb d=lytic g=IA p=none s=abs
+V4-41|osteoid_osteoma|T|1|12|a=20-39 b=lb l=dia t=cortical p=unspec
+V4-42|osteoid_osteoma|T|1|6|a=0-9 b=sp l=na d=scl
+V4-43|osteoblastoma|T|3|6|a=0-9 b=sp l=na d=lytic c=exp
+V4-47|adamantinoma_ofd_spectrum|A|13|4|a=0-9 b=lb d=lytic c=fb
+V4-49|langerhans_cell_histiocytosis|T|1|5|a=0-9 b=sb l=na
+V4-57|bone_metastasis|T|1|10|a=40-59 b=lb d=lytic k=primary
+V4-59|osteomyelitis|T|6|6|a=20-39 b=lb d=lytic
+V4-60|osteomyelitis|T|6|6|a=10u b=lb d=scl p=unspec
+V4-61|skeletal_tuberculosis|T|4|4|a=0-9 b=sb s=pres
+V4-63|brown_tumour|T|1|8|a=60+ m=mult b=hf d=lytic
+V4-64|brown_tumour|T|7|7|a=20-39 m=sol b=cranio d=lytic g=IA c=exp
+V4-71|stress_fracture|T|4|5|a=20-39 b=lb
+V4-72|stress_fracture|T|9|4|a=60+ m=mult b=sacrum
+V4-73|intraosseous_ganglion_geode|T|1|13|a=60+ m=mult b=lb l=epi d=lytic g=IA
