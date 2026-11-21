@@ -98,7 +98,118 @@ OVERRIDES = {
             ("cortex", "focal_breach"): ["S-32"],           # direction only
         },
     },
+    # KB 0.6.2, approved 2026-11-22: S-33 (Kitajima 2018, single case with a general description; read in full).
+    # Supported claims only. Because the source is a case report, direction-only claims are left uncited
+    # (see docs/USULAN-SUMBER-v0.7.md D3).
+    "osteosarcoma_periosteal": {
+        "add": {
+            ("age_group", "10-19_unknown"): ["S-33"],
+            ("age_group", "10-19_open"): ["S-33"],
+            ("age_group", "10-19_closed"): ["S-33"],
+            ("age_group", "20-39"): ["S-33"],
+            ("bone_class", "long_bone"): ["S-33"],
+            ("longitudinal", "diaphysis"): ["S-33"],
+            ("transverse", "juxtacortical_surface"): ["S-33"],
+            ("cortex", "saucerization"): ["S-33"],
+            ("soft_tissue_mass", "present"): ["S-33"],
+            ("periosteal", "spiculated"): ["S-33"],
+            ("matrix", "chondroid"): ["S-33"],
+        },
+    },
+    # KB 0.6.2, approved 2026-11-22: S-34 (Nedopil 2013, case plus literature review) and S-35 (Stefanidis 2011,
+    # single case); both read in full. Supported claims only (see docs/USULAN-SUMBER-v0.7.md D1).
+    "desmoplastic_fibroma": {
+        "add": {
+            ("age_group", "20-39"): ["S-34", "S-35"],
+            ("age_group", "10-19_unknown"): ["S-34", "S-35"],
+            ("age_group", "10-19_open"): ["S-34", "S-35"],
+            ("age_group", "10-19_closed"): ["S-34", "S-35"],
+            ("bone_class", "long_bone"): ["S-34", "S-35"],
+            ("bone_class", "flat_bone"): ["S-34", "S-35"],
+            ("bone_class", "craniofacial"): ["S-34", "S-35"],
+            ("longitudinal", "metaphysis"): ["S-34"],
+            ("density", "lytic"): ["S-34", "S-35"],
+            ("cortex", "focal_breach"): ["S-34", "S-35"],
+        },
+    },
+    # KB 0.6.3, approved 2026-11-22: S-36 (Rivas-Garcia 2013, imaging review of Pott's disease with a 48-patient
+    # series; read in full from the owner's PDF; cite_only, no CC licence). Supported claims only
+    # (see docs/USULAN-SUMBER-v0.7.md F1).
+    "skeletal_tuberculosis": {
+        "add": {
+            ("age_group", "40-59"): ["S-36"],
+            ("bone_class", "spine_body"): ["S-36"],
+            ("density", "lytic"): ["S-36"],
+            ("density", "mixed"): ["S-36"],
+            ("density", "sclerotic"): ["S-36"],
+            ("cortex", "destruction"): ["S-36"],
+            ("soft_tissue_mass", "present"): ["S-36"],
+            ("multiplicity", "multiple"): ["S-36"],
+        },
+    },
 }
+
+# KB 0.6.4, approved 2026-11-22. Supported claims only (see docs/USULAN-SUMBER-v0.7.md H1, H2).
+# Skeletal tuberculosis: S-37 Pattamapaspong 2024 (cite_only), S-38 Abid 2024 (cite_only), S-39 Semionov 2022 (CC BY 4.0).
+# Desmoplastic fibroma: S-40 Frick 2005 (cite_only), S-41 Ipponi 2025 (CC BY 4.0).
+def _merge(entity_id, table):
+    add = OVERRIDES.setdefault(entity_id, {}).setdefault("add", {})
+    for key, codes in table.items():
+        cur = add.setdefault(key, [])
+        for c in codes:
+            if c not in cur:
+                cur.append(c)
+
+_merge("skeletal_tuberculosis", {
+    ("age_group", "0-9"): ["S-37", "S-38"],
+    ("age_group", "10-19_unknown"): ["S-37"],
+    ("age_group", "10-19_open"): ["S-37"],
+    ("age_group", "10-19_closed"): ["S-37"],
+    ("age_group", "20-39"): ["S-37"],
+    ("age_group", "40-59"): ["S-37"],
+    ("age_group", "60+"): ["S-37"],
+    ("bone_class", "spine_body"): ["S-37", "S-38", "S-39"],
+    ("bone_class", "long_bone"): ["S-37", "S-38", "S-39"],
+    ("bone_class", "small_tubular_hand_foot"): ["S-38", "S-39"],
+    ("bone_class", "flat_bone"): ["S-39"],
+    ("longitudinal", "metaphysis"): ["S-37", "S-38", "S-39"],
+    ("longitudinal", "epiphysis_apophysis"): ["S-37", "S-38"],
+    ("longitudinal", "diaphysis"): ["S-38"],
+    ("density", "lytic"): ["S-37", "S-38"],
+    ("density", "mixed"): ["S-37", "S-38"],
+    ("density", "sclerotic"): ["S-37", "S-39"],
+    ("margin_lodwick", "IA"): ["S-37", "S-38"],
+    ("margin_lodwick", "IB"): ["S-38"],
+    ("margin_lodwick", "II"): ["S-37"],
+    ("cortex", "destruction"): ["S-37", "S-38"],
+    ("cortex", "focal_breach"): ["S-38"],
+    ("cortex", "expansion_shell"): ["S-38"],
+    ("soft_tissue_mass", "present"): ["S-37", "S-38", "S-39"],
+    ("periosteal", "none"): ["S-37", "S-38", "S-39"],
+    ("periosteal", "present_unspecified"): ["S-38"],
+    ("multiplicity", "multiple"): ["S-37", "S-38"],
+})
+_merge("desmoplastic_fibroma", {
+    ("age_group", "20-39"): ["S-40", "S-41"],
+    ("age_group", "10-19_unknown"): ["S-41"],
+    ("age_group", "10-19_open"): ["S-41"],
+    ("age_group", "10-19_closed"): ["S-41"],
+    ("bone_class", "long_bone"): ["S-40", "S-41"],
+    ("bone_class", "flat_bone"): ["S-40", "S-41"],
+    ("bone_class", "craniofacial"): ["S-40", "S-41"],
+    ("longitudinal", "metaphysis"): ["S-40"],
+    ("longitudinal", "metadiaphysis"): ["S-40"],
+    ("longitudinal", "diaphysis"): ["S-40"],
+    ("transverse", "central"): ["S-40"],
+    ("transverse", "eccentric"): ["S-40"],
+    ("density", "lytic"): ["S-40", "S-41"],
+    ("density", "sclerotic"): ["S-40"],
+    ("margin_lodwick", "IB"): ["S-40", "S-41"],
+    ("margin_lodwick", "IC"): ["S-40"],
+    ("cortex", "focal_breach"): ["S-40"],
+    ("cortex", "endosteal_scalloping"): ["S-40", "S-41"],
+    ("matrix", "none"): ["S-40"],
+})
 
 
 def strip_sources(obj):

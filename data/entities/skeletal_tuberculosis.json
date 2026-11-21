@@ -7,50 +7,63 @@
  "definition_id": "Infeksi granulomatosa kronik tulang, tersering spondilitis (Pott) dengan keterlibatan paradiskal dan abses dingin; di tulang panjang destruksi litik yang melintasi fisis dengan sklerosis reaktif dan reaksi periosteal yang mencolok sedikit. Penting di wilayah endemik.",
  "source_ids": [
   "S-01",
-  "S-10"
+  "S-10",
+  "S-36",
+  "S-37",
+  "S-38",
+  "S-39"
  ],
  "feature_weights": {
   "age_group": {
    "0-9": {
     "weight": 1,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-37",
+     "S-38"
     ]
    },
    "20-39": {
     "weight": 2,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-37"
     ]
    },
    "40-59": {
     "weight": 2,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-36",
+     "S-37"
     ]
    },
    "60+": {
     "weight": 1,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-37"
     ]
    },
    "10-19_unknown": {
     "weight": 1,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-37"
     ]
    },
    "10-19_open": {
     "weight": 1,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-37"
     ]
    },
    "10-19_closed": {
     "weight": 1,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-37"
     ]
    }
   },
@@ -58,27 +71,37 @@
    "spine_body": {
     "weight": 2,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-36",
+     "S-37",
+     "S-38",
+     "S-39"
     ],
     "note_id": "Spondilitis TB: korpus berdekatan dengan destruksi diskus dan abses paravertebral"
    },
    "long_bone": {
     "weight": 1,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-37",
+     "S-38",
+     "S-39"
     ]
    },
    "small_tubular_hand_foot": {
     "weight": 1,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-38",
+     "S-39"
     ],
     "note_id": "Dactylitis TB (spina ventosa) pada anak"
    },
    "flat_bone": {
     "weight": 1,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-39"
     ]
    },
    "sacrum": {
@@ -92,20 +115,26 @@
    "epiphysis_apophysis": {
     "weight": 2,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-37",
+     "S-38"
     ],
     "note_id": "Dapat melintasi fisis seperti abses Brodie"
    },
    "metaphysis": {
     "weight": 2,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-37",
+     "S-38",
+     "S-39"
     ]
    },
    "diaphysis": {
     "weight": 0,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-38"
     ]
    }
   },
@@ -145,21 +174,30 @@
    "lytic": {
     "weight": 2,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-36",
+     "S-37",
+     "S-38"
     ],
     "note_id": "Destruksi dengan sedikit sklerosis reaktif"
    },
    "mixed": {
     "weight": 1,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-36",
+     "S-37",
+     "S-38"
     ],
     "note_id": "Bentuk kronik dapat campuran dengan sklerosis"
    },
    "sclerotic": {
     "weight": -2,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-36",
+     "S-37",
+     "S-39"
     ]
    }
   },
@@ -167,7 +205,8 @@
    "IB": {
     "weight": 1,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-38"
     ]
    },
    "IC": {
@@ -179,7 +218,8 @@
    "II": {
     "weight": 1,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-37"
     ]
    },
    "III": {
@@ -191,7 +231,9 @@
    "IA": {
     "weight": 1,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-37",
+     "S-38"
     ],
     "note_id": "TB kronik dapat berbatas sklerotik dan meniru abses Brodie"
    }
@@ -200,13 +242,17 @@
    "destruction": {
     "weight": 2,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-36",
+     "S-37",
+     "S-38"
     ]
    },
    "focal_breach": {
     "weight": 1,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-38"
     ]
    },
    "intact": {
@@ -218,7 +264,8 @@
    "expansion_shell": {
     "weight": 1,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-38"
     ],
     "note_id": "Spina ventosa: ekspansi diafisis tulang tubular kecil"
    }
@@ -227,7 +274,11 @@
    "present": {
     "weight": 1,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-36",
+     "S-37",
+     "S-38",
+     "S-39"
     ],
     "note_id": "Abses dingin, kadang berkalsifikasi, tidak proporsional dengan nyeri/tanda radang"
    }
@@ -236,14 +287,18 @@
    "none": {
     "weight": 2,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-37",
+     "S-38",
+     "S-39"
     ],
     "note_id": "Reaksi periosteal yang minimal adalah ciri pembeda dari osteomielitis piogenik"
    },
    "present_unspecified": {
     "weight": 0,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-38"
     ],
     "note_id": "Reaksi periosteal ringan dapat dijumpai pada TB tulang panjang"
    },
@@ -302,7 +357,10 @@
    "multiple": {
     "weight": 1,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-36",
+     "S-37",
+     "S-38"
     ]
    }
   },

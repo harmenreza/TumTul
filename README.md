@@ -201,6 +201,12 @@ KB 0.6.0 in numbers: 1584 weighted claims (192 at +3, 248 at +2, 382 at +1, 179 
 - [x] KB 0.6.1 (2026-11-22, sources only, scores identical to 0.6.0): CMF claims re-cited from S-06 to S-18;
       S-31 and S-32 (two CC BY spine reviews) registered and cited for chordoma and vertebral haemangioma (32 sources);
       prototype republished
+- [x] KB 0.6.2 (2026-11-22, sources only, scores identical to 0.6.0): S-33 (periosteal osteosarcoma) and S-34, S-35
+      (desmoplastic fibroma) registered and cited on supported claims only (35 sources); prototype republished
+- [x] KB 0.6.3 (2026-11-22, sources only, scores identical to 0.6.0): S-36 (spinal tuberculosis imaging review,
+      cite-only) registered and cited on 8 skeletal-tuberculosis claims (36 sources); prototype republished
+- [x] KB 0.6.4 (2026-11-22, sources only, scores identical to 0.6.0): S-37 to S-39 (skeletal tuberculosis) and S-40,
+      S-41 (desmoplastic fibroma) registered and cited on supported claims only (41 sources); prototype republished
 - [ ] Sources: find open-access radiographic sources for chordoma, desmoplastic fibroma,
       skeletal tuberculosis, vertebral haemangioma, periosteal osteosarcoma and the S-01-only entities (H-26)
 - [ ] Owner to assess the review's hypotheses (which to keep, drop or reword) before any is taken into v0.7

@@ -80,6 +80,21 @@ Dua tampilan referensi sistem skor. Keduanya hanya membaca; bobot, entitas, fitu
    - Dua poster EPOS utama sudah disaring lewat ringkasan halaman (C-13882 untuk osteosarkoma periosteal: 10 dari 38
      klaim didukung; C-1421 untuk TB: 4 dari 45). Tulisan lisensi terbuka tidak terlihat di halamannya: `cite_only`
      sampai dipastikan. Belum didaftarkan.
+   - **KB 0.6.2 (sumber saja)**: S-33 (Kitajima 2018) pada 11 klaim Periosteal osteosarcoma, termasuk
+     `cortex:saucerization`; S-34 (Nedopil 2013) dan S-35 (Stefanidis 2011) pada 10 dan 9 klaim Desmoplastic
+     fibroma. Hanya klaim berstatus "didukung" yang dikutip, karena ketiganya laporan kasus. Registri 0.4.0,
+     35 sumber. Prototipe publik versi artifact 18. Revell 2002 sengaja **tidak** didaftarkan (keputusan pemilik).
+     Ciri spondilitis TB (diskus, segmen berurutan, abses paraspinal berkalsifikasi) tidak ada dalam skema fitur
+     (pengamatan, skema tidak diubah).
+   - **KB 0.6.3 (sumber saja)**: S-36 (Rivas-Garcia 2013, `cite_only`, dibaca penuh dari PDF pemilik) pada 8 klaim
+     Skeletal tuberculosis. Registri 0.5.0, 36 sumber. Prototipe publik versi artifact 19. Liu 2015 dibaca penuh dan
+     sengaja **tidak** didaftarkan (bertentangan dengan dirinya sendiri). KB 0.6.2 dan 0.6.3 masuk GitHub lewat
+     pull request #2.
+   - **KB 0.6.4 (sumber saja)**: S-37, S-38 (`cite_only`), S-39 (CC BY 4.0) untuk Skeletal tuberculosis (27 dari 45
+     klaim kini bersumber khusus); S-40 (`cite_only`), S-41 (CC BY 4.0) untuk Desmoplastic fibroma (19 dari 43).
+     Registri 0.6.0, 41 sumber. Prototipe publik versi artifact 20. Masuk GitHub lewat pull request #2 bersama 0.6.2 dan 0.6.3.
+     Masih tanpa sumber: reaksi periosteal Desmoplastic fibroma; matriks dan sebagian `transverse` TB.
+     Kandidat hipotesis baru (belum diterapkan) ada di `docs/USULAN-SUMBER-v0.7.md` bagian (h).
    - Berkas entitas di proyek berformat indent 2; di repo indent 1. Ubah lewat `.project_out/` seperti sesi ini, atau
      bangun ulang dari generator lalu jalankan `tools/apply_source_overrides.py`.
    - Bagian C (usulan): poster EPOS. ECR 2014+ berlisensi terbuka non-komersial berbagi-serupa; sebelum itu

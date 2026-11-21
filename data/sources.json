@@ -587,6 +587,167 @@
    "used_for": [
     "vertebral haemangioma: vertebral body, coarse vertical trabeculae, aggressive variant"
    ]
+  },
+  {
+   "id": "S-33",
+   "type": "journal_article",
+   "title": "Usefulness of Quantitative Bone Single Photon Emission Computed Tomography/Computed Tomography for Evaluating Response to Neoadjuvant Chemotherapy in a Patient with Periosteal Osteosarcoma",
+   "authors": "Kitajima K, Futani H, Fujiwara M, et al.",
+   "journal": "Cureus 10(11):e3655",
+   "year": 2018,
+   "doi": "10.7759/cureus.3655",
+   "pmid": "30723654",
+   "pmcid": "PMC6351107",
+   "url": "https://doi.org/10.7759/cureus.3655",
+   "license": "CC BY 3.0",
+   "license_status": "verified",
+   "license_note": "Metadata PMC (diperiksa 2026-11-22): CC BY 3.0, '© 2018, Kitajima et al.'. Fakta dinyatakan ulang saja.",
+   "evidence_level": "single case report with a general description of the radiological appearance (secondary citation)",
+   "used_for": [
+    "periosteal osteosarcoma: age, femur/tibia, diaphyseal surface lesion, cortical saucerisation, perpendicular periosteal reaction, chondroid matrix"
+   ]
+  },
+  {
+   "id": "S-34",
+   "type": "journal_article",
+   "title": "Desmoplastic Fibroma: A Case Report with Three Years of Clinical and Radiographic Observation and Review of the Literature",
+   "authors": "Nedopil A, Raab P, Rudert M",
+   "journal": "The Open Orthopaedics Journal 7:40",
+   "year": 2013,
+   "doi": "10.2174/1874325001307010040",
+   "pmid": "23459513",
+   "pmcid": "PMC3583030",
+   "url": "https://doi.org/10.2174/1874325001307010040",
+   "license": "CC BY-NC 3.0",
+   "license_status": "verified",
+   "license_note": "Metadata PMC (diperiksa 2026-11-22): CC BY-NC 3.0. Non-commercial licence — same governance flag as S-13 and S-23. Fakta dinyatakan ulang saja.",
+   "evidence_level": "case report with literature review (271 published cases summarised)",
+   "used_for": [
+    "desmoplastic fibroma: age, mandible / long-bone metaphysis / pelvis, lytic lesion, frequency of cortical breakthrough"
+   ]
+  },
+  {
+   "id": "S-35",
+   "type": "journal_article",
+   "title": "Computed tomography and magnetic resonance imaging of desmoplastic fibroma with simultaneous manifestation in two unusual locations: a case report",
+   "authors": "Stefanidis K, Benakis S, Tsatalou E, et al.",
+   "journal": "Journal of Medical Case Reports 5:28",
+   "year": 2011,
+   "doi": "10.1186/1752-1947-5-28",
+   "pmid": "21261947",
+   "pmcid": "PMC3033348",
+   "url": "https://doi.org/10.1186/1752-1947-5-28",
+   "license": "CC BY 2.0",
+   "license_status": "verified",
+   "license_note": "Metadata PMC (diperiksa 2026-11-22): CC BY 2.0, '© 2011 Stefanidis et al; licensee BioMed Central Ltd.'. Fakta dinyatakan ulang saja.",
+   "evidence_level": "single case report (CT and MRI) with brief literature summary",
+   "used_for": [
+    "desmoplastic fibroma: age, site distribution, lytic expansile lesion with cortical breakthrough"
+   ]
+  },
+  {
+   "id": "S-36",
+   "type": "journal_article",
+   "title": "Imaging findings of Pott's disease",
+   "authors": "Rivas-Garcia A, Sarria-Estrada S, Torrents-Odin C, Casas-Gomila L, Franquet E",
+   "journal": "European Spine Journal 22(Suppl 4):S567-S578",
+   "year": 2013,
+   "doi": "10.1007/s00586-012-2333-9",
+   "pmid": "22684257",
+   "pmcid": "PMC3691403",
+   "url": "https://doi.org/10.1007/s00586-012-2333-9",
+   "license": "cite-only",
+   "license_status": "cite_only",
+   "license_note": "PDF: '© Springer-Verlag 2012', tanpa lisensi CC (bebas dibaca di PMC). Rujukan bibliografis saja; fakta dinyatakan ulang, tidak ada yang direproduksi.",
+   "evidence_level": "imaging review with a retrospective series of 48 patients (31 radiographic and 37 CT studies)",
+   "used_for": [
+    "tuberculous spondylitis: vertebral body, age, lytic destruction with late sclerosis, paraspinal abscess, multilevel involvement"
+   ]
+  },
+  {
+   "id": "S-37",
+   "type": "journal_article",
+   "title": "Imaging of musculoskeletal tuberculosis",
+   "authors": "Pattamapaspong N, Kanthawang T, Bouaziz MC, Ladeb MF, Hammami N, Peh WCG",
+   "journal": "BJR (British Journal of Radiology) 97(1153):1-12",
+   "year": 2024,
+   "doi": "10.1093/bjr/tqad019",
+   "url": "https://doi.org/10.1093/bjr/tqad019",
+   "license": "cite-only",
+   "license_status": "cite_only",
+   "license_note": "PDF: '© The Author(s) 2023. Published by Oxford University Press on behalf of the British Institute of Radiology. All rights reserved.' Rujukan bibliografis saja; fakta dinyatakan ulang.",
+   "evidence_level": "narrative imaging review (spinal and extra-spinal)",
+   "used_for": [
+    "skeletal tuberculosis: age, spine, long-bone metaphysis, transphyseal spread, lytic lesions with sclerotic rim, soft-tissue abscess and calcification, multifocal disease"
+   ]
+  },
+  {
+   "id": "S-38",
+   "type": "journal_article",
+   "title": "Imaging of musculoskeletal tuberculosis",
+   "authors": "Abid W, Ladeb MF, Chidambaranathan N, Peh WCG, Vanhoenacker FM",
+   "journal": "Skeletal Radiology (online 2024)",
+   "year": 2024,
+   "doi": "10.1007/s00256-023-04556-5",
+   "url": "https://doi.org/10.1007/s00256-023-04556-5",
+   "license": "cite-only",
+   "license_status": "cite_only",
+   "license_note": "Dibaca dari versi penulis (peer-reviewed author version) di repositori IRUA, https://hdl.handle.net/10067/2024200151162165141; tidak ada lisensi terbuka pada berkas. Rujukan bibliografis saja; fakta dinyatakan ulang.",
+   "evidence_level": "narrative imaging review (spine, joints, osteomyelitis, dactylitis, soft tissue)",
+   "used_for": [
+    "skeletal tuberculosis: osteomyelitis of long bones, dactylitis, transphyseal spread, cortical expansion, periosteal reaction, multifocal disease in children"
+   ]
+  },
+  {
+   "id": "S-39",
+   "type": "journal_article",
+   "title": "Tuberculosis: A Head to Toe Radiological Review",
+   "authors": "Semionov A, Lebel K, Diouf A, Pressacco J",
+   "journal": "Open Journal of Radiology 12(4):207-221",
+   "year": 2022,
+   "doi": "10.4236/ojrad.2022.124021",
+   "url": "https://doi.org/10.4236/ojrad.2022.124021",
+   "license": "CC BY 4.0",
+   "license_status": "verified",
+   "license_note": "PDF: 'This work is licensed under the Creative Commons Attribution International License (CC BY 4.0)' (Scientific Research Publishing). Bagian muskuloskeletal singkat.",
+   "evidence_level": "pictorial review of tuberculosis in all organ systems; short musculoskeletal section",
+   "used_for": [
+    "skeletal tuberculosis: spine, long-bone metaphysis, pelvis, hands and feet, relative lack of periostitis and sclerosis"
+   ]
+  },
+  {
+   "id": "S-40",
+   "type": "journal_article",
+   "title": "Imaging findings in desmoplastic fibroma of bone: distinctive T2 characteristics",
+   "authors": "Frick MA, Sundaram M, Unni KK, Inwards CY, Fabbri N, Trentani F, Baccini P, Bertoni F",
+   "journal": "AJR American Journal of Roentgenology 184(6):1762-1767",
+   "year": 2005,
+   "pmid": "15908527",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/15908527/",
+   "license": "cite-only",
+   "license_status": "cite_only",
+   "license_note": "PDF: '© American Roentgen Ray Society', 'For personal use only; all rights reserved'. Rujukan bibliografis saja; fakta dinyatakan ulang.",
+   "evidence_level": "retrospective two-centre series, 95 patients; 38 radiographs, 17 CT, 14 MRI reviewed",
+   "used_for": [
+    "desmoplastic fibroma: age, site within bone, lytic lesion with coarse trabeculae, margins, cortical breach, no mineralised matrix"
+   ]
+  },
+  {
+   "id": "S-41",
+   "type": "journal_article",
+   "title": "Desmoplastic Fibromas of the Bone: A Systematic Review of Clinical Presentation and Surgical Treatment",
+   "authors": "Ipponi E, Pecchia F, Toumie S, D'Arienzo A, Parchi PD, Andreani L",
+   "journal": "Cancers 17(21):3558",
+   "year": 2025,
+   "doi": "10.3390/cancers17213558",
+   "url": "https://doi.org/10.3390/cancers17213558",
+   "license": "CC BY 4.0",
+   "license_status": "verified",
+   "license_note": "PDF: '© 2025 by the authors. Licensee MDPI', Creative Commons Attribution (CC BY) 4.0.",
+   "evidence_level": "systematic review, 187 surgically treated cases from 97 articles (case series and case reports)",
+   "used_for": [
+    "desmoplastic fibroma: age, skeletal distribution, radiographic summary"
+   ]
   }
  ]
 }

@@ -7,7 +7,11 @@
  "definition_id": "Padanan intraoseus fibromatosis desmoid; tumor fibrosa agresif lokal yang langka pada dewasa muda, tampak litik ekspansil dengan pseudotrabekulasi kasar.",
  "source_ids": [
   "S-01",
-  "S-13"
+  "S-13",
+  "S-34",
+  "S-35",
+  "S-40",
+  "S-41"
  ],
  "feature_weights": {
   "age_group": {
@@ -20,7 +24,11 @@
    "20-39": {
     "weight": 3,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-34",
+     "S-35",
+     "S-40",
+     "S-41"
     ]
    },
    "40-59": {
@@ -38,19 +46,28 @@
    "10-19_unknown": {
     "weight": 2,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-34",
+     "S-35",
+     "S-41"
     ]
    },
    "10-19_open": {
     "weight": 2,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-34",
+     "S-35",
+     "S-41"
     ]
    },
    "10-19_closed": {
     "weight": 2,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-34",
+     "S-35",
+     "S-41"
     ]
    }
   },
@@ -58,21 +75,33 @@
    "long_bone": {
     "weight": 2,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-34",
+     "S-35",
+     "S-40",
+     "S-41"
     ],
     "note_id": "Femur, tibia, humerus"
    },
    "flat_bone": {
     "weight": 2,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-34",
+     "S-35",
+     "S-40",
+     "S-41"
     ],
     "note_id": "Pelvis"
    },
    "craniofacial": {
     "weight": 2,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-34",
+     "S-35",
+     "S-40",
+     "S-41"
     ],
     "note_id": "Mandibula"
    },
@@ -87,19 +116,23 @@
    "metaphysis": {
     "weight": 2,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-34",
+     "S-40"
     ]
    },
    "metadiaphysis": {
     "weight": 2,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-40"
     ]
    },
    "diaphysis": {
     "weight": 1,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-40"
     ]
    },
    "epiphysis_apophysis": {
@@ -113,13 +146,15 @@
    "central": {
     "weight": 2,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-40"
     ]
    },
    "eccentric": {
     "weight": 1,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-40"
     ]
    },
    "cortical": {
@@ -145,7 +180,11 @@
    "lytic": {
     "weight": 3,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-34",
+     "S-35",
+     "S-40",
+     "S-41"
     ]
    },
    "mixed": {
@@ -157,7 +196,8 @@
    "sclerotic": {
     "weight": -5,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-40"
     ]
    }
   },
@@ -165,13 +205,16 @@
    "IB": {
     "weight": 2,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-40",
+     "S-41"
     ]
    },
    "IC": {
     "weight": 1,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-40"
     ]
    },
    "IA": {
@@ -203,13 +246,18 @@
    "focal_breach": {
     "weight": 1,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-34",
+     "S-35",
+     "S-40"
     ]
    },
    "endosteal_scalloping": {
     "weight": 1,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-40",
+     "S-41"
     ]
    },
    "destruction": {
@@ -270,7 +318,8 @@
    "none": {
     "weight": 3,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-40"
     ]
    },
    "osteoid": {
