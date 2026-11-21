@@ -1,112 +1,59 @@
-# Serah terima sesi skoring — 2026-11-21
+# Serah terima — keadaan per 2026-11-22 (KB 0.6.4)
 
 Dokumen ini untuk memulai sesi baru tanpa kehilangan konteks. Baca bersama `claude/README.md`, `claude/CHANGELOG.md`
 dan `docs/HANDOFF-UI.md` (pekerjaan UI; masih berlaku, langkah berikutnya di sana belum dikerjakan).
 
-## Yang dikerjakan di sesi ini
+## 1. Ringkas
 
-Dua tampilan referensi sistem skor. Keduanya hanya membaca; bobot, entitas, fitur, UI aplikasi dan skema data
-**tidak berubah** (KB tetap 0.6.0, skema v1.1.0, aturan isian v0.6.3).
+- **KB 0.6.4.** Sejak 0.6.0 hanya daftar sumber (`source_ids`) dan `data/sources.json` yang berubah. Bobot, prior,
+  aturan, fitur, dan UI **identik dengan 0.6.0** (aturan isian v0.6.3, tema v0.6.7).
+- **41 sumber** (S-01 … S-41): 31 `verified`, 10 `cite_only`.
+- Dua tinjauan selesai dan **tidak diterapkan**: tinjauan skor (34 hipotesis) dan pemeriksaan sumber teks lengkap.
+- GitHub `harmenreza/TumTul`, prototipe publik, matriks skor, dan proyek semuanya di KB 0.6.4.
+- Skema data **v1.2.0** sejak 2026-11-22 (tiga nilai lisensi ditambahkan; lihat §2). `validate_kb.py` lolos.
 
-1. **Diagram alur skor** (Whiteboard "TumTul scoring flow"): https://claude.ai/artifact/DajnwWgBN7vsYrBBA2SKqF
-   - Kiri ke kanan: fitur pembaca → aturan isian UI → dua jalur.
-   - Sumbu A: 4 fitur, 0–9 poin, tiga kelas (0–1 non-agresif, 2–3 indeterminate, ≥4 agresif).
-   - Sumbu B: skor 37 entitas (prior + bobot fitur + aturan) → ada bobot −5? → ya: daftar disingkirkan (tetap
-     ditampilkan dengan alasan; maks. 3 baris abu-abu di daftar utama) / tidak: daftar kompatibel (5 teratas + semua
-     yang seri dengan peringkat 5, maks. 10; seri berbagi peringkat).
-   - Warna: biru = masukan pembaca, peach = dihitung aplikasi, abu-abu = disingkirkan, kuning = tampil di layar.
-   - Digambar tangan dari `docs/SKEMA-DIAGNOSIS.md` §4 dan `web/template.html`. Tabel poin Sumbu A dan nilai prior
-     tidak ada di papan. Belum dilihat hasil rendernya oleh Claude; blok atau panah mungkin perlu digeser.
-2. **Matriks skor lengkap** (artifact "TumTul scoring matrix"): https://claude.ai/artifact/Do4A9wGh2uZFZzU9UxN8yv
-   - 37 entitas (baris) × 62 nilai fitur (kolom), bobot berwarna +3 … −5, kolom prior prevalensi.
-   - Di bawah matriks: 5 aturan khusus, prior per kelas, tabel poin Sumbu A.
-   - Ketuk sel: catatan (bahasa Indonesia, apa adanya dari KB) dan kode sumber. Ketuk nama entitas: prior, ciri khas
-     (+3), jumlah hard constraint dan aturan.
-   - Saring menurut perilaku; urut menurut kelompok WHO, nama, atau jumlah hard constraint.
-   - Label dan judul berbahasa Inggris; tema Negatoskop, terang dan gelap.
-   - Nilai `not_applicable` tidak digambar (4 klaim, semuanya 0).
+## 2. Sudah selesai: enum lisensi di skema (skema v1.2.0)
 
-3. **Tinjauan skor KB 0.6.0** (atas permintaan pemilik; dikerjakan satu agen terpisah dengan effort tinggi, diperiksa
-   sesi utama): `docs/TINJAUAN-SKOR-v0.6.md`.
-   - Tinjauan konsistensi dan kewajaran, **bukan validasi; tidak ada yang diterapkan.**
-   - Hasil: 34 hipotesis v0.7 (H-01 … H-34) dan 7 opsi tingkat skema (S-1 … S-7, perlu persetujuan pemilik).
-   - Temuan utama: temuan normal (`cortex:intact`, `periosteal:none`, `matrix:none`) berbobot +3 pada 16 klaim (H-01);
-     over-calling CMF dan GCTB bersifat struktural (H-02, H-03); plafon skor 14–26; 65 hard constraint meragukan dan
-     8 tidak konsisten dari 322 (H-06 … H-18); `ground_glass` menyingkirkan 27 dari 37 entitas; aturan jaringan lunak
-     Ewing/limfoma selalu menyala lewat `focal_breach` (H-05); 41,7% klaim hanya mengutip S-01, dan 44 dari 46 klaim
-     CMF mengutip S-06 yang tidak membahas CMF (H-26).
-   - Berkas: `tools/review_scoring.py` (± 2 menit; mencetak semua angka laporan),
-     `docs/tinjauan-skor-v0.6-hard-constraints.csv`, `tools/review_cases_v1_v4.txt`. Keluaran lengkap skrip (138 KB)
-     tidak disimpan; buat ulang dengan `python3 tools/review_scoring.py > docs/tinjauan-skor-v0.6-keluaran.txt`.
-   - Yang belum diperiksa siapa pun selain agen peninjau: klasifikasi a/b/c tiap hard constraint, 48 vinyet buatan,
-     simulasi input jarang, dan sebagian besar uji petik sumber. S-18 dan lima sumber lain tidak dibaca.
-   - **Langkah berikutnya ada pada pemilik:** menilai hipotesis mana yang dipertahankan, dibuang atau diubah. H-02 dan
-     H-03 harus diuji sebelum hard constraint CMF dilonggarkan. H-22, H-26, H-27, H-28, H-34 tidak memerlukan penilaian
-     klinis (konsistensi, sumber, teks alasan), tetapi tetap perubahan KB dan belum dikerjakan.
+Tiga sumber yang didaftarkan sesi ini (S-33 `CC BY 3.0`, S-34 `CC BY-NC 3.0`, S-35 `CC BY 2.0`) memakai nilai lisensi
+di luar enum skema v1.1.0, sehingga `tools/validate_kb.py` gagal dengan 3 kesalahan. Penyebabnya: validator dan skema
+hanya ada di proyek, dan tidak dijalankan sebelum sumber didaftarkan.
 
-4. **Pemeriksaan sumber teks lengkap** (2026-11-22; agen terpisah effort tinggi, diperiksa sesi utama):
-   `docs/TINJAUAN-SUMBER-v0.6.md`. Menjawab apakah sumber yang DIKUTIP mendukung klaimnya, bukan apakah bobotnya benar
-   secara klinis. **Tidak ada yang diterapkan; `data/sources.json` tidak diubah.**
-   - Dibaca penuh: 14 artikel dari PubMed Central dan S-18 dari PDF kiriman pemilik. Hanya S-21 yang belum dibaca.
-   - 312 klaim diperiksa. Set D (40 klaim acak, satu-satunya yang tak bias): 9 didukung, 11 sebagian, 20 tidak
-     ditemukan. Set B (192 klaim +3): 107 / 51 / 34. Set A (73 hard constraint bertanda): 3 / 28 / 39, dan 3 bertentangan.
-   - Bertentangan dengan sumbernya sendiri: Chondroblastoma `soft_tissue_mass:present` −5 (S-06), Fibrous dysplasia
-     `margin_lodwick:IC` −5 (S-22), Telangiectatic osteosarcoma `margin_lodwick:IA` −5 (S-15).
-   - Tanpa sumber radiografik sama sekali: Chordoma, Desmoplastic fibroma, Skeletal tuberculosis. Hanya lokasi:
-     Vertebral haemangioma, Periosteal osteosarcoma. S-18 memuat bagian CMF tetapi hanya dikutip 1 dari 46 klaim CMF.
-   - Hipotesis: H-06, H-08 (osteomielitis), H-09, H-10, H-11, H-12 (telangiektatik), H-14, H-16, H-26 dikuatkan;
-     H-13 (BPOP `juxtacortical_continuous`) dan H-15 (bobotnya) dilemahkan.
-   - Berkas: `tools/review_sources.py`, `tools/review_source_evidence.tsv`, `tools/review_source_coverage.tsv`,
-     `docs/tinjauan-sumber-v0.6.csv`. PDF S-18 tidak disimpan di proyek (hanya dibaca di sesi); minta lagi ke pemilik
-     bila perlu, atau pakai DOI 10.1067/j.cpradiol.2023.01.005.
-   - Belum diperiksa siapa pun selain agen: vonis yang bersandar pada 12 sumber selain S-06 dan S-18; isi gambar
-     (S-01 Fig. 1 dan 3) tidak terbaca oleh konektor.
-   - **Langkah berikutnya yang tidak butuh penilaian klinis:** mengutip ulang klaim CMF ke S-18; mencari sumber
-     radiografik berlisensi terbuka untuk entitas tanpa sumber. Keduanya mengubah KB, jadi menunggu keputusan pemilik.
+Pemilik menyetujui perubahan skema pada 2026-11-22: ketiga nilai itu ditambahkan ke enum `license`
+(`schema/kb-schema.json` **v1.2.0**; tidak ada perubahan lain, tidak ada berkas data yang berubah). Kini
+`validate_kb.py` mencetak OK (37 entitas, 1584 klaim, 5 aturan) dan `score_smoke.py` mencetak 20/20 (19 langsung,
+ditambah satu seri yang disengaja: vinyet osteomielitis seri dengan Ewing, dihitung sebagai peringkat pertama).
 
-5. **Usulan perbaikan sumber** (2026-11-22, menunggu keputusan pemilik; belum diterapkan): `docs/USULAN-SUMBER-v0.7.md`.
-   - Bagian A **disetujui pemilik dan diterapkan sebagai KB 0.6.1 (sumber saja)**: S-06 dihapus dari 44 klaim CMF,
-     S-18 ditambah pada 19. Skor identik dengan 0.6.0. Diterapkan lewat `tools/apply_source_overrides.py` (jalankan
-     setelah generator; `--check` untuk memeriksa). `tools/build_web.py` kini `kb_version` 0.6.1 dan `web/index.html`
-     sudah dibangun ulang. **Prototipe publik sudah diterbitkan ulang** atas izin pemilik (versi artifact 17; slug
-     `68353c8b-eab6-4b88-b328-135642ca0238`, status publik; hanya `index.html` yang dikirim, mode patch, setelah
-     SHA-256 `index.html` terbitan dicocokkan dengan build repo sebelumnya). Salinan `web/index.html` di proyek masih
-     build 0.6.0.
-   - Bagian B2 **disetujui dan diterapkan (tetap KB 0.6.1)**: S-31 dan S-32 (dua ulasan Ariyaratne dkk. 2023) terdaftar
-     di `data/sources.json` (registri 0.3.0; salinan proyek memuat `registry_version`, `updated`, `note`, sedangkan
-     salinan repo hanya `sources` — jangan menimpa salinan proyek dengan salinan repo). S-31 pada 20 klaim Chordoma,
-     S-32 pada 8 klaim Vertebral haemangioma. Kandidat hipotesis baru, belum diterapkan: haemangioma
-     `cortex:destruction` −5 → −2; Chordoma `matrix:none` +2 diturunkan.
-   - Dua poster EPOS utama sudah disaring lewat ringkasan halaman (C-13882 untuk osteosarkoma periosteal: 10 dari 38
-     klaim didukung; C-1421 untuk TB: 4 dari 45). Tulisan lisensi terbuka tidak terlihat di halamannya: `cite_only`
-     sampai dipastikan. Belum didaftarkan.
-   - **KB 0.6.2 (sumber saja)**: S-33 (Kitajima 2018) pada 11 klaim Periosteal osteosarcoma, termasuk
-     `cortex:saucerization`; S-34 (Nedopil 2013) dan S-35 (Stefanidis 2011) pada 10 dan 9 klaim Desmoplastic
-     fibroma. Hanya klaim berstatus "didukung" yang dikutip, karena ketiganya laporan kasus. Registri 0.4.0,
-     35 sumber. Prototipe publik versi artifact 18. Revell 2002 sengaja **tidak** didaftarkan (keputusan pemilik).
-     Ciri spondilitis TB (diskus, segmen berurutan, abses paraspinal berkalsifikasi) tidak ada dalam skema fitur
-     (pengamatan, skema tidak diubah).
-   - **KB 0.6.3 (sumber saja)**: S-36 (Rivas-Garcia 2013, `cite_only`, dibaca penuh dari PDF pemilik) pada 8 klaim
-     Skeletal tuberculosis. Registri 0.5.0, 36 sumber. Prototipe publik versi artifact 19. Liu 2015 dibaca penuh dan
-     sengaja **tidak** didaftarkan (bertentangan dengan dirinya sendiri). KB 0.6.2 dan 0.6.3 masuk GitHub lewat
-     pull request #2.
-   - **KB 0.6.4 (sumber saja)**: S-37, S-38 (`cite_only`), S-39 (CC BY 4.0) untuk Skeletal tuberculosis (27 dari 45
-     klaim kini bersumber khusus); S-40 (`cite_only`), S-41 (CC BY 4.0) untuk Desmoplastic fibroma (19 dari 43).
-     Registri 0.6.0, 41 sumber. Prototipe publik versi artifact 20. Masuk GitHub lewat pull request #2 bersama 0.6.2 dan 0.6.3.
-     Masih tanpa sumber: reaksi periosteal Desmoplastic fibroma; matriks dan sebagian `transverse` TB.
-     Kandidat hipotesis baru (belum diterapkan) ada di `docs/USULAN-SUMBER-v0.7.md` bagian (h).
-   - Berkas entitas di proyek berformat indent 2; di repo indent 1. Ubah lewat `.project_out/` seperti sesi ini, atau
-     bangun ulang dari generator lalu jalankan `tools/apply_source_overrides.py`.
-   - Bagian C (usulan): poster EPOS. ECR 2014+ berlisensi terbuka non-komersial berbagi-serupa; sebelum itu
-     `cite_only`. Kandidat utama: ECR 2019 C-1421 (TB) dan ECR 2022 C-13882 (osteosarkoma permukaan). Belum dibaca penuh.
-     Bagian poster dapat dibuka di alamat `…/<nomor>/findings%20and%20procedure%20details`.
-   - Bagian B (**belum selesai**): kandidat utama untuk Chordoma dan Vertebral haemangioma adalah dua ulasan
-     Ariyaratne dkk. 2023 di Diagnostics (CC BY 4.0), baru dibaca abstraknya. Belum ada sumber memadai untuk
-     Desmoplastic fibroma, Skeletal tuberculosis, Periosteal osteosarcoma.
-   - Langkah berikutnya: baca teks lengkap kedua ulasan itu (PMC10217758, PMC10297602) dan periksa klaimnya; lakukan
-     pencarian khusus untuk tiga entitas sisanya. Halaman PMC menolak WebFetch berulang; pakai konektor PubMed.
+Skema, `validate_kb.py`, dan `score_smoke.py` sudah ada di repo GitHub. Kedua skrip diketik ulang dari salinan proyek
+dan diverifikasi dengan menjalankannya, bukan dengan pembandingan bita; salinan proyek tetap yang asli. **Generator
+(`build_entities_batch1.py`, `build_entities_batch2.py`) belum ada di repo**: terlalu panjang untuk diketik ulang
+dengan aman (memuat semua bobot). Cara aman: pemilik mengunduh keduanya dari proyek dan melampirkannya, lalu disalin
+apa adanya.
 
-## Angka KB 0.6.0 (dicetak oleh `tools/build_matrix.py`)
+## 3. Di mana semuanya
+
+| Benda | Lokasi | Keadaan |
+|---|---|---|
+| Repo | https://github.com/harmenreza/TumTul (PR #1 dan #2 digabung; PR #3 memuat skema v1.2.0, validator, dan dokumen ini) | KB 0.6.4 |
+| Prototipe publik | https://claude.ai/artifact/DsM6XAJos65GTAABAw79AX (slug `68353c8b-eab6-4b88-b328-135642ca0238`, publik) | versi artifact 20, KB 0.6.4 |
+| Matriks skor | https://claude.ai/artifact/Do4A9wGh2uZFZzU9UxN8yv (slug `679bd2cb-b6e3-4dc5-a635-9ee1979562f9`, pribadi) | versi 6, KB 0.6.4 |
+| Papan alur skor | https://claude.ai/artifact/DajnwWgBN7vsYrBBA2SKqF (slug `65e39472-dfa7-4d0c-a96a-de524e17838e`) | digambar tangan; tidak berubah |
+| Proyek claude.ai | dokumen proyek ini | data, tools, docs, dan `web/index.html` di KB 0.6.4 |
+
+**Hanya ada di proyek, tidak di repo GitHub** (diperiksa 2026-11-22): `schema/kb-schema.draft.json`,
+`tools/build_entities_batch1.py`, `tools/build_entities_batch2.py`, `tools/validate_cases.py`, `tools/build_form.py`, `tools/sample_size_p1.py`, `web/form_template.html`, seluruh
+`data/validation/`, serta `docs/SKEMA-DIAGNOSIS.md`, `docs/VALIDASI-*`, `docs/validation-brief*`,
+`docs/FORMULIR-KASUS-PRAKTIK.md`, `docs/PROPOSAL-VALIDASI-PRAKTIK.md`. Ambil dengan `project_read` bila perlu.
+Skema, validator, dan uji asap sudah masuk repo (PR #3); generator dan data validasi belum.
+
+**Hanya ada di repo, tidak di proyek:** `web/matrix.html` (hasil build), `web/img/` (66 gambar),
+`docs/tinjauan-skor-v0.6-keluaran.txt` dan `docs/tinjauan-sumber-v0.6-keluaran.txt` (keluaran skrip tinjauan),
+serta folder kandidat gambar (`candidates/`, `candidates_pmc/`, `hires/`, `pool_sizes/`).
+
+**Ada di keduanya:** `data/entities/`, `data/features.json`, `data/images.json`, `data/sources.json`, `tools/` lain,
+`web/template.html`, `web/index.html`, `web/matrix_template.html`, dokumen tinjauan dan usulan, README, LICENSES,
+CHANGELOG (di proyek ketiganya berada di `claude/`).
+
+## 4. Angka KB (dicetak `tools/build_matrix.py`; tidak berubah sejak 0.6.0)
 
 | Butir | Jumlah |
 |---|---|
@@ -119,41 +66,104 @@ Dua tampilan referensi sistem skor. Keduanya hanya membaca; bobot, entitas, fitu
 
 Bila angka ini berbeda setelah build ulang, KB sudah berubah: periksa CHANGELOG sebelum menerbitkan.
 
-## Berkas baru
+## 5. Yang dikerjakan (2026-11-21 dan 22)
 
-- `tools/build_matrix.py` — `python3 tools/build_matrix.py [root] [keluaran] [templat]`; bawaan: `web/matrix_template.html`
-  → `web/matrix.html`. Berhenti bila ada nilai fitur, kelompok WHO atau perilaku yang tidak dikenal (tambahkan
-  labelnya di `SHORT`, `VS`, `GROUPS`, `BEH`; ini teks tampilan, di luar skema data).
-- `web/matrix_template.html` — templat halaman; data disisipkan pada `/*DATA*/`, angka pada `{{entities}}` dst.
-- `web/matrix.html` adalah hasil build dan tidak disimpan di proyek.
+1. **Dua tampilan referensi skor** (hanya membaca): papan alur dan matriks 37 entitas × 62 nilai fitur
+   (`tools/build_matrix.py`, `web/matrix_template.html`). Label matriks berbahasa Inggris, tema Negatoskop.
+2. **Tinjauan skor KB 0.6.0** — `docs/TINJAUAN-SKOR-v0.6.md`: 34 hipotesis v0.7 (H-01 … H-34) dan 7 opsi skema
+   (S-1 … S-7). Temuan utama: temuan normal berbobot +3 pada 16 klaim (H-01); over-calling CMF dan GCTB struktural
+   (H-02, H-03); 65 hard constraint meragukan dan 8 tidak konsisten dari 322; `ground_glass` menyingkirkan 27 dari 37
+   entitas; 41,7% klaim hanya mengutip S-01. Dikerjakan agen terpisah; klasifikasi a/b/c, vinyet, dan simulasi belum
+   diperiksa siapa pun selain agen itu.
+3. **Pemeriksaan sumber teks lengkap** — `docs/TINJAUAN-SUMBER-v0.6.md`: pada sampel acak 40 klaim, 9 didukung, 11
+   sebagian, 20 tidak ditemukan. Bertentangan dengan sumbernya sendiri: Chondroblastoma `soft_tissue_mass:present`
+   −5 (S-06), Fibrous dysplasia `margin_lodwick:IC` −5 (S-22), Telangiectatic osteosarcoma `margin_lodwick:IA` −5
+   (S-15). Dokumen ini menggambarkan KB 0.6.0; `tools/review_sources.py` berhenti pada baris CMF bila dijalankan
+   pada 0.6.1 ke atas (memang diharapkan).
+4. **Perbaikan sumber, KB 0.6.1 → 0.6.4** — rincian dan vonis per klaim di `docs/USULAN-SUMBER-v0.7.md` (bagian A
+   sampai (i)). Semua lewat `tools/apply_source_overrides.py`; bobot terbukti identik setiap kali.
 
-## Yang belum dilakukan
+| KB | Sumber baru | Entitas | Klaim yang dikutip |
+|---|---|---|---|
+| 0.6.1 | S-18 menggantikan S-06 | Chondromyxoid fibroma | S-06 dihapus dari 44, S-18 pada 19 |
+| 0.6.1 | S-31 Ariyaratne 2023 (CC BY 4.0) | Chordoma | 20 (11 didukung, 9 arah saja) |
+| 0.6.1 | S-32 Ariyaratne 2023 (CC BY 4.0) | Vertebral haemangioma | 8 (3 dan 5) |
+| 0.6.2 | S-33 Kitajima 2018 (CC BY 3.0) | Periosteal osteosarcoma | 11, termasuk `cortex:saucerization` |
+| 0.6.2 | S-34 Nedopil 2013 (CC BY-NC 3.0), S-35 Stefanidis 2011 (CC BY 2.0) | Desmoplastic fibroma | 10 dan 9 |
+| 0.6.3 | S-36 Rivas-Garcia 2013 (`cite_only`) | Skeletal tuberculosis | 8 |
+| 0.6.4 | S-37 Pattamapaspong 2024, S-38 Abid 2024 (`cite_only`), S-39 Semionov 2022 (CC BY 4.0) | Skeletal tuberculosis | 20, 18, 8 (27 dari 45 klaim kini bersumber khusus) |
+| 0.6.4 | S-40 Frick 2005 (`cite_only`), S-41 Ipponi 2025 (CC BY 4.0) | Desmoplastic fibroma | 16, 10 (19 dari 43) |
 
-- **Berkas baru belum didorong ke GitHub** `harmenreza/TumTul`; saat ini hanya ada di proyek. Sesi baru yang mengklon
-  repo harus mengambil berkas matriks dan berkas tinjauan dari proyek (`project_read`) atau mendorongnya dulu atas izin
-  pemilik.
-- README di repo juga belum memuat perubahan sesi ini (salinan proyek sudah).
-- Matriks belum ditautkan dari prototipe aplikasi atau dari tab Tentang.
-- Tidak ada versi berbahasa Indonesia dari matriks.
+Kebiasaan pengutipan: untuk S-31 dan S-32 (ulasan pencitraan) klaim "arah saja" ikut dikutip; sejak S-33 hanya klaim
+"didukung" yang dikutip.
 
-## Aturan tetap
+**Dibaca tetapi sengaja tidak didaftarkan:** Revell 2002 (keputusan pemilik), Liu 2015 (bertentangan dengan dirinya
+sendiri), Mittal 2016 (MRI TB atipikal), Butt 2025 (tuberkuloma jaringan lunak), Sindhura 2026 (tanpa lisensi, tidak
+menambah), Khan 2012 (tidak relevan untuk celah; gambarnya CC BY 3.0 dan mungkin layak ditinjau untuk galeri), dua
+poster EPOS (C-1421, C-13882; lisensi terbuka belum terlihat di halamannya). PDF kiriman pemilik tidak disimpan di
+proyek.
 
-Sama dengan `docs/HANDOFF-UI.md`: alat referensi/edukasi, bukan alat diagnostik; tidak pernah satu diagnosis; alasan
-dan sumber selalu tampil; tidak menganalisis gambar, tidak menyimpan data pasien; tanya pemilik sebelum mengubah skema
-data; README, LICENSES, CHANGELOG diperbarui setiap perubahan. Matriks tidak boleh disertai klaim akurasi: bobot belum
-memenuhi kriteria uji terdaftar v3 dan v4.
+## 6. Keputusan yang menunggu pemilik
 
-## Cara bekerja di sesi baru
+1. **Generator ke repo**: lampirkan `build_entities_batch1.py` dan `build_entities_batch2.py` dari proyek agar dapat
+   disalin apa adanya (§2).
+2. **Hipotesis H-01 … H-34**: mana yang dipertahankan, dibuang, atau diubah. H-02 dan H-03 harus diuji sebelum hard
+   constraint CMF dilonggarkan. Bobot dibekukan oleh protokol validasi; hipotesis diuji pada kasus praktik, bukan
+   disetel ke kasus v1–v4.
+3. **Kandidat hipotesis baru dari pembacaan sumber** (belum bernomor, belum diterapkan):
+   - Vertebral haemangioma `cortex:destruction` −5 → −2 (hemangioma agresif; S-32).
+   - Chordoma `matrix:none` +2 diturunkan (kalsifikasi berbintik sering; S-31).
+   - Skeletal tuberculosis: `periosteal:lamellated` −2 dinaikkan (khas pada anak); `soft_tissue_mass:present` +1 dan
+     `bone_class:spine_body` +2 terlalu rendah; `margin_lodwick:IC` +2 berbanding `IA`/`IB` +1 ditinjau;
+     `clinical_flags:fever_or_infection_signs` +2 mungkin terlalu tinggi di luar tulang belakang.
+   - Desmoplastic fibroma: `longitudinal:epiphysis_apophysis` −2 dinaikkan (5 dari 27, lebih sering daripada
+     diafisis); `margin_lodwick:IA` 0 dinaikkan (tepi sklerotik 46%); `cortex:expansion_shell` +2 ditinjau;
+     `soft_tissue_mass:present` 0 dan `cortex:focal_breach` +1 mungkin terlalu rendah.
+   - Periosteal osteosarcoma: diafisis berbanding metafisis. S-15 dan S-33 mendukung diafisis atau metadiafisis;
+     seri Revell hanya 6 dari 17 di tengah batang. Belum ada alasan mengubah bobot.
+4. **Opsi skema untuk spondilitis TB**: penyempitan diskus, keterlibatan segmen berurutan, dan massa paraspinal
+   berkalsifikasi adalah ciri kunci menurut S-36, S-37, S-38, dan tidak ada dalam skema fitur. Pengamatan saja.
+5. **Lisensi dua poster EPOS**: perlu dipastikan di halaman posternya sebelum didaftarkan.
+6. Yang lama dan masih terbuka: langkah UI no. 2 di `docs/HANDOFF-UI.md`; keputusan pada proposal validasi praktik.
 
-- Klon `harmenreza/TumTul` (publik); berkas KB ada di `data/`. Salinan proyek dan repo README/CHANGELOG identik sampai
-  commit b37defc (2026-11-19); perubahan 2026-11-21 hanya ada di proyek.
-- Setelah bobot, entitas atau nilai fitur berubah: `python3 tools/build_matrix.py`, cocokkan angka, lalu terbitkan
-  ulang `web/matrix.html` sebagai `index.html` ke artifact yang sama (slug `679bd2cb-b6e3-4dc5-a635-9ee1979562f9`).
-- Papan alur diubah langsung di Whiteboard (slug `65e39472-dfa7-4d0c-a96a-de524e17838e`); baca seluruh papan sebelum
-  mengubahnya.
-- Uji tanpa kepala (Playwright, 400 px terang dan gelap) sebelum menerbitkan.
+## 7. Celah sumber yang tersisa
 
-## Kalimat pembuka yang disarankan untuk sesi baru
+- Desmoplastic fibroma: seluruh `periosteal` (5 klaim) dan `matrix:ground_glass`.
+- Skeletal tuberculosis: seluruh `matrix`, sebagian `transverse`, `periosteal:spiculated`, `codman`.
+- Periosteal osteosarcoma: `periosteal:codman`, `lamellated`, seluruh `density`.
+- Vertebral haemangioma: usia dan tepi (23 dari 32 klaim tidak dibahas S-32).
+- Entitas yang hanya mengutip S-01 (H-26) belum disentuh.
 
-> Lanjutkan TumTul dari `docs/HANDOFF-SKORING.md` dan `docs/HANDOFF-UI.md`. Dorong berkas matriks ke repo, lalu
-> kerjakan langkah UI no. 2 (Sumbu B sebagai lembar film); buat mockup dulu untuk saya setujui.
+## 8. Cara bekerja di sesi baru
+
+- **Repo**: klon `harmenreza/TumTul`. Untuk mendorong, repo harus ditambahkan ke sesi dengan akses tulis (pemilik
+  memberi akses GitHub); selalu lewat cabang dan pull request, pemilik yang menggabung.
+- **Urutan build**: `build_entities_batch2.py` → `apply_source_overrides.py` → `validate_kb.py` → `score_smoke.py`
+  (20/20, termasuk satu seri yang disengaja) → `build_web.py` → `build_matrix.py`. Generator hanya ada di proyek.
+  Generator menghasilkan keadaan sumber 0.6.0; `apply_source_overrides.py` mengembalikannya ke 0.6.4
+  (`--check` untuk memeriksa). Jalur dari keluaran generator ini belum diuji ulang sejak 0.6.1.
+- **Jalankan `validate_kb.py` sebelum mendaftarkan sumber atau mengubah KB.** Pelajaran sesi ini (§2).
+- **Format berkas**: entitas di proyek indent 2 dengan baris baru di akhir; di repo indent 1 tanpa baris baru.
+  `data/sources.json` di proyek memuat `registry_version` (kini 0.6.0), `updated`, `note`; di repo hanya `sources`.
+  Jangan menimpa salinan proyek dengan salinan repo; serialkan ulang (sesi ini memakai folder `.project_out/`).
+- **Menulis ke proyek**: dokumen yang sudah ada harus dibaca dulu dengan `project_read` di percakapan yang sama.
+  README, LICENSES, CHANGELOG ada di `claude/`.
+- **Menerbitkan**: prototipe publik dikirim hanya `index.html`, mode patch, dengan `shared_live: "public"` dan judul
+  artifact "TumTul"; matriks dikirim `web/matrix.html` sebagai `index.html`. Uji tanpa kepala pada 400 px dulu.
+- **Mencari dan membaca sumber**: konektor PubMed (teks penuh hanya untuk sebagian PMC; wajib menyebut PubMed dan
+  menautkan DOI), SciSpace (pencarian), EPOS lewat alamat `…/<nomor>/findings%20and%20procedure%20details`.
+  Halaman PMC menolak pengambilan berulang. Cara paling andal: pemilik melampirkan PDF.
+- **Vonis pemeriksaan sumber**: didukung / sebagian (arah saja) / tidak ditemukan / bertentangan. Nyatakan ulang
+  dengan kata sendiri; jangan menyalin kalimat sumber.
+
+## 9. Aturan tetap
+
+Alat referensi/edukasi, bukan alat diagnostik; tidak pernah satu diagnosis; alasan dan sumber selalu tampil; tidak
+menganalisis gambar, tidak menyimpan data pasien; tanya pemilik sebelum mengubah skema data; README, LICENSES,
+CHANGELOG diperbarui setiap perubahan; tidak ada klaim akurasi (bobot belum memenuhi kriteria uji terdaftar v3 dan
+v4); bobot dibekukan pada 0.6.0 sampai diuji pada kasus praktik.
+
+## 10. Kalimat pembuka yang disarankan untuk sesi baru
+
+> Lanjutkan TumTul dari `docs/HANDOFF-SKORING.md` (keadaan KB 0.6.4, skema v1.2.0). Saya lampirkan dua generator
+> untuk dimasukkan ke repo; setelah itu kita bahas hipotesis mana yang masuk v0.7.
