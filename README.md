@@ -9,10 +9,12 @@ lytic/sclerotic, margin, periosteal reaction, matrix, etc.), with a source citat
 for every statement.
 
 **Owner:** MSK oncology radiologist, Indonesia · **Language of content:** Bahasa Indonesia
-with standard English (WHO) entity names · **Status:** v0.6.7 — data schema v1.1.0,
+with standard English (WHO) entity names · **Status:** v0.6.7 — data schema v1.2.0,
 37 entities (v1 scope: long bones + pelvis + spine), web prototype published with the
 "Negatoskop" theme and light/dark mode; four internal validation sets run (no accuracy claim);
-practice-case validation pending.
+practice-case validation pending. **Knowledge base: KB 0.6.4 (2026-11-22)** — weights, priors and rules unchanged
+since 0.6.0; 41 sources (31 verified, 10 cite-only); `tools/validate_kb.py` prints OK against schema v1.2.0.
+Start a new session from `docs/HANDOFF-SKORING.md`.
 
 ## What this app is and is not
 
@@ -74,7 +76,7 @@ README.md                     this file
 LICENSES.md                   licences of code, content, fonts and each source class
 CHANGELOG.md                  running log of changes
 docs/SKEMA-DIAGNOSIS.md       the diagnostic scheme (features, tables, scoring logic, decisions) — ID
-schema/kb-schema.json         JSON Schema for the knowledge base — v1.1.0 (base_prior added 2026-11-10, owner-approved)
+schema/kb-schema.json         JSON Schema for the knowledge base — v1.2.0 (1.1.0: base_prior, 2026-11-10; 1.2.0: three licence values, 2026-11-22; both owner-approved)
 schema/kb-schema.draft.json   superseded draft, kept for history
 data/features.json            input feature enumerations (ID/EN labels, help text)
 data/sources.json             source registry with licence status
@@ -102,11 +104,13 @@ web/index.html                built, self-contained prototype (published as a Cl
 tools/build_matrix.py         builds the scoring-matrix reference page web/matrix.html from web/matrix_template.html (reads the KB, changes nothing)
 web/matrix_template.html      scoring-matrix page (English labels, Negatoskop tokens); published as the artifact "TumTul scoring matrix"
 docs/HANDOFF-UI.md            session handoff: UI work (2026-11-19)
-docs/HANDOFF-SKORING.md       session handoff: scoring diagrams, matrix and scoring review (2026-11-21)
+docs/HANDOFF-SKORING.md       session handoff, state at KB 0.6.4 (2026-11-22): where everything is, open decisions, how to work — ID
 docs/TINJAUAN-SKOR-v0.6.md    scoring review of KB 0.6.0: findings and 34 hypotheses for v0.7 (review only, nothing applied) — ID
 docs/tinjauan-skor-v0.6-hard-constraints.csv   all 322 hard constraints classed a/b/c by the review
-tools/apply_source_overrides.py  owner-approved source corrections applied after the generators; proves only source_ids change
-docs/USULAN-SUMBER-v0.7.md    source proposals: A applied (KB 0.6.1), B journal candidates, C EPOS poster candidates — ID
+tools/apply_source_overrides.py  owner-approved source changes (KB 0.6.1–0.6.4) applied after the generators; proves only source_ids change
+docs/USULAN-SUMBER-v0.7.md    source work log: every candidate read, verdict per claim, what was registered (KB 0.6.1–0.6.4) and what was not, hypothesis candidates — ID
+docs/tinjauan-*-keluaran.txt  full printed output of the two review scripts (repository only)
+web/matrix.html               built scoring-matrix page (repository only; published as an artifact)
 tools/review_scoring.py       read-only analysis behind the review; prints every figure in the report
 tools/review_cases_v1_v4.txt  compact transcription of the 193 coded validation cases, used by review_scoring.py
 docs/TINJAUAN-SUMBER-v0.6.md  full-text source check of KB 0.6.0: does the cited source support the claim? (review only) — ID
@@ -121,9 +125,9 @@ flutter/                      Android app (after the web prototype is validated)
 
 ```
 python3 tools/build_entities_batch2.py   # regenerates batch 1 and 2
-python3 tools/apply_source_overrides.py  # re-applies owner-approved source corrections (source_ids only; KB 0.6.1: CMF re-cited to S-18)
+python3 tools/apply_source_overrides.py  # re-applies owner-approved source changes (source_ids only; KB 0.6.1–0.6.4); --check to verify
 python3 tools/validate_kb.py             # must print OK
-python3 tools/score_smoke.py             # expect 19/20 PASS (the 20th is a deliberate tie)
+python3 tools/score_smoke.py             # prints 20/20: 19 outright, plus the deliberate osteomyelitis/Ewing tie, which counts as first
 python3 tools/build_web.py               # writes web/index.html (inlines KB + data/images.json; checks approved images exist)
 python3 tools/build_matrix.py            # writes web/matrix.html; for KB 0.6.0 prints 37 entities, 62 values, 1584 claims, 322 hard, 5 rules
 ```
@@ -174,7 +178,7 @@ KB 0.6.0 in numbers: 1584 weighted claims (192 at +3, 248 at +2, 382 at +1, 179 
 - [x] Batch 1: 19 core entities + validator + smoke tests
 - [x] Batch 2: 18 further v1 entities (37 total)
 - [x] Web prototype: form → aggressiveness axis + ranked reasoned differential + sources tab
-- [x] Confirm licences in `data/sources.json` (24 verified, 6 cite-only)
+- [x] Confirm licences in `data/sources.json` (24 verified, 6 cite-only at the time; 31 and 10 at KB 0.6.4)
 - [x] Internal validation v1 on 31 open-access case reports (`docs/VALIDASI-INTERNAL-v1.md`):
       Top-3 84%, Top-5 87% after post-hoc corrections
 - [x] Three feature values added after v1 (continuity, saucerization, periosteal present-unspecified)
@@ -207,8 +211,13 @@ KB 0.6.0 in numbers: 1584 weighted claims (192 at +3, 248 at +2, 382 at +1, 179 
       cite-only) registered and cited on 8 skeletal-tuberculosis claims (36 sources); prototype republished
 - [x] KB 0.6.4 (2026-11-22, sources only, scores identical to 0.6.0): S-37 to S-39 (skeletal tuberculosis) and S-40,
       S-41 (desmoplastic fibroma) registered and cited on supported claims only (41 sources); prototype republished
-- [ ] Sources: find open-access radiographic sources for chordoma, desmoplastic fibroma,
-      skeletal tuberculosis, vertebral haemangioma, periosteal osteosarcoma and the S-01-only entities (H-26)
+- [x] Schema v1.2.0 (2026-11-22, owner-approved): `CC BY 3.0`, `CC BY 2.0`, `CC BY-NC 3.0` added to the licence enum;
+      `validate_kb.py` prints OK
+- [x] Schema, `validate_kb.py` and `score_smoke.py` added to the GitHub repository (2026-11-22)
+- [ ] Add the two generators (`build_entities_batch1.py`, `build_entities_batch2.py`) and the validation data to the
+      GitHub repository; they are in the claude.ai project only and must be copied byte for byte, not retyped
+- [ ] Sources still missing: periosteal reaction in desmoplastic fibroma; matrix weights for skeletal tuberculosis;
+      age and margins for vertebral haemangioma; the S-01-only entities (H-26)
 - [ ] Owner to assess the review's hypotheses (which to keep, drop or reword) before any is taken into v0.7
 - [ ] Prepare v0.7 hypotheses (CMF/GCTB weights, explicit ties, sparse-input warning) for evaluation on practice cases
 - [ ] Batch 3 (v2): hands/feet, calvaria, clavicle entities; dedifferentiated and

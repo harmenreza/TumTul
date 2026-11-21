@@ -34,6 +34,34 @@ versions follow SemVer. Data-schema changes are only recorded after owner approv
   that record S-06 findings; that is expected. `docs/SKEMA-DIAGNOSIS.md` header still says bobot v0.6.0, which remains
   true for the weights.
 
+## Schema v1.2.0 — 2026-11-22 (owner-approved)
+- `schema/kb-schema.json`: `CC BY 3.0`, `CC BY 2.0` and `CC BY-NC 3.0` added to the `license` enum of a source, for
+  S-33, S-35 and S-34. Title and description updated. **Nothing else in the schema changed**; no data file changed.
+- `tools/validate_kb.py` now prints `OK — 37 entities, 1584 weighted claims, 5 rules, 28 sources referenced by
+  entities`. Against the previous licence list it reports exactly the three expected failures.
+- `tools/score_smoke.py` prints 20/20 on KB 0.6.4: 19 vignettes rank the expected entity first outright, and the
+  osteomyelitis vignette is the deliberate tie with Ewing sarcoma (both 23), which the script counts as first. This is
+  the same result the README described as "19/20 PASS (the 20th is a deliberate tie)".
+- Added to the GitHub repository: `schema/kb-schema.json`, `tools/validate_kb.py`, `tools/score_smoke.py`. The two
+  scripts were retyped from the project copies (the project returns small files as text, not as files) and verified by
+  running them, not by a byte comparison; the project copies remain the originals.
+- **Not added:** the generators `build_entities_batch1.py` and `build_entities_batch2.py`. They hold every weight and
+  are too long to retype safely; they stay in the claude.ai project until they can be copied exactly.
+
+### Found and recorded (2026-11-22, end of session) — schema enum problem; handoff rewritten
+- **Problem introduced this session:** S-33 (`CC BY 3.0`), S-34 (`CC BY-NC 3.0`) and S-35 (`CC BY 2.0`) use licence
+  strings that are not in the `license` enum of `schema/kb-schema.json` v1.1.0. `tools/validate_kb.py` would fail with
+  three errors. Cause: the schema and the validator exist in the claude.ai project but not in the GitHub repository,
+  and the validator was not run before the sources were registered. The licence values are correct and were left as
+  they are; extending the enum is a schema change and awaits the owner's decision.
+- Checked with the schema's source rules (`$defs/source`, `$defs/sourceRef`): 41 sources and 1663 source lists; those
+  three licence strings are the only problems. `validate_kb.py` and `score_smoke.py` themselves were not executed;
+  scores cannot have changed because weights, priors and rules are identical to 0.6.0.
+- `docs/HANDOFF-SKORING.md` rewritten as a single state-of-the-project handoff (KB 0.6.4). README status, layout and
+  roadmap updated. Project copy of `web/index.html` replaced with the 0.6.4 build.
+- These last documentation changes are in the claude.ai project only; GitHub `main` (e577558) has KB 0.6.4 data but
+  the earlier handoff and README text.
+
 ## KB 0.6.4 — 2026-11-22 (sources only; weights, priors and rules identical to 0.6.0)
 - Owner-approved. `data/sources.json` → registry 0.6.0, 41 entries: **S-37** Pattamapaspong et al. 2024 (BJR,
   `cite_only`), **S-38** Abid et al. 2024 (Skeletal Radiol, `cite_only`; read from the author version),

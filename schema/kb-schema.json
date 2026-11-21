@@ -1,0 +1,364 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/bone-dx/kb-schema.json",
+  "title": "Bone Tumour Differential Knowledge Base — v1.2.0",
+  "description": "Data schema v1.2.0 (2026-11-22). Change from 1.1.0, approved by the owner: three values added to the source licence enum (CC BY 3.0, CC BY 2.0, CC BY-NC 3.0), needed for S-33, S-35 and S-34; nothing else changed. Change in 1.1.0 (2026-11-10), approved by the owner after validation v2: optional entity field base_prior (prevalence prior, -2 very rare / -1 rare / 0 common) with base_prior_source_ids and base_prior_note_id. Any further change requires explicit owner approval; record approved changes in CHANGELOG.md.",
+  "type": "object",
+  "required": [
+    "kb_version",
+    "features",
+    "entities",
+    "sources"
+  ],
+  "properties": {
+    "kb_version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "features": {
+      "description": "Enumerated input features the user selects. Value 'unknown' is always implicitly allowed and never changes a score.",
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "label_id",
+          "label_en",
+          "values"
+        ],
+        "properties": {
+          "label_id": {
+            "type": "string"
+          },
+          "label_en": {
+            "type": "string"
+          },
+          "optional": {
+            "type": "boolean",
+            "default": false
+          },
+          "multi": {
+            "type": "boolean",
+            "default": false
+          },
+          "values": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "code",
+                "label_id",
+                "label_en"
+              ],
+              "properties": {
+                "code": {
+                  "type": "string"
+                },
+                "label_id": {
+                  "type": "string"
+                },
+                "label_en": {
+                  "type": "string"
+                },
+                "help_id": {
+                  "type": "string"
+                },
+                "source_ids": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/$defs/sourceRef"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "entities": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/entity"
+      }
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/source"
+      }
+    }
+  },
+  "$defs": {
+    "sourceRef": {
+      "type": "string",
+      "pattern": "^S-\\d{2,3}$"
+    },
+    "weight": {
+      "description": "+3 hallmark, +2 typical, +1 compatible, 0 neutral, -2 unusual, -5 near-exclusion (hard constraint).",
+      "type": "integer",
+      "enum": [
+        -5,
+        -2,
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    "weightedClaim": {
+      "type": "object",
+      "required": [
+        "weight",
+        "source_ids"
+      ],
+      "properties": {
+        "weight": {
+          "$ref": "#/$defs/weight"
+        },
+        "note_id": {
+          "type": "string",
+          "description": "One-line reason shown to the user, in own words."
+        },
+        "source_ids": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/sourceRef"
+          }
+        }
+      }
+    },
+    "entity": {
+      "type": "object",
+      "required": [
+        "id",
+        "name_en",
+        "name_id",
+        "who_group",
+        "behaviour",
+        "definition_id",
+        "feature_weights",
+        "source_ids"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9_]+$"
+        },
+        "name_en": {
+          "type": "string"
+        },
+        "name_id": {
+          "type": "string"
+        },
+        "aliases": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "who_group": {
+          "type": "string",
+          "enum": [
+            "chondrogenic",
+            "osteogenic",
+            "fibrogenic",
+            "vascular",
+            "osteoclastic_giant_cell_rich",
+            "notochordal",
+            "other_mesenchymal",
+            "haematopoietic",
+            "undifferentiated_small_round_cell",
+            "non_neoplastic_or_secondary"
+          ]
+        },
+        "behaviour": {
+          "type": "string",
+          "enum": [
+            "benign",
+            "intermediate_locally_aggressive",
+            "intermediate_rarely_metastasizing",
+            "malignant",
+            "non_neoplastic",
+            "secondary_malignant"
+          ]
+        },
+        "definition_id": {
+          "type": "string",
+          "description": "Own-words definition (ID). Never a copied sentence."
+        },
+        "definition_en": {
+          "type": "string"
+        },
+        "feature_weights": {
+          "description": "feature_code -> value_code -> weightedClaim. Missing value = weight 0.",
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/$defs/weightedClaim"
+            }
+          }
+        },
+        "rules": {
+          "description": "Special conjunctive rules, each with its own source.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "when",
+              "weight",
+              "source_ids"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "when": {
+                "type": "object",
+                "description": "feature_code -> array of value codes (all must match)"
+              },
+              "weight": {
+                "$ref": "#/$defs/weight"
+              },
+              "note_id": {
+                "type": "string"
+              },
+              "source_ids": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/sourceRef"
+                }
+              }
+            }
+          }
+        },
+        "pitfalls_id": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "source_ids": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/sourceRef"
+          }
+        },
+        "base_prior": {
+          "type": "integer",
+          "enum": [
+            -2,
+            -1,
+            0
+          ],
+          "default": 0,
+          "description": "Prevalence prior added to every score: 0 common, -1 rare, -2 very rare (relative to the differential of a focal bone lesion)."
+        },
+        "base_prior_note_id": {
+          "type": "string"
+        },
+        "base_prior_source_ids": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/sourceRef"
+          }
+        }
+      }
+    },
+    "source": {
+      "type": "object",
+      "required": [
+        "id",
+        "type",
+        "title",
+        "year",
+        "license",
+        "license_status"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/sourceRef"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "journal_article",
+            "book",
+            "guideline",
+            "website",
+            "dataset"
+          ]
+        },
+        "title": {
+          "type": "string"
+        },
+        "authors": {
+          "type": "string"
+        },
+        "journal": {
+          "type": "string"
+        },
+        "year": {
+          "type": "integer"
+        },
+        "doi": {
+          "type": "string"
+        },
+        "pmid": {
+          "type": "string"
+        },
+        "pmcid": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        },
+        "license": {
+          "type": "string",
+          "enum": [
+            "CC BY 4.0",
+            "CC BY 3.0",
+            "CC BY 2.0",
+            "CC BY-NC 4.0",
+            "CC BY-NC 3.0",
+            "CC BY-NC-ND 4.0",
+            "CC BY-NC-SA 3.0",
+            "CC BY-NC-SA 4.0",
+            "CC BY-NC 2.0",
+            "public-domain",
+            "cite-only",
+            "unknown"
+          ]
+        },
+        "license_status": {
+          "type": "string",
+          "enum": [
+            "verified",
+            "to_verify",
+            "cite_only"
+          ],
+          "description": "verified = licence confirmed from publisher/PMC metadata; to_verify = publisher is OA but licence string not yet confirmed; cite_only = closed access, facts restated only, no content reused."
+        },
+        "license_note": {
+          "type": "string"
+        },
+        "attribution_text": {
+          "type": "string",
+          "description": "Exact attribution string to display in the Sources page."
+        },
+        "evidence_level": {
+          "type": "string",
+          "description": "Free text, e.g. 'retrospective 183 lesions', 'narrative review', 'population registry'."
+        },
+        "used_for": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
