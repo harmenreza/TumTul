@@ -149,6 +149,68 @@ OVERRIDES = {
     },
 }
 
+# KB 0.6.4, approved 2026-11-22. Supported claims only (see docs/USULAN-SUMBER-v0.7.md H1, H2).
+# Skeletal tuberculosis: S-37 Pattamapaspong 2024 (cite_only), S-38 Abid 2024 (cite_only), S-39 Semionov 2022 (CC BY 4.0).
+# Desmoplastic fibroma: S-40 Frick 2005 (cite_only), S-41 Ipponi 2025 (CC BY 4.0).
+def _merge(entity_id, table):
+    add = OVERRIDES.setdefault(entity_id, {}).setdefault("add", {})
+    for key, codes in table.items():
+        cur = add.setdefault(key, [])
+        for c in codes:
+            if c not in cur:
+                cur.append(c)
+
+_merge("skeletal_tuberculosis", {
+    ("age_group", "0-9"): ["S-37", "S-38"],
+    ("age_group", "10-19_unknown"): ["S-37"],
+    ("age_group", "10-19_open"): ["S-37"],
+    ("age_group", "10-19_closed"): ["S-37"],
+    ("age_group", "20-39"): ["S-37"],
+    ("age_group", "40-59"): ["S-37"],
+    ("age_group", "60+"): ["S-37"],
+    ("bone_class", "spine_body"): ["S-37", "S-38", "S-39"],
+    ("bone_class", "long_bone"): ["S-37", "S-38", "S-39"],
+    ("bone_class", "small_tubular_hand_foot"): ["S-38", "S-39"],
+    ("bone_class", "flat_bone"): ["S-39"],
+    ("longitudinal", "metaphysis"): ["S-37", "S-38", "S-39"],
+    ("longitudinal", "epiphysis_apophysis"): ["S-37", "S-38"],
+    ("longitudinal", "diaphysis"): ["S-38"],
+    ("density", "lytic"): ["S-37", "S-38"],
+    ("density", "mixed"): ["S-37", "S-38"],
+    ("density", "sclerotic"): ["S-37", "S-39"],
+    ("margin_lodwick", "IA"): ["S-37", "S-38"],
+    ("margin_lodwick", "IB"): ["S-38"],
+    ("margin_lodwick", "II"): ["S-37"],
+    ("cortex", "destruction"): ["S-37", "S-38"],
+    ("cortex", "focal_breach"): ["S-38"],
+    ("cortex", "expansion_shell"): ["S-38"],
+    ("soft_tissue_mass", "present"): ["S-37", "S-38", "S-39"],
+    ("periosteal", "none"): ["S-37", "S-38", "S-39"],
+    ("periosteal", "present_unspecified"): ["S-38"],
+    ("multiplicity", "multiple"): ["S-37", "S-38"],
+})
+_merge("desmoplastic_fibroma", {
+    ("age_group", "20-39"): ["S-40", "S-41"],
+    ("age_group", "10-19_unknown"): ["S-41"],
+    ("age_group", "10-19_open"): ["S-41"],
+    ("age_group", "10-19_closed"): ["S-41"],
+    ("bone_class", "long_bone"): ["S-40", "S-41"],
+    ("bone_class", "flat_bone"): ["S-40", "S-41"],
+    ("bone_class", "craniofacial"): ["S-40", "S-41"],
+    ("longitudinal", "metaphysis"): ["S-40"],
+    ("longitudinal", "metadiaphysis"): ["S-40"],
+    ("longitudinal", "diaphysis"): ["S-40"],
+    ("transverse", "central"): ["S-40"],
+    ("transverse", "eccentric"): ["S-40"],
+    ("density", "lytic"): ["S-40", "S-41"],
+    ("density", "sclerotic"): ["S-40"],
+    ("margin_lodwick", "IB"): ["S-40", "S-41"],
+    ("margin_lodwick", "IC"): ["S-40"],
+    ("cortex", "focal_breach"): ["S-40"],
+    ("cortex", "endosteal_scalloping"): ["S-40", "S-41"],
+    ("matrix", "none"): ["S-40"],
+})
+
 
 def strip_sources(obj):
     """Copy of an entity with every source list removed, for the 'nothing else changed' proof."""

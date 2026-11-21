@@ -34,6 +34,29 @@ versions follow SemVer. Data-schema changes are only recorded after owner approv
   that record S-06 findings; that is expected. `docs/SKEMA-DIAGNOSIS.md` header still says bobot v0.6.0, which remains
   true for the weights.
 
+## KB 0.6.4 — 2026-11-22 (sources only; weights, priors and rules identical to 0.6.0)
+- Owner-approved. `data/sources.json` → registry 0.6.0, 41 entries: **S-37** Pattamapaspong et al. 2024 (BJR,
+  `cite_only`), **S-38** Abid et al. 2024 (Skeletal Radiol, `cite_only`; read from the author version),
+  **S-39** Semionov et al. 2022 (Open J Radiol, CC BY 4.0), **S-40** Frick et al. 2005 (AJR, `cite_only`),
+  **S-41** Ipponi et al. 2025 (Cancers, CC BY 4.0).
+- Skeletal tuberculosis: 27 of 45 claims now carry a specific source beyond S-01 (S-37 on 20, S-38 on 18, S-39 on 8,
+  S-36 on 8). Desmoplastic fibroma: 19 of 43 (S-40 on 16, S-41 on 10, S-34 on 10, S-35 on 9). Supported claims only.
+- `periosteal:solid_thin` for tuberculosis, counted as supported in the first pass, was reclassified as direction
+  only and left uncited (27, not 28).
+- `tools/apply_source_overrides.py`: per-source tables merged with a small helper; `--check` clean.
+- `tools/build_web.py`: `kb_version` 0.6.3 → 0.6.4. Prototype (artifact version 20) and scoring matrix republished.
+- `LICENSES.md` §3: CC BY 4.0 sources 19 → 21; cite-only 7 → 10.
+- Added to pull request #2 on GitHub, which now carries KB 0.6.2, 0.6.3 and 0.6.4.
+
+### Checked (2026-11-22, after KB 0.6.3) — nine PDFs from the owner; five were registered afterwards (KB 0.6.4)
+- Skeletal TB: Pattamapaspong 2024 (BJR) and Abid 2024 (Skeletal Radiol), both `cite_only`, would raise supported
+  claims from 8 to 28 of 45. Semionov 2022 (CC BY 4.0) is the only openly licensed one and supports about 8.
+- Desmoplastic fibroma: Frick 2005 (AJR, `cite_only`; 38 radiographs) and Ipponi 2025 (Cancers, CC BY 4.0; 187 cases)
+  would raise supported claims from 10 to 19 of 43. Periosteal reaction still has no source.
+- Periosteal osteosarcoma: Cè 2025 is S-15 (already registered); its section states diaphysis or metadiaphysis.
+- Not useful for the gaps: Butt 2025 (soft-tissue tuberculomas), Sindhura 2026 (no licence, adds nothing), Khan 2012.
+- New hypothesis candidates recorded, not applied. Details in `docs/USULAN-SUMBER-v0.7.md`, update (h).
+
 ## KB 0.6.3 — 2026-11-22 (sources only; weights, priors and rules identical to 0.6.0)
 - Owner-approved. `data/sources.json` → registry 0.5.0, 36 entries: **S-36** Rivas-Garcia et al. 2013, Imaging
   findings of Pott's disease (Eur Spine J; © Springer, no CC licence → `cite_only`; read in full from the owner's PDF).

@@ -348,3 +348,70 @@ Belum selesai: Liu 2015 dan Rivas-Garcia 2013 menunggu PDF dari pemilik untuk di
 ## Pembaruan 2026-11-22 (g): S-36 didaftarkan (KB 0.6.3, sumber saja)
 
 Atas persetujuan pemilik: **S-36** Rivas-Garcia 2013 terdaftar sebagai `cite_only` (registri 0.5.0, 36 entri) dan dikutip pada 8 klaim Skeletal tuberculosis berstatus "didukung" di F1. Klaim "sebagian" tidak dikutip. Liu 2015 tidak didaftarkan. Bobot, prior, dan aturan identik dengan 0.6.0.
+
+---
+
+## Pembaruan 2026-11-22 (h): sembilan PDF dari pemilik (usulan; tidak ada yang didaftarkan atau diterapkan)
+
+Semua dibaca dari teks PDF. Yang dibaca penuh pada bagian yang relevan: Pattamapaspong, Abid (bagian tulang belakang ringkas, ekstraspinal penuh), Frick, Ipponi (hasil dan diskusi). Yang dibaca per bagian saja: Semionov (bagian muskuloskeletal), JAMP (kutipan per kata kunci), Butt (abstrak dan metode), Khan dan Cè (bagian osteosarkoma periosteal). Gambar tidak dinilai.
+
+| # | Artikel | Lisensi di PDF | Untuk entitas | Nilai |
+|---|---|---|---|---|
+| 1 | Pattamapaspong N dkk. 2024, *Imaging of musculoskeletal tuberculosis*, BJR 97:1–12. doi 10.1093/bjr/tqad019 | © penulis, OUP, "All rights reserved" → `cite_only` | Skeletal tuberculosis | Tinggi |
+| 2 | Abid W dkk. 2024, *Imaging of musculoskeletal tuberculosis*, Skeletal Radiol. doi 10.1007/s00256-023-04556-5 (versi penulis dari repositori IRUA) | tidak ada lisensi terbuka → `cite_only` | Skeletal tuberculosis | Tinggi |
+| 3 | Semionov A dkk. 2022, *Tuberculosis: A Head to Toe Radiological Review*, Open J Radiol 12:207–221. doi 10.4236/ojrad.2022.124021 | **CC BY 4.0** | Skeletal tuberculosis | Sedang (bagian tulang singkat, penerbit SCIRP) |
+| 4 | Sindhura LA dkk. 2026, *The role of radiological imaging in skeletal tuberculosis*, Int J Acad Med Pharm 8(4):601–605. doi 10.47009/jamp.2026.8.4.104 | tidak tercantum → `cite_only` | Skeletal tuberculosis | Rendah (tidak menambah di atas #1 dan #2) |
+| 5 | Butt S dkk. 2025, *Imaging features and management of tuberculomas*, Clin Radiol 81:106785. doi 10.1016/j.crad.2024.106785 | © RCR/Elsevier, "All rights reserved" | di luar cakupan | Tidak dipakai: tujuh tuberkuloma jaringan lunak; kasus tulang dan sendi dikeluarkan |
+| 6 | Frick MA dkk. 2005, *Imaging findings in desmoplastic fibroma of bone: distinctive T2 characteristics*, AJR 184:1762–1767 | © ARRS → `cite_only` | Desmoplastic fibroma | Tinggi (95 pasien, 38 radiograf) |
+| 7 | Ipponi E dkk. 2025, *Desmoplastic fibromas of the bone: a systematic review*, Cancers 17(21):3558. doi 10.3390/cancers17213558 | **CC BY 4.0** | Desmoplastic fibroma | Tinggi untuk usia dan lokasi (187 kasus) |
+| 8 | Cè M dkk. 2025, *Multimodal imaging of osteosarcoma*, Cancers 17(4):599 | CC BY 4.0 | sudah terdaftar sebagai **S-15** | — |
+| 9 | Khan AN dkk. 2012, *Imaging Osteosarcoma* (bab buku InTech) | **CC BY 3.0** | osteosarkoma umum | Rendah untuk celah kita: osteosarkoma periosteal hanya disebut sepintas |
+
+### H1. Skeletal tuberculosis (45 klaim) vs #1, #2, #3
+
+*Isi yang relevan.* Tulang belakang 25–70% TB muskuloskeletal; torakal dan lumbal atas. Usia spondilitis: 45–72 tahun pada penduduk asli Eropa, 27–39 tahun pada pasien dari negara berkembang; di negara berkembang anak lebih sering terkena. Osteomielitis TB: metafisis tulang panjang (diafisis dapat terkena), pelvis, tulang kecil tangan dan kaki; mulai di medula metafisis. Penyebaran transfisis dengan lesi epifisis adalah ciri khas. Radiograf: lesi osteolitik berbatas tegas dengan atau tanpa sklerosis, pembengkakan jaringan lunak, remodeling ekspansil korteks, periostitis, sekuestrum (tidak sering). Kalsifikasi jaringan lunak mengarah ke TB. Relatif sedikit periostitis dan sklerosis dibanding infeksi piogenik; pada anak reaksi periosteal berlapis. Daktilitis (spina ventosa): anak di bawah 6 tahun, lesi litik ekspansil dengan reaksi periosteal. Multifokal 7–11%, terutama anak. Demam: sekitar separuh pada spondilitis (ringan, sore hari); tidak sering pada TB ekstraspinal.
+
+| Vonis | Jumlah | Klaim |
+|---|---|---|
+| Didukung | 28 | seluruh `age_group` (7); `bone_class:spine_body`, `long_bone`, `small_tubular_hand_foot`, `flat_bone`; `longitudinal:metaphysis`, `epiphysis_apophysis`, `diaphysis`; `density:lytic`, `mixed`, `sclerotic`; `margin_lodwick:IA`, `IB`, `II`; `cortex:destruction`, `focal_breach`, `expansion_shell`; `soft_tissue_mass:present`; `periosteal:none`, `present_unspecified`, `solid_thin`; `multiplicity:multiple` |
+| Sebagian | 4 | `bone_class:sacrum`; `transverse:central`; `margin_lodwick:IC`; `clinical_flags:fever_or_infection_signs` |
+| Ketegangan | 1 | `periosteal:lamellated` −2: reaksi periosteal berlapis disebut khas pada anak |
+| Tidak dibahas | 12 | `transverse` lainnya; `margin_lodwick:III`; `cortex:intact`; `periosteal:spiculated`, `codman`; seluruh `matrix` |
+
+Dengan S-36 hanya 8 klaim yang didukung; dengan #1 dan #2 menjadi 28. Semionov (#3, satu-satunya yang berlisensi terbuka) sendiri mendukung sekitar 8: tulang belakang, tulang panjang, pelvis, tangan-kaki, metafisis, sedikit periostitis, sedikit sklerosis, abses paravertebra.
+
+Kandidat hipotesis (tidak diterapkan): `periosteal:lamellated` −2 dinaikkan, setidaknya untuk anak; `margin_lodwick:IC` +2 berbanding `IA`/`IB` +1 ditinjau (sumber menyebut batas tegas sebagai gambaran umum); `clinical_flags:fever_or_infection_signs` +2 mungkin terlalu tinggi untuk TB ekstraspinal; `soft_tissue_mass:present` +1 terlalu rendah (sudah tercatat).
+
+### H2. Desmoplastic fibroma (43 klaim) vs #6, #7
+
+*Isi yang relevan.* Frick: usia rata-rata 26,3 tahun (di bawah 1 sampai 86), tersering dekade ketiga. Pada 27 lesi tulang tubular: metafisis 9, metadiafisis 9, epifisis 5, diafisis 4; sentral 61%, eksentrik 39%. Radiograf (38): litik murni 24%, litik dengan trabekula kasar 63%, campuran litik dan sedikit sklerotik 13%; terobosan korteks 53%; batas tegas 34%, sebagian tegas 61%; tepi sklerotik 46%; fraktur patologis 13%; tanpa matriks termineralisasi yang berarti. CT: destruksi korteks 88%, massa jaringan lunak 41% (MRI 57%). Ipponi: usia rata-rata 24,3 (2–79), dekade kedua dan ketiga; femur 33, mandibula 27 (14,4%), tulang belakang 17 (9%); radiograf: litik geografik berbatas tegas dengan zona transisi sempit (derajat 1 Lodwick), pola tumbuh invasif lebih daripada ekspansif, kadang ekspansi dengan penipisan atau *scalloping* korteks.
+
+| Vonis | Jumlah | Klaim |
+|---|---|---|
+| Didukung | 19 | `age_group:20-39`, ketiga `10-19`; `bone_class:long_bone`, `flat_bone`, `craniofacial`; `longitudinal:metaphysis`, `metadiaphysis`, `diaphysis`; `transverse:central`, `eccentric`; `density:lytic`, `sclerotic`; `margin_lodwick:IB`, `IC`; `cortex:focal_breach`, `endosteal_scalloping`; `matrix:none` |
+| Sebagian | 12 | `age_group:0-9`, `40-59`, `60+`; `bone_class:spine_body`; `density:mixed`; `margin_lodwick:II`, `III`; `cortex:destruction`, `intact`; `soft_tissue_mass:present`; `matrix:osteoid`, `chondroid` |
+| Ketegangan | 3 | `longitudinal:epiphysis_apophysis` −2 (5 dari 27, lebih sering daripada diafisis yang berbobot +1); `margin_lodwick:IA` 0 (tepi sklerotik pada 46%); `cortex:expansion_shell` +2 (Ipponi: lebih invasif daripada ekspansif) |
+| Tidak dibahas | 9 | seluruh `periosteal` (5); `transverse:cortical`, `juxtacortical_surface`, `juxtacortical_continuous`; `matrix:ground_glass` |
+
+Dengan S-34 dan S-35 hanya 10 klaim yang didukung; dengan #6 dan #7 menjadi 19. Reaksi periosteal tetap tidak dibahas sumber mana pun.
+
+Kandidat hipotesis (tidak diterapkan): `epiphysis_apophysis` −2 dinaikkan; `margin_lodwick:IA` 0 dinaikkan (kini didukung seri 38 radiograf); `cortex:expansion_shell` +2 ditinjau; `soft_tissue_mass:present` 0 dan `cortex:focal_breach` +1 mungkin terlalu rendah. Kandidat lama "`cortex:intact` dinaikkan" melemah: Frick menemukan terobosan korteks pada 53% radiograf, berbeda dari 29% pada tinjauan yang dikutip Nedopil.
+
+### H3. Periosteal osteosarcoma
+
+Cè 2025 adalah S-15 yang sudah terdaftar. Bagian osteosarkoma periostealnya menyebut dekade kedua atau ketiga, **diafisis atau metadiafisis** tulang panjang, tibia dan femur 85–95%, ulna dan humerus 5–10%, jarang di rahang, klavikula, pelvis, iga, tengkorak; berasal dari lapisan dalam periosteum; biasanya di bawah 5 cm dan fusiform. Bagian itu tidak memuat sauserisasi maupun spikula. Ini menguatkan bobot `diaphysis` +3 dan `metadiaphysis` +2 dan sejalan dengan Revell (lesi "proksimal" dapat berarti metadiafisis). Bab Khan 2012 tidak menambah apa pun untuk entitas ini.
+
+### Saran pendaftaran (menunggu pemilik)
+- Skeletal tuberculosis: daftarkan #1 dan #2 sebagai `cite_only`; #3 sebagai satu-satunya sumber berlisensi terbuka bila diinginkan. Tidak perlu #4 dan #5.
+- Desmoplastic fibroma: daftarkan #6 (`cite_only`) dan #7 (CC BY 4.0).
+- #9 (CC BY 3.0) tidak diperlukan sebagai sumber bobot; gambarnya mungkin layak ditinjau untuk galeri contoh, dengan syarat bukan gambar yang dicetak ulang dari pihak ketiga.
+
+---
+
+## Pembaruan 2026-11-22 (i): lima sumber didaftarkan (KB 0.6.4, sumber saja)
+
+Atas persetujuan pemilik: **S-37** Pattamapaspong 2024, **S-38** Abid 2024, **S-39** Semionov 2022 untuk Skeletal tuberculosis; **S-40** Frick 2005, **S-41** Ipponi 2025 untuk Desmoplastic fibroma. Registri 0.6.0, 41 entri. Hanya klaim "didukung" di H1 dan H2 yang dikutip, per sumber sesuai isi masing-masing.
+
+Koreksi terhadap H1: `periosteal:solid_thin` (bobot 0) semula dihitung "didukung"; tidak ada sumber yang menyebut pola itu secara khusus, jadi diturunkan ke "sebagian" dan tidak dikutip. Klaim TB yang dikutip: 27, bukan 28.
+
+Bobot, prior, dan aturan identik dengan 0.6.0. Kandidat hipotesis di (h) belum diterapkan.

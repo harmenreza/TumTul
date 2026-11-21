@@ -9,7 +9,9 @@
   "S-01",
   "S-13",
   "S-34",
-  "S-35"
+  "S-35",
+  "S-40",
+  "S-41"
  ],
  "feature_weights": {
   "age_group": {
@@ -24,7 +26,9 @@
     "source_ids": [
      "S-01",
      "S-34",
-     "S-35"
+     "S-35",
+     "S-40",
+     "S-41"
     ]
    },
    "40-59": {
@@ -44,7 +48,8 @@
     "source_ids": [
      "S-01",
      "S-34",
-     "S-35"
+     "S-35",
+     "S-41"
     ]
    },
    "10-19_open": {
@@ -52,7 +57,8 @@
     "source_ids": [
      "S-01",
      "S-34",
-     "S-35"
+     "S-35",
+     "S-41"
     ]
    },
    "10-19_closed": {
@@ -60,7 +66,8 @@
     "source_ids": [
      "S-01",
      "S-34",
-     "S-35"
+     "S-35",
+     "S-41"
     ]
    }
   },
@@ -70,7 +77,9 @@
     "source_ids": [
      "S-01",
      "S-34",
-     "S-35"
+     "S-35",
+     "S-40",
+     "S-41"
     ],
     "note_id": "Femur, tibia, humerus"
    },
@@ -79,7 +88,9 @@
     "source_ids": [
      "S-01",
      "S-34",
-     "S-35"
+     "S-35",
+     "S-40",
+     "S-41"
     ],
     "note_id": "Pelvis"
    },
@@ -88,7 +99,9 @@
     "source_ids": [
      "S-01",
      "S-34",
-     "S-35"
+     "S-35",
+     "S-40",
+     "S-41"
     ],
     "note_id": "Mandibula"
    },
@@ -104,19 +117,22 @@
     "weight": 2,
     "source_ids": [
      "S-01",
-     "S-34"
+     "S-34",
+     "S-40"
     ]
    },
    "metadiaphysis": {
     "weight": 2,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-40"
     ]
    },
    "diaphysis": {
     "weight": 1,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-40"
     ]
    },
    "epiphysis_apophysis": {
@@ -130,13 +146,15 @@
    "central": {
     "weight": 2,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-40"
     ]
    },
    "eccentric": {
     "weight": 1,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-40"
     ]
    },
    "cortical": {
@@ -164,7 +182,9 @@
     "source_ids": [
      "S-01",
      "S-34",
-     "S-35"
+     "S-35",
+     "S-40",
+     "S-41"
     ]
    },
    "mixed": {
@@ -176,7 +196,8 @@
    "sclerotic": {
     "weight": -5,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-40"
     ]
    }
   },
@@ -184,13 +205,16 @@
    "IB": {
     "weight": 2,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-40",
+     "S-41"
     ]
    },
    "IC": {
     "weight": 1,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-40"
     ]
    },
    "IA": {
@@ -224,13 +248,16 @@
     "source_ids": [
      "S-01",
      "S-34",
-     "S-35"
+     "S-35",
+     "S-40"
     ]
    },
    "endosteal_scalloping": {
     "weight": 1,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-40",
+     "S-41"
     ]
    },
    "destruction": {
@@ -291,7 +318,8 @@
    "none": {
     "weight": 3,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-40"
     ]
    },
    "osteoid": {
