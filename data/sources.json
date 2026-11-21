@@ -587,6 +587,82 @@
    "used_for": [
     "vertebral haemangioma: vertebral body, coarse vertical trabeculae, aggressive variant"
    ]
+  },
+  {
+   "id": "S-33",
+   "type": "journal_article",
+   "title": "Usefulness of Quantitative Bone Single Photon Emission Computed Tomography/Computed Tomography for Evaluating Response to Neoadjuvant Chemotherapy in a Patient with Periosteal Osteosarcoma",
+   "authors": "Kitajima K, Futani H, Fujiwara M, et al.",
+   "journal": "Cureus 10(11):e3655",
+   "year": 2018,
+   "doi": "10.7759/cureus.3655",
+   "pmid": "30723654",
+   "pmcid": "PMC6351107",
+   "url": "https://doi.org/10.7759/cureus.3655",
+   "license": "CC BY 3.0",
+   "license_status": "verified",
+   "license_note": "Metadata PMC (diperiksa 2026-11-22): CC BY 3.0, '© 2018, Kitajima et al.'. Fakta dinyatakan ulang saja.",
+   "evidence_level": "single case report with a general description of the radiological appearance (secondary citation)",
+   "used_for": [
+    "periosteal osteosarcoma: age, femur/tibia, diaphyseal surface lesion, cortical saucerisation, perpendicular periosteal reaction, chondroid matrix"
+   ]
+  },
+  {
+   "id": "S-34",
+   "type": "journal_article",
+   "title": "Desmoplastic Fibroma: A Case Report with Three Years of Clinical and Radiographic Observation and Review of the Literature",
+   "authors": "Nedopil A, Raab P, Rudert M",
+   "journal": "The Open Orthopaedics Journal 7:40",
+   "year": 2013,
+   "doi": "10.2174/1874325001307010040",
+   "pmid": "23459513",
+   "pmcid": "PMC3583030",
+   "url": "https://doi.org/10.2174/1874325001307010040",
+   "license": "CC BY-NC 3.0",
+   "license_status": "verified",
+   "license_note": "Metadata PMC (diperiksa 2026-11-22): CC BY-NC 3.0. Non-commercial licence — same governance flag as S-13 and S-23. Fakta dinyatakan ulang saja.",
+   "evidence_level": "case report with literature review (271 published cases summarised)",
+   "used_for": [
+    "desmoplastic fibroma: age, mandible / long-bone metaphysis / pelvis, lytic lesion, frequency of cortical breakthrough"
+   ]
+  },
+  {
+   "id": "S-35",
+   "type": "journal_article",
+   "title": "Computed tomography and magnetic resonance imaging of desmoplastic fibroma with simultaneous manifestation in two unusual locations: a case report",
+   "authors": "Stefanidis K, Benakis S, Tsatalou E, et al.",
+   "journal": "Journal of Medical Case Reports 5:28",
+   "year": 2011,
+   "doi": "10.1186/1752-1947-5-28",
+   "pmid": "21261947",
+   "pmcid": "PMC3033348",
+   "url": "https://doi.org/10.1186/1752-1947-5-28",
+   "license": "CC BY 2.0",
+   "license_status": "verified",
+   "license_note": "Metadata PMC (diperiksa 2026-11-22): CC BY 2.0, '© 2011 Stefanidis et al; licensee BioMed Central Ltd.'. Fakta dinyatakan ulang saja.",
+   "evidence_level": "single case report (CT and MRI) with brief literature summary",
+   "used_for": [
+    "desmoplastic fibroma: age, site distribution, lytic expansile lesion with cortical breakthrough"
+   ]
+  },
+  {
+   "id": "S-36",
+   "type": "journal_article",
+   "title": "Imaging findings of Pott's disease",
+   "authors": "Rivas-Garcia A, Sarria-Estrada S, Torrents-Odin C, Casas-Gomila L, Franquet E",
+   "journal": "European Spine Journal 22(Suppl 4):S567-S578",
+   "year": 2013,
+   "doi": "10.1007/s00586-012-2333-9",
+   "pmid": "22684257",
+   "pmcid": "PMC3691403",
+   "url": "https://doi.org/10.1007/s00586-012-2333-9",
+   "license": "cite-only",
+   "license_status": "cite_only",
+   "license_note": "PDF: '© Springer-Verlag 2012', tanpa lisensi CC (bebas dibaca di PMC). Rujukan bibliografis saja; fakta dinyatakan ulang, tidak ada yang direproduksi.",
+   "evidence_level": "imaging review with a retrospective series of 48 patients (31 radiographic and 37 CT studies)",
+   "used_for": [
+    "tuberculous spondylitis: vertebral body, age, lytic destruction with late sclerosis, paraspinal abscess, multilevel involvement"
+   ]
   }
  ]
 }

@@ -8,7 +8,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 features = json.loads((ROOT / "data/features.json").read_text(encoding="utf-8"))["features"]
 sources = json.loads((ROOT / "data/sources.json").read_text(encoding="utf-8"))["sources"]
 entities = [json.loads(p.read_text(encoding="utf-8")) for p in sorted((ROOT / "data/entities").glob("*.json"))]
-kb = {"kb_version": "0.6.1", "features": features, "entities": entities, "sources": sources}
+kb = {"kb_version": "0.6.3", "features": features, "entities": entities, "sources": sources}
 imgp = ROOT / "data/images.json"
 images = json.loads(imgp.read_text(encoding="utf-8")) if imgp.exists() else {"images": {}}
 ids = {e["id"] for e in entities}

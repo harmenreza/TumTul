@@ -7,7 +7,8 @@
  "definition_id": "Infeksi granulomatosa kronik tulang, tersering spondilitis (Pott) dengan keterlibatan paradiskal dan abses dingin; di tulang panjang destruksi litik yang melintasi fisis dengan sklerosis reaktif dan reaksi periosteal yang mencolok sedikit. Penting di wilayah endemik.",
  "source_ids": [
   "S-01",
-  "S-10"
+  "S-10",
+  "S-36"
  ],
  "feature_weights": {
   "age_group": {
@@ -26,7 +27,8 @@
    "40-59": {
     "weight": 2,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-36"
     ]
    },
    "60+": {
@@ -58,7 +60,8 @@
    "spine_body": {
     "weight": 2,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-36"
     ],
     "note_id": "Spondilitis TB: korpus berdekatan dengan destruksi diskus dan abses paravertebral"
    },
@@ -145,21 +148,24 @@
    "lytic": {
     "weight": 2,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-36"
     ],
     "note_id": "Destruksi dengan sedikit sklerosis reaktif"
    },
    "mixed": {
     "weight": 1,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-36"
     ],
     "note_id": "Bentuk kronik dapat campuran dengan sklerosis"
    },
    "sclerotic": {
     "weight": -2,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-36"
     ]
    }
   },
@@ -200,7 +206,8 @@
    "destruction": {
     "weight": 2,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-36"
     ]
    },
    "focal_breach": {
@@ -227,7 +234,8 @@
    "present": {
     "weight": 1,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-36"
     ],
     "note_id": "Abses dingin, kadang berkalsifikasi, tidak proporsional dengan nyeri/tanda radang"
    }
@@ -302,7 +310,8 @@
    "multiple": {
     "weight": 1,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-36"
     ]
    }
   },

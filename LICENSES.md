@@ -16,15 +16,18 @@ reusable by other educators). Final decision pending owner approval and HAKI reg
 Full per-source records (DOI, PMID, licence, status, exact verification note) live in
 `data/sources.json`. The first 30 entries were checked against publisher or PMC pages/PDFs on
 2026-11-09; none remain `to_verify`. S-31 and S-32 (two CC BY 4.0 spine reviews, Diagnostics 2023) were added on
-2026-11-22 with the licence taken from PMC metadata (32 entries in total).
+2026-11-22 with the licence taken from PMC metadata (32 entries). S-33, S-34 and S-35 (three case reports for periosteal osteosarcoma and
+desmoplastic fibroma) were added the same day, also from PMC metadata (35 entries). S-36 (imaging review of spinal tuberculosis, © Springer, no CC licence) was added the
+same day as `cite_only` (36 entries in total).
 
 | Licence | Reuse allowed | Constraint for this project | Sources |
 |---|---|---|---|
 | CC BY 4.0 (19) | Text, tables, figures with attribution | Attribution on the Sources page; indicate changes | S-01, S-03, S-04, S-06, S-09, S-10, S-11, S-15, S-16, S-17, S-19, S-20, S-22, S-24, S-25, S-26, S-27, S-31, S-32 |
+| CC BY 3.0 / 2.0 (2) | Text, tables, figures with attribution | Attribution on the Sources page; indicate changes; used for restated facts only | S-33, S-35 |
 | CC BY-NC-ND 4.0 (4) | Verbatim copies with attribution; no adaptation, non-commercial | Used for restated facts only; no figure or table adapted | S-05, S-14, S-18, S-21 |
-| CC BY-NC 4.0 / 2.0 (2) | Adaptation with attribution, non-commercial only | App must remain free of charge and ad-free, or replace the source | S-13, S-23 |
+| CC BY-NC 4.0 / 3.0 / 2.0 (3) | Adaptation with attribution, non-commercial only | App must remain free of charge and ad-free, or replace the source | S-13, S-23, S-34 |
 | CC BY-NC-SA 3.0 (1) | Adaptation with attribution, NC, share-alike | Any adapted Radiopaedia-derived content must carry the same licence | S-30 |
-| cite-only (6) | None | Bibliographic citation only; facts restated in our own words | S-02, S-07, S-08, S-12, S-28, S-29 |
+| cite-only (7) | None | Bibliographic citation only; facts restated in our own words | S-02, S-07, S-08, S-12, S-28, S-29, S-36 |
 
 Notes from verification:
 - S-07 (ACR Bone-RADS consensus, JACR) and S-12 (MXSS, J Carcinogenesis) carry a publisher
@@ -37,7 +40,7 @@ Notes from verification:
 - S-18 is confirmed from the depositing institution's repository metadata for the
   published version.
 
-**Distribution consequence:** six sources (CC BY-NC-ND ×4, CC BY-NC ×2) plus Radiopaedia
+**Distribution consequence:** seven sources (CC BY-NC-ND ×4, CC BY-NC ×3) plus Radiopaedia
 (CC BY-NC-SA) forbid commercial use. The app must be distributed free of charge and
 without advertising, or those sources must be replaced before any paid distribution.
 

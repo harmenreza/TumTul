@@ -7,7 +7,8 @@
  "definition_id": "Osteosarkoma permukaan derajat menengah, dominan kondroblastik, pada diafisis tulang panjang remaja dan dewasa muda; erosi permukaan korteks (saucerization) dengan spikula tegak lurus.",
  "source_ids": [
   "S-01",
-  "S-15"
+  "S-15",
+  "S-33"
  ],
  "feature_weights": {
   "age_group": {
@@ -22,7 +23,8 @@
     "weight": 2,
     "source_ids": [
      "S-01",
-     "S-15"
+     "S-15",
+     "S-33"
     ]
    },
    "40-59": {
@@ -43,21 +45,24 @@
     "weight": 3,
     "source_ids": [
      "S-01",
-     "S-15"
+     "S-15",
+     "S-33"
     ]
    },
    "10-19_open": {
     "weight": 3,
     "source_ids": [
      "S-01",
-     "S-15"
+     "S-15",
+     "S-33"
     ]
    },
    "10-19_closed": {
     "weight": 3,
     "source_ids": [
      "S-01",
-     "S-15"
+     "S-15",
+     "S-33"
     ]
    }
   },
@@ -66,7 +71,8 @@
     "weight": 3,
     "source_ids": [
      "S-01",
-     "S-15"
+     "S-15",
+     "S-33"
     ],
     "note_id": "Femur dan tibia"
    },
@@ -83,7 +89,8 @@
     "weight": 3,
     "source_ids": [
      "S-01",
-     "S-15"
+     "S-15",
+     "S-33"
     ]
    },
    "metadiaphysis": {
@@ -113,7 +120,8 @@
     "weight": 3,
     "source_ids": [
      "S-01",
-     "S-15"
+     "S-15",
+     "S-33"
     ]
    },
    "central": {
@@ -202,7 +210,8 @@
     "weight": 2,
     "source_ids": [
      "S-01",
-     "S-15"
+     "S-15",
+     "S-33"
     ],
     "note_id": "Erosi permukaan korteks dengan penebalan di bawah massa"
    }
@@ -212,7 +221,8 @@
     "weight": 2,
     "source_ids": [
      "S-01",
-     "S-15"
+     "S-15",
+     "S-33"
     ]
    },
    "absent": {
@@ -228,7 +238,8 @@
     "weight": 3,
     "source_ids": [
      "S-01",
-     "S-15"
+     "S-15",
+     "S-33"
     ],
     "note_id": "Spikula tegak lurus dari korteks ke dalam massa"
    },
@@ -273,7 +284,8 @@
     "weight": 2,
     "source_ids": [
      "S-01",
-     "S-15"
+     "S-15",
+     "S-33"
     ]
    },
    "osteoid": {

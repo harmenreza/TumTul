@@ -98,6 +98,55 @@ OVERRIDES = {
             ("cortex", "focal_breach"): ["S-32"],           # direction only
         },
     },
+    # KB 0.6.2, approved 2026-11-22: S-33 (Kitajima 2018, single case with a general description; read in full).
+    # Supported claims only. Because the source is a case report, direction-only claims are left uncited
+    # (see docs/USULAN-SUMBER-v0.7.md D3).
+    "osteosarcoma_periosteal": {
+        "add": {
+            ("age_group", "10-19_unknown"): ["S-33"],
+            ("age_group", "10-19_open"): ["S-33"],
+            ("age_group", "10-19_closed"): ["S-33"],
+            ("age_group", "20-39"): ["S-33"],
+            ("bone_class", "long_bone"): ["S-33"],
+            ("longitudinal", "diaphysis"): ["S-33"],
+            ("transverse", "juxtacortical_surface"): ["S-33"],
+            ("cortex", "saucerization"): ["S-33"],
+            ("soft_tissue_mass", "present"): ["S-33"],
+            ("periosteal", "spiculated"): ["S-33"],
+            ("matrix", "chondroid"): ["S-33"],
+        },
+    },
+    # KB 0.6.2, approved 2026-11-22: S-34 (Nedopil 2013, case plus literature review) and S-35 (Stefanidis 2011,
+    # single case); both read in full. Supported claims only (see docs/USULAN-SUMBER-v0.7.md D1).
+    "desmoplastic_fibroma": {
+        "add": {
+            ("age_group", "20-39"): ["S-34", "S-35"],
+            ("age_group", "10-19_unknown"): ["S-34", "S-35"],
+            ("age_group", "10-19_open"): ["S-34", "S-35"],
+            ("age_group", "10-19_closed"): ["S-34", "S-35"],
+            ("bone_class", "long_bone"): ["S-34", "S-35"],
+            ("bone_class", "flat_bone"): ["S-34", "S-35"],
+            ("bone_class", "craniofacial"): ["S-34", "S-35"],
+            ("longitudinal", "metaphysis"): ["S-34"],
+            ("density", "lytic"): ["S-34", "S-35"],
+            ("cortex", "focal_breach"): ["S-34", "S-35"],
+        },
+    },
+    # KB 0.6.3, approved 2026-11-22: S-36 (Rivas-Garcia 2013, imaging review of Pott's disease with a 48-patient
+    # series; read in full from the owner's PDF; cite_only, no CC licence). Supported claims only
+    # (see docs/USULAN-SUMBER-v0.7.md F1).
+    "skeletal_tuberculosis": {
+        "add": {
+            ("age_group", "40-59"): ["S-36"],
+            ("bone_class", "spine_body"): ["S-36"],
+            ("density", "lytic"): ["S-36"],
+            ("density", "mixed"): ["S-36"],
+            ("density", "sclerotic"): ["S-36"],
+            ("cortex", "destruction"): ["S-36"],
+            ("soft_tissue_mass", "present"): ["S-36"],
+            ("multiplicity", "multiple"): ["S-36"],
+        },
+    },
 }
 
 

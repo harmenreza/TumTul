@@ -7,7 +7,9 @@
  "definition_id": "Padanan intraoseus fibromatosis desmoid; tumor fibrosa agresif lokal yang langka pada dewasa muda, tampak litik ekspansil dengan pseudotrabekulasi kasar.",
  "source_ids": [
   "S-01",
-  "S-13"
+  "S-13",
+  "S-34",
+  "S-35"
  ],
  "feature_weights": {
   "age_group": {
@@ -20,7 +22,9 @@
    "20-39": {
     "weight": 3,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-34",
+     "S-35"
     ]
    },
    "40-59": {
@@ -38,19 +42,25 @@
    "10-19_unknown": {
     "weight": 2,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-34",
+     "S-35"
     ]
    },
    "10-19_open": {
     "weight": 2,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-34",
+     "S-35"
     ]
    },
    "10-19_closed": {
     "weight": 2,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-34",
+     "S-35"
     ]
    }
   },
@@ -58,21 +68,27 @@
    "long_bone": {
     "weight": 2,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-34",
+     "S-35"
     ],
     "note_id": "Femur, tibia, humerus"
    },
    "flat_bone": {
     "weight": 2,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-34",
+     "S-35"
     ],
     "note_id": "Pelvis"
    },
    "craniofacial": {
     "weight": 2,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-34",
+     "S-35"
     ],
     "note_id": "Mandibula"
    },
@@ -87,7 +103,8 @@
    "metaphysis": {
     "weight": 2,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-34"
     ]
    },
    "metadiaphysis": {
@@ -145,7 +162,9 @@
    "lytic": {
     "weight": 3,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-34",
+     "S-35"
     ]
    },
    "mixed": {
@@ -203,7 +222,9 @@
    "focal_breach": {
     "weight": 1,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-34",
+     "S-35"
     ]
    },
    "endosteal_scalloping": {

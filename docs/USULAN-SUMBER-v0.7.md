@@ -204,3 +204,147 @@ Sumber ini menopang dua ciri khas hemangioma, tetapi usia, tepi, dan periosteal 
 Poster ini lemah untuk Skeletal tuberculosis: tulang belakang, usia, dan tanda klinis tetap tanpa sumber. Perlu sumber lain, terutama untuk spondilitis.
 
 **Masih terbuka:** Desmoplastic fibroma (tanpa sumber memadai); spondilitis TB; `cortex:saucerization` osteosarkoma periosteal; usia dan tepi hemangioma vertebra; kepastian lisensi kedua poster.
+
+---
+
+## Pembaruan 2026-11-22 (b): kandidat sumber dari pemilik untuk Periosteal osteosarcoma
+
+**Revell MP, Deshmukh N, Grimer RJ, Carter SR, Tillman RM. Periosteal osteosarcoma: a review of 17 cases with mean follow-up of 52 months. Sarcoma 2002;6(4):123–130.** doi 10.1080/1357714021000066368, PMID 18521348, PMC2395495. PDF dari pemilik dibaca penuh (9 halaman).
+
+*Lisensi:* metadata PMC menyebut Creative Commons Attribution (tautan `creativecommons.org/licenses/by/`, tanpa nomor versi), hak cipta Hindawi. PDF yang dilampirkan memuat baris lama "© Taylor & Francis Ltd". Dapat didaftarkan sebagai CC BY (versi tidak disebut) dengan catatan itu. **Belum didaftarkan; menunggu pemilik.**
+
+*Jenis bukti:* seri bedah satu pusat, 17 pasien (1983–1999). Radiologi hanya dua kalimat; kekuatannya pada usia dan lokasi per pasien (Tabel 2).
+
+*Catatan data:* Tabel 1 (usia per dekade) berjumlah 21 dan memuat empat pasien 40–49 tahun, bertentangan dengan teks (17 pasien, 10–35 tahun, median 18) dan Tabel 2. Angka di bawah dihitung dari Tabel 2.
+
+*Isi yang relevan:* usia 10–19: 11 dari 17; 20–29: 5; 30–39: 1; tidak ada di bawah 10 atau di atas 35. Lokasi: tibia 8 (proksimal 5, tengah 3), femur 7 (proksimal 4, tengah 2, distal 1), humerus tengah 1, skapula 1. Semua di permukaan periosteal dengan pusat massa di luar tulang dan kalsifikasi berbintik yang khas; tumor kaya kartilago. Keterlibatan medula 4 dari 17. Lingkar korteks yang terkena 5–100%. Ukuran 4–13,5 cm.
+
+| Vonis | Jumlah (dari 38) | Klaim |
+|---|---|---|
+| Didukung | 8 | ketiga `age_group:10-19` +3; `age_group:20-39` +2; `bone_class:long_bone` +3; `bone_class:flat_bone` −2 (1 dari 17, skapula); `transverse:juxtacortical_surface` +3; `matrix:chondroid` +2 |
+| Sebagian | 8 | `longitudinal:diaphysis` +3 dan `metadiaphysis` +2 (lihat catatan); `age_group:0-9`, `40-59`, `60+`; `transverse:central`, `eccentric`; `soft_tissue_mass:present` |
+| Tidak dibahas | 22 | seluruh `cortex` (termasuk `saucerization`), seluruh `periosteal`, seluruh `density`, `matrix:osteoid` (hanya histologi), lainnya |
+
+*Catatan lokasi longitudinal:* hanya 6 dari 17 berlabel "tengah" (diafisis); 10 berlabel proksimal atau distal tanpa keterangan metafisis atau metadiafisis. Seri ini tidak menunjukkan diafisis sebagai mayoritas yang jelas; bobot `diaphysis` +3 berbanding `metaphysis` 0 layak ditinjau sebagai kandidat hipotesis (tidak diterapkan; bobot dibekukan).
+
+*Dibanding poster C-13882:* tambahan dukungan untuk `age_group:20-39`, `bone_class:flat_bone`, dan `matrix:chondroid`. `cortex:saucerization` +2 tetap tanpa sumber.
+
+---
+
+## Pembaruan 2026-11-22 (c): pencarian SciSpace untuk tiga celah yang tersisa
+
+Keputusan pemilik: Revell dkk. 2002 **tidak didaftarkan** (tetap tercatat di bagian (b) sebagai bahan pembanding saja).
+
+Tiga pencarian SciSpace (akses terbuka), lisensi diperiksa lewat metadata PubMed/PMC. **Hanya abstrak yang dibaca; belum ada klaim yang diperiksa terhadap teks penuh.**
+
+| Celah | Kandidat | Lisensi (metadata PMC) | Catatan |
+|---|---|---|---|
+| Desmoplastic fibroma | Nedopil AJ dkk. 2013, Open Orthop J 7:40. doi 10.2174/1874325001307010040, PMC3583030 | CC BY-NC 3.0 | Laporan kasus dengan tinjauan pustaka; lokasi tersering mandibula dan metafisis tulang panjang; CT untuk korteks. Kandidat utama. Non-komersial (bendera yang sama dengan S-13, S-23). |
+| Desmoplastic fibroma | Stefanidis K dkk. 2011, J Med Case Rep 5:28. doi 10.1186/1752-1947-5-28, PMC3033348 | CC BY 2.0 | Satu kasus (pria 56 tahun, dua lokasi), CT dan MRI. Terbuka penuh. |
+| Desmoplastic fibroma | Kim OH dkk. 2013, Korean J Radiol 14(6):963. doi 10.3348/kjr.2013.14.6.963, PMC3835646 | CC BY-NC 3.0 | Satu kasus di falang distal kaki; radiograf dan MRI. Lokasi tidak lazim. |
+| Desmoplastic fibroma | Kinoshita H dkk. 2020, Case Rep Orthop. doi 10.1155/2020/5380598, PMC7148584 | tidak tercantum di metadata (Hindawi; perlu dipastikan) | Satu kasus ilium. |
+| Spondilitis TB | Rivas-Garcia A dkk. 2013, Eur Spine J 22 Suppl 4:567. doi 10.1007/s00586-012-2333-9, PMC3691403 | tanpa CC (© Springer) → `cite_only` | Isi terbaik: temuan pencitraan penyakit Pott. |
+| Spondilitis TB | Garg RK, Somvanshi DS 2011, J Spinal Cord Med 34(5):440. doi 10.1179/2045772311Y.0000000023, PMC3184481 | tanpa CC → `cite_only` | Ulasan umum, termasuk usia dan regio. |
+| Spondilitis TB | Mittal S dkk. 2016, Asian Spine J 10(4):734. doi 10.4184/asj.2016.10.4.734, PMC4995258 | CC BY-NC 3.0 | 40 pasien, TB atipikal vs metastasis; MRI, bukan radiograf. |
+| Periosteal OS, `cortex:saucerization` | Liu XW dkk. 2015, Int J Clin Exp Med 8(1):37. PMID 25784972, PMC4358427 | tanpa CC (© IJCEM) → `cite_only` | Ulasan; abstrak menyebut erosi ekstrinsik pada korteks diafisis yang menebal dan reaksi periosteal tegak lurus; usia rata-rata sekitar 28. Tepat untuk klaim sauserisasi. |
+| Periosteal OS, `cortex:saucerization` | Kitajima K dkk. 2018, Cureus 10(11):e3655. doi 10.7759/cureus.3655, PMC6351107 | CC BY 3.0 | Satu kasus (anak 10 tahun): radiograf menunjukkan penebalan korteks yang tererosi massa berdasar lebar. Terbuka penuh, tetapi satu kasus. |
+| Periosteal OS | Assi T dkk. 2021, J Bone Oncol 30:100389. doi 10.1016/j.jbo.2021.100389, PMC8449265 | tidak tercantum di metadata (perlu dipastikan) | Ulasan naratif, memuat ciri radiologis. |
+
+**Kesimpulan sementara.** Tidak ada ulasan radiografik ber-CC BY penuh untuk ketiga celah. Pilihan realistis: (1) Desmoplastic fibroma: Nedopil (CC BY-NC) ditambah Stefanidis (CC BY); (2) spondilitis TB: Rivas-Garcia sebagai `cite_only` ditambah Mittal (CC BY-NC); (3) sauserisasi: Liu sebagai `cite_only` ditambah Kitajima (CC BY). Semua perlu dibaca penuh sebelum didaftarkan. Menunggu keputusan pemilik.
+
+---
+
+## Pembaruan 2026-11-22 (d): enam kandidat dibaca dan dicocokkan dengan bobot (usulan; tidak ada yang diterapkan)
+
+**Yang benar-benar dibaca.** Teks penuh lewat PubMed/PMC: Nedopil 2013, Stefanidis 2011, Kitajima 2018, Mittal 2016. **Hanya abstrak**: Liu 2015 dan Rivas-Garcia 2013 (PMC tidak menyediakan teks penuhnya; percobaan membuka halaman PMC tidak berhasil). Gambar tidak dapat dilihat lewat konektor; hanya keterangan gambar.
+
+### D1. Desmoplastic fibroma (43 klaim) vs Nedopil 2013 + Stefanidis 2011
+
+*Isi:* usia rata-rata 23 tahun, rentang 15 bulan sampai 75 tahun (tinjauan 184 kasus yang dikutip Nedopil); tersering pada tiga dekade pertama, kedua jenis kelamin setara. Lokasi: metafisis tulang panjang 56%, mandibula 22%, pelvis 12–13%; femur 15%, radius 12%, tibia 9%. Lesi litik; pada kedua kasus (CT) tampak sklerosis tepi, pseudotrabekulasi ringan, dan pada satu kasus ekspansi tulang. Terobosan korteks hanya pada 29% dari 83 kasus pustaka. Pertumbuhan ekstraoseus dapat terjadi tetapi tidak pada kasus Nedopil.
+
+| Vonis | Jumlah | Klaim |
+|---|---|---|
+| Didukung | 10 | `age_group:20-39` +3; ketiga `age_group:10-19` +2; `bone_class:long_bone` +2, `flat_bone` +2, `craniofacial` +2; `longitudinal:metaphysis` +2; `density:lytic` +3; `cortex:focal_breach` +1 |
+| Sebagian | 10 | `age_group:0-9`, `40-59`, `60+`; `transverse:juxtacortical_surface`, `juxtacortical_continuous`; `density:sclerotic`; `cortex:expansion_shell`, `destruction`, `intact`; `soft_tissue_mass:present` |
+| Tidak dibahas | 22 | seluruh `periosteal`; seluruh `matrix`; `transverse:central`, `eccentric`, `cortical`; `margin_lodwick` selain IA; `longitudinal` selain metafisis; lainnya |
+| Ketegangan ringan | 1 | `margin_lodwick:IA` 0 berbanding `IB` +2: kedua kasus menunjukkan sklerosis tepi (pada CT, dua kasus saja) |
+
+Kandidat hipotesis (tidak diterapkan): `cortex:intact` 0 dapat dinaikkan, karena sekitar 71% kasus pustaka tanpa terobosan korteks; `margin_lodwick:IA` 0 ditinjau. Definisi entitas ("litik ekspansil dengan pseudotrabekulasi") sejalan dengan kedua sumber.
+
+### D2. Skeletal tuberculosis (45 klaim) vs Mittal 2016 (teks penuh) + Rivas-Garcia 2013 (abstrak)
+
+*Isi:* tulang belakang adalah lokasi tersering TB muskuloskeletal (sekitar separuh), disusul panggul dan lutut; torakal tersering; korpus vertebra bagian anterior-inferior sebagai lokasi awal; pola paradiskal, anterior, sentral; diskus relatif bertahan dibanding infeksi piogenik; abses paraspinal, intraoseus, dan epidural khas dan pada seri Mittal hanya ditemukan pada TB, tidak pada metastasis; keterlibatan beberapa segmen berurutan, lesi loncat 16–20%; vertebra sklerotik tergolong atipikal; kolaps dengan kifosis; kalsifikasi dalam abses (abstrak Rivas-Garcia). Usia rata-rata 40 tahun (11–67; Mittal, 20 pasien) dan 53 tahun (Rivas-Garcia, 48 pasien).
+
+| Vonis | Jumlah | Klaim |
+|---|---|---|
+| Didukung | 4 | `age_group:40-59` +2; `bone_class:spine_body` +2; `soft_tissue_mass:present` +1; `multiplicity:multiple` +1 |
+| Sebagian | 9 | `age_group:20-39`, `60+`, ketiga `10-19`; `bone_class:sacrum`; `density:lytic`, `sclerotic`; `cortex:destruction` |
+| Tidak dibahas | 32 | `age_group:0-9`; tulang panjang, tangan-kaki, pipih; seluruh `longitudinal`, `transverse`, `margin_lodwick`, `periosteal`, `matrix`; `clinical_flags:fever_or_infection_signs` |
+
+*Catatan penting:* (1) Mittal adalah studi MRI pada TB spinal **atipikal**, bukan radiograf; angka persentase pola vertebra di teksnya tidak konsisten satu sama lain, jadi tidak dipakai. (2) Ciri pembeda spondilitis TB yang disebut kedua sumber (diskus, segmen berurutan, abses paraspinal berkalsifikasi, penyebaran subligamen) **tidak ada dalam skema fitur kita**; ini pengamatan untuk opsi skema, bukan perubahan (skema hanya diubah atas persetujuan pemilik). (3) Kandidat hipotesis: `bone_class:spine_body` +2 dan `soft_tissue_mass:present` +1 mungkin terlalu rendah untuk TB.
+
+### D3. Periosteal osteosarcoma (38 klaim) vs Kitajima 2018 (teks penuh) + Liu 2015 (abstrak)
+
+*Isi:* dekade kedua sampai ketiga (Kitajima); usia rata-rata sekitar 28 (Liu). Femur dan tibia 85–95%, ulna dan humerus 5–10%. Gambaran radiologis: massa jaringan lunak berdasar lebar di permukaan yang mengerosi dari luar korteks diafisis yang menebal, dengan reaksi periosteal tegak lurus yang masuk ke komponen jaringan lunak. CT: matriks kondroid hipodens dengan kalsifikasi berbintik. Invasi medula jarang. Liu: semua lesi di diafisis; sepertiga proksimal femur tersering. Kasus Kitajima: anak 10 tahun, tibia; radiograf menunjukkan penebalan korteks yang tererosi massa berdasar lebar.
+
+| Vonis | Jumlah | Klaim |
+|---|---|---|
+| Didukung | 11 | **`cortex:saucerization` +2**; ketiga `age_group:10-19` +3; `age_group:20-39` +2; `bone_class:long_bone` +3; `longitudinal:diaphysis` +3; `transverse:juxtacortical_surface` +3; `soft_tissue_mass:present` +2; `periosteal:spiculated` +3; `matrix:chondroid` +2 |
+| Sebagian | 12 | `age_group:40-59`, `60+`; `bone_class:flat_bone`; `longitudinal:metadiaphysis`, `metaphysis`, `epiphysis_apophysis`; `transverse:central`, `eccentric`; `soft_tissue_mass:absent`; `periosteal:none`, `present_unspecified`; `matrix:osteoid` |
+| Tidak dibahas | 15 | `periosteal:codman`, `lamellated`, `solid_thin`; seluruh `density`; `cortex` selain sauserisasi; lainnya |
+
+*Catatan:* (1) `cortex:saucerization` kini punya sumber terbuka (Kitajima, CC BY 3.0), tetapi kalimat umumnya adalah kutipan sekunder dalam laporan satu kasus; rumusan Liu hampir sama, sehingga keduanya tampaknya menyatakan ulang satu deskripsi yang lebih lama. (2) Soal diafisis: Kitajima dan Liu mendukung `diaphysis` +3, sedangkan seri Revell (bagian b) hanya menunjukkan 6 dari 17 di tengah batang. Kandidat hipotesis diafisis berbanding metafisis tetap terbuka, kini dengan bukti dua arah.
+
+### Ringkasan lisensi bila pemilik ingin mendaftarkan
+Nedopil CC BY-NC 3.0; Stefanidis CC BY 2.0; Kitajima CC BY 3.0; Mittal CC BY-NC 3.0; Liu dan Rivas-Garcia tanpa lisensi CC (`cite_only`, dan baru abstraknya yang dibaca).
+
+---
+
+## Pembaruan 2026-11-22 (e): tiga sumber didaftarkan (KB 0.6.2, sumber saja)
+
+Atas persetujuan pemilik: **S-33** Kitajima 2018, **S-34** Nedopil 2013, **S-35** Stefanidis 2011 terdaftar di `data/sources.json` (registri 0.4.0, 35 entri). S-33 dikutip pada 11 klaim Periosteal osteosarcoma (daftar "didukung" di D3); S-34 pada 10 dan S-35 pada 9 klaim Desmoplastic fibroma (daftar "didukung" di D1; `longitudinal:metaphysis` hanya S-34). Klaim "sebagian" **tidak** dikutip, karena ketiganya laporan kasus. Bobot, prior, dan aturan identik dengan 0.6.0.
+
+Belum selesai: Liu 2015 dan Rivas-Garcia 2013 menunggu PDF dari pemilik untuk dibaca penuh; Mittal 2016 belum didaftarkan; Skeletal tuberculosis masih tanpa sumber radiografik.
+
+---
+
+## Pembaruan 2026-11-22 (f): Liu 2015 dan Rivas-Garcia 2013 dibaca penuh dari PDF pemilik (usulan; tidak ada yang diterapkan)
+
+### F1. Rivas-Garcia dkk. 2013, *Imaging findings of Pott's disease* (Eur Spine J; 12 halaman)
+
+*Lisensi:* PDF memuat "© Springer-Verlag 2012", tanpa lisensi CC → hanya dapat `cite_only`.
+*Jenis bukti:* ulasan pencitraan dengan seri sendiri, 48 pasien (31 radiograf, 37 CT). Punya bagian khusus radiografi dan CT. **Sumber radiografik yang selama ini tidak ada untuk Skeletal tuberculosis.**
+
+*Isi yang relevan:* tulang belakang terkena pada lebih dari separuh TB muskuloskeletal; terutama dewasa, tanpa dominasi jenis kelamin; torakal lalu lumbal. Khas dua korpus berurutan dengan diskus di antaranya; keterlibatan tiga vertebra atau lebih tidak jarang dan menjadi ciri penyakit. Radiograf dapat normal pada tahap awal, tetapi sering sudah abnormal saat pemeriksaan pertama. Temuan paling awal: lusensi dan kaburnya lempeng ujung. Temuan tersering: destruksi korpus (terutama anterior), penyempitan diskus, erosi lempeng ujung, geode, sekuestrum, sklerosis, massa paravertebra. Kalsifikasi dalam massa paraspinal sangat mengarah ke TB. Tahap lanjut: sklerosis reparatif, ankilosis, kolaps, kifosis. Atipikal: vertebra "gading", lesi sentral tanpa diskus, keterlibatan arkus saja (2–10%), lesi tidak berurutan. Dibanding piogenik: tepi destruksi lebih tegas tanpa sklerosis reaktif. Massa atau abses paraspinal 45–100%; pada seri sendiri 95% studi CT, berkalsifikasi 46%. Pola destruktif pada 70% radiograf. Satu segmen (15) sedikit lebih sering daripada multilevel (14). Usia rata-rata 53 tahun.
+
+| Vonis | Jumlah (dari 45) | Klaim |
+|---|---|---|
+| Didukung | 8 | `bone_class:spine_body` +2; `age_group:40-59` +2; `density:lytic` +2, `mixed` +1, `sclerotic` −2; `cortex:destruction` +2; `soft_tissue_mass:present` +1; `multiplicity:multiple` +1 |
+| Sebagian | 9 | `age_group:20-39`, `60+`, `0-9`, ketiga `10-19`; `margin_lodwick:IB`, `IC`; `clinical_flags:fever_or_infection_signs` (hanya "gejala konstitusional") |
+| Tidak dibahas | 28 | tulang panjang, tangan-kaki, pipih, sakrum; seluruh `longitudinal`, `periosteal`, `matrix`; nilai `transverse`, `margin`, `cortex` lainnya |
+
+*Catatan:* (1) Dibanding Mittal (4 didukung), sumber ini jauh lebih kuat dan langsung membahas radiograf. (2) Kandidat hipotesis diperkuat: `soft_tissue_mass:present` +1 terlalu rendah untuk TB (45–100%). (3) Awal infeksi di sudut anterolateral korpus, bukan di tengah; `transverse:central` +2 berbanding `eccentric` +1 sulit diterapkan pada vertebra (pengamatan). (4) Pengamatan skema dari bagian (d) dikuatkan: penyempitan diskus, keterlibatan segmen berurutan, dan kalsifikasi massa paraspinal adalah ciri kunci yang tidak ada dalam skema fitur. Skema tidak diubah.
+
+### F2. Liu dkk. 2015, *Periosteal osteosarcoma: a review of clinical evidence* (Int J Clin Exp Med; 8 halaman)
+
+*Lisensi:* tidak ada pernyataan lisensi CC di PDF → hanya dapat `cite_only`.
+
+*Isi yang relevan:* dekade kedua dan ketiga; puncak 15–30 tahun; tibia 40%, femur 38%, ulna dan humerus 5–10%. Radiografi: massa jaringan lunak berdasar lebar, erosi ekstrinsik dan *scalloping* pada korteks diafisis yang menebal, reaksi periosteal tegak lurus yang masuk ke massa; derajat mineralisasi massa bervariasi. Tabel pembeda: korteks menebal dan utuh, matriks berspikula yang memancar dari korteks.
+
+*Masalah mutu: ulasan ini bertentangan dengan dirinya sendiri.* Abstrak menyebut semua lesi di diafisis; bagian lokasi menyebut lesi terutama metafisis dan jarang diafisis. Bagian lokasi menyebut hanya di tulang panjang, lalu membahas kranium, mandibula, klavikula, kalkaneus. Satu tempat menyebut dominasi laki-laki 2:1, tempat lain menyebut tidak ada predileksi jenis kelamin. Reaksi periosteal tersering disebut tidak agresif dan padat, sementara kalimat lain menekankan reaksi tegak lurus.
+
+| Vonis | Jumlah (dari 38) | Klaim |
+|---|---|---|
+| Didukung | 9 | `cortex:saucerization` +2; ketiga `age_group:10-19` +3; `age_group:20-39` +2; `bone_class:long_bone` +3; `transverse:juxtacortical_surface` +3; `soft_tissue_mass:present` +2; `periosteal:spiculated` +3 |
+| Bertentangan di dalam sumber | 3 | `longitudinal:diaphysis` +3, `metaphysis` 0; `periosteal:solid_thin` −2 |
+| Sebagian atau tidak dibahas | 26 | lainnya |
+
+**Saran:** jangan daftarkan Liu 2015. Ia tidak menambah apa pun di atas S-33 untuk sauserisasi, dan pertentangan internalnya membuatnya tidak layak dijadikan dasar bobot. Soal diafisis berbanding metafisis tetap terbuka (Kitajima: diafisis; Revell: 6 dari 17 di tengah batang; Liu: tidak dapat dipakai).
+
+**Saran:** daftarkan Rivas-Garcia 2013 sebagai `cite_only` dan kutip pada 8 klaim Skeletal tuberculosis yang didukung. Menunggu keputusan pemilik.
+
+---
+
+## Pembaruan 2026-11-22 (g): S-36 didaftarkan (KB 0.6.3, sumber saja)
+
+Atas persetujuan pemilik: **S-36** Rivas-Garcia 2013 terdaftar sebagai `cite_only` (registri 0.5.0, 36 entri) dan dikutip pada 8 klaim Skeletal tuberculosis berstatus "didukung" di F1. Klaim "sebagian" tidak dikutip. Liu 2015 tidak didaftarkan. Bobot, prior, dan aturan identik dengan 0.6.0.
