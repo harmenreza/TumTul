@@ -14,12 +14,13 @@ reusable by other educators). Final decision pending owner approval and HAKI reg
 ## 3. Third-party sources
 
 Full per-source records (DOI, PMID, licence, status, exact verification note) live in
-`data/sources.json`. All 30 entries were checked against publisher or PMC pages/PDFs on
-2026-11-09; none remain `to_verify`.
+`data/sources.json`. The first 30 entries were checked against publisher or PMC pages/PDFs on
+2026-11-09; none remain `to_verify`. S-31 and S-32 (two CC BY 4.0 spine reviews, Diagnostics 2023) were added on
+2026-11-22 with the licence taken from PMC metadata (32 entries in total).
 
 | Licence | Reuse allowed | Constraint for this project | Sources |
 |---|---|---|---|
-| CC BY 4.0 (17) | Text, tables, figures with attribution | Attribution on the Sources page; indicate changes | S-01, S-03, S-04, S-06, S-09, S-10, S-11, S-15, S-16, S-17, S-19, S-20, S-22, S-24, S-25, S-26, S-27 |
+| CC BY 4.0 (19) | Text, tables, figures with attribution | Attribution on the Sources page; indicate changes | S-01, S-03, S-04, S-06, S-09, S-10, S-11, S-15, S-16, S-17, S-19, S-20, S-22, S-24, S-25, S-26, S-27, S-31, S-32 |
 | CC BY-NC-ND 4.0 (4) | Verbatim copies with attribution; no adaptation, non-commercial | Used for restated facts only; no figure or table adapted | S-05, S-14, S-18, S-21 |
 | CC BY-NC 4.0 / 2.0 (2) | Adaptation with attribution, non-commercial only | App must remain free of charge and ad-free, or replace the source | S-13, S-23 |
 | CC BY-NC-SA 3.0 (1) | Adaptation with attribution, NC, share-alike | Any adapted Radiopaedia-derived content must carry the same licence | S-30 |

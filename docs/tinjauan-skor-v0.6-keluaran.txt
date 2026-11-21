@@ -1,0 +1,1437 @@
+TumTul - tinjauan skor KB (keluaran tools/review_scoring.py); KB dibaca dari data/
+
+====================================================================================================
+0. HITUNGAN DASAR DAN HIGIENE DATA
+====================================================================================================
+entitas 37; nilai fitur ditawarkan 62; klaim total 1584 (termasuk 4 not_applicable); klaim pada nilai yang ditawarkan 1580; aturan 5
+distribusi bobot (nilai ditawarkan): {3: 192, 2: 248, 1: 382, 0: 179, -2: 257, -5: 322}
+hard constraint: 322 ; tanpa note_id: 318
+klaim dengan note_id: 239 dari 1584
+klaim not_applicable (tersembunyi di UI): [('bpop_nora_lesion', 'longitudinal', 0), ('chordoma', 'longitudinal', 0), ('intraosseous_lipoma', 'longitudinal', 0), ('vertebral_haemangioma', 'longitudinal', 0)]
+bobot di luar skala / nilai tak dikenal: tidak ada
+klaim tanpa source_ids: tidak ada ; source id tak terdaftar: tidak ada
+klaim yang hanya mengutip S-01: 661 dari 1584 (41.7%); klaim yang mengutip S-01 (sendiri atau bersama): 1573 (99.3%)
+klaim yang hanya mengutip sumber cite-only: 0
+klaim bone_class aksial/kraniofasial (spine_body, spine_posterior, sacrum, craniofacial): 58; di antaranya hanya mengutip S-01 (review skeleton apendikular): 28
+| Kombinasi sumber pada klaim | Jumlah klaim |
+|---|---|
+| S-01 | 661 |
+| S-01,S-06 | 340 |
+| S-01,S-15 | 154 |
+| S-01,S-18 | 86 |
+| S-01,S-04 | 79 |
+| S-01,S-25 | 77 |
+| S-01,S-16 | 45 |
+| S-01,S-22 | 44 |
+| S-01,S-24 | 41 |
+| S-01,S-23 | 40 |
+| S-18 | 4 |
+| S-01,S-05 | 4 |
+| S-20 | 2 |
+| S-26 | 2 |
+| S-21 | 1 |
+| S-23 | 1 |
+| S-01,S-26 | 1 |
+| S-19 | 1 |
+| S-01,S-19 | 1 |
+
+| Sumber | Lisensi | Status | Dipakai pada klaim |
+|---|---|---|---|
+| S-01 | CC BY 4.0 | verified | 1573 |
+| S-02 | cite-only | cite_only | 0 |
+| S-03 | CC BY 4.0 | verified | 0 |
+| S-04 | CC BY 4.0 | verified | 79 |
+| S-05 | CC BY-NC-ND 4.0 | verified | 4 |
+| S-06 | CC BY 4.0 | verified | 340 |
+| S-07 | cite-only | cite_only | 0 |
+| S-08 | cite-only | cite_only | 0 |
+| S-09 | CC BY 4.0 | verified | 0 |
+| S-10 | CC BY 4.0 | verified | 0 |
+| S-11 | CC BY 4.0 | verified | 0 |
+| S-12 | unknown | cite_only | 0 |
+| S-13 | CC BY-NC 4.0 | verified | 0 |
+| S-14 | CC BY-NC-ND 4.0 | verified | 0 |
+| S-15 | CC BY 4.0 | verified | 154 |
+| S-16 | CC BY 4.0 | verified | 45 |
+| S-17 | CC BY 4.0 | verified | 0 |
+| S-18 | CC BY-NC-ND 4.0 | verified | 90 |
+| S-19 | CC BY 4.0 | verified | 2 |
+| S-20 | CC BY 4.0 | verified | 2 |
+| S-21 | CC BY-NC-ND 4.0 | verified | 1 |
+| S-22 | CC BY 4.0 | verified | 44 |
+| S-23 | CC BY-NC 2.0 | verified | 41 |
+| S-24 | CC BY 4.0 | verified | 41 |
+| S-25 | CC BY 4.0 | verified | 77 |
+| S-26 | CC BY 4.0 | verified | 3 |
+| S-27 | CC BY 4.0 | verified | 0 |
+| S-28 | cite-only | cite_only | 0 |
+| S-29 | cite-only | cite_only | 0 |
+| S-30 | CC BY-NC-SA 3.0 | verified | 0 |
+
+sumber terdaftar: 30; tidak dikutip oleh klaim mana pun: 15
+hard constraint yang hanya mengutip S-01: 134 dari 322; +3 yang hanya mengutip S-01: 56 dari 192
+entitas yang SEMUA klaimnya hanya mengutip S-01 (14): adamantinoma_ofd_spectrum, bone_infarct, bone_metastasis, brown_tumour, chordoma, desmoplastic_fibroma, enostosis, intraosseous_ganglion_geode, intraosseous_lipoma, osteomyelitis, paget_disease, primary_bone_lymphoma, skeletal_tuberculosis, stress_fracture
+Sumber kedua per entitas (kombinasi sumber terbanyak pada klaimnya):
+  OFD-adamantinoma: sumber entitas ['S-01', 'S-13']; klaim: S-01 x42
+  ABC: sumber entitas ['S-01', 'S-06', 'S-20']; klaim: S-01,S-06 x42; S-20 x1; S-01 x1
+  Bone infarct: sumber entitas ['S-01']; klaim: S-01 x43
+  Metastasis: sumber entitas ['S-01']; klaim: S-01 x46
+  BPOP: sumber entitas ['S-01', 'S-25']; klaim: S-01,S-25 x36; S-01 x1
+  Brown tumour: sumber entitas ['S-01']; klaim: S-01 x46
+  Chondroblastoma: sumber entitas ['S-01', 'S-06']; klaim: S-01,S-06 x43; S-01 x1
+  CMF: sumber entitas ['S-01', 'S-06', 'S-18']; klaim: S-01,S-06 x44; S-01 x1; S-18 x1
+  Central CS: sumber entitas ['S-01', 'S-18', 'S-05', 'S-13']; klaim: S-01,S-18 x47; S-01,S-05 x1; S-01 x1
+  Chordoma: sumber entitas ['S-01', 'S-05']; klaim: S-01 x33
+  Clear cell CS: sumber entitas ['S-01', 'S-18']; klaim: S-01,S-18 x39; S-01 x1
+  Desmoplastic fibroma: sumber entitas ['S-01', 'S-13']; klaim: S-01 x43
+  Enchondroma: sumber entitas ['S-01', 'S-06', 'S-18']; klaim: S-01,S-06 x44; S-18 x2; S-01 x2
+  Enostosis: sumber entitas ['S-01']; klaim: S-01 x43
+  Ewing sarcoma: sumber entitas ['S-01', 'S-04', 'S-05', 'S-13']; klaim: S-01,S-04 x46; S-01 x1
+  Fibrous dysplasia: sumber entitas ['S-01', 'S-22']; klaim: S-01,S-22 x44; S-01 x1
+  GCTB: sumber entitas ['S-01', 'S-16', 'S-13']; klaim: S-01,S-16 x45; S-01 x1
+  Geode/ganglion: sumber entitas ['S-01']; klaim: S-01 x45
+  Intraosseous lipoma: sumber entitas ['S-01']; klaim: S-01 x42
+  LCH: sumber entitas ['S-01', 'S-23', 'S-21']; klaim: S-01,S-23 x40; S-01 x2; S-21 x1; S-23 x1
+  NOF: sumber entitas ['S-01', 'S-06', 'S-04']; klaim: S-01,S-06 x44; S-01 x1
+  Osteoblastoma: sumber entitas ['S-01', 'S-06', 'S-20']; klaim: S-01,S-06 x38; S-20 x1; S-01 x1
+  Osteochondroma: sumber entitas ['S-01', 'S-04', 'S-26']; klaim: S-01,S-04 x33; S-01 x2; S-26 x2; S-01,S-26 x1
+  Osteoid osteoma: sumber entitas ['S-01', 'S-06']; klaim: S-01,S-06 x42; S-01 x1
+  Osteomyelitis: sumber entitas ['S-01', 'S-10', 'S-04']; klaim: S-01 x42
+  Conventional OS: sumber entitas ['S-01', 'S-15', 'S-04', 'S-05']; klaim: S-01,S-15 x41; S-01,S-05 x3; S-01 x2
+  Parosteal OS: sumber entitas ['S-01', 'S-15']; klaim: S-01,S-15 x35; S-01 x1
+  Periosteal OS: sumber entitas ['S-01', 'S-15']; klaim: S-01,S-15 x37; S-01 x1
+  Telangiectatic OS: sumber entitas ['S-01', 'S-15']; klaim: S-01,S-15 x41; S-01 x1
+  Paget: sumber entitas ['S-01']; klaim: S-01 x44
+  Periosteal chondroma: sumber entitas ['S-01', 'S-25', 'S-18']; klaim: S-01,S-25 x41; S-01 x1; S-18 x1
+  Myeloma: sumber entitas ['S-01', 'S-24']; klaim: S-01,S-24 x41; S-01 x1
+  Lymphoma: sumber entitas ['S-01']; klaim: S-01 x46
+  SBC: sumber entitas ['S-01', 'S-06', 'S-04']; klaim: S-01,S-06 x43; S-01 x1
+  Skeletal TB: sumber entitas ['S-01', 'S-10']; klaim: S-01 x45
+  Stress fracture: sumber entitas ['S-01']; klaim: S-01 x44
+  Vertebral haemangioma: sumber entitas ['S-01', 'S-19']; klaim: S-01 x31; S-19 x1; S-01,S-19 x1
+aturan khusus:
+  ewing_sarcoma.ewing_soft_tissue_without_destruction bobot 2 when {'soft_tissue_mass': ['present'], 'cortex': ['intact', 'focal_breach']} sumber ['S-01']
+  ewing_sarcoma.ewing_adult_flat_bone bobot 1 when {'age_group': ['20-39'], 'bone_class': ['flat_bone']} sumber ['S-01']
+  osteomyelitis.om_all_four_aggressive_signs bobot 1 when {'margin_lodwick': ['IC', 'II', 'III'], 'cortex': ['destruction'], 'periosteal': ['lamellated', 'spiculated', 'codman']} sumber ['S-10']
+  osteosarcoma_telangiectatic.tos_abc_mimic_aggressive bobot 1 when {'cortex': ['expansion_shell', 'focal_breach', 'destruction'], 'margin_lodwick': ['IC', 'II', 'III']} sumber ['S-01', 'S-15']
+  primary_bone_lymphoma.lymphoma_soft_tissue_without_destruction bobot 2 when {'soft_tissue_mass': ['present'], 'cortex': ['intact', 'focal_breach']} sumber ['S-01']
+prior: {-2: 7, 0: 21, -1: 9}
+entitas tanpa definition_id/pitfalls_id: tidak ada
+
+====================================================================================================
+1. HARD CONSTRAINT
+====================================================================================================
+total hard constraint: 322 -> docs/tinjauan-skor-v0.6-hard-constraints.csv
+kelas: {'a': 249, 'b': 65, 'c': 8} | keyakinan pada kelas b/c: {'rendah': 47, 'sedang': 26}
+| Fitur | -5 total | a | b | c |
+|---|---|---|---|---|
+| age_group | 32 | 14 | 15 | 3 |
+| bone_class | 16 | 16 | 0 | 0 |
+| longitudinal | 9 | 7 | 2 | 0 |
+| transverse | 51 | 50 | 1 | 0 |
+| density | 14 | 10 | 4 | 0 |
+| margin_lodwick | 47 | 36 | 11 | 0 |
+| cortex | 21 | 15 | 6 | 0 |
+| soft_tissue_mass | 12 | 6 | 6 | 0 |
+| periosteal | 54 | 45 | 5 | 4 |
+| matrix | 64 | 50 | 14 | 0 |
+| size_cm | 2 | 0 | 1 | 1 |
+
+Kelas b/c dengan keyakinan sedang:
+| Entitas | Fitur:nilai | Kelas | Usul uji | Alasan |
+|---|---|---|---|---|
+| Metastasis | age_group:10-19_open | c | -2 | 0-9 berbobot -2 tetapi seluruh dekade 10-19 berbobot -5; metastasis pada remaja (neuroblastoma, rabdomiosarkoma, karsinoma nasofaring) jarang tetapi nyata, dan flag riwayat keganasan tidak dapat menolongnya |
+| Metastasis | age_group:10-19_closed | c | -2 | sama dengan 10-19_open: tidak konsisten dengan 0-9 (-2) |
+| Metastasis | age_group:10-19_unknown | c | -2 | sama dengan 10-19_open: tidak konsisten dengan 0-9 (-2) |
+| BPOP | transverse:juxtacortical_continuous | b | -2 | BPOP dengan kesan kontinuitas korteks-meduler dilaporkan; rujukan tersingkir di V2-15 |
+| BPOP | density:lytic | b | -2 | BPOP dini/belum terosifikasi tampak radiolusen; rujukan tersingkir di V3-46 |
+| Brown tumour | matrix:ground_glass | b | -2 | 'Ground-glass' adalah deskriptor klasik tulang hiperparatiroid/osteodistrofi renal |
+| Chondroblastoma | age_group:40-59 | b | -2 | Kondroblastoma dewasa paruh baya dilaporkan, terutama di tulang pendek/pipih (kalkaneus, patela, temporal) yang oleh KB sendiri diberi +1 |
+| Chondroblastoma | cortex:destruction | b | -2 | Kondroblastoma agresif dengan destruksi korteks dilaporkan; rujukan tersingkir di V3-06 |
+| Chondroblastoma | soft_tissue_mass:present | b | -2 | Kondroblastoma agresif/dengan ABC sekunder dapat meluas ke jaringan lunak; rujukan tersingkir di V3-06 |
+| Central CS | matrix:osteoid | b | -2 | Kalsifikasi kondroid padat dapat terbaca 'padat/cloud-like'; komponen dediferensiasi osteosarkomatosa disebut di pitfalls entitas |
+| Chordoma | density:sclerotic | b | -2 | Kordoma korpus vertebra mobil dapat sklerotik (ivory vertebra) pada sebagian kasus; KB memberi spine_body +2 |
+| Ewing sarcoma | cortex:expansion_shell | b | -2 | Ewing pada iga, fibula, dan tulang tubular kecil sering digambarkan ekspansil |
+| Fibrous dysplasia | margin_lodwick:IC | b | -2 | Lesi ground-glass sering berbaur bertahap dengan tulang normal (terutama kraniofasial, lesi panjang); tepi tidak selalu tegas |
+| Fibrous dysplasia | periosteal:lamellated | c | -2 | Sama: fraktur/shepherd's crook; CMF sudah -2 |
+| GCTB | age_group:10-19_open | b | -2 | GCTB pada skeletal imatur dilaporkan pada sebagian kecil kasus (lesi metafisis menempel fisis); aturan desain 'fisis terbuka = bukan GCTB' menyingkirkan kasus nyata ini |
+| Geode/ganglion | margin_lodwick:IC | b | -2 | Tepi sebagian tidak tegas pada ganglion intraoseus; rujukan tersingkir di V2-74 |
+| Geode/ganglion | soft_tissue_mass:present | b | -2 | Ganglion intraoseus dapat berhubungan dengan ganglion jaringan lunak; rujukan tersingkir di V2-74 |
+| Geode/ganglion | size_cm:>5 | b | -2 | Geode raksasa (RA, CPPD, OA lanjut) dilaporkan melebihi 5 cm |
+| NOF | periosteal:lamellated | c | -2 | Sama: fraktur patologis pada NOF besar; CMF sudah -2 |
+| Osteoid osteoma | size_cm:>5 | c | -2 | KB menilai densitas lesi dari sklerosis reaktif (sclerotic +3) tetapi ukuran dari nidus; pembaca yang mengukur zona sklerosis (>5 cm) menyingkirkan diagnosis yang benar |
+| Osteomyelitis | matrix:osteoid | b | -2 | Sekuestrum/involukrum dan sklerosis reaktif padat dapat dipilih pembaca sebagai 'osteoid (padat)'; menyingkirkan infeksi dari banding osteosarkoma berisiko di daerah endemik |
+| Conventional OS | margin_lodwick:IA | b | -2 | Osteosarkoma bertepi tegas/sklerotik yang meniru lesi jinak dilaporkan; rujukan tersingkir di V3-09 |
+| Conventional OS | periosteal:shell | c | -2 | Temuan yang sama diberi -2 pada cortex=expansion_shell tetapi -5 pada periosteal=shell |
+| SBC | age_group:60+ | b | -2 | Kista simpel dewasa/lansia (femur proksimal, kalkaneus, ilium) dilaporkan; rujukan tersingkir di V3-34 |
+| SBC | longitudinal:epiphysis_apophysis | b | -2 | Nilai ini mencakup apofisis: kista simpel trokanter mayor adalah lokasi yang dikenal; perluasan ke epifisis setelah fisis menutup juga dilaporkan |
+| SBC | periosteal:lamellated | c | -2 | Reaksi periosteal pascafraktur; v0.6 melonggarkan nilai yang sama untuk CMF (-2) tetapi tidak untuk lesi yang jauh lebih sering fraktur |
+
+Nilai fitur menurut jumlah entitas yang disingkirkan (>= 9):
+| Fitur:nilai | Entitas disingkirkan | % dari 37 | juga -2 | positif (>=1) |
+|---|---|---|---|---|
+| matrix:ground_glass | 27 | 73% | 7 | 2 |
+| periosteal:spiculated | 20 | 54% | 7 | 4 |
+| matrix:chondroid | 20 | 54% | 4 | 8 |
+| margin_lodwick:III | 18 | 49% | 2 | 8 |
+| transverse:juxtacortical_continuous | 18 | 49% | 8 | 2 |
+| matrix:osteoid | 17 | 46% | 11 | 7 |
+| periosteal:codman | 17 | 46% | 10 | 5 |
+| margin_lodwick:II | 16 | 43% | 4 | 11 |
+| cortex:destruction | 16 | 43% | 8 | 11 |
+| transverse:juxtacortical_surface | 14 | 38% | 8 | 6 |
+| soft_tissue_mass:present | 12 | 32% | 5 | 13 |
+| periosteal:lamellated | 12 | 32% | 7 | 9 |
+| age_group:60+ | 9 | 24% | 10 | 18 |
+| density:sclerotic | 9 | 24% | 8 | 17 |
+| transverse:cortical | 9 | 24% | 13 | 9 |
+| margin_lodwick:IC | 9 | 24% | 5 | 14 |
+
+Semua nilai dengan >=1 hard constraint: matrix:ground_glass=27; periosteal:spiculated=20; matrix:chondroid=20; margin_lodwick:III=18; transverse:juxtacortical_continuous=18; matrix:osteoid=17; periosteal:codman=17; margin_lodwick:II=16; cortex:destruction=16; transverse:juxtacortical_surface=14; soft_tissue_mass:present=12; periosteal:lamellated=12; age_group:60+=9; density:sclerotic=9; transverse:cortical=9; margin_lodwick:IC=9; age_group:0-9=8; bone_class:spine_body=7; age_group:10-19_open=6; longitudinal:epiphysis_apophysis=5; cortex:expansion_shell=5; transverse:central=5; transverse:eccentric=5; bone_class:flat_bone=4; age_group:10-19_closed=4; age_group:10-19_unknown=4; density:lytic=4; margin_lodwick:IA=4; longitudinal:diaphysis=3; periosteal:shell=3; bone_class:small_tubular_hand_foot=2; periosteal:solid_thin=2; size_cm:>5=2; bone_class:spine_posterior=2; age_group:40-59=1; bone_class:long_bone=1; density:mixed=1; longitudinal:metadiaphysis=1
+| Entitas | jumlah -5 | kelas b/c |
+|---|---|---|
+| Geode/ganglion | 20 | 4 |
+| SBC | 19 | 7 |
+| Chondroblastoma | 14 | 4 |
+| NOF | 14 | 2 |
+| Enostosis | 13 | 0 |
+| Bone infarct | 12 | 0 |
+| Osteoid osteoma | 12 | 3 |
+| Paget | 12 | 0 |
+| Clear cell CS | 11 | 1 |
+| BPOP | 10 | 3 |
+| Brown tumour | 10 | 3 |
+| Fibrous dysplasia | 10 | 2 |
+| Intraosseous lipoma | 10 | 0 |
+| Osteochondroma | 10 | 1 |
+| CMF | 9 | 3 |
+| Chordoma | 9 | 5 |
+| GCTB | 9 | 1 |
+| Periosteal chondroma | 9 | 1 |
+| OFD-adamantinoma | 8 | 1 |
+| Desmoplastic fibroma | 8 | 0 |
+| Enchondroma | 8 | 2 |
+| Parosteal OS | 8 | 0 |
+| Lymphoma | 8 | 2 |
+| Stress fracture | 8 | 2 |
+| Telangiectatic OS | 7 | 1 |
+| Myeloma | 7 | 0 |
+| Ewing sarcoma | 6 | 4 |
+| Periosteal OS | 6 | 1 |
+| ABC | 5 | 4 |
+| Vertebral haemangioma | 5 | 2 |
+| Metastasis | 4 | 4 |
+| LCH | 4 | 2 |
+| Osteoblastoma | 4 | 2 |
+| Skeletal TB | 4 | 2 |
+| Central CS | 3 | 1 |
+| Osteomyelitis | 3 | 1 |
+| Conventional OS | 3 | 2 |
+
+  input [agresif: margin III + destruction + massa + spiculated]: tersisa 14 entitas, disingkirkan 23
+  input [ground_glass saja]: tersisa 10 entitas, disingkirkan 27
+  input [juxtacortical_continuous saja]: tersisa 19 entitas, disingkirkan 18
+  input [osteoid + sclerotic]: tersisa 18 entitas, disingkirkan 19
+'Tebing' pada fitur berurutan (nilai -5 bersebelahan dengan nilai >= 0): 28
+| Entitas | Nilai -5 | Bobot tertinggi nilai tetangga |
+|---|---|---|
+| OFD-adamantinoma | margin_lodwick:II | 0 |
+| Bone infarct | margin_lodwick:IC | 0 |
+| Chondroblastoma | age_group:40-59 | 0 |
+| Chondroblastoma | longitudinal:diaphysis | 0 |
+| CMF | margin_lodwick:IC | 0 |
+| Chordoma | age_group:10-19_open | 1 |
+| Chordoma | age_group:10-19_closed | 1 |
+| Chordoma | age_group:10-19_unknown | 1 |
+| Clear cell CS | age_group:10-19_open | 2 |
+| Clear cell CS | longitudinal:diaphysis | 0 |
+| Fibrous dysplasia | margin_lodwick:IC | 1 |
+| GCTB | age_group:0-9 | 2 |
+| GCTB | age_group:10-19_open | 3 |
+| Geode/ganglion | longitudinal:metadiaphysis | 0 |
+| Geode/ganglion | margin_lodwick:IC | 0 |
+| Geode/ganglion | size_cm:>5 | 0 |
+| Intraosseous lipoma | margin_lodwick:IC | 1 |
+| NOF | longitudinal:epiphysis_apophysis | 3 |
+| NOF | margin_lodwick:IC | 1 |
+| Osteoblastoma | margin_lodwick:II | 0 |
+| Osteochondroma | longitudinal:epiphysis_apophysis | 3 |
+| Osteoid osteoma | margin_lodwick:IC | 0 |
+| Parosteal OS | age_group:0-9 | 1 |
+| Periosteal OS | longitudinal:epiphysis_apophysis | 0 |
+| Telangiectatic OS | margin_lodwick:IA | 0 |
+| SBC | longitudinal:epiphysis_apophysis | 3 |
+| SBC | margin_lodwick:IC | 2 |
+| Vertebral haemangioma | margin_lodwick:IC | 1 |
+
+Tiga nilai 10-19 (open/closed/unknown) yang tidak seragam:
+| Entitas | open | closed | unknown | Catatan |
+|---|---|---|---|---|
+| ABC | 3 | 2 | 3 | unknown = nilai tertinggi |
+| Chondroblastoma | 3 | 1 | 3 | unknown = nilai tertinggi |
+| CMF | 3 | 2 | 3 | unknown = nilai tertinggi |
+| Clear cell CS | -5 | -2 | -2 | unknown = nilai tertinggi |
+| Ewing sarcoma | 3 | 2 | 3 | unknown = nilai tertinggi |
+| GCTB | -5 | 2 | 1 | unknown di antara |
+| LCH | 2 | 1 | 2 | unknown = nilai tertinggi |
+| NOF | 3 | 2 | 3 | unknown = nilai tertinggi |
+| Osteochondroma | 3 | 2 | 3 | unknown = nilai tertinggi |
+| Osteomyelitis | 2 | 1 | 2 | unknown = nilai tertinggi |
+| SBC | 3 | 1 | 3 | unknown = nilai tertinggi |
+
+Kasus uji v1-v4 dengan entitas rujukan tersingkir oleh hard constraint pada KB ini:
+| Kasus | Rujukan | T/A | Klaim -5 yang menyingkirkan | Skor |
+|---|---|---|---|---|
+| V2-15 | BPOP | A | transverse=juxtacortical_continuous | 3 |
+| V2-74 | Geode/ganglion | A | margin_lodwick=IC; soft_tissue_mass=present | 3 |
+| V3-06 | Chondroblastoma | A | cortex=destruction; soft_tissue_mass=present | -6 |
+| V3-09 | Conventional OS | A | margin_lodwick=IA | 1 |
+| V3-22 | Chordoma | A | bone_class=long_bone | -2 |
+| V3-34 | SBC | A | age_group=60+ | 1 |
+| V3-46 | BPOP | A | density=lytic | -3 |
+
+  7 dari 193 kasus
+
+====================================================================================================
+2. KESEIMBANGAN STRUKTURAL
+====================================================================================================
+| Entitas | prior | klaim | +3 | fitur ber-+3 | +2 | +1 | 0 | -2 | -5 | rata-rata bobot/nilai | maks semua fitur | maks tanpa prior | maks 6 fitur inti | maks usia+tulang+densitas |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Ewing sarcoma | 0 | 47 | 8 | 5 | 8 | 12 | 2 | 11 | 6 | +0.00 | 26 | 26 | 15 | 7 |
+| Osteoid osteoma | 0 | 43 | 10 | 8 | 2 | 11 | 6 | 2 | 12 | -0.31 | 26 | 26 | 15 | 9 |
+| ABC | 0 | 44 | 9 | 8 | 4 | 8 | 8 | 10 | 5 | -0.03 | 25 | 25 | 16 | 9 |
+| Fibrous dysplasia | 0 | 45 | 9 | 7 | 7 | 8 | 4 | 7 | 10 | -0.24 | 25 | 25 | 16 | 9 |
+| Myeloma | 0 | 42 | 7 | 6 | 5 | 9 | 2 | 12 | 7 | -0.31 | 25 | 25 | 14 | 9 |
+| Lymphoma | -1 | 46 | 5 | 4 | 10 | 11 | 8 | 4 | 8 | -0.03 | 25 | 26 | 13 | 6 |
+| Bone infarct | 0 | 43 | 5 | 5 | 7 | 3 | 6 | 10 | 12 | -0.77 | 24 | 24 | 15 | 7 |
+| Metastasis | 0 | 46 | 5 | 4 | 11 | 9 | 10 | 7 | 4 | +0.19 | 24 | 24 | 12 | 8 |
+| CMF | -1 | 46 | 7 | 6 | 6 | 9 | 8 | 7 | 9 | -0.27 | 24 | 25 | 17 | 8 |
+| Central CS | 0 | 49 | 4 | 4 | 11 | 12 | 8 | 11 | 3 | +0.15 | 24 | 24 | 14 | 8 |
+| GCTB | 0 | 46 | 6 | 6 | 4 | 10 | 9 | 8 | 9 | -0.40 | 24 | 24 | 18 | 9 |
+| Geode/ganglion | 0 | 45 | 5 | 5 | 5 | 4 | 5 | 6 | 20 | -1.34 | 24 | 24 | 14 | 7 |
+| Osteomyelitis | 0 | 42 | 4 | 4 | 11 | 19 | 5 | 0 | 3 | +0.61 | 24 | 24 | 15 | 7 |
+| Conventional OS | 0 | 46 | 7 | 4 | 9 | 10 | 5 | 12 | 3 | +0.16 | 24 | 24 | 14 | 7 |
+| SBC | 0 | 44 | 9 | 6 | 4 | 4 | 3 | 5 | 19 | -1.06 | 24 | 24 | 17 | 9 |
+| LCH | 0 | 44 | 5 | 5 | 9 | 15 | 6 | 5 | 4 | +0.29 | 23 | 23 | 15 | 9 |
+| Telangiectatic OS | -1 | 42 | 6 | 4 | 6 | 13 | 4 | 6 | 7 | -0.06 | 23 | 24 | 14 | 8 |
+| Enostosis | 0 | 43 | 3 | 3 | 10 | 9 | 3 | 5 | 13 | -0.60 | 22 | 22 | 11 | 7 |
+| NOF | 0 | 45 | 9 | 5 | 4 | 6 | 4 | 8 | 14 | -0.73 | 22 | 22 | 17 | 8 |
+| Periosteal OS | -2 | 38 | 7 | 5 | 7 | 5 | 5 | 8 | 6 | -0.10 | 21 | 23 | 12 | 6 |
+| Skeletal TB | 0 | 45 | 0 | 0 | 12 | 18 | 5 | 6 | 4 | +0.16 | 21 | 21 | 11 | 6 |
+| Chondroblastoma | -1 | 44 | 5 | 4 | 3 | 15 | 4 | 3 | 14 | -0.65 | 20 | 21 | 15 | 7 |
+| Chordoma | -1 | 32 | 5 | 4 | 5 | 6 | 3 | 4 | 9 | -0.35 | 20 | 21 | 12 | 8 |
+| Enchondroma | 0 | 48 | 2 | 2 | 9 | 13 | 4 | 12 | 8 | -0.44 | 20 | 20 | 11 | 7 |
+| Osteochondroma | 0 | 38 | 6 | 4 | 5 | 9 | 3 | 5 | 10 | -0.37 | 20 | 20 | 14 | 8 |
+| OFD-adamantinoma | -2 | 42 | 5 | 5 | 6 | 12 | 3 | 8 | 8 | -0.27 | 19 | 21 | 15 | 7 |
+| Brown tumour | -1 | 46 | 3 | 3 | 6 | 15 | 7 | 5 | 10 | -0.39 | 19 | 20 | 9 | 6 |
+| Intraosseous lipoma | -1 | 41 | 4 | 4 | 5 | 6 | 8 | 8 | 10 | -0.61 | 19 | 20 | 13 | 7 |
+| Stress fracture | 0 | 44 | 3 | 3 | 12 | 11 | 7 | 3 | 8 | -0.03 | 19 | 19 | 12 | 7 |
+| Vertebral haemangioma | 0 | 32 | 3 | 3 | 6 | 7 | 1 | 10 | 5 | -0.27 | 19 | 19 | 10 | 7 |
+| Desmoplastic fibroma | -2 | 43 | 3 | 3 | 11 | 9 | 7 | 5 | 8 | -0.16 | 18 | 20 | 12 | 6 |
+| Parosteal OS | -2 | 36 | 5 | 5 | 1 | 9 | 3 | 10 | 8 | -0.55 | 18 | 20 | 12 | 6 |
+| Paget | -1 | 44 | 4 | 3 | 8 | 11 | 1 | 8 | 12 | -0.60 | 18 | 19 | 12 | 8 |
+| Periosteal chondroma | -2 | 43 | 4 | 4 | 7 | 13 | 1 | 9 | 9 | -0.39 | 18 | 20 | 10 | 5 |
+| Clear cell CS | -2 | 40 | 3 | 3 | 4 | 11 | 3 | 8 | 11 | -0.69 | 17 | 19 | 12 | 6 |
+| Osteoblastoma | -1 | 40 | 4 | 2 | 6 | 17 | 3 | 6 | 4 | +0.15 | 17 | 18 | 10 | 7 |
+| BPOP | -2 | 36 | 3 | 3 | 2 | 13 | 5 | 3 | 10 | -0.48 | 14 | 16 | 9 | 6 |
+
+prior 0: n=21; median maks tanpa prior 24; median maks 6 inti tanpa prior 14; median jumlah +3 5; median fitur ber-+3 5
+prior -1: n=9; median maks tanpa prior 21; median maks 6 inti tanpa prior 14; median jumlah +3 5; median fitur ber-+3 4
+prior -2: n=7; median maks tanpa prior 20; median maks 6 inti tanpa prior 14; median jumlah +3 4; median fitur ber-+3 4
+maks semua fitur: min 14, median 22, maks 26, rentang 12
+maks 6 fitur inti: min 9, median 14, maks 18, rentang 9
+maks 3 fitur: min 5, median 7, maks 9, rentang 4
+jumlah klaim: min 32, median 44, maks 49, rentang 17
+jumlah +3: min 0, median 5, maks 10, rentang 10
+korelasi Pearson jumlah +3 vs maks semua fitur: 0.63; jumlah klaim vs maks: 0.52; prior vs maks: 0.68
+Skor dari empat temuan 'normal/tidak ada' (cortex=intact, periosteal=none, matrix=none, soft_tissue_mass=absent):
+| Entitas | cortex intact | periosteal none | matrix none | massa absent | jumlah |
+|---|---|---|---|---|---|
+| Enostosis | 3 | 3 | 2 | . | 8 |
+| Geode/ganglion | 2 | 3 | 3 | . | 8 |
+| Bone infarct | 3 | 3 | 1 | . | 7 |
+| Vertebral haemangioma | 2 | 3 | 2 | . | 7 |
+| Brown tumour | 1 | 2 | 3 | . | 6 |
+| Intraosseous lipoma | 2 | 3 | 1 | . | 6 |
+| SBC | 1 | 2 | 3 | . | 6 |
+| CMF | 1 | 2 | 2 | . | 5 |
+| Clear cell CS | 1 | 2 | 1 | 1 | 5 |
+| Enchondroma | 2 | 2 | 1 | . | 5 |
+| Fibrous dysplasia | 1 | 3 | 1 | . | 5 |
+| NOF | 1 | 2 | 2 | . | 5 |
+| Osteochondroma | 1 | 2 | 1 | 1 | 5 |
+| Myeloma | 0 | 2 | 3 | . | 5 |
+| Stress fracture | 1 | 1 | 2 | 1 | 5 |
+| ABC | 0 | 1 | 3 | . | 4 |
+| Desmoplastic fibroma | 0 | 1 | 3 | . | 4 |
+| LCH | 0 | 1 | 3 | . | 4 |
+| Paget | 1 | 2 | 1 | . | 4 |
+| Periosteal chondroma | 1 | 1 | 1 | 1 | 4 |
+| Lymphoma | 2 | 1 | 3 | -2 | 4 |
+| Skeletal TB | 0 | 2 | 2 | . | 4 |
+| OFD-adamantinoma | 1 | 1 | 1 | . | 3 |
+| Metastasis | 0 | 1 | 2 | . | 3 |
+| BPOP | 2 | 1 | 0 | 0 | 3 |
+| Chondroblastoma | 1 | 1 | 1 | . | 3 |
+| GCTB | 0 | 1 | 2 | . | 3 |
+| Osteoblastoma | 1 | 1 | 1 | . | 3 |
+| Osteomyelitis | 1 | 0 | 2 | . | 3 |
+| Osteoid osteoma | 1 | 0 | 1 | . | 2 |
+| Parosteal OS | 1 | 1 | -2 | 0 | 0 |
+| Central CS | -2 | 0 | 1 | 0 | -1 |
+| Chordoma | -2 | 1 | 2 | -2 | -1 |
+| Ewing sarcoma | 1 | -2 | 1 | -2 | -2 |
+| Periosteal OS | 1 | -2 | 0 | -2 | -3 |
+| Telangiectatic OS | -2 | -2 | 2 | -2 | -4 |
+| Conventional OS | -2 | -2 | 0 | -2 | -6 |
+
+jumlah +3 pada empat nilai tersebut: 16; rentang jumlah: -6 sampai 8
+Bobot minimum pada fitur yang hampir selalu diisi (bila > 0, fitur itu selalu menambah skor = prior tersembunyi):
+| Entitas | min usia | rata-rata usia | min densitas | min tulang (long/flat/spine_body) | jumlah minimum positif |
+|---|---|---|---|---|---|
+| Metastasis | -5 | -1.9 | 1 | 2 | 3 |
+| Paget | -5 | -2.4 | 1 | 2 | 3 |
+| Lymphoma | -2 | +0.6 | 1 | 2 | 3 |
+| Enostosis | 0 | +1.3 | -5 | 2 | 2 |
+| LCH | -5 | +0.1 | -2 | 2 | 2 |
+| Osteomyelitis | 1 | +1.7 | 1 | 0 | 2 |
+| Skeletal TB | 1 | +1.3 | -2 | 1 | 2 |
+| OFD-adamantinoma | -2 | +1.4 | 1 | -5 | 1 |
+| Central CS | -5 | -0.7 | -2 | 1 | 1 |
+| Ewing sarcoma | -5 | +0.7 | 0 | 1 | 1 |
+| Fibrous dysplasia | -2 | +1.6 | 1 | 0 | 1 |
+| NOF | -5 | +0.6 | 1 | -5 | 1 |
+| Osteoblastoma | -5 | +0.7 | 1 | 0 | 1 |
+| Conventional OS | 0 | +1.7 | 1 | 0 | 1 |
+| Myeloma | -5 | -2.4 | -2 | 1 | 1 |
+| Stress fracture | 1 | +1.7 | 0 | 0 | 1 |
+| Vertebral haemangioma | -2 | -0.4 | 1 | -2 | 1 |
+
+Nilai fitur menurut jumlah entitas yang memberinya +3 ('ciri khas'); >= 7 entitas:
+| Fitur:nilai | entitas dengan +3 | entitas dengan +2 |
+|---|---|---|
+| bone_class:long_bone | 14 | 15 |
+| age_group:10-19_open | 13 | 6 |
+| age_group:10-19_unknown | 13 | 6 |
+| density:lytic | 11 | 9 |
+| longitudinal:metaphysis | 9 | 11 |
+| matrix:none | 8 | 11 |
+| margin_lodwick:IA | 7 | 4 |
+
+nilai dengan tepat satu entitas ber-+3: 14; nilai tanpa +3: 10; nilai dengan >=7 entitas ber-+3: 7
+Input terbaik (semua fitur) untuk tiga entitas tertinggi dan tiga terendah:
+  Ewing sarcoma 26: bone_class=long_bone, longitudinal=diaphysis, transverse=central, density=lytic, margin_lodwick=II, cortex=focal_breach, age_group=0-9, soft_tissue_mass=present, periosteal=lamellated, matrix=none
+  Osteoid osteoma 26: bone_class=long_bone, longitudinal=diaphysis, transverse=cortical, density=sclerotic, cortex=intact, age_group=10-19_open, periosteal=solid_thin, matrix=none, size_cm=<2, clinical_flags=night_pain_nsaid_relief
+  ABC 25: bone_class=long_bone, longitudinal=metaphysis, transverse=eccentric, density=lytic, margin_lodwick=IB, cortex=expansion_shell, age_group=10-19_open, periosteal=shell, matrix=none
+  BPOP 14: bone_class=small_tubular_hand_foot, transverse=juxtacortical_surface, density=sclerotic, cortex=intact, age_group=20-39, periosteal=none, matrix=osteoid, size_cm=<2
+  Clear cell CS 17: bone_class=long_bone, longitudinal=epiphysis_apophysis, transverse=central, density=lytic, margin_lodwick=IB, cortex=intact, age_group=40-59, soft_tissue_mass=absent, periosteal=none, matrix=none
+  Osteoblastoma 17: bone_class=spine_posterior, transverse=central, density=mixed, margin_lodwick=IA, cortex=expansion_shell, age_group=10-19_open, periosteal=none, matrix=osteoid, size_cm=2-5
+
+--- Simulasi input jarang: usia x tulang x densitas; 210 kombinasi yang dapat diisi di UI (bobot seragam per kombinasi, bukan prevalensi)
+| Entitas | prior | peringkat 1 (termasuk seri) | % | 3 besar | % | 5 besar | % | disingkirkan % | 3 besar tanpa prior % |
+|---|---|---|---|---|---|---|---|---|---|
+| Fibrous dysplasia | 0 | 50 | 24 | 72 | 34 | 101 | 48 | 0 | 34 |
+| Osteoid osteoma | 0 | 39 | 19 | 72 | 34 | 88 | 42 | 14 | 26 |
+| Stress fracture | 0 | 11 | 5 | 57 | 27 | 98 | 47 | 0 | 21 |
+| Enostosis | 0 | 29 | 14 | 55 | 26 | 66 | 31 | 67 | 24 |
+| Ewing sarcoma | 0 | 13 | 6 | 55 | 26 | 84 | 40 | 14 | 18 |
+| Metastasis | 0 | 27 | 13 | 54 | 26 | 54 | 26 | 43 | 24 |
+| Osteochondroma | 0 | 7 | 3 | 50 | 24 | 81 | 39 | 33 | 18 |
+| Osteomyelitis | 0 | 14 | 7 | 46 | 22 | 81 | 39 | 0 | 14 |
+| ABC | 0 | 21 | 10 | 40 | 19 | 49 | 23 | 43 | 14 |
+| LCH | 0 | 20 | 10 | 38 | 18 | 52 | 25 | 14 | 14 |
+| Conventional OS | 0 | 0 | 0 | 36 | 17 | 64 | 30 | 0 | 16 |
+| NOF | 0 | 5 | 2 | 33 | 16 | 60 | 29 | 49 | 9 |
+| Paget | -1 | 13 | 6 | 31 | 15 | 43 | 20 | 57 | 19 |
+| SBC | 0 | 17 | 8 | 28 | 13 | 31 | 15 | 54 | 10 |
+| Osteoblastoma | -1 | 5 | 2 | 27 | 13 | 44 | 21 | 14 | 26 |
+| Enchondroma | 0 | 9 | 4 | 22 | 10 | 33 | 16 | 0 | 8 |
+| Bone infarct | 0 | 4 | 2 | 22 | 10 | 35 | 17 | 0 | 7 |
+| GCTB | 0 | 16 | 8 | 21 | 10 | 27 | 13 | 52 | 9 |
+| Central CS | 0 | 7 | 3 | 20 | 10 | 33 | 16 | 14 | 8 |
+| Telangiectatic OS | -1 | 5 | 2 | 19 | 9 | 32 | 15 | 33 | 13 |
+| Geode/ganglion | 0 | 7 | 3 | 18 | 9 | 27 | 13 | 49 | 6 |
+| Chordoma | -1 | 4 | 2 | 18 | 9 | 19 | 9 | 77 | 9 |
+| Vertebral haemangioma | 0 | 2 | 1 | 18 | 9 | 33 | 16 | 0 | 6 |
+| Myeloma | 0 | 14 | 7 | 17 | 8 | 20 | 10 | 57 | 8 |
+| CMF | -1 | 3 | 1 | 16 | 8 | 34 | 16 | 33 | 13 |
+| Skeletal TB | 0 | 0 | 0 | 12 | 6 | 35 | 17 | 0 | 1 |
+| Chondroblastoma | -1 | 0 | 0 | 8 | 4 | 8 | 4 | 52 | 4 |
+| Desmoplastic fibroma | -2 | 2 | 1 | 6 | 3 | 12 | 6 | 33 | 11 |
+| Intraosseous lipoma | -1 | 2 | 1 | 6 | 3 | 14 | 7 | 0 | 8 |
+| OFD-adamantinoma | -2 | 1 | 0 | 6 | 3 | 13 | 6 | 30 | 18 |
+| Brown tumour | -1 | 0 | 0 | 3 | 1 | 15 | 7 | 0 | 7 |
+| Parosteal OS | -2 | 0 | 0 | 3 | 1 | 6 | 3 | 49 | 11 |
+| BPOP | -2 | 1 | 0 | 2 | 1 | 6 | 3 | 47 | 8 |
+| Lymphoma | -1 | 0 | 0 | 1 | 0 | 16 | 8 | 0 | 6 |
+| Clear cell CS | -2 | 0 | 0 | 0 | 0 | 2 | 1 | 29 | 5 |
+| Periosteal OS | -2 | 0 | 0 | 0 | 0 | 3 | 1 | 14 | 13 |
+| Periosteal chondroma | -2 | 0 | 0 | 0 | 0 | 0 | 0 | 10 | 4 |
+
+ukuran seri di peringkat 1: {1: 126, 2: 47, 3: 23, 4: 11, 5: 3}; rata-rata 1.66
+jumlah entitas dengan peringkat <=3: {3: 83, 4: 45, 5: 36, 6: 19, 7: 14, 8: 8, 9: 3, 10: 2}; rata-rata 4.44
+jumlah entitas dengan peringkat <=5: {5: 67, 6: 46, 7: 36, 8: 25, 9: 22, 10: 6, 11: 3, 12: 1, 13: 3, 14: 1}; rata-rata 6.76; >10 pada 8 kombinasi
+selisih skor peringkat 1 vs entitas ke-5: median 2, kuartil 1-3; rentang skor entitas hidup: median 10
+prior mengubah himpunan 3 besar pada 153 kombinasi (73%); mengubah peringkat 1 pada 85 (40%)
+entitas yang tidak pernah masuk 5 besar: Periosteal chondroma
+entitas yang tidak pernah masuk 3 besar: Clear cell CS, Periosteal OS, Periosteal chondroma
+
+--- Simulasi input jarang: usia x tulang x (longitudinal bila tulang panjang) x transversal x densitas; 1274 kombinasi yang dapat diisi di UI (bobot seragam per kombinasi, bukan prevalensi)
+| Entitas | prior | peringkat 1 (termasuk seri) | % | 3 besar | % | 5 besar | % | disingkirkan % | 3 besar tanpa prior % |
+|---|---|---|---|---|---|---|---|---|---|
+| Stress fracture | 0 | 139 | 11 | 558 | 44 | 835 | 66 | 0 | 36 |
+| Osteoid osteoma | 0 | 221 | 17 | 551 | 43 | 688 | 54 | 14 | 38 |
+| Osteomyelitis | 0 | 57 | 4 | 404 | 32 | 808 | 63 | 0 | 25 |
+| Metastasis | 0 | 136 | 11 | 301 | 24 | 357 | 28 | 43 | 20 |
+| Osteochondroma | 0 | 242 | 19 | 298 | 23 | 323 | 25 | 74 | 21 |
+| Fibrous dysplasia | 0 | 138 | 11 | 248 | 19 | 356 | 28 | 36 | 17 |
+| NOF | 0 | 138 | 11 | 234 | 18 | 297 | 23 | 47 | 16 |
+| ABC | 0 | 85 | 7 | 187 | 15 | 249 | 20 | 45 | 12 |
+| LCH | 0 | 61 | 5 | 169 | 13 | 276 | 22 | 14 | 10 |
+| Conventional OS | 0 | 42 | 3 | 164 | 13 | 308 | 24 | 0 | 11 |
+| Enostosis | 0 | 87 | 7 | 147 | 12 | 218 | 17 | 79 | 11 |
+| Ewing sarcoma | 0 | 14 | 1 | 128 | 10 | 270 | 21 | 14 | 8 |
+| CMF | -1 | 29 | 2 | 123 | 10 | 197 | 15 | 36 | 12 |
+| Osteoblastoma | -1 | 8 | 1 | 113 | 9 | 317 | 25 | 14 | 16 |
+| Vertebral haemangioma | 0 | 32 | 3 | 111 | 9 | 220 | 17 | 0 | 7 |
+| Paget | -1 | 36 | 3 | 95 | 7 | 150 | 12 | 72 | 10 |
+| Periosteal OS | -2 | 27 | 2 | 92 | 7 | 132 | 10 | 66 | 10 |
+| Myeloma | 0 | 55 | 4 | 86 | 7 | 117 | 9 | 57 | 6 |
+| Bone infarct | 0 | 37 | 3 | 83 | 7 | 131 | 10 | 57 | 6 |
+| OFD-adamantinoma | -2 | 26 | 2 | 82 | 6 | 166 | 13 | 31 | 16 |
+| Central CS | 0 | 18 | 1 | 79 | 6 | 147 | 12 | 14 | 5 |
+| Chordoma | -1 | 22 | 2 | 75 | 6 | 95 | 7 | 83 | 7 |
+| GCTB | 0 | 39 | 3 | 63 | 5 | 84 | 7 | 80 | 4 |
+| Periosteal chondroma | -2 | 16 | 1 | 61 | 5 | 128 | 10 | 60 | 10 |
+| Skeletal TB | 0 | 5 | 0 | 52 | 4 | 155 | 12 | 0 | 2 |
+| SBC | 0 | 38 | 3 | 51 | 4 | 66 | 5 | 81 | 4 |
+| Enchondroma | 0 | 14 | 1 | 51 | 4 | 106 | 8 | 0 | 3 |
+| Parosteal OS | -2 | 8 | 1 | 44 | 3 | 79 | 6 | 89 | 6 |
+| Brown tumour | -1 | 6 | 0 | 30 | 2 | 53 | 4 | 36 | 4 |
+| BPOP | -2 | 5 | 0 | 27 | 2 | 75 | 6 | 88 | 5 |
+| Geode/ganglion | 0 | 11 | 1 | 26 | 2 | 45 | 4 | 72 | 2 |
+| Chondroblastoma | -1 | 10 | 1 | 26 | 2 | 59 | 5 | 81 | 4 |
+| Intraosseous lipoma | -1 | 5 | 0 | 16 | 1 | 27 | 2 | 36 | 2 |
+| Lymphoma | -1 | 3 | 0 | 14 | 1 | 64 | 5 | 36 | 4 |
+| Telangiectatic OS | -1 | 0 | 0 | 13 | 1 | 63 | 5 | 71 | 3 |
+| Clear cell CS | -2 | 3 | 0 | 11 | 1 | 13 | 1 | 72 | 2 |
+| Desmoplastic fibroma | -2 | 4 | 0 | 10 | 1 | 28 | 2 | 57 | 6 |
+
+ukuran seri di peringkat 1: {1: 898, 2: 258, 3: 89, 4: 18, 5: 5, 6: 4, 7: 1, 8: 1}; rata-rata 1.43
+jumlah entitas dengan peringkat <=3: {3: 703, 4: 307, 5: 159, 6: 63, 7: 26, 8: 13, 9: 3}; rata-rata 3.79
+jumlah entitas dengan peringkat <=5: {5: 530, 6: 395, 7: 189, 8: 106, 9: 41, 10: 6, 11: 2, 12: 5}; rata-rata 6.05; >10 pada 7 kombinasi
+selisih skor peringkat 1 vs entitas ke-5: median 3, kuartil 2-4; rentang skor entitas hidup: median 11
+prior mengubah himpunan 3 besar pada 712 kombinasi (56%); mengubah peringkat 1 pada 400 (31%)
+entitas yang tidak pernah masuk 5 besar: tidak ada
+entitas yang tidak pernah masuk 3 besar: tidak ada
+
+--- Simulasi input jarang: subset tulang panjang intrameduler/kortikal dari simulasi kedua; 252 kombinasi yang dapat diisi di UI (bobot seragam per kombinasi, bukan prevalensi)
+| Entitas | prior | peringkat 1 (termasuk seri) | % | 3 besar | % | 5 besar | % | disingkirkan % | 3 besar tanpa prior % |
+|---|---|---|---|---|---|---|---|---|---|
+| Stress fracture | 0 | 32 | 13 | 135 | 54 | 177 | 70 | 0 | 50 |
+| Osteoid osteoma | 0 | 50 | 20 | 94 | 37 | 125 | 50 | 14 | 35 |
+| NOF | 0 | 64 | 25 | 90 | 36 | 104 | 41 | 36 | 33 |
+| Osteomyelitis | 0 | 11 | 4 | 78 | 31 | 159 | 63 | 0 | 28 |
+| Fibrous dysplasia | 0 | 31 | 12 | 62 | 25 | 107 | 42 | 0 | 22 |
+| CMF | -1 | 15 | 6 | 46 | 18 | 69 | 27 | 33 | 23 |
+| Metastasis | 0 | 7 | 3 | 44 | 17 | 70 | 28 | 43 | 15 |
+| Bone infarct | 0 | 22 | 9 | 41 | 16 | 63 | 25 | 33 | 16 |
+| OFD-adamantinoma | -2 | 12 | 5 | 35 | 14 | 60 | 24 | 25 | 25 |
+| Enostosis | 0 | 16 | 6 | 34 | 13 | 59 | 23 | 67 | 13 |
+| Conventional OS | 0 | 6 | 2 | 34 | 13 | 71 | 28 | 0 | 13 |
+| ABC | 0 | 6 | 2 | 28 | 11 | 46 | 18 | 43 | 10 |
+| Ewing sarcoma | 0 | 3 | 1 | 26 | 10 | 50 | 20 | 14 | 9 |
+| Paget | -1 | 7 | 3 | 25 | 10 | 43 | 17 | 57 | 15 |
+| GCTB | 0 | 13 | 5 | 23 | 9 | 29 | 12 | 68 | 8 |
+| Central CS | 0 | 4 | 2 | 20 | 8 | 34 | 13 | 14 | 7 |
+| Chondroblastoma | -1 | 10 | 4 | 18 | 7 | 22 | 9 | 76 | 8 |
+| SBC | 0 | 15 | 6 | 17 | 7 | 22 | 9 | 71 | 7 |
+| LCH | 0 | 5 | 2 | 14 | 6 | 32 | 13 | 14 | 4 |
+| Clear cell CS | -2 | 3 | 1 | 11 | 4 | 13 | 5 | 64 | 7 |
+| Geode/ganglion | 0 | 5 | 2 | 10 | 4 | 16 | 6 | 71 | 4 |
+| Lymphoma | -1 | 3 | 1 | 9 | 4 | 23 | 9 | 0 | 10 |
+| Myeloma | 0 | 2 | 1 | 8 | 3 | 12 | 5 | 57 | 2 |
+| Skeletal TB | 0 | 0 | 0 | 8 | 3 | 28 | 11 | 0 | 3 |
+| Telangiectatic OS | -1 | 0 | 0 | 6 | 2 | 30 | 12 | 56 | 6 |
+| Desmoplastic fibroma | -2 | 1 | 0 | 2 | 1 | 5 | 2 | 33 | 6 |
+| Brown tumour | -1 | 0 | 0 | 1 | 0 | 8 | 3 | 0 | 3 |
+| Enchondroma | 0 | 0 | 0 | 1 | 0 | 5 | 2 | 0 | 0 |
+| Intraosseous lipoma | -1 | 0 | 0 | 1 | 0 | 4 | 2 | 0 | 2 |
+| BPOP | -2 | 0 | 0 | 0 | 0 | 0 | 0 | 100 | 0 |
+| Chordoma | -1 | 0 | 0 | 0 | 0 | 0 | 0 | 100 | 0 |
+| Osteoblastoma | -1 | 0 | 0 | 0 | 0 | 15 | 6 | 14 | 2 |
+| Osteochondroma | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 100 | 0 |
+| Parosteal OS | -2 | 0 | 0 | 0 | 0 | 0 | 0 | 100 | 0 |
+| Periosteal OS | -2 | 0 | 0 | 0 | 0 | 0 | 0 | 79 | 0 |
+| Periosteal chondroma | -2 | 0 | 0 | 0 | 0 | 0 | 0 | 67 | 0 |
+| Vertebral haemangioma | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+
+ukuran seri di peringkat 1: {1: 190, 2: 38, 3: 19, 4: 5}; rata-rata 1.36
+jumlah entitas dengan peringkat <=3: {3: 147, 4: 69, 5: 23, 6: 6, 7: 3, 8: 4}; rata-rata 3.65
+jumlah entitas dengan peringkat <=5: {5: 114, 6: 75, 7: 35, 8: 19, 9: 7, 10: 1, 11: 1}; rata-rata 5.96; >10 pada 1 kombinasi
+selisih skor peringkat 1 vs entitas ke-5: median 3, kuartil 2-4; rentang skor entitas hidup: median 13
+prior mengubah himpunan 3 besar pada 112 kombinasi (44%); mengubah peringkat 1 pada 72 (29%)
+entitas yang tidak pernah masuk 5 besar: BPOP, Chordoma, Osteochondroma, Parosteal OS, Periosteal OS, Periosteal chondroma, Vertebral haemangioma
+entitas yang tidak pernah masuk 3 besar: BPOP, Chordoma, Osteoblastoma, Osteochondroma, Parosteal OS, Periosteal OS, Periosteal chondroma, Vertebral haemangioma
+
+--- Simulasi input jarang: subset remaja 10-19, tulang panjang, litik, intrameduler/kortikal; 36 kombinasi yang dapat diisi di UI (bobot seragam per kombinasi, bukan prevalensi)
+| Entitas | prior | peringkat 1 (termasuk seri) | % | 3 besar | % | 5 besar | % | disingkirkan % | 3 besar tanpa prior % |
+|---|---|---|---|---|---|---|---|---|---|
+| CMF | -1 | 6 | 17 | 21 | 58 | 24 | 67 | 0 | 67 |
+| NOF | 0 | 15 | 42 | 18 | 50 | 18 | 50 | 25 | 50 |
+| ABC | 0 | 6 | 17 | 18 | 50 | 30 | 83 | 0 | 44 |
+| Stress fracture | 0 | 0 | 0 | 10 | 28 | 12 | 33 | 0 | 22 |
+| SBC | 0 | 9 | 25 | 9 | 25 | 9 | 25 | 50 | 25 |
+| Osteoid osteoma | 0 | 6 | 17 | 7 | 19 | 16 | 44 | 0 | 19 |
+| Chondroblastoma | -1 | 3 | 8 | 6 | 17 | 7 | 19 | 50 | 17 |
+| GCTB | 0 | 3 | 8 | 6 | 17 | 9 | 25 | 56 | 14 |
+| Ewing sarcoma | 0 | 1 | 3 | 6 | 17 | 12 | 33 | 0 | 14 |
+| Osteomyelitis | 0 | 0 | 0 | 6 | 17 | 15 | 42 | 0 | 17 |
+| Fibrous dysplasia | 0 | 2 | 6 | 5 | 14 | 12 | 33 | 0 | 14 |
+| LCH | 0 | 1 | 3 | 5 | 14 | 13 | 36 | 0 | 8 |
+| Telangiectatic OS | -1 | 0 | 0 | 5 | 14 | 22 | 61 | 33 | 31 |
+| OFD-adamantinoma | -2 | 0 | 0 | 3 | 8 | 4 | 11 | 25 | 19 |
+| Skeletal TB | 0 | 0 | 0 | 2 | 6 | 6 | 17 | 0 | 6 |
+| Bone infarct | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 33 | 0 |
+| Metastasis | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 100 | 0 |
+| BPOP | -2 | 0 | 0 | 0 | 0 | 0 | 0 | 100 | 0 |
+| Brown tumour | -1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Central CS | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Chordoma | -1 | 0 | 0 | 0 | 0 | 0 | 0 | 100 | 0 |
+| Clear cell CS | -2 | 0 | 0 | 0 | 0 | 0 | 0 | 67 | 0 |
+| Desmoplastic fibroma | -2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 11 |
+| Enchondroma | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Enostosis | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 100 | 0 |
+| Geode/ganglion | 0 | 0 | 0 | 0 | 0 | 3 | 8 | 50 | 0 |
+| Intraosseous lipoma | -1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Osteoblastoma | -1 | 0 | 0 | 0 | 0 | 1 | 3 | 0 | 0 |
+| Osteochondroma | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 100 | 0 |
+| Conventional OS | 0 | 0 | 0 | 0 | 0 | 4 | 11 | 0 | 0 |
+| Parosteal OS | -2 | 0 | 0 | 0 | 0 | 0 | 0 | 100 | 0 |
+| Periosteal OS | -2 | 0 | 0 | 0 | 0 | 0 | 0 | 75 | 0 |
+| Paget | -1 | 0 | 0 | 0 | 0 | 0 | 0 | 100 | 0 |
+| Periosteal chondroma | -2 | 0 | 0 | 0 | 0 | 0 | 0 | 67 | 0 |
+| Myeloma | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 100 | 0 |
+| Lymphoma | -1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Vertebral haemangioma | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+
+ukuran seri di peringkat 1: {1: 25, 2: 7, 3: 3, 4: 1}; rata-rata 1.44
+jumlah entitas dengan peringkat <=3: {3: 22, 4: 9, 5: 5}; rata-rata 3.53
+jumlah entitas dengan peringkat <=5: {5: 17, 6: 8, 7: 5, 8: 5, 9: 1}; rata-rata 6.03; >10 pada 0 kombinasi
+selisih skor peringkat 1 vs entitas ke-5: median 4, kuartil 3-4; rentang skor entitas hidup: median 15
+prior mengubah himpunan 3 besar pada 19 kombinasi (53%); mengubah peringkat 1 pada 15 (42%)
+entitas yang tidak pernah masuk 5 besar: Bone infarct, Metastasis, BPOP, Brown tumour, Central CS, Chordoma, Clear cell CS, Desmoplastic fibroma, Enchondroma, Enostosis, Intraosseous lipoma, Osteochondroma, Parosteal OS, Periosteal OS, Paget, Periosteal chondroma, Myeloma, Lymphoma, Vertebral haemangioma
+entitas yang tidak pernah masuk 3 besar: Bone infarct, Metastasis, BPOP, Brown tumour, Central CS, Chordoma, Clear cell CS, Desmoplastic fibroma, Enchondroma, Enostosis, Geode/ganglion, Intraosseous lipoma, Osteoblastoma, Osteochondroma, Conventional OS, Parosteal OS, Periosteal OS, Paget, Periosteal chondroma, Myeloma, Lymphoma, Vertebral haemangioma
+
+--- Simulasi input jarang: subset dewasa 20-59, tulang panjang, litik, intrameduler/kortikal; 24 kombinasi yang dapat diisi di UI (bobot seragam per kombinasi, bukan prevalensi)
+| Entitas | prior | peringkat 1 (termasuk seri) | % | 3 besar | % | 5 besar | % | disingkirkan % | 3 besar tanpa prior % |
+|---|---|---|---|---|---|---|---|---|---|
+| GCTB | 0 | 8 | 33 | 11 | 46 | 12 | 50 | 33 | 42 |
+| CMF | -1 | 7 | 29 | 10 | 42 | 14 | 58 | 0 | 46 |
+| Stress fracture | 0 | 4 | 17 | 8 | 33 | 8 | 33 | 0 | 29 |
+| NOF | 0 | 4 | 17 | 7 | 29 | 10 | 42 | 25 | 29 |
+| Osteomyelitis | 0 | 2 | 8 | 7 | 29 | 14 | 58 | 0 | 29 |
+| Metastasis | 0 | 3 | 12 | 6 | 25 | 12 | 50 | 0 | 25 |
+| Geode/ganglion | 0 | 2 | 8 | 5 | 21 | 7 | 29 | 50 | 21 |
+| SBC | 0 | 3 | 12 | 4 | 17 | 4 | 17 | 50 | 17 |
+| Bone infarct | 0 | 2 | 8 | 4 | 17 | 5 | 21 | 33 | 12 |
+| Clear cell CS | -2 | 1 | 4 | 4 | 17 | 4 | 17 | 50 | 25 |
+| ABC | 0 | 0 | 0 | 4 | 17 | 6 | 25 | 0 | 8 |
+| OFD-adamantinoma | -2 | 2 | 8 | 3 | 12 | 6 | 25 | 25 | 25 |
+| Fibrous dysplasia | 0 | 2 | 8 | 3 | 12 | 3 | 12 | 0 | 8 |
+| Central CS | 0 | 1 | 4 | 3 | 12 | 6 | 25 | 0 | 12 |
+| Osteoid osteoma | 0 | 2 | 8 | 2 | 8 | 6 | 25 | 0 | 8 |
+| Desmoplastic fibroma | -2 | 1 | 4 | 2 | 8 | 5 | 21 | 0 | 46 |
+| Ewing sarcoma | 0 | 1 | 4 | 1 | 4 | 3 | 12 | 0 | 4 |
+| LCH | 0 | 1 | 4 | 1 | 4 | 3 | 12 | 0 | 4 |
+| Chondroblastoma | -1 | 0 | 0 | 1 | 4 | 1 | 4 | 75 | 8 |
+| Intraosseous lipoma | -1 | 0 | 0 | 1 | 4 | 3 | 12 | 0 | 17 |
+| Telangiectatic OS | -1 | 0 | 0 | 1 | 4 | 2 | 8 | 33 | 4 |
+| Paget | -1 | 0 | 0 | 1 | 4 | 1 | 4 | 0 | 4 |
+| Myeloma | 0 | 0 | 0 | 1 | 4 | 3 | 12 | 0 | 4 |
+| Lymphoma | -1 | 0 | 0 | 1 | 4 | 3 | 12 | 0 | 17 |
+| Skeletal TB | 0 | 0 | 0 | 1 | 4 | 5 | 21 | 0 | 4 |
+| BPOP | -2 | 0 | 0 | 0 | 0 | 0 | 0 | 100 | 0 |
+| Brown tumour | -1 | 0 | 0 | 0 | 0 | 3 | 12 | 0 | 12 |
+| Chordoma | -1 | 0 | 0 | 0 | 0 | 0 | 0 | 100 | 0 |
+| Enchondroma | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Enostosis | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 100 | 0 |
+| Osteoblastoma | -1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Osteochondroma | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 100 | 0 |
+| Conventional OS | 0 | 0 | 0 | 0 | 0 | 1 | 4 | 0 | 0 |
+| Parosteal OS | -2 | 0 | 0 | 0 | 0 | 0 | 0 | 100 | 0 |
+| Periosteal OS | -2 | 0 | 0 | 0 | 0 | 0 | 0 | 75 | 0 |
+| Periosteal chondroma | -2 | 0 | 0 | 0 | 0 | 0 | 0 | 67 | 0 |
+| Vertebral haemangioma | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+
+ukuran seri di peringkat 1: {1: 12, 2: 4, 3: 6, 4: 2}; rata-rata 1.92
+jumlah entitas dengan peringkat <=3: {3: 13, 4: 6, 5: 3, 6: 1, 8: 1}; rata-rata 3.83
+jumlah entitas dengan peringkat <=5: {5: 11, 6: 5, 7: 3, 8: 3, 9: 1, 11: 1}; rata-rata 6.25; >10 pada 1 kombinasi
+selisih skor peringkat 1 vs entitas ke-5: median 2, kuartil 1-3; rentang skor entitas hidup: median 11
+prior mengubah himpunan 3 besar pada 16 kombinasi (67%); mengubah peringkat 1 pada 18 (75%)
+entitas yang tidak pernah masuk 5 besar: BPOP, Chordoma, Enchondroma, Enostosis, Osteoblastoma, Osteochondroma, Parosteal OS, Periosteal OS, Periosteal chondroma, Vertebral haemangioma
+entitas yang tidak pernah masuk 3 besar: BPOP, Brown tumour, Chordoma, Enchondroma, Enostosis, Osteoblastoma, Osteochondroma, Conventional OS, Parosteal OS, Periosteal OS, Periosteal chondroma, Vertebral haemangioma
+
+korelasi Pearson 'maks 6 fitur inti' vs frekuensi 3 besar (simulasi kedua): 0.21; jumlah +3 vs frekuensi 3 besar: 0.31; jumlah -5 vs frekuensi 3 besar: -0.14
+
+Penghitungan ganda temuan yang sama (cortex=expansion_shell + periosteal=shell):
+| Entitas | expansion_shell | periosteal shell | jumlah |
+|---|---|---|---|
+| ABC | 3 | 3 | 6 |
+| Brown tumour | 2 | 1 | 3 |
+| CMF | 2 | 1 | 3 |
+| Desmoplastic fibroma | 2 | 1 | 3 |
+| Ewing sarcoma | -5 | -5 | -10 |
+| GCTB | 2 | 2 | 4 |
+| Conventional OS | -2 | -5 | -7 |
+| Telangiectatic OS | 1 | 0 | 1 |
+| Lymphoma | -5 | -5 | -10 |
+
+
+====================================================================================================
+3. KLAIM HILANG, TIDAK TERJANGKAU, DAN MENCURIGAKAN
+====================================================================================================
+| Fitur:nilai | klaim ada | tanpa klaim | >=+2 | +1 | 0 | -2 | -5 |
+|---|---|---|---|---|---|---|---|
+| age_group:0-9 | 37 | 0 | 9 | 9 | 5 | 6 | 8 |
+| age_group:10-19_open | 37 | 0 | 19 | 5 | 4 | 3 | 6 |
+| age_group:10-19_closed | 37 | 0 | 16 | 9 | 4 | 4 | 4 |
+| age_group:10-19_unknown | 37 | 0 | 19 | 6 | 4 | 4 | 4 |
+| age_group:20-39 | 37 | 0 | 18 | 12 | 4 | 3 | 0 |
+| age_group:40-59 | 37 | 0 | 15 | 8 | 4 | 9 | 1 |
+| age_group:60+ | 37 | 0 | 12 | 6 | 0 | 10 | 9 |
+| multiplicity:solitary | 1 | 36 | 0 | 0 | 1 | 0 | 0 |
+| multiplicity:multiple | 13 | 24 | 5 | 8 | 0 | 0 | 0 |
+| bone_class:long_bone | 37 | 0 | 29 | 6 | 0 | 1 | 1 |
+| bone_class:small_tubular_hand_foot | 19 | 18 | 4 | 7 | 2 | 4 | 2 |
+| bone_class:flat_bone | 37 | 0 | 10 | 9 | 7 | 7 | 4 |
+| bone_class:spine_body | 29 | 8 | 9 | 4 | 4 | 5 | 7 |
+| bone_class:spine_posterior | 8 | 29 | 3 | 2 | 0 | 1 | 2 |
+| bone_class:sacrum | 12 | 25 | 3 | 9 | 0 | 0 | 0 |
+| bone_class:clavicle | 2 | 35 | 0 | 2 | 0 | 0 | 0 |
+| bone_class:calcaneus | 3 | 34 | 2 | 1 | 0 | 0 | 0 |
+| bone_class:patella | 1 | 36 | 0 | 1 | 0 | 0 | 0 |
+| bone_class:craniofacial | 9 | 28 | 5 | 4 | 0 | 0 | 0 |
+| longitudinal:epiphysis_apophysis | 33 | 4 | 6 | 2 | 6 | 14 | 5 |
+| longitudinal:metaphysis | 35 | 2 | 20 | 10 | 4 | 1 | 0 |
+| longitudinal:metadiaphysis | 28 | 9 | 12 | 14 | 1 | 0 | 1 |
+| longitudinal:diaphysis | 35 | 2 | 8 | 13 | 8 | 3 | 3 |
+| transverse:central | 37 | 0 | 18 | 8 | 4 | 2 | 5 |
+| transverse:eccentric | 35 | 2 | 6 | 9 | 12 | 3 | 5 |
+| transverse:cortical | 34 | 3 | 4 | 5 | 3 | 13 | 9 |
+| transverse:juxtacortical_surface | 30 | 7 | 5 | 1 | 2 | 8 | 14 |
+| transverse:juxtacortical_continuous | 30 | 7 | 1 | 1 | 2 | 8 | 18 |
+| density:lytic | 37 | 0 | 20 | 10 | 3 | 0 | 4 |
+| density:mixed | 37 | 0 | 11 | 14 | 6 | 5 | 1 |
+| density:sclerotic | 37 | 0 | 9 | 8 | 3 | 8 | 9 |
+| margin_lodwick:IA | 31 | 6 | 11 | 8 | 4 | 4 | 4 |
+| margin_lodwick:IB | 29 | 8 | 9 | 12 | 5 | 3 | 0 |
+| margin_lodwick:IC | 31 | 6 | 7 | 7 | 3 | 5 | 9 |
+| margin_lodwick:II | 31 | 6 | 6 | 5 | 0 | 4 | 16 |
+| margin_lodwick:III | 31 | 6 | 4 | 4 | 3 | 2 | 18 |
+| cortex:intact | 37 | 0 | 8 | 18 | 7 | 4 | 0 |
+| cortex:endosteal_scalloping | 17 | 20 | 2 | 9 | 1 | 5 | 0 |
+| cortex:expansion_shell | 28 | 9 | 9 | 9 | 4 | 1 | 5 |
+| cortex:focal_breach | 24 | 13 | 2 | 11 | 6 | 5 | 0 |
+| cortex:destruction | 37 | 0 | 6 | 5 | 2 | 8 | 16 |
+| cortex:saucerization | 5 | 32 | 2 | 0 | 2 | 1 | 0 |
+| soft_tissue_mass:absent | 13 | 24 | 0 | 4 | 3 | 6 | 0 |
+| soft_tissue_mass:present | 37 | 0 | 7 | 6 | 7 | 5 | 12 |
+| periosteal:none | 37 | 0 | 16 | 14 | 3 | 4 | 0 |
+| periosteal:solid_thin | 25 | 12 | 3 | 5 | 8 | 7 | 2 |
+| periosteal:shell | 9 | 28 | 2 | 3 | 1 | 0 | 3 |
+| periosteal:lamellated | 30 | 7 | 4 | 5 | 2 | 7 | 12 |
+| periosteal:spiculated | 35 | 2 | 3 | 1 | 4 | 7 | 20 |
+| periosteal:codman | 35 | 2 | 3 | 2 | 3 | 10 | 17 |
+| periosteal:present_unspecified | 33 | 4 | 0 | 19 | 1 | 13 | 0 |
+| matrix:none | 37 | 0 | 19 | 14 | 3 | 1 | 0 |
+| matrix:osteoid | 37 | 0 | 3 | 4 | 2 | 11 | 17 |
+| matrix:chondroid | 37 | 0 | 5 | 3 | 5 | 4 | 20 |
+| matrix:ground_glass | 37 | 0 | 1 | 1 | 1 | 7 | 27 |
+| matrix:coarse_trabeculae | 4 | 33 | 1 | 1 | 0 | 2 | 0 |
+| size_cm:<2 | 10 | 27 | 3 | 4 | 1 | 2 | 0 |
+| size_cm:2-5 | 10 | 27 | 1 | 4 | 4 | 1 | 0 |
+| size_cm:>5 | 10 | 27 | 1 | 1 | 1 | 5 | 2 |
+| clinical_flags:night_pain_nsaid_relief | 1 | 36 | 1 | 0 | 0 | 0 | 0 |
+| clinical_flags:known_primary_malignancy | 2 | 35 | 1 | 0 | 0 | 1 | 0 |
+| clinical_flags:fever_or_infection_signs | 2 | 35 | 2 | 0 | 0 | 0 | 0 |
+
+Nilai yang hanya menaikkan (ada klaim positif, tidak ada satu pun klaim negatif):
+  multiplicity:multiple (+:13, tanpa klaim:24); bone_class:sacrum (+:12, tanpa klaim:25); bone_class:clavicle (+:2, tanpa klaim:35); bone_class:calcaneus (+:3, tanpa klaim:34); bone_class:patella (+:1, tanpa klaim:36); bone_class:craniofacial (+:9, tanpa klaim:28); clinical_flags:night_pain_nsaid_relief (+:1, tanpa klaim:36); clinical_flags:fever_or_infection_signs (+:2, tanpa klaim:35)
+Fitur menurut rata-rata cakupan klaim per nilai:
+  age_group: rata-rata 37.0 dari 37 entitas per nilai (min 37, maks 37)
+  multiplicity: rata-rata 7.0 dari 37 entitas per nilai (min 1, maks 13)
+  bone_class: rata-rata 15.7 dari 37 entitas per nilai (min 1, maks 37)
+  longitudinal: rata-rata 32.8 dari 37 entitas per nilai (min 28, maks 35)
+  transverse: rata-rata 33.2 dari 37 entitas per nilai (min 30, maks 37)
+  density: rata-rata 37.0 dari 37 entitas per nilai (min 37, maks 37)
+  margin_lodwick: rata-rata 30.6 dari 37 entitas per nilai (min 29, maks 31)
+  cortex: rata-rata 24.7 dari 37 entitas per nilai (min 5, maks 37)
+  soft_tissue_mass: rata-rata 25.0 dari 37 entitas per nilai (min 13, maks 37)
+  periosteal: rata-rata 29.1 dari 37 entitas per nilai (min 9, maks 37)
+  matrix: rata-rata 30.4 dari 37 entitas per nilai (min 4, maks 37)
+  size_cm: rata-rata 10.0 dari 37 entitas per nilai (min 10, maks 10)
+  clinical_flags: rata-rata 1.7 dari 37 entitas per nilai (min 1, maks 2)
+
+Klaim yang diharapkan peninjau (arah) vs isi KB:
+| Entitas | Fitur:nilai | Diharapkan | Di KB | Alasan |
+|---|---|---|---|---|
+| Osteoblastoma | clinical_flags:night_pain_nsaid_relief | + | tanpa klaim | nyeri malam; respons NSAID lebih lemah daripada osteoid osteoma |
+| Osteomyelitis | clinical_flags:night_pain_nsaid_relief | + | tanpa klaim | abses Brodie meniru osteoid osteoma secara klinis |
+| Stress fracture | clinical_flags:night_pain_nsaid_relief | 0/- | tanpa klaim | nyeri terkait beban; saat ini tidak dibedakan dari osteoid osteoma oleh flag ini |
+| Ewing sarcoma | clinical_flags:fever_or_infection_signs | + | tanpa klaim | demam dan penanda inflamasi sering pada Ewing; kini flag hanya menaikkan infeksi |
+| LCH | clinical_flags:fever_or_infection_signs | + | tanpa klaim | LCH dapat disertai demam/penanda inflamasi (V1-24) |
+| Lymphoma | clinical_flags:fever_or_infection_signs | + | tanpa klaim | gejala B |
+| Myeloma | clinical_flags:known_primary_malignancy | 0 | tanpa klaim | tidak ada klaim; flag hanya menaikkan metastasis |
+| Myeloma | multiplicity:solitary | - | tanpa klaim | multiple +3 tetapi soliter tidak dinilai |
+| Metastasis | cortex:endosteal_scalloping | + | tanpa klaim | metastasis ginjal/tiroid ekspansil-scalloping disebut di S-01 |
+| Metastasis | bone_class:spine_posterior | + | tanpa klaim | destruksi pedikel adalah tanda klasik metastasis |
+| Myeloma | bone_class:sacrum | + | tanpa klaim | plasmasitoma sakrum termasuk banding massa sakral |
+| Myeloma | periosteal:shell | + | tanpa klaim | plasmasitoma ekspansil |
+| GCTB | bone_class:patella | + | tanpa klaim | GCTB dan kondroblastoma adalah banding klasik patela |
+| GCTB | soft_tissue_mass:absent | 0 | tanpa klaim | tidak dinilai |
+| Conventional OS | size_cm:>5 | + | tanpa klaim | sarkoma derajat tinggi umumnya besar saat diagnosis |
+| Ewing sarcoma | size_cm:>5 | + | tanpa klaim | sda. |
+| Conventional OS | size_cm:<2 | - | tanpa klaim | sda. |
+| NOF | size_cm:<2 | + | tanpa klaim | fibrous cortical defect <2 cm menurut definisi entitas |
+| Enostosis | matrix:osteoid | 0/+ | -2 | pembaca dapat memilih 'osteoid (padat)' untuk pulau tulang; kini -2 |
+| Parosteal OS | size_cm:>5 | + | tanpa klaim | pitfall BPOP menyebut parosteal OS lebih besar |
+| Chordoma | bone_class:small_tubular_hand_foot | -5 | tanpa klaim | long_bone dan flat_bone -5 tetapi tangan/kaki tanpa klaim |
+| Chordoma | bone_class:clavicle | -5 | tanpa klaim | sda. |
+| Chordoma | bone_class:calcaneus | -5 | tanpa klaim | sda. |
+| Chordoma | bone_class:patella | -5 | tanpa klaim | sda. |
+| Vertebral haemangioma | bone_class:small_tubular_hand_foot | - | tanpa klaim | entitas vertebra; long_bone -2 tetapi tangan/kaki tanpa klaim |
+| Vertebral haemangioma | bone_class:spine_posterior | + | tanpa klaim | hemangioma sering meluas ke elemen posterior |
+| SBC | periosteal:shell | 0/+ | tanpa klaim | lesi ekspansil; shell tidak dinilai |
+| Fibrous dysplasia | periosteal:shell | 0/+ | tanpa klaim | sda. |
+| Skeletal TB | bone_class:spine_posterior | 0 | tanpa klaim | tidak dinilai |
+| Osteomyelitis | multiplicity:multiple | + | tanpa klaim | S-01: osteomielitis dapat multifokal pada anak |
+| Ewing sarcoma | multiplicity:multiple | 0 | tanpa klaim | S-01: dapat multifokal pada anak; tidak dinilai |
+
+Entitas dengan >=1 bone_class -5: kelas tulang yang tidak punya klaim (himpunan eksklusi tidak lengkap):
+  OFD-adamantinoma: -5 pada ['small_tubular_hand_foot', 'flat_bone', 'spine_body']; tanpa klaim pada ['spine_posterior', 'sacrum', 'clavicle', 'calcaneus', 'patella', 'craniofacial']
+  BPOP: -5 pada ['flat_bone', 'spine_body']; tanpa klaim pada ['spine_posterior', 'sacrum', 'clavicle', 'calcaneus', 'patella', 'craniofacial']
+  Chordoma: -5 pada ['long_bone', 'flat_bone']; tanpa klaim pada ['small_tubular_hand_foot', 'clavicle', 'calcaneus', 'patella']
+  Geode/ganglion: -5 pada ['spine_body']; tanpa klaim pada ['spine_posterior', 'sacrum', 'clavicle', 'calcaneus', 'patella', 'craniofacial']
+  NOF: -5 pada ['small_tubular_hand_foot', 'flat_bone', 'spine_body', 'spine_posterior']; tanpa klaim pada ['sacrum', 'clavicle', 'calcaneus', 'patella', 'craniofacial']
+  Parosteal OS: -5 pada ['spine_body']; tanpa klaim pada ['small_tubular_hand_foot', 'spine_posterior', 'sacrum', 'clavicle', 'calcaneus', 'patella', 'craniofacial']
+  Periosteal chondroma: -5 pada ['spine_body']; tanpa klaim pada ['spine_posterior', 'sacrum', 'clavicle', 'calcaneus', 'patella', 'craniofacial']
+  SBC: -5 pada ['spine_body', 'spine_posterior']; tanpa klaim pada ['small_tubular_hand_foot', 'sacrum', 'clavicle', 'patella', 'craniofacial']
+Kelas tulang batch-3: jumlah entitas dengan klaim / positif / -5
+  long_bone: klaim 37, positif 35, -5 1
+  small_tubular_hand_foot: klaim 19, positif 11, -5 2
+  flat_bone: klaim 37, positif 19, -5 4
+  spine_body: klaim 29, positif 13, -5 7
+  spine_posterior: klaim 8, positif 5, -5 2
+  sacrum: klaim 12, positif 12, -5 0
+  clavicle: klaim 2, positif 2, -5 0
+  calcaneus: klaim 3, positif 3, -5 0
+  patella: klaim 1, positif 1, -5 0
+  craniofacial: klaim 9, positif 9, -5 0
+  contoh 20-39 + clavicle + lytic -> 5 teratas: GCTB 6, ABC 4, CMF 4, Desmoplastic fibroma 4, Ewing sarcoma 4 | disingkirkan 4
+  contoh 20-39 + calcaneus + lytic -> 5 teratas: GCTB 6, SBC 6, Intraosseous lipoma 5, ABC 4, CMF 4 | disingkirkan 4
+  contoh 20-39 + patella + lytic -> 5 teratas: GCTB 6, ABC 4, CMF 4, Desmoplastic fibroma 4, Geode/ganglion 4 | disingkirkan 4
+  contoh 20-39 + craniofacial + lytic -> 5 teratas: Desmoplastic fibroma 6, Fibrous dysplasia 6, GCTB 6, LCH 6, ABC 4 | disingkirkan 4
+  contoh 20-39 + small_tubular_hand_foot + lytic -> 5 teratas: Enchondroma 6, GCTB 6, CMF 5, Geode/ganglion 5, Osteomyelitis 5 | disingkirkan 6
+
+Klaim yang tidak terjangkau atau terbuang:
+| Entitas | Klaim | Bobot | Sebab |
+|---|---|---|---|
+| BPOP | longitudinal:not_applicable | 0 | nilai disembunyikan di UI |
+| Chordoma | longitudinal:not_applicable | 0 | nilai disembunyikan di UI |
+| Intraosseous lipoma | longitudinal:not_applicable | 0 | nilai disembunyikan di UI |
+| Vertebral haemangioma | longitudinal:not_applicable | 0 | nilai disembunyikan di UI |
+
+Klaim margin_lodwick pada entitas yang densitas terbaiknya sclerotic (margin tidak dapat diisi pada presentasi khasnya):
+  Osteoid osteoma: density {'lytic': 0, 'mixed': 1, 'sclerotic': 3}; margin {'IA': 1, 'IC': -5, 'II': -5, 'III': -5}
+  Stress fracture: density {'lytic': 0, 'mixed': 1, 'sclerotic': 2}; margin {'IA': 0, 'IC': -2, 'II': -5, 'III': -5}
+Entitas permukaan (central & eccentric -5) yang masih punya klaim margin atau endosteal_scalloping:
+  BPOP: margin -; endosteal_scalloping None; cortical -5
+  Osteochondroma: margin -; endosteal_scalloping None; cortical -5
+  Parosteal OS: margin -; endosteal_scalloping None; cortical -5
+  Periosteal OS: margin -; endosteal_scalloping -2; cortical -2
+  Periosteal chondroma: margin -; endosteal_scalloping -2; cortical -2
+Klaim longitudinal pada entitas dengan long_bone <= -2:
+  Chordoma: long_bone -5; longitudinal {'not_applicable': 0}
+  Vertebral haemangioma: long_bone -2; longitudinal {'not_applicable': 0}
+
+Nilai yang dirujuk di bagian 3(c)/(d) laporan (isi KB saat ini):
+  ABC transverse:central=1; ABC transverse:eccentric=3; Conventional OS periosteal:solid_thin=-2; Ewing sarcoma periosteal:solid_thin=-2; Conventional OS matrix:none=0; Conventional OS matrix:chondroid=0; Conventional OS age_group:60+=1; Conventional OS age_group:40-59=0; Conventional OS transverse:central=1; Conventional OS transverse:eccentric=2; GCTB bone_class:long_bone=3; GCTB age_group:10-19_unknown=1; CMF age_group:10-19_open=3; CMF transverse:eccentric=3; CMF longitudinal:metadiaphysis=3; CMF margin_lodwick:IA=3; CMF density:lytic=3; CMF bone_class:long_bone=3; Skeletal TB periosteal:none=2; Skeletal TB bone_class:spine_body=2; Osteomyelitis bone_class:spine_body=1; Osteomyelitis margin_lodwick:IA=3; Osteomyelitis margin_lodwick:IB=0; Stress fracture bone_class:long_bone=3; Stress fracture transverse:cortical=3; Stress fracture periosteal:solid_thin=3; Osteoid osteoma transverse:cortical=3; Osteoid osteoma periosteal:solid_thin=3; Osteoid osteoma density:sclerotic=3; Enostosis matrix:osteoid=-2; Enostosis clinical_flags:known_primary_malignancy=-2; Metastasis density:sclerotic=2; Metastasis multiplicity:solitary=0; Myeloma density:sclerotic=-2; Myeloma cortex:endosteal_scalloping=2; Chordoma transverse:central=2; Vertebral haemangioma soft_tissue_mass:present=-2; Vertebral haemangioma cortex:expansion_shell=tanpa klaim; Paget cortex:expansion_shell=1; LCH bone_class:spine_body=2; NOF periosteal:present_unspecified=-2; SBC periosteal:present_unspecified=-2; SBC cortex:focal_breach=0; Fibrous dysplasia cortex:focal_breach=-2; Chondroblastoma periosteal:lamellated=1; Lymphoma age_group:10-19_unknown=0; Lymphoma cortex:intact=2; Ewing sarcoma soft_tissue_mass:present=3; Ewing sarcoma cortex:intact=1; Intraosseous lipoma matrix:osteoid=0; Bone infarct matrix:chondroid=0; Bone infarct cortex:endosteal_scalloping=-2; Enchondroma cortex:endosteal_scalloping=1; Central CS cortex:intact=-2; Central CS soft_tissue_mass:absent=0; Enchondroma size_cm:>5=-2; Central CS size_cm:>5=2; Osteoblastoma bone_class:long_bone=1; Osteoblastoma size_cm:<2=-2; Osteoid osteoma size_cm:2-5=-2
+  multiplicity:solitary -> Metastasis 0
+  multiplicity:multiple -> Bone infarct 2, Metastasis 3, Brown tumour 3, Enchondroma 1, Enostosis 1, Fibrous dysplasia 1, LCH 1, Osteochondroma 1, Paget 2, Myeloma 3, Lymphoma 1, Skeletal TB 1, Vertebral haemangioma 1
+  clinical_flags:night_pain_nsaid_relief -> Osteoid osteoma 3
+  clinical_flags:known_primary_malignancy -> Metastasis 3, Enostosis -2
+  clinical_flags:fever_or_infection_signs -> Osteomyelitis 3, Skeletal TB 2
+  size_cm:<2 -> BPOP 1, Chondroblastoma 1, CMF 0, Central CS -2, Enchondroma 1, Enostosis 2, Geode/ganglion 2, Osteoblastoma -2, Osteoid osteoma 3, Periosteal chondroma 1
+  size_cm:2-5 -> BPOP 1, Chondroblastoma 1, CMF 1, Central CS 0, Enchondroma 0, Enostosis 0, Geode/ganglion 0, Osteoblastoma 2, Osteoid osteoma -2, Periosteal chondroma 1
+  size_cm:>5 -> BPOP -2, Chondroblastoma -2, CMF 0, Central CS 2, Enchondroma -2, Enostosis -2, Geode/ganglion -5, Osteoblastoma 1, Osteoid osteoma -5, Periosteal chondroma -2
+  soft_tissue_mass:absent -> BPOP 0, Central CS 0, Chordoma -2, Clear cell CS 1, Ewing sarcoma -2, Osteochondroma 1, Conventional OS -2, Parosteal OS 0, Periosteal OS -2, Telangiectatic OS -2, Periosteal chondroma 1, Lymphoma -2, Stress fracture 1
+  soft_tissue_mass:present -> OFD-adamantinoma 0, ABC -2, Bone infarct -5, Metastasis 1, BPOP 0, Brown tumour -2, Chondroblastoma -5, CMF -5, Central CS 2, Chordoma 3, Clear cell CS 0, Desmoplastic fibroma 0, Enchondroma -5, Enostosis -5, Ewing sarcoma 3, Fibrous dysplasia -5, GCTB 0, Geode/ganglion -5, Intraosseous lipoma -5, LCH 1, NOF -5, Osteoblastoma 0, Osteochondroma -2, Osteoid osteoma -5, Osteomyelitis 1, Conventional OS 2, Parosteal OS 1, Periosteal OS 2, Telangiectatic OS 2, Paget -2, Periosteal chondroma 0, Myeloma 1, Lymphoma 3, SBC -5, Skeletal TB 1, Stress fracture -5, Vertebral haemangioma -2
+
+====================================================================================================
+4. PASANGAN MIMIC
+====================================================================================================
+Jarak profil semua pasangan (666): L1 atas 62 nilai (tanpa klaim = 0); diskriminator = nilai dengan selisih >= 2;
+pemisah keras = nilai yang -5 hanya pada salah satu; sep(A>B) = selisih skor maksimum yang dapat dicapai A atas B tanpa menyingkirkan keduanya.
+L1: min 42, median 112, maks 189
+25 pasangan terdekat menurut L1:
+| A | B | L1 | diskriminator | pemisah keras | sep(A>B) | sep(B>A) |
+|---|---|---|---|---|---|---|
+| Bone infarct | Intraosseous lipoma | 42 | 12 | 2 | 14 | 14 |
+| BPOP | Parosteal OS | 42 | 13 | 4 | 10 | 9 |
+| Metastasis | Myeloma | 51 | 15 | 3 | 14 | 8 |
+| Desmoplastic fibroma | GCTB | 51 | 14 | 5 | 8 | 12 |
+| BPOP | Periosteal chondroma | 52 | 13 | 5 | 9 | 11 |
+| Brown tumour | Desmoplastic fibroma | 54 | 16 | 4 | 15 | 11 |
+| LCH | Osteomyelitis | 54 | 15 | 1 | 10 | 18 |
+| Osteomyelitis | Skeletal TB | 54 | 11 | 1 | 16 | 8 |
+| Enchondroma | Intraosseous lipoma | 55 | 14 | 4 | 16 | 12 |
+| ABC | LCH | 56 | 16 | 1 | 12 | 21 |
+| Ewing sarcoma | Conventional OS | 56 | 12 | 3 | 16 | 16 |
+| Conventional OS | Telangiectatic OS | 56 | 18 | 6 | 12 | 12 |
+| Bone infarct | Enchondroma | 57 | 16 | 6 | 13 | 17 |
+| Fibrous dysplasia | Intraosseous lipoma | 57 | 18 | 0 | 20 | 12 |
+| ABC | Desmoplastic fibroma | 58 | 17 | 5 | 13 | 13 |
+| Desmoplastic fibroma | LCH | 58 | 14 | 6 | 5 | 17 |
+| Enchondroma | Fibrous dysplasia | 58 | 18 | 4 | 12 | 18 |
+| Ewing sarcoma | Lymphoma | 58 | 16 | 4 | 10 | 14 |
+| LCH | Skeletal TB | 58 | 13 | 2 | 16 | 13 |
+| Metastasis | Chordoma | 60 | 16 | 5 | 16 | 9 |
+| Brown tumour | Intraosseous lipoma | 60 | 16 | 6 | 18 | 10 |
+| Desmoplastic fibroma | Skeletal TB | 60 | 13 | 4 | 8 | 19 |
+| ABC | Osteoblastoma | 61 | 16 | 5 | 18 | 14 |
+| Bone infarct | Fibrous dysplasia | 61 | 16 | 2 | 10 | 19 |
+| CMF | Fibrous dysplasia | 62 | 17 | 5 | 13 | 19 |
+
+max(sep(A>B), sep(B>A)) terkecil di antara semua pasangan: 9 (Enostosis vs Geode/ganglion); jumlah pasangan dengan max(sep) <= 12: 15
+| A | B | L1 | sep(A>B) | sep(B>A) | pemisah keras |
+|---|---|---|---|---|---|
+| Enostosis | Geode/ganglion | 94 | 9 | 5 | 13 |
+| BPOP | Parosteal OS | 42 | 10 | 9 | 4 |
+| Osteochondroma | SBC | 115 | 10 | 8 | 15 |
+| OFD-adamantinoma | Chondroblastoma | 113 | 11 | 11 | 16 |
+| BPOP | Periosteal chondroma | 52 | 9 | 11 | 5 |
+| Paget | Vertebral haemangioma | 76 | 11 | 11 | 11 |
+| OFD-adamantinoma | Clear cell CS | 112 | 12 | 12 | 15 |
+| ABC | CMF | 69 | 12 | 12 | 10 |
+| Bone infarct | Paget | 83 | 12 | 12 | 10 |
+| Chondroblastoma | Stress fracture | 98 | 12 | 12 | 10 |
+| CMF | GCTB | 96 | 12 | 12 | 14 |
+| CMF | NOF | 64 | 12 | 10 | 9 |
+
+Asimetri: entitas yang paling sering 'tidak dapat unggul > 8 poin' atas pasangannya (jumlah pasangan dengan sep <= 8 sebagai pihak yang lemah):
+  Parosteal OS 7, Clear cell CS 4, Desmoplastic fibroma 3, BPOP 2, Telangiectatic OS 2, Enchondroma 2, Periosteal OS 2, SBC 2, OFD-adamantinoma 1, Bone infarct 1, Myeloma 1, Chondroblastoma 1, Geode/ganglion 1, Intraosseous lipoma 1, Skeletal TB 1, Stress fracture 1, Periosteal chondroma 1
+  pihak yang sulit dikalahkan: Osteomyelitis 5, Stress fracture 4, Enostosis 4, Skeletal TB 4, CMF 2, Osteochondroma 2, GCTB 2, LCH 2, Metastasis 1, Chordoma 1, Geode/ganglion 1, Desmoplastic fibroma 1, Fibrous dysplasia 1, Osteoid osteoma 1, Lymphoma 1, SBC 1
+
+--- Kelompok: Lesi epifisis | konteks {'bone_class': 'long_bone', 'longitudinal': 'epiphysis_apophysis'}
+| A | B | L1 | diskriminator | pemisah keras | sep(A>B) | sep(B>A) | sep_ctx(A>B) | sep_ctx(B>A) |
+|---|---|---|---|---|---|---|---|---|
+| GCTB | Chondroblastoma | 99 | 23 | 13 | 17 | 14 | 16 | 13 |
+| GCTB | Clear cell CS | 66 | 18 | 6 | 19 | 10 | 16 | 10 |
+| GCTB | Geode/ganglion | 104 | 28 | 15 | 16 | 15 | 15 | 13 |
+| Chondroblastoma | Clear cell CS | 81 | 18 | 9 | 16 | 9 | 14 | 9 |
+| Chondroblastoma | Geode/ganglion | 97 | 19 | 12 | 14 | 10 | 14 | 8 |
+| Clear cell CS | Geode/ganglion | 80 | 19 | 13 | 8 | 15 | 8 | 11 |
+
+  GCTB vs Chondroblastoma: age_group:0-9 -5/1; age_group:10-19_open -5/3; age_group:10-19_unknown 1/3; age_group:20-39 3/0; age_group:40-59 1/-5; age_group:60+ -2/-5; longitudinal:diaphysis -2/-5; density:mixed -2/1; margin_lodwick:IA 0/3; margin_lodwick:IB 3/1; margin_lodwick:IC 1/-2; margin_lodwick:II -2/-5; margin_lodwick:III -2/-5; cortex:expansion_shell 2/0; cortex:destruction 0/-5; soft_tissue_mass:present 0/-5; periosteal:shell 2/.; periosteal:lamellated -2/1; periosteal:spiculated -2/-5; periosteal:codman -2/-5; matrix:osteoid -5/-2; matrix:chondroid -5/2; size_cm:>5 ./-2
+  GCTB vs Clear cell CS: age_group:10-19_closed 2/-2; age_group:10-19_unknown 1/-2; age_group:40-59 1/3; age_group:60+ -2/1; bone_class:flat_bone 0/-2; bone_class:spine_body 1/-2; longitudinal:diaphysis -2/-5; transverse:eccentric 3/1; density:mixed -2/1; density:sclerotic -5/-2; margin_lodwick:III -2/-5; cortex:destruction 0/-2; periosteal:shell 2/.; periosteal:lamellated -2/.; periosteal:spiculated -2/-5; periosteal:codman -2/-5; periosteal:present_unspecified 1/-2; matrix:chondroid -5/1
+  GCTB vs Geode/ganglion: age_group:10-19_open -5/-2; age_group:10-19_closed 2/-2; age_group:10-19_unknown 1/-2; age_group:20-39 3/1; age_group:60+ -2/2; bone_class:spine_body 1/-5; longitudinal:metadiaphysis 0/-5; longitudinal:diaphysis -2/-5; transverse:eccentric 3/1; transverse:cortical -5/-2; margin_lodwick:IA 0/3; margin_lodwick:IB 3/0; margin_lodwick:IC 1/-5; margin_lodwick:II -2/-5; margin_lodwick:III -2/-5; cortex:intact 0/2; cortex:expansion_shell 2/0; cortex:destruction 0/-5; soft_tissue_mass:present 0/-5; periosteal:none 1/3; periosteal:solid_thin 0/-5; periosteal:shell 2/.; periosteal:lamellated -2/-5; periosteal:spiculated -2/-5; periosteal:codman -2/-5; periosteal:present_unspecified 1/-2; size_cm:<2 ./2; size_cm:>5 ./-5
+  Chondroblastoma vs Clear cell CS: age_group:0-9 1/-5; age_group:10-19_open 3/-5; age_group:10-19_closed 1/-2; age_group:10-19_unknown 3/-2; age_group:20-39 0/2; age_group:40-59 -5/3; age_group:60+ -5/1; bone_class:flat_bone 0/-2; bone_class:spine_body ./-2; density:sclerotic -5/-2; margin_lodwick:IA 3/1; margin_lodwick:IC -2/1; margin_lodwick:II -5/-2; cortex:destruction -5/-2; soft_tissue_mass:present -5/0; periosteal:present_unspecified 1/-2; matrix:osteoid -2/-5; size_cm:>5 -2/.
+  Chondroblastoma vs Geode/ganglion: age_group:0-9 1/-5; age_group:10-19_open 3/-2; age_group:10-19_closed 1/-2; age_group:10-19_unknown 3/-2; age_group:40-59 -5/2; age_group:60+ -5/2; bone_class:spine_body ./-5; longitudinal:metadiaphysis ./-5; transverse:cortical -5/-2; density:mixed 1/-2; margin_lodwick:IC -2/-5; periosteal:none 1/3; periosteal:solid_thin 1/-5; periosteal:lamellated 1/-5; periosteal:present_unspecified 1/-2; matrix:none 1/3; matrix:osteoid -2/-5; matrix:chondroid 2/-5; size_cm:>5 -2/-5
+  Clear cell CS vs Geode/ganglion: age_group:10-19_open -5/-2; bone_class:flat_bone -2/1; bone_class:spine_body -2/-5; longitudinal:metadiaphysis ./-5; transverse:cortical -5/-2; density:mixed 1/-2; density:sclerotic -2/-5; margin_lodwick:IA 1/3; margin_lodwick:IB 2/0; margin_lodwick:IC 1/-5; margin_lodwick:II -2/-5; cortex:destruction -2/-5; soft_tissue_mass:present 0/-5; periosteal:solid_thin ./-5; periosteal:lamellated ./-5; matrix:none 1/3; matrix:chondroid 1/-5; size_cm:<2 ./2; size_cm:>5 ./-5
+
+--- Kelompok: Sel bulat kecil vs infeksi | konteks {'bone_class': 'long_bone'}
+| A | B | L1 | diskriminator | pemisah keras | sep(A>B) | sep(B>A) | sep_ctx(A>B) | sep_ctx(B>A) |
+|---|---|---|---|---|---|---|---|---|
+| Ewing sarcoma | Osteomyelitis | 82 | 22 | 5 | 12 | 25 | 12 | 22 |
+| Ewing sarcoma | LCH | 76 | 20 | 4 | 15 | 21 | 15 | 18 |
+| Ewing sarcoma | Lymphoma | 58 | 16 | 4 | 10 | 14 | 10 | 14 |
+| Osteomyelitis | LCH | 54 | 15 | 1 | 18 | 10 | 15 | 9 |
+| Osteomyelitis | Lymphoma | 76 | 17 | 5 | 21 | 13 | 18 | 12 |
+| LCH | Lymphoma | 90 | 22 | 6 | 20 | 17 | 18 | 17 |
+
+  Ewing sarcoma vs Osteomyelitis: age_group:40-59 -2/1; age_group:60+ -5/1; bone_class:flat_bone 2/0; longitudinal:epiphysis_apophysis -2/1; longitudinal:metaphysis 1/3; longitudinal:diaphysis 3/1; transverse:cortical -2/1; transverse:juxtacortical_surface -2/.; transverse:juxtacortical_continuous -2/.; margin_lodwick:IA -5/3; margin_lodwick:IB -2/0; margin_lodwick:III 3/1; cortex:endosteal_scalloping -2/1; cortex:expansion_shell -5/.; soft_tissue_mass:absent -2/.; soft_tissue_mass:present 3/1; periosteal:none -2/0; periosteal:solid_thin -2/2; periosteal:shell -5/.; periosteal:spiculated 2/0; matrix:osteoid -2/-5; clinical_flags:fever_or_infection_signs ./3
+  Ewing sarcoma vs LCH: bone_class:craniofacial ./3; transverse:cortical -2/0; transverse:juxtacortical_surface -2/.; transverse:juxtacortical_continuous -2/.; density:sclerotic 0/-2; margin_lodwick:IA -5/1; margin_lodwick:IB -2/2; margin_lodwick:II 3/1; margin_lodwick:III 3/0; cortex:endosteal_scalloping -2/1; cortex:expansion_shell -5/1; soft_tissue_mass:absent -2/.; soft_tissue_mass:present 3/1; periosteal:none -2/1; periosteal:solid_thin -2/1; periosteal:shell -5/.; periosteal:spiculated 2/-2; periosteal:codman 1/-2; matrix:none 1/3; matrix:osteoid -2/-5
+  Ewing sarcoma vs Lymphoma: age_group:0-9 3/-2; age_group:10-19_open 3/0; age_group:10-19_closed 2/0; age_group:10-19_unknown 3/0; age_group:40-59 -2/2; age_group:60+ -5/3; longitudinal:epiphysis_apophysis -2/0; transverse:juxtacortical_surface -2/-5; transverse:juxtacortical_continuous -2/-5; cortex:endosteal_scalloping -2/.; periosteal:none -2/1; periosteal:solid_thin -2/0; periosteal:lamellated 3/1; periosteal:spiculated 2/0; matrix:none 1/3; matrix:osteoid -2/-5
+  Osteomyelitis vs LCH: age_group:20-39 2/0; age_group:40-59 1/-2; age_group:60+ 1/-5; bone_class:flat_bone 0/2; bone_class:craniofacial ./3; longitudinal:epiphysis_apophysis 1/-2; longitudinal:metaphysis 3/1; longitudinal:diaphysis 1/3; density:mixed 2/0; density:sclerotic 1/-2; margin_lodwick:IA 3/1; margin_lodwick:IB 0/2; periosteal:spiculated 0/-2; periosteal:codman 1/-2; clinical_flags:fever_or_infection_signs 3/.
+  Osteomyelitis vs Lymphoma: age_group:0-9 3/-2; age_group:10-19_open 2/0; age_group:10-19_unknown 2/0; age_group:60+ 1/3; bone_class:flat_bone 0/2; transverse:cortical 1/-2; transverse:juxtacortical_surface ./-5; transverse:juxtacortical_continuous ./-5; margin_lodwick:IA 3/-5; margin_lodwick:IB 0/-2; margin_lodwick:III 1/3; cortex:expansion_shell ./-5; soft_tissue_mass:absent ./-2; soft_tissue_mass:present 1/3; periosteal:solid_thin 2/0; periosteal:shell ./-5; clinical_flags:fever_or_infection_signs 3/.
+  LCH vs Lymphoma: age_group:0-9 3/-2; age_group:10-19_open 2/0; age_group:10-19_unknown 2/0; age_group:40-59 -2/2; age_group:60+ -5/3; bone_class:craniofacial 3/.; longitudinal:epiphysis_apophysis -2/0; transverse:cortical 0/-2; transverse:juxtacortical_surface ./-5; transverse:juxtacortical_continuous ./-5; density:sclerotic -2/1; margin_lodwick:IA 1/-5; margin_lodwick:IB 2/-2; margin_lodwick:II 1/3; margin_lodwick:III 0/3; cortex:intact 0/2; cortex:expansion_shell 1/-5; soft_tissue_mass:absent ./-2; soft_tissue_mass:present 1/3; periosteal:shell ./-5; periosteal:spiculated -2/0; periosteal:codman -2/0
+
+--- Kelompok: Kondroid sentral | konteks {'bone_class': 'long_bone', 'transverse': 'central'}
+| A | B | L1 | diskriminator | pemisah keras | sep(A>B) | sep(B>A) | sep_ctx(A>B) | sep_ctx(B>A) |
+|---|---|---|---|---|---|---|---|---|
+| Enchondroma | Central CS | 114 | 26 | 9 | 21 | 22 | 15 | 20 |
+| Enchondroma | Bone infarct | 57 | 16 | 6 | 17 | 13 | 9 | 13 |
+| Central CS | Bone infarct | 137 | 35 | 15 | 22 | 21 | 15 | 21 |
+
+  Enchondroma vs Central CS: age_group:0-9 0/-5; age_group:10-19_open 1/-2; age_group:10-19_closed 1/-2; age_group:10-19_unknown 1/-2; bone_class:small_tubular_hand_foot 3/-2; bone_class:flat_bone -2/3; bone_class:spine_body -2/1; longitudinal:epiphysis_apophysis -2/0; density:sclerotic 0/-2; margin_lodwick:IA 1/-2; margin_lodwick:IC -2/3; margin_lodwick:II -5/1; margin_lodwick:III -5/1; cortex:intact 2/-2; cortex:focal_breach -2/2; cortex:destruction -5/2; soft_tissue_mass:present -5/2; periosteal:none 2/0; periosteal:solid_thin -2/0; periosteal:lamellated -5/1; periosteal:spiculated -5/0; periosteal:codman -5/0; periosteal:present_unspecified -2/1; matrix:ground_glass -2/-5; size_cm:<2 1/-2; size_cm:>5 -2/2
+  Enchondroma vs Bone infarct: age_group:0-9 0/-2; bone_class:long_bone 1/3; bone_class:small_tubular_hand_foot 3/.; transverse:eccentric 0/-2; transverse:cortical -2/-5; transverse:juxtacortical_surface -2/-5; transverse:juxtacortical_continuous -2/-5; density:sclerotic 0/2; margin_lodwick:IB 2/0; margin_lodwick:IC -2/-5; cortex:endosteal_scalloping 1/-2; cortex:expansion_shell 1/-5; cortex:focal_breach -2/.; matrix:osteoid -5/-2; matrix:chondroid 3/0; size_cm:>5 -2/.
+  Central CS vs Bone infarct: age_group:0-9 -5/-2; age_group:10-19_open -2/0; age_group:10-19_closed -2/0; age_group:10-19_unknown -2/0; multiplicity:multiple ./2; bone_class:small_tubular_hand_foot -2/.; bone_class:flat_bone 3/-2; bone_class:spine_body 1/-2; longitudinal:epiphysis_apophysis 0/-2; transverse:eccentric 0/-2; transverse:cortical -2/-5; transverse:juxtacortical_surface -2/-5; transverse:juxtacortical_continuous -2/-5; density:sclerotic -2/2; margin_lodwick:IA -2/2; margin_lodwick:IC 3/-5; margin_lodwick:II 1/-5; margin_lodwick:III 1/-5; cortex:intact -2/3; cortex:endosteal_scalloping 2/-2; cortex:expansion_shell 1/-5; cortex:focal_breach 2/.; cortex:destruction 2/-5; soft_tissue_mass:present 2/-5; periosteal:none 0/3; periosteal:solid_thin 0/-2; periosteal:lamellated 1/-5; periosteal:spiculated 0/-5; periosteal:codman 0/-5; periosteal:present_unspecified 1/-2; matrix:osteoid -5/-2; matrix:chondroid 3/0; matrix:ground_glass -5/-2; size_cm:<2 -2/.; size_cm:>5 2/.
+
+--- Kelompok: Litik ekspansil | konteks {'bone_class': 'long_bone', 'density': 'lytic'}
+| A | B | L1 | diskriminator | pemisah keras | sep(A>B) | sep(B>A) | sep_ctx(A>B) | sep_ctx(B>A) |
+|---|---|---|---|---|---|---|---|---|
+| ABC | Telangiectatic OS | 84 | 23 | 6 | 17 | 20 | 13 | 18 |
+| ABC | SBC | 86 | 20 | 14 | 13 | 9 | 9 | 8 |
+| ABC | GCTB | 69 | 15 | 6 | 10 | 14 | 8 | 14 |
+| Telangiectatic OS | SBC | 118 | 26 | 14 | 13 | 20 | 8 | 18 |
+| Telangiectatic OS | GCTB | 87 | 24 | 4 | 19 | 21 | 17 | 21 |
+| SBC | GCTB | 111 | 26 | 14 | 13 | 15 | 13 | 13 |
+
+  ABC vs Telangiectatic OS: age_group:60+ -5/-2; bone_class:spine_posterior 3/.; transverse:eccentric 3/1; transverse:cortical 0/-5; transverse:juxtacortical_surface 0/-5; transverse:juxtacortical_continuous 0/-5; density:mixed -2/0; margin_lodwick:IA 1/-5; margin_lodwick:IB 2/0; margin_lodwick:IC 0/2; margin_lodwick:II -2/2; margin_lodwick:III -2/1; cortex:intact 0/-2; cortex:expansion_shell 3/1; cortex:destruction -2/2; soft_tissue_mass:absent ./-2; soft_tissue_mass:present -2/2; periosteal:none 1/-2; periosteal:shell 3/0; periosteal:lamellated -2/1; periosteal:spiculated -2/1; periosteal:codman -2/2; matrix:osteoid -5/1
+  ABC vs SBC: bone_class:flat_bone 1/-2; bone_class:spine_body ./-5; bone_class:spine_posterior 3/-5; bone_class:calcaneus ./3; longitudinal:epiphysis_apophysis -2/-5; transverse:central 1/3; transverse:eccentric 3/-2; transverse:cortical 0/-5; transverse:juxtacortical_surface 0/-5; transverse:juxtacortical_continuous 0/-5; margin_lodwick:IC 0/-5; margin_lodwick:II -2/-5; margin_lodwick:III -2/-5; cortex:destruction -2/-5; soft_tissue_mass:present -2/-5; periosteal:shell 3/.; periosteal:lamellated -2/-5; periosteal:spiculated -2/-5; periosteal:codman -2/-5; periosteal:present_unspecified 1/-2
+  ABC vs GCTB: age_group:0-9 2/-5; age_group:10-19_open 3/-5; age_group:10-19_unknown 3/1; age_group:20-39 1/3; age_group:40-59 -2/1; age_group:60+ -5/-2; bone_class:spine_posterior 3/.; longitudinal:epiphysis_apophysis -2/3; longitudinal:metaphysis 3/1; longitudinal:diaphysis 0/-2; transverse:cortical 0/-5; transverse:juxtacortical_surface 0/-5; transverse:juxtacortical_continuous 0/-5; cortex:destruction -2/0; soft_tissue_mass:present -2/0
+  Telangiectatic OS vs SBC: age_group:0-9 1/3; age_group:10-19_closed 3/1; age_group:60+ -2/-5; bone_class:flat_bone 1/-2; bone_class:spine_body ./-5; bone_class:spine_posterior ./-5; bone_class:calcaneus ./3; longitudinal:epiphysis_apophysis -2/-5; transverse:central 1/3; transverse:eccentric 1/-2; density:mixed 0/-2; margin_lodwick:IA -5/2; margin_lodwick:IB 0/2; margin_lodwick:IC 2/-5; margin_lodwick:II 2/-5; margin_lodwick:III 1/-5; cortex:intact -2/1; cortex:destruction 2/-5; soft_tissue_mass:absent -2/.; soft_tissue_mass:present 2/-5; periosteal:none -2/2; periosteal:lamellated 1/-5; periosteal:spiculated 1/-5; periosteal:codman 2/-5; periosteal:present_unspecified 1/-2; matrix:osteoid 1/-5
+  Telangiectatic OS vs GCTB: age_group:0-9 1/-5; age_group:10-19_open 3/-5; age_group:10-19_unknown 3/1; age_group:20-39 1/3; age_group:40-59 -2/1; longitudinal:epiphysis_apophysis -2/3; longitudinal:metaphysis 3/1; longitudinal:diaphysis 0/-2; transverse:eccentric 1/3; density:mixed 0/-2; margin_lodwick:IA -5/0; margin_lodwick:IB 0/3; margin_lodwick:II 2/-2; margin_lodwick:III 1/-2; cortex:intact -2/0; cortex:destruction 2/0; soft_tissue_mass:absent -2/.; soft_tissue_mass:present 2/0; periosteal:none -2/1; periosteal:shell 0/2; periosteal:lamellated 1/-2; periosteal:spiculated 1/-2; periosteal:codman 2/-2; matrix:osteoid 1/-5
+  SBC vs GCTB: age_group:0-9 3/-5; age_group:10-19_open 3/-5; age_group:10-19_unknown 3/1; age_group:20-39 0/3; age_group:40-59 -2/1; age_group:60+ -5/-2; bone_class:flat_bone -2/0; bone_class:spine_body -5/1; bone_class:spine_posterior -5/.; bone_class:calcaneus 3/.; longitudinal:epiphysis_apophysis -5/3; longitudinal:metaphysis 3/1; longitudinal:diaphysis 1/-2; transverse:central 3/0; transverse:eccentric -2/3; margin_lodwick:IA 2/0; margin_lodwick:IC -5/1; margin_lodwick:II -5/-2; margin_lodwick:III -5/-2; cortex:destruction -5/0; soft_tissue_mass:present -5/0; periosteal:shell ./2; periosteal:lamellated -5/-2; periosteal:spiculated -5/-2; periosteal:codman -5/-2; periosteal:present_unspecified -2/1
+
+--- Kelompok: Fibro-oseus/eksentrik | konteks {'bone_class': 'long_bone'}
+| A | B | L1 | diskriminator | pemisah keras | sep(A>B) | sep(B>A) | sep_ctx(A>B) | sep_ctx(B>A) |
+|---|---|---|---|---|---|---|---|---|
+| NOF | CMF | 64 | 18 | 9 | 10 | 12 | 10 | 12 |
+| NOF | Fibrous dysplasia | 74 | 19 | 8 | 12 | 18 | 12 | 16 |
+| NOF | OFD-adamantinoma | 68 | 17 | 8 | 15 | 12 | 15 | 12 |
+| CMF | Fibrous dysplasia | 62 | 17 | 5 | 13 | 19 | 13 | 17 |
+| CMF | OFD-adamantinoma | 86 | 21 | 11 | 15 | 14 | 15 | 14 |
+| Fibrous dysplasia | OFD-adamantinoma | 92 | 21 | 12 | 18 | 11 | 18 | 11 |
+
+  NOF vs CMF: age_group:0-9 3/1; age_group:20-39 0/2; age_group:40-59 -2/0; age_group:60+ -5/-2; bone_class:small_tubular_hand_foot -5/1; bone_class:flat_bone -5/1; bone_class:spine_body -5/-2; bone_class:spine_posterior -5/.; longitudinal:epiphysis_apophysis -5/-2; transverse:central -2/0; transverse:cortical 3/1; density:sclerotic 1/-5; cortex:focal_breach -2/.; periosteal:lamellated -5/-2; periosteal:present_unspecified -2/1; matrix:osteoid -2/-5; matrix:chondroid -2/0; matrix:ground_glass 0/-2
+  NOF vs Fibrous dysplasia: age_group:20-39 0/2; age_group:40-59 -2/0; age_group:60+ -5/-2; bone_class:small_tubular_hand_foot -5/.; bone_class:flat_bone -5/1; bone_class:spine_body -5/0; bone_class:spine_posterior -5/.; bone_class:craniofacial ./3; longitudinal:epiphysis_apophysis -5/-2; longitudinal:diaphysis 0/2; transverse:central -2/3; transverse:eccentric 3/0; transverse:cortical 3/-2; transverse:juxtacortical_surface -2/-5; transverse:juxtacortical_continuous -2/-5; density:mixed 1/3; periosteal:solid_thin 0/-2; matrix:chondroid -2/0; matrix:ground_glass 0/3
+  NOF vs OFD-adamantinoma: age_group:20-39 0/3; age_group:40-59 -2/1; age_group:60+ -5/-2; bone_class:spine_posterior -5/.; longitudinal:metaphysis 3/-2; longitudinal:metadiaphysis 3/1; longitudinal:diaphysis 0/3; transverse:eccentric 3/1; density:mixed 1/3; margin_lodwick:IC -5/0; cortex:focal_breach -2/0; cortex:destruction -5/-2; soft_tissue_mass:present -5/0; periosteal:lamellated -5/.; periosteal:codman -5/-2; periosteal:present_unspecified -2/1; matrix:chondroid -2/-5
+  CMF vs Fibrous dysplasia: bone_class:spine_body -2/0; bone_class:craniofacial ./3; longitudinal:diaphysis 0/2; transverse:central 0/3; transverse:eccentric 3/0; transverse:cortical 1/-2; transverse:juxtacortical_surface -2/-5; transverse:juxtacortical_continuous -2/-5; density:lytic 3/1; density:mixed 0/3; density:sclerotic -5/1; cortex:focal_breach ./-2; periosteal:solid_thin ./-2; periosteal:lamellated -2/-5; periosteal:present_unspecified 1/-2; matrix:osteoid -5/-2; matrix:ground_glass -2/3
+  CMF vs OFD-adamantinoma: bone_class:small_tubular_hand_foot 1/-5; bone_class:flat_bone 1/-5; bone_class:spine_body -2/-5; longitudinal:epiphysis_apophysis -2/-5; longitudinal:metaphysis 2/-2; longitudinal:metadiaphysis 3/1; longitudinal:diaphysis 0/3; transverse:central 0/-2; transverse:eccentric 3/1; transverse:cortical 1/3; density:lytic 3/1; density:mixed 0/3; density:sclerotic -5/1; margin_lodwick:IC -5/0; cortex:destruction -5/-2; soft_tissue_mass:present -5/0; periosteal:lamellated -2/.; periosteal:codman -5/-2; matrix:osteoid -5/-2; matrix:chondroid 0/-5; matrix:ground_glass -2/1
+  Fibrous dysplasia vs OFD-adamantinoma: bone_class:small_tubular_hand_foot ./-5; bone_class:flat_bone 1/-5; bone_class:spine_body 0/-5; bone_class:craniofacial 3/.; longitudinal:epiphysis_apophysis -2/-5; longitudinal:metaphysis 2/-2; transverse:central 3/-2; transverse:cortical -2/3; transverse:juxtacortical_surface -5/-2; transverse:juxtacortical_continuous -5/-2; margin_lodwick:IC -5/0; cortex:focal_breach -2/0; cortex:destruction -5/-2; soft_tissue_mass:present -5/0; periosteal:none 3/1; periosteal:solid_thin -2/1; periosteal:lamellated -5/.; periosteal:codman -5/-2; periosteal:present_unspecified -2/1; matrix:chondroid 0/-5; matrix:ground_glass 3/1
+
+--- Kelompok: Nidus/sklerosis kortikal | konteks {'bone_class': 'long_bone', 'transverse': 'cortical'}
+| A | B | L1 | diskriminator | pemisah keras | sep(A>B) | sep(B>A) | sep_ctx(A>B) | sep_ctx(B>A) |
+|---|---|---|---|---|---|---|---|---|
+| Osteoid osteoma | Osteoblastoma | 70 | 17 | 8 | 19 | 11 | 16 | 5 |
+| Osteoid osteoma | Stress fracture | 63 | 13 | 6 | 13 | 12 | 9 | 11 |
+| Osteoid osteoma | Osteomyelitis | 113 | 26 | 11 | 16 | 17 | 13 | 10 |
+| Osteoblastoma | Stress fracture | 71 | 18 | 6 | 12 | 18 | 5 | 18 |
+| Osteoblastoma | Osteomyelitis | 81 | 18 | 5 | 11 | 24 | 6 | 20 |
+| Stress fracture | Osteomyelitis | 78 | 16 | 7 | 8 | 16 | 8 | 9 |
+
+  Osteoid osteoma vs Osteoblastoma: bone_class:long_bone 3/1; longitudinal:diaphysis 3/1; transverse:cortical 3/1; density:sclerotic 3/1; margin_lodwick:IC -5/0; cortex:expansion_shell ./2; cortex:destruction -5/-2; soft_tissue_mass:present -5/0; periosteal:solid_thin 3/1; periosteal:lamellated -5/.; periosteal:spiculated -5/-2; periosteal:codman -5/-2; matrix:ground_glass -5/-2; size_cm:<2 3/-2; size_cm:2-5 -2/2; size_cm:>5 -5/1; clinical_flags:night_pain_nsaid_relief 3/.
+  Osteoid osteoma vs Stress fracture: age_group:40-59 -2/1; age_group:60+ -5/2; bone_class:sacrum ./2; longitudinal:metadiaphysis ./2; margin_lodwick:IC -5/-2; cortex:expansion_shell ./-5; periosteal:lamellated -5/0; periosteal:codman -5/-2; matrix:osteoid 1/-2; size_cm:<2 3/.; size_cm:2-5 -2/.; size_cm:>5 -5/.; clinical_flags:night_pain_nsaid_relief 3/.
+  Osteoid osteoma vs Osteomyelitis: age_group:0-9 1/3; age_group:10-19_closed 3/1; age_group:40-59 -2/1; age_group:60+ -5/1; bone_class:spine_posterior 2/.; longitudinal:metaphysis 1/3; longitudinal:diaphysis 3/1; transverse:central 0/2; transverse:cortical 3/1; density:lytic 0/2; density:sclerotic 3/1; margin_lodwick:IA 1/3; margin_lodwick:IC -5/1; margin_lodwick:II -5/2; margin_lodwick:III -5/1; cortex:destruction -5/1; soft_tissue_mass:present -5/1; periosteal:lamellated -5/2; periosteal:spiculated -5/0; periosteal:codman -5/1; matrix:osteoid 1/-5; size_cm:<2 3/.; size_cm:2-5 -2/.; size_cm:>5 -5/.; clinical_flags:night_pain_nsaid_relief 3/.; clinical_flags:fever_or_infection_signs ./3
+  Osteoblastoma vs Stress fracture: age_group:40-59 -2/1; age_group:60+ -5/2; bone_class:long_bone 1/3; bone_class:small_tubular_hand_foot ./2; bone_class:spine_posterior 3/1; longitudinal:metadiaphysis ./2; transverse:cortical 1/3; margin_lodwick:IA 2/0; margin_lodwick:IC 0/-2; cortex:expansion_shell 2/-5; cortex:destruction -2/-5; soft_tissue_mass:present 0/-5; periosteal:solid_thin 1/3; periosteal:spiculated -2/-5; matrix:osteoid 2/-2; matrix:ground_glass -2/-5; size_cm:<2 -2/.; size_cm:2-5 2/.
+  Osteoblastoma vs Osteomyelitis: age_group:0-9 1/3; age_group:10-19_closed 3/1; age_group:40-59 -2/1; age_group:60+ -5/1; bone_class:spine_posterior 3/.; longitudinal:metaphysis 1/3; margin_lodwick:II -5/2; margin_lodwick:III -5/1; cortex:expansion_shell 2/.; cortex:destruction -2/1; periosteal:lamellated ./2; periosteal:spiculated -2/0; periosteal:codman -2/1; matrix:osteoid 2/-5; matrix:ground_glass -2/-5; size_cm:<2 -2/.; size_cm:2-5 2/.; clinical_flags:fever_or_infection_signs ./3
+  Stress fracture vs Osteomyelitis: age_group:0-9 1/3; bone_class:sacrum 2/.; transverse:cortical 3/1; density:lytic 0/2; margin_lodwick:IA 0/3; margin_lodwick:IC -2/1; margin_lodwick:II -5/2; margin_lodwick:III -5/1; cortex:expansion_shell -5/.; cortex:destruction -5/1; soft_tissue_mass:present -5/1; periosteal:lamellated 0/2; periosteal:spiculated -5/0; periosteal:codman -2/1; matrix:osteoid -2/-5; clinical_flags:fever_or_infection_signs ./3
+
+--- Kelompok: Lesi permukaan | konteks {'bone_class': 'long_bone', 'transverse': 'juxtacortical_surface'}
+| A | B | L1 | diskriminator | pemisah keras | sep(A>B) | sep(B>A) | sep_ctx(A>B) | sep_ctx(B>A) |
+|---|---|---|---|---|---|---|---|---|
+| Osteochondroma | Parosteal OS | 67 | 17 | 8 | 13 | 10 | 11 | 9 |
+| Osteochondroma | BPOP | 69 | 17 | 6 | 14 | 10 | 14 | 8 |
+| Osteochondroma | Periosteal chondroma | 75 | 17 | 7 | 16 | 14 | 14 | 14 |
+| Osteochondroma | Periosteal OS | 91 | 21 | 8 | 20 | 17 | 18 | 17 |
+| Parosteal OS | BPOP | 42 | 13 | 4 | 9 | 10 | 9 | 9 |
+| Parosteal OS | Periosteal chondroma | 70 | 16 | 7 | 10 | 15 | 10 | 15 |
+| Parosteal OS | Periosteal OS | 82 | 24 | 6 | 17 | 21 | 15 | 21 |
+| BPOP | Periosteal chondroma | 52 | 13 | 5 | 9 | 11 | 8 | 11 |
+| BPOP | Periosteal OS | 84 | 25 | 8 | 16 | 19 | 11 | 19 |
+| Periosteal chondroma | Periosteal OS | 74 | 19 | 7 | 14 | 14 | 14 | 14 |
+
+  Osteochondroma vs Parosteal OS: age_group:0-9 2/-5; age_group:10-19_open 3/1; age_group:10-19_unknown 3/1; bone_class:flat_bone 1/-2; bone_class:spine_body ./-5; longitudinal:epiphysis_apophysis -5/-2; transverse:juxtacortical_continuous 3/-5; cortex:destruction -5/-2; cortex:saucerization -2/0; soft_tissue_mass:present -2/1; periosteal:lamellated -5/-2; periosteal:spiculated -5/-2; periosteal:codman -5/-2; periosteal:present_unspecified -2/.; matrix:none 1/-2; matrix:osteoid 0/3; matrix:chondroid 1/-2
+  Osteochondroma vs BPOP: age_group:0-9 2/0; age_group:10-19_open 3/1; age_group:10-19_unknown 3/1; bone_class:long_bone 3/1; bone_class:small_tubular_hand_foot 0/3; bone_class:flat_bone 1/-5; bone_class:spine_body ./-5; longitudinal:epiphysis_apophysis -5/.; longitudinal:metaphysis 3/1; longitudinal:diaphysis -2/1; transverse:juxtacortical_continuous 3/-5; cortex:saucerization -2/0; soft_tissue_mass:present -2/0; periosteal:lamellated -5/.; periosteal:spiculated -5/-2; periosteal:present_unspecified -2/.; size_cm:>5 ./-2
+  Osteochondroma vs Periosteal chondroma: bone_class:small_tubular_hand_foot 0/2; bone_class:flat_bone 1/-2; bone_class:spine_body ./-5; longitudinal:epiphysis_apophysis -5/-2; longitudinal:diaphysis -2/1; transverse:cortical -5/-2; transverse:juxtacortical_continuous 3/-5; density:lytic -5/1; density:sclerotic 2/-2; cortex:endosteal_scalloping ./-2; cortex:focal_breach ./-2; cortex:saucerization -2/3; soft_tissue_mass:present -2/0; periosteal:lamellated -5/-2; periosteal:present_unspecified -2/1; matrix:osteoid 0/-5; size_cm:>5 ./-2
+  Osteochondroma vs Periosteal OS: age_group:0-9 2/0; age_group:40-59 0/-2; age_group:60+ -2/-5; bone_class:flat_bone 1/-2; longitudinal:metaphysis 3/0; longitudinal:diaphysis -2/3; transverse:cortical -5/-2; transverse:juxtacortical_continuous 3/-5; density:lytic -5/1; density:sclerotic 2/0; cortex:endosteal_scalloping ./-2; cortex:destruction -5/-2; cortex:saucerization -2/2; soft_tissue_mass:absent 1/-2; soft_tissue_mass:present -2/2; periosteal:none 2/-2; periosteal:solid_thin ./-2; periosteal:lamellated -5/1; periosteal:spiculated -5/3; periosteal:codman -5/2; periosteal:present_unspecified -2/1
+  Parosteal OS vs BPOP: age_group:0-9 -5/0; bone_class:small_tubular_hand_foot ./3; bone_class:flat_bone -2/-5; longitudinal:epiphysis_apophysis -2/.; longitudinal:metaphysis 3/1; longitudinal:diaphysis -2/1; cortex:destruction -2/-5; periosteal:lamellated -2/.; periosteal:codman -2/-5; matrix:none -2/0; matrix:osteoid 3/1; matrix:chondroid -2/1; size_cm:>5 ./-2
+  Parosteal OS vs Periosteal chondroma: age_group:0-9 -5/1; bone_class:small_tubular_hand_foot ./2; longitudinal:diaphysis -2/1; transverse:cortical -5/-2; density:lytic -5/1; density:sclerotic 3/-2; cortex:endosteal_scalloping ./-2; cortex:focal_breach 0/-2; cortex:destruction -2/-5; cortex:saucerization 0/3; periosteal:spiculated -2/-5; periosteal:codman -2/-5; matrix:none -2/1; matrix:osteoid 3/-5; matrix:chondroid -2/2; size_cm:>5 ./-2
+  Parosteal OS vs Periosteal OS: age_group:0-9 -5/0; age_group:10-19_open 1/3; age_group:10-19_closed 1/3; age_group:10-19_unknown 1/3; age_group:40-59 1/-2; age_group:60+ -2/-5; bone_class:spine_body -5/.; longitudinal:epiphysis_apophysis -2/-5; longitudinal:metaphysis 3/0; longitudinal:diaphysis -2/3; transverse:cortical -5/-2; density:lytic -5/1; density:sclerotic 3/0; cortex:endosteal_scalloping ./-2; cortex:saucerization 0/2; soft_tissue_mass:absent 0/-2; periosteal:none 1/-2; periosteal:solid_thin ./-2; periosteal:lamellated -2/1; periosteal:spiculated -2/3; periosteal:codman -2/2; matrix:none -2/0; matrix:osteoid 3/1; matrix:chondroid -2/2
+  BPOP vs Periosteal chondroma: bone_class:long_bone 1/3; bone_class:flat_bone -5/-2; longitudinal:epiphysis_apophysis ./-2; longitudinal:metadiaphysis ./2; transverse:cortical -5/-2; density:lytic -5/1; density:sclerotic 2/-2; cortex:endosteal_scalloping ./-2; cortex:focal_breach ./-2; cortex:saucerization 0/3; periosteal:lamellated ./-2; periosteal:spiculated -2/-5; matrix:osteoid 1/-5
+  BPOP vs Periosteal OS: age_group:10-19_open 1/3; age_group:10-19_closed 1/3; age_group:10-19_unknown 1/3; age_group:40-59 1/-2; age_group:60+ -2/-5; bone_class:long_bone 1/3; bone_class:small_tubular_hand_foot 3/.; bone_class:flat_bone -5/-2; bone_class:spine_body -5/.; longitudinal:epiphysis_apophysis ./-5; longitudinal:metadiaphysis ./2; longitudinal:diaphysis 1/3; transverse:cortical -5/-2; density:lytic -5/1; density:sclerotic 2/0; cortex:endosteal_scalloping ./-2; cortex:destruction -5/-2; cortex:saucerization 0/2; soft_tissue_mass:absent 0/-2; soft_tissue_mass:present 0/2; periosteal:none 1/-2; periosteal:solid_thin ./-2; periosteal:spiculated -2/3; periosteal:codman -5/2; size_cm:>5 -2/.
+  Periosteal chondroma vs Periosteal OS: age_group:40-59 1/-2; age_group:60+ -2/-5; bone_class:small_tubular_hand_foot 2/.; bone_class:spine_body -5/.; longitudinal:epiphysis_apophysis -2/-5; longitudinal:metaphysis 2/0; longitudinal:diaphysis 1/3; density:sclerotic -2/0; cortex:focal_breach -2/0; cortex:destruction -5/-2; soft_tissue_mass:absent 1/-2; soft_tissue_mass:present 0/2; periosteal:none 1/-2; periosteal:solid_thin 1/-2; periosteal:lamellated -2/1; periosteal:spiculated -5/3; periosteal:codman -5/2; matrix:osteoid -5/1; size_cm:>5 -2/.
+
+--- Kelompok: Dewasa/aksial | konteks {'bone_class': 'spine_body'}
+| A | B | L1 | diskriminator | pemisah keras | sep(A>B) | sep(B>A) | sep_ctx(A>B) | sep_ctx(B>A) |
+|---|---|---|---|---|---|---|---|---|
+| Metastasis | Myeloma | 51 | 15 | 3 | 14 | 8 | 8 | 7 |
+| Metastasis | Lymphoma | 82 | 20 | 10 | 16 | 14 | 13 | 11 |
+| Metastasis | Paget | 89 | 21 | 10 | 24 | 11 | 20 | 9 |
+| Metastasis | Vertebral haemangioma | 89 | 23 | 9 | 20 | 18 | 12 | 16 |
+| Myeloma | Lymphoma | 103 | 31 | 9 | 18 | 21 | 17 | 17 |
+| Myeloma | Paget | 84 | 24 | 9 | 17 | 18 | 17 | 13 |
+| Myeloma | Vertebral haemangioma | 100 | 30 | 10 | 17 | 21 | 13 | 19 |
+| Lymphoma | Paget | 119 | 27 | 14 | 23 | 15 | 21 | 14 |
+| Lymphoma | Vertebral haemangioma | 109 | 27 | 11 | 22 | 15 | 15 | 15 |
+| Paget | Vertebral haemangioma | 76 | 18 | 11 | 11 | 11 | 5 | 11 |
+
+  Metastasis vs Myeloma: age_group:0-9 -2/-5; bone_class:sacrum 2/.; longitudinal:epiphysis_apophysis 0/-2; density:mixed 1/-2; density:sclerotic 2/-2; margin_lodwick:IB 1/3; cortex:endosteal_scalloping ./2; periosteal:solid_thin 0/-2; periosteal:lamellated 0/-2; periosteal:spiculated 0/-2; periosteal:codman 0/-2; periosteal:present_unspecified ./-2; matrix:osteoid -2/-5; matrix:chondroid -2/-5; clinical_flags:known_primary_malignancy 3/.
+  Metastasis vs Lymphoma: age_group:10-19_open -5/0; age_group:10-19_closed -5/0; age_group:10-19_unknown -5/0; age_group:20-39 -2/1; multiplicity:multiple 3/1; bone_class:small_tubular_hand_foot -2/.; transverse:cortical 0/-2; transverse:juxtacortical_surface ./-5; transverse:juxtacortical_continuous ./-5; margin_lodwick:IA -2/-5; margin_lodwick:IB 1/-2; cortex:intact 0/2; cortex:expansion_shell 0/-5; soft_tissue_mass:absent ./-2; soft_tissue_mass:present 1/3; periosteal:shell ./-5; matrix:osteoid -2/-5; matrix:chondroid -2/-5; matrix:coarse_trabeculae -2/.; clinical_flags:known_primary_malignancy 3/.
+  Metastasis vs Paget: age_group:0-9 -2/-5; bone_class:small_tubular_hand_foot -2/.; longitudinal:epiphysis_apophysis 0/2; transverse:eccentric 0/-2; transverse:juxtacortical_surface ./-5; transverse:juxtacortical_continuous ./-5; density:mixed 1/3; margin_lodwick:IA -2/0; margin_lodwick:IC 2/-2; margin_lodwick:II 2/-5; margin_lodwick:III 2/-5; cortex:destruction 2/-2; soft_tissue_mass:present 1/-2; periosteal:lamellated 0/-5; periosteal:spiculated 0/-5; periosteal:codman 0/-5; periosteal:present_unspecified ./-2; matrix:chondroid -2/-5; matrix:ground_glass -5/-2; matrix:coarse_trabeculae -2/1; clinical_flags:known_primary_malignancy 3/.
+  Metastasis vs Vertebral haemangioma: age_group:10-19_open -5/-2; age_group:10-19_closed -5/-2; age_group:10-19_unknown -5/-2; age_group:20-39 -2/1; multiplicity:multiple 3/1; bone_class:long_bone 2/-2; bone_class:small_tubular_hand_foot -2/.; bone_class:flat_bone 2/0; bone_class:sacrum 2/.; margin_lodwick:IA -2/1; margin_lodwick:IC 2/-5; margin_lodwick:II 2/-5; margin_lodwick:III 2/-5; cortex:intact 0/2; cortex:focal_breach 1/-2; cortex:destruction 2/-5; soft_tissue_mass:present 1/-2; periosteal:none 1/3; periosteal:present_unspecified ./-2; matrix:chondroid -2/-5; matrix:ground_glass -5/-2; matrix:coarse_trabeculae -2/3; clinical_flags:known_primary_malignancy 3/.
+  Myeloma vs Lymphoma: age_group:0-9 -5/-2; age_group:10-19_open -5/0; age_group:10-19_closed -5/0; age_group:10-19_unknown -5/0; age_group:20-39 -2/1; multiplicity:multiple 3/1; bone_class:small_tubular_hand_foot -2/.; bone_class:craniofacial 2/.; longitudinal:epiphysis_apophysis -2/0; longitudinal:metadiaphysis ./2; transverse:cortical ./-2; transverse:juxtacortical_surface ./-5; transverse:juxtacortical_continuous ./-5; density:mixed -2/1; density:sclerotic -2/1; margin_lodwick:IA -2/-5; margin_lodwick:IB 3/-2; margin_lodwick:II 1/3; margin_lodwick:III 1/3; cortex:intact 0/2; cortex:endosteal_scalloping 2/.; cortex:expansion_shell 1/-5; soft_tissue_mass:absent ./-2; soft_tissue_mass:present 1/3; periosteal:solid_thin -2/0; periosteal:shell ./-5; periosteal:lamellated -2/1; periosteal:spiculated -2/0; periosteal:codman -2/0; periosteal:present_unspecified -2/1; matrix:coarse_trabeculae -2/.
+  Myeloma vs Paget: bone_class:small_tubular_hand_foot -2/.; longitudinal:epiphysis_apophysis -2/2; transverse:eccentric 0/-2; transverse:juxtacortical_surface ./-5; transverse:juxtacortical_continuous ./-5; density:lytic 3/1; density:mixed -2/3; density:sclerotic -2/2; margin_lodwick:IA -2/0; margin_lodwick:IB 3/1; margin_lodwick:IC 1/-2; margin_lodwick:II 1/-5; margin_lodwick:III 1/-5; cortex:endosteal_scalloping 2/.; cortex:destruction 1/-2; soft_tissue_mass:present 1/-2; periosteal:solid_thin -2/.; periosteal:lamellated -2/-5; periosteal:spiculated -2/-5; periosteal:codman -2/-5; matrix:none 3/1; matrix:osteoid -5/-2; matrix:ground_glass -5/-2; matrix:coarse_trabeculae -2/1
+  Myeloma vs Vertebral haemangioma: age_group:0-9 -5/-2; age_group:10-19_open -5/-2; age_group:10-19_closed -5/-2; age_group:10-19_unknown -5/-2; age_group:20-39 -2/1; multiplicity:multiple 3/1; bone_class:long_bone 1/-2; bone_class:small_tubular_hand_foot -2/.; bone_class:flat_bone 3/0; longitudinal:epiphysis_apophysis -2/.; density:lytic 3/1; density:mixed -2/2; density:sclerotic -2/1; margin_lodwick:IA -2/1; margin_lodwick:IB 3/1; margin_lodwick:IC 1/-5; margin_lodwick:II 1/-5; margin_lodwick:III 1/-5; cortex:intact 0/2; cortex:endosteal_scalloping 2/.; cortex:focal_breach ./-2; cortex:destruction 1/-5; soft_tissue_mass:present 1/-2; periosteal:solid_thin -2/.; periosteal:lamellated -2/.; periosteal:spiculated -2/.; periosteal:codman -2/.; matrix:osteoid -5/-2; matrix:ground_glass -5/-2; matrix:coarse_trabeculae -2/3
+  Lymphoma vs Paget: age_group:0-9 -2/-5; age_group:10-19_open 0/-5; age_group:10-19_closed 0/-5; age_group:10-19_unknown 0/-5; age_group:20-39 1/-2; bone_class:craniofacial ./2; longitudinal:epiphysis_apophysis 0/2; transverse:eccentric 0/-2; transverse:cortical -2/1; density:mixed 1/3; margin_lodwick:IA -5/0; margin_lodwick:IB -2/1; margin_lodwick:IC 1/-2; margin_lodwick:II 3/-5; margin_lodwick:III 3/-5; cortex:expansion_shell -5/1; cortex:destruction 1/-2; soft_tissue_mass:absent -2/.; soft_tissue_mass:present 3/-2; periosteal:shell -5/.; periosteal:lamellated 1/-5; periosteal:spiculated 0/-5; periosteal:codman 0/-5; periosteal:present_unspecified 1/-2; matrix:none 3/1; matrix:osteoid -5/-2; matrix:ground_glass -5/-2
+  Lymphoma vs Vertebral haemangioma: age_group:10-19_open 0/-2; age_group:10-19_closed 0/-2; age_group:10-19_unknown 0/-2; bone_class:long_bone 2/-2; bone_class:flat_bone 2/0; longitudinal:metaphysis 2/.; longitudinal:metadiaphysis 2/.; longitudinal:diaphysis 2/.; transverse:cortical -2/.; transverse:juxtacortical_surface -5/.; transverse:juxtacortical_continuous -5/.; margin_lodwick:IA -5/1; margin_lodwick:IB -2/1; margin_lodwick:IC 1/-5; margin_lodwick:II 3/-5; margin_lodwick:III 3/-5; cortex:expansion_shell -5/.; cortex:focal_breach 1/-2; cortex:destruction 1/-5; soft_tissue_mass:absent -2/.; soft_tissue_mass:present 3/-2; periosteal:none 1/3; periosteal:shell -5/.; periosteal:present_unspecified 1/-2; matrix:osteoid -5/-2; matrix:ground_glass -5/-2; matrix:coarse_trabeculae ./3
+  Paget vs Vertebral haemangioma: age_group:0-9 -5/-2; age_group:10-19_open -5/-2; age_group:10-19_closed -5/-2; age_group:10-19_unknown -5/-2; age_group:20-39 -2/1; bone_class:long_bone 2/-2; bone_class:flat_bone 3/0; longitudinal:epiphysis_apophysis 2/.; transverse:eccentric -2/.; transverse:juxtacortical_surface -5/.; transverse:juxtacortical_continuous -5/.; margin_lodwick:IC -2/-5; cortex:focal_breach ./-2; cortex:destruction -2/-5; periosteal:lamellated -5/.; periosteal:spiculated -5/.; periosteal:codman -5/.; matrix:coarse_trabeculae 1/3
+
+--- Kelompok: Sklerotik fokal | konteks {'density': 'sclerotic'}
+| A | B | L1 | diskriminator | pemisah keras | sep(A>B) | sep(B>A) | sep_ctx(A>B) | sep_ctx(B>A) |
+|---|---|---|---|---|---|---|---|---|
+| Enostosis | Metastasis | 133 | 31 | 15 | 18 | 16 | 18 | 10 |
+| Enostosis | Osteoid osteoma | 116 | 28 | 11 | 17 | 23 | 17 | 18 |
+| Metastasis | Osteoid osteoma | 159 | 35 | 14 | 24 | 26 | 17 | 21 |
+
+  Enostosis vs Metastasis: age_group:0-9 0/-2; age_group:10-19_open 1/-5; age_group:10-19_closed 1/-5; age_group:10-19_unknown 1/-5; age_group:20-39 2/-2; multiplicity:multiple 1/3; bone_class:small_tubular_hand_foot 1/-2; transverse:cortical -2/0; transverse:juxtacortical_surface -5/.; transverse:juxtacortical_continuous -5/.; density:lytic -5/2; density:mixed -5/1; margin_lodwick:IA ./-2; margin_lodwick:IC ./2; margin_lodwick:II ./2; margin_lodwick:III ./2; cortex:intact 3/0; cortex:expansion_shell -5/0; cortex:destruction -5/2; soft_tissue_mass:present -5/1; periosteal:none 3/1; periosteal:solid_thin -5/0; periosteal:lamellated -5/0; periosteal:spiculated -5/0; periosteal:codman -5/0; periosteal:present_unspecified -2/.; matrix:chondroid -5/-2; matrix:coarse_trabeculae ./-2; size_cm:<2 2/.; size_cm:>5 -2/.; clinical_flags:known_primary_malignancy -2/3
+  Enostosis vs Osteoid osteoma: age_group:10-19_open 1/3; age_group:10-19_closed 1/3; age_group:10-19_unknown 1/3; age_group:40-59 2/-2; age_group:60+ 2/-5; bone_class:flat_bone 2/0; bone_class:spine_body 2/.; bone_class:spine_posterior ./2; longitudinal:diaphysis 0/3; transverse:central 2/0; transverse:cortical -2/3; transverse:juxtacortical_surface -5/1; transverse:juxtacortical_continuous -5/1; density:lytic -5/0; density:mixed -5/1; margin_lodwick:IC ./-5; margin_lodwick:II ./-5; margin_lodwick:III ./-5; cortex:intact 3/1; cortex:expansion_shell -5/.; periosteal:none 3/0; periosteal:solid_thin -5/3; periosteal:present_unspecified -2/1; matrix:osteoid -2/1; size_cm:2-5 0/-2; size_cm:>5 -2/-5; clinical_flags:night_pain_nsaid_relief ./3; clinical_flags:known_primary_malignancy -2/.
+  Metastasis vs Osteoid osteoma: age_group:0-9 -2/1; age_group:10-19_open -5/3; age_group:10-19_closed -5/3; age_group:10-19_unknown -5/3; age_group:20-39 -2/2; age_group:40-59 3/-2; age_group:60+ 3/-5; multiplicity:multiple 3/.; bone_class:small_tubular_hand_foot -2/1; bone_class:flat_bone 2/0; bone_class:spine_body 3/.; bone_class:spine_posterior ./2; bone_class:sacrum 2/.; longitudinal:diaphysis 1/3; transverse:central 2/0; transverse:cortical 0/3; density:lytic 2/0; margin_lodwick:IA -2/1; margin_lodwick:IC 2/-5; margin_lodwick:II 2/-5; margin_lodwick:III 2/-5; cortex:destruction 2/-5; soft_tissue_mass:present 1/-5; periosteal:solid_thin 0/3; periosteal:lamellated 0/-5; periosteal:spiculated 0/-5; periosteal:codman 0/-5; matrix:osteoid -2/1; matrix:chondroid -2/-5; matrix:coarse_trabeculae -2/.; size_cm:<2 ./3; size_cm:2-5 ./-2; size_cm:>5 ./-5; clinical_flags:night_pain_nsaid_relief ./3; clinical_flags:known_primary_malignancy 3/.
+
+--- Kelompok: Infeksi | konteks {'bone_class': 'spine_body'}
+| A | B | L1 | diskriminator | pemisah keras | sep(A>B) | sep(B>A) | sep_ctx(A>B) | sep_ctx(B>A) |
+|---|---|---|---|---|---|---|---|---|
+| Osteomyelitis | Skeletal TB | 54 | 11 | 1 | 16 | 8 | 12 | 8 |
+
+  Osteomyelitis vs Skeletal TB: age_group:0-9 3/1; transverse:cortical 1/-2; transverse:juxtacortical_surface ./-2; transverse:juxtacortical_continuous ./-2; density:sclerotic 1/-2; margin_lodwick:IA 3/1; periosteal:none 0/2; periosteal:solid_thin 2/0; periosteal:lamellated 2/-2; periosteal:spiculated 0/-5; periosteal:codman 1/-2
+
+--- Kelompok: Sakrum | konteks {'bone_class': 'sacrum'}
+| A | B | L1 | diskriminator | pemisah keras | sep(A>B) | sep(B>A) | sep_ctx(A>B) | sep_ctx(B>A) |
+|---|---|---|---|---|---|---|---|---|
+| Chordoma | GCTB | 105 | 31 | 8 | 20 | 16 | 20 | 12 |
+| Chordoma | Central CS | 71 | 21 | 6 | 11 | 16 | 11 | 12 |
+| GCTB | Central CS | 100 | 34 | 6 | 22 | 25 | 18 | 22 |
+
+  Chordoma vs GCTB: age_group:10-19_closed -5/2; age_group:10-19_unknown -5/1; age_group:20-39 1/3; age_group:40-59 3/1; age_group:60+ 3/-2; bone_class:long_bone -5/3; bone_class:flat_bone -5/0; bone_class:spine_posterior -2/.; bone_class:sacrum 3/1; longitudinal:epiphysis_apophysis ./3; longitudinal:diaphysis ./-2; transverse:central 2/0; transverse:eccentric ./3; transverse:cortical ./-5; transverse:juxtacortical_surface ./-5; transverse:juxtacortical_continuous ./-5; density:mixed 0/-2; margin_lodwick:IA -2/0; margin_lodwick:IB 1/3; margin_lodwick:II 1/-2; margin_lodwick:III 0/-2; cortex:intact -2/0; cortex:expansion_shell ./2; cortex:destruction 2/0; soft_tissue_mass:absent -2/.; soft_tissue_mass:present 3/0; periosteal:shell ./2; periosteal:lamellated ./-2; periosteal:spiculated ./-2; periosteal:codman ./-2; matrix:chondroid 0/-5
+  Chordoma vs Central CS: age_group:10-19_open -5/-2; age_group:10-19_closed -5/-2; age_group:10-19_unknown -5/-2; bone_class:long_bone -5/2; bone_class:small_tubular_hand_foot ./-2; bone_class:flat_bone -5/3; bone_class:spine_posterior -2/.; bone_class:sacrum 3/1; longitudinal:metaphysis ./2; longitudinal:metadiaphysis ./2; transverse:cortical ./-2; transverse:juxtacortical_surface ./-2; transverse:juxtacortical_continuous ./-2; density:lytic 3/1; density:mixed 0/2; density:sclerotic -5/-2; cortex:endosteal_scalloping ./2; soft_tissue_mass:absent -2/0; matrix:chondroid 0/3; size_cm:<2 ./-2; size_cm:>5 ./2
+  GCTB vs Central CS: age_group:10-19_open -5/-2; age_group:10-19_closed 2/-2; age_group:10-19_unknown 1/-2; age_group:20-39 3/1; age_group:40-59 1/3; age_group:60+ -2/2; bone_class:small_tubular_hand_foot 0/-2; bone_class:flat_bone 0/3; longitudinal:epiphysis_apophysis 3/0; longitudinal:metadiaphysis 0/2; longitudinal:diaphysis -2/1; transverse:central 0/2; transverse:eccentric 3/0; transverse:cortical -5/-2; transverse:juxtacortical_surface -5/-2; transverse:juxtacortical_continuous -5/-2; density:lytic 3/1; density:mixed -2/2; density:sclerotic -5/-2; margin_lodwick:IA 0/-2; margin_lodwick:IB 3/1; margin_lodwick:IC 1/3; margin_lodwick:II -2/1; margin_lodwick:III -2/1; cortex:intact 0/-2; cortex:destruction 0/2; soft_tissue_mass:present 0/2; periosteal:shell 2/.; periosteal:lamellated -2/1; periosteal:spiculated -2/0; periosteal:codman -2/0; matrix:chondroid -5/3; size_cm:<2 ./-2; size_cm:>5 ./2
+
+--- Kelompok: Agresif anak/remaja | konteks {'bone_class': 'long_bone'}
+| A | B | L1 | diskriminator | pemisah keras | sep(A>B) | sep(B>A) | sep_ctx(A>B) | sep_ctx(B>A) |
+|---|---|---|---|---|---|---|---|---|
+| Conventional OS | Ewing sarcoma | 56 | 12 | 3 | 16 | 16 | 16 | 16 |
+| Conventional OS | Osteomyelitis | 86 | 23 | 4 | 10 | 25 | 9 | 22 |
+| Ewing sarcoma | Osteomyelitis | 82 | 22 | 5 | 12 | 25 | 12 | 22 |
+
+  Conventional OS vs Ewing sarcoma: age_group:0-9 1/3; age_group:40-59 0/-2; age_group:60+ 1/-5; bone_class:small_tubular_hand_foot -2/.; longitudinal:metaphysis 3/1; longitudinal:diaphysis 0/3; transverse:eccentric 2/0; cortex:intact -2/1; cortex:expansion_shell -2/-5; periosteal:codman 3/1; matrix:osteoid 3/-2; matrix:chondroid 0/-5
+  Conventional OS vs Osteomyelitis: age_group:0-9 1/3; age_group:10-19_closed 3/1; bone_class:small_tubular_hand_foot -2/1; longitudinal:epiphysis_apophysis -2/1; transverse:eccentric 2/0; transverse:cortical -2/1; transverse:juxtacortical_surface -2/.; transverse:juxtacortical_continuous -2/.; margin_lodwick:IA -5/3; margin_lodwick:IB -2/0; cortex:intact -2/1; cortex:endosteal_scalloping -2/1; cortex:expansion_shell -2/.; soft_tissue_mass:absent -2/.; periosteal:none -2/0; periosteal:solid_thin -2/2; periosteal:shell -5/.; periosteal:spiculated 3/0; periosteal:codman 3/1; matrix:none 0/2; matrix:osteoid 3/-5; matrix:chondroid 0/-5; clinical_flags:fever_or_infection_signs ./3
+  Ewing sarcoma vs Osteomyelitis: age_group:40-59 -2/1; age_group:60+ -5/1; bone_class:flat_bone 2/0; longitudinal:epiphysis_apophysis -2/1; longitudinal:metaphysis 1/3; longitudinal:diaphysis 3/1; transverse:cortical -2/1; transverse:juxtacortical_surface -2/.; transverse:juxtacortical_continuous -2/.; margin_lodwick:IA -5/3; margin_lodwick:IB -2/0; margin_lodwick:III 3/1; cortex:endosteal_scalloping -2/1; cortex:expansion_shell -5/.; soft_tissue_mass:absent -2/.; soft_tissue_mass:present 3/1; periosteal:none -2/0; periosteal:solid_thin -2/2; periosteal:shell -5/.; periosteal:spiculated 2/0; matrix:osteoid -2/-5; clinical_flags:fever_or_infection_signs ./3
+
+====================================================================================================
+4b. VINYET BUATAN PENINJAU (bukan kasus validasi)
+====================================================================================================
+| ID | Entitas diharapkan | fitur | peringkat | seri | selisih vs pesaing terbaik | 4 teratas | disingkirkan | Deskripsi |
+|---|---|---|---|---|---|---|---|---|
+| C01 | Conventional OS | 12 | 1 | 1 | 4 | Conventional OS 23; Telangiectatic OS 19; Ewing sarcoma 15 | 34 | 14 th, femur distal metafisis, campuran moth-eaten, destruksi, massa, Codman, osteoid |
+| C02 | Telangiectatic OS | 12 | 1 | 1 | 6 | Telangiectatic OS 22; ABC 16; Conventional OS 16; GCTB 14 | 26 | 16 th, tibia proksimal metafisis, litik ekspansil tepi tidak tegas, massa, Codman |
+| C03 | Parosteal OS | 10 | 1 | 1 | 1 | Parosteal OS 17; Osteochondroma 16; BPOP 10; Osteoblastoma 9 | 25 | 32 th, femur distal posterior, massa permukaan padat terosifikasi, korteks utuh |
+| C04 | Periosteal OS | 11 | 1 | 1 | 11 | Periosteal OS 21; Conventional OS 10; Central CS 8; BPOP 2 | 32 | 17 th, tibia diafisis, massa permukaan, saucerization, spikula tegak lurus |
+| C05 | Osteoid osteoma | 12 | 1 | 1 | 6 | Osteoid osteoma 25; Stress fracture 19; OFD-adamantinoma 14; Osteomyelitis 12 | 15 | 22 th, femur diafisis, sklerosis kortikal, periosteal solid, nidus <2 cm, nyeri malam |
+| C06 | Osteoblastoma | 10 | 1 | 1 | 4 | Osteoblastoma 16; Fibrous dysplasia 12; Osteochondroma 7; OFD-adamantinoma 6 | 26 | 18 th, elemen posterior vertebra, ekspansil campuran dengan osteoid, 3 cm |
+| C07 | Osteochondroma | 11 | 1 | 1 | 5 | Osteochondroma 19; Stress fracture 14; NOF 13; Osteoid osteoma 11 | 23 | 12 th, femur distal metafisis, eksostosis dengan kontinuitas korteks-meduler |
+| C08 | Enchondroma | 12 | 2 | 1 | -1 | Bone infarct 19; Enchondroma 18; Fibrous dysplasia 15; Central CS 13 | 27 | 45 th, humerus proksimal metafisis, sentral, kalsifikasi ring-and-arc, tanpa scalloping |
+| C09 | Enchondroma | 11 | 1 | 1 | 5 | Enchondroma 17; Fibrous dysplasia 12; Clear cell CS 10; CMF 9 | 27 | 30 th, falang proksimal, litik sentral ekspansil dengan kalsifikasi kondroid |
+| C10 | Periosteal chondroma | 11 | 1 | 1 | 10 | Periosteal chondroma 18; CMF 8; Central CS 7; Periosteal OS 7 | 29 | 25 th, humerus proksimal, lesi permukaan dengan saucerization dan penyangga, kalsifikasi kondroid |
+| C11 | Chondroblastoma | 12 | 1 | 1 | 4 | Chondroblastoma 20; CMF 16; Fibrous dysplasia 11; Enchondroma 9 | 30 | 15 th fisis terbuka, epifisis tibia proksimal, litik eksentrik tepi sklerotik, kalsifikasi halus |
+| C12 | CMF | 12 | 1 | 1 | 2 | CMF 22; ABC 20; NOF 19; GCTB 18 | 13 | 22 th, tibia proksimal metafisis, litik eksentrik berlobus tepi sklerotik, ekspansi |
+| C13 | Central CS | 12 | 1 | 1 | 10 | Central CS 21; Clear cell CS 11; Enchondroma 11; Metastasis 10 | 32 | 58 th, femur proksimal metadiafisis, sentral, scalloping dalam, kondroid, >5 cm |
+| C14 | Central CS | 11 | 1 | 1 | 10 | Central CS 22; Metastasis 12; Conventional OS 8; Clear cell CS 3 | 33 | 55 th, ilium, campuran dengan kalsifikasi kondroid, destruksi korteks, massa besar |
+| C15 | Clear cell CS | 12 | 1 | 1 | 2 | Clear cell CS 16; Chondroblastoma 14; Enchondroma 13; Bone infarct 11 | 27 | 38 th, kaput femur, litik berbatas tegas tanpa tepi sklerotik, kalsifikasi |
+| C16 | Desmoplastic fibroma | 12 | 3 | 2 | -3 | SBC 21; ABC 19; Desmoplastic fibroma 18; GCTB 18 | 13 | 24 th, femur distal metafisis, litik sentral ekspansil dengan pseudotrabekulasi, tanpa matriks |
+| C17 | Vertebral haemangioma | 10 | 1 | 1 | 4 | Vertebral haemangioma 17; Paget 13; Bone infarct 11; Fibrous dysplasia 10 | 11 | 50 th, korpus vertebra, trabekula vertikal kasar, korteks utuh |
+| C18 | ABC | 12 | 1 | 1 | 7 | ABC 25; CMF 18; NOF 18; SBC 17 | 19 | 13 th fisis terbuka, femur distal metafisis, litik eksentrik blow-out dengan cangkang tipis |
+| C19 | NOF | 12 | 1 | 2 | 0 | CMF 22; NOF 22; ABC 19; SBC 18 | 16 | 11 th fisis terbuka, tibia distal metafisis, litik eksentrik tepi sklerotik berlobus |
+| C20 | GCTB | 12 | 1 | 1 | 7 | GCTB 23; ABC 16; Clear cell CS 16; Brown tumour 14 | 16 | 30 th, radius distal epi-metafisis sampai subkondral, litik eksentrik tanpa tepi sklerotik |
+| C21 | Chordoma | 11 | 1 | 1 | 3 | Chordoma 20; Metastasis 17; Central CS 16; Myeloma 16 | 22 | 62 th, sakrum garis tengah, litik destruktif dengan massa presakral besar |
+| C22 | SBC | 12 | 1 | 1 | 4 | SBC 24; ABC 20; LCH 18; Fibrous dysplasia 17 | 18 | 9 th, humerus proksimal metafisis, litik sentral, korteks menipis |
+| C23 | Fibrous dysplasia | 12 | 1 | 1 | 11 | Fibrous dysplasia 23; OFD-adamantinoma 12; CMF 12; NOF 11 | 28 | 20 th, femur proksimal metadiafisis, ground-glass dengan rind sklerotik, ekspansi |
+| C24 | OFD-adamantinoma | 12 | 1 | 1 | 3 | OFD-adamantinoma 19; Fibrous dysplasia 16; NOF 15; CMF 14 | 17 | 28 th, tibia diafisis anterior, kortikal, multilokuler campuran, ekspansi |
+| C25 | OFD-adamantinoma | 12 | 4 | 1 | -3 | NOF 19; CMF 17; LCH 17; OFD-adamantinoma 16 | 19 | 6 th (OFD), tibia diafisis anterior, kortikal, litik tepi sklerotik, bowing |
+| C26 | Intraosseous lipoma | 11 | 1 | 1 | 2 | Intraosseous lipoma 18; Geode/ganglion 16; SBC 15; Bone infarct 14 | 11 | 48 th, kalkaneus, lusen tepi sklerotik tipis, korteks utuh |
+| C27 | Intraosseous lipoma | 12 | 2 | 1 | -1 | Bone infarct 20; Intraosseous lipoma 19; Geode/ganglion 18; SBC 18 | 12 | 45 th, femur intertrokanter, lusen sentral tepi sklerotik |
+| C28 | BPOP | 10 | 1 | 1 | 2 | BPOP 14; Osteoid osteoma 12; Parosteal OS 12; Osteochondroma 11 | 26 | 30 th, falang proksimal, massa termineralisasi menempel di permukaan, korteks utuh, tanpa kontinuitas |
+| C29 | Myeloma | 10 | 1 | 1 | 6 | Myeloma 24; Brown tumour 18; Metastasis 16; Paget 14 | 16 | 66 th, pelvis, lesi litik punched-out multipel dengan scalloping |
+| C30 | Myeloma | 9 | 1 | 1 | 4 | Myeloma 18; Chordoma 14; Metastasis 13; GCTB 13 | 19 | 55 th, plasmasitoma soliter korpus vertebra, litik ekspansil dengan massa |
+| C31 | Lymphoma | 12 | 1 | 1 | 4 | Lymphoma 23; Ewing sarcoma 19; Metastasis 15; Central CS 15 | 25 | 50 th, femur metadiafisis, permeatif, korteks relatif utuh, massa besar, lamelar |
+| C32 | LCH | 12 | 1 | 1 | 6 | LCH 21; Osteomyelitis 15; Desmoplastic fibroma 12; ABC 11 | 22 | 6 th, femur diafisis, litik sentral berbatas tegas, scalloping, periosteal lamelar |
+| C33 | Ewing sarcoma | 12 | 1 | 1 | 6 | Ewing sarcoma 26; LCH 20; Lymphoma 20; Telangiectatic OS 18 | 27 | 12 th, femur diafisis, moth-eaten, korteks terputus fokal, massa besar, onion-skin |
+| C34 | Ewing sarcoma | 11 | 2 | 1 | -2 | Lymphoma 19; Ewing sarcoma 17; Central CS 15; LCH 13 | 25 | 24 th, ilium, permeatif dengan massa jaringan lunak besar |
+| C35 | Metastasis | 12 | 1 | 1 | 2 | Metastasis 24; Lymphoma 22; Myeloma 20; Central CS 15 | 26 | 66 th, riwayat karsinoma, femur proksimal, litik moth-eaten destruktif, lesi multipel |
+| C36 | Metastasis | 10 | 1 | 1 | 2 | Metastasis 18; Enostosis 16; Paget 15; Bone infarct 14 | 20 | 70 th, riwayat karsinoma prostat, pelvis, fokus sklerotik multipel |
+| C37 | Osteomyelitis | 12 | 1 | 1 | 2 | Osteomyelitis 21; LCH 19; Ewing sarcoma 15; Telangiectatic OS 15 | 23 | 7 th, demam, tibia proksimal metafisis, litik tidak tegas, periosteal lamelar |
+| C38 | Osteomyelitis | 12 | 2 | 1 | -2 | SBC 21; Osteomyelitis 19; CMF 17; ABC 16 | 17 | 14 th (abses Brodie), tibia distal metafisis, litik lonjong tepi sklerotik tebal, periosteal solid |
+| C39 | Skeletal TB | 10 | 1 | 1 | 2 | Skeletal TB 17; Chordoma 15; LCH 13; Osteomyelitis 13 | 18 | 30 th, korpus vertebra, destruksi litik dengan massa paravertebral, demam subfebris |
+| C40 | Skeletal TB | 12 | 1 | 2 | 0 | LCH 14; Skeletal TB 14; ABC 12; Osteomyelitis 12 | 24 | 8 th, femur distal epi-metafisis melintasi fisis, litik dengan penembusan korteks |
+| C41 | Geode/ganglion | 12 | 1 | 1 | 8 | Geode/ganglion 24; Clear cell CS 16; GCTB 16; CMF 14 | 15 | 55 th, subkondral tibia proksimal, kista kecil tepi sklerotik |
+| C42 | Bone infarct | 11 | 1 | 1 | 4 | Bone infarct 23; Fibrous dysplasia 19; Intraosseous lipoma 17; Enchondroma 16 | 13 | 52 th, femur distal metadiafisis, sentral, sklerosis serpiginosa, multipel |
+| C43 | Stress fracture | 10 | 1 | 2 | 0 | Osteoid osteoma 19; Stress fracture 19; OFD-adamantinoma 14; Osteomyelitis 12 | 15 | 22 th pelari, tibia diafisis, sklerosis kortikal dengan periosteal solid |
+| C44 | Stress fracture | 8 | 2 | 2 | -3 | Enostosis 14; Bone infarct 11; Stress fracture 11; Metastasis 10 | 15 | 72 th (insufisiensi), sakrum, pita sklerotik |
+| C45 | Paget | 12 | 1 | 1 | 3 | Paget 16; Clear cell CS 13; Central CS 12; Skeletal TB 11 | 20 | 70 th, tibia proksimal mulai subartikular, campuran, trabekula kasar, tulang membesar |
+| C46 | Paget | 8 | 2 | 1 | -1 | Vertebral haemangioma 12; Paget 11; Metastasis 7; Myeloma 5 | 23 | 68 th, korpus vertebra, sklerotik membesar dengan trabekula kasar |
+| C47 | Brown tumour | 12 | 1 | 2 | 0 | Brown tumour 19; Myeloma 19; GCTB 16; ABC 15 | 14 | 45 th, lesi litik ekspansil multipel tulang panjang, tanpa matriks |
+| C48 | Enostosis | 11 | 1 | 1 | 1 | Enostosis 21; Bone infarct 20; Stress fracture 14; Metastasis 13 | 14 | 40 th, femur proksimal metafisis, fokus sklerotik homogen <2 cm |
+
+vinyet: 48; peringkat 1 (termasuk seri): 40; peringkat 1 tunggal: 36; 3 besar: 47; di luar 3 besar: 1; rujukan tersingkir: 0
+entitas tanpa vinyet: tidak ada
+entitas yang vinyet tipikalnya tidak peringkat 1: Enchondroma [2, 1]; Desmoplastic fibroma [3]; OFD-adamantinoma [1, 4]; Intraosseous lipoma [1, 2]; Ewing sarcoma [1, 2]; Osteomyelitis [1, 2]; Stress fracture [1, 2]; Paget [1, 2]
+
+Uji mimic pada vinyet: skor entitas diharapkan (A) vs anggota kelompok mimic-nya (B) pada kasus tipikal A
+| Vinyet | A | skor A | B | skor B | A di atas B? |
+|---|---|---|---|---|---|
+| C01 | Conventional OS | 23 | Ewing sarcoma | 15 | ya |
+| C01 | Conventional OS | 23 | Osteomyelitis | disingkirkan | ya |
+| C02 | Telangiectatic OS | 22 | ABC | 16 | ya |
+| C02 | Telangiectatic OS | 22 | SBC | disingkirkan | ya |
+| C02 | Telangiectatic OS | 22 | GCTB | 14 | ya |
+| C03 | Parosteal OS | 17 | Osteochondroma | 16 | ya |
+| C03 | Parosteal OS | 17 | BPOP | 10 | ya |
+| C03 | Parosteal OS | 17 | Periosteal chondroma | disingkirkan | ya |
+| C03 | Parosteal OS | 17 | Periosteal OS | 6 | ya |
+| C04 | Periosteal OS | 21 | Osteochondroma | disingkirkan | ya |
+| C04 | Periosteal OS | 21 | Parosteal OS | 0 | ya |
+| C04 | Periosteal OS | 21 | BPOP | 2 | ya |
+| C04 | Periosteal OS | 21 | Periosteal chondroma | disingkirkan | ya |
+| C05 | Osteoid osteoma | 25 | Osteoblastoma | 6 | ya |
+| C05 | Osteoid osteoma | 25 | Stress fracture | 19 | ya |
+| C05 | Osteoid osteoma | 25 | Osteomyelitis | 12 | ya |
+| C05 | Osteoid osteoma | 25 | Enostosis | disingkirkan | ya |
+| C05 | Osteoid osteoma | 25 | Metastasis | 5 | ya |
+| C06 | Osteoblastoma | 16 | Osteoid osteoma | 6 | ya |
+| C06 | Osteoblastoma | 16 | Stress fracture | disingkirkan | ya |
+| C06 | Osteoblastoma | 16 | Osteomyelitis | disingkirkan | ya |
+| C07 | Osteochondroma | 19 | Parosteal OS | disingkirkan | ya |
+| C07 | Osteochondroma | 19 | BPOP | disingkirkan | ya |
+| C07 | Osteochondroma | 19 | Periosteal chondroma | disingkirkan | ya |
+| C07 | Osteochondroma | 19 | Periosteal OS | disingkirkan | ya |
+| C08 | Enchondroma | 18 | Central CS | 13 | ya |
+| C08 | Enchondroma | 18 | Bone infarct | 19 | TIDAK |
+| C09 | Enchondroma | 17 | Central CS | 5 | ya |
+| C09 | Enchondroma | 17 | Bone infarct | disingkirkan | ya |
+| C10 | Periosteal chondroma | 18 | Osteochondroma | disingkirkan | ya |
+| C10 | Periosteal chondroma | 18 | Parosteal OS | disingkirkan | ya |
+| C10 | Periosteal chondroma | 18 | BPOP | disingkirkan | ya |
+| C10 | Periosteal chondroma | 18 | Periosteal OS | 7 | ya |
+| C11 | Chondroblastoma | 20 | GCTB | disingkirkan | ya |
+| C11 | Chondroblastoma | 20 | Clear cell CS | disingkirkan | ya |
+| C11 | Chondroblastoma | 20 | Geode/ganglion | disingkirkan | ya |
+| C12 | CMF | 22 | NOF | 19 | ya |
+| C12 | CMF | 22 | Fibrous dysplasia | 16 | ya |
+| C12 | CMF | 22 | OFD-adamantinoma | 10 | ya |
+| C13 | Central CS | 21 | Enchondroma | 11 | ya |
+| C13 | Central CS | 21 | Bone infarct | disingkirkan | ya |
+| C13 | Central CS | 21 | Chordoma | disingkirkan | ya |
+| C13 | Central CS | 21 | GCTB | disingkirkan | ya |
+| C14 | Central CS | 22 | Enchondroma | disingkirkan | ya |
+| C14 | Central CS | 22 | Bone infarct | disingkirkan | ya |
+| C14 | Central CS | 22 | Chordoma | disingkirkan | ya |
+| C14 | Central CS | 22 | GCTB | disingkirkan | ya |
+| C15 | Clear cell CS | 16 | GCTB | disingkirkan | ya |
+| C15 | Clear cell CS | 16 | Chondroblastoma | 14 | ya |
+| C15 | Clear cell CS | 16 | Geode/ganglion | disingkirkan | ya |
+| C17 | Vertebral haemangioma | 17 | Metastasis | 8 | ya |
+| C17 | Vertebral haemangioma | 17 | Myeloma | 5 | ya |
+| C17 | Vertebral haemangioma | 17 | Lymphoma | 7 | ya |
+| C17 | Vertebral haemangioma | 17 | Paget | 13 | ya |
+| C18 | ABC | 25 | Telangiectatic OS | 13 | ya |
+| C18 | ABC | 25 | SBC | 17 | ya |
+| C18 | ABC | 25 | GCTB | disingkirkan | ya |
+| C19 | NOF | 22 | CMF | 22 | SERI |
+| C19 | NOF | 22 | Fibrous dysplasia | 16 | ya |
+| C19 | NOF | 22 | OFD-adamantinoma | 8 | ya |
+| C20 | GCTB | 23 | Chondroblastoma | 10 | ya |
+| C20 | GCTB | 23 | Clear cell CS | 16 | ya |
+| C20 | GCTB | 23 | Geode/ganglion | disingkirkan | ya |
+| C20 | GCTB | 23 | ABC | 16 | ya |
+| C20 | GCTB | 23 | Telangiectatic OS | 4 | ya |
+| C20 | GCTB | 23 | SBC | disingkirkan | ya |
+| C20 | GCTB | 23 | Chordoma | disingkirkan | ya |
+| C20 | GCTB | 23 | Central CS | 9 | ya |
+| C21 | Chordoma | 20 | GCTB | 6 | ya |
+| C21 | Chordoma | 20 | Central CS | 16 | ya |
+| C22 | SBC | 24 | ABC | 20 | ya |
+| C22 | SBC | 24 | Telangiectatic OS | 9 | ya |
+| C22 | SBC | 24 | GCTB | disingkirkan | ya |
+| C23 | Fibrous dysplasia | 23 | NOF | 11 | ya |
+| C23 | Fibrous dysplasia | 23 | CMF | 12 | ya |
+| C23 | Fibrous dysplasia | 23 | OFD-adamantinoma | 12 | ya |
+| C24 | OFD-adamantinoma | 19 | NOF | 15 | ya |
+| C24 | OFD-adamantinoma | 19 | CMF | 14 | ya |
+| C24 | OFD-adamantinoma | 19 | Fibrous dysplasia | 16 | ya |
+| C25 | OFD-adamantinoma | 16 | NOF | 19 | TIDAK |
+| C25 | OFD-adamantinoma | 16 | CMF | 17 | TIDAK |
+| C25 | OFD-adamantinoma | 16 | Fibrous dysplasia | 14 | ya |
+| C28 | BPOP | 14 | Osteochondroma | 11 | ya |
+| C28 | BPOP | 14 | Parosteal OS | 12 | ya |
+| C28 | BPOP | 14 | Periosteal chondroma | disingkirkan | ya |
+| C28 | BPOP | 14 | Periosteal OS | 1 | ya |
+| C29 | Myeloma | 24 | Metastasis | 16 | ya |
+| C29 | Myeloma | 24 | Lymphoma | 9 | ya |
+| C29 | Myeloma | 24 | Paget | 14 | ya |
+| C29 | Myeloma | 24 | Vertebral haemangioma | 12 | ya |
+| C30 | Myeloma | 18 | Metastasis | 13 | ya |
+| C30 | Myeloma | 18 | Lymphoma | disingkirkan | ya |
+| C30 | Myeloma | 18 | Paget | 8 | ya |
+| C30 | Myeloma | 18 | Vertebral haemangioma | 10 | ya |
+| C31 | Lymphoma | 23 | Ewing sarcoma | 19 | ya |
+| C31 | Lymphoma | 23 | Osteomyelitis | 15 | ya |
+| C31 | Lymphoma | 23 | LCH | 12 | ya |
+| C31 | Lymphoma | 23 | Metastasis | 15 | ya |
+| C31 | Lymphoma | 23 | Myeloma | 11 | ya |
+| C31 | Lymphoma | 23 | Paget | disingkirkan | ya |
+| C31 | Lymphoma | 23 | Vertebral haemangioma | disingkirkan | ya |
+| C32 | LCH | 21 | Ewing sarcoma | 10 | ya |
+| C32 | LCH | 21 | Osteomyelitis | 15 | ya |
+| C32 | LCH | 21 | Lymphoma | 5 | ya |
+| C33 | Ewing sarcoma | 26 | Osteomyelitis | 17 | ya |
+| C33 | Ewing sarcoma | 26 | LCH | 20 | ya |
+| C33 | Ewing sarcoma | 26 | Lymphoma | 20 | ya |
+| C33 | Ewing sarcoma | 26 | Conventional OS | 14 | ya |
+| C33 | Ewing sarcoma | 26 | Osteomyelitis | 17 | ya |
+| C34 | Ewing sarcoma | 17 | Osteomyelitis | 11 | ya |
+| C34 | Ewing sarcoma | 17 | LCH | 13 | ya |
+| C34 | Ewing sarcoma | 17 | Lymphoma | 19 | TIDAK |
+| C34 | Ewing sarcoma | 17 | Conventional OS | 7 | ya |
+| C34 | Ewing sarcoma | 17 | Osteomyelitis | 11 | ya |
+| C35 | Metastasis | 24 | Myeloma | 20 | ya |
+| C35 | Metastasis | 24 | Lymphoma | 22 | ya |
+| C35 | Metastasis | 24 | Paget | disingkirkan | ya |
+| C35 | Metastasis | 24 | Vertebral haemangioma | disingkirkan | ya |
+| C35 | Metastasis | 24 | Enostosis | disingkirkan | ya |
+| C35 | Metastasis | 24 | Osteoid osteoma | disingkirkan | ya |
+| C36 | Metastasis | 18 | Myeloma | 14 | ya |
+| C36 | Metastasis | 18 | Lymphoma | 12 | ya |
+| C36 | Metastasis | 18 | Paget | 15 | ya |
+| C36 | Metastasis | 18 | Vertebral haemangioma | 13 | ya |
+| C36 | Metastasis | 18 | Enostosis | 16 | ya |
+| C36 | Metastasis | 18 | Osteoid osteoma | disingkirkan | ya |
+| C37 | Osteomyelitis | 21 | Ewing sarcoma | 15 | ya |
+| C37 | Osteomyelitis | 21 | LCH | 19 | ya |
+| C37 | Osteomyelitis | 21 | Lymphoma | 9 | ya |
+| C37 | Osteomyelitis | 21 | Osteoid osteoma | disingkirkan | ya |
+| C37 | Osteomyelitis | 21 | Osteoblastoma | 5 | ya |
+| C37 | Osteomyelitis | 21 | Stress fracture | 9 | ya |
+| C37 | Osteomyelitis | 21 | Skeletal TB | 13 | ya |
+| C37 | Osteomyelitis | 21 | Conventional OS | 11 | ya |
+| C37 | Osteomyelitis | 21 | Ewing sarcoma | 15 | ya |
+| C38 | Osteomyelitis | 19 | Ewing sarcoma | disingkirkan | ya |
+| C38 | Osteomyelitis | 19 | LCH | 15 | ya |
+| C38 | Osteomyelitis | 19 | Lymphoma | disingkirkan | ya |
+| C38 | Osteomyelitis | 19 | Osteoid osteoma | 11 | ya |
+| C38 | Osteomyelitis | 19 | Osteoblastoma | 13 | ya |
+| C38 | Osteomyelitis | 19 | Stress fracture | 15 | ya |
+| C38 | Osteomyelitis | 19 | Skeletal TB | 11 | ya |
+| C38 | Osteomyelitis | 19 | Conventional OS | disingkirkan | ya |
+| C38 | Osteomyelitis | 19 | Ewing sarcoma | disingkirkan | ya |
+| C39 | Skeletal TB | 17 | Osteomyelitis | 13 | ya |
+| C40 | Skeletal TB | 14 | Osteomyelitis | 12 | ya |
+| C41 | Geode/ganglion | 24 | GCTB | 16 | ya |
+| C41 | Geode/ganglion | 24 | Chondroblastoma | disingkirkan | ya |
+| C41 | Geode/ganglion | 24 | Clear cell CS | 16 | ya |
+| C42 | Bone infarct | 23 | Enchondroma | 16 | ya |
+| C42 | Bone infarct | 23 | Central CS | 8 | ya |
+| C43 | Stress fracture | 19 | Osteoid osteoma | 19 | SERI |
+| C43 | Stress fracture | 19 | Osteoblastoma | 8 | ya |
+| C43 | Stress fracture | 19 | Osteomyelitis | 12 | ya |
+| C44 | Stress fracture | 11 | Osteoid osteoma | disingkirkan | ya |
+| C44 | Stress fracture | 11 | Osteoblastoma | disingkirkan | ya |
+| C44 | Stress fracture | 11 | Osteomyelitis | 5 | ya |
+| C45 | Paget | 16 | Metastasis | 8 | ya |
+| C45 | Paget | 16 | Myeloma | 6 | ya |
+| C45 | Paget | 16 | Lymphoma | disingkirkan | ya |
+| C45 | Paget | 16 | Vertebral haemangioma | 11 | ya |
+| C46 | Paget | 11 | Metastasis | 7 | ya |
+| C46 | Paget | 11 | Myeloma | 5 | ya |
+| C46 | Paget | 11 | Lymphoma | disingkirkan | ya |
+| C46 | Paget | 11 | Vertebral haemangioma | 12 | TIDAK |
+| C48 | Enostosis | 21 | Metastasis | 13 | ya |
+| C48 | Enostosis | 21 | Osteoid osteoma | 10 | ya |
+
+perbandingan: 167; A tidak di atas B: 7 -> C08 Enchondroma vs Bone infarct (18 vs 19); C19 NOF vs CMF (22 vs 22); C25 OFD-adamantinoma vs NOF (16 vs 19); C25 OFD-adamantinoma vs CMF (16 vs 17); C34 Ewing sarcoma vs Lymphoma (17 vs 19); C43 Stress fracture vs Osteoid osteoma (19 vs 19); C46 Paget vs Vertebral haemangioma (11 vs 12)
+entitas yang menang pada vinyet entitas lain: {'Bone infarct': 2, 'SBC': 2, 'NOF': 1, 'Lymphoma': 1, 'Enostosis': 1, 'Vertebral haemangioma': 1}
+
+====================================================================================================
+5. UJI PETIK SUMBER
+====================================================================================================
+| Entitas | Klaim | Bobot | Sumber dikutip | Hasil | Cara baca | Catatan |
+|---|---|---|---|---|---|---|
+| GCTB | age_group:10-19_open | -5 | S-01,S-16 | sebagian (arah ya, kekuatan tidak) | S-01 FT; S-16 WF | S-01: GCT 'biasanya' meluas ke subkondral setelah fisis menutup; S-16 tidak membahas pasien imatur. Arah didukung, 'hampir mustahil' tidak |
+| GCTB | transverse:eccentric | 3 | S-01,S-16 | didukung | S-01 FT | S-01 mencantumkan GCT sebagai lesi eksentrik |
+| GCTB | margin_lodwick:IB | 3 | S-01,S-16 | didukung | S-01 FT | S-01: IB contohnya GCT |
+| Chordoma | bone_class:long_bone | -5 | S-01 | tidak ditemukan di sumber yang dikutip | S-01 FT | S-01 (skeleton apendikular) tidak memuat lokasi atau gambaran kordoma |
+| Chordoma | bone_class:sacrum | 3 | S-01 | tidak ditemukan di sumber yang dikutip | S-01 FT | sda.; seluruh klaim kordoma hanya mengutip S-01 |
+| Ewing sarcoma | margin_lodwick:IA | -5 | S-01,S-04 | sebagian (arah ya, kekuatan tidak) | S-01 FT | S-01 menempatkan Ewing pada tipe II/III; tidak menyatakan IA mustahil |
+| Ewing sarcoma | age_group:60+ | -5 | S-01,S-04 | tidak ditemukan di sumber yang dikutip | S-01 FT; S-04 WF | S-01: Ewing lebih sering <15 th; S-04 hanya pasien 3-18 th. Tidak ada pernyataan tentang lansia |
+| Ewing sarcoma | longitudinal:diaphysis | 3 | S-01,S-04 | sebagian (arah ya, kekuatan tidak) | S-01 FT; S-04 WF | S-01 mendukung diafisis; seri S-04 (n=28) mencatat metafisis 36% > diafisis 21% |
+| Conventional OS | margin_lodwick:IA | -5 | S-01,S-15 | sebagian (arah ya, kekuatan tidak) | S-01 FT; S-15 WF | Keduanya menyebut tepi tidak tegas/zona transisi lebar; tidak ada pernyataan bahwa tepi sklerotik mustahil |
+| Conventional OS | periosteal:codman | 3 | S-01,S-15 | didukung | S-01 FT | S-01: Codman klasik untuk osteosarkoma |
+| Conventional OS | periosteal:solid_thin | -2 | S-01,S-15 | sumber yang dikutip menyatakan lain | S-01 FT | S-01: reaksi periosteal tipis dapat dijumpai pada Ewing dan osteosarkoma; KB memberi -2 |
+| Conventional OS | age_group:60+ | 1 | S-01 | sumber yang dikutip menyatakan lain | S-15 WF | S-15 menyatakan data baru meragukan puncak kedua usia lanjut; KB memberi 60+ (+1) > 40-59 (0) |
+| Telangiectatic OS | margin_lodwick:IA | -5 | S-01,S-15 | sumber yang dikutip menyatakan lain | S-15 WF | S-15: kadang berbatas tegas dengan tepi sklerotik ireguler; KB memberi -5 |
+| Telangiectatic OS | density:lytic | 3 | S-01,S-15 | didukung | S-15 WF | S-15: osteolisis luas, ekspansil |
+| Parosteal OS | transverse:juxtacortical_continuous | -5 | S-01,S-15 | didukung | S-15 WF | S-15: tidak ada kontinuitas korteks-meduler (invasi meduler 22-58% adalah hal lain) |
+| Parosteal OS | density:sclerotic | 3 | S-01,S-15 | didukung | S-15 WF | S-15: osifikasi padat sentral |
+| Periosteal OS | cortex:saucerization | 2 | S-01,S-15 | tidak ditemukan di sumber yang dikutip | S-01 FT; S-15 WF | Saucerization tidak disebut di kedua sumber |
+| Periosteal OS | longitudinal:diaphysis | 3 | S-01,S-15 | didukung | S-15 WF; S-25 WF | Diafisis/metadiafisis |
+| ABC | transverse:eccentric | 3 | S-01,S-06 | sumber yang dikutip menyatakan lain | S-01 FT; S-06 WF | S-01 mencantumkan ABC sebagai lesi SENTRAL; S-06 tidak menyebut eksentrik/sentral. Ajaran umum memang eksentrik, tetapi sumber yang dikutip tidak mendukung +3 |
+| ABC | periosteal:shell | 3 | S-01,S-06 | didukung | S-01 FT | S-01: pola shell pada GCT dan ABC |
+| Chondroblastoma | soft_tissue_mass:present | -5 | S-01,S-06 | sumber yang dikutip menyatakan lain | S-06 WF | S-06 menyebut CT dapat menunjukkan perluasan ke jaringan lunak; KB memberi -5 |
+| Chondroblastoma | age_group:40-59 | -5 | S-01,S-06 | tidak ditemukan di sumber yang dikutip | S-01 FT; S-06 WF | Keduanya menyebut usia remaja/imatur; tidak ada pernyataan tentang dewasa |
+| Chondroblastoma | periosteal:lamellated | 1 | S-01,S-06 | didukung | S-01 FT | S-01: periostitis berlapis pada sarkoma, osteomielitis, dan kondroblastoma |
+| CMF | margin_lodwick:IA | 3 | S-01,S-06 | sebagian (arah ya, kekuatan tidak) | S-01 FT; S-06 WF | S-01: CMF 'dapat' tampak IA (satu dari 8 lesi). S-06 TIDAK membahas CMF sama sekali, padahal semua klaim CMF mengutip S-01,S-06 |
+| CMF | longitudinal:metadiaphysis | 3 | S-01,S-06 | didukung | S-01 FT | S-01: CMF dan NOF dekat perbatasan metadiafisis |
+| SBC | age_group:60+ | -5 | S-01,S-06 | tidak ditemukan di sumber yang dikutip | S-01 FT; S-06 WF | S-06: 80% pada remaja/usia 20-an; tidak ada pernyataan tentang lansia |
+| SBC | bone_class:calcaneus | 3 | S-01,S-06 | didukung | S-01 FT; S-04 WF | S-01: banding lesi lusen kalkaneus; S-04: 25% kista simpel di kalkaneus |
+| Osteoid osteoma | age_group:60+ | -5 | S-01,S-06 | sebagian (arah ya, kekuatan tidak) | S-06 WF | S-06: dapat timbul pada usia berapa pun, khas dekade kedua |
+| Osteoid osteoma | periosteal:solid_thin | 3 | S-01,S-06 | didukung | S-01 FT | S-01: reaksi solid khas osteoid osteoma |
+| BPOP | density:lytic | -5 | S-01,S-25 | sebagian (arah ya, kekuatan tidak) | S-25 WF | S-25: terkalsifikasi/terosifikasi bervariasi; lesi lusen tidak dibahas |
+| BPOP | transverse:juxtacortical_continuous | -5 | S-01,S-25 | didukung | S-25 WF | S-25: ketiadaan kontinuitas meduler adalah pembeda kunci dari osteokondroma |
+| Periosteal chondroma | cortex:saucerization | 3 | S-01,S-25 | didukung | S-25 WF | S-25: permukaan korteks scalloped dengan/tanpa sklerosis |
+| Fibrous dysplasia | margin_lodwick:IC | -5 | S-01,S-22 | sumber yang dikutip menyatakan lain | S-22 WF | S-22: lesi kraniofasial biasanya TIDAK berbatas tegas; KB memberi craniofacial +3 dan IC -5 |
+| Fibrous dysplasia | periosteal:lamellated | -5 | S-01,S-22 | sebagian (arah ya, kekuatan tidak) | S-22 WF | S-22: reaksi periosteal tidak ada kecuali pada fraktur patologis, dan fraktur sering; pola tidak dirinci |
+| Fibrous dysplasia | matrix:ground_glass | 3 | S-01,S-22 | didukung | S-01 FT; S-22 WF | Ground-glass khas |
+| LCH | matrix:osteoid | -5 | S-01,S-23 | sebagian (arah ya, kekuatan tidak) | S-23 WF | S-23 menggambarkan button sequestrum dan fragmen tulang intralesi; bukan matriks, tetapi dapat dikodekan demikian |
+| LCH | age_group:60+ | -5 | S-01,S-23 | tidak ditemukan di sumber yang dikutip | S-23 WF | S-23 tidak membahas lansia |
+| Vertebral haemangioma | matrix:coarse_trabeculae | 3 | S-01,S-19 | sebagian (arah ya, kekuatan tidak) | S-01 FT; S-19 WF | S-19 hanya menggambarkan hemangioma KALVARIA (trabekula menebal); gambaran vertebra tidak diuraikan di kedua sumber |
+| Skeletal TB | periosteal:spiculated | -5 | S-01 | tidak ditemukan di sumber yang dikutip | S-01 FT | S-01 hanya menyebut TB sebagai kategori infeksi; tidak ada gambaran radiografik. Seluruh klaim TB hanya mengutip S-01 |
+| Skeletal TB | bone_class:spine_body | 2 | S-01 | tidak ditemukan di sumber yang dikutip | S-01 FT | sda. |
+| Osteomyelitis | margin_lodwick:IA | 3 | S-01 | didukung | S-01 FT | S-01: abses Brodie termasuk lesi tipe IA |
+| Osteomyelitis | matrix:osteoid | -5 | S-01 | tidak ditemukan di sumber yang dikutip | S-01 FT | S-01 tidak menyatakan apa pun tentang mineralisasi pada osteomielitis |
+| Bone infarct | margin_lodwick:IC | -5 | S-01 | tidak ditemukan di sumber yang dikutip | S-01 FT | S-01 hanya menyebut infark dini campuran dan infark lanjut sklerotik serpiginosa |
+| Geode/ganglion | size_cm:>5 | -5 | S-01 | tidak ditemukan di sumber yang dikutip | S-01 FT | S-01 tidak memuat ukuran geode |
+| Intraosseous lipoma | margin_lodwick:IA | 3 | S-01 | didukung | S-01 FT | S-01: lipoma intraoseus termasuk lesi tipe IA |
+| Metastasis | multiplicity:multiple | 3 | S-01 | didukung | S-01 FT | S-01: poliostotik pada >90% |
+| Enostosis | size_cm:<2 | 2 | S-01 | didukung | S-01 FT | S-01: sebagian besar 1 mm-2 cm; pulau tulang raksasa >2 cm dilaporkan |
+| Paget | longitudinal:epiphysis_apophysis | 2 | S-01 | didukung | S-01 FT | S-01: Paget dan clear cell CS masuk banding epifisis usia >40 |
+| NOF | margin_lodwick:IA | 3 | S-01,S-06 | didukung | S-01 FT | S-01: contoh klasik tipe IA |
+| Osteochondroma | transverse:juxtacortical_continuous | 3 | S-01,S-26 | didukung | S-01 FT; S-06 WF | Kontinuitas korteks-meduler patognomonik |
+
+klaim diperiksa: 50; didukung: 22; tidak ditemukan di sumber yang dikutip: 12; sebagian (arah ya, kekuatan tidak): 10; sumber yang dikutip menyatakan lain: 6
+  hard constraint (-5): n=21; tidak ditemukan di sumber yang dikutip: 9; sebagian (arah ya, kekuatan tidak): 7; sumber yang dikutip menyatakan lain: 3; didukung: 2
+  +3: n=22; didukung: 17; sebagian (arah ya, kekuatan tidak): 3; tidak ditemukan di sumber yang dikutip: 1; sumber yang dikutip menyatakan lain: 1
+  lainnya: n=7; didukung: 3; sumber yang dikutip menyatakan lain: 2; tidak ditemukan di sumber yang dikutip: 2
+
+====================================================================================================
+6. KASUS UJI v1-v4 PADA KB INI (pemeriksaan transkripsi + over-calling)
+====================================================================================================
+sumber kasus: tools/review_cases_v1_v4.txt (transkripsi ringkas) | jumlah: 193
+ketidakcocokan dengan hasil tersimpan (peringkat urut-abjad dan skor rujukan): tidak ada
+aturan 'massa jaringan lunak tanpa destruksi' (Ewing, limfoma) pada kasus v1-v4:
+  cortex=focal_breach; rujukan Ewing/limfoma; Ewing/limfoma peringkat 1: 3 kasus
+  cortex=focal_breach; rujukan lain; Ewing/limfoma peringkat 1: 8 kasus
+  cortex=focal_breach; rujukan lain; lainnya peringkat 1: 4 kasus
+| Set | n | Top-1 (urut abjad) | Top-3 (urut abjad) | Top-3 sadar-seri | rujukan tersingkir |
+|---|---|---|---|---|---|
+| V1 | 31 | 18 | 26 | 27 | 0 |
+| V2 | 74 | 33 | 52 | 54 | 2 |
+| V3 | 52 | 11 | 25 | 29 | 5 |
+| V4 | 36 | 17 | 25 | 29 | 0 |
+
+| Entitas di peringkat 1 saat rujukan bukan peringkat 1 (v1-v4) | kali |
+|---|---|
+| Metastasis | 17 |
+| GCTB | 16 |
+| Ewing sarcoma | 13 |
+| CMF | 9 |
+| SBC | 7 |
+| Central CS | 6 |
+| Lymphoma | 5 |
+| ABC | 5 |
+| Osteoid osteoma | 4 |
+| Periosteal OS | 3 |
+| Osteomyelitis | 3 |
+| Osteochondroma | 3 |
+
+fitur terisi per kasus: rata-rata 6.8
+frekuensi pengisian fitur (jumlah kasus dari 193): age_group 193, multiplicity 113, bone_class 190, longitudinal 123, transverse 63, density 155, margin_lodwick 101, cortex 110, soft_tissue_mass 75, periosteal 58, matrix 45, size_cm 66, clinical_flags 16

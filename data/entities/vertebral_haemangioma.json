@@ -7,7 +7,8 @@
  "definition_id": "Lesi vaskular jinak tersering di korpus vertebra dewasa; trabekula vertikal menebal memberi pola 'corduroy' pada radiograf dan 'polka-dot' pada CT aksial.",
  "source_ids": [
   "S-01",
-  "S-19"
+  "S-19",
+  "S-32"
  ],
  "feature_weights": {
   "age_group": {
@@ -58,7 +59,8 @@
    "spine_body": {
     "weight": 3,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-32"
     ]
    },
    "craniofacial": {
@@ -93,7 +95,8 @@
    "central": {
     "weight": 2,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-32"
     ]
    }
   },
@@ -101,7 +104,8 @@
    "mixed": {
     "weight": 2,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-32"
     ],
     "note_id": "Trabekula vertikal menebal di antara area lusen"
    },
@@ -114,7 +118,8 @@
    "lytic": {
     "weight": 1,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-32"
     ]
    }
   },
@@ -154,13 +159,15 @@
    "intact": {
     "weight": 2,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-32"
     ]
    },
    "focal_breach": {
     "weight": -2,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-32"
     ]
    },
    "destruction": {
@@ -174,7 +181,8 @@
    "present": {
     "weight": -2,
     "source_ids": [
-     "S-01"
+     "S-01",
+     "S-32"
     ],
     "note_id": "Varian agresif dengan komponen epidural/paraspinal jarang"
    }
@@ -223,7 +231,8 @@
     "weight": 3,
     "source_ids": [
      "S-01",
-     "S-19"
+     "S-19",
+     "S-32"
     ],
     "note_id": "Trabekula vertikal kasar adalah ciri khas"
    }

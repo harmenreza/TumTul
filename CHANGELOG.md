@@ -5,6 +5,165 @@ versions follow SemVer. Data-schema changes are only recorded after owner approv
 
 ## [Unreleased] — 2026-11-16
 
+### Changed (2026-11-22) — KB 0.6.1, sources only (owner-approved; every weight, rule and prior identical to 0.6.0)
+- **Chondromyxoid fibroma re-cited from S-06 to S-18** (proposal A below, approved by the owner on 2026-11-22).
+  `data/entities/chondromyxoid_fibroma.json`: S-06 removed from the 44 claims that cited it and from the entity's
+  sources; S-18 added to 19 claims (20 of 46 now cite it). No weight, note, rule, prior or schema field changed, so all
+  scores and rankings are identical to 0.6.0; `data/validation/kb_snapshot_v0.6.0.json` stays the frozen reference.
+- New `tools/apply_source_overrides.py`, run after the generators (README "Build"). It holds the approved table, is
+  idempotent, has a `--check` mode, stops if a listed claim is missing, and asserts that the entity is unchanged once
+  source lists are removed. The generators were not edited: they exist only in the project store, not in the
+  repository, and the override step keeps their weight tables untouched.
+- **Two sources added and cited (proposal B2, approved by the owner the same day).** `data/sources.json` → registry
+  0.3.0, 32 entries: **S-31** Ariyaratne et al. 2023, Primary Osseous Malignancies of the Spine, and **S-32** Ariyaratne
+  et al. 2023, Primary Benign Neoplasms of the Spine (Diagnostics; CC BY 4.0 per PMC metadata; both read in full).
+  S-31 added to 20 chordoma claims (11 supported, 9 direction only); S-32 added to 8 vertebral-haemangioma claims
+  (3 and 5). Deliberately not cited: chordoma `matrix:none` (+2) and haemangioma `cortex:destruction` (−5), which the
+  new sources contradict. `LICENSES.md` §3: CC BY 4.0 sources 17 → 19.
+- `tools/build_web.py`: `kb_version` 0.6.0 → 0.6.1. `web/index.html` rebuilt; apart from the embedded KB line it is
+  identical to the previous build. Loaded headlessly at 400 px: no script errors, no horizontal scroll.
+- **Public prototype republished** (same link, artifact version 17, owner's go-ahead 2026-11-22) after confirming that
+  the published `index.html` was byte-identical (SHA-256) to the previous repository build. Only `index.html` was sent;
+  the 66 images are unchanged. The project copy of `web/index.html` is still the 0.6.0 build; regenerate it with
+  `tools/build_web.py`.
+- Scoring matrix rebuilt and republished (same link): counts unchanged; CMF, chordoma and haemangioma cells show the
+  new sources.
+- New hypothesis candidates from the two reviews, **not applied** (weights are frozen): vertebral haemangioma
+  `cortex:destruction` −5 → −2 (aggressive haemangioma); chordoma `matrix:none` +2 → lower (punctate calcification common).
+- `tools/review_sources.py` and its evidence file describe KB 0.6.0. Run against 0.6.1 they stop on the ten CMF rows
+  that record S-06 findings; that is expected. `docs/SKEMA-DIAGNOSIS.md` header still says bobot v0.6.0, which remains
+  true for the weights.
+
+### Checked (2026-11-22) — two EPOS posters screened; nothing applied
+- Read through per-section page summaries, not word for word. Neither page showed an open-licence statement, so both
+  are treated as `cite_only` until that is confirmed on the poster page.
+- Periosteal osteosarcoma against ECR 2022 C-13882: of 38 claims, 10 supported (age 10–19, long bone, diaphysis,
+  surface, lytic, soft-tissue mass, spiculated and Codman periosteal reaction), 11 direction only, 17 not discussed
+  (including `cortex:saucerization`).
+- Skeletal tuberculosis against ECR 2019 C-1421: of 45 claims, 4 supported, 14 direction only, 27 not discussed (no
+  age, spine or clinical signs in that section). Weak; spondylitis still needs a source.
+- Details in `docs/USULAN-SUMBER-v0.7.md`, "Pembaruan 2026-11-22".
+
+### Proposed (2026-11-22; B2 has since been applied, see above)
+- **B2. Two spine reviews read in full** (Ariyaratne et al. 2023, Diagnostics, both CC BY 4.0; proposed as new sources
+  S-31 and S-32, not yet registered). Chordoma against "Primary Osseous Malignancies of the Spine": of 32 claims,
+  11 supported, 9 direction only, 11 not discussed, 1 mild conflict (`matrix:none` +2; the source says punctate
+  calcification is common). Vertebral haemangioma against "Primary Benign Neoplasms of the Spine": 3 supported
+  (vertebral body, coarse trabeculae, soft-tissue mass −2), 5 direction only, 23 not discussed (no age data), and
+  1 contradicted — `cortex:destruction` −5, because the source describes aggressive haemangioma with bone destruction.
+  Both reviews are CT/MRI-led. They also cover enostosis, osteoid osteoma, osteoblastoma, ABC, GCTB, LCH, lymphoma,
+  plasmacytoma and spinal Ewing sarcoma (noted, not checked claim by claim). Details in `docs/USULAN-SUMBER-v0.7.md` §B2.
+- **C. EPOS posters** (owner's suggestion): EPOS disclaimer read — ESR holds copyright; posters from ECR 2014 onward
+  carry an open licence (attribution, non-commercial, share-alike); earlier ones, including the owner's two ESSR 2013
+  examples, can only be `cite_only`. Posters are not peer-reviewed. Candidates listed in `docs/USULAN-SUMBER-v0.7.md` §C:
+  ECR 2019 C-1421 for skeletal tuberculosis and ECR 2022 C-13882 for periosteal (and parosteal) osteosarcoma; nothing
+  dedicated for desmoplastic fibroma. None read in full yet.
+
+### Proposed and partly applied (2026-11-22)
+- `docs/USULAN-SUMBER-v0.7.md` — source fixes that touch `source_ids` only (no weight changes, so scores and ranking
+  stay identical):
+  - **A. Chondromyxoid fibroma → S-18 (applied, see above).** Claim-by-claim table for all 46 CMF claims against the CMF section of S-18.
+    Drop S-06 from the 44 claims that cite it (it has no CMF content) and add S-18 to 19 claims. Result: 20 of 46 CMF
+    claims would cite a source that discusses the finding (now 1): 13 supported, 7 direction only; 23 not discussed by
+    S-18; the three 10–19 age claims do not fit S-18, which says young adults (bears on H-02).
+  - **B. Candidate open-access sources (incomplete).** Chordoma: Ariyaratne et al. 2023, Primary Osseous Malignancies of
+    the Spine (Diagnostics, CC BY 4.0, doi 10.3390/diagnostics13101801). Vertebral haemangioma: Ariyaratne et al. 2023,
+    Primary Benign Neoplasms of the Spine (Diagnostics, CC BY 4.0, doi 10.3390/diagnostics13122006). Both known from
+    abstract and licence metadata only; not yet read in full. Nothing adequate found yet for desmoplastic fibroma
+    (two CC BY-NC case reports only), skeletal tuberculosis or periosteal osteosarcoma.
+
+### Added (2026-11-22) — full-text source check of KB 0.6.0 (review only: no weight, entity, feature, source, UI or schema change)
+- `docs/TINJAUAN-SUMBER-v0.6.md`: does the source CITED by a claim support it? Redoes §3.5 of the scoring review on full
+  text. Fourteen articles read in full from PubMed Central (S-01, S-04, S-05, S-06, S-10, S-15, S-16, S-19, S-20, S-22,
+  S-23, S-24, S-25, S-26) and S-18 from the PDF supplied by the owner. Only S-21 (one claim) was not read. Done by a
+  separate high-effort model pass, checked by the main session. **It does not judge whether a weight is clinically right.**
+- 312 claims checked (19.7% of 1584) in four sets, plus the 5 rules:
+
+  | Set | n | supported | partly | not found | contradicted |
+  |---|---|---|---|---|---|
+  | A — the 73 hard constraints flagged b/c by the scoring review | 73 | 3 | 28 | 39 | 3 |
+  | B — all +3 claims | 192 | 107 | 51 | 34 | 0 |
+  | D — random sample of the rest (seed 20261121), the only unbiased set | 40 | 9 | 11 | 20 | 0 |
+
+  Set D, 95% interval: supported 12–38%, not found 35–65%. The rule was strict (membership of an S-01 list counts as
+  direction only); with list membership accepted, set B would be 131 of 192 supported.
+- Contradicted by their own cited source (3): chondroblastoma `soft_tissue_mass:present` −5 (S-06), fibrous dysplasia
+  `margin_lodwick:IC` −5 (S-22), telangiectatic osteosarcoma `margin_lodwick:IA` −5 (S-15).
+- Sourcing is the main problem: claims citing only S-01 are supported in 11 of 56 (set B) and 0 of 15 (set D), against
+  96 of 136 and 9 of 25 with a second source. No radiographic source at all for chordoma, desmoplastic fibroma and
+  skeletal tuberculosis; location only for vertebral haemangioma and periosteal osteosarcoma; S-01 lists only for brown
+  tumour, geode and intraosseous lipoma. Second sources without radiographic content for the entity: S-06 for CMF,
+  S-24 for myeloma, S-15 for periosteal osteosarcoma, S-04 for Ewing and osteochondroma (208 claim citations).
+  S-18 has a full CMF section but is cited by 1 of 46 CMF claims.
+- Effect on the scoring review's hypotheses: strengthened H-06, H-08 (osteomyelitis), H-09, H-10, H-11, H-12
+  (telangiectatic), H-14, H-16, H-26; weakened H-13 for BPOP `juxtacortical_continuous` and H-15 for the weight (the cited
+  sources support those −5); the rest unchanged. Of the earlier 50-item spot-check, 46 were re-judged: 31 the same, 15 changed.
+- Files: `tools/review_sources.py` (validates every evidence row against the KB, draws set D, combines verdicts),
+  `tools/review_source_evidence.tsv` (526 findings, one per claim per source, with locator and own-words note),
+  `tools/review_source_coverage.tsv` (entity × source), `docs/tinjauan-sumber-v0.6.csv` (verdict per claim). The full
+  script output is not stored; regenerate with `python3 tools/review_sources.py`.
+- Limits: one reviewer, no second rater; figure contents were not readable (S-01 Fig. 1 and 3 may support some age and
+  location claims now marked not found); the main session re-checked the counts, the S-06 evidence and two S-18
+  findings, not the verdicts resting on the other twelve sources.
+- `data/sources.json` unchanged. S-18's licence statement (CC BY-NC-ND, open access) was seen on the article's first page.
+
+### Added (2026-11-21, later) — scoring review of KB 0.6.0 (review only: no weight, entity, feature, UI or schema change)
+- `docs/TINJAUAN-SKOR-v0.6.md`: consistency and plausibility review of the scoring, done at the owner's request by a
+  separate high-effort model pass and checked by the main session. **Not validation; nothing applied.** Output is 34
+  hypotheses for v0.7 (H-01 … H-34) and 7 schema-level options (S-1 … S-7, owner approval needed), to be tested on
+  practice cases under the pre-registered protocol.
+- `tools/review_scoring.py` (read-only, standard library, about 2 minutes) prints every figure in the report and writes
+  `docs/tinjauan-skor-v0.6-hard-constraints.csv` (all 322 hard constraints classed a/b/c with reason and confidence).
+  `tools/review_cases_v1_v4.txt`: compact transcription of the 193 coded cases, verified by re-scoring (193/193 match
+  the stored rank and score). The full script output (138 KB) is not stored; regenerate it with the script.
+- Main findings:
+  - Normal/absent findings (`cortex:intact`, `periosteal:none`, `matrix:none`) carry 16 weights of +3; bone infarct
+    outranks enchondroma and intraosseous lipoma on their constructed textbook vignettes (H-01).
+  - CMF and GCTB over-calling is structural: highest attainable scores on the six core features (GCTB 18, CMF 17,
+    median 14); CMF in the top 3 in 58% of adolescent long-bone lytic combinations (H-02, H-03).
+  - Attainable maximum ranges from 14 (BPOP) to 26 (Ewing, osteoid osteoma); rare entities also have lower ceilings.
+  - Hard constraints: 249 judged justified, 65 questionable, 8 inconsistent (47 of the 73 flags at low confidence).
+    In v1–v4 the reference entity is excluded in 7 of 193 cases by 9 claims (H-06 … H-18).
+  - `matrix:ground_glass` excludes 27 of 37 entities in one tap; 318 of 322 hard constraints have no `note_id` (H-27).
+  - The Ewing/lymphoma soft-tissue rule fired 15 times in v1–v4, always through `cortex:focal_breach` (H-05).
+  - Sourcing: 41.7% of claims cite only S-01, 14 entities cite nothing else; 44 of 46 CMF claims cite S-06, which
+    has no CMF section (confirmed on the full text). Spot-check of 50 claims, weighted towards flagged ones:
+    22 supported, 10 partly, 12 not found in the cited source, 6 contradicted by it (H-26, H-28).
+  - 48 reviewer-constructed vignettes (not validation): expected entity first in 40, top 3 in 47.
+- Limits stated in the report: the a/b/c classes and the vignettes are the reviewer's judgement and need the owner's
+  clinical assessment; several sources were read only through page summaries; S-18 and five others were not checked;
+  Axis A was not reviewed.
+
+### Added (2026-11-21) — scoring reference views (no weight, entity, feature, UI or schema change; KB content still 0.6.0)
+- **Scoring matrix** page, artifact "TumTul scoring matrix" (https://claude.ai/artifact/Do4A9wGh2uZFZzU9UxN8yv):
+  all 37 entities against the 62 feature values offered in the app, every weight colour-coded (+3 hallmark, +2 typical,
+  +1 compatible, 0 stated neutral, dot = no claim, −2 unusual, −5 hard constraint), with the prevalence prior as its own
+  column. Below the matrix: the 5 special rules with their conditions, the priors by class, and the Axis A point table.
+  Tap a cell for its note (Indonesian, as stored) and source codes; tap an entity name for prior, hallmarks and counts.
+  Filter by behaviour; order by WHO group, name or number of hard constraints. English labels, Negatoskop tokens,
+  light and dark. Read-only: it reads the KB and stores nothing.
+- `tools/build_matrix.py` + `web/matrix_template.html` → `web/matrix.html`. The script stops on an unknown feature
+  value, WHO group or behaviour, and prints the counts shown on the page. KB 0.6.0: 37 entities, 62 values, 1584
+  weighted claims (192 / 248 / 382 / 179 / 257 / 322 at +3 / +2 / +1 / 0 / −2 / −5), 5 rules; the 4 `not_applicable`
+  claims (all 0) are counted but not drawn. Column and group labels (`SHORT`, `VS`, `GROUPS`, `BEH`) are display text
+  outside the data schema.
+- **Scoring flow** Whiteboard "TumTul scoring flow" (https://claude.ai/artifact/DajnwWgBN7vsYrBBA2SKqF): reader's
+  features → UI input rules → Axis A (0–9 points, three classes) and Axis B (prior + feature weights + rules →
+  any −5? → excluded list, or compatible list ranked with ties sharing a rank) → screen. Hand-drawn from
+  `docs/SKEMA-DIAGNOSIS.md` §4 and `web/template.html`; not generated.
+- `docs/HANDOFF-SKORING.md`: handoff for the next session.
+- Built from the entity files in GitHub `harmenreza/TumTul` (commit b37defc); spot-checked against
+  `data/validation/kb_snapshot_v0.6.0.json`. Checked headlessly at 400 px light and 1400 px dark: no horizontal page
+  scroll, no script errors.
+
+### Fixed (documentation, 2026-11-21)
+- `README.md` "Scoring logic": the formula now includes `base_prior` (in the scorer since v0.6.0; the README line
+  had not been updated).
+
+### Not done (2026-11-21)
+- The new files of 2026-11-21 (matrix script and template, handoff, review report, CSV, review script and case
+  transcription) are in the project store only; they have not been pushed to the GitHub repository.
+
 ### Added (UI only, 2026-11-19, later) — expertise-style findings summary (owner-approved mockup, variant B)
 - **"Deskripsi temuan"** strip above the results on both Sumbu A and Sumbu B: the filled features are assembled into one
   radiological description sentence. Collapsed it shows two lines; tapped, it opens to the full sentence, a context

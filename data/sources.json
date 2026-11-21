@@ -549,6 +549,44 @@
    "used_for": [
     "entity pages, to be added one by one with per-article attribution"
    ]
+  },
+  {
+   "id": "S-31",
+   "type": "journal_article",
+   "title": "Primary Osseous Malignancies of the Spine",
+   "authors": "Ariyaratne S, Jenko N, Iyengar KP, James S, Mehta J, Botchu R",
+   "journal": "Diagnostics 13(10):1801",
+   "year": 2023,
+   "doi": "10.3390/diagnostics13101801",
+   "pmid": "37238285",
+   "pmcid": "PMC10217758",
+   "url": "https://doi.org/10.3390/diagnostics13101801",
+   "license": "CC BY 4.0",
+   "license_status": "verified",
+   "license_note": "Metadata PMC (diperiksa 2026-11-22): CC BY 4.0, '© 2023 by the authors' (MDPI).",
+   "evidence_level": "narrative review, imaging-led (mainly CT and MRI)",
+   "used_for": [
+    "chordoma: age, sacrum / vertebral body, lytic destruction, soft-tissue mass"
+   ]
+  },
+  {
+   "id": "S-32",
+   "type": "journal_article",
+   "title": "Primary Benign Neoplasms of the Spine",
+   "authors": "Ariyaratne S, Jenko N, Iyengar KP, James S, Mehta J, Botchu R",
+   "journal": "Diagnostics 13(12):2006",
+   "year": 2023,
+   "doi": "10.3390/diagnostics13122006",
+   "pmid": "37370901",
+   "pmcid": "PMC10297602",
+   "url": "https://doi.org/10.3390/diagnostics13122006",
+   "license": "CC BY 4.0",
+   "license_status": "verified",
+   "license_note": "Metadata PMC (diperiksa 2026-11-22): CC BY 4.0, '© 2023 by the authors' (MDPI).",
+   "evidence_level": "narrative review, imaging-led (mainly CT and MRI)",
+   "used_for": [
+    "vertebral haemangioma: vertebral body, coarse vertical trabeculae, aggressive variant"
+   ]
   }
  ]
 }
